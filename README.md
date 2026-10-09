@@ -27,7 +27,7 @@ Dieses Repository generiert einen **qualitativ kuratierten, synthetischen Datens
 
   Felder je Zeile: `instruction`, `input` (Artikel-ID), `output` (Erzähltext), `meta` (vollständiges Frontmatter).
 - **Snapshot im Repo:** `datasets/` enthält datierte Exporte (z. B. `datasets/corpus-2026-10-09.jsonl`) für alle, die keinen laufenden Daemon haben.
-- **Lizenzierung:** Code und Korpus sind zur Nachnutzung veröffentlicht; die formale Lizenz (Vorschlag: MIT für Code, CC-BY 4.0 für die generierten Texte) legt der Autor fest. Bis dahin: Forschung/Zitat ausdrücklich erwünscht, Quelle bitte nennen.
+- **Lizenzierung:** Code unter **MIT** (siehe `LICENSE`), die generierten Texte und der Korpus unter **CC-BY 4.0** (siehe `datasets/LICENSE`) - Namensnennung genuegt, kommerzielle Nutzung (auch Modelltraining/Fine-Tuning) ausdruecklich erlaubt.
 
 ### 🤝 Call for Compute & Sponsorship
 
