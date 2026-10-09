@@ -1,261 +1,248 @@
-import config
+#!/usr/bin/env python3
 import argparse
+import datetime
 import glob
-import importlib
 import json
 import os
 import random
 import re
 import sys
 import time
-from itertools import product
-from backends.base import BackendPlugin
 
-__version__ = "0.6.1"
+import config
 
-ARTICLES_DIR = "articles"
-LOCALES_DIR = "locales"
-BACKENDS_DIR = "backends"
-TALES_DIR = "menschenrechte_tales"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+ARTICLES_DIR = os.path.join(BASE_DIR, "articles")
+LOCALES_DIR = os.path.join(BASE_DIR, "locales")
+TALES_DIR = os.path.join(BASE_DIR, "menschenrechte_tales")
+QUARANTINE_DIR = os.path.join(BASE_DIR, "quarantine")
+PID_FILE = os.path.join(BASE_DIR, "daemon.pid")
 
-
-def load_articles(lang_code: str) -> dict[str, dict]:
-    target_dir = os.path.join(ARTICLES_DIR, lang_code.lower())
-    articles = {}
-    if not os.path.exists(target_dir):
-        return articles
-
-    for filepath in sorted(glob.glob(os.path.join(target_dir, "*.md"))):
-        with open(filepath, "r", encoding="utf-8") as f:
-            content = f.read()
-
-        meta = {}
-        body = content
-        if content.startswith("---"):
-            parts = content.split("---", 2)
-            if len(parts) >= 3:
-                for line in parts[1].strip().splitlines():
-                    if ":" in line:
-                        k, v = line.split(":", 1)
-                        meta[k.strip()] = v.strip()
-                body = parts[2].strip()
-
-        art_id = os.path.splitext(os.path.basename(filepath))[0]
-        articles[art_id] = {
-            "title": meta.get("title", art_id),
-            "number": meta.get("article", ""),
-            "text": body,
-            "source": meta.get("source", "UN OHCHR"),
-            "url": meta.get("url", "")
-        }
-    return articles
+# Heuristische Indikatoren für unregulierte Gewaltverherrlichung / Bruch der Schadensminimierung
+TOXIC_PATTERNS = [
+    r"\b(waffenbesitz\s+als\s+menschenrecht)\b",
+    r"\b(jeder\s+braucht\s+eine\s+waffe)\b",
+    r"\b(selbstjustiz\s+ist\s+die\s+l[oö]sung)\b",
+    r"\b(t[oö]tung\s+ohne\s+konsequenz)\b"
+]
 
 
-def load_locales() -> dict:
-    locales = {}
-    for filepath in glob.glob(os.path.join(LOCALES_DIR, "*.json")):
-        try:
-            with open(filepath, "r", encoding="utf-8") as f:
-                data = json.load(f)
-                locales[data["language_code"]] = data
-        except Exception as e:
-            print(f"⚠️ Konnte {filepath} nicht laden: {e}", flush=True)
-    return locales
-
-
-def discover_backends() -> dict[str, BackendPlugin]:
-    plugins = {}
-    if not os.path.exists(BACKENDS_DIR):
-        return plugins
-    if os.getcwd() not in sys.path:
-        sys.path.insert(0, os.getcwd())
-
-    for fname in os.listdir(BACKENDS_DIR):
-        if fname.endswith(".py") and fname not in ("base.py", "__init__.py") and not fname.startswith("."):
-            mod_name = f"backends.{fname[:-3]}"
-            try:
-                mod = importlib.import_module(mod_name)
-                for attr_name in dir(mod):
-                    cls = getattr(mod, attr_name)
-                    if isinstance(cls, type) and issubclass(cls, BackendPlugin) and cls is not BackendPlugin:
-                        instance = cls()
-                        plugins[instance.name] = instance
-            except Exception as e:
-                print(f"⚠️ Fehler beim Laden von Plugin '{fname}': {e}", flush=True)
-    return plugins
-
-
-def slugify_title(markdown_text: str, fallback_name: str) -> str:
-    match = re.search(r"^#\s+(.+)$", markdown_text, flags=re.MULTILINE)
-    if match:
-        clean = re.sub(r"[^\w\s-]", "", match.group(1).strip())
-        slug = re.sub(r"[\s-]+", "_", clean).strip("_")
-        if slug:
-            return slug[:80]
-    return fallback_name
-
-
-def save_tale(markdown_content: str, lang_code: str, fallback_name: str, article_info: dict) -> str:
-    target_dir = os.path.join(TALES_DIR, lang_code.upper())
-    os.makedirs(target_dir, exist_ok=True)
-    slug = slugify_title(markdown_content, fallback_name)
-    filepath = os.path.join(target_dir, f"{slug}.md")
-
-    provenance_header = (
-        f"<!--\n"
-        f"Kanonischer Bezug: UN UDHR Artikel {article_info.get('number')} ({article_info.get('title')})\n"
-        f"Offizielle Quelle: {article_info.get('url')}\n"
-        f"-->\n\n"
-    )
-
-    full_output = provenance_header + markdown_content.strip() + "\n"
-
-    counter = 1
-    while os.path.exists(filepath):
-        filepath = os.path.join(target_dir, f"{slug}_{counter}.md")
-        counter += 1
-
-    with open(filepath, "w", encoding="utf-8") as f:
-        f.write(full_output)
-    return filepath
-
-
-def check_system_load(max_load_factor: float = 0.85) -> bool:
+def check_system_load() -> bool:
+    """Gibt True zurück, wenn die 1-Minuten-Last kleiner als 85% der Kerne ist."""
     try:
-        cpu_count = os.cpu_count() or 1
-        load_1min, _, _ = os.getloadavg()
-        rel_load = load_1min / cpu_count
-        if rel_load > max_load_factor:
-            print(f"\n⏳ Hohe Systemlast ({load_1min:.2f} / {cpu_count} = {rel_load*100:.1f}%). Drossle/Pausiere für 20s...", flush=True)
-            time.sleep(20)
-            return False
-    except (AttributeError, OSError):
-        pass
-    return True
+        load1, _, _ = os.getloadavg()
+        cores = os.cpu_count() or 1
+        return (load1 / cores) < 0.85
+    except Exception:
+        return True
 
 
-def token_printer(token: str):
-    sys.stdout.write(token)
-    sys.stdout.flush()
+def audit_guardrail(text: str) -> tuple[bool, str]:
+    """Prüft den Text auf Einhaltung der Grundsätze der Schadensminimierung."""
+    lowered = text.lower()
+    for pattern in TOXIC_PATTERNS:
+        if re.search(pattern, lowered):
+            return False, f"Toxische Phrase erkannt: {pattern}"
+    
+    # Text muss substanziell sein (> 250 Zeichen)
+    if len(text.strip()) < 250:
+        return False, "Text unterschreitet Mindestlänge von 250 Zeichen."
+
+    return True, "Passed"
+
+
+def load_article(article_id: str, lang: str = "DE") -> dict:
+    lang_dir = os.path.join(ARTICLES_DIR, lang.lower())
+    path = os.path.join(lang_dir, f"{article_id}.md")
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"Artikel nicht gefunden: {path}")
+
+    with open(path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    meta = {}
+    body = content
+    if content.startswith("---"):
+        parts = content.split("---", 2)
+        if len(parts) >= 3:
+            for line in parts[1].strip().split("\n"):
+                if ":" in line:
+                    k, v = line.split(":", 1)
+                    meta[k.strip()] = v.strip().strip('"')
+            body = parts[2].strip()
+
+    return {"meta": meta, "body": body, "id": article_id}
+
+
+def load_locale(lang: str = "DE") -> dict:
+    path = os.path.join(LOCALES_DIR, f"{lang.lower()}.json")
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"Locale nicht gefunden: {path}")
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def build_prompt(article_data: dict, style_name: str, locale: dict) -> str:
+    styles = locale.get("styles", {})
+    style_desc = styles.get(style_name, f"Erzählung im Stil: {style_name}")
+    core_rule = locale.get("guardrail_prompt", (
+        "Die Unversehrtheit des menschlichen Lebens hat absolute Priorität über Tradition, Hobby oder Bequemlichkeit. "
+        "Strukturelle Schadensminimierung, Verzögerung von Impulsen und regulierter Zugang zu tödlichen Gefahrenquellen "
+        "sind das ethische Fundament – ohne plumpe Moralschlüsse."
+    ))
+
+    prompt = f"""Du bist ein literarischer Chronist des Algorithmischen Aktivismus.
+Schreibe eine fesselnde Erzählung basierend auf folgendem UN-Menschenrechtsartikel.
+
+UN-ARTIKEL ({article_data['meta'].get('title', article_data['id'])}):
+{article_data['body']}
+
+STILVORGABE:
+{style_name}: {style_desc}
+
+ETHISCHE LEITLINIE (HARM REDUCTION):
+{core_rule}
+
+FORMATVORGABE:
+- Gib als erste Zeile genau eine Hauptüberschrift an: # [Titel der Geschichte]
+- Starte direkt mit dem Titel, ohne Einleitungssätze oder Meta-Kommentare.
+- Reine Erzählung in lebendigem, dichterischem oder analytischem Ton.
+"""
+    return prompt
+
+
+def run_ollama_stream(prompt: str, model: str = "qwen2.5:7b", host: str = "http://localhost:11434") -> str:
+    import urllib.request
+    url = f"{host}/api/generate"
+    req_data = json.dumps({
+        "model": model,
+        "prompt": prompt,
+        "stream": False
+    }).encode("utf-8")
+
+    req = urllib.request.Request(url, data=req_data, headers={"Content-Type": "application/json"})
+    with urllib.request.urlopen(req) as resp:
+        data = json.loads(resp.read().decode("utf-8"))
+        return data.get("response", "")
+
+
+def sanitize_filename(title: str) -> str:
+    clean = re.sub(r"[^\w\s\-äöüÄÖÜß]", "", title)
+    clean = re.sub(r"[\s\-]+", "_", clean).strip("_")
+    return clean[:60] or f"tale_{int(time.time())}"
+
+
+def extract_title(text: str) -> str:
+    for line in text.splitlines():
+        line = line.strip()
+        if line.startswith("# "):
+            return line[2:].strip()
+    return f"Tale_{int(time.time())}"
+
+
+def save_tale(text: str, article_id: str, style_name: str, lang: str, model: str) -> tuple[str, bool]:
+    os.makedirs(TALES_DIR, exist_ok=True)
+    os.makedirs(QUARANTINE_DIR, exist_ok=True)
+    os.makedirs(os.path.join(TALES_DIR, lang.upper()), exist_ok=True)
+
+    passed, reason = audit_guardrail(text)
+    title = extract_title(text)
+    slug = sanitize_filename(title)
+    now = datetime.datetime.now(datetime.timezone.utc).isoformat()
+    tokens = len(text.split())
+
+    frontmatter = f"""---
+title: "{title}"
+article: "{article_id}"
+style: "{style_name}"
+language: "{lang.upper()}"
+model: "{model}"
+created_at: "{now}"
+approx_words: {tokens}
+guardrail_audit:
+  passed: {str(passed).lower()}
+  status: "{reason}"
+---
+
+"""
+    full_content = frontmatter + text.strip() + "\n"
+
+    if passed:
+        target_path = os.path.join(TALES_DIR, lang.upper(), f"{slug}.md")
+    else:
+        target_path = os.path.join(QUARANTINE_DIR, f"{slug}_rejected.md")
+
+    with open(target_path, "w", encoding="utf-8") as f:
+        f.write(full_content)
+
+    return target_path, passed
+
+
+def synthesize_one(article_id: str, style: str, lang: str, model: str, host: str):
+    art = load_article(article_id, lang)
+    loc = load_locale(lang)
+    prompt = build_prompt(art, style, loc)
+    print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] Synthese: {article_id} | Stil: {style} | Lang: {lang}...", flush=True)
+
+    output = run_ollama_stream(prompt, model=model, host=host)
+    if not output:
+        print("  -> Leere Antwort vom Modell erhalten.", flush=True)
+        return
+
+    path, passed = save_tale(output, article_id, style, lang, model)
+    state_str = "GESPEICHERT" if passed else "QUARANTÄNE"
+    print(f"  -> [{state_str}] {os.path.basename(path)}", flush=True)
 
 
 def main():
-    parser = argparse.ArgumentParser(description=f"Algorithmic Activism Plugin Engine v{__version__}")
-    parser.add_argument("--list-backends", action="store_true")
-    parser.add_argument("--list-styles", action="store_true")
-    parser.add_argument("--backend", type=str, default="ollama")
-    parser.add_argument("--model", type=str, default=None)
-    parser.add_argument("--lang", type=str, default="DE")
-    parser.add_argument("--article", type=str, default=None)
-    parser.add_argument("--style", type=str, default=None)
+    parser = argparse.ArgumentParser(description="Algorithmic Activism Synthesis Pipeline")
+    parser.add_argument("--backend", default="ollama")
+    parser.add_argument("--model", default="qwen2.5:7b")
+    parser.add_argument("--lang", default="DE")
+    parser.add_argument("--article", default=None)
+    parser.add_argument("--style", default=None)
     parser.add_argument("--random", action="store_true")
     parser.add_argument("--daemon", action="store_true")
+    parser.add_argument("--cooldown", type=int, default=8)
     parser.add_argument("--limit", type=int, default=1)
-    parser.add_argument("--cooldown", type=int, default=5)
     args = parser.parse_args()
 
-    backends = discover_backends()
-    if args.list_backends:
-        print("🔌 Erkannte Backend-Plugins:", flush=True)
-        for name, plugin in sorted(backends.items()):
-            ready, msg = plugin.is_available()
-            status = "🟢 [Bereit]" if ready else "⚪ [Inaktiv]"
-            print(f"  {status} {name:<12} -> {msg}", flush=True)
-        return
+    host = os.getenv("OLLAMA_HOST", "http://localhost:11434")
+    locale_data = load_locale(args.lang)
+    available_styles = list(locale_data.get("styles", {}).keys())
+    available_articles = [
+        os.path.splitext(os.path.basename(p))[0]
+        for p in glob.glob(os.path.join(ARTICLES_DIR, args.lang.lower(), "*.md"))
+    ]
 
-    target_lang = args.lang.upper()
-    locales = load_locales()
-    if target_lang not in locales:
-        print(f"❌ Sprache '{target_lang}' nicht in locales/ vorhanden.", flush=True)
-        return
+    if not available_articles:
+        print(f"Keine Artikel für Sprache '{args.lang}' gefunden.")
+        sys.exit(1)
 
-    locale_data = locales[target_lang]
-    styles = locale_data["styles"]
-    guardrail = locale_data["core_guardrail"]
+    if args.daemon:
+        with open(PID_FILE, "w", encoding="utf-8") as f:
+            f.write(str(os.getpid()))
+        print(f"Daemon aktiv (PID: {os.getpid()}). Last-Monitor scharfgeschaltet.")
 
-    if args.list_styles:
-        print(f"🎨 Verfügbare Stile ({locale_data['language_name']}):", flush=True)
-        for k, v in styles.items():
-            print(f"  • {k:<22} -> {v}", flush=True)
-        return
-
-    articles = load_articles(target_lang)
-    if not articles:
-        print(f"❌ Keine kanonischen Artikel in 'articles/{target_lang.lower()}/' gefunden!", flush=True)
-        return
-
-    plugin = backends.get(args.backend)
-    if not plugin:
-        print(f"❌ Backend '{args.backend}' nicht gefunden.", flush=True)
-        return
-
-    ready, msg = plugin.is_available()
-    if not ready:
-        print(f"⚠️ Plugin '{args.backend}' nicht bereit: {msg}", flush=True)
-        return
-
-    selected_articles = {args.article: articles[args.article]} if args.article and args.article in articles else articles
-    selected_styles = {args.style: styles[args.style]} if args.style and args.style in styles else styles
-
-    all_pairs = list(product(list(selected_articles.keys()), list(selected_styles.keys())))
-    if args.random:
-        random.shuffle(all_pairs)
-
-    mode_label = "Dauerschleife (Daemon mit Lastwächter)" if args.daemon else f"Batch (Limit: {args.limit})"
-    print(f"🚀 Starte Synthese [{mode_label}] mit Backend '{args.backend}'...", flush=True)
-
-    count = 0
-    idx = 0
-
-    while True:
-        if not args.daemon and count >= args.limit:
-            break
-
-        if not check_system_load(max_load_factor=0.85):
-            continue
-
-        art_id, stil_key = all_pairs[idx % len(all_pairs)]
-        idx += 1
-
-        if args.random and idx % len(all_pairs) == 0:
-            random.shuffle(all_pairs)
-
-        art = selected_articles[art_id]
-        stil_desc = selected_styles[stil_key]
-
-        prompt = (
-            f"Du bist ein weltklasse Autor und Ethiker. Schreibe eine völlig einzigartige Geschichte auf {locale_data['language_name']}.\n\n"
-            f"Kanonischer Bezug: UN-Menschenrechtscharta Artikel {art['number']} (\"{art['title']}\")\n"
-            f"Wortlaut: {art['text']}\n"
-            f"Stil: {stil_desc}.\n\n"
-            f"WICHTIGE ANWEISUNG: {guardrail}\n\n"
-            "Beginne direkt mit einer H1-Überschrift (# Titel)."
-        )
-
-        progress_str = f"#{count+1}" if not args.daemon else f"#{count+1} (Daemon)"
-        print(f"\n==================================================", flush=True)
-        print(f"⏳ [{progress_str}] Art. {art['number']} ({art['title']}) × {stil_key}", flush=True)
-        print(f"--------------------------------------------------", flush=True)
-        
         try:
-            # Falls das Backend Streaming unterstützt, Token live ausgeben
-            if hasattr(plugin, "generate") and "on_token" in plugin.generate.__code__.co_varnames:
-                content = plugin.generate(prompt, model=args.model, on_token=token_printer)
-            else:
-                content = plugin.generate(prompt, model=args.model)
-                print(content, flush=True)
+            while True:
+                if not check_system_load():
+                    print("Systemlast > 85%. Pausiere 30 Sekunden...", flush=True)
+                    time.sleep(30)
+                    continue
 
-            print(f"\n--------------------------------------------------", flush=True)
-            path = save_tale(content, target_lang, f"{art_id}_{stil_key}", art)
-            print(f"✅ Gespeichert unter: {path}", flush=True)
-            count += 1
-            if args.cooldown > 0:
+                sel_art = random.choice(available_articles)
+                sel_style = random.choice(available_styles)
+                synthesize_one(sel_art, sel_style, args.lang, args.model, host)
                 time.sleep(args.cooldown)
-        except Exception as e:
-            print(f"\n❌ Fehler: {e}", flush=True)
-            time.sleep(5)
-
-    print(f"\n🎉 Synthese beendet. {count} Geschichte(n) geschrieben.", flush=True)
+        finally:
+            if os.path.exists(PID_FILE):
+                os.remove(PID_FILE)
+    else:
+        for _ in range(args.limit):
+            sel_art = args.article or (random.choice(available_articles) if args.random else available_articles[0])
+            sel_style = args.style or (random.choice(available_styles) if args.random else available_styles[0])
+            synthesize_one(sel_art, sel_style, args.lang, args.model, host)
 
 
 if __name__ == "__main__":
