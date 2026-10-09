@@ -7,50 +7,168 @@
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
     :root {
-      --bg: #0f172a;
-      --card-bg: #1e293b;
-      --text: #f8fafc;
-      --muted: #94a3b8;
+      --bg: #0b0f19;
+      --sidebar-bg: #111827;
+      --card-bg: #1f2937;
+      --card-hover: #374151;
+      --text: #f3f4f6;
+      --text-prose: #e5e7eb;
+      --muted: #9ca3af;
       --accent: #38bdf8;
-      --border: #334155;
-      --tag-bg: #0284c7;
+      --border: #374151;
+      --success: #34d399;
+      --danger: #f87171;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); display: flex; height: 100vh; overflow: hidden; }
-    #sidebar { width: 380px; border-right: 1px solid var(--border); display: flex; flex-direction: column; background: #0b1120; }
-    .header { padding: 16px; border-bottom: 1px solid var(--border); }
-    .header h1 { font-size: 1.15rem; color: var(--accent); margin-bottom: 4px; }
-    .header p { font-size: 0.8rem; color: var(--muted); }
-    .search-box { padding: 12px 16px; border-bottom: 1px solid var(--border); display: flex; gap: 8px; flex-direction: column; }
-    input, select { background: var(--card-bg); border: 1px solid var(--border); color: var(--text); padding: 8px 12px; border-radius: 6px; font-size: 0.85rem; outline: none; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Sidebar */
+    #sidebar {
+      width: 380px;
+      min-width: 320px;
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      background: var(--sidebar-bg);
+    }
+    .header {
+      padding: 18px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .header h1 { font-size: 1.15rem; color: var(--accent); margin-bottom: 4px; font-weight: 700; }
+    .header-desc { font-size: 0.8rem; color: var(--muted); margin-bottom: 10px; }
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      padding: 5px 10px;
+      background: #0284c7;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: background 0.15s;
+    }
+    .download-btn:hover { background: #0369a1; }
+
+    /* Filter */
+    .search-box {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 8px;
+      flex-direction: column;
+      background: #0d131f;
+    }
+    input, select {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      outline: none;
+    }
     input:focus, select:focus { border-color: var(--accent); }
-    #tales-list { flex: 1; overflow-y: auto; padding: 8px; }
-    .tale-item { padding: 12px; border-radius: 6px; cursor: pointer; margin-bottom: 6px; background: var(--card-bg); border: 1px solid transparent; transition: all 0.15s; }
-    .tale-item:hover { border-color: var(--accent); }
+
+    /* Liste */
+    #tales-list { flex: 1; overflow-y: auto; padding: 10px; }
+    .tale-item {
+      padding: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-bottom: 8px;
+      background: var(--card-bg);
+      border: 1px solid transparent;
+      transition: all 0.15s;
+    }
+    .tale-item:hover { background: var(--card-hover); }
     .tale-item.active { border-color: var(--accent); background: #1e3a5f; }
-    .tale-title { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+    .tale-title { font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; line-height: 1.3; }
     .tale-meta { font-size: 0.75rem; color: var(--muted); display: flex; gap: 6px; flex-wrap: wrap; }
-    .tag { background: #334155; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; }
-    #main-content { flex: 1; overflow-y: auto; padding: 40px; display: flex; justify-content: center; }
-    .reader { max-width: 780px; width: 100%; }
-    .provenance { background: var(--card-bg); border: 1px solid var(--border); padding: 16px; border-radius: 8px; margin-bottom: 24px; font-size: 0.8rem; }
-    .provenance-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; margin-top: 8px; }
-    .pro-item span { color: var(--muted); display: block; font-size: 0.7rem; text-transform: uppercase; }
-    .pro-item b { color: var(--text); }
-    .article-body { line-height: 1.7; font-size: 1.05rem; }
-    .article-body h1, .article-body h2 { margin-bottom: 16px; color: var(--accent); }
-    .article-body p { margin-bottom: 16px; }
-    .empty-state { color: var(--muted); margin-top: 100px; text-align: center; }
+    .tag { background: #374151; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; }
+
+    /* Reader */
+    #main-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 40px 24px;
+      display: flex;
+      justify-content: center;
+    }
+    .reader { max-width: 760px; width: 100%; }
+    .provenance {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 32px;
+      font-size: 0.85rem;
+    }
+    .provenance-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+    }
+    .provenance-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 10px;
+    }
+    .pro-item span { color: var(--muted); display: block; font-size: 0.7rem; text-transform: uppercase; margin-bottom: 2px; }
+    .pro-item b { color: var(--text); font-size: 0.85rem; }
+
+    /* Artikel Fließtext */
+    .article-body {
+      line-height: 1.8;
+      font-size: 1.1rem;
+      color: var(--text-prose);
+      font-family: Georgia, Cambria, "Times New Roman", serif;
+    }
+    .article-body h1 {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 1.75rem;
+      color: var(--accent);
+      margin-bottom: 24px;
+      line-height: 1.25;
+    }
+    .article-body p { margin-bottom: 20px; }
+    .article-body blockquote {
+      border-left: 3px solid var(--accent);
+      padding-left: 16px;
+      color: var(--muted);
+      margin: 20px 0;
+      font-style: italic;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      body { flex-direction: column; height: auto; overflow: visible; }
+      #sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--border); height: 45vh; }
+      #main-content { padding: 24px 16px; }
+    }
   </style>
 </head>
 <body>
   <aside id="sidebar">
     <div class="header">
       <h1>Algorithmic Activism</h1>
-      <p id="stats-summary">Korpus wird geladen...</p>
+      <p class="header-desc" id="stats-summary">Lade Korpus...</p>
+      <a href="./dataset.jsonl" download id="download-link" class="download-btn">⬇ dataset.jsonl herunterladen</a>
     </div>
     <div class="search-box">
-      <input type="text" id="filter-input" placeholder="Titel, Text oder Modell suchen...">
+      <input type="text" id="filter-input" placeholder="Titel, Volltext oder Modell suchen...">
       <div style="display: flex; gap: 6px;">
         <select id="style-select" style="flex: 1;"><option value="">Alle Stile</option></select>
         <select id="article-select" style="flex: 1;"><option value="">Alle Artikel</option></select>
@@ -61,33 +179,52 @@
 
   <main id="main-content">
     <div class="reader" id="reader-view">
-      <div class="empty-state">Wähle eine Geschichte aus der linken Leiste aus.</div>
+      <div style="color: var(--muted); margin-top: 80px; text-align: center;">
+        Wähle eine Geschichte aus der Liste aus.
+      </div>
     </div>
   </main>
 
   <script>
     let tales = [];
-    // Mehrere Kandidaten: GitHub Pages (neben der Seite), lokaler Server (web/.. oder datasets/)
+    // Drei Kandidaten: lokal (/web/), Pages-Root (_site/) und Snapshot-Ablage. Kein Raten, Reihenfolge ist gemessen.
     const DATASET_CANDIDATES = ['./dataset.jsonl', '../dataset.jsonl', '../datasets/corpus-latest.jsonl'];
+    let DATASET_URL = null;
+
+    async function resolveDataset() {
+      for (const cand of DATASET_CANDIDATES) {
+        try {
+          const res = await fetch(cand, { cache: 'no-store' });
+          if (res.ok) return { url: cand, text: await res.text() };
+        } catch (e) { /* naechster Kandidat */ }
+      }
+      return null;
+    }
 
     async function loadDataset() {
       try {
-        let res = null, used = null;
-        for (const url of DATASET_CANDIDATES) {
-          const r = await fetch(url, {cache: 'no-store'});
-          if (r.ok) { res = r; used = url; break; }
-        }
-        if (!res) throw new Error("Dataset nicht erreichbar: " + DATASET_CANDIDATES.join(', '));
-        const text = await res.text();
+        const hit = await resolveDataset();
+        if (!hit) throw new Error("Kein Dataset unter " + DATASET_CANDIDATES.join(', '));
+        DATASET_URL = hit.url;
+        const text = hit.text;
+        const dl = document.getElementById('download-link');
+        if (dl) { dl.href = DATASET_URL; dl.setAttribute('download', 'algorithmic-activism-dataset.jsonl'); }
         const lines = text.trim().split("\n");
-        tales = lines.map(line => JSON.parse(line)).filter(r => r.meta);
-        
-        document.getElementById('stats-summary').textContent = `${tales.length} Narrative synthetisiert (Zero-Dependency)`;
+        tales = lines.map(line => {
+          try { return JSON.parse(line); } catch (e) { return null; }
+        }).filter(r => r && r.meta);
+
+        const kbSize = Math.round(new Blob([text]).size / 1024);
+        document.getElementById('stats-summary').textContent = `${tales.length} Narrative (${kbSize} KB)`;
         populateFilters();
         renderList(tales);
-        if (tales.length > 0) selectTale(0);
+
+        // Deep Link Check via Hash
+        const hash = decodeURIComponent(window.location.hash.replace('#', ''));
+        const foundIdx = tales.findIndex(t => (t.meta.title || '').replace(/\s+/g, '_') === hash);
+        selectTale(foundIdx !== -1 ? foundIdx : 0);
       } catch (e) {
-        document.getElementById('stats-summary').textContent = "Fehler beim Laden von dataset.jsonl";
+        document.getElementById('stats-summary').textContent = "Fehler beim Laden des Datensatzes";
         console.error(e);
       }
     }
@@ -95,7 +232,7 @@
     function populateFilters() {
       const styles = [...new Set(tales.map(t => t.meta.style).filter(Boolean))].sort();
       const articles = [...new Set(tales.map(t => t.meta.article).filter(Boolean))].sort();
-      
+
       const styleSelect = document.getElementById('style-select');
       styles.forEach(s => styleSelect.innerHTML += `<option value="${s}">${s}</option>`);
 
@@ -106,11 +243,18 @@
     function renderList(list) {
       const container = document.getElementById('tales-list');
       container.innerHTML = '';
-      list.forEach((t, index) => {
+      if (list.length === 0) {
+        container.innerHTML = '<div style="color:var(--muted); padding:16px; text-align:center; font-size:0.85rem;">Keine passenden Narrative gefunden.</div>';
+        return;
+      }
+
+      list.forEach((t) => {
         const item = document.createElement('div');
+        const title = t.meta.title || t.output.split('\n')[0].replace('# ', '');
         item.className = 'tale-item';
+        item.dataset.title = title.replace(/\s+/g, '_');
         item.innerHTML = `
-          <div class="tale-title">${t.meta.title || t.output.split('\n')[0].replace('# ', '')}</div>
+          <div class="tale-title">${title}</div>
           <div class="tale-meta">
             <span class="tag">${t.meta.article || 'UDHR'}</span>
             <span class="tag">${t.meta.style || 'Narrative'}</span>
@@ -129,26 +273,50 @@
     function selectTale(index) {
       const t = tales[index];
       if (!t) return;
+
+      const title = t.meta.title || t.output.split('\n')[0].replace('# ', '');
+      window.location.hash = encodeURIComponent(title.replace(/\s+/g, '_'));
+
+      // Highlight in List
+      document.querySelectorAll('.tale-item').forEach(el => {
+        el.classList.toggle('active', el.dataset.title === title.replace(/\s+/g, '_'));
+      });
+
       const htmlContent = marked.parse(t.output);
-      const auditPassed = t.meta.guardrail_audit?.passed ?? true;
-      
+      const audit = auditInfo(t.meta);
+
       document.getElementById('reader-view').innerHTML = `
         <div class="provenance">
-          <div style="display:flex; justify-content:space-between; align-items:center;">
-            <strong>Provenienz & Prüfstatus</strong>
-            <span style="color: ${auditPassed ? '#4ade80' : '#f87171'}; font-weight:bold;">
-              ${auditPassed ? '✓ Audit Passed' : '⚠ Quarantäne'}
-            </span>
+          <div class="provenance-header">
+            <strong>Provenienz & Audit</strong>
+            <span style="color: ${audit.color}; font-weight:600;">${audit.label}</span>
           </div>
           <div class="provenance-grid">
             <div class="pro-item"><span>UN-Artikel</span><b>${t.meta.article || 'N/A'}</b></div>
             <div class="pro-item"><span>Stil</span><b>${t.meta.style || 'N/A'}</b></div>
-            <div class="pro-item"><span>Modell</span><b>${t.meta.model || 'N/A'}</b></div>
-            <div class="pro-item"><span>Wörter</span><b>~${t.meta.approx_words || 'N/A'}</b></div>
+            <div class="pro-item"><span>Inferenz-Modell</span><b>${t.meta.model || 'N/A'}</b></div>
+            <div class="pro-item"><span>Umfang</span><b>${t.meta.approx_words ? '~' + t.meta.approx_words + ' Wörter' : 'N/A'}</b></div>
+            <div class="pro-item"><span>Herkunft</span><b>${t.meta.provenance === 'none' ? 'Altbestand (kein YAML-Kopf)' : 'YAML-Frontmatter'}</b></div>
           </div>
         </div>
-        <div class="article-body">${htmlContent}</div>
+        <article class="article-body">${htmlContent}</article>
       `;
+
+      const main = document.getElementById('main-content');
+      if (main) main.scrollTop = 0;
+    }
+
+    // Audit NUR behaupten, wenn er belegt ist. Drei Zustaende: validiert / Quarantaene / kein Audit vorliegend.
+    function auditInfo(meta) {
+      meta = meta || {};
+      const nested = (typeof meta.guardrail_audit === 'object' && meta.guardrail_audit) ? meta.guardrail_audit : null;
+      const passedRaw = nested ? nested.passed : meta.passed;
+      const statusText = (nested && nested.status) || meta.status || '';
+      const passed = (passedRaw === true || passedRaw === 'true');
+      const failed = (passedRaw === false || passedRaw === 'false');
+      if (passed) return { label: '\u2713 Harm Reduction validiert' + (statusText ? ' (' + statusText + ')' : ''), color: 'var(--success)' };
+      if (failed) return { label: '\u26a0 Quarantaene' + (statusText ? ' (' + statusText + ')' : ''), color: 'var(--danger)' };
+      return { label: '\u2013 nicht auditiert (Altbestand)', color: 'var(--muted)' };
     }
 
     function filterData() {
@@ -173,3 +341,4 @@
   </script>
 </body>
 </html>
+
