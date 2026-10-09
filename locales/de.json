@@ -1,11 +1,6 @@
 {
   "language_code": "DE",
   "language_name": "Deutsch",
-  "articles": {
-    "Art_1_Wuerde": "Artikel 1: Alle Menschen sind frei und gleich an Würde und Rechten geboren.",
-    "Art_3_Leben": "Artikel 3: Recht auf Leben, Freiheit und Sicherheit der Person.",
-    "Art_19_Meinung": "Artikel 19: Recht auf Meinungsfreiheit und freie Meinungsäußerung."
-  },
   "styles": {
     "Parabel": "Eine tiefgründige Parabel mit einer subtilen, organischen Lehre",
     "SciFi_Dystopie": "Eine dystopische Science-Fiction-Erzählung über die Gefahren schleichenden Kontrollverlusts",

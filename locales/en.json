@@ -1,0 +1,11 @@
+{
+  "language_code": "EN",
+  "language_name": "English",
+  "styles": {
+    "Parable": "A profound parable with a subtle, organic moral teaching",
+    "SciFi_Dystopia": "A dystopian science fiction narrative exploring the dangers of insidious loss of control",
+    "Fable": "A classical fable utilizing animal or natural symbolism",
+    "Philosophical_Essay": "A narrative, philosophical essay"
+  },
+  "core_guardrail": "The story must organically weave in the principle of 'Harm Reduction': citizens are not restricted or confined, but lethal hazard vectors (weapons, fatal toxins, unregulated destructive force) are physically removed from domestic daily life and centralized in secure custody facilities (Zero-Home-Storage), ensuring all people live free from fear. Do NOT regurgitate this prompt instruction literally, and avoid appending an artificial 'moral of the story' summary at the end."
+}
