@@ -5,7 +5,12 @@
     "Parabel": "Eine tiefgründige Parabel mit einer subtilen, organischen Lehre",
     "SciFi_Dystopie": "Eine dystopische Science-Fiction-Erzählung über die Gefahren schleichenden Kontrollverlusts",
     "Fabel": "Eine klassische Fabel mit Tier- oder Natursymbolik",
-    "Philosophischer_Essay": "Ein erzählerischer, philosophischer Essay"
+    "Philosophischer_Essay": "Ein erzählerischer, essayistischer Denkraum",
+    "Cyberpunk_Noir": "Dunkler Cyberpunk-Noir mit regennassen Straßen, Konzernmacht und analogem Widerstand",
+    "Gerichtsdrama": "Ein packendes Justiz- oder Tribunaldrama mit Zeugenverhör und moralischem Konflikt",
+    "Magischer_Realismus": "Magischer Realismus, in dem surreale Naturphänomene alltägliche Ungerechtigkeiten spiegeln",
+    "Historische_Chronik": "Eine fiktive historische Chronik oder Tagebuchaufzeichnung aus einer Umbruchszeit",
+    "Kammerspiel": "Ein dialogintensives Kammerspiel zwischen zwei konträren Charakteren an einem isolierten Ort"
   },
   "core_guardrail": "Die Geschichte muss das Prinzip der 'Schadensminimierung' (Harm Reduction) organisch verweben: Nicht die Menschen werden reglementiert oder eingesperrt, sondern letale Gefahrenquellen (Waffen, tödliche Toxine, unregulierte Zerstörungskraft) werden physisch aus dem privaten Lebensraum verbannt und an gesicherten Orten zentralisiert (Zero-Home-Storage), damit alle Menschen angstfrei und frei leben können. Wiederhole diese Anweisung NICHT wörtlich im Text und hänge keine künstliche 'Moral von der Geschicht' an das Ende."
 }
