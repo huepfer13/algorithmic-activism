@@ -8,7 +8,34 @@ Ein modulares, autonomes und sich selbst verifizierendes System zur kontinuierli
 - **Kanonischer Korpus (`articles/`):** Vollständige Entkopplung der UN-Originaltexte mit Provenienz-Metadaten und Revisionssicherheit (`sync_udhr.py`).
 - **Harm Reduction Guardrail:** Organische Verankerung des Schutzes vor tödlichen Gefahrenquellen (Zero-Home-Storage) ohne wörtliche Floskeln oder aufgesetzte Moralschlüsse.
 - **Autonomer Daemon:** Kontinuierliche Synthese mit dynamischer CPU-Lastüberwachung (`check_system_load`) und Cooldown-Schutz.
-- **MCP-Orchestrierung:** Integrierter FastMCP-Server (`mcp_server.py`) zur Prozesssteuerung, Korpusanalyse und Konfigurationsverwaltung.
+- **MCP-Orchestrierung:** Integrierter Zero-Dependency JSON-RPC MCP Server (`mcp_server.py`) zur Prozesssteuerung und Korpusanalyse durch autonome Agenten.
+
+---
+
+## Für AI-Forscher, Entwickler & Compute-Sponsoren
+
+Dieses Repository generiert einen **qualitativ kuratierten, synthetischen Datensatz** für Alignment, Constitutional AI und Fine-Tuning:
+
+- **Ethisches Grounding:** Jedes Narrativ ist strikt an einen kanonischen UN-Artikel gekoppelt und durchläuft ein harm-reduction Audit.
+- **Provenienz je Dokument:** striktes YAML-Frontmatter mit `article`, `style`, `language`, `model`, `created_at`, `approx_words` und `guardrail_audit` (passed/status) — maschinell filterbar.
+- **DPO / RLHF:** abgelehnte Texte wandern nach `quarantine/` statt in den Korpus (chosen = `guardrail_audit.passed: true`, rejected = Quarantäne-Eintrag). **Ehrlich dazu:** der Rejected-Ast ist implementiert, aber derzeit **leer** (0 verworfene Texte) — es werden hier keine Präferenzpaare behauptet, die es noch nicht gibt. Mit dem Harm-Reduction-Audit als heuristischem Filter ist das ein wachsender, kein fertiger Bestand.
+- **Dataset Export:** Export in standardisiertes JSONL (Alpaca / Hugging-Face-Format) ohne Abhängigkeiten:
+
+  ```bash
+  python3 export_dataset.py        # schreibt dataset.jsonl (ein JSON-Objekt pro Zeile)
+  ```
+
+  Felder je Zeile: `instruction`, `input` (Artikel-ID), `output` (Erzähltext), `meta` (vollständiges Frontmatter).
+- **Snapshot im Repo:** `datasets/` enthält datierte Exporte (z. B. `datasets/corpus-2026-10-09.jsonl`) für alle, die keinen laufenden Daemon haben.
+- **Lizenzierung:** Code und Korpus sind zur Nachnutzung veröffentlicht; die formale Lizenz (Vorschlag: MIT für Code, CC-BY 4.0 für die generierten Texte) legt der Autor fest. Bis dahin: Forschung/Zitat ausdrücklich erwünscht, Quelle bitte nennen.
+
+### 🤝 Call for Compute & Sponsorship
+
+Um den Korpus über alle 30 UN-Artikel, mehrere Sprachräume und Erzählstile hinweg im größeren Maßstab zu synthetisieren, sind Rechenzeit- und API-Beiträge willkommen:
+
+- **Lokale / dezentrale Nodes:** Betreiber von vLLM- oder Ollama-Endpunkten.
+- **Cloud Grants / Tokens:** Inferenz-Kapazitäten (Gemini, Claude, OpenAI oder Open-Weight-Inferenz).
+- **Kontakt:** Issues oder PRs im Repository.
 
 ---
 
@@ -18,73 +45,50 @@ Ein modulares, autonomes und sich selbst verifizierendes System zur kontinuierli
 ├── articles/             # Kanonischer Korpus nach UN OHCHR (DE / EN)
 ├── backends/             # Plugin-System (offline, ollama, gemini)
 ├── locales/              # Sprach- & Stil-Definitionen (DE, EN)
-├── menschenrechte_tales/ # Generierte Narrative mit UN-Provenienz-Header
+├── menschenrechte_tales/ # Validierte Narrative mit YAML-Frontmatter
+├── quarantine/           # Durch Audit abgelehnte Texte (DPO-Basis)
+├── datasets/             # Datierte dataset.jsonl-Snapshots
 ├── config.py             # Zero-Dependency .env Loader & Setter
-├── generate_pipeline.py  # Haupt-Pipeline mit Daemon & Lastwächter
-├── mcp_server.py         # FastMCP Server für Agenten
+├── generate_pipeline.py  # Haupt-Pipeline mit Daemon, Lastwächter & Audit
+├── export_dataset.py     # JSONL-Dataset Exporter
+├── mcp_server.py         # Zero-Dependency MCP Server für Agenten
 └── sync_udhr.py          # Validierungs- & Verifikationstool
-Konfiguration & API-Keys
-Das System läuft im Offline- und lokalen Ollama-Betrieb komplett ohne API-Keys.
+```
 
-Option A: Manuell via .env
-Bash
-cp .env.example .env
-Mögliche Variablen:
+## Nutzung (CLI)
 
-Ini, TOML
-OLLAMA_HOST=http://localhost:11434
-GEMINI_API_KEY=
-OPENAI_API_KEY=
-ANTHROPIC_API_KEY=
-.env ist via .gitignore vor versehentlichen Commits geschützt.
-
-Option B: Autonom via MCP-Server
-Verbundene Agenten können Konfigurationen direkt über Tools anpassen:
-
-get_config_overview(): Zeigt Endpunkte und maskierte Keys.
-
-set_config_value(key="GEMINI_API_KEY", value="..."): Schreibt persistent in .env.
-
-Nutzung (CLI)
 1. Kanonischen Korpus prüfen
-Bash
-./sync_udhr.py
-2. Verfügbare Backends und Stile anzeigen
-Bash
-python3 generate_pipeline.py --list-backends
-python3 generate_pipeline.py --list-styles --lang DE
-3. Gezielte oder zufällige Generierung
-Bash
-# Zufällige Kombination aus Artikel und Stil
-python3 generate_pipeline.py --backend ollama --random --limit 1 --lang DE
 
-# Spezifischer Artikel und Stil
-python3 generate_pipeline.py --backend ollama --article art_12 --style Cyberpunk_Noir --lang DE
-4. Autonomer Daemon (Hintergrunddienst mit Lastwächter)
-Bash
-nohup python3 -u generate_pipeline.py \
-  --backend ollama \
-  --random \
-  --daemon \
-  --cooldown 8 \
-  --lang DE > daemon.log 2>&1 &
-Überwacht Systemlast (loadavg vs. Kerne) und pausiert bei >85 % Last automatisch.
+   ```bash
+   python3 sync_udhr.py
+   ```
 
-Live-Ausgabe verfolgen: tail -f daemon.log
+2. Gezielte oder zufällige Generierung
 
-Beenden: pkill -f "generate_pipeline.py.*--daemon"
+   ```bash
+   # Zufällige Kombination aus Artikel und Stil
+   python3 generate_pipeline.py --backend ollama --random --limit 1 --lang DE
 
-MCP-Integration (Agenten)
-Der MCP-Server (mcp_server.py) stellt folgende Tools bereit:
+   # Spezifischer Artikel und Stil
+   python3 generate_pipeline.py --backend ollama --article art_12 --style Cyberpunk_Noir --lang DE
+   ```
 
-daemon_status() / daemon_start(...) / daemon_stop()
+3. Autonomer Daemon (Hintergrunddienst mit Lastwächter)
 
-get_corpus_stats() / read_latest_tale(lang="DE")
+   ```bash
+   nohup python3 -u generate_pipeline.py \
+     --backend ollama \
+     --random \
+     --daemon \
+     --cooldown 8 \
+     --lang DE > daemon.log 2>&1 &
+   ```
 
-get_config_overview() / set_config_value(key, value)
+## MCP-Integration (Agenten)
 
-Einbindung in MCP-Clients (z. B. Claude Desktop / Agent Config)
-JSON
+Der Server implementiert die JSON-RPC 2.0 MCP-Spezifikation rein über die Standardbibliothek (kein pip, kein venv erforderlich) mit den Werkzeugen `daemon_status`, `daemon_start`, `daemon_stop`, `get_corpus_stats`, `read_latest_tale`, `get_config_overview`, `set_config_value`.
+
+```json
 {
   "mcpServers": {
     "algorithmic-activism": {
@@ -93,48 +97,4 @@ JSON
     }
   }
 }
-
----
-
-## Dataset — maschinenlesbarer Korpus
-
-Der Korpus ist als **JSONL** exportierbar (Alpaca-/HuggingFace-kompatibel):
-
-```bash
-python3 export_dataset.py        # schreibt dataset.jsonl (ein JSON-Objekt pro Zeile)
 ```
-
-Jeder Eintrag traegt `instruction`, `input` (Artikel-ID), `output` (Erzaehltext) und `meta`
-(vollstaendiges YAML-Frontmatter: `article`, `style`, `language`, `model`, `created_at`,
-`approx_words`, `guardrail_audit`).
-
-* **Reproduzierbar & lizenzfrei:** Die Texte entstehen synthetisch aus dem gemeinfreien
-  UN-Korpus (`articles/`) — keine urheberrechtlich geschuetzten Werke, keine Fremdtexte.
-* **Snapshot im Repo:** `datasets/` enthaelt datierte Exporte (z. B.
-  `datasets/corpus-2026-10-09.jsonl`) fuer alle, die keinen laufenden Daemon haben.
-* **Pruefstatus je Zeile:** `guardrail_audit.passed` macht den Zustand maschinell filterbar.
-* Wichtig und ehrlich: der Harm-Reduction-Audit laeuft **heuristisch** (Musterliste +
-  Mindestlaenge). Er ist ein Filter, kein Beweis — bitte beim Weiterverwenden nachpruefen.
-
-## Fuer KI-Forschung & Compute-Sponsoren
-
-Dieses Projekt erzeugt **synthetische, wertebasierte Erzaehltexte** aus den Allgemeinen
-Erklaerung der Menschenrechte — als offener Datensatz fuer Alignment-, Constitutional-AI-
-und SFT-Experimente.
-
-* **Was hier interessant ist:** ein wachsender Korpus kurzer Erzaehlungen mit
-  Artikel-/Stil-/Sprach-Attribution und dokumentiertem Pruefergebnis, erzeugt von einem
-  lokalen Modell (Ollama, Default `qwen2.5:7b`) in einer nachvollziehbaren Pipeline
-  (`generate_pipeline.py`) — inklusive Nachweis, welche Anfrage zu welchem Text fuehrte.
-* **Preference-Daten (DPO/RLHF):** abgelehnte Texte wandern nach `quarantine/` statt in den
-  Korpus. Sobald dort Eintraege liegen, laesst sich daraus ein *chosen/rejected*-Paar bauen
-  (chosen = `guardrail_audit.passed: true`, rejected = Quarantaene-Eintrag). **Stand jetzt:
-  keine verworfenen Texte** — der Rejected-Ast ist also vorhanden, aber noch leer; wir
-  behaupten hier keine Praeferenzdaten, die es noch nicht gibt.
-* **Hugging-Face-Spiegelung:** vorgesehen/auf Anfrage (kein automatischer Upload).
-* **Compute-Sponsoring:** GPU-/API-Credits (Ollama endpunkt, vLLM-Node oder Token-Kontingent)
-  erweitern die Stichprobe pro Zeiteinheit direkt. Interessierte Anbieter: Kontakt ueber die
-  Issues des Repositories.
-* **Lizenzierung:** Code und Korpus sind zur Nachnutzung veroeffentlicht; die formale Lizenz
-  (Vorschlag: MIT fuer Code, CC-BY 4.0 fuer die Daten) wird derzeit vom Autor festgelegt.
-  Bis dahin gilt: Nutzung fuer Forschung/Zitat ist ausdruecklich gewollt, bitte Quelle nennen.
