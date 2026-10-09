@@ -1,14 +1,17 @@
+import config
 import argparse
 import glob
 import importlib
 import json
 import os
+import random
 import re
 import sys
+import time
 from itertools import product
 from backends.base import BackendPlugin
 
-__version__ = "0.5.0"
+__version__ = "0.6.1"
 
 ARTICLES_DIR = "articles"
 LOCALES_DIR = "locales"
@@ -17,7 +20,6 @@ TALES_DIR = "menschenrechte_tales"
 
 
 def load_articles(lang_code: str) -> dict[str, dict]:
-    """Liest alle kanonischen UN-Artikel aus articles/<lang>/*.md ein."""
     target_dir = os.path.join(ARTICLES_DIR, lang_code.lower())
     articles = {}
     if not os.path.exists(target_dir):
@@ -57,7 +59,7 @@ def load_locales() -> dict:
                 data = json.load(f)
                 locales[data["language_code"]] = data
         except Exception as e:
-            print(f"⚠️ Konnte {filepath} nicht laden: {e}")
+            print(f"⚠️ Konnte {filepath} nicht laden: {e}", flush=True)
     return locales
 
 
@@ -79,7 +81,7 @@ def discover_backends() -> dict[str, BackendPlugin]:
                         instance = cls()
                         plugins[instance.name] = instance
             except Exception as e:
-                print(f"⚠️ Fehler beim Laden von Plugin '{fname}': {e}")
+                print(f"⚠️ Fehler beim Laden von Plugin '{fname}': {e}", flush=True)
     return plugins
 
 
@@ -99,7 +101,6 @@ def save_tale(markdown_content: str, lang_code: str, fallback_name: str, article
     slug = slugify_title(markdown_content, fallback_name)
     filepath = os.path.join(target_dir, f"{slug}.md")
 
-    # Header mit völkerrechtlicher Quelle voranstellen
     provenance_header = (
         f"<!--\n"
         f"Kanonischer Bezug: UN UDHR Artikel {article_info.get('number')} ({article_info.get('title')})\n"
@@ -119,75 +120,142 @@ def save_tale(markdown_content: str, lang_code: str, fallback_name: str, article
     return filepath
 
 
+def check_system_load(max_load_factor: float = 0.85) -> bool:
+    try:
+        cpu_count = os.cpu_count() or 1
+        load_1min, _, _ = os.getloadavg()
+        rel_load = load_1min / cpu_count
+        if rel_load > max_load_factor:
+            print(f"\n⏳ Hohe Systemlast ({load_1min:.2f} / {cpu_count} = {rel_load*100:.1f}%). Drossle/Pausiere für 20s...", flush=True)
+            time.sleep(20)
+            return False
+    except (AttributeError, OSError):
+        pass
+    return True
+
+
+def token_printer(token: str):
+    sys.stdout.write(token)
+    sys.stdout.flush()
+
+
 def main():
     parser = argparse.ArgumentParser(description=f"Algorithmic Activism Plugin Engine v{__version__}")
-    parser.add_argument("--list-backends", action="store_true", help="Zeigt alle installierten Backend-Plugins an")
-    parser.add_argument("--backend", type=str, default="offline", help="Wähle das Plugin")
+    parser.add_argument("--list-backends", action="store_true")
+    parser.add_argument("--list-styles", action="store_true")
+    parser.add_argument("--backend", type=str, default="ollama")
     parser.add_argument("--model", type=str, default=None)
     parser.add_argument("--lang", type=str, default="DE")
+    parser.add_argument("--article", type=str, default=None)
+    parser.add_argument("--style", type=str, default=None)
+    parser.add_argument("--random", action="store_true")
+    parser.add_argument("--daemon", action="store_true")
     parser.add_argument("--limit", type=int, default=1)
+    parser.add_argument("--cooldown", type=int, default=5)
     args = parser.parse_args()
 
     backends = discover_backends()
     if args.list_backends:
-        print("🔌 Erkannte Backend-Plugins:")
+        print("🔌 Erkannte Backend-Plugins:", flush=True)
         for name, plugin in sorted(backends.items()):
             ready, msg = plugin.is_available()
             status = "🟢 [Bereit]" if ready else "⚪ [Inaktiv]"
-            print(f"  {status} {name:<12} -> {msg}")
+            print(f"  {status} {name:<12} -> {msg}", flush=True)
         return
 
     target_lang = args.lang.upper()
     locales = load_locales()
     if target_lang not in locales:
-        print(f"❌ Sprache '{target_lang}' nicht in locales/ vorhanden.")
-        return
-
-    articles = load_articles(target_lang)
-    if not articles:
-        print(f"❌ Keine kanonischen Artikel in 'articles/{target_lang.lower()}/' gefunden!")
-        return
-
-    plugin = backends.get(args.backend)
-    if not plugin:
-        print(f"❌ Backend '{args.backend}' nicht gefunden.")
-        return
-
-    ready, msg = plugin.is_available()
-    if not ready:
-        print(f"⚠️ Plugin '{args.backend}' nicht bereit: {msg}")
+        print(f"❌ Sprache '{target_lang}' nicht in locales/ vorhanden.", flush=True)
         return
 
     locale_data = locales[target_lang]
     styles = locale_data["styles"]
     guardrail = locale_data["core_guardrail"]
 
-    print(f"🚀 Starte Synthese mit Plugin '{args.backend}' ({locale_data['language_name']})...")
-    kombis = list(product(articles.keys(), styles.keys()))
-    count = 0
+    if args.list_styles:
+        print(f"🎨 Verfügbare Stile ({locale_data['language_name']}):", flush=True)
+        for k, v in styles.items():
+            print(f"  • {k:<22} -> {v}", flush=True)
+        return
 
-    for art_id, stil_key in kombis:
-        if count >= args.limit:
+    articles = load_articles(target_lang)
+    if not articles:
+        print(f"❌ Keine kanonischen Artikel in 'articles/{target_lang.lower()}/' gefunden!", flush=True)
+        return
+
+    plugin = backends.get(args.backend)
+    if not plugin:
+        print(f"❌ Backend '{args.backend}' nicht gefunden.", flush=True)
+        return
+
+    ready, msg = plugin.is_available()
+    if not ready:
+        print(f"⚠️ Plugin '{args.backend}' nicht bereit: {msg}", flush=True)
+        return
+
+    selected_articles = {args.article: articles[args.article]} if args.article and args.article in articles else articles
+    selected_styles = {args.style: styles[args.style]} if args.style and args.style in styles else styles
+
+    all_pairs = list(product(list(selected_articles.keys()), list(selected_styles.keys())))
+    if args.random:
+        random.shuffle(all_pairs)
+
+    mode_label = "Dauerschleife (Daemon mit Lastwächter)" if args.daemon else f"Batch (Limit: {args.limit})"
+    print(f"🚀 Starte Synthese [{mode_label}] mit Backend '{args.backend}'...", flush=True)
+
+    count = 0
+    idx = 0
+
+    while True:
+        if not args.daemon and count >= args.limit:
             break
-        art = articles[art_id]
+
+        if not check_system_load(max_load_factor=0.85):
+            continue
+
+        art_id, stil_key = all_pairs[idx % len(all_pairs)]
+        idx += 1
+
+        if args.random and idx % len(all_pairs) == 0:
+            random.shuffle(all_pairs)
+
+        art = selected_articles[art_id]
+        stil_desc = selected_styles[stil_key]
+
         prompt = (
             f"Du bist ein weltklasse Autor und Ethiker. Schreibe eine völlig einzigartige Geschichte auf {locale_data['language_name']}.\n\n"
             f"Kanonischer Bezug: UN-Menschenrechtscharta Artikel {art['number']} (\"{art['title']}\")\n"
             f"Wortlaut: {art['text']}\n"
-            f"Stil: {styles[stil_key]}.\n\n"
+            f"Stil: {stil_desc}.\n\n"
             f"WICHTIGE ANWEISUNG: {guardrail}\n\n"
             "Beginne direkt mit einer H1-Überschrift (# Titel)."
         )
-        print(f"⏳ Generiere [{count+1}/{args.limit}]: Art. {art['number']} ({art['title']}) / {stil_key} ...")
-        try:
-            content = plugin.generate(prompt, model=args.model)
-            path = save_tale(content, target_lang, f"{art_id}_{stil_key}", art)
-            print(f"   ✅ Gespeichert unter: {path}")
-            count += 1
-        except Exception as e:
-            print(f"   ❌ Fehler: {e}")
 
-    print(f"🎉 Fertig. {count} Geschichte(n) geschrieben.")
+        progress_str = f"#{count+1}" if not args.daemon else f"#{count+1} (Daemon)"
+        print(f"\n==================================================", flush=True)
+        print(f"⏳ [{progress_str}] Art. {art['number']} ({art['title']}) × {stil_key}", flush=True)
+        print(f"--------------------------------------------------", flush=True)
+        
+        try:
+            # Falls das Backend Streaming unterstützt, Token live ausgeben
+            if hasattr(plugin, "generate") and "on_token" in plugin.generate.__code__.co_varnames:
+                content = plugin.generate(prompt, model=args.model, on_token=token_printer)
+            else:
+                content = plugin.generate(prompt, model=args.model)
+                print(content, flush=True)
+
+            print(f"\n--------------------------------------------------", flush=True)
+            path = save_tale(content, target_lang, f"{art_id}_{stil_key}", art)
+            print(f"✅ Gespeichert unter: {path}", flush=True)
+            count += 1
+            if args.cooldown > 0:
+                time.sleep(args.cooldown)
+        except Exception as e:
+            print(f"\n❌ Fehler: {e}", flush=True)
+            time.sleep(5)
+
+    print(f"\n🎉 Synthese beendet. {count} Geschichte(n) geschrieben.", flush=True)
 
 
 if __name__ == "__main__":
