@@ -2,6 +2,7 @@ import argparse
 import json
 import os
 import re
+import subprocess
 import sys
 import time
 import urllib.error
@@ -87,7 +88,7 @@ def save_tale(markdown_content: str, lang_code: str, fallback_name: str) -> str:
     return filepath
 
 
-# ==================== BACKEND ADAPTERS (STANDARD HTTP) ====================
+# ==================== BACKENDS ====================
 
 def query_ollama(prompt: str, model: str = "llama3.1", host: str = "http://localhost:11434") -> str:
     url = f"{host.rstrip('/')}/api/generate"
@@ -137,6 +138,61 @@ def query_backend(backend: str, prompt: str, model: str = None) -> str:
         raise ValueError(f"Unbekanntes Backend: {backend}. Wähle 'ollama', 'gemini' oder 'openai'.")
 
 
+# ==================== GIT AUTOMATION ====================
+
+def run_cmd(cmd: list) -> str:
+    res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    if res.returncode != 0:
+        raise RuntimeError(f"Befehl {' '.join(cmd)} fehlgeschlagen: {res.stderr.strip()}")
+    return res.stdout.strip()
+
+
+def sync_git(generated_files: list, create_pr: bool = False):
+    """Fügt generierte Geschichten zu Git hinzu, committet und pusht sie."""
+    if not generated_files:
+        print("ℹ️ Keine neuen Dateien zum Pushen vorhanden.")
+        return
+
+    print("\n📦 Starte Git-Synchronisation...")
+    try:
+        # 1. Änderungen stagen
+        for f in generated_files:
+            run_cmd(["git", "add", f])
+
+        # Status prüfen
+        status = run_cmd(["git", "status", "--porcelain"])
+        if not status:
+            print("ℹ️ Keine Änderungen im Working Tree.")
+            return
+
+        # 2. Commit erstellen
+        msg = f"feat(tales): auto-generate {len(generated_files)} human rights stories"
+        run_cmd(["git", "commit", "-m", msg])
+        print(f"✅ Commit erstellt: '{msg}'")
+
+        # 3. Branch und Remote ermitteln
+        branch = run_cmd(["git", "rev-parse", "--abbrev-ref", "HEAD"])
+        run_cmd(["git", "push", "origin", branch])
+        print(f"🚀 Erfolgreich nach 'origin/{branch}' gepusht!")
+
+        # 4. Optional: Automatischen Pull Request erstellen (für Forks)
+        if create_pr:
+            print("🔀 Erstelle Pull Request via GitHub CLI...")
+            pr_title = f"feat(matrix): add {len(generated_files)} synthesized tales"
+            pr_body = (
+                "Automatisierter PR der Algorithmic-Activism-Pipeline.\n\n"
+                f"Generierte Dateien:\n" + "\n".join([f"- `{f}`" for f in generated_files])
+            )
+            pr_cmd = ["gh", "pr", "create", "--title", pr_title, "--body", pr_body]
+            pr_url = run_cmd(pr_cmd)
+            print(f"🎉 Pull Request erfolgreich eröffnet: {pr_url}")
+
+    except Exception as e:
+        print(f"⚠️ Git-Push fehlgeschlagen: {e}")
+
+
+# ==================== MAIN ====================
+
 def build_catalog_only():
     setup_directories()
     kombinationen = list(product(ARTIKEL.keys(), SPRACHEN.keys(), STILE.keys()))
@@ -158,15 +214,19 @@ def build_catalog_only():
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Algorithmic Activism Engine")
+    parser = argparse.ArgumentParser(description="Algorithmic Activism Engine with Git Automation")
     parser.add_argument("--backend", choices=["ollama", "gemini", "openai", "catalog-only"], default="catalog-only")
     parser.add_argument("--model", type=str, default=None)
     parser.add_argument("--limit", type=int, default=1)
     parser.add_argument("--lang", type=str, default=None)
+    parser.add_argument("--git-push", action="store_true", help="Automatisch committen und zu origin pushen")
+    parser.add_argument("--create-pr", action="store_true", help="Erstellt nach dem Push automatisch einen PR via 'gh'")
     args = parser.parse_args()
 
     if args.backend == "catalog-only":
         build_catalog_only()
+        if args.git-push:
+            sync_git([PROMPTS_DIR])
         return
 
     setup_directories()
@@ -174,21 +234,27 @@ def main():
     kombinationen = list(product(ARTIKEL.keys(), target_langs, STILE.keys()))
 
     print(f"🚀 Starte Generierung via Backend '{args.backend}' (Limit: {args.limit})...")
-    count = 0
+    generated_files = []
+
     for art_key, lang_code, stil_key in kombinationen:
-        if count >= args.limit:
+        if len(generated_files) >= args.limit:
             break
         fallback = f"{art_key}_{stil_key}"
         prompt = build_prompt(ARTIKEL[art_key], SPRACHEN[lang_code], STILE[stil_key])
-        print(f"⏳ Generiere [{count+1}/{args.limit}]: {fallback} ({lang_code})...")
+        print(f"⏳ Generiere [{len(generated_files)+1}/{args.limit}]: {fallback} ({lang_code})...")
         try:
             story_md = query_backend(args.backend, prompt, model=args.model)
             saved = save_tale(story_md, lang_code, fallback)
             print(f"   ✅ Gespeichert unter: {saved}")
-            count += 1
+            generated_files.append(saved)
             time.sleep(1)
         except Exception as e:
             print(f"   ❌ Fehler: {e}")
+
+    print(f"\n🎉 Durchlauf beendet. {len(generated_files)} Geschichte(n) generiert.")
+
+    if args.git_push:
+        sync_git(generated_files, create_pr=args.create_pr)
 
 
 if __name__ == "__main__":
