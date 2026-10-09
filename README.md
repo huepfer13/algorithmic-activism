@@ -89,7 +89,7 @@ JSON
   "mcpServers": {
     "algorithmic-activism": {
       "command": "python3",
-      "args": ["/home/hardtoneselector/algorithmic-activism/mcp_server.py"]
+      "args": ["/path/to/algorithmic-activism/mcp_server.py"]
     }
   }
 }
