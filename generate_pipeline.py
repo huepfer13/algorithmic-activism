@@ -67,6 +67,7 @@ def slugify_title(markdown_text: str, fallback_name: str) -> str:
 
 
 def save_tale(markdown_content: str, lang_code: str, fallback_name: str) -> str:
+    setup_directories()
     slug = slugify_title(markdown_content, fallback_name)
     target_dir = os.path.join(TALES_DIR, lang_code)
     filename = f"{slug}.md"
@@ -86,40 +87,57 @@ def save_tale(markdown_content: str, lang_code: str, fallback_name: str) -> str:
     return filepath
 
 
+# ==================== BACKEND ADAPTERS (STANDARD HTTP) ====================
+
 def query_ollama(prompt: str, model: str = "llama3.1", host: str = "http://localhost:11434") -> str:
-    """Ruft eine lokale Ollama-Instanz per Standard-HTTP auf (keine Third-Party-Libs nötig)."""
     url = f"{host.rstrip('/')}/api/generate"
     payload = json.dumps({"model": model, "prompt": prompt, "stream": False}).encode("utf-8")
     req = urllib.request.Request(url, data=payload, headers={"Content-Type": "application/json"})
-    try:
-        with urllib.request.urlopen(req, timeout=120) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-            return data.get("response", "")
-    except urllib.error.URLError as e:
-        raise RuntimeError(f"Ollama nicht erreichbar unter {host}: {e}")
+    with urllib.request.urlopen(req, timeout=180) as resp:
+        return json.loads(resp.read().decode("utf-8")).get("response", "")
 
 
 def query_gemini(prompt: str, model: str = "gemini-2.5-flash") -> str:
-    """Ruft Gemini auf – entweder via google-genai oder REST-Fallback."""
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         raise ValueError("GEMINI_API_KEY Umgebungsvariable ist nicht gesetzt!")
-
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
-    payload = json.dumps({
-        "contents": [{"parts": [{"text": prompt}]}]
-    }).encode("utf-8")
+    payload = json.dumps({"contents": [{"parts": [{"text": prompt}]}]}).encode("utf-8")
     req = urllib.request.Request(url, data=payload, headers={"Content-Type": "application/json"})
-    try:
-        with urllib.request.urlopen(req, timeout=60) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-            return data["candidates"][0]["content"]["parts"][0]["text"]
-    except urllib.error.URLError as e:
-        raise RuntimeError(f"Gemini API-Aufruf fehlgeschlagen: {e}")
+    with urllib.request.urlopen(req, timeout=90) as resp:
+        data = json.loads(resp.read().decode("utf-8"))
+        return data["candidates"][0]["content"]["parts"][0]["text"]
+
+
+def query_openai_compat(prompt: str, model: str = "gpt-4o-mini", base_url: str = None) -> str:
+    api_key = os.environ.get("OPENAI_API_KEY", "dummy-local-key")
+    url = f"{base_url.rstrip('/') if base_url else 'https://api.openai.com/v1'}/chat/completions"
+    payload = json.dumps({
+        "model": model,
+        "messages": [{"role": "user", "content": prompt}],
+        "temperature": 0.7
+    }).encode("utf-8")
+    headers = {"Content-Type": "application/json", "Authorization": f"Bearer {api_key}"}
+    req = urllib.request.Request(url, data=payload, headers=headers)
+    with urllib.request.urlopen(req, timeout=120) as resp:
+        data = json.loads(resp.read().decode("utf-8"))
+        return data["choices"][0]["message"]["content"]
+
+
+def query_backend(backend: str, prompt: str, model: str = None) -> str:
+    b = backend.lower()
+    if b == "ollama":
+        return query_ollama(prompt, model=model or "llama3.1")
+    elif b == "gemini":
+        return query_gemini(prompt, model=model or "gemini-2.5-flash")
+    elif b in ["openai", "vllm", "localai"]:
+        base_url = os.environ.get("OPENAI_BASE_URL")
+        return query_openai_compat(prompt, model=model or "gpt-4o-mini", base_url=base_url)
+    else:
+        raise ValueError(f"Unbekanntes Backend: {backend}. Wähle 'ollama', 'gemini' oder 'openai'.")
 
 
 def build_catalog_only():
-    """Erstellt den sauberen Prompts-Ordner für manuelle Nutzung."""
     setup_directories()
     kombinationen = list(product(ARTIKEL.keys(), SPRACHEN.keys(), STILE.keys()))
     print(f"📁 Schreibe {len(kombinationen)} Prompts in '{PROMPTS_DIR}/'...")
@@ -140,53 +158,37 @@ def build_catalog_only():
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Algorithmic Activism - Flexible Generierungs-Pipeline")
-    parser.add_argument("--backend", choices=["ollama", "gemini", "catalog-only"], default="catalog-only",
-                        help="Wähle das Backend: 'ollama' (lokal), 'gemini' (API) oder 'catalog-only' (Prompts synchronisieren)")
-    parser.add_argument("--model", type=str, default=None,
-                        help="Modellname (Standard: 'llama3.1' für Ollama, 'gemini-2.5-flash' für Gemini)")
-    parser.add_argument("--limit", type=int, default=1,
-                        help="Anzahl der zu generierenden Geschichten in diesem Lauf (Standard: 1 für Test)")
-    parser.add_argument("--lang", type=str, default=None,
-                        help="Nur eine bestimmte Sprache generieren (z. B. DE, EN)")
+    parser = argparse.ArgumentParser(description="Algorithmic Activism Engine")
+    parser.add_argument("--backend", choices=["ollama", "gemini", "openai", "catalog-only"], default="catalog-only")
+    parser.add_argument("--model", type=str, default=None)
+    parser.add_argument("--limit", type=int, default=1)
+    parser.add_argument("--lang", type=str, default=None)
     args = parser.parse_args()
-
-    setup_directories()
 
     if args.backend == "catalog-only":
         build_catalog_only()
         return
 
-    # Filter nach Sprache falls angegeben
+    setup_directories()
     target_langs = [args.lang] if args.lang and args.lang in SPRACHEN else list(SPRACHEN.keys())
     kombinationen = list(product(ARTIKEL.keys(), target_langs, STILE.keys()))
 
-    model_name = args.model or ("llama3.1" if args.backend == "ollama" else "gemini-2.5-flash")
-    print(f"🚀 Starte Generierung via Backend '{args.backend}' mit Modell '{model_name}' (Limit: {args.limit})...")
-
+    print(f"🚀 Starte Generierung via Backend '{args.backend}' (Limit: {args.limit})...")
     count = 0
     for art_key, lang_code, stil_key in kombinationen:
         if count >= args.limit:
             break
-
         fallback = f"{art_key}_{stil_key}"
         prompt = build_prompt(ARTIKEL[art_key], SPRACHEN[lang_code], STILE[stil_key])
         print(f"⏳ Generiere [{count+1}/{args.limit}]: {fallback} ({lang_code})...")
-
         try:
-            if args.backend == "ollama":
-                story_md = query_ollama(prompt, model=model_name)
-            else:
-                story_md = query_gemini(prompt, model=model_name)
-
-            saved_path = save_tale(story_md, lang_code, fallback)
-            print(f"   ✅ Gespeichert unter: {saved_path}")
+            story_md = query_backend(args.backend, prompt, model=args.model)
+            saved = save_tale(story_md, lang_code, fallback)
+            print(f"   ✅ Gespeichert unter: {saved}")
             count += 1
             time.sleep(1)
         except Exception as e:
             print(f"   ❌ Fehler: {e}")
-
-    print(f"\n🎉 Durchlauf beendet. {count} Geschichte(n) generiert.")
 
 
 if __name__ == "__main__":
