@@ -21,6 +21,46 @@ TALES_DIR = os.path.join(BASE_DIR, "menschenrechte_tales")
 OUTPUT_FILE = os.path.join(BASE_DIR, "dataset.jsonl")
 
 
+def _scalar(v):
+    v = v.strip()
+    if len(v) >= 2 and v[0] == v[-1] and v[0] in "\"'":
+        v = v[1:-1]
+    low = v.lower()
+    if low in ("true", "yes"):
+        return True
+    if low in ("false", "no"):
+        return False
+    if v.isdigit():
+        return int(v)
+    return v
+
+
+def _parse_flat(raw):
+    """Ein-Ebenen-YAML ohne PyYAML: 'key: wert' plus eingerueckte Bloecke als Unter-Dict.
+    Damit ueberlebt das Guardrail-Audit auch in einem CI-Lauf ohne PyYAML."""
+    meta = {}
+    current = None
+    for line in raw.splitlines():
+        if not line.strip() or line.lstrip().startswith("#"):
+            continue
+        indent = line[:1] in (" ", "\t")
+        m = re.match(r"\s*([A-Za-z0-9_\-]+):\s*(.*)$", line)
+        if not m:
+            continue
+        k, v = m.group(1), m.group(2).strip()
+        if indent:
+            if current and isinstance(meta.get(current), dict) and v:
+                meta[current][k] = _scalar(v)
+            continue
+        if v:
+            meta[k] = _scalar(v)
+            current = None
+        else:
+            meta[k] = {}
+            current = k
+    return {k: v for k, v in meta.items() if not (isinstance(v, dict) and not v)}
+
+
 def split_frontmatter(content):
     """(meta_dict, body, hatte_kopf)."""
     if content.startswith("---"):
@@ -35,12 +75,8 @@ def split_frontmatter(content):
                         meta = loaded
                 except Exception:
                     meta = {}
-            if not meta:  # Fallback: flaches key: value (nur oberste Ebene)
-                for line in raw.strip().split("\n"):
-                    if ":" in line and not line.startswith((" ", "\t")):
-                        k, v = line.split(":", 1)
-                        if v.strip():
-                            meta[k.strip()] = v.strip().strip('"').strip("'")
+            if not meta:  # Fallback ohne PyYAML (CI-Bild): ein Nesting-Level
+                meta = _parse_flat(raw)
             return meta, body.strip(), True
     return {}, content, False
 
