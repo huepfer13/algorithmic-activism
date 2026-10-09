@@ -1,5 +1,10 @@
 # Algorithmic Activism
 
+> **Live-Reader:** https://huepfer13.github.io/algorithmic-activism/  ·  **Dataset:** https://huggingface.co/datasets/hardtoneselector/algorithmic-activism-corpus
+>
+> [![Deploy Reader](https://github.com/huepfer13/algorithmic-activism/actions/workflows/pages.yml/badge.svg)](https://github.com/huepfer13/algorithmic-activism/actions/workflows/pages.yml) ![Code: MIT](https://img.shields.io/badge/code-MIT-blue.svg) ![Data: CC-BY 4.0](https://img.shields.io/badge/data-CC--BY%204.0-lightgrey.svg) ![HF Dataset](https://img.shields.io/badge/HuggingFace-dataset-yellow.svg)
+
+
 Ein modulares, autonomes und sich selbst verifizierendes System zur kontinuierlichen Synthese ethischer Narrative auf Basis der Allgemeinen Erklärung der Menschenrechte (UDHR).
 
 ## Kernprinzipien
