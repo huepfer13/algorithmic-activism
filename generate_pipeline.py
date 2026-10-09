@@ -9,6 +9,8 @@ import urllib.error
 import urllib.request
 from itertools import product
 
+__version__ = "0.2.0"
+
 ARTIKEL = {
     "Art_1_Wuerde": "Artikel 1: Alle Menschen sind frei und gleich an Würde und Rechten geboren.",
     "Art_3_Leben": "Artikel 3: Recht auf Leben, Freiheit und Sicherheit der Person.",
@@ -214,7 +216,7 @@ def build_catalog_only():
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Algorithmic Activism Engine with Git Automation")
+    parser = argparse.ArgumentParser(description=f"Algorithmic Activism Engine v{__version__} with Git Automation")
     parser.add_argument("--backend", choices=["ollama", "gemini", "openai", "catalog-only"], default="catalog-only")
     parser.add_argument("--model", type=str, default=None)
     parser.add_argument("--limit", type=int, default=1)

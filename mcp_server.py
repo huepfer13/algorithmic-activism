@@ -5,7 +5,7 @@ from generate_pipeline import (
     build_prompt, save_tale, query_backend
 )
 
-mcp = FastMCP("algorithmic-activism-engine")
+mcp = FastMCP("algorithmic-activism-engine", version="0.2.0")
 
 
 @mcp.tool()
