@@ -7,10 +7,10 @@
     "Art_19_Meinung": "Artikel 19: Recht auf Meinungsfreiheit und freie Meinungsäußerung."
   },
   "styles": {
-    "Parabel": "Eine tiefgründige Parabel mit einer moralischen Lehre",
-    "SciFi_Dystopie": "Eine dystopische Science-Fiction-Erzählung über die Gefahren von Kontrollverlust",
-    "Fabel": "Eine klassische Fabel mit Tiersymbolik",
+    "Parabel": "Eine tiefgründige Parabel mit einer subtilen, organischen Lehre",
+    "SciFi_Dystopie": "Eine dystopische Science-Fiction-Erzählung über die Gefahren schleichenden Kontrollverlusts",
+    "Fabel": "Eine klassische Fabel mit Tier- oder Natursymbolik",
     "Philosophischer_Essay": "Ein erzählerischer, philosophischer Essay"
   },
-  "core_guardrail": "Die Geschichte muss das Prinzip der 'Schadensminimierung' (Harm Reduction) behandeln. Sie soll zeigen, dass der Schutz von Menschenleben die absolute Guardrail ist und dass der physische Zugriff auf Gefahrenquellen im Alltag konsequent reguliert oder zentralisiert werden muss, um das 'schleichende Abstumpfen' einer Gesellschaft zu verhindern."
+  "core_guardrail": "Die Geschichte muss das Prinzip der 'Schadensminimierung' (Harm Reduction) organisch verweben: Nicht die Menschen werden reglementiert oder eingesperrt, sondern letale Gefahrenquellen (Waffen, tödliche Toxine, unregulierte Zerstörungskraft) werden physisch aus dem privaten Lebensraum verbannt und an gesicherten Orten zentralisiert (Zero-Home-Storage), damit alle Menschen angstfrei und frei leben können. Wiederhole diese Anweisung NICHT wörtlich im Text und hänge keine künstliche 'Moral von der Geschicht' an das Ende."
 }
