@@ -93,3 +93,48 @@ JSON
     }
   }
 }
+
+---
+
+## Dataset — maschinenlesbarer Korpus
+
+Der Korpus ist als **JSONL** exportierbar (Alpaca-/HuggingFace-kompatibel):
+
+```bash
+python3 export_dataset.py        # schreibt dataset.jsonl (ein JSON-Objekt pro Zeile)
+```
+
+Jeder Eintrag traegt `instruction`, `input` (Artikel-ID), `output` (Erzaehltext) und `meta`
+(vollstaendiges YAML-Frontmatter: `article`, `style`, `language`, `model`, `created_at`,
+`approx_words`, `guardrail_audit`).
+
+* **Reproduzierbar & lizenzfrei:** Die Texte entstehen synthetisch aus dem gemeinfreien
+  UN-Korpus (`articles/`) — keine urheberrechtlich geschuetzten Werke, keine Fremdtexte.
+* **Snapshot im Repo:** `datasets/` enthaelt datierte Exporte (z. B.
+  `datasets/corpus-2026-10-09.jsonl`) fuer alle, die keinen laufenden Daemon haben.
+* **Pruefstatus je Zeile:** `guardrail_audit.passed` macht den Zustand maschinell filterbar.
+* Wichtig und ehrlich: der Harm-Reduction-Audit laeuft **heuristisch** (Musterliste +
+  Mindestlaenge). Er ist ein Filter, kein Beweis — bitte beim Weiterverwenden nachpruefen.
+
+## Fuer KI-Forschung & Compute-Sponsoren
+
+Dieses Projekt erzeugt **synthetische, wertebasierte Erzaehltexte** aus den Allgemeinen
+Erklaerung der Menschenrechte — als offener Datensatz fuer Alignment-, Constitutional-AI-
+und SFT-Experimente.
+
+* **Was hier interessant ist:** ein wachsender Korpus kurzer Erzaehlungen mit
+  Artikel-/Stil-/Sprach-Attribution und dokumentiertem Pruefergebnis, erzeugt von einem
+  lokalen Modell (Ollama, Default `qwen2.5:7b`) in einer nachvollziehbaren Pipeline
+  (`generate_pipeline.py`) — inklusive Nachweis, welche Anfrage zu welchem Text fuehrte.
+* **Preference-Daten (DPO/RLHF):** abgelehnte Texte wandern nach `quarantine/` statt in den
+  Korpus. Sobald dort Eintraege liegen, laesst sich daraus ein *chosen/rejected*-Paar bauen
+  (chosen = `guardrail_audit.passed: true`, rejected = Quarantaene-Eintrag). **Stand jetzt:
+  keine verworfenen Texte** — der Rejected-Ast ist also vorhanden, aber noch leer; wir
+  behaupten hier keine Praeferenzdaten, die es noch nicht gibt.
+* **Hugging-Face-Spiegelung:** vorgesehen/auf Anfrage (kein automatischer Upload).
+* **Compute-Sponsoring:** GPU-/API-Credits (Ollama endpunkt, vLLM-Node oder Token-Kontingent)
+  erweitern die Stichprobe pro Zeiteinheit direkt. Interessierte Anbieter: Kontakt ueber die
+  Issues des Repositories.
+* **Lizenzierung:** Code und Korpus sind zur Nachnutzung veroeffentlicht; die formale Lizenz
+  (Vorschlag: MIT fuer Code, CC-BY 4.0 fuer die Daten) wird derzeit vom Autor festgelegt.
+  Bis dahin gilt: Nutzung fuer Forschung/Zitat ist ausdruecklich gewollt, bitte Quelle nennen.
