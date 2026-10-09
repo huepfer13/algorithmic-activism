@@ -1,6 +1,5 @@
 import os
-import hashlib
-import time
+import re
 from itertools import product
 
 ARTIKEL = {
@@ -47,48 +46,43 @@ def generate_prompt(artikel_text: str, sprache_name: str, stil_beschreibung: str
     )
 
 
-def create_unique_filename(art_key: str, stil_key: str) -> str:
-    """Erzeugt einen garantiert kollisionsfreien Dateinamen mit Zeitstempel und Hash."""
-    time_prefix = time.strftime("%Y%m%d_%H%M%S")
-    nano_entropy = str(time.time_ns())
-    short_hash = hashlib.sha256(f"{art_key}_{stil_key}_{nano_entropy}".encode("utf-8")).hexdigest()[:6]
-    return f"{art_key}_{stil_key}_{time_prefix}_{short_hash}.md"
+def slugify_title(markdown_text: str, fallback_name: str) -> str:
+    """Extrahiert den H1-Titel (# Titel) und macht daraus einen sauberen Dateinamen."""
+    match = re.search(r"^#\s+(.+)$", markdown_text, flags=re.MULTILINE)
+    if match:
+        raw_title = match.group(1).strip()
+        # Ersetze Sonderzeichen/Satzzeichen durch Unterstriche
+        clean = re.sub(r"[^\w\s-]", "", raw_title)
+        slug = re.sub(r"[\s-]+", "_", clean).strip("_")
+        if slug:
+            return slug[:80]
+    return fallback_name
 
 
-def run_pipeline():
-    setup_repository()
-    kombinationen = list(product(ARTIKEL.keys(), SPRACHEN.keys(), STILE.keys()))
-    print(f"🚀 Starte Pipeline. Erzeuge {len(kombinationen)} eindeutig versionierte Einträge...")
+def save_story(markdown_text: str, lang_code: str, fallback_base: str):
+    """Speichert eine Geschichte unter ihrem echten Titel im Sprachordner."""
+    lang_dir = os.path.join(OUTPUT_DIR, lang_code)
+    title_slug = slugify_title(markdown_text, fallback_base)
+    filename = f"{title_slug}.md"
+    filepath = os.path.join(lang_dir, filename)
 
-    for art_key, lang_code, stil_key in kombinationen:
-        artikel_text = ARTIKEL[art_key]
-        sprache_name = SPRACHEN[lang_code]
-        stil_beschreibung = STILE[stil_key]
+    # Kollisionsschutz: Falls zwei verschiedene Geschichten denselben Titel tragen
+    counter = 1
+    while os.path.exists(filepath):
+        # Wenn der Inhalt identisch ist, nichts tun
+        with open(filepath, "r", encoding="utf-8") as f:
+            if f.read().strip() == markdown_text.strip():
+                return filepath
+        filename = f"{title_slug}_{counter}.md"
+        filepath = os.path.join(lang_dir, filename)
+        counter += 1
 
-        # Jede Datei erhält immer ihren eigenen, eindeutigen Hash
-        filename = create_unique_filename(art_key, stil_key)
-        filepath = os.path.join(OUTPUT_DIR, lang_code, filename)
-
-        prompt_text = generate_prompt(artikel_text, sprache_name, stil_beschreibung)
-        title_art = art_key.replace('_', ' ')
-        title_stil = stil_key.replace('_', ' ')
-
-        markdown_content = (
-            f"# {title_art} - {title_stil} ({lang_code})\n\n"
-            f"*ID: `{filename[:-3]}`*\n\n"
-            "## Generierungs-Prompt:\n"
-            "```text\n"
-            f"{prompt_text}\n"
-            "```\n\n"
-            "## Status:\n"
-            "[Warten auf API-Einspeisung. Der Text wird hier nach dem nächsten Lauf im Folgemodell verankert.]\n"
-        )
-
-        with open(filepath, "w", encoding="utf-8") as f:
-            f.write(markdown_content)
-
-    print(f"✅ Pipeline abgeschlossen. {len(kombinationen)} eindeutige Markdown-Dateien in '{OUTPUT_DIR}/' angelegt.")
+    with open(filepath, "w", encoding="utf-8") as f:
+        f.write(markdown_text)
+    print(f"📖 Gespeichert: {filepath}")
+    return filepath
 
 
 if __name__ == "__main__":
-    run_pipeline()
+    setup_repository()
+    print("Pipeline bereit. Geschichten werden ab jetzt unter ihrem tatsächlichen Titel gespeichert.")
