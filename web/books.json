@@ -1685,16 +1685,17 @@
       "pov": "third_person",
       "setting_summary": "Kontemplative Einsichten fuer unruhige Zeiten.",
       "characters": [],
-      "chapter_count": 5,
+      "chapter_count": 6,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_06"
       ],
-      "words": 1450,
-      "reading_minutes": 7,
+      "words": 1767,
+      "reading_minutes": 9,
       "cover": null,
       "chapters": [
         {
@@ -1804,6 +1805,24 @@
           "leak_free": "true",
           "words": 278,
           "reading_minutes": 1
+        },
+        {
+          "file": "06_art_06_abschnitt_6_die_eichung_des_anerkennungs.md",
+          "index": 6,
+          "title": "Abschnitt 6: Die Eichung des Anerkennungsvektors",
+          "article": "art_06",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "38.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1592",
+          "manual_ending_code": "L-06-06",
+          "backend": "openrouter",
+          "genre": "Lebensweisheiten",
+          "leak_free": "true",
+          "words": 317,
+          "reading_minutes": 2
         }
       ]
     },
