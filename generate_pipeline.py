@@ -491,7 +491,55 @@ def new_book(lang: str = "DE", style: str | None = None, model: str = "qwen2.5:7
 # --- Stufe 2: Kapitel anhaengen ("Unendliche Geschichte") ----------------------------------------
 DIALOG_ZEICHEN = ('"', '„', '“', '»', '«')
 EMOTIONS_VERBEN = ("flüsterte", "lächelte", "sagte", "nickte", "seufzte", "blickte", "lächeln", "flüstern")
-ABSCHLUSS_MARKER = ("fehlercode", "wartung", "intervall", "diagnose", "prüfung", "protokoll", "abschnitt")
+# Strukturelle Marker: gelten NUR am Zeilenanfang (nach Aufzaehlung/Fettung). Substring-Treffer
+# im Fliesstext zaehlen nicht mehr — "Diagnosetabelle" hat die Schranke sonst passiert (belegt
+# 2026-10-12: Kapitel 3 und 4 endeten wortgleich, sha256[:8]=49259407).
+ABSCHLUSS_MARKER = ("diagnose", "wartung", "intervall", "prüfung", "prüfprotokoll",
+                    "protokoll", "abschnitt", "fehlercode", "anweisung", "hinweis")
+SICHERHEITS_BLOECKE = ("[gefahr]", "[warnung]", "[hinweis]")
+_MARKDOWN_PRAEFIX_RE = re.compile(r"^\s*(?:[-*+>]\s+|\d+[.)]\s+|\*\*)+")
+SCHWELLE_WIEDERHOLUNG = 0.5
+
+
+def _normalisiere(text: str) -> str:
+    """Umlaute vereinheitlichen: 'Pruefprotokoll' und 'Prüfprotokoll' sind DERSELBE Marker.
+    Ohne das faellt generierter Text mit ASCII-Umschrift still durch (belegt 2026-10-12)."""
+    return (text.replace("ü", "ue").replace("ö", "oe").replace("ä", "ae").replace("ß", "ss"))
+
+
+def zeilen_marker(zeile: str) -> list:
+    """Akzeptierte Marker EINER Zeile — nur am Zeilenanfang, nie als Teilwort."""
+    rumpf = _normalisiere(_MARKDOWN_PRAEFIX_RE.sub("", zeile).strip().lower())
+    treffer = [t for t in ABSCHLUSS_MARKER if rumpf.startswith(_normalisiere(t))]
+    treffer += [b for b in SICHERHEITS_BLOECKE if rumpf.startswith(b)]
+    if "fehlercode" in treffer and not re.match(r"^fehlercode\s+e-?\d+", rumpf):
+        treffer.remove("fehlercode")            # Fehlercode zaehlt nur MIT Nummer
+    return treffer
+
+
+def schlussabsatz(text: str) -> str:
+    """Letzter nicht leerer Absatz eines Textes."""
+    absaetze = [a.strip() for a in text.split("\n\n") if a.strip()]
+    return absaetze[-1] if absaetze else ""
+
+
+def inhaltliche_woerter(text: str) -> set:
+    """Woerter ab 4 Zeichen; Fuellwoerter (die, der, und, aber) verwaessern sonst jede Aehnlichkeit."""
+    return {w for w in re.findall(r"[^\W\d_]{4,}", text.lower())}
+
+
+def ist_wiederholung(schluss: str, vorgaenger: list, schwelle: float = SCHWELLE_WIEDERHOLUNG):
+    """Jaccard-Aehnlichkeit ueber Wortmengen gegen die Schlussabsaetze der Vorkapitel."""
+    a = inhaltliche_woerter(schluss)
+    if not a:
+        return False, 0.0
+    bester = 0.0
+    for alt_text in vorgaenger:
+        b = inhaltliche_woerter(alt_text)
+        if not b:
+            continue
+        bester = max(bester, len(a & b) / len(a | b))
+    return (bester >= schwelle), bester
 # Weiche Woerter (system, gefahr, hinweis) flogen raus: sie kommen in normaler Prosa vor und
 # liessen narrative Schluesse durch (belegt 2026-10-12 an Kapitel 2, dessen Schlusssatz nur
 # ueber "System"/"Gefahr" bestand). Ein Sicherheitsblock ist die zweite zulaessige Form.
@@ -515,17 +563,20 @@ def audit_manual_ending(text: str) -> tuple[bool, str]:
     for v in EMOTIONS_VERBEN:
         if re.search(v, letzter, re.IGNORECASE):
             return False, f"Dialog-/Emotionsverb im Schlussabsatz ({v})"
-    klein = letzter.lower()
-    marker = [m for m in ABSCHLUSS_MARKER if m in klein]
-    bloecke = [b for b in SICHERHEITS_BLOECKE if b in klein]
-    if not marker and not bloecke:
-        return False, ("kein harter Abschluss (Fehlercode/Wartung/Intervall/Diagnose/Pruefung/"
-                       "Protokoll/Abschnitt) und kein [GEFAHR]/[WARNUNG]/[HINWEIS]-Block")
-    return True, "Passed (" + "+".join(marker + bloecke) + ")"
+    treffer = []
+    for zeile in letzter.splitlines():
+        for t in zeilen_marker(zeile):
+            if t not in treffer:
+                treffer.append(t)
+    if not treffer:
+        return False, ("kein struktureller Abschluss am Zeilenanfang (z. B. 'Fehlercode E-01', "
+                       "'Wartung:', 'Diagnose:', 'Pruefung:', '[WARNUNG]')")
+    return True, "Passed (" + "+".join(treffer) + ")"
 
 
 def erzeuge_mit_endschranke(prompt: str, model: str, host: str, style_flags: dict,
-                            label: str, versuche: int = 3) -> tuple[str, bool, str, int]:
+                            label: str, versuche: int = 3,
+                            vorgaenger_schluesse: list | None = None) -> tuple[str, bool, str, int]:
     """Generiert und prueft das Ende, solange das Genre es verlangt.
 
     Rueckgabe (text, ende_ok, grund, gebrauchte_versuche). Nach Ausschoepfung wird der Text MIT Vermerk
@@ -538,6 +589,11 @@ def erzeuge_mit_endschranke(prompt: str, model: str, host: str, style_flags: dic
     for i in range(1, versuche + 1):
         text = run_ollama_stream(prompt, model=model, host=host)
         ok, grund = audit_manual_ending(text)
+        if ok and vorgaenger_schluesse:
+            wieder, aehnlich = ist_wiederholung(schlussabsatz(text), vorgaenger_schluesse)
+            if wieder:
+                ok, grund = False, ("Wiederholung des Schlussabsatzes "
+                                    f"({aehnlich:.0%} Wortueberlappung mit einem Vorkapitel)")
         print(f"  [{label}] Versuch {i}/{versuche}: Endschranke "
               f"{'erfuellt' if ok else 'VERFEHLT'} ({grund})", flush=True)
         if ok:
@@ -616,8 +672,17 @@ def append_chapter(book_id: str | None = None, lang: str | None = None, model: s
     prompt = build_chapter_prompt(meta, lang_name, style_name, style_desc, style_rules, core_rule,
                                   index, artikel, art["body"], vorgaenger, vorherige)
     print(f"[Kapitel {index}] Buch '{book_id}' | Artikel {artikel} | Vorgaenger {vorherige}", flush=True)
+    # Schlussabsaetze der Vorkapitel — die Schranke braucht ein Gedaechtnis ueber Kapitel hinweg,
+    # sonst passiert derselbe Mustersatz jede Runde erneut (belegt 2026-10-12, Kapitel 3 == 4).
+    vorgaenger = []
+    for k in kapitel:
+        roh = open(os.path.join(buch_dir, k), encoding="utf-8").read()
+        sa = schlussabsatz(roh.split("---", 2)[2] if roh.startswith("---") else roh)
+        if sa:
+            vorgaenger.append(sa)
     text, ende_ok, grund, versuche = erzeuge_mit_endschranke(prompt, model, host, style_flags,
-                                                   f"Kapitel {index}", versuche=3)
+                                                   f"Kapitel {index}", versuche=3,
+                                                   vorgaenger_schluesse=vorgaenger)
     if not text.strip():
         raise RuntimeError("Leere Antwort vom Modell — Kapitel wird nicht geschrieben.")
 
