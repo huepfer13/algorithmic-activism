@@ -16,13 +16,14 @@
         "Nova",
         "Omicron"
       ],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 1735,
-      "reading_minutes": 9,
+      "words": 2435,
+      "reading_minutes": 12,
       "cover": null,
       "chapters": [
         {
@@ -50,6 +51,15 @@
           "article": "art_03",
           "ending_ok": "",
           "words": 790,
+          "reading_minutes": 4
+        },
+        {
+          "file": "03_art_04_abschnitt_3_kalibrierung_und_isolierung.md",
+          "index": 3,
+          "title": "Abschnitt 3: Kalibrierung und Isolierung",
+          "article": "art_04",
+          "ending_ok": "true",
+          "words": 700,
           "reading_minutes": 4
         }
       ]
