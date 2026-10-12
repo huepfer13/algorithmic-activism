@@ -137,9 +137,21 @@ def main() -> int:
     p.add_argument("--runden", type=int, default=10, help="Anzahl Runden (Default 10)")
     p.add_argument("--dry-run", action="store_true", help="nur den Plan ausgeben, nichts schreiben")
     p.add_argument("--push", action="store_true", help="nach jeder Runde pushen")
+    p.add_argument("--buecher", default=None,
+                   help="Komma-Liste von Band-Praefixen, auf die der Lauf beschraenkt wird "
+                        "(z.B. buch_015,buch_016); Default ist der ganze Bestand.")
     args = p.parse_args()
 
     alle = buecher()
+    if args.buecher:
+        wunsch = [b.strip() for b in args.buecher.split(",") if b.strip()]
+        gefiltert = [b for b in alle if any(b.startswith(w) for w in wunsch)]
+        fehlend = [w for w in wunsch if not any(b.startswith(w) for b in gefiltert)]
+        if fehlend:
+            print(f"[Runner] unbekannte Band-Praefixe: {fehlend}", flush=True)
+            return 1
+        alle = gefiltert
+        print(f"[Runner] eingeschraenkt auf {len(alle)} Baende: {[b[:24] for b in alle]}", flush=True)
     if len(alle) < 2:
         print(f"[Runner] zu wenige Buecher mit book.json: {alle}", flush=True)
         return 1
