@@ -11,9 +11,10 @@
     "art_02",
     "art_03",
     "art_04",
-    "art_05"
+    "art_05",
+    "art_06"
   ],
-  "current_chapter": 5,
+  "current_chapter": 6,
   "created_at": "2026-10-12T21:30:49Z",
   "_hinweis": "Betreiber-Vorgabe (Prolog handgesetzt, NICHT generiert, daher keine Erzeugungs-Metriken). book.json auf das Schem a der Pipeline normalisiert: pov/setting_summary ergaenzt, genre/status_code_prefix entfallen (der Praefix steht in locales/en.json)."
 }
