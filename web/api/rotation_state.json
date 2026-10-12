@@ -75,7 +75,8 @@
     "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_017_des_volkes_mund",
     "r8:apodex/apodex-1.1-mini:free:buch_018_rhymes_of_the_commons",
     "r9:deepseek-chat:buch_015_das_kochbuch_der_allmende",
-    "r9:nvidia/nemotron-3-ultra-550b-a55b:free:buch_016_faden_der_gelassenheit"
+    "r9:nvidia/nemotron-3-ultra-550b-a55b:free:buch_016_faden_der_gelassenheit",
+    "r9:nvidia/nemotron-3-super-120b-a12b:free:buch_017_des_volkes_mund"
   ],
   "runden": {
     "1": [
@@ -1216,6 +1217,21 @@
         "tokens": "2222",
         "versuche": "1",
         "woerter": 237
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_017_des_volkes_mund",
+        "code": "V-09-09",
+        "datei": "09_art_09_abschnitt_9_der_nullpunkt_des_justiergri.md",
+        "dauer_s": "22.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 9,
+        "tokens": "2380",
+        "versuche": "1",
+        "woerter": 347
       }
     ]
   }

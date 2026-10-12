@@ -1948,7 +1948,7 @@
       "pov": "third_person",
       "setting_summary": "Etymologische Miniaturen zu gefluegelten Worten.",
       "characters": [],
-      "chapter_count": 8,
+      "chapter_count": 9,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1957,10 +1957,11 @@
         "art_05",
         "art_06",
         "art_07",
-        "art_08"
+        "art_08",
+        "art_09"
       ],
-      "words": 3022,
-      "reading_minutes": 15,
+      "words": 3369,
+      "reading_minutes": 17,
       "cover": null,
       "chapters": [
         {
@@ -2123,6 +2124,24 @@
           "genre": "Sprichwoerter",
           "leak_free": "true",
           "words": 328,
+          "reading_minutes": 2
+        },
+        {
+          "file": "09_art_09_abschnitt_9_der_nullpunkt_des_justiergri.md",
+          "index": 9,
+          "title": "Abschnitt 9: Der Nullpunkt des Justiergriffs",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "22.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "2380",
+          "manual_ending_code": "V-09-09",
+          "backend": "openrouter",
+          "genre": "Sprichwoerter",
+          "leak_free": "true",
+          "words": 347,
           "reading_minutes": 2
         }
       ]
