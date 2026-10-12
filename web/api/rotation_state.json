@@ -8,7 +8,8 @@
     "r1:nvidia/nemotron-3.5-lightning:free:buch_005_fragment_der_vernunft",
     "r2:deepseek-chat:buch_003_der_rat_der_tiere",
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_004_neon_exil",
-    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_005_fragment_der_vernunft"
+    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_005_fragment_der_vernunft",
+    "r2:nvidia/nemotron-3.5-lightning:free:buch_006_das_gericht_vor_der_mauer"
   ],
   "runden": {
     "1": [
@@ -148,6 +149,21 @@
         "tokens": "10381",
         "versuche": "2",
         "woerter": 467
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_006_das_gericht_vor_der_mauer",
+        "code": "E-01-01",
+        "datei": "01_art_01_abschnitt_1_die_entladung.md",
+        "dauer_s": "131.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3.5-lightning:free",
+        "modell": "nvidia/nemotron-3.5-lightning:free",
+        "runde": 2,
+        "tokens": "14720",
+        "versuche": "0",
+        "woerter": 477
       }
     ]
   }
