@@ -333,12 +333,13 @@
       "pov": "third_person",
       "setting_summary": "Die Tiere des Schattenwaldes halten Rat und finden fuer jeden Streit eine gute Loesung.",
       "characters": [],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 840,
-      "reading_minutes": 4,
+      "words": 1264,
+      "reading_minutes": 6,
       "cover": null,
       "chapters": [
         {
@@ -375,6 +376,24 @@
           "genre": "Kinderbuch",
           "leak_free": "true",
           "words": 376,
+          "reading_minutes": 2
+        },
+        {
+          "file": "02_art_02_abschnitt_2_die_liste_und_das_unsichtbar.md",
+          "index": 2,
+          "title": "Abschnitt 2: Die Liste und das unsichtbare Zeichen",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "38.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1394",
+          "manual_ending_code": "K-02-02",
+          "backend": "openrouter",
+          "genre": "Kinderbuch",
+          "leak_free": "true",
+          "words": 424,
           "reading_minutes": 2
         }
       ]
