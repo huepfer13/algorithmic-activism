@@ -1698,10 +1698,12 @@
       "pov": "third_person",
       "setting_summary": "Verse ledgers of the commons: five lines that dismantle grand decrees.",
       "characters": [],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 88,
-      "reading_minutes": 1,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 422,
+      "reading_minutes": 2,
       "cover": null,
       "chapters": [
         {
@@ -1721,6 +1723,24 @@
           "leak_free": "",
           "words": 88,
           "reading_minutes": 1
+        },
+        {
+          "file": "01_art_01_abschnitt_1_der_schreiber_und_der_verbot.md",
+          "index": 1,
+          "title": "Abschnitt 1: Der Schreiber und der verbotene Stein",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "0",
+          "model": "apodex/apodex-1.1-mini:free",
+          "duration_seconds": "43.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "12990",
+          "manual_ending_code": "E-01-01",
+          "backend": "openrouter",
+          "genre": "Limericks",
+          "leak_free": "",
+          "words": 334,
+          "reading_minutes": 2
         }
       ]
     }
