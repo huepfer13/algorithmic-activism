@@ -661,8 +661,14 @@ def pflichtblock_hinweis(block: str, vorgaenger_schluss: str = "") -> str:
     text = ("\n\nPFLICHT AM ENDE (wird maschinell geprueft): Der letzte Absatz enthaelt in einer "
             "eigenen Zeile genau diesen Systemblock, Zeichen fuer Zeichen:\n" + block)
     if vorgaenger_schluss:
-        text += ('\nDer vorherige Wartungsabschluss lautete: "' + vorgaenger_schluss + '"\n'
-                 "Dieser Wortlaut darf unter keinen Umstaenden wiederholt oder leicht abgewandelt werden.")
+        alt = re.search(r"CODE:\s*([^|\]]+)", vorgaenger_schluss)
+        if alt:
+            text += ("\nSPERRVERMERK (nur zur Information — NICHT im Kapiteltext zitieren, nicht "
+                     "wiederholen, nicht erwaehnen): Das Aktenzeichen " + alt.group(1).strip()
+                     + " ist abgeschlossen.")
+        else:
+            text += ("\nSPERRVERMERK (nur zur Information — NICHT im Kapiteltext zitieren): Der "
+                     "vorherige Abschluss ist abgeschlossen und darf nicht wiederholt werden.")
     return text
 
 
@@ -753,6 +759,20 @@ def audit_manual_ending(text: str, erwarteter_block: str | None = None) -> tuple
     return True, "Passed (" + "+".join(treffer) + ")"
 
 
+def fremdcode_im_text(text: str, erwarteter_block: str) -> str | None:
+    """Liefert ein Fremd-Aktenzeichen, wenn der Kapiteltext ein ANDERES als das erwartete nennt.
+
+    Belegt 2026-10-12: der Prompt-Sperrvermerk wurde als Erzaehltext kopiert ("Der vorherige
+    Wartungsabschluss lautete: ... E-14-07 ...") — Metatext im veroeffentlichten Artefakt.
+    """
+    eigen = re.search(r"CODE:\s*([^|\]]+)", erwarteter_block)
+    eigen_code = _normalisiere((eigen.group(1) if eigen else "").strip()).lower()
+    for treffer in re.finditer(r"CODE:\s*([A-Za-z0-9\-]+)", _normalisiere(text)):
+        if treffer.group(1).lower() != eigen_code:
+            return treffer.group(1)
+    return None
+
+
 def erzeuge_mit_endschranke(prompt: str, model: str, host: str, style_flags: dict,
                             label: str, versuche: int = 3,
                             vorgaenger_schluesse: list | None = None,
@@ -777,6 +797,11 @@ def erzeuge_mit_endschranke(prompt: str, model: str, host: str, style_flags: dic
             if wieder:
                 ok, grund = False, ("Wiederholung des Schlussabsatzes "
                                     f"({aehnlich:.0%} Wortueberlappung mit einem Vorkapitel)")
+        if ok and erwarteter_block:
+            fremd = fremdcode_im_text(text, erwarteter_block)
+            if fremd:
+                ok, grund = False, (f"Fremd-Aktenzeichen im Kapiteltext ({fremd}) — "
+                                    "Metatext/Prompt-Leck statt Erzaehlung")
         print(f"  [{label}] Versuch {i}/{versuche}: Endschranke "
               f"{'erfuellt' if ok else 'VERFEHLT'} ({grund})", flush=True)
         if not ok:
@@ -877,7 +902,7 @@ def append_chapter(book_id: str | None = None, lang: str | None = None, model: s
     artefakt = archiv_artefakt(buch_dir, index, book_id)
     prompt += (f"\n\n### BEHOERDLICHE RAHMENBEDINGUNGEN DIESES ABSCHNITTS:\n"
                f"- Sektor-Bedingung ({stoerung['typ']}): {stoerung['detail']}\n"
-               f"  -> Vorgabe: {stoerung['anweisung']}")
+               f"  -> Vorgabe: {stoerung['anweisung']} Nimm sie in mindestens einem Satz der Szene auf.")
     if artefakt:
         prompt += (f"\n- Aktennotiz zur Beruecksichtigung:\n  {artefakt}\n"
                    "  -> Vorgabe: Lass dieses Ereignis kurz als Referenz oder Erinnerung einfliessen.")
