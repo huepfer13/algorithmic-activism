@@ -39,7 +39,8 @@
     "r9:nvidia/nemotron-3-super-120b-a12b:free:buch_012_manifest_der_unantastbaren",
     "r9:nvidia/nemotron-3.5-lightning:free:buch_013_aufzeichnungen_eines_archivars",
     "r10:deepseek-chat:buch_011_das_haus_ohne_widerhall",
-    "r10:nvidia/nemotron-3-ultra-550b-a55b:free:buch_012_manifest_der_unantastbaren"
+    "r10:nvidia/nemotron-3-ultra-550b-a55b:free:buch_012_manifest_der_unantastbaren",
+    "r10:nvidia/nemotron-3-super-120b-a12b:free:buch_013_aufzeichnungen_eines_archivars"
   ],
   "runden": {
     "1": [
@@ -164,6 +165,21 @@
         "tokens": "2037",
         "versuche": "1",
         "woerter": 291
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_013_aufzeichnungen_eines_archivars",
+        "code": "T-02-02",
+        "datei": "02_art_02_abschnitt_2_kalibrierung_des_misstrauens.md",
+        "dauer_s": "16.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 10,
+        "tokens": "1962",
+        "versuche": "1",
+        "woerter": 507
       }
     ],
     "2": [
