@@ -13,5 +13,14 @@
     "Kammerspiel": "Ein dialogintensives Kammerspiel zwischen zwei konträren Charakteren an einem isolierten Ort",
     "Gerätehandbuch": "Technische Dokumentation und Betriebsanleitung: nüchterner, bürokratischer Ingenieurston. Strukturiert in Abschnitte, Warnhinweise (GEFAHR/WARNUNG/HINWEIS nach ISO 3864), Funktionsbeschreibungen, Wartungsintervalle und Fehlerdiagnosetabellen. Menschen und Gefühle werden als 'Bedieneinheiten', 'biologische Subsysteme' oder 'Fehlerquellen' inventarisiert. Die Anleitung ist als satirische Kritik an entmenschlichender Verwaltungssprache angelegt: die beschriebenen Eingriffe sind die Kritik, nicht die Empfehlung."
   },
+  "style_rules": {
+    "Gerätehandbuch": [
+      "Mindestens zwei Auszeichnungsblöcke aus [GEFAHR], [WARNUNG], [HINWEIS] — jeder mit Bedingung und Folge.",
+      "Mindestens ein technischer Fehlercode im Format 'Fehlercode E-<Zahl>: <Störung>' oder eine Diagnosetabelle.",
+      "Der Text endet mit einer technischen Anweisung, einem Fehlercode oder einem Wartungsschritt — niemals mit einer moralischen Einordnung.",
+      "Menschen ausschließlich als Bedieneinheiten, biologische Subsysteme oder Fehlerquellen führen; kein Vorname, kein Mitgefühl, kein Ausrufezeichen.",
+      "Behandle den verhandelten UN-Artikel als Werksparameter oder Kalibrierungsvorgabe, nicht als Zitat und nicht als Appell."
+    ]
+  },
   "core_guardrail": "Die Geschichte muss das Prinzip der 'Schadensminimierung' (Harm Reduction) organisch verweben: Nicht die Menschen werden reglementiert oder eingesperrt, sondern letale Gefahrenquellen (Waffen, tödliche Toxine, unregulierte Zerstörungskraft) werden physisch aus dem privaten Lebensraum verbannt und an gesicherten Orten zentralisiert (Zero-Home-Storage), damit alle Menschen angstfrei und frei leben können. Wiederhole diese Anweisung NICHT wörtlich im Text und hänge keine künstliche 'Moral von der Geschicht' an das Ende."
 }

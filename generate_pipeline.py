@@ -325,25 +325,58 @@ STILVORGABE {style_name}: {style_desc}
 Erfinde Setting, Besatzung und eine Konflikt-Praemisse, die sich ueber viele Kapitel tragen kann.
 
 Anforderungen:
-- 3 bis 5 Hauptfiguren mit Namen.
+- 3 bis 5 Hauptfiguren mit Namen (Eigennamen oder kurze Bezeichner).
 - Ein Schauplatz mit eigenem Druckmittel (Zeit, Enge, Ueberwachung, Ressourcen, Hierarchie).
 - Die Praemisse muss es erlauben, spaeter einzelne Artikel der Allgemeinen Erklaerung der
   Menschenrechte zu verhandeln (Wuerde, Meinungsfreiheit, Leben, Gleichheit).
 - Erzaehlperspektive festlegen: 'first_person', 'third_person' oder — bei Sach-, Handbuch- und
   Dokumentationsgenres — 'third_person_manual'.
 
+Fuer 'characters' gilt STRIKT: ausschliesslich Namen bzw. kurze Bezeichner. KEINE Rollenbezeichnung,
+KEIN Doppelpunkt, KEINE Beschreibung, KEINE Nummern-Codes, keine Strings wie "Rolle: Beschreibung".
+
 Antworte AUSSCHLIESSLICH mit JSON in genau dieser Form:
-{{"title": "...", "pov": "first_person", "characters": ["...", "..."], "setting_summary": "zwei bis drei Saetze"}}"""
+{{"title": "...", "pov": "first_person", "characters": ["Name1", "Name2", "Name3"], "setting_summary": "zwei bis drei Saetze"}}"""
 
 
-def build_prologue_prompt(meta: dict, lang_name: str, style_name: str, style_desc: str, core_rule: str) -> str:
-    return f"""Du bist ein weltklasse Autor und Ethiker. Schreibe den Prolog des fortlaufenden Romans
-"{meta['title']}" im Stil {style_name} auf {lang_name}. Erzaehlperspektive: {meta['pov']}.
+def regelblock(style_name: str, style_rules: list) -> str:
+    """Gemeinsamer Regel-Teil fuer Prolog und Kapitel.
 
-STILVORGABE {style_name}: {style_desc}
+    Die stilspezifischen Regeln kommen aus der Locale (Daten, kein Genre-Sonderfall im Code).
+    Der Phrasen-Bann ist generisch: er konkretisiert nur den Kern-Guardrail, denn am 2026-10-12
+    endete ein Handbuch-Kapitel mit 'Es ist wichtig zu betonen, dass die Wuerde aller Menschen
+    unantastbar ist' — ein Bekenntnissatz, der die Satire zerstoert.
+    """
+    zeilen = []
+    if style_rules:
+        zeilen.append(f"STILREGELN {style_name} (verbindlich, woertlich umsetzen):")
+        zeilen += [f"- {r}" for r in style_rules]
+        zeilen.append("")
+    zeilen += [
+        "VERBOTEN (ein Verstoss macht den Text unbrauchbar):",
+        "- Moral- und Bekenntnissaetze, z. B. 'Es ist wichtig zu betonen', 'Zusammenfassend laesst",
+        "  sich sagen', 'Die Wuerde des Menschen ist unantastbar', 'Wir muessen bedenken'.",
+        "- Ein Schlusssatz, der das Geschriebene moralisch einordnet ('Moral von der Geschicht').",
+        "- Der Artikel wird NICHT zitiert und NICHT als Appell erwaehnt.",
+    ]
+    return "\n".join(zeilen)
 
-SETTING (verbindlich): {meta['setting_summary']}
-BESATZUNG (verbindlich): {', '.join(meta['characters'])}
+
+def rahmenblock(meta: dict, lang_name: str, style_name: str, style_desc: str, rolle: str) -> str:
+    """Kopf jedes Buch-Textes: fester Titel, Stil, Sprache, POV, Setting, Besatzung (DRY)."""
+    return (f"{rolle}\n"
+            f'"{meta["title"]}" im Stil {style_name} auf {lang_name}. Erzaehlperspektive: {meta["pov"]}.\n\n'
+            f"STILVORGABE {style_name}: {style_desc}\n\n"
+            f"SETTING (verbindlich): {meta['setting_summary']}\n"
+            f"BESATZUNG (verbindlich): {', '.join(meta['characters'])}")
+
+
+def build_prologue_prompt(meta: dict, lang_name: str, style_name: str, style_desc: str,
+                          style_rules: list, core_rule: str) -> str:
+    return f"""{rahmenblock(meta, lang_name, style_name, style_desc,
+                'Du bist ein weltklasse Autor und Ethiker. Schreibe den Prolog des fortlaufenden Romans')}
+
+{regelblock(style_name, style_rules)}
 
 AUFGABE:
 - Etabliere Setting und Besatzung; jede Figur bekommt eine Eigenheit und einen eigenen Konflikt.
@@ -353,6 +386,48 @@ AUFGABE:
 FORMAT:
 - Erste Zeile: # {meta['title']}
 - 300-500 Woerter, reine Erzaehlung, kein Meta-Text."""
+
+
+def build_chapter_prompt(meta: dict, lang_name: str, style_name: str, style_desc: str, style_rules: list,
+                         core_rule: str, chapter_index: int, article_id: str, article_text: str,
+                         previous_text: str, previous_label: str) -> str:
+    """Markov-Schritt: festes Setting + Volltext des Vorkapitels + naechster UN-Artikel."""
+    return f"""{rahmenblock(meta, lang_name, style_name, style_desc,
+                f'Du bist ein weltklasse Autor und Ethiker. Du schreibst Kapitel {chapter_index} des fortlaufenden Romans')}
+
+{regelblock(style_name, style_rules)}
+
+VORHERIGES ({previous_label}, Volltext):
+{previous_text}
+
+NEUE AUFGABE:
+- Fuehre das Dokument nahtlos fort: greife mindestens EINE Figur und EIN konkretes Detail aus dem
+  vorherigen Teil auf. Keine Wiederholung der Exposition.
+- Verhandle UN-Artikel {article_id} als technischen Parameter, Kalibrierungsvorgabe oder Stoerfall
+  ({article_text}) — nicht als Zitat, nicht als Appell.
+- {core_rule}
+- Ende mit einem Cliffhanger ODER einer technischen Folgeanweisung.
+
+FORMAT:
+- Erste Zeile: # Abschnitt {chapter_index}: [Titel des Abschnitts]
+- 300-500 Woerter, reine Erzaehlung, kein Meta-Text."""
+
+
+def pruefe_figuren(figuren) -> None:
+    """Figuren muessen Namen bzw. kurze Bezeichner sein — keine Rollen-/Beschreibungsstrings.
+
+    Ursache (gemessen 2026-10-12): das Modell lieferte 'Einzelne2: Biologischer Subsystem-... B-001';
+    solche Rollenangaben wandern sonst in jedes Kapitel und in die Figuren-Treue-Pruefung.
+    """
+    if not isinstance(figuren, list) or not (3 <= len(figuren) <= 5):
+        raise ValueError(f"Erwartet 3-5 Figuren als Liste, erhalten {figuren!r}")
+    for f in figuren:
+        if not isinstance(f, str) or not f.strip():
+            raise ValueError(f"Figur ist kein nichtleerer String: {f!r}")
+        if ":" in f or "\n" in f:
+            raise ValueError(f"Figur enthaelt eine Rollen-/Beschreibungsangabe (Doppelpunkt): {f!r}")
+        if len(f.strip()) > 40:
+            raise ValueError(f"Figur ist zu lang (>40 Zeichen) — wohl eine Beschreibung: {f[:50]!r}")
 
 
 def new_book(lang: str = "DE", style: str | None = None, model: str = "qwen2.5:7b",
@@ -366,6 +441,7 @@ def new_book(lang: str = "DE", style: str | None = None, model: str = "qwen2.5:7
     if style_name not in styles:
         raise ValueError(f"Unbekannter Stil '{style_name}'. Verfuegbar: {sorted(styles)}")
     style_desc = styles[style_name]
+    style_rules = locale.get("style_rules", {}).get(style_name, [])
     lang_name = book_language_directive(lang, locale)
     # 'guardrail_prompt' ist der Code-Name, 'core_guardrail' der historische Locale-Name:
     # beide lesen, sonst greift der deutsche Fallback.
@@ -379,8 +455,7 @@ def new_book(lang: str = "DE", style: str | None = None, model: str = "qwen2.5:7
         raise ValueError(f"Buch-Metadaten unvollstaendig ({fehlend}) in {meta!r}")
     if meta["pov"] not in POVS:
         raise ValueError(f"Unbekannte Perspektive '{meta['pov']}' (erlaubt: {POVS})")
-    if not (3 <= len(meta["characters"]) <= 5):
-        raise ValueError(f"Erwartet 3-5 Figuren, erhalten {len(meta['characters'])}")
+    pruefe_figuren(meta["characters"])
 
     # Schritt 2: Verzeichnis + Rahmen einfrieren
     index = next_book_index()
@@ -390,7 +465,8 @@ def new_book(lang: str = "DE", style: str | None = None, model: str = "qwen2.5:7
         raise FileExistsError(f"Buch existiert bereits: {buch_dir}")
     os.makedirs(buch_dir)   # ohne exist_ok: ein Wettlauf soll auffallen, nicht still durchgehen
 
-    prolog = run_ollama_stream(build_prologue_prompt(meta, lang_name, style_name, style_desc, core_rule),
+    prolog = run_ollama_stream(build_prologue_prompt(meta, lang_name, style_name, style_desc,
+                                                     style_rules, core_rule),
                                model=model, host=host)
     if not prolog.strip():
         raise RuntimeError("Leerer Prolog vom Modell — Buch wird nicht angelegt.")
