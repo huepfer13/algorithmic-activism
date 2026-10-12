@@ -63,7 +63,8 @@
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_017_des_volkes_mund",
     "r5:apodex/apodex-1.1-mini:free:buch_018_rhymes_of_the_commons",
     "r6:deepseek-chat:buch_015_das_kochbuch_der_allmende",
-    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_016_faden_der_gelassenheit"
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_016_faden_der_gelassenheit",
+    "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_017_des_volkes_mund"
   ],
   "runden": {
     "1": [
@@ -848,6 +849,21 @@
         "tokens": "1592",
         "versuche": "1",
         "woerter": 317
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_017_des_volkes_mund",
+        "code": "V-06-06",
+        "datei": "06_art_06_abschnitt_6_der_gedämpfte_alarm.md",
+        "dauer_s": "20.9",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 6,
+        "tokens": "2330",
+        "versuche": "1",
+        "woerter": 375
       }
     ],
     "7": [
