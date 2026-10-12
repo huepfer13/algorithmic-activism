@@ -488,7 +488,8 @@ def pruefe_figuren(figuren) -> None:
 
 
 def new_book(lang: str = "DE", style: str | None = None, model: str = "qwen2.5:7b",
-             host: str = "http://localhost:11434", backend: str = "ollama") -> str:
+             host: str = "http://localhost:11434", backend: str = "ollama",
+             book_id: str | None = None, titel: str | None = None) -> str:
     """Stufe 1: neues Buch anlegen. Der Rahmen wird EINMAL eingefroren, danach nur angehaengt."""
     locale = load_locale(lang)
     styles = locale.get("styles", {})
@@ -520,8 +521,17 @@ def new_book(lang: str = "DE", style: str | None = None, model: str = "qwen2.5:7
     pruefe_figuren(meta["characters"])
 
     # Schritt 2: Verzeichnis + Rahmen einfrieren
+    if titel:
+        meta["title"] = titel
     index = next_book_index()
-    book_id = f"buch_{index:03d}_{sanitize_filename(meta['title']).lower()[:40]}"
+    if book_id is not None:
+        # Explizite ID aus der CLI: Pfadanteile sind tabu, sonst schreibt der Aufruf ausserhalb des Buchordners.
+        # Leerstring ist ein FEHLER, kein "nicht angegeben" — stiller Fallback waere hier die falsche Freundlichkeit.
+        if not book_id.strip() or ".." in book_id or "/" in book_id:
+            raise RuntimeError(f"ungueltige book_id '{book_id}' — kein Pfadanteil, kein Leerstring")
+        book_id = book_id.strip()
+    else:
+        book_id = f"buch_{index:03d}_{sanitize_filename(meta['title']).lower()[:40]}"
     buch_dir = os.path.join(BOOKS_DIR, book_id)
     if os.path.isdir(buch_dir):
         raise FileExistsError(f"Buch existiert bereits: {buch_dir}")
@@ -1141,8 +1151,10 @@ def main():
                              "anlegen; append-chapter = naechstes Kapitel an das gewaehlte Buch haengen.")
     parser.add_argument("--book-style", default=None,
                         help="Stil fuer den Buchmodus; Default ist ein zufaelliger Stil der Locale.")
+    parser.add_argument("--book-title", default=None,
+                        help="Titel fuer new-book; uebersteuert den Titel aus dem Modell.")
     parser.add_argument("--book-id", default=None,
-                        help="Buch-ID fuer append-chapter; Default ist das neueste Buch (mtime).")
+                        help="Buch-ID fuer new-book/append-chapter; Default ist das neueste Buch (mtime).")
     parser.add_argument("--article", default=None)
     parser.add_argument("--style", default=None)
     parser.add_argument("--random", action="store_true")
@@ -1157,7 +1169,8 @@ def main():
         try:
             if args.mode == "new-book":
                 book_id = new_book(lang=args.lang, style=args.book_style, model=args.model,
-                                   host=host, backend=args.backend)
+                                   host=host, backend=args.backend,
+                                   book_id=args.book_id, titel=args.book_title)
                 print(f"[Buchmodus] Buch angelegt: {os.path.join(BOOKS_DIR, book_id)}", flush=True)
             else:
                 pfad = append_chapter(book_id=args.book_id, lang=args.lang, model=args.model,
