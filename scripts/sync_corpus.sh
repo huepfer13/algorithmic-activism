@@ -64,7 +64,7 @@ fi
 
 # Hinweis (nicht blockierend): enthaelt eine anstehende Datei ein fehlgeschlagenes Audit?
 BAD_AUDIT="$(git status --porcelain -- "$TALES_DIR/" | sed 's/^...//' | tr -d '"' | while read -r f; do
-  [[ -f "$f" ]] && grep -l 'passed:[[:space:]]*false' "$f" 2>/dev/null
+  if [[ -f "$f" ]]; then grep -l 'passed:[[:space:]]*false' "$f" 2>/dev/null || true; fi
 done | wc -l | tr -d ' ')"
 if [[ "$BAD_AUDIT" -gt 0 ]]; then
   say "WARNUNG: $BAD_AUDIT anstehende Datei(en) mit 'passed: false' — sie wuerden MIT veroeffentlicht."
