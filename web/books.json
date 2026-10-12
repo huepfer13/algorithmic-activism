@@ -1083,12 +1083,13 @@
         "Kalle Ohm",
         "Frau Säckel"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 914,
-      "reading_minutes": 5,
+      "words": 1324,
+      "reading_minutes": 7,
       "cover": null,
       "chapters": [
         {
@@ -1125,6 +1126,24 @@
           "genre": "Satire",
           "leak_free": "true",
           "words": 414,
+          "reading_minutes": 2
+        },
+        {
+          "file": "02_art_02_abschnitt_2_das_protokoll_der_leeren_tas.md",
+          "index": 2,
+          "title": "Abschnitt 2: Das Protokoll der leeren Tassen",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "12.7",
+          "jaccard_max": "0.043",
+          "tokens_generated": "1528",
+          "manual_ending_code": "G-02-02",
+          "backend": "openrouter",
+          "genre": "Satire",
+          "leak_free": "true",
+          "words": 410,
           "reading_minutes": 2
         }
       ]
