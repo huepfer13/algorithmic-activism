@@ -406,12 +406,13 @@
       "pov": "third_person",
       "setting_summary": "Im Schattennetz dokumentieren Ausgeschlossene, wie Rechte Stueck fuer Stueck verschwinden.",
       "characters": [],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 876,
-      "reading_minutes": 4,
+      "words": 1454,
+      "reading_minutes": 7,
       "cover": null,
       "chapters": [
         {
@@ -449,6 +450,24 @@
           "leak_free": "true",
           "words": 496,
           "reading_minutes": 2
+        },
+        {
+          "file": "02_art_02_abschnitt_2_das_echo_des_schwefels.md",
+          "index": 2,
+          "title": "Abschnitt 2: Das Echo des Schwefels",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "2",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "36.7",
+          "jaccard_max": "0.048",
+          "tokens_generated": "2153",
+          "manual_ending_code": "S-02-02",
+          "backend": "openrouter",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "true",
+          "words": 578,
+          "reading_minutes": 3
         }
       ]
     },

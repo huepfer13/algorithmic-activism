@@ -3,7 +3,8 @@
     "r1:deepseek-chat:buch_002_die_sieben_quellen",
     "r1:qwen2.5:7b:buch_003_der_rat_der_tiere",
     "r1:mistral:buch_004_neon_exil",
-    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_003_der_rat_der_tiere"
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_003_der_rat_der_tiere",
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_004_neon_exil"
   ],
   "runden": {
     "1": [
@@ -66,6 +67,21 @@
         "tokens": "1394",
         "versuche": "1",
         "woerter": 424
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_004_neon_exil",
+        "code": "S-02-02",
+        "datei": "02_art_02_abschnitt_2_das_echo_des_schwefels.md",
+        "dauer_s": "36.7",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 1,
+        "tokens": "2153",
+        "versuche": "2",
+        "woerter": 578
       }
     ]
   }
