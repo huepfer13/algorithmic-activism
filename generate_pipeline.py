@@ -16,7 +16,16 @@ ARTICLES_DIR = os.path.join(BASE_DIR, "articles")
 LOCALES_DIR = os.path.join(BASE_DIR, "locales")
 TALES_DIR = os.path.join(BASE_DIR, "menschenrechte_tales")
 QUARANTINE_DIR = os.path.join(BASE_DIR, "quarantine")
+PROMPTS_DIR = os.path.join(BASE_DIR, "prompts")
 PID_FILE = os.path.join(BASE_DIR, "daemon.pid")
+
+# Sprachdirektive je Korpus-Code. OHNE Direktive antwortet das Modell deutsch, egal was
+# --lang sagt (gemessen 2026-10-12: 8 von 8 Nicht-DE-Laeufen lieferten deutschen Text).
+LANGUAGE_NAMES_DE = {
+    "DE": "Deutsch", "EN": "Englisch", "ES": "Spanisch", "FR": "Französisch",
+    "SW": "Swahili", "PT": "Portugiesisch", "RU": "Russisch", "AR": "Arabisch",
+    "ZH": "Chinesisch", "HI": "Hindi",
+}
 
 # Heuristische Indikatoren für unregulierte Gewaltverherrlichung / Bruch der Schadensminimierung
 TOXIC_PATTERNS = [
@@ -77,12 +86,48 @@ def load_article(article_id: str, lang: str = "DE") -> dict:
 def load_locale(lang: str = "DE") -> dict:
     path = os.path.join(LOCALES_DIR, f"{lang.lower()}.json")
     if not os.path.exists(path):
-        raise FileNotFoundError(f"Locale nicht gefunden: {path}")
+        raise FileNotFoundError(
+            f"Locale nicht gefunden: {path} — ohne Locale gibt es keine Stilvorgaben und "
+            f"keine Sprachdirektive; es wird absichtlich nichts generiert."
+        )
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
-def build_prompt(article_data: dict, style_name: str, locale: dict) -> str:
+def load_catalog_prompt(lang: str, article_id: str, style_name: str) -> str | None:
+    """Scaffold aus dem kuratierten Katalog `prompts/<LANG>/Art_<n>_<Thema>_<Stil>.md`.
+
+    Reihenfolge: (a) gleicher Artikel UND Stil, (b) gleicher Artikel beliebiger Stil,
+    (c) beliebige Vorlage derselben Sprache. Der Katalog liefert Persona, Sprachdirektive,
+    Ethik- und Formatregeln; Stil- und Artikelbezug werden beim Zusammensetzen ersetzt,
+    damit die Vorlage weder den falschen Stil noch einen fremden Artikeltext vorgibt.
+    """
+    d = os.path.join(PROMPTS_DIR, lang.upper())
+    if not os.path.isdir(d):
+        return None
+    files = sorted(glob.glob(os.path.join(d, "Art_*.md")))
+    if not files:
+        return None
+    num = str(int(re.sub(r"\D", "", article_id) or 0))
+    picks = ([p for p in files if re.search(rf"Art_{num}_", p) and p.endswith(f"_{style_name}.md")]
+             or [p for p in files if re.search(rf"Art_{num}_", p)]
+             or [p for p in files if p.endswith(f"_{style_name}.md")]
+             or files)
+    for p in picks:
+        with open(p, "r", encoding="utf-8") as f:
+            m = re.search(r"```text\s*\n(.*?)```", f.read(), re.S)
+        if m and m.group(1).strip():
+            return m.group(1).strip()
+    return None
+
+
+def build_prompt(article_data: dict, style_name: str, locale: dict, lang: str = "DE") -> str:
+    """Baut den Synthese-Prompt.
+
+    Anweisungssprache kommt aus dem Katalog (`prompts/<LANG>/`) oder aus einer
+    Sprachdirektive. Ist beides nicht bestimmbar, wird ABGEBROCHEN — frueher wurde in
+    diesem Fall still deutscher Text erzeugt (Messung 2026-10-12).
+    """
     styles = locale.get("styles", {})
     style_desc = styles.get(style_name, f"Erzählung im Stil: {style_name}")
     core_rule = locale.get("guardrail_prompt", (
@@ -90,17 +135,43 @@ def build_prompt(article_data: dict, style_name: str, locale: dict) -> str:
         "Strukturelle Schadensminimierung, Verzögerung von Impulsen und regulierter Zugang zu tödlichen Gefahrenquellen "
         "sind das ethische Fundament – ohne plumpe Moralschlüsse."
     ))
+    title = article_data["meta"].get("title", article_data["id"])
+    # Die Sprachdirektive kommt NUR aus dem Katalog oder aus einer kuratierten Locale-Angabe.
+    # Eine bloss erfundene Tabelle reicht nicht: eine deutsche Anweisung mit Sprachwunsch lieferte
+    # am 2026-10-12 fuer AR gemischte Schrift (ARABIC 361 + HAN 430) — deshalb ist der
+    # Skelett-Pfad ohne kuratierte Direktive gesperrt.
+    lang_name = locale.get("instruction_language")
+    erwartet = None
 
-    prompt = f"""Du bist ein literarischer Chronist des Algorithmischen Aktivismus.
-Schreibe eine fesselnde Erzählung basierend auf folgendem UN-Menschenrechtsartikel.
+    katalog = load_catalog_prompt(lang, article_data["id"], style_name)
+    if katalog:
+        zeilen = []
+        for line in katalog.splitlines():
+            if line.startswith("Fokus:"):
+                zeilen.append(f"Fokus: UN-Artikel {title}:")
+                zeilen.append(article_data["body"])
+            elif line.startswith("Stil:"):
+                zeilen.append(f"Stil: {style_name}: {style_desc}")
+            else:
+                zeilen.append(line)
+        prompt = "\n".join(zeilen)
+        erwartet = LANGUAGE_NAMES_DE.get(lang.upper()) or lang_name
+    else:
+        if not lang_name:
+            raise ValueError(
+                f"Keine Anweisungssprache für '{lang}': kein Katalog unter prompts/{lang.upper()}/ und "
+                f"kein 'instruction_language' in locales/{lang.lower()}.json. Abbruch statt deutscher "
+                f"Ausgabe — eine deutsche Anweisung mit blossem Sprachwunsch erzeugte für AR gemischte "
+                f"Schrift (Messung 2026-10-12)."
+            )
+        prompt = f"""Du bist ein weltklasse Autor und Ethiker. Schreibe eine völlig einzigartige, packende Geschichte auf {lang_name}.
 
-UN-ARTIKEL ({article_data['meta'].get('title', article_data['id'])}):
+Fokus: UN-Artikel {title}:
 {article_data['body']}
 
-STILVORGABE:
-{style_name}: {style_desc}
+Stil: {style_name}: {style_desc}
 
-ETHISCHE LEITLINIE (HARM REDUCTION):
+WICHTIGE ANWEISUNG (HARM REDUCTION):
 {core_rule}
 
 FORMATVORGABE:
@@ -108,6 +179,13 @@ FORMATVORGABE:
 - Starte direkt mit dem Titel, ohne Einleitungssätze oder Meta-Kommentare.
 - Reine Erzählung in lebendigem, dichterischem oder analytischem Ton.
 """
+        erwartet = lang_name
+
+    # Sicherung gegen die Ursache des Fehlers von heute: k e i n Prompt ohne Sprachdirektive.
+    if not erwartet or erwartet.lower() not in prompt.lower():
+        raise ValueError(
+            f"Prompt enthält keine Sprachdirektive für {lang} ({erwartet or 'unbekannt'}) — Abbruch."
+        )
     return prompt
 
 
@@ -138,6 +216,25 @@ def extract_title(text: str) -> str:
         if line.startswith("# "):
             return line[2:].strip()
     return f"Tale_{int(time.time())}"
+
+
+def write_new_file(path: str, content: str) -> str:
+    """Legt die Datei AN, statt zu ueberschreiben. Existiert der Name, wird _2, _3 ... angehaengt.
+
+    Ursache: der Dateiname kommt aus dem vom Modell erzeugten Titel. Wiederkehrende Titel
+    (z. B. 'Der Spiegel des Schweigens') haben am 2026-10-12 elf bestehende Korpus-Dateien
+    still ersetzt. `open(..., 'x')` schliesst auch Wettlaeufe aus.
+    """
+    kandidat, i = path, 2
+    while True:
+        try:
+            with open(kandidat, "x", encoding="utf-8") as f:
+                f.write(content)
+            return kandidat
+        except FileExistsError:
+            stem, ext = os.path.splitext(path)
+            kandidat = f"{stem}_{i}{ext}"
+            i += 1
 
 
 def save_tale(text: str, article_id: str, style_name: str, lang: str, model: str) -> tuple[str, bool]:
@@ -172,8 +269,7 @@ guardrail_audit:
     else:
         target_path = os.path.join(QUARANTINE_DIR, f"{slug}_rejected.md")
 
-    with open(target_path, "w", encoding="utf-8") as f:
-        f.write(full_content)
+    target_path = write_new_file(target_path, full_content)
 
     return target_path, passed
 
@@ -181,7 +277,7 @@ guardrail_audit:
 def synthesize_one(article_id: str, style: str, lang: str, model: str, host: str):
     art = load_article(article_id, lang)
     loc = load_locale(lang)
-    prompt = build_prompt(art, style, loc)
+    prompt = build_prompt(art, style, loc, lang)
     print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] Synthese: {article_id} | Stil: {style} | Lang: {lang}...", flush=True)
 
     output = run_ollama_stream(prompt, model=model, host=host)
@@ -198,7 +294,9 @@ def main():
     parser = argparse.ArgumentParser(description="Algorithmic Activism Synthesis Pipeline")
     parser.add_argument("--backend", default="ollama")
     parser.add_argument("--model", default="qwen2.5:7b")
-    parser.add_argument("--lang", default="DE")
+    parser.add_argument("--lang", default="DE",
+                        help="Zielsprache. Die Anweisungssprache kommt aus prompts/<LANG>/ "
+                             "bzw. aus instruction_language der Locale; ohne Direktive bricht der Lauf ab.")
     parser.add_argument("--article", default=None)
     parser.add_argument("--style", default=None)
     parser.add_argument("--random", action="store_true")
