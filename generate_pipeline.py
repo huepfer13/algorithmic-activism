@@ -975,14 +975,37 @@ def audit_manual_ending(text: str, erwarteter_block: str | None = None,
         if (de + en) >= 20 and erkannt != sprache.upper() and sicher >= 0.6:
             return False, (f"Sprache verletzt: Kapitel ist {erkannt} ({de} deutsche vs. {en} englische "
                            f"Funktionswoerter, {sicher * 100:.0f}%), erwartet {sprache.upper()}")
-    # Sterile Genres fuehren keine Figuren: die Handbuch-Regel verlangt woertlich "kein Vorname".
-    # Belegt 2026-10-12: das freie 550B-Modell schrieb "Milo" in ein steriles Kapitel, das die
-    # Ganzkoerper-Schranke passierte (Dialog, Figurenregie, Wiederholung, Stempelzahl alle sauber).
-    if figuren and not erlaube_rede:
-        for figur in figuren:
+    # Figurenverbot — eigenes Flag, NICHT "erlaube_rede: false". Kalibriert 2026-10-12: der
+    # Philosophische Essay verbietet Rede, fuehrt aber legitim Figuren (Mira, Halden); ein Filter
+    # ueber erlaube_rede haette dort Fehlalarme produziert. Greift nur bei figuren_verboten: true.
+    if (style_flags or {}).get("figuren_verboten"):
+        for figur in (figuren or []):
             name = str(figur).strip()
             if name and re.search(rf"\b{re.escape(name)}\b", text, re.IGNORECASE):
-                return False, (f"Figur '{name}' im sterilen Kapitel — dieses Genre fuehrt keine Namen")
+                return False, (f"Figur '{name}' im figurenfreien Genre — dieses Genre fuehrt keine Namen")
+        # Halluzinierte Spontanfiguren stehen in keiner Liste: Rollenmuster statt Positivliste.
+        # Beide Richtungen, weil "Milo nickte" und "sagte Milo" sonst durchrutschen.
+        # Zwei Verbfamilien, kalibriert 2026-10-12: die zweite Richtung (Grosswort + Verb) hatte mit
+        # "antwortet" einen Fehlalarm auf "Das System antwortet" — im Handbuch voellig normal. Sie laeuft
+        # deshalb nur mit rein narrativen Verben; die technisch verwendbaren (sagte, antwortet, fragt,
+        # ruft) bleiben auf die erste Richtung beschraenkt, die ein folgendes Grosswort verlangt.
+        # BEKANNTE LUECKE, bewusst: "Milo antwortet nicht" (Name + technisches Verb) wird nicht erkannt,
+        # weil "antwortet" aus der zweiten Richtung entfernt wurde, um "Das System antwortet" zu retten.
+        # Eine Vornamen-Blacklist waere der naechste Hebel — sie ist unvollstaendig per Natur und wurde
+        # deshalb noch nicht gebaut. Der deklarierte Figuren-Fall (Buch mit characters) ist abgedeckt.
+        # Getrennte Verbfamilien (Betreiber-Vorgabe 2026-10-12): die zweite Richtung darf nur genuin
+        # menschlich-narrative Regieverben enthalten. Funktionale Verben (antwortet, meldet, reagiert)
+        # sind im Handbuch Standard ("Das System antwortet") und loesten einen Fehlalarm aus.
+        STELLE = ("sagte|sagt|antwortete|antwortet|flüsterte|flüstert|dachte|denkt|nickte|nickt|"
+                  "blickte|blickt|lächelte|lächelt|seufzte|seufzt|fragte|fragt|rief|ruft")
+        NARRATIV = ("sagte|dachte|flüsterte|seufzte|lächelte|nickte|schrie|spürte|blickte|schritt")
+        PRONOMEN = {"sie", "er", "es", "wir", "ihr", "der", "die", "das", "man", "ich"}
+        for muster in (rf"\b(?:{STELLE})\s+([A-ZÄÖÜ][a-zäöüß]{{2,}})",
+                       rf"\b([A-ZÄÖÜ][a-zäöüß]{{2,}})\s+(?:{NARRATIV})"):
+            for treffer in re.findall(muster, text):
+                if treffer.lower() not in PRONOMEN:
+                    return False, (f"personifizierter Akteur '{treffer}' im figurenfreien Genre — "
+                                   "Handbuch, Kochbuch, Manifest und Lebensweisheiten fuehren keine Figuren")
     if not erlaube_emotion:
         erzaehlend = [w for w in ("flüster", "lächel", "seufz", "nickt", "kicher", "stöhnt")
                       if w in text.lower()]
