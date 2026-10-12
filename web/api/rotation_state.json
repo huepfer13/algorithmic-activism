@@ -34,7 +34,8 @@
     "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_010_amtsblatt_fuer_unzumutbarkeit",
     "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_011_das_haus_ohne_widerhall",
     "r8:nvidia/nemotron-3.5-lightning:free:buch_012_manifest_der_unantastbaren",
-    "r9:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit"
+    "r9:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit",
+    "r9:nvidia/nemotron-3-ultra-550b-a55b:free:buch_011_das_haus_ohne_widerhall"
   ],
   "runden": {
     "1": [
@@ -573,6 +574,21 @@
         "tokens": "971",
         "versuche": "1",
         "woerter": 427
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_011_das_haus_ohne_widerhall",
+        "code": "W-02-02",
+        "datei": "02_art_02_abschnitt_2_die_kalibrierung_der_gleichh.md",
+        "dauer_s": "86.9",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 9,
+        "tokens": "859",
+        "versuche": "1",
+        "woerter": 303
       }
     ]
   }
