@@ -985,13 +985,14 @@
         "Nadia",
         "Kroll"
       ],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_02"
+        "art_02",
+        "art_03"
       ],
-      "words": 1797,
-      "reading_minutes": 9,
+      "words": 2105,
+      "reading_minutes": 11,
       "cover": null,
       "chapters": [
         {
@@ -1047,6 +1048,24 @@
           "leak_free": "",
           "words": 969,
           "reading_minutes": 5
+        },
+        {
+          "file": "03_art_03_abschnitt_3_frequenzverlust.md",
+          "index": 3,
+          "title": "Abschnitt 3: Frequenzverlust",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "2",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "121.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1281",
+          "manual_ending_code": "B-03-03",
+          "backend": "openrouter",
+          "genre": "Briefroman",
+          "leak_free": "true",
+          "words": 308,
+          "reading_minutes": 2
         }
       ]
     },
