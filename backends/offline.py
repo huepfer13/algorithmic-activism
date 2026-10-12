@@ -7,7 +7,8 @@ class OfflinePlugin(BackendPlugin):
     def is_available(self) -> tuple[bool, str]:
         return True, "Immer verfügbar (Offline-Template-Generator)"
 
-    def generate(self, prompt: str, model: str = None) -> str:
+    def generate(self, prompt: str, model: str = None, details: dict | None = None,
+                 json_mode: bool = False) -> str:
         return (
             "# Die Stille vor dem Schutzimpuls\n\n"
             "Dies ist eine lokal generierte Harm-Reduction-Erzählung im Offline-Modus.\n\n"

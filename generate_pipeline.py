@@ -226,21 +226,25 @@ def erzeuge_text(prompt: str, model: str, host: str, backend: str = "ollama",
         if json_mode:
             return run_ollama_json_raw(prompt, model=model, host=host, details=details)
         return run_ollama_stream(prompt, model=model, host=host, details=details)
-    if json_mode:
-        raise RuntimeError(f"Backend '{backend}' unterstuetzt keinen JSON-Modus "
-                           "(erzwungenes Format gibt es nur bei ollama)")
     if backend == "offline":
         from backends.offline import OfflinePlugin
         plugin = OfflinePlugin()
     elif backend == "gemini":
         from backends.gemini import GeminiPlugin
         plugin = GeminiPlugin()
+    elif backend == "deepseek":
+        from backends.deepseek import DeepSeekPlugin
+        plugin = DeepSeekPlugin()
     else:
-        raise RuntimeError(f"unbekanntes Backend '{backend}' — erlaubt sind: ollama, offline, gemini")
+        raise RuntimeError(f"unbekanntes Backend '{backend}' — erlaubt sind: "
+                           "ollama, offline, gemini, deepseek")
+    if json_mode and not getattr(plugin, "supports_json", False):
+        raise RuntimeError(f"Backend '{backend}' unterstuetzt keinen JSON-Modus "
+                           "(erzwungenes Format gibt es bei ollama und deepseek)")
     bereit, meldung = plugin.is_available()
     if not bereit:
         raise RuntimeError(f"Backend '{backend}' nicht einsatzbereit: {meldung}")
-    return plugin.generate(prompt, model=model)
+    return plugin.generate(prompt, model=model, details=details, json_mode=json_mode)
 
 
 def sanitize_filename(title: str) -> str:

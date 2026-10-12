@@ -13,7 +13,13 @@
     "Kammerspiel": "Ein dialogintensives Kammerspiel zwischen zwei konträren Charakteren an einem isolierten Ort",
     "Gerätehandbuch": "Technische Dokumentation und Betriebsanleitung: nüchterner, bürokratischer Ingenieurston. Strukturiert in Abschnitte, Warnhinweise (GEFAHR/WARNUNG/HINWEIS nach ISO 3864), Funktionsbeschreibungen, Wartungsintervalle und Fehlerdiagnosetabellen. Menschen und Gefühle werden als 'Bedieneinheiten', 'biologische Subsysteme' oder 'Fehlerquellen' inventarisiert. Die Anleitung ist als satirische Kritik an entmenschlichender Verwaltungssprache angelegt: die beschriebenen Eingriffe sind die Kritik, nicht die Empfehlung.",
     "Märchen": "Klassisches Kunstmärchen: zeitlos, bildreich, archetypisch. Prüfungen, Schwellen, Handwerk und geteiltes Brot. Keine zynische Behördensprache.",
-    "Kinderbuch": "Kindgerechte Erzählung: warm, anschaulich, einfache Hauptsätze, Tiere und Kinder als Handelnde. Rechte werden als konkrete Handlung sichtbar."
+    "Kinderbuch": "Kindgerechte Erzählung: warm, anschaulich, einfache Hauptsätze, Tiere und Kinder als Handelnde. Rechte werden als konkrete Handlung sichtbar.",
+    "Solarpunk": "Konstruktive Utopie: dezentrale Gemeinschaft, erprobte Loesungen, handfeste Technik im Dienst der Rechte.",
+    "Briefroman": "Epistolarer Bericht: nummerierte Depeschen zwischen Getrennten, hohe Introspektion.",
+    "Satire": "Politische Groteske: ein überbordender Apparat macht einfache Rechte unvollstreckbar.",
+    "Gothic": "Weird Fiction: ein Haus, das sich veraendert, waehrend die Bewohner ihre Freiheit vergessen.",
+    "Manifest": "Rhetorischer Appell: rhythmische Deklamation gegen Willkür, Verfolgung und Schweigen.",
+    "Tagebuch": "Fiktives Tagebuch: datierte Notizen aus einer isolierten Sperrzone, schleichender Rechtsverlust."
   },
   "style_rules": {
     "Gerätehandbuch": [
@@ -33,6 +39,36 @@
       "Erzähle aus Sicht eines Kindes oder eines kleinen Tieres, in einfachen Hauptsätzen.",
       "Wörtliche Rede und Gefühle sind erlaubt und erwünscht, ohne Belehrung am Ende.",
       "Der Schluss ist ein formaler Stempel, zeileninitial und alleinstehend."
+    ],
+    "Solarpunk": [
+      "Zeige funktionierende, emanzipatorische Loesungen statt Dystopie.",
+      "Wörtliche Rede und Gefühle sind erlaubt und erwünscht.",
+      "Der Schluss ist ein formaler Netzstatus, zeileninitial und alleinstehend."
+    ],
+    "Briefroman": [
+      "Erzähle in Briefen/Depeschen, nicht in auktorialer Prosa.",
+      "Wörtliche Rede und Gefühle sind erlaubt und erwünscht.",
+      "Der Schluss ist ein formaler Depeschen-Vermerk, zeileninitial und alleinstehend."
+    ],
+    "Satire": [
+      "Ueberzeichne den Apparat, nicht die Menschen, die unter ihm leiden.",
+      "Wörtliche Rede und Gefühle sind erlaubt und erwünscht.",
+      "Der Schluss ist ein formaler Erlass, zeileninitial und alleinstehend."
+    ],
+    "Gothic": [
+      "Erzeuge Atmosphäre und Unbehagen, ohne Grauen zu zelebrieren.",
+      "Wörtliche Rede und Gefühle sind erlaubt und erwünscht.",
+      "Der Schluss ist eine formale Chronik-Schwelle, zeileninitial und alleinstehend."
+    ],
+    "Manifest": [
+      "Deklamiere, argumentiere in Appellen, ohne Figurenregie.",
+      "Keine wörtliche Rede (kollektiv-monologisch), Gefühle und Dringlichkeit erlaubt.",
+      "Der Schluss ist eine formale Proklamation, zeileninitial und alleinstehend."
+    ],
+    "Tagebuch": [
+      "Schreibe datierte, persönliche Notizen statt auktorialer Kapitel.",
+      "Wörtliche Rede und Gefühle sind erlaubt und erwünscht.",
+      "Der Schluss ist ein formaler Tagebucheintrag, zeileninitial und alleinstehend."
     ]
   },
   "style_flags": {
@@ -90,6 +126,84 @@
         "BEDACHT"
       ],
       "block_schema": "**[THESE: {zustand} | REFLEXION: {code}]**"
+    },
+    "Solarpunk": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "U",
+      "zustaende": [
+        "GEKOPPELT",
+        "GESPEIST",
+        "GETEILT",
+        "GEPRUEFT"
+      ],
+      "block_schema": "**[COMMUNE-GRID: {zustand} | STATUS: {code}]**"
+    },
+    "Briefroman": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "B",
+      "zustaende": [
+        "AUFGEGEBEN",
+        "ANKOMMEN",
+        "GELESEN",
+        "VERSIEGELT"
+      ],
+      "block_schema": "**[DEPESCHE: {zustand} | SIEGEL: {code}]**"
+    },
+    "Satire": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "G",
+      "zustaende": [
+        "ERGANGEN",
+        "VERFUEGT",
+        "GENEHMIGT",
+        "AKTENKUNDIG"
+      ],
+      "block_schema": "**[ZIRKULAR: {zustand} | ERGANGEN: {code}]**"
+    },
+    "Gothic": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "W",
+      "zustaende": [
+        "VERSCHLOSSEN",
+        "DURCHSCHRITTEN",
+        "VERWAHRT",
+        "GEZAEHLT"
+      ],
+      "block_schema": "**[CHRONIK: {zustand} | SCHWELLE: {code}]**"
+    },
+    "Manifest": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "code_praefix": "R",
+      "zustaende": [
+        "VERKUENDET",
+        "BESCHWOREN",
+        "EINGETRAGEN",
+        "BESTAETIGT"
+      ],
+      "block_schema": "**[PROKLAMATION: {zustand} | REGISTER: {code}]**"
+    },
+    "Tagebuch": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "T",
+      "zustaende": [
+        "NOTIERT",
+        "DATIERT",
+        "GEPRUEFT",
+        "VERGANGEN"
+      ],
+      "block_schema": "**[EINTRAG: {zustand} | ZEITPUNKT: {code}]**"
     }
   },
   "core_guardrail": "Die Geschichte muss das Prinzip der 'Schadensminimierung' (Harm Reduction) organisch verweben: Nicht die Menschen werden reglementiert oder eingesperrt, sondern letale Gefahrenquellen (Waffen, tödliche Toxine, unregulierte Zerstörungskraft) werden physisch aus dem privaten Lebensraum verbannt und an gesicherten Orten zentralisiert (Zero-Home-Storage), damit alle Menschen angstfrei und frei leben können. Wiederhole diese Anweisung NICHT wörtlich im Text und hänge keine künstliche 'Moral von der Geschicht' an das Ende."

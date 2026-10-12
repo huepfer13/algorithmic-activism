@@ -13,7 +13,8 @@ class GeminiPlugin(BackendPlugin):
             return True, "GEMINI_API_KEY konfiguriert"
         return False, "GEMINI_API_KEY fehlt (optional)"
 
-    def generate(self, prompt: str, model: str = None) -> str:
+    def generate(self, prompt: str, model: str = None, details: dict | None = None,
+                 json_mode: bool = False) -> str:
         key = os.environ.get("GEMINI_API_KEY")
         target_model = model or "gemini-2.5-flash"
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{target_model}:generateContent?key={key}"
