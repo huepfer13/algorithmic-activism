@@ -33,7 +33,8 @@
     "r8:deepseek-chat:buch_009_depeschen_aus_dem_kordon",
     "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_010_amtsblatt_fuer_unzumutbarkeit",
     "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_011_das_haus_ohne_widerhall",
-    "r8:nvidia/nemotron-3.5-lightning:free:buch_012_manifest_der_unantastbaren"
+    "r8:nvidia/nemotron-3.5-lightning:free:buch_012_manifest_der_unantastbaren",
+    "r9:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit"
   ],
   "runden": {
     "1": [
@@ -555,6 +556,23 @@
         "tokens": "7322",
         "versuche": "1",
         "woerter": 293
+      }
+    ],
+    "9": [
+      {
+        "backend": "deepseek",
+        "buch": "buch_010_amtsblatt_fuer_unzumutbarkeit",
+        "code": "G-04-04",
+        "datei": "04_art_04_abschnitt_4_die_entkopplung_der_griffigk.md",
+        "dauer_s": "8.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 9,
+        "tokens": "971",
+        "versuche": "1",
+        "woerter": 427
       }
     ]
   }
