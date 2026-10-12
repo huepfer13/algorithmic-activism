@@ -928,10 +928,12 @@
         "Nadia",
         "Kroll"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 364,
-      "reading_minutes": 2,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 828,
+      "reading_minutes": 4,
       "cover": null,
       "chapters": [
         {
@@ -950,6 +952,24 @@
           "genre": "Briefroman",
           "leak_free": "",
           "words": 364,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_01_abschnitt_1_riss_und_ration.md",
+          "index": 1,
+          "title": "Abschnitt 1: Riss und Ration",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3.5-lightning:free",
+          "duration_seconds": "158.7",
+          "jaccard_max": "0.022",
+          "tokens_generated": "17796",
+          "manual_ending_code": "B-01-01",
+          "backend": "openrouter",
+          "genre": "Briefroman",
+          "leak_free": "true",
+          "words": 464,
           "reading_minutes": 2
         }
       ]
