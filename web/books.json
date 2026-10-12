@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 17,
+  "count": 18,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -860,6 +860,40 @@
           "genre": "",
           "leak_free": "",
           "words": 101,
+          "reading_minutes": 1
+        }
+      ]
+    },
+    {
+      "book_id": "buch_018_rhymes_of_the_commons",
+      "title": "Rhymes of the Commons: A Ledger of Limericks",
+      "language": "EN",
+      "style": "Limericks",
+      "pov": "third_person",
+      "setting_summary": "Verse ledgers of the commons: five lines that dismantle grand decrees.",
+      "characters": [],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 88,
+      "reading_minutes": 1,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prologue",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "",
+          "duration_seconds": "",
+          "jaccard_max": "",
+          "tokens_generated": "",
+          "manual_ending_code": "",
+          "backend": "",
+          "genre": "",
+          "leak_free": "",
+          "words": 88,
           "reading_minutes": 1
         }
       ]

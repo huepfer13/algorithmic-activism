@@ -913,6 +913,17 @@ def audit_manual_ending(text: str, erwarteter_block: str | None = None,
         if dialog:
             return False, (f"woertliche Rede im Kapitelkoerper ({dialog} Zeichen) — "
                            "dieses Genre verlangt Sachtext, nicht nur einen sachlichen Schluss")
+    # Formvorgabe als pruefbare Regel: Genres mit "stanza_zeilen" (z. B. Limericks = 5) muessen im
+    # Koerper ausschliesslich Strophen dieser Laenge fuehren. Der REIM selbst ist damit NICHT geprueft —
+    # das steht ausdruecklich als Luecke im Bericht, statt als erfuellt zu gelten.
+    verse = (style_flags or {}).get("stanza_zeilen")
+    if verse:
+        bloecke = [b for b in text.split("\n\n") if b.strip() and not b.strip().startswith("**[")]
+        falsch = [(len(b.strip().splitlines()), b.strip().splitlines()[0][:40]) for b in bloecke
+                  if len(b.strip().splitlines()) != verse and len(b.strip().splitlines()) > 1]
+        if falsch:
+            return False, (f"Strophenform verletzt: {falsch[0][0]} Zeilen statt {verse} "
+                           f"(\"{falsch[0][1]}...\")")
     if not erlaube_emotion:
         erzaehlend = [w for w in ("flüster", "lächel", "seufz", "nickt", "kicher", "stöhnt")
                       if w in text.lower()]

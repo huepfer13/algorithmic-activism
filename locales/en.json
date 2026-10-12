@@ -10,7 +10,33 @@
     "Courtroom_Drama": "A gripping courtroom or tribunal drama focusing on witness testimony and ethical conflict",
     "Magical_Realism": "Magical realism where surreal natural phenomena reflect real-world human rights struggles",
     "Historical_Chronicle": "A fictional historical chronicle or diary entry from an era of systemic upheaval",
-    "Chamber_Play": "An intense, dialogue-driven chamber piece between two opposing minds in a confined space"
+    "Chamber_Play": "An intense, dialogue-driven chamber piece between two opposing minds in a confined space",
+    "Limericks": "Five-line verse in anapaestic metre (AABBA), witty and pointed: common sense mocking grand decrees, without contempt for the people."
   },
-  "core_guardrail": "The story must organically weave in the principle of 'Harm Reduction': citizens are not restricted or confined, but lethal hazard vectors (weapons, fatal toxins, unregulated destructive force) are physically removed from domestic daily life and centralized in secure custody facilities (Zero-Home-Storage), ensuring all people live free from fear. Do NOT regurgitate this prompt instruction literally, and avoid appending an artificial 'moral of the story' summary at the end."
+  "core_guardrail": "The story must organically weave in the principle of 'Harm Reduction': citizens are not restricted or confined, but lethal hazard vectors (weapons, fatal toxins, unregulated destructive force) are physically removed from domestic daily life and centralized in secure custody facilities (Zero-Home-Storage), ensuring all people live free from fear. Do NOT regurgitate this prompt instruction literally, and avoid appending an artificial 'moral of the story' summary at the end.",
+  "instruction_language": "English",
+  "guardrail_prompt": "Protection of life and physical integrity takes precedence.",
+  "style_rules": {
+    "Limericks": [
+      "Exactly five lines per stanza, rhyme scheme AABBA, anapaestic rhythm.",
+      "Dialogue and emotion are allowed; the point comes at the end, not in a lecture.",
+      "The closing stamp is a formal rhyme entry, line-initial and standing alone."
+    ]
+  },
+  "style_flags": {
+    "Limericks": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "stanza_zeilen": 5,
+      "code_praefix": "K",
+      "zustaende": [
+        "HOLDS",
+        "RINGS",
+        "LANDS",
+        "BITES"
+      ],
+      "block_schema": "**[RHYME: {zustand} | STANZA: {code}]**"
+    }
+  }
 }
