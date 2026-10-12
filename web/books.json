@@ -1260,10 +1260,12 @@
         "Sanna",
         "Der Wächter"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 442,
-      "reading_minutes": 2,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 735,
+      "reading_minutes": 4,
       "cover": null,
       "chapters": [
         {
@@ -1283,6 +1285,24 @@
           "leak_free": "",
           "words": 442,
           "reading_minutes": 2
+        },
+        {
+          "file": "01_art_01_abschnitt_1_der_riss_und_der_staub.md",
+          "index": 1,
+          "title": "Abschnitt 1: Der Riss und der Staub",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3.5-lightning:free",
+          "duration_seconds": "57.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "7322",
+          "manual_ending_code": "R-01-01",
+          "backend": "openrouter",
+          "genre": "Manifest",
+          "leak_free": "true",
+          "words": 293,
+          "reading_minutes": 1
         }
       ]
     },
