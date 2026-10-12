@@ -7,9 +7,10 @@
   "setting_summary": "Etymologische Miniaturen zu gefluegelten Worten.",
   "characters": [],
   "covered_articles": [
-    "art_01"
+    "art_01",
+    "art_02"
   ],
-  "current_chapter": 1,
+  "current_chapter": 2,
   "created_at": "2026-10-12T21:29:28Z",
   "_hinweis": "Prolog aus Betreiber-Vorgabe (handgesetzt, NICHT vom Modell generiert); deshalb keine Erzeugungs-Metriken. Figuren bewusst leer."
 }

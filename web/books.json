@@ -1682,12 +1682,13 @@
       "pov": "third_person",
       "setting_summary": "Etymologische Miniaturen zu gefluegelten Worten.",
       "characters": [],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 436,
-      "reading_minutes": 2,
+      "words": 877,
+      "reading_minutes": 4,
       "cover": null,
       "chapters": [
         {
@@ -1724,6 +1725,24 @@
           "genre": "Sprichwoerter",
           "leak_free": "true",
           "words": 335,
+          "reading_minutes": 2
+        },
+        {
+          "file": "02_art_02_abschnitt_2_der_staub_im_licht.md",
+          "index": 2,
+          "title": "Abschnitt 2: Der Staub im Licht",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "22.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "2201",
+          "manual_ending_code": "V-02-02",
+          "backend": "openrouter",
+          "genre": "Sprichwoerter",
+          "leak_free": "true",
+          "words": 441,
           "reading_minutes": 2
         }
       ]
