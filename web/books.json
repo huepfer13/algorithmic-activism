@@ -333,10 +333,12 @@
       "pov": "third_person",
       "setting_summary": "Die Tiere des Schattenwaldes halten Rat und finden fuer jeden Streit eine gute Loesung.",
       "characters": [],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 464,
-      "reading_minutes": 2,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 840,
+      "reading_minutes": 4,
       "cover": null,
       "chapters": [
         {
@@ -355,6 +357,24 @@
           "genre": "Kinderbuch",
           "leak_free": "",
           "words": 464,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_01_abschnitt_1_ein_neues_abenteuer.md",
+          "index": 1,
+          "title": "Abschnitt 1: Ein neues Abenteuer",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "qwen2.5:7b",
+          "duration_seconds": "153.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "731",
+          "manual_ending_code": "K-01-01",
+          "backend": "ollama",
+          "genre": "Kinderbuch",
+          "leak_free": "true",
+          "words": 376,
           "reading_minutes": 2
         }
       ]

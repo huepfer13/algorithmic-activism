@@ -1,6 +1,7 @@
 {
   "erledigt": [
-    "r1:deepseek-chat:buch_002_die_sieben_quellen"
+    "r1:deepseek-chat:buch_002_die_sieben_quellen",
+    "r1:qwen2.5:7b:buch_003_der_rat_der_tiere"
   ],
   "runden": {
     "1": [
@@ -18,6 +19,21 @@
         "tokens": "1074",
         "versuche": "1",
         "woerter": 617
+      },
+      {
+        "backend": "ollama",
+        "buch": "buch_003_der_rat_der_tiere",
+        "code": "K-01-01",
+        "datei": "01_art_01_abschnitt_1_ein_neues_abenteuer.md",
+        "dauer_s": "153.8",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "qwen2.5:7b",
+        "modell": "qwen2.5:7b",
+        "runde": 1,
+        "tokens": "731",
+        "versuche": "1",
+        "woerter": 376
       }
     ]
   }
