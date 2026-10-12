@@ -27,7 +27,7 @@ IPSUM_WOERTER = 200             # Umfang des Platzhaltertexts
 
 HIER = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HIER)
-KAPITEL_RE = re.compile(r"^(\d{2})_.*\.md$")
+KAPITEL_RE = re.compile(r"^(\d{2,})_.*\.md$")
 
 
 def lies_frontmatter(pfad: str) -> tuple[dict, str]:
@@ -61,9 +61,11 @@ def kapitel_daten(buch_dir: str) -> list[dict]:
     for name in sorted(dateien):
         kopf, rumpf = lies_frontmatter(os.path.join(buch_dir, name))
         worte = len(rumpf.split())
+        nummer = KAPITEL_RE.match(name)
+        index = int(kopf.get("chapter_index") or (nummer.group(1) if nummer else 0))
         kapitel.append({
             "file": name,
-            "index": int(kopf.get("chapter_index", name[:2])),
+            "index": index,
             "title": kopf.get("chapter_title", ""),
             "article": kopf.get("article", ""),
             "ending_ok": kopf.get("manual_ending_ok", ""),

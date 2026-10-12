@@ -502,6 +502,7 @@ ABSCHLUSS_MARKER = ("diagnose", "wartung", "intervall", "prüfung", "prüfprotok
 SICHERHEITS_BLOECKE = ("[gefahr]", "[warnung]", "[hinweis]", "[status")
 _MARKDOWN_PRAEFIX_RE = re.compile(r"^\s*(?:[-*+>]\s+|\d+[.)]\s+|\*\*)+")
 SCHWELLE_WIEDERHOLUNG = 0.4
+HISTORIE_FENSTER = 10          # Vergleich nur gegen die letzten N prosatragenden Vorgaenger
 
 
 def _normalisiere(text: str) -> str:
@@ -656,20 +657,17 @@ def status_block(book_id: str, artikel: str, index: int) -> str:
             f"| CODE: E-{int(art):02d}-{index:02d} | INTERVALL: {120 + (n >> 8) % 36 * 24}h]")
 
 
-def pflichtblock_hinweis(block: str, vorgaenger_schluss: str = "") -> str:
-    """Prompt-Anhang: verlangt den Block woertlich und benennt den Vorgaengerwortlaut als verboten."""
-    text = ("\n\nPFLICHT AM ENDE (wird maschinell geprueft): Der letzte Absatz enthaelt in einer "
-            "eigenen Zeile genau diesen Systemblock, Zeichen fuer Zeichen:\n" + block)
-    if vorgaenger_schluss:
-        alt = re.search(r"CODE:\s*([^|\]]+)", vorgaenger_schluss)
-        if alt:
-            text += ("\nSPERRVERMERK (nur zur Information — NICHT im Kapiteltext zitieren, nicht "
-                     "wiederholen, nicht erwaehnen): Das Aktenzeichen " + alt.group(1).strip()
-                     + " ist abgeschlossen.")
-        else:
-            text += ("\nSPERRVERMERK (nur zur Information — NICHT im Kapiteltext zitieren): Der "
-                     "vorherige Abschluss ist abgeschlossen und darf nicht wiederholt werden.")
-    return text
+def pflichtblock_hinweis(block: str) -> str:
+    """Prompt-Anhang: verlangt NUR den eigenen Pflichtblock und sperrt den Vorgaenger.
+
+    Bewusst ohne jeden Fremd-Code: ein 7B-Modell zieht Aktenzeichen-Zeichenketten aus dem Prompt in
+    den Erzaehltext (belegt 2026-10-12 an Kapitel 7, 8 und 9 — Kapitel 9 Versuch 1 wurde genau
+    deshalb von fremdcode_im_text() verworfen: "Fremd-Aktenzeichen im Kapiteltext (E-19-08)").
+    """
+    return ("\n\nPFLICHT AM ENDE (wird maschinell geprueft): Der letzte Absatz enthaelt in einer "
+            "eigenen Zeile genau diesen Systemblock, Zeichen fuer Zeichen:\n" + block
+            + "\nDer vorherige Abschnitt ist abgeschlossen. Wiederhole seinen Wortlaut nicht und "
+              "nenne kein anderes Aktenzeichen als das oben angegebene.")
 
 
 def schlussabsatz(text: str) -> str:
@@ -792,8 +790,10 @@ def erzeuge_mit_endschranke(prompt: str, model: str, host: str, style_flags: dic
         if ok and vorgaenger_schluesse:
             # Nur die Prosa vergleichen: der Pflichtblock ist per Kapitelcode eindeutig und darf
             # nicht als "Wiederholung" gelten.
-            wieder, aehnlich = ist_wiederholung(schluss_prosa(text),
-                                                [schluss_prosa(v) for v in vorgaenger_schluesse])
+            # Wanderndes Fenster: nur die letzten HISTORIE_FENSTER prosatragenden Vorgaenger.
+            # Sonst waechst mit jedem Kapitel die Trefferwahrscheinlichkeit gegen die Schwelle.
+            fenster = [p for p in (schluss_prosa(v) for v in vorgaenger_schluesse) if p][-HISTORIE_FENSTER:]
+            wieder, aehnlich = ist_wiederholung(schluss_prosa(text), fenster)
             if wieder:
                 ok, grund = False, ("Wiederholung des Schlussabsatzes "
                                     f"({aehnlich:.0%} Wortueberlappung mit einem Vorkapitel)")
@@ -828,7 +828,7 @@ def naechstes_buch() -> str:
 
 def buch_kapitel(buch_dir: str) -> list:
     """Kapiteldateien in Reihenfolge (00_prolog.md zuerst), aus dem Dateisystem."""
-    return sorted(f for f in os.listdir(buch_dir) if re.match(r"^\d{2}_.*\.md$", f))
+    return sorted(f for f in os.listdir(buch_dir) if re.match(r"^\d{2,}_.*\.md$", f))
 
 
 def naechster_artikel(lang: str, covered: list) -> str | None:
@@ -896,7 +896,7 @@ def append_chapter(book_id: str | None = None, lang: str | None = None, model: s
         if sa:
             vorgaenger_schluesse.append(sa)
     block = status_block(book_id, artikel, index)
-    prompt += pflichtblock_hinweis(block, vorgaenger_schluesse[-1] if vorgaenger_schluesse else "")
+    prompt += pflichtblock_hinweis(block)
     # Salz: dosierte, deterministische Reibung — Sektor-Bedingung + Aktennotiz aus einem Vorkapitel.
     stoerung = stoerparameter(index)
     artefakt = archiv_artefakt(buch_dir, index, book_id)
