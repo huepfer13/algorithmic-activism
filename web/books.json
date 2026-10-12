@@ -1310,13 +1310,7 @@
       "style": "Manifest",
       "pov": "first_person",
       "setting_summary": "In einem unterirdischen Archivbunker, dem Sektor Neun, hausen die letzten freien Chronisten unter ständiger Überwachung durch die Obrigkeit. Ein Riss in der Betondecke lässt Wasser eindringen und markiert eine tickende Frist: In wenigen Wochen wird der Bunker geflutet, wenn niemand die Wahrheit nach außen trägt. Jeder ausgesprochene Satz kann Verhaftung, Folter oder Tod bedeuten – und doch muss gesprochen werden.",
-      "characters": [
-        "Ilka",
-        "Baran",
-        "Tomas",
-        "Sanna",
-        "Der Wächter"
-      ],
+      "characters": [],
       "chapter_count": 3,
       "covered_articles": [
         "art_01",
@@ -1542,10 +1536,12 @@
       "pov": "third_person",
       "setting_summary": "Rezepte als Beweis, dass Fuersorge messbar ist.",
       "characters": [],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 116,
-      "reading_minutes": 1,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 587,
+      "reading_minutes": 3,
       "cover": null,
       "chapters": [
         {
@@ -1565,6 +1561,24 @@
           "leak_free": "",
           "words": 116,
           "reading_minutes": 1
+        },
+        {
+          "file": "01_art_01_abschnitt_1_das_kneten_der_kalten_hände.md",
+          "index": 1,
+          "title": "Abschnitt 1: Das Kneten der kalten Hände",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "824",
+          "manual_ending_code": "C-01-01",
+          "backend": "deepseek",
+          "genre": "Kochbuch",
+          "leak_free": "true",
+          "words": 471,
+          "reading_minutes": 2
         }
       ]
     },
