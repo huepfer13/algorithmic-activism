@@ -1081,8 +1081,9 @@ def erzeuge_mit_endschranke(prompt: str, model: str, host: str, style_flags: dic
     geliefert: kein stiller Durchlauf, aber auch kein Totalverlust.
     """
     if not style_flags.get("manual_ending"):
-        return (erzeuge_text(prompt, model, host, backend, details), True,
-                "nicht geprueft (Stil ohne Endschranke)", 0)
+        # Ehrlichkeit statt Gruen: hier wurde nichts geprueft, also steht das auch so im Artefakt.
+        return (erzeuge_text(prompt, model, host, backend, details), False,
+                "nicht geprueft (Stil ohne Endschranke) — Flags fehlen oder Genre ohne Schema", 0)
     text, grund = "", ""
     for i in range(1, versuche + 1):
         text = erzeuge_text(prompt, model, host, backend=backend, details=details)
@@ -1301,7 +1302,15 @@ def _append_chapter_gesperrt(book_id: str | None = None, lang: str | None = None
     sprache = (lang or meta.get("language", "DE")).upper()
     style_name = meta["style"]
     locale = load_locale(sprache)
-    style_desc = locale.get("styles", {}).get(style_name, style_name)
+    # Belegt 2026-10-12: der Runner uebergab fuer ALLE Buende --lang DE, auch fuer den englischen Band.
+    # Die DE-Locale kennt "Limericks" nicht, der Stilname fiel still auf sich selbst zurueck, die Flags
+    # fehlten, die Schranke war aus und das Modell schrieb deutsche Handbuchprosa in den EN-Band.
+    if style_name not in locale.get("styles", {}):
+        raise ValueError(
+            f"Stil '{style_name}' fehlt in locales/{sprache.lower()}.json — das Buch deklariert "
+            f"language={meta.get('language')!r}. Vermutlich wurde die falsche Locale geladen; "
+            "es gibt bewusst keinen stillen Rueckfall auf den Stilnamen.")
+    style_desc = locale["styles"][style_name]
     style_rules = locale.get("style_rules", {}).get(style_name, [])
     style_flags = locale.get("style_flags", {}).get(style_name, {})
     lang_name = book_language_directive(sprache, locale)

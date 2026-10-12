@@ -62,6 +62,21 @@ def band_waehlen(alle: list, index: int, backend: str) -> str:
     raise RuntimeError("kein zulaessiger Band im Pool — Sperrliste zu gross?")
 
 
+def band_sprache(book_id: str) -> str:
+    """Sprache eines Buchs aus seiner eigenen book.json — kein stiller DE-Default.
+
+    Belegt 2026-10-12: der Runner uebergab fuer alle Baende --lang DE. Fuer den englischen Limericks-Band
+    wurde damit die falsche Locale geladen, die Schranke fiel aus und es entstanden sieben deutsche
+    Kapitel mit Handbuch-Praefix in einem englischen Band.
+    """
+    pfad = os.path.join(REPO, "menschenrechte_books", book_id, "book.json")
+    meta = json.load(open(pfad, encoding="utf-8"))
+    sprache = (meta.get("language") or "").strip()
+    if not sprache:
+        raise RuntimeError(f"{book_id}/book.json hat kein Feld 'language' — Sprache nicht raten")
+    return sprache.upper()
+
+
 def buecher() -> list:
     """Alle Buecher mit book.json, stabil sortiert (Buch 1 zuerst)."""
     treffer = []
@@ -187,7 +202,7 @@ def main() -> int:
                 os.path.join(REPO, "menschenrechte_books", buch, "[0-9][0-9]_*.md"))}
             start = time.monotonic()
             r = subprocess.run([sys.executable, "generate_pipeline.py", "--mode", "append-chapter",
-                                "--book-id", buch, "--lang", "DE", "--backend", backend,
+                                "--book-id", buch, "--lang", band_sprache(buch), "--backend", backend,
                                 "--model", modell], cwd=REPO, capture_output=True, text=True, timeout=7200)
             dauer = round(time.monotonic() - start, 1)
             for zeile in (r.stdout + r.stderr).strip().splitlines()[-4:]:
