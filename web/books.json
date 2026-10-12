@@ -1200,10 +1200,12 @@
         "Timo",
         "Der Verwalter"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 458,
-      "reading_minutes": 2,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 879,
+      "reading_minutes": 4,
       "cover": null,
       "chapters": [
         {
@@ -1222,6 +1224,24 @@
           "genre": "Gothic",
           "leak_free": "",
           "words": 458,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_01_abschnitt_1_der_leise_druck.md",
+          "index": 1,
+          "title": "Abschnitt 1: Der leise Druck",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "34.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "4307",
+          "manual_ending_code": "W-01-01",
+          "backend": "openrouter",
+          "genre": "Gothic",
+          "leak_free": "true",
+          "words": 421,
           "reading_minutes": 2
         }
       ]
