@@ -15,4 +15,4 @@ Wo die Macht ihren schwersten Mantel anlegt und der Paragraf die Luft abschnürt
 
 In den folgenden Kapiteln versammeln wir das Gelächter der Straßen, der Amtsstuben, der Warteschlangen und der Hinterhöfe. Witze, die keine Häme kennen, sondern die erlösende Wucht der Erkenntnis: dass selbst die mächtigste Illusion am Ende über eine Bananenschale oder eine unpünktliche Formulierung stolpert. Wer lacht, hat für einen Atemzug wieder festen Boden unter den Füßen.
 
-**[POINTE: DIE ZUVERSICHT SIEGT | CODA: W-00-01]**
+**[POINTE: DIE ZUVERSICHT SIEGT | CODA: J-00-01]**

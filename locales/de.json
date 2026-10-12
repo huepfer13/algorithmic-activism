@@ -233,7 +233,7 @@
       "manual_ending": true,
       "erlaube_rede": true,
       "erlaube_emotion": true,
-      "code_praefix": "W",
+      "code_praefix": "J",
       "zustaende": [
         "TRIFFT",
         "SITZT",

@@ -29,7 +29,7 @@
       "erlaube_rede": true,
       "erlaube_emotion": true,
       "stanza_zeilen": 5,
-      "code_praefix": "K",
+      "code_praefix": "A",
       "zustaende": [
         "HOLDS",
         "RINGS",

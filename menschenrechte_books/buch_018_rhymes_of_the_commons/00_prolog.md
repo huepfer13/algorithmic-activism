@@ -23,4 +23,4 @@ From the benches of state to the baker's stone floor,
 No bureaucrat ever could fasten the door
 Against laughter that rhymes with a wink and a roar.
 
-**[RHYME: THE METRE HOLDS FIRM | STANZA: K-00-01]**
+**[RHYME: THE METRE HOLDS FIRM | STANZA: A-00-01]**

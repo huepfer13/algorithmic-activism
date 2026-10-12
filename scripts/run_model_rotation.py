@@ -37,6 +37,22 @@ POOL = [
 ]
 
 
+# Baende, die nur API-Modelle schreiben duerfen: das sterile Geraetehandbuch scheitert bei den
+# lokalen Modellen reproduzierbar an der Ganzkoerper-Schranke (qwen2.5:7b: 3/3 Versuche verworfen,
+# belegt 2026-10-12). Ein lokales Modell springt dann auf den naechsten Band.
+NUR_API_MODELLE = ("buch_001_",)
+
+
+def band_waehlen(alle: list, index: int, backend: str) -> str:
+    """Naechster erlaubter Band ab index; lokale Modelle ueberspringen NUR_API_MODELLE."""
+    for versatz in range(len(alle)):
+        kandidat = alle[(index + versatz) % len(alle)]
+        if backend == "ollama" and kandidat.startswith(NUR_API_MODELLE):
+            continue
+        return kandidat
+    raise RuntimeError("kein zulaessiger Band im Pool — Sperrliste zu gross?")
+
+
 def buecher() -> list:
     """Alle Buecher mit book.json, stabil sortiert (Buch 1 zuerst)."""
     treffer = []
@@ -127,7 +143,7 @@ def main() -> int:
     fehler = []
     for runde in range(1, args.runden + 1):
         for i, (modell, backend) in enumerate(POOL):
-            buch = alle[(i + runde) % len(alle)]
+            buch = band_waehlen(alle, (i + runde) % len(alle), backend)
             marke = f"r{runde}:{modell}:{buch}"
             if marke in z["erledigt"]:
                 continue
