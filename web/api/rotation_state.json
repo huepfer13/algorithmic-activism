@@ -49,7 +49,8 @@
     "r2:deepseek-chat:buch_015_das_kochbuch_der_allmende",
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_016_faden_der_gelassenheit",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_017_des_volkes_mund",
-    "r2:apodex/apodex-1.1-mini:free:buch_018_rhymes_of_the_commons"
+    "r2:apodex/apodex-1.1-mini:free:buch_018_rhymes_of_the_commons",
+    "r3:deepseek-chat:buch_015_das_kochbuch_der_allmende"
   ],
   "runden": {
     "1": [
@@ -443,6 +444,21 @@
         "tokens": "13444",
         "versuche": "0",
         "woerter": 669
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_015_das_kochbuch_der_allmende",
+        "code": "C-03-03",
+        "datei": "03_art_03_abschnitt_3_die_prüfkammer.md",
+        "dauer_s": "27.8",
+        "ending_ok": "false",
+        "exit": 2,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 3,
+        "tokens": "971",
+        "versuche": "3",
+        "woerter": 493
       }
     ],
     "4": [

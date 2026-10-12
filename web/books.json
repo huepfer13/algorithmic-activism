@@ -1536,13 +1536,14 @@
       "pov": "third_person",
       "setting_summary": "Rezepte als Beweis, dass Fuersorge messbar ist.",
       "characters": [],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_02"
+        "art_02",
+        "art_03"
       ],
-      "words": 1195,
-      "reading_minutes": 6,
+      "words": 1688,
+      "reading_minutes": 8,
       "cover": null,
       "chapters": [
         {
@@ -1598,6 +1599,24 @@
           "leak_free": "true",
           "words": 608,
           "reading_minutes": 3
+        },
+        {
+          "file": "03_art_03_abschnitt_3_die_prüfkammer.md",
+          "index": 3,
+          "title": "Abschnitt 3: Die Prüfkammer",
+          "article": "art_03",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "27.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "971",
+          "manual_ending_code": "C-03-03",
+          "backend": "deepseek",
+          "genre": "Kochbuch",
+          "leak_free": "",
+          "words": 493,
+          "reading_minutes": 2
         }
       ]
     },
