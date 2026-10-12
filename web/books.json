@@ -1317,13 +1317,14 @@
         "Sanna",
         "Der Wächter"
       ],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_02"
+        "art_02",
+        "art_03"
       ],
-      "words": 1047,
-      "reading_minutes": 5,
+      "words": 1338,
+      "reading_minutes": 7,
       "cover": null,
       "chapters": [
         {
@@ -1379,6 +1380,24 @@
           "leak_free": "true",
           "words": 312,
           "reading_minutes": 2
+        },
+        {
+          "file": "03_art_03_abschnitt_3_die_kalibrierte_leere.md",
+          "index": 3,
+          "title": "Abschnitt 3: Die kalibrierte Leere",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "60.2",
+          "jaccard_max": "0.007",
+          "tokens_generated": "2037",
+          "manual_ending_code": "R-03-03",
+          "backend": "openrouter",
+          "genre": "Manifest",
+          "leak_free": "true",
+          "words": 291,
+          "reading_minutes": 1
         }
       ]
     },
