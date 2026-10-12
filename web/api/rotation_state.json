@@ -17,7 +17,8 @@
     "r4:deepseek-chat:buch_005_fragment_der_vernunft",
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_006_das_gericht_vor_der_mauer",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_007_die_kammer_der_zeugen",
-    "r4:nvidia/nemotron-3.5-lightning:free:buch_008_flechtwerk_arkadien"
+    "r4:nvidia/nemotron-3.5-lightning:free:buch_008_flechtwerk_arkadien",
+    "r5:deepseek-chat:buch_006_das_gericht_vor_der_mauer"
   ],
   "runden": {
     "1": [
@@ -296,6 +297,23 @@
         "tokens": "12803",
         "versuche": "1",
         "woerter": 358
+      }
+    ],
+    "5": [
+      {
+        "backend": "deepseek",
+        "buch": "buch_006_das_gericht_vor_der_mauer",
+        "code": "E-04-04",
+        "datei": "04_art_04_abschnitt_4_die_tropfsteine_des_zwischen.md",
+        "dauer_s": "8.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 5,
+        "tokens": "849",
+        "versuche": "0",
+        "woerter": 444
       }
     ]
   }
