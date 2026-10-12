@@ -1298,12 +1298,13 @@
         "Sanna",
         "Der Wächter"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 735,
-      "reading_minutes": 4,
+      "words": 1047,
+      "reading_minutes": 5,
       "cover": null,
       "chapters": [
         {
@@ -1341,6 +1342,24 @@
           "leak_free": "true",
           "words": 293,
           "reading_minutes": 1
+        },
+        {
+          "file": "02_art_02_abschnitt_2_der_kalibrierte_tropfen.md",
+          "index": 2,
+          "title": "Abschnitt 2: Der kalibrierte Tropfen",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "21.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1811",
+          "manual_ending_code": "R-02-02",
+          "backend": "openrouter",
+          "genre": "Manifest",
+          "leak_free": "true",
+          "words": 312,
+          "reading_minutes": 2
         }
       ]
     },

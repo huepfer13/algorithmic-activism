@@ -35,7 +35,8 @@
     "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_011_das_haus_ohne_widerhall",
     "r8:nvidia/nemotron-3.5-lightning:free:buch_012_manifest_der_unantastbaren",
     "r9:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit",
-    "r9:nvidia/nemotron-3-ultra-550b-a55b:free:buch_011_das_haus_ohne_widerhall"
+    "r9:nvidia/nemotron-3-ultra-550b-a55b:free:buch_011_das_haus_ohne_widerhall",
+    "r9:nvidia/nemotron-3-super-120b-a12b:free:buch_012_manifest_der_unantastbaren"
   ],
   "runden": {
     "1": [
@@ -589,6 +590,21 @@
         "tokens": "859",
         "versuche": "1",
         "woerter": 303
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_012_manifest_der_unantastbaren",
+        "code": "R-02-02",
+        "datei": "02_art_02_abschnitt_2_der_kalibrierte_tropfen.md",
+        "dauer_s": "21.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 9,
+        "tokens": "1811",
+        "versuche": "1",
+        "woerter": 312
       }
     ]
   }
