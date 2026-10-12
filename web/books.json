@@ -1796,15 +1796,16 @@
       "pov": "third_person",
       "setting_summary": "Etymologische Miniaturen zu gefluegelten Worten.",
       "characters": [],
-      "chapter_count": 4,
+      "chapter_count": 5,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
-        "art_04"
+        "art_04",
+        "art_05"
       ],
-      "words": 1586,
-      "reading_minutes": 8,
+      "words": 1970,
+      "reading_minutes": 10,
       "cover": null,
       "chapters": [
         {
@@ -1895,6 +1896,24 @@
           "genre": "Sprichwoerter",
           "leak_free": "true",
           "words": 370,
+          "reading_minutes": 2
+        },
+        {
+          "file": "05_art_05_abschnitt_5_der_schweigende_sauerstoff.md",
+          "index": 5,
+          "title": "Abschnitt 5: Der Schweigende Sauerstoff",
+          "article": "art_05",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "42.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "6342",
+          "manual_ending_code": "V-05-05",
+          "backend": "openrouter",
+          "genre": "Sprichwoerter",
+          "leak_free": "true",
+          "words": 384,
           "reading_minutes": 2
         }
       ]

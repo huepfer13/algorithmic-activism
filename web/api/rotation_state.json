@@ -59,7 +59,8 @@
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_017_des_volkes_mund",
     "r4:apodex/apodex-1.1-mini:free:buch_018_rhymes_of_the_commons",
     "r5:deepseek-chat:buch_015_das_kochbuch_der_allmende",
-    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_016_faden_der_gelassenheit"
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_016_faden_der_gelassenheit",
+    "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_017_des_volkes_mund"
   ],
   "runden": {
     "1": [
@@ -727,6 +728,21 @@
         "tokens": "1060",
         "versuche": "1",
         "woerter": 278
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_017_des_volkes_mund",
+        "code": "V-05-05",
+        "datei": "05_art_05_abschnitt_5_der_schweigende_sauerstoff.md",
+        "dauer_s": "42.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 5,
+        "tokens": "6342",
+        "versuche": "1",
+        "woerter": 384
       }
     ],
     "6": [
