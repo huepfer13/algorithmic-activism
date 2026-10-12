@@ -1,0 +1,35 @@
+---
+book_id: "buch_010_amtsblatt_fuer_unzumutbarkeit"
+chapter_index: 1
+chapter_title: "Abschnitt 1: Der Staub in den Rohren"
+article: "art_01"
+language: "DE"
+style: "Satire"
+pov: "third_person"
+previous_chapter_file: "00_prolog.md"
+manual_ending_ok: true
+manual_ending_attempts: 2
+manual_ending_code: "G-01-01"
+scene_condition: "SENSORIK_DRIFT"
+archive_note: ""
+model: "nvidia/nemotron-3.5-lightning:free"
+genre: "Satire"
+backend: "openrouter"
+duration_seconds: 175.6
+jaccard_max: 0.0
+tokens_generated: 13904
+leak_free: true
+manual_ending_note: "Passed (Pflichtblock G-01-01)"
+---
+
+# Abschnitt 1: Der Staub in den Rohren
+
+Kalle Ohm schob die Akte 4.711 erneut durch den pneumatic-Rohrpost-Kanal, doch das Gebläse hustete nur staubig zurück. Feiner Papierschliff lag auf den Relaiskontakten, ein Ergebnis der seit drei Wochen andauernden Blockade; die mechanische Sensordrift hatte die Leitung in einen permanenten Wartezustand versetzt. Er kniff die Augen zusammen, sein Knie, das seit dem Sturz in der siebten Etage immer wieder knackste, protestierte mit einem leisen Reiben, als würde der Gang selbst gegen seine Bewegung arbeiten. Er war der einzige, der wusste, wo die Akte hingehörte, und doch wurde er jedes Mal erneut damit konfrontiert, dass das System darauf aus war, Wissen zu vertuschen, nicht zu bewahren.
+
+In Abteilung sieben, wo Hedwig Klabundt bereits zum vierten Mal an diesem Morgen den Stempel gegen das Papier drückte, zuckte ihr Blick unwillkürlich zur Seite. Sie hatte den Vorgang zweimal gelesen, und beim zweiten Mal stand da plötzlich ein Verweis auf eine Abteilung, die es gar nicht gab. Ihr verstandesblinder Modus funkte einen Fehler, doch sie tippte den Stempel trotzdem, weil der Apparat ein Eigenleben entwickelt hatte, das jede Logik überschrieb. Bodo Pfütze stand daneben, das Protokollblock in den Händen, und notierte: „Kaffee konsumiert – Apparat funkt aus.“ Er trank keinen Kaffee, aber das hinderte ihn nicht daran, das Schwinden des Kaffees aus dem Protokoll zu betrauern, als wäre es ein Verlust der Menschlichkeit.
+
+Dr. Marlene Zirbeldrüse, Leiterin der Abteilung für prinzipielle Grundsatzfragen prinzipieller Art, starrte auf einen leeren Bildschirm. In dem internen Kodizismus des Amtes stand art_01 nun als Kalibrierungsvorgabe für Schadensminimierung bereit, doch die Parameter ließen sich nicht überschreiben, da die zuständige Stelle zur Feststellung der Weiteres-Feststellung seit der letzten Erlass-Sitzung vakant war. Das System, so dachte sie, hatte das Recht auf Gefahrenfreiheit in eine Reihe von Formularen verwandelt, die man gegenseitig verlor. Frau Säckel in der dritten Vorprüfstelle neigte den Kopf, und ihr müdes Nein erfüllte den Raum, als ob die Ablehnung selbst das zentrale Prinzip sei: nichts bewegen, damit nichts kaputtgeht.
+
+Kalle Ohm schob die Akte weiter, doch die Rohrpost blieb stumm. Das Prinzip der Schadensminimierung, implementiert als technische Anweisung im Hintergrund, verlangte, dass lethale Objekte aus den privaten Sphären verbannt und in gesicherte Zentraldepots überführt werden – doch die Bürokratie, die eigentlich zentralisieren sollte, zerfiel in sieben Abteilungen, drei Vorprüfstellen und ein Kaffeeküchenprotokoll, das niemand mehr las. Als er die Tür zur zwölften Etappe schloss, hörte er, wie das Schild über dem Aufzugsfach blinkte: *Defekt seit elf Jahren. Zuständigkeitsstreitigkeit nicht erledigt.*
+
+[ZIRKULAR: VERFUEGT | ERGANGEN: G-01-01]
