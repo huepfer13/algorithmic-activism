@@ -28,7 +28,8 @@
     "r6:nvidia/nemotron-3.5-lightning:free:buch_010_amtsblatt_fuer_unzumutbarkeit",
     "r7:deepseek-chat:buch_008_flechtwerk_arkadien",
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_009_depeschen_aus_dem_kordon",
-    "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_010_amtsblatt_fuer_unzumutbarkeit"
+    "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_010_amtsblatt_fuer_unzumutbarkeit",
+    "r7:nvidia/nemotron-3.5-lightning:free:buch_011_das_haus_ohne_widerhall"
   ],
   "runden": {
     "1": [
@@ -478,6 +479,16 @@
         "tokens": "1528",
         "versuche": "1",
         "woerter": 410
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_011_das_haus_ohne_widerhall",
+        "datei": null,
+        "dauer_s": 189.9,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3.5-lightning:free",
+        "runde": 7
       }
     ]
   }
