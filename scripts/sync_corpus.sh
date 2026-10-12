@@ -19,7 +19,9 @@
 #   5. pusht — erst das startet Pages-Build und Hugging-Face-Upload
 #
 # AUFRUF:
-#   scripts/sync_corpus.sh [--dry-run]      # --dry-run: nur fetch + Bericht, keine Aenderung
+#   scripts/sync_corpus.sh [--dry-run] [--allow-overwrites]
+#     --dry-run            nur fetch + Bericht, keine Aenderung
+#     --allow-overwrites   erlaubt das Ersetzen bestehender Tales (nur nach Pruefung!)
 #
 # AUSGABE (Beleg):
 #   Anzahl Tales vorher/nachher, Anzahl veroeffentlichter Dateien, Commit-Hash,
@@ -37,6 +39,16 @@ TALES_DIR="menschenrechte_tales"
 
 say() { printf '%s\n' "$*"; }
 die() { printf '\n[ABBRUCH] %s\n' "$*" >&2; exit 1; }
+
+# Optionen (nach den Funktionen, damit die() schon existiert)
+ALLOW_OVERWRITES=0
+for arg in "$@"; do
+  case "$arg" in
+    --dry-run)           DRY_RUN=1 ;;
+    --allow-overwrites)  ALLOW_OVERWRITES=1 ;;
+    *)                   die "unbekannte Option: $arg  (erlaubt: --dry-run --allow-overwrites)" ;;
+  esac
+done
 
 say "== Corpus-Sync =="
 say "Repo : $REPO_ROOT"
@@ -75,6 +87,14 @@ if [[ $DRY_RUN -eq 1 ]]; then
   say "--dry-run: kein commit, kein push."
   git fetch -q origin main
   say "Abstand zu origin/main: $(git rev-list --left-right --count origin/main...HEAD | awk '{print $1" hinter uns, "$2" voraus"}')"
+  # Vorab-Sicht auf das, was der Ueberschreib-Schutz beim Echt-Lauf blocken wuerde.
+  VORHANDEN="$(git status --porcelain -- "$TALES_DIR/" | grep -E '^(.M|M.|.D|D.)' || true)"
+  if [[ -n "$VORHANDEN" ]]; then
+    say ""
+    say "ACHTUNG — bestehende Eintraege wuerden ersetzt oder geloescht (Echt-Lauf bricht ab):"
+    say "$VORHANDEN"
+    say "Pruefen mit: git show HEAD:<pfad>  |  bewusst erlauben mit --allow-overwrites"
+  fi
   say "Erste 10 anstehende Dateien:"
   git status --porcelain -- "$TALES_DIR/" | head -10
   exit 0
@@ -82,6 +102,21 @@ fi
 
 # --- 3. ERST committen (sonst verweigert der Rebase) -------------------------
 git add "$TALES_DIR/"
+
+# SCHUTZ GEGEN STILLEN KORPUS-VERLUST:
+# Die Pipeline schreibt nach menschenrechte_tales/<LANG>/<Titel>.md. Waehlt das Modell
+# einen Titel, den es schon gibt, wird die BESTEHENDE Datei ueberschrieben (belegt
+# 2026-10-12: 10 Dateien, u. a. art_19 -> art_05 bei gleichem Titel). Ein blindes
+# "alles stagen" wuerde diese Ueberschreibungen als neuen Korpus veroeffentlichen.
+UEBERSCHRIEBEN="$(git diff --cached --name-status --diff-filter=MD -- "$TALES_DIR/")"
+if [[ -n "$UEBERSCHRIEBEN" && $ALLOW_OVERWRITES -eq 0 ]]; then
+  say ""
+  say "BESTEHENDE Korpus-Eintraege wuerden ersetzt oder geloescht werden:"
+  say "$UEBERSCHRIEBEN"
+  say ""
+  die "Abbruch: das ueberschreibt vorhandene Tales. Pruefen (git show HEAD:<pfad>), dann bewusst mit --allow-overwrites wiederholen."
+fi
+
 git diff --cached --quiet && die "Nichts gestaged — unerwarteter Zustand."
 COMMIT_MSG="feat(tales): sync batch of $PENDING generated tales"
 git commit -q -m "$COMMIT_MSG"
