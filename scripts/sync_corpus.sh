@@ -55,17 +55,19 @@ say "Repo : $REPO_ROOT"
 say "Modus: $([[ $DRY_RUN -eq 1 ]] && echo 'DRY-RUN (aendert nichts)' || echo 'ECHT (committet und pusht)')"
 
 # --- 1. Fremde uncommittete Aenderungen? -------------------------------------
-# Erlaubt ist nur menschenrechte_tales/ (dort schreibt der Daemon).
-FREMD="$(git status --porcelain | grep -Ev '^.. "?menschenrechte_tales/' || true)"
+# Erlaubt sind: menschenrechte_tales/ (Daemon), menschenrechte_books/ (Buch-Pipeline)
+# und web/books.json bzw. web/api/ (Erzeugnisse des Index-Builders). Alles andere bricht ab.
+ERLAUBT_RE='^.. "?(menschenrechte_tales/|menschenrechte_books/|web/books\.json|web/api/)'
+FREMD="$(git status --porcelain | grep -Ev "$ERLAUBT_RE" || true)"
 if [[ -n "$FREMD" ]]; then
   say ""
   say "Uncommittete Aenderungen AUSSERHALB von $TALES_DIR/:"
   say "$FREMD"
-  die "Erst aufraeumen — dieses Skript veroeffentlicht nur Tales."
+  die "Erst aufraeumen — dieses Skript veroeffentlicht nur Tales, Buecher und Index-Dateien."
 fi
 
 # --- 2. Was steht an? --------------------------------------------------------
-PENDING="$(git status --porcelain -- "$TALES_DIR/" | wc -l | tr -d ' ')"
+PENDING="$(git status --porcelain -- "${ADD_PFADE[@]}" 2>/dev/null | wc -l | tr -d ' ')"
 BEFORE="$(find "$TALES_DIR" -name '*.md' | wc -l | tr -d ' ')"
 say ""
 say "Bestand: $BEFORE Tale-Dateien, davon anstehend: $PENDING"
@@ -101,14 +103,20 @@ if [[ $DRY_RUN -eq 1 ]]; then
 fi
 
 # --- 3. ERST committen (sonst verweigert der Rebase) -------------------------
-git add "$TALES_DIR/"
+# Nur Pfade adden, die es gibt: ein fehlendes web/books.json darf den Sync nicht sprengen.
+ADD_PFADE=("$TALES_DIR/")
+[[ -d menschenrechte_books ]] && ADD_PFADE+=("menschenrechte_books/")
+[[ -f web/books.json ]] && ADD_PFADE+=("web/books.json")
+[[ -d web/api ]] && ADD_PFADE+=("web/api/")
+git add "${ADD_PFADE[@]}"
 
 # SCHUTZ GEGEN STILLEN KORPUS-VERLUST:
 # Die Pipeline schreibt nach menschenrechte_tales/<LANG>/<Titel>.md. Waehlt das Modell
 # einen Titel, den es schon gibt, wird die BESTEHENDE Datei ueberschrieben (belegt
 # 2026-10-12: 10 Dateien, u. a. art_19 -> art_05 bei gleichem Titel). Ein blindes
 # "alles stagen" wuerde diese Ueberschreibungen als neuen Korpus veroeffentlichen.
-UEBERSCHRIEBEN="$(git diff --cached --name-status --diff-filter=MD -- "$TALES_DIR/")"
+# Auch fuer Buecher: ein ueberschriebenes Kapitel ist derselbe Verlust wie ein Tale.
+UEBERSCHRIEBEN="$(git diff --cached --name-status --diff-filter=MD -- "${ADD_PFADE[@]}")"
 if [[ -n "$UEBERSCHRIEBEN" && $ALLOW_OVERWRITES -eq 0 ]]; then
   say ""
   say "BESTEHENDE Korpus-Eintraege wuerden ersetzt oder geloescht werden:"
@@ -118,7 +126,11 @@ if [[ -n "$UEBERSCHRIEBEN" && $ALLOW_OVERWRITES -eq 0 ]]; then
 fi
 
 git diff --cached --quiet && die "Nichts gestaged — unerwarteter Zustand."
-COMMIT_MSG="feat(tales): sync batch of $PENDING generated tales"
+if [[ -n "$(git status --porcelain -- menschenrechte_books web/books.json web/api 2>/dev/null)" ]]; then
+  COMMIT_MSG="feat(books): sync batch of $PENDING generated entries"
+else
+  COMMIT_MSG="feat(tales): sync batch of $PENDING generated tales"
+fi
 git commit -q -m "$COMMIT_MSG"
 say ""
 say "Committet: $(git rev-parse --short HEAD) — $COMMIT_MSG"
