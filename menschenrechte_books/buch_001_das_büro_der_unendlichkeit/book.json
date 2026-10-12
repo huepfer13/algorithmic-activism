@@ -1,0 +1,23 @@
+{
+  "book_id": "buch_001_das_büro_der_unendlichkeit",
+  "title": "Das Büro der Unendlichkeit",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Gerätehandbuch",
+  "setting_summary": "Ein überdimensionales, klimatisiertes Bürogebäude in der Stadtzentrale dominiert die Landschaft. Die Räume sind mit modernster Technologie ausgestattet und stets unter strenger Überwachung. Hier arbeiten biologische Subsysteme (Menschen) an einer unendlichen Liste von Aufgaben, während ihre Werte und Rechte in formellen Dokumenten festgehalten werden.",
+  "characters": [
+    "Alex",
+    "Eliza",
+    "Milo",
+    "Nova",
+    "Omicron"
+  ],
+  "covered_articles": [
+    "art_01",
+    "art_03",
+    "art_04"
+  ],
+  "current_chapter": 3,
+  "created_at": "2026-10-12T18:18:32.652744+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
