@@ -12,7 +12,8 @@
     "r2:nvidia/nemotron-3.5-lightning:free:buch_006_das_gericht_vor_der_mauer",
     "r3:deepseek-chat:buch_004_neon_exil",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_005_fragment_der_vernunft",
-    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_006_das_gericht_vor_der_mauer"
+    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_006_das_gericht_vor_der_mauer",
+    "r3:nvidia/nemotron-3.5-lightning:free:buch_007_die_kammer_der_zeugen"
   ],
   "runden": {
     "1": [
@@ -214,6 +215,21 @@
         "tokens": "1683",
         "versuche": "0",
         "woerter": 427
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_007_die_kammer_der_zeugen",
+        "code": "E-01-01",
+        "datei": "01_art_01_abschnitt_1_der_blockierte_kanal.md",
+        "dauer_s": "107.5",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3.5-lightning:free",
+        "modell": "nvidia/nemotron-3.5-lightning:free",
+        "runde": 3,
+        "tokens": "13444",
+        "versuche": "0",
+        "woerter": 669
       }
     ]
   }
