@@ -1609,12 +1609,13 @@
       "pov": "third_person",
       "setting_summary": "Kontemplative Einsichten fuer unruhige Zeiten.",
       "characters": [],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 356,
-      "reading_minutes": 2,
+      "words": 682,
+      "reading_minutes": 3,
       "cover": null,
       "chapters": [
         {
@@ -1652,6 +1653,24 @@
           "leak_free": "true",
           "words": 250,
           "reading_minutes": 1
+        },
+        {
+          "file": "02_art_02_abschnitt_2_die_differentielle_der_gleic.md",
+          "index": 2,
+          "title": "Abschnitt 2: Die Differentielle der Gleichheit",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "23.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1088",
+          "manual_ending_code": "L-02-02",
+          "backend": "openrouter",
+          "genre": "Lebensweisheiten",
+          "leak_free": "true",
+          "words": 326,
+          "reading_minutes": 2
         }
       ]
     },
