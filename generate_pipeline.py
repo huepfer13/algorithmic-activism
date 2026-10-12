@@ -506,7 +506,7 @@ ABSCHLUSS_MARKER = (
     ("pruefung", r"^pruefung\s*:"),
     ("pruefprotokoll", r"^pruefprotokoll\s*:"),
     ("protokoll", r"^protokoll\s*:"),
-    ("abschnitt", r"^abschnitt\s+\d+"),
+    ("abschnitt", r"^abschnitt\s+\d+\s*:"),
     ("fehlercode", r"^fehlercode\s+e-?\d+"),
 )
 SICHERHEITS_BLOECKE = ("[gefahr]", "[warnung]", "[hinweis]", "[status")
