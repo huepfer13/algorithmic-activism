@@ -379,6 +379,20 @@
     .fb-audit { font-weight: 600; }
     .fb-state { color: var(--muted); }
 
+    /* Entwickler-Verweise */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 10px 16px;
+      font-size: 0.72rem;
+      color: var(--muted);
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .site-footer a { color: var(--accent); text-decoration: none; }
+    .site-footer a:hover { text-decoration: underline; }
+
     /* Mobile */
     @media (max-width: 768px) {
       body { flex-direction: column; height: auto; overflow: visible; }
@@ -418,6 +432,12 @@
       <div id="result-count" class="result-count" aria-live="polite" data-hits="0" data-total="0">Lade Korpus...</div>
     </div>
     <div id="tales-list"></div>
+    <div class="site-footer">
+      <span data-i18n="api_footer_label">Entwickler-API:</span>
+      <a href="./api/random.json" data-i18n-title="api_random_title" title="Beispielkapitel im Volltext (statisch)">random.json</a>
+      <a href="./api/ipsum.json" data-i18n-title="api_ipsum_title" title="Platzhaltertext aus dem Korpus">ipsum.json</a>
+      <a href="./books.json" data-i18n-title="api_books_title" title="Buch-Index (Katalog)">books.json</a>
+    </div>
   </aside>
 
   <main id="main-content">
@@ -1214,19 +1234,19 @@
             <h2>${esc(chapterLabel(ch) + (ch.title ? ': ' + ch.title : ''))}</h2>
           </div>
           <article class="article-body">${bodyHtml}</article>
-          <div class="chapter-nav">
-            <button type="button" id="ch-prev" ${vor ? 'data-file="' + esc(vor.file) + '"' : 'disabled'}>
-              \u25c0 ${esc(vor ? chapterLabel(vor) : bt('book_start', 'Anfang'))}</button>
-            <button type="button" id="ch-next" ${nach ? 'data-file="' + esc(nach.file) + '"' : 'disabled'}>
-              ${esc(nach ? chapterLabel(nach) : bt('book_end', 'Ende'))} \u25b6</button>
-          </div>
+
           <div class="feedback-bar">
             <span class="fb-audit" style="color:${esc(auditLabel(ch).color)}">${esc(auditLabel(ch).text)}</span>
             ${ch.attempts ? `<span class="fb-state">${esc(bt('book_attempts', 'Versuche') + ': ' + ch.attempts)}</span>` : ''}
             <button type="button" class="fb-btn" data-vote="1">\u25b2 ${esc(bt('book_vote_up', 'Hilfreich'))}</button>
             <button type="button" class="fb-btn" data-vote="-1">\u25bc ${esc(bt('book_vote_down', 'Schwach'))}</button>
-            <a class="fb-report" href="${reportHref(b, ch)}" target="_blank" rel="noopener">\ud83d\udea9 ${esc(bt('book_report', 'Melden'))}</a>
+            <a class="fb-report" href="${reportHref(b, ch)}" target="_blank" rel="noopener">\ud83d\udea9 ${esc(bt('book_report', 'Bedenklichen Inhalt melden'))}</a>
             <span class="fb-state" id="fb-state"></span>
+          </div>          <div class="chapter-nav">
+            <button type="button" id="ch-prev" ${vor ? 'data-file="' + esc(vor.file) + '"' : 'disabled'}>
+              \u25c0 ${esc(vor ? chapterLabel(vor) : bt('book_start', 'Anfang'))}</button>
+            <button type="button" id="ch-next" ${nach ? 'data-file="' + esc(nach.file) + '"' : 'disabled'}>
+              ${esc(nach ? chapterLabel(nach) : bt('book_end', 'Ende'))} \u25b6</button>
           </div>`;
         const prev = document.getElementById('ch-prev');
         const next = document.getElementById('ch-next');

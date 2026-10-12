@@ -116,7 +116,7 @@
       "book_attempts": "Versuche",
       "book_vote_up": "Hilfreich",
       "book_vote_down": "Schwach",
-      "book_report": "Melden",
+      "book_report": "Bedenklichen Inhalt melden",
       "book_report_title": "Kapitel-Meldung",
       "book_report_reason": "Grund der Meldung (zutreffendes ankreuzen):",
       "book_feedback_up": "Danke — als hilfreich vermerkt (nur lokal gespeichert).",
@@ -125,7 +125,11 @@
       "book_load_error": "Bücher nicht ladbar.",
       "book_chapter_error": "Kapitel nicht ladbar",
       "book_start": "Anfang",
-      "book_end": "Ende"
+      "book_end": "Ende",
+      "api_footer_label": "Entwickler-API:",
+      "api_random_title": "Beispielkapitel im Volltext (statisch)",
+      "api_ipsum_title": "Platzhaltertext aus dem Korpus",
+      "api_books_title": "Buch-Index (Katalog)"
     },
     "en": {
       "doc_title": "Algorithmic Activism — A synthetic human rights corpus",
@@ -188,7 +192,7 @@
       "book_attempts": "attempts",
       "book_vote_up": "Helpful",
       "book_vote_down": "Weak",
-      "book_report": "Report",
+      "book_report": "Report concerning content",
       "book_report_title": "Chapter report",
       "book_report_reason": "Reason for the report (tick what applies):",
       "book_feedback_up": "Thanks — recorded as helpful (stored locally only).",
@@ -197,7 +201,11 @@
       "book_load_error": "Books not loadable.",
       "book_chapter_error": "Chapter not loadable",
       "book_start": "Start",
-      "book_end": "End"
+      "book_end": "End",
+      "api_footer_label": "Developer API:",
+      "api_random_title": "Sample chapter, full text (static)",
+      "api_ipsum_title": "Placeholder text from the corpus",
+      "api_books_title": "Book index (catalog)"
     },
     "es": {
       "doc_title": "Algorithmic Activism — Corpus sintético de derechos humanos",
