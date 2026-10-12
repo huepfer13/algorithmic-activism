@@ -29,6 +29,11 @@ HIER = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HIER)
 KAPITEL_RE = re.compile(r"^(\d{2,})_.*\.md$")
 
+# Felder, die ein Kapitel-Frontmatter tragen kann und die der Index weiterreichen MUSS.
+# Ohne diese Liste fiel dreimal still ein Feld durch (tokens_generated, manual_ending_code, backend).
+STATS_FELDER = ("model", "backend", "genre", "duration_seconds", "jaccard_max",
+                "tokens_generated", "manual_ending_code", "leak_free")
+
 
 def lies_frontmatter(pfad: str) -> tuple[dict, str]:
     """Liest den YAML-Kopf (nur einfache `schluessel: wert`-Zeilen) und gibt (kopf, rumpf) zurueck."""
@@ -63,7 +68,7 @@ def kapitel_daten(buch_dir: str) -> list[dict]:
         worte = len(rumpf.split())
         nummer = KAPITEL_RE.match(name)
         index = int(kopf.get("chapter_index") or (nummer.group(1) if nummer else 0))
-        kapitel.append({
+        eintrag = {
             "file": name,
             "index": index,
             "title": kopf.get("chapter_title", ""),
@@ -75,10 +80,21 @@ def kapitel_daten(buch_dir: str) -> list[dict]:
             "jaccard_max": kopf.get("jaccard_max", ""),
             "tokens_generated": kopf.get("tokens_generated", ""),
             "manual_ending_code": kopf.get("manual_ending_code", ""),
+            "backend": kopf.get("backend", ""),
+            "genre": kopf.get("genre", ""),
             "leak_free": kopf.get("leak_free", ""),
             "words": worte,
             "reading_minutes": lesezeit(worte),
-        })
+        }
+        # Selbstpruefung gegen stille Auslassungen — dreimal passiert (tokens_generated, Code, backend),
+        # jedes Mal erst live aufgefallen. Entscheidend ist der Vergleich mit dem FRONTMATTER: nur wenn
+        # die Datei ein Feld traegt, der Indexer es aber nicht durchreicht, ist es ein Fehler. Reine
+        # Leerwerte sind legitim (Kapitel vor der Backend-Verdrahtung).
+        fehlend = [f for f in STATS_FELDER if f in kopf and f not in eintrag]
+        if fehlend:
+            print(f"  [Index] WARNUNG: Kapitel {eintrag.get('index')} — Frontmatter-Felder nicht "
+                  f"durchgereicht: {fehlend}")
+        kapitel.append(eintrag)
     return kapitel
 
 
