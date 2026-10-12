@@ -1869,13 +1869,14 @@
       "pov": "third_person",
       "setting_summary": "Verse ledgers of the commons: five lines that dismantle grand decrees.",
       "characters": [],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_02"
+        "art_02",
+        "art_03"
       ],
-      "words": 801,
-      "reading_minutes": 4,
+      "words": 1174,
+      "reading_minutes": 6,
       "cover": null,
       "chapters": [
         {
@@ -1930,6 +1931,24 @@
           "genre": "Limericks",
           "leak_free": "",
           "words": 379,
+          "reading_minutes": 2
+        },
+        {
+          "file": "03_art_03_abschnitt_3_der_null_heim_speicher.md",
+          "index": 3,
+          "title": "Abschnitt 3: Der Null-Heim-Speicher",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "0",
+          "model": "apodex/apodex-1.1-mini:free",
+          "duration_seconds": "52.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "15833",
+          "manual_ending_code": "E-03-03",
+          "backend": "openrouter",
+          "genre": "Limericks",
+          "leak_free": "",
+          "words": 373,
           "reading_minutes": 2
         }
       ]
