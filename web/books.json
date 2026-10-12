@@ -517,12 +517,13 @@
       "pov": "third_person",
       "setting_summary": "Ein diskursives Nachdenken darueber, was Menschenrechte praktisch bedeuten.",
       "characters": [],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 1239,
-      "reading_minutes": 6,
+      "words": 1706,
+      "reading_minutes": 9,
       "cover": null,
       "chapters": [
         {
@@ -560,6 +561,24 @@
           "leak_free": "true",
           "words": 702,
           "reading_minutes": 4
+        },
+        {
+          "file": "02_art_02_abschnitt_2_kalibrierung_der_grenze.md",
+          "index": 2,
+          "title": "Abschnitt 2: Kalibrierung der Grenze",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "2",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "76.8",
+          "jaccard_max": "0.048",
+          "tokens_generated": "10381",
+          "manual_ending_code": "P-02-02",
+          "backend": "openrouter",
+          "genre": "Philosophischer_Essay",
+          "leak_free": "true",
+          "words": 467,
+          "reading_minutes": 2
         }
       ]
     },
