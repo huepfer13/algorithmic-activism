@@ -9,6 +9,7 @@ import random
 import re
 import sys
 import time
+import unicodedata
 
 import config
 
@@ -504,9 +505,25 @@ SCHWELLE_WIEDERHOLUNG = 0.4
 
 
 def _normalisiere(text: str) -> str:
-    """Umlaute vereinheitlichen: 'Pruefprotokoll' und 'Prüfprotokoll' sind DERSELBE Marker.
-    Ohne das faellt generierter Text mit ASCII-Umschrift still durch (belegt 2026-10-12)."""
+    """Erst NFC, dann Umlaut-Vereinheitlichung — sonst faellt Text still durch jede Pruefung.
+
+    Zwei belegte Fallen (2026-10-12): ASCII-Umschrift ("Pruefprotokoll" vs "Prüfprotokoll") und
+    NFD-Kodierung ("a" + U+0308 statt U+00E4), die KEIN Muster der Pruefungen trifft.
+    """
+    text = unicodedata.normalize("NFC", text)
     return (text.replace("ü", "ue").replace("ö", "oe").replace("ä", "ae").replace("ß", "ss"))
+
+
+def rede_oder_emotion(text: str) -> str | None:
+    """Erster Treffer aus Dialogzeichen oder Emotionsverben — NFD-fest, fuer alle Pruefungen."""
+    geprueft = _normalisiere(text)
+    for zeichen in DIALOG_ZEICHEN:
+        if _normalisiere(zeichen) in geprueft:
+            return zeichen
+    for verb in EMOTIONS_VERBEN:
+        if re.search(_normalisiere(verb), geprueft, re.I):
+            return verb
+    return None
 
 
 STOER_PARAMETER_POOL = (
@@ -526,6 +543,29 @@ STOER_PARAMETER_POOL = (
 def stoerparameter(kapitel_index: int) -> dict:
     """Deterministisch rotierende Sektor-Bedingung je Kapitel (Modulo, kein Zufall, kein Zeitstempel)."""
     return STOER_PARAMETER_POOL[(kapitel_index - 1) % len(STOER_PARAMETER_POOL)]
+
+
+PROSA_VERBOTENE_PRAEFIXE = (
+    "[status", "[warnung", "[gefahr", "[hinweis", "warnung", "gefahr", "hinweis", "diagnose",
+    "wartung", "intervall", "prüfung", "protokoll", "fehlercode", "abschnitt", "|", "```",
+)
+
+
+def ist_narrative_prosa(absatz: str) -> bool:
+    """Nur deskriptiver Fliesstext taugt als Aktennotiz.
+
+    Formalbloecke (auch fett gesetzt), Tabellenreste, Code-Fences und Fehlercode-Zeilen OHNE Nummer
+    erzeugen im Prompt nur Rauschen und lenken vom Pflichtblock am Kapitelende ab. Eine Aktennotiz
+    zitiert niemanden und traegt keine Emotionsverben — derselbe Maßstab wie an den Schlussabsatz.
+    """
+    rumpf = _normalisiere(_MARKDOWN_PRAEFIX_RE.sub("", absatz.strip()).strip().strip("*_#")).lower()
+    if any(rumpf.startswith(p) for p in PROSA_VERBOTENE_PRAEFIXE):
+        return False
+    if rede_oder_emotion(absatz):
+        return False
+    if any(ist_strukturzeile(z) for z in absatz.splitlines()):
+        return False
+    return len(absatz) > 80
 
 
 def ist_bausteinabsatz(absatz: str) -> bool:
@@ -564,12 +604,7 @@ def archiv_artefakt(buch_dir: str, kapitel_index: int, book_id: str) -> str | No
     for absatz in (a.strip() for a in rumpf.split("\n\n")):
         if not absatz or len(absatz) < 80:
             continue
-        if ist_bausteinabsatz(absatz) or any(ist_strukturzeile(z) for z in absatz.splitlines()):
-            continue
-        # Derselbe formale Maßstab wie an den Schlussabsatz: eine Aktennotiz enthaelt keine
-        # woertliche Rede und keine Emotionsverben (belegt 2026-10-12: die ersten Splitter
-        # zitierten Dialoge und "fluestert sie mit einem leichten Laecheln").
-        if any(z in absatz for z in DIALOG_ZEICHEN) or any(re.search(v, absatz, re.I) for v in EMOTIONS_VERBEN):
+        if not ist_narrative_prosa(absatz):
             continue
         if tabu and schluss_prosa(absatz) == tabu:
             continue
@@ -693,12 +728,10 @@ def audit_manual_ending(text: str, erwarteter_block: str | None = None) -> tuple
     if not absaetze:
         return False, "leerer Text"
     letzter = absaetze[-1]
-    for z in DIALOG_ZEICHEN:
-        if z in letzter:
-            return False, f"woertliche Rede im Schlussabsatz ({z})"
-    for v in EMOTIONS_VERBEN:
-        if re.search(v, letzter, re.IGNORECASE):
-            return False, f"Dialog-/Emotionsverb im Schlussabsatz ({v})"
+    treffer = rede_oder_emotion(letzter)
+    if treffer:
+        art = "woertliche Rede" if treffer in DIALOG_ZEICHEN else "Dialog-/Emotionsverb"
+        return False, f"{art} im Schlussabsatz ({treffer})"
     if erwarteter_block:
         muster = pflichtblock_muster(erwarteter_block)
         code_treffer = re.search(r"CODE:\s*([^|\]]+)", erwarteter_block)
