@@ -80,7 +80,8 @@
     "r9:apodex/apodex-1.1-mini:free:buch_018_rhymes_of_the_commons",
     "r10:deepseek-chat:buch_015_das_kochbuch_der_allmende",
     "r10:nvidia/nemotron-3-ultra-550b-a55b:free:buch_016_faden_der_gelassenheit",
-    "r10:nvidia/nemotron-3-super-120b-a12b:free:buch_017_des_volkes_mund"
+    "r10:nvidia/nemotron-3-super-120b-a12b:free:buch_017_des_volkes_mund",
+    "r10:apodex/apodex-1.1-mini:free:buch_018_rhymes_of_the_commons"
   ],
   "runden": {
     "1": [
@@ -340,6 +341,21 @@
         "tokens": "1952",
         "versuche": "1",
         "woerter": 332
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_018_rhymes_of_the_commons",
+        "code": "E-07-07",
+        "datei": "07_art_07_abschnitt_7_der_koeffizient_art_07.md",
+        "dauer_s": "37.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "apodex/apodex-1.1-mini:free",
+        "modell": "apodex/apodex-1.1-mini:free",
+        "runde": 10,
+        "tokens": "11085",
+        "versuche": "0",
+        "woerter": 340
       }
     ],
     "2": [

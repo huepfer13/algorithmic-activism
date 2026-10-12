@@ -2211,17 +2211,18 @@
       "pov": "third_person",
       "setting_summary": "Verse ledgers of the commons: five lines that dismantle grand decrees.",
       "characters": [],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
         "art_05",
-        "art_06"
+        "art_06",
+        "art_07"
       ],
-      "words": 2010,
-      "reading_minutes": 10,
+      "words": 2350,
+      "reading_minutes": 12,
       "cover": null,
       "chapters": [
         {
@@ -2349,6 +2350,24 @@
           "leak_free": "",
           "words": 209,
           "reading_minutes": 1
+        },
+        {
+          "file": "07_art_07_abschnitt_7_der_koeffizient_art_07.md",
+          "index": 7,
+          "title": "Abschnitt 7: Der Koeffizient Art_07",
+          "article": "art_07",
+          "ending_ok": "true",
+          "attempts": "0",
+          "model": "apodex/apodex-1.1-mini:free",
+          "duration_seconds": "37.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "11085",
+          "manual_ending_code": "E-07-07",
+          "backend": "openrouter",
+          "genre": "Limericks",
+          "leak_free": "",
+          "words": 340,
+          "reading_minutes": 2
         }
       ]
     }
