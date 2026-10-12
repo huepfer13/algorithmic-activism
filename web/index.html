@@ -186,6 +186,14 @@
   </main>
 
   <script>
+    // Korpus-Daten sind NICHT vertrauenswuerdig (maschinell erzeugte Tales).
+    // Jeder Wert, der in ein innerHTML-Template oder in ein Attribut geht, laeuft durch esc().
+    const HTML_ESCAPES = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+    function esc(value) {
+      return String(value === null || value === undefined ? '' : value)
+        .replace(/[&<>"']/g, ch => HTML_ESCAPES[ch]);
+    }
+
     let tales = [];
     // Drei Kandidaten: lokal (/web/), Pages-Root (_site/) und Snapshot-Ablage. Kein Raten, Reihenfolge ist gemessen.
     const DATASET_CANDIDATES = ['./dataset.jsonl', '../dataset.jsonl', '../datasets/corpus-latest.jsonl'];
@@ -229,15 +237,22 @@
       }
     }
 
+    // Filter-Optionen ohne innerHTML aufbauen: value und Label sind Korpus-Daten.
+    function fillSelect(select, values) {
+      values.forEach(v => {
+        const opt = document.createElement('option');
+        opt.value = String(v);
+        opt.textContent = String(v);
+        select.appendChild(opt);
+      });
+    }
+
     function populateFilters() {
       const styles = [...new Set(tales.map(t => t.meta.style).filter(Boolean))].sort();
       const articles = [...new Set(tales.map(t => t.meta.article).filter(Boolean))].sort();
 
-      const styleSelect = document.getElementById('style-select');
-      styles.forEach(s => styleSelect.innerHTML += `<option value="${s}">${s}</option>`);
-
-      const artSelect = document.getElementById('article-select');
-      articles.forEach(a => artSelect.innerHTML += `<option value="${a}">${a}</option>`);
+      fillSelect(document.getElementById('style-select'), styles);
+      fillSelect(document.getElementById('article-select'), articles);
     }
 
     function renderList(list) {
@@ -254,11 +269,11 @@
         item.className = 'tale-item';
         item.dataset.title = title.replace(/\s+/g, '_');
         item.innerHTML = `
-          <div class="tale-title">${title}</div>
+          <div class="tale-title">${esc(title)}</div>
           <div class="tale-meta">
-            <span class="tag">${t.meta.article || 'UDHR'}</span>
-            <span class="tag">${t.meta.style || 'Narrative'}</span>
-            <span class="tag">${t.meta.language || 'DE'}</span>
+            <span class="tag">${esc(t.meta.article || 'UDHR')}</span>
+            <span class="tag">${esc(t.meta.style || 'Narrative')}</span>
+            <span class="tag">${esc(t.meta.language || 'DE')}</span>
           </div>
         `;
         item.onclick = () => {
@@ -289,16 +304,18 @@
         <div class="provenance">
           <div class="provenance-header">
             <strong>Provenienz & Audit</strong>
-            <span style="color: ${audit.color}; font-weight:600;">${audit.label}</span>
+            <span style="color: ${esc(audit.color)}; font-weight:600;">${esc(audit.label)}</span>
           </div>
           <div class="provenance-grid">
-            <div class="pro-item"><span>UN-Artikel</span><b>${t.meta.article || 'N/A'}</b></div>
-            <div class="pro-item"><span>Stil</span><b>${t.meta.style || 'N/A'}</b></div>
-            <div class="pro-item"><span>Inferenz-Modell</span><b>${t.meta.model || 'N/A'}</b></div>
-            <div class="pro-item"><span>Umfang</span><b>${t.meta.approx_words ? '~' + t.meta.approx_words + ' Wörter' : 'N/A'}</b></div>
-            <div class="pro-item"><span>Herkunft</span><b>${t.meta.provenance === 'none' ? 'Altbestand (kein YAML-Kopf)' : 'YAML-Frontmatter'}</b></div>
+            <div class="pro-item"><span>UN-Artikel</span><b>${esc(t.meta.article || 'N/A')}</b></div>
+            <div class="pro-item"><span>Stil</span><b>${esc(t.meta.style || 'N/A')}</b></div>
+            <div class="pro-item"><span>Inferenz-Modell</span><b>${esc(t.meta.model || 'N/A')}</b></div>
+            <div class="pro-item"><span>Umfang</span><b>${esc(t.meta.approx_words ? '~' + t.meta.approx_words + ' Wörter' : 'N/A')}</b></div>
+            <div class="pro-item"><span>Herkunft</span><b>${esc(t.meta.provenance === 'none' ? 'Altbestand (kein YAML-Kopf)' : 'YAML-Frontmatter')}</b></div>
           </div>
         </div>
+        <!-- Markup-Pfad: htmlContent ist das bewusst als HTML gerenderte Markdown des Tales
+             (marked.parse(t.output)), kein Metadaten-Wert. Alle Metadaten oben laufen durch esc(). -->
         <article class="article-body">${htmlContent}</article>
       `;
 
