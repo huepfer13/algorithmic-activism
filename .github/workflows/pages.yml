@@ -37,6 +37,27 @@ jobs:
           cp web/index.html _site/index.html
           cp dataset.jsonl _site/dataset.jsonl
 
+      - name: Sync dataset to Hugging Face Hub
+        if: github.ref == 'refs/heads/main'
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          pip install -q huggingface_hub
+          python3 - <<'PY'
+          import os
+          from huggingface_hub import HfApi
+
+          api = HfApi(token=os.environ["HF_TOKEN"])
+          info = api.upload_file(
+              path_or_fileobj="dataset.jsonl",
+              path_in_repo="dataset.jsonl",
+              repo_id="hardtoneselector/algorithmic-activism-corpus",
+              repo_type="dataset",
+              commit_message="ci: sync dataset.jsonl (automated corpus update)",
+          )
+          print("Hugging Face commit:", info.oid)
+          PY
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
