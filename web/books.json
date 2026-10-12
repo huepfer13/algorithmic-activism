@@ -868,14 +868,15 @@
         "Kell",
         "Nuri"
       ],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_02",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 1900,
-      "reading_minutes": 10,
+      "words": 2386,
+      "reading_minutes": 12,
       "cover": null,
       "chapters": [
         {
@@ -948,6 +949,24 @@
           "genre": "Solarpunk",
           "leak_free": "true",
           "words": 317,
+          "reading_minutes": 2
+        },
+        {
+          "file": "04_art_04_abschnitt_4_die_kalte_naht.md",
+          "index": 4,
+          "title": "Abschnitt 4: Die kalte Naht",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.2",
+          "jaccard_max": "0.062",
+          "tokens_generated": "892",
+          "manual_ending_code": "U-04-04",
+          "backend": "deepseek",
+          "genre": "Solarpunk",
+          "leak_free": "true",
+          "words": 486,
           "reading_minutes": 2
         }
       ]
