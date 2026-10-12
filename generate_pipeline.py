@@ -894,9 +894,14 @@ def audit_manual_ending(text: str, erwarteter_block: str | None = None,
                        f"(\"{schleifen[0][0][:60]}...\")")
     eigen = block_code(erwarteter_block) if erwarteter_block else ""
     if eigen:
-        wie_oft = len(re.findall(re.escape(eigen), text))
-        if wie_oft > 1:
-            return False, f"Pflichtcode {eigen} {wie_oft}x im Text (Wiederholungsschleife statt Kapitel)"
+        # Nur STEMPELZEILEN zaehlen, nicht jede Nennung: die Handbuch-Regel verlangt ausdruecklich einen
+        # Fließtext-Fehlercode ("Fehlercode E-xx-yy: <Stoerung>") — der ist kein Loop. Belegt 2026-10-12:
+        # ein DeepSeek-Kapitel fiel 3/3 durch, weil die Regel genau das tat, was der Stil verlangt.
+        stempel_zeilen = [z for z in text.splitlines()
+                          if eigen in z and STEMPEL_RE.match(_MARKDOWN_PRAEFIX_RE.sub("", z).strip())]
+        if len(stempel_zeilen) > 1:
+            return False, (f"Pflichtblock {eigen} {len(stempel_zeilen)}x als Stempelzeile "
+                           "(Wiederholungsschleife statt Kapitel)")
     if erwarteter_block:
         muster = pflichtblock_muster(erwarteter_block)
         code = block_code(erwarteter_block) or "?"
