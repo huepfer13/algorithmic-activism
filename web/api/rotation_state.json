@@ -71,7 +71,8 @@
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_017_des_volkes_mund",
     "r7:apodex/apodex-1.1-mini:free:buch_018_rhymes_of_the_commons",
     "r8:deepseek-chat:buch_015_das_kochbuch_der_allmende",
-    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_016_faden_der_gelassenheit"
+    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_016_faden_der_gelassenheit",
+    "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_017_des_volkes_mund"
   ],
   "runden": {
     "1": [
@@ -1090,6 +1091,21 @@
         "tokens": "1128",
         "versuche": "2",
         "woerter": 274
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_017_des_volkes_mund",
+        "code": "V-08-08",
+        "datei": "08_art_08_abschnitt_8_der_schwingende_funke.md",
+        "dauer_s": "28.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 8,
+        "tokens": "3428",
+        "versuche": "1",
+        "woerter": 328
       }
     ],
     "9": [
