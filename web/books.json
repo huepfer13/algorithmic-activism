@@ -849,12 +849,13 @@
         "Kell",
         "Nuri"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 1095,
-      "reading_minutes": 5,
+      "words": 1583,
+      "reading_minutes": 8,
       "cover": null,
       "chapters": [
         {
@@ -891,6 +892,24 @@
           "genre": "Solarpunk",
           "leak_free": "true",
           "words": 358,
+          "reading_minutes": 2
+        },
+        {
+          "file": "02_art_02_abschnitt_2_die_kalibrierung_des_gemeins.md",
+          "index": 2,
+          "title": "Abschnitt 2: Die Kalibrierung des gemeinsamen Stroms",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "14.5",
+          "jaccard_max": "0.051",
+          "tokens_generated": "1813",
+          "manual_ending_code": "U-02-02",
+          "backend": "openrouter",
+          "genre": "Solarpunk",
+          "leak_free": "true",
+          "words": 488,
           "reading_minutes": 2
         }
       ]

@@ -19,7 +19,8 @@
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_007_die_kammer_der_zeugen",
     "r4:nvidia/nemotron-3.5-lightning:free:buch_008_flechtwerk_arkadien",
     "r5:deepseek-chat:buch_006_das_gericht_vor_der_mauer",
-    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_007_die_kammer_der_zeugen"
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_007_die_kammer_der_zeugen",
+    "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_008_flechtwerk_arkadien"
   ],
   "runden": {
     "1": [
@@ -330,6 +331,21 @@
         "tokens": "1278",
         "versuche": "0",
         "woerter": 338
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_008_flechtwerk_arkadien",
+        "code": "U-02-02",
+        "datei": "02_art_02_abschnitt_2_die_kalibrierung_des_gemeins.md",
+        "dauer_s": "14.5",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 5,
+        "tokens": "1813",
+        "versuche": "1",
+        "woerter": 488
       }
     ]
   }

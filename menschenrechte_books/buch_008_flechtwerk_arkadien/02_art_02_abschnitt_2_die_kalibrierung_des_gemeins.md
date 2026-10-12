@@ -1,0 +1,38 @@
+---
+book_id: "buch_008_flechtwerk_arkadien"
+chapter_index: 2
+chapter_title: "Abschnitt 2: Die Kalibrierung des gemeinsamen Stroms"
+article: "art_02"
+language: "DE"
+style: "Solarpunk"
+pov: "third_person"
+previous_chapter_file: "01_art_01_abschnitt_1_der_widerhall_des_stegs.md"
+manual_ending_ok: true
+manual_ending_attempts: 1
+manual_ending_code: "U-02-02"
+scene_condition: "AUDIT_DRUCK"
+archive_note: "KAPITEL 01"
+model: "nvidia/nemotron-3-super-120b-a12b:free"
+genre: "Solarpunk"
+backend: "openrouter"
+duration_seconds: 14.5
+jaccard_max: 0.051
+tokens_generated: 1813
+leak_free: true
+manual_ending_note: "Passed (Pflichtblock U-02-02)"
+---
+
+# Abschnitt 2: Die Kalibrierung des gemeinsamen Stroms
+
+Mira dachte an den Morgen, als über dem Steg zwischen Ring Drei und Vier das Segeltuch-Banner, das Nuri gemalt hatte – ein Datum, darunter die Ringe ohne Stimme – im Wind flatterte und sie beobachtete, wie die Ecken hob und senkte. Das Bild war noch frisch in ihrem Kopf, während sie nun im Gemeinschaftsdepot von Ring Fünf stand, wo die schweren Stahlbehälter mit Chlor‑ und Ammoniak‑Gas in einer gesicherten Kammer nebeneinander standen. „Wir verlagern die Gefahr“, sagte Kell, während er das Ventil an einem Behälter vorsichtig öffnete und den Druckmesser beobachtete. „Keine dieser Stoffe mehr in den Wohnräumen, nur hier, wo wir sie überwachen können.“
+
+Yara trat hinzu, ihre Hände noch leicht feucht vom letzten Wasserprobe‑Test aus Reaktor Vier. „Der neue Zuteilungsschlüssel hat den Parameter art_02 unter die kritische Schwelle gedrückt“, erklärte sie und zeigte auf das Display, das einen roten Blinkcode zeigte. „Das System interpretiert das als Sollbruchstelle für gleichberechtigten Zugang – genau wie bei art_01, nur jetzt mit einer zusätzlichen Diskriminierungskomponente, die nach Herkunft unterscheidet.“ Sie runzelte die Stirn. „Wenn wir art_02 nachjustieren, können wir die Zuflussraten so balancieren, dass jeder Ring mindestens die Mindestmenge erhält, ohne dass einzelne Pontonringe abgeschnitten werden.“
+
+Tobias, dessen Hände noch von Öl glänzten, nickte. „Wir können die Nachtspeicherung erhöhen und die Reaktoren in Ring Zwei leicht hochfahren, um den Druckausgleich zu schaffen, den wir verloren haben, wenn wir die Leitungen umlegen.“ Er blickte auf die Turbine in der Werkstatt von Ring Zwei, die ihr gleichmäßiges Pumpen fortsetzte – ein Herzschlag aus Metall und Dampf, der über alle Pontone hinweg trug. „Und wir legen alle Messwerte offen, damit jede*r nachprüfen kann, ob die Kalibrierung stimmt.“
+
+Im Flur der Werkstatt stapelten sich bereits die Protokolle, während die Zentrale Registratur ihre Ankündigung einer unvorhergesehenen Revision verbreitete und ein leichtes Zittern in den Händen der Techniker auslöste. Das erhöhte Audit‑Druck machte die Luft dünn, doch die Gemeinschaft ließ sich nicht beirren. Nuri trat vor, ihr Pinsel noch an der Hand, und schlug vor, ein neues Symbol neben das bestehende Banner zu malen: ein Kreis, geteilt in gleich große Segmente, jedes mit einem kleinen Punkt – die visualisierte Zusage von art_02, dass keiner aufgrund von Hautfarbe, Glauben oder Herkunft bevorzugt oder benachteiligt wird.
+
+Sie entschieden, die gefährlichen Gase sofort in das zentrale Depot zu verlagern, die Ventile umzuprogrammieren und die Speicherzellen nachts aufzufüllen. Während die Arbeiten liefen, hörte Mira das leise Summen der neu justierten Relais, das wie ein Versprechen klang: Die Maschinen würden nicht mehr über Leben entscheiden, sondern die Menschen würden die Maschinen leiten, wobei die Gefahr aus den Wohnräumen verbannt und an einem Ort gesammelt wurde, wo sie kontrolliert werden konnte.
+
+Die Sonne neigte sich ihrem Untergang zu, und über dem Hafen glitzerte das Licht der Salzgärten auf dem Wasser, während die ersten Justierungen an art_02 abgeschlossen waren und das System von einem kritischen Zustand in einen stabilen übergeleitete.  
+**[COMMUNE-GRID: GEKOPPELT | STATUS: U-02-02]**
