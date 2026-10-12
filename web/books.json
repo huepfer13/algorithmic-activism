@@ -985,14 +985,15 @@
         "Nadia",
         "Kroll"
       ],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_02",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 2105,
-      "reading_minutes": 11,
+      "words": 2542,
+      "reading_minutes": 13,
       "cover": null,
       "chapters": [
         {
@@ -1065,6 +1066,24 @@
           "genre": "Briefroman",
           "leak_free": "true",
           "words": 308,
+          "reading_minutes": 2
+        },
+        {
+          "file": "04_art_04_abschnitt_4_die_zentrale_kammer.md",
+          "index": 4,
+          "title": "Abschnitt 4: Die zentrale Kammer",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "812",
+          "manual_ending_code": "B-04-04",
+          "backend": "deepseek",
+          "genre": "Briefroman",
+          "leak_free": "true",
+          "words": 437,
           "reading_minutes": 2
         }
       ]
