@@ -16,21 +16,22 @@
         "Nova",
         "Omicron"
       ],
-      "chapter_count": 10,
+      "chapter_count": 11,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
         "art_05",
+        "art_06",
         "art_09",
         "art_12",
         "art_14",
         "art_19",
         "art_26"
       ],
-      "words": 5865,
-      "reading_minutes": 29,
+      "words": 6533,
+      "reading_minutes": 33,
       "cover": null,
       "chapters": [
         {
@@ -40,6 +41,10 @@
           "article": "",
           "ending_ok": "",
           "attempts": "",
+          "model": "",
+          "duration_seconds": "",
+          "jaccard_max": "",
+          "leak_free": "",
           "words": 382,
           "reading_minutes": 2
         },
@@ -50,6 +55,10 @@
           "article": "art_01",
           "ending_ok": "false",
           "attempts": "",
+          "model": "",
+          "duration_seconds": "",
+          "jaccard_max": "",
+          "leak_free": "",
           "words": 563,
           "reading_minutes": 3
         },
@@ -60,6 +69,10 @@
           "article": "art_03",
           "ending_ok": "",
           "attempts": "",
+          "model": "",
+          "duration_seconds": "",
+          "jaccard_max": "",
+          "leak_free": "",
           "words": 790,
           "reading_minutes": 4
         },
@@ -70,6 +83,10 @@
           "article": "art_04",
           "ending_ok": "true",
           "attempts": "2",
+          "model": "",
+          "duration_seconds": "",
+          "jaccard_max": "",
+          "leak_free": "",
           "words": 700,
           "reading_minutes": 4
         },
@@ -80,6 +97,10 @@
           "article": "art_05",
           "ending_ok": "true",
           "attempts": "1",
+          "model": "",
+          "duration_seconds": "",
+          "jaccard_max": "",
+          "leak_free": "",
           "words": 558,
           "reading_minutes": 3
         },
@@ -90,6 +111,10 @@
           "article": "art_09",
           "ending_ok": "false",
           "attempts": "3",
+          "model": "",
+          "duration_seconds": "",
+          "jaccard_max": "",
+          "leak_free": "",
           "words": 530,
           "reading_minutes": 3
         },
@@ -100,6 +125,10 @@
           "article": "art_12",
           "ending_ok": "false",
           "attempts": "3",
+          "model": "",
+          "duration_seconds": "",
+          "jaccard_max": "",
+          "leak_free": "",
           "words": 566,
           "reading_minutes": 3
         },
@@ -110,6 +139,10 @@
           "article": "art_14",
           "ending_ok": "false",
           "attempts": "3",
+          "model": "",
+          "duration_seconds": "",
+          "jaccard_max": "",
+          "leak_free": "",
           "words": 372,
           "reading_minutes": 2
         },
@@ -120,6 +153,10 @@
           "article": "art_19",
           "ending_ok": "true",
           "attempts": "1",
+          "model": "",
+          "duration_seconds": "",
+          "jaccard_max": "",
+          "leak_free": "",
           "words": 462,
           "reading_minutes": 2
         },
@@ -130,6 +167,10 @@
           "article": "art_26",
           "ending_ok": "true",
           "attempts": "2",
+          "model": "",
+          "duration_seconds": "",
+          "jaccard_max": "",
+          "leak_free": "",
           "words": 392,
           "reading_minutes": 2
         },
@@ -140,7 +181,25 @@
           "article": "art_02",
           "ending_ok": "true",
           "attempts": "1",
+          "model": "",
+          "duration_seconds": "",
+          "jaccard_max": "",
+          "leak_free": "",
           "words": 550,
+          "reading_minutes": 3
+        },
+        {
+          "file": "11_art_06_abschnitt_11_kalibrierung_der_rechtschut.md",
+          "index": 11,
+          "title": "Abschnitt 11: Kalibrierung der Rechtschutzsysteme",
+          "article": "art_06",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "qwen2.5:7b",
+          "duration_seconds": "438.2",
+          "jaccard_max": "0.111",
+          "leak_free": "true",
+          "words": 668,
           "reading_minutes": 3
         }
       ]
