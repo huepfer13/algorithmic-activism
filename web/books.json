@@ -425,13 +425,14 @@
       "pov": "third_person",
       "setting_summary": "Im Schattennetz dokumentieren Ausgeschlossene, wie Rechte Stueck fuer Stueck verschwinden.",
       "characters": [],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_02"
+        "art_02",
+        "art_03"
       ],
-      "words": 1454,
-      "reading_minutes": 7,
+      "words": 1747,
+      "reading_minutes": 9,
       "cover": null,
       "chapters": [
         {
@@ -487,6 +488,24 @@
           "leak_free": "true",
           "words": 578,
           "reading_minutes": 3
+        },
+        {
+          "file": "03_art_03_abschnitt_3_kalibrierung_null.md",
+          "index": 3,
+          "title": "Abschnitt 3: Kalibrierung Null",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "22.2",
+          "jaccard_max": "0.077",
+          "tokens_generated": "865",
+          "manual_ending_code": "S-03-03",
+          "backend": "openrouter",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "true",
+          "words": 293,
+          "reading_minutes": 1
         }
       ]
     },

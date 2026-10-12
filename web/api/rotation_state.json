@@ -6,7 +6,8 @@
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_003_der_rat_der_tiere",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_004_neon_exil",
     "r1:nvidia/nemotron-3.5-lightning:free:buch_005_fragment_der_vernunft",
-    "r2:deepseek-chat:buch_003_der_rat_der_tiere"
+    "r2:deepseek-chat:buch_003_der_rat_der_tiere",
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_004_neon_exil"
   ],
   "runden": {
     "1": [
@@ -116,6 +117,21 @@
         "tokens": "912",
         "versuche": "1",
         "woerter": 482
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_004_neon_exil",
+        "code": "S-03-03",
+        "datei": "03_art_03_abschnitt_3_kalibrierung_null.md",
+        "dauer_s": "22.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 2,
+        "tokens": "865",
+        "versuche": "1",
+        "woerter": 293
       }
     ]
   }
