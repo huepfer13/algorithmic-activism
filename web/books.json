@@ -1761,7 +1761,7 @@
       "pov": "third_person",
       "setting_summary": "Kontemplative Einsichten fuer unruhige Zeiten.",
       "characters": [],
-      "chapter_count": 9,
+      "chapter_count": 10,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1771,10 +1771,11 @@
         "art_06",
         "art_07",
         "art_08",
-        "art_09"
+        "art_09",
+        "art_10"
       ],
-      "words": 2521,
-      "reading_minutes": 13,
+      "words": 2766,
+      "reading_minutes": 14,
       "cover": null,
       "chapters": [
         {
@@ -1955,6 +1956,24 @@
           "genre": "Lebensweisheiten",
           "leak_free": "true",
           "words": 237,
+          "reading_minutes": 1
+        },
+        {
+          "file": "10_art_10_abschnitt_10_die_unparteilichkeit_des_pr.md",
+          "index": 10,
+          "title": "Abschnitt 10: Die Unparteilichkeit des Protokolls",
+          "article": "art_10",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "40.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1012",
+          "manual_ending_code": "L-10-10",
+          "backend": "openrouter",
+          "genre": "Lebensweisheiten",
+          "leak_free": "true",
+          "words": 245,
           "reading_minutes": 1
         }
       ]
