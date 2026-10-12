@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import fcntl
 import hashlib
 import argparse
 import datetime
@@ -1115,7 +1116,28 @@ def naechster_artikel(lang: str, covered: list) -> str | None:
 def append_chapter(book_id: str | None = None, lang: str | None = None, model: str = "qwen2.5:7b",
                    host: str = "http://localhost:11434", backend: str = "ollama",
                    artikel: str | None = None) -> str:
-    """Stufe 2: naechstes Kapitel anhaengen — deterministisch, kollisionssicher, mit Endschranke."""
+    """Stufe 2: naechstes Kapitel anhaengen — mit Sperre gegen gleichzeitige Laeufe.
+
+    Belegt 2026-10-12: zwei Prozesse (Rotationslauf und ein Ersatzlauf) berechneten denselben Index,
+    weil die Nummer aus dem Dateibestand abgeleitet wird (Lesen, dann Schreiben) und die Dateinamen
+    wegen unterschiedlicher Artikelwahlen differierten — `open(..., "x")` konnte das nicht fangen.
+    Deshalb liegt jetzt der GESAMTE Anhang unter einer Sperre: Index, Generierung und Schreiben.
+    """
+    os.makedirs(BOOKS_DIR, exist_ok=True)
+    sperrpfad = os.path.join(BOOKS_DIR, ".append.lock")
+    with open(sperrpfad, "w") as sperre:
+        fcntl.flock(sperre, fcntl.LOCK_EX)
+        try:
+            return _append_chapter_gesperrt(book_id=book_id, lang=lang, model=model, host=host,
+                                           backend=backend, artikel=artikel)
+        finally:
+            fcntl.flock(sperre, fcntl.LOCK_UN)
+
+
+def _append_chapter_gesperrt(book_id: str | None = None, lang: str | None = None,
+                             model: str = "qwen2.5:7b", host: str = "http://localhost:11434",
+                             backend: str = "ollama", artikel: str | None = None) -> str:
+    """Stufe 2 (Kern): naechstes Kapitel anhaengen — deterministisch, kollisionssicher, mit Endschranke."""
     book_id = book_id or naechstes_buch()
     buch_dir = os.path.join(BOOKS_DIR, book_id)
     if not os.path.isdir(buch_dir):
