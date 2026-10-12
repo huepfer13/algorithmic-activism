@@ -509,6 +509,19 @@ def _normalisiere(text: str) -> str:
     return (text.replace("ü", "ue").replace("ö", "oe").replace("ä", "ae").replace("ß", "ss"))
 
 
+def pflichtblock_muster(erwarteter_block: str):
+    """Regex fuer den Pflichtblock: der CODE ist der Anker (exakt), Zustand/Sektor/Intervall sind Dekoration.
+
+    Belegt 2026-10-12: qwen2.5:7b lieferte den Block vollstaendig (Zustand, Sektor, Code E-12-06),
+    wich aber bei einer Ziffer ab (553h statt 552h) und setzte Markdown-Fettung. Byte-Gleichheit war
+    damit die falsche Schaerfe — eine narrative Wiederholung verhindert schon der exakte Code.
+    """
+    treffer = re.search(r"CODE:\s*([^|\]]+)", erwarteter_block)
+    code = _normalisiere((treffer.group(1) if treffer else "").strip()).lower()
+    return re.compile(r"^\[status:\s*\w+\s*\|\s*sub-sys:\s*sektor-\d+\s*\|\s*code:\s*"
+                      + re.escape(code) + r"\s*\|\s*intervall:\s*\d+\s*h\]")
+
+
 def zeilen_marker(zeile: str) -> list:
     """Akzeptierte Marker EINER Zeile — nur am Zeilenanfang, nie als Teilwort."""
     rumpf = _normalisiere(_MARKDOWN_PRAEFIX_RE.sub("", zeile).strip().lower())
@@ -589,14 +602,15 @@ def audit_manual_ending(text: str, erwarteter_block: str | None = None) -> tuple
         if re.search(v, letzter, re.IGNORECASE):
             return False, f"Dialog-/Emotionsverb im Schlussabsatz ({v})"
     if erwarteter_block:
-        gesucht = _normalisiere(erwarteter_block).lower()
+        muster = pflichtblock_muster(erwarteter_block)
+        code_treffer = re.search(r"CODE:\s*([^|\]]+)", erwarteter_block)
+        code = code_treffer.group(1).strip() if code_treffer else "?"
         for zeile in letzter.splitlines():
-            rumpf = _normalisiere(_MARKDOWN_PRAEFIX_RE.sub("", zeile)).strip().lower()
-            if rumpf.startswith(gesucht):
-                code = re.search(r"CODE:\s*([^|\]]+)", erwarteter_block)
-                return True, "Passed (Pflichtblock " + (code.group(1).strip() if code else "ok") + ")"
-        return False, ("Pflichtblock fehlt oder abgewandelt (erwartet woertlich: "
-                       + erwarteter_block + ")")
+            rumpf = _MARKDOWN_PRAEFIX_RE.sub("", zeile).strip().strip("*_#").strip()
+            if muster.match(_normalisiere(rumpf).lower()):
+                return True, "Passed (Pflichtblock " + code + ")"
+        return False, ("Pflichtblock fehlt oder abgewandelt (erwartet: eine Zeile '[STATUS: <zustand> | "
+                       "SUB-SYS: SEKTOR-NN | CODE: " + code + " | INTERVALL: <n>h]')")
     treffer = []
     for zeile in letzter.splitlines():
         for t in zeilen_marker(zeile):
@@ -631,6 +645,9 @@ def erzeuge_mit_endschranke(prompt: str, model: str, host: str, style_flags: dic
                                     f"({aehnlich:.0%} Wortueberlappung mit einem Vorkapitel)")
         print(f"  [{label}] Versuch {i}/{versuche}: Endschranke "
               f"{'erfuellt' if ok else 'VERFEHLT'} ({grund})", flush=True)
+        if not ok:
+            print(f"  [{label}]   abgelehnter Schluss: " + schlussabsatz(text)[-120:].replace(chr(10), " "),
+                  flush=True)
         if ok:
             return text, True, grund, i
     return text, False, grund, versuche
