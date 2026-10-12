@@ -280,7 +280,7 @@ guardrail_audit:
 # Drift-Schutz (gemessen 2026-10-12): Titel und Erzaehlperspektive werden im Prolog festgelegt und
 # danach in jedem Kapitelprompt ZITIERT — ohne das erfindet das Modell einen neuen Titel.
 BOOKS_DIR = os.path.join(BASE_DIR, "menschenrechte_books")
-POVS = ("first_person", "third_person")
+POVS = ("first_person", "third_person", "third_person_manual")
 
 
 def run_ollama_json(prompt: str, model: str = "qwen2.5:7b", host: str = "http://localhost:11434") -> dict:
@@ -317,8 +317,11 @@ def next_book_index() -> int:
     return max(idx) + 1 if idx else 1
 
 
-def build_book_meta_prompt(lang_name: str, style_name: str) -> str:
+def build_book_meta_prompt(lang_name: str, style_name: str, style_desc: str) -> str:
     return f"""Du konzipierst einen fortlaufenden Roman im Stil {style_name}, geschrieben auf {lang_name}.
+
+STILVORGABE {style_name}: {style_desc}
+
 Erfinde Setting, Besatzung und eine Konflikt-Praemisse, die sich ueber viele Kapitel tragen kann.
 
 Anforderungen:
@@ -326,15 +329,18 @@ Anforderungen:
 - Ein Schauplatz mit eigenem Druckmittel (Zeit, Enge, Ueberwachung, Ressourcen, Hierarchie).
 - Die Praemisse muss es erlauben, spaeter einzelne Artikel der Allgemeinen Erklaerung der
   Menschenrechte zu verhandeln (Wuerde, Meinungsfreiheit, Leben, Gleichheit).
-- Erzaehlperspektive festlegen: 'first_person' oder 'third_person'.
+- Erzaehlperspektive festlegen: 'first_person', 'third_person' oder — bei Sach-, Handbuch- und
+  Dokumentationsgenres — 'third_person_manual'.
 
 Antworte AUSSCHLIESSLICH mit JSON in genau dieser Form:
 {{"title": "...", "pov": "first_person", "characters": ["...", "..."], "setting_summary": "zwei bis drei Saetze"}}"""
 
 
-def build_prologue_prompt(meta: dict, lang_name: str, style_name: str, core_rule: str) -> str:
+def build_prologue_prompt(meta: dict, lang_name: str, style_name: str, style_desc: str, core_rule: str) -> str:
     return f"""Du bist ein weltklasse Autor und Ethiker. Schreibe den Prolog des fortlaufenden Romans
 "{meta['title']}" im Stil {style_name} auf {lang_name}. Erzaehlperspektive: {meta['pov']}.
+
+STILVORGABE {style_name}: {style_desc}
 
 SETTING (verbindlich): {meta['setting_summary']}
 BESATZUNG (verbindlich): {', '.join(meta['characters'])}
@@ -353,16 +359,21 @@ def new_book(lang: str = "DE", style: str | None = None, model: str = "qwen2.5:7
              host: str = "http://localhost:11434") -> str:
     """Stufe 1: neues Buch anlegen. Der Rahmen wird EINMAL eingefroren, danach nur angehaengt."""
     locale = load_locale(lang)
-    styles = list(locale.get("styles", {}).keys())
+    styles = locale.get("styles", {})
     if not styles:
         raise ValueError(f"locales/{lang.lower()}.json enthaelt keine Stile.")
-    style_name = style or random.choice(styles)
+    style_name = style or random.choice(list(styles.keys()))
+    if style_name not in styles:
+        raise ValueError(f"Unbekannter Stil '{style_name}'. Verfuegbar: {sorted(styles)}")
+    style_desc = styles[style_name]
     lang_name = book_language_directive(lang, locale)
-    core_rule = locale.get("guardrail_prompt",
-                           "Schutz von Leben und koerperlicher Unversehrtheit hat Vorrang.")
+    # 'guardrail_prompt' ist der Code-Name, 'core_guardrail' der historische Locale-Name:
+    # beide lesen, sonst greift der deutsche Fallback.
+    core_rule = (locale.get("guardrail_prompt") or locale.get("core_guardrail")
+                 or "Schutz von Leben und koerperlicher Unversehrtheit hat Vorrang.")
 
     # Schritt 1: Metadaten (JSON, deterministisch parsebar)
-    meta = run_ollama_json(build_book_meta_prompt(lang_name, style_name), model=model, host=host)
+    meta = run_ollama_json(build_book_meta_prompt(lang_name, style_name, style_desc), model=model, host=host)
     fehlend = [k for k in ("title", "pov", "characters", "setting_summary") if not meta.get(k)]
     if fehlend:
         raise ValueError(f"Buch-Metadaten unvollstaendig ({fehlend}) in {meta!r}")
@@ -379,7 +390,7 @@ def new_book(lang: str = "DE", style: str | None = None, model: str = "qwen2.5:7
         raise FileExistsError(f"Buch existiert bereits: {buch_dir}")
     os.makedirs(buch_dir)   # ohne exist_ok: ein Wettlauf soll auffallen, nicht still durchgehen
 
-    prolog = run_ollama_stream(build_prologue_prompt(meta, lang_name, style_name, core_rule),
+    prolog = run_ollama_stream(build_prologue_prompt(meta, lang_name, style_name, style_desc, core_rule),
                                model=model, host=host)
     if not prolog.strip():
         raise RuntimeError("Leerer Prolog vom Modell — Buch wird nicht angelegt.")
