@@ -66,7 +66,8 @@
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_016_faden_der_gelassenheit",
     "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_017_des_volkes_mund",
     "r6:apodex/apodex-1.1-mini:free:buch_018_rhymes_of_the_commons",
-    "r7:deepseek-chat:buch_015_das_kochbuch_der_allmende"
+    "r7:deepseek-chat:buch_015_das_kochbuch_der_allmende",
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_016_faden_der_gelassenheit"
   ],
   "runden": {
     "1": [
@@ -948,6 +949,21 @@
         "tokens": "909",
         "versuche": "3",
         "woerter": 465
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_016_faden_der_gelassenheit",
+        "code": "L-07-07",
+        "datei": "07_art_07_abschnitt_7_die_entgiftung_der_schutzzon.md",
+        "dauer_s": "25.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 7,
+        "tokens": "1098",
+        "versuche": "1",
+        "woerter": 243
       }
     ],
     "8": [

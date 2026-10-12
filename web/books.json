@@ -1704,17 +1704,18 @@
       "pov": "third_person",
       "setting_summary": "Kontemplative Einsichten fuer unruhige Zeiten.",
       "characters": [],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
         "art_05",
-        "art_06"
+        "art_06",
+        "art_07"
       ],
-      "words": 1767,
-      "reading_minutes": 9,
+      "words": 2010,
+      "reading_minutes": 10,
       "cover": null,
       "chapters": [
         {
@@ -1842,6 +1843,24 @@
           "leak_free": "true",
           "words": 317,
           "reading_minutes": 2
+        },
+        {
+          "file": "07_art_07_abschnitt_7_die_entgiftung_der_schutzzon.md",
+          "index": 7,
+          "title": "Abschnitt 7: Die Entgiftung der Schutzzone",
+          "article": "art_07",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "25.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1098",
+          "manual_ending_code": "L-07-07",
+          "backend": "openrouter",
+          "genre": "Lebensweisheiten",
+          "leak_free": "true",
+          "words": 243,
+          "reading_minutes": 1
         }
       ]
     },
