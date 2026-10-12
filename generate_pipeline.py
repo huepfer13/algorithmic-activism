@@ -274,6 +274,133 @@ guardrail_audit:
     return target_path, passed
 
 
+# --- Buecher ("Unendliche Geschichte") ----------------------------------------------------------
+# Ein Buch ist ein Verzeichnis mit EINMAL eingefrorenem Rahmen (book.json) und fortlaufenden
+# Kapiteln: 00_prolog.md, 01_art_XX_kapitel_1.md, 02_art_XX_kapitel_2.md ...
+# Drift-Schutz (gemessen 2026-10-12): Titel und Erzaehlperspektive werden im Prolog festgelegt und
+# danach in jedem Kapitelprompt ZITIERT — ohne das erfindet das Modell einen neuen Titel.
+BOOKS_DIR = os.path.join(BASE_DIR, "menschenrechte_books")
+POVS = ("first_person", "third_person")
+
+
+def run_ollama_json(prompt: str, model: str = "qwen2.5:7b", host: str = "http://localhost:11434") -> dict:
+    """Wie run_ollama_stream, aber mit erzwungenem JSON-Format (fuer Buch-Metadaten)."""
+    import urllib.request
+    req_data = json.dumps({"model": model, "prompt": prompt, "stream": False,
+                           "format": "json", "options": {"temperature": 0.7}}).encode("utf-8")
+    req = urllib.request.Request(f"{host}/api/generate", data=req_data,
+                                 headers={"Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=600) as resp:
+        raw = json.loads(resp.read().decode()).get("response", "")
+    return json.loads(raw)
+
+
+def book_language_directive(lang: str, locale: dict) -> str:
+    """Sprachdirektive fuer Buch-Prompts — dieselbe Regel wie in build_prompt():
+    kuratierte Angabe aus der Locale, oder DE als Muttersprache der Pipeline. Sonst Abbruch.
+    (Eine deutsche Anweisung mit blossem Sprachwunsch lieferte fuer AR gemischte Schrift.)"""
+    name = locale.get("instruction_language") or ("Deutsch" if lang.upper() == "DE" else None)
+    if not name:
+        raise ValueError(
+            f"Keine Anweisungssprache fuer den Buchmodus in '{lang}': kein 'instruction_language' "
+            f"in locales/{lang.lower()}.json. Der Buchmodus laeuft vorerst nur auf DE."
+        )
+    return name
+
+
+def next_book_index() -> int:
+    """Naechster freier Buchindex aus dem DATEISYSTEM — kein Zaehler, der driften kann."""
+    if not os.path.isdir(BOOKS_DIR):
+        return 1
+    idx = [int(m.group(1)) for d in os.listdir(BOOKS_DIR)
+           if (m := re.match(r"buch_(\d{3})_", d)) and os.path.isdir(os.path.join(BOOKS_DIR, d))]
+    return max(idx) + 1 if idx else 1
+
+
+def build_book_meta_prompt(lang_name: str, style_name: str) -> str:
+    return f"""Du konzipierst einen fortlaufenden Roman im Stil {style_name}, geschrieben auf {lang_name}.
+Erfinde Setting, Besatzung und eine Konflikt-Praemisse, die sich ueber viele Kapitel tragen kann.
+
+Anforderungen:
+- 3 bis 5 Hauptfiguren mit Namen.
+- Ein Schauplatz mit eigenem Druckmittel (Zeit, Enge, Ueberwachung, Ressourcen, Hierarchie).
+- Die Praemisse muss es erlauben, spaeter einzelne Artikel der Allgemeinen Erklaerung der
+  Menschenrechte zu verhandeln (Wuerde, Meinungsfreiheit, Leben, Gleichheit).
+- Erzaehlperspektive festlegen: 'first_person' oder 'third_person'.
+
+Antworte AUSSCHLIESSLICH mit JSON in genau dieser Form:
+{{"title": "...", "pov": "first_person", "characters": ["...", "..."], "setting_summary": "zwei bis drei Saetze"}}"""
+
+
+def build_prologue_prompt(meta: dict, lang_name: str, style_name: str, core_rule: str) -> str:
+    return f"""Du bist ein weltklasse Autor und Ethiker. Schreibe den Prolog des fortlaufenden Romans
+"{meta['title']}" im Stil {style_name} auf {lang_name}. Erzaehlperspektive: {meta['pov']}.
+
+SETTING (verbindlich): {meta['setting_summary']}
+BESATZUNG (verbindlich): {', '.join(meta['characters'])}
+
+AUFGABE:
+- Etabliere Setting und Besatzung; jede Figur bekommt eine Eigenheit und einen eigenen Konflikt.
+- Baue eine konkrete Bedrohung auf, die die folgenden Kapitel tragen kann.
+- {core_rule}
+
+FORMAT:
+- Erste Zeile: # {meta['title']}
+- 300-500 Woerter, reine Erzaehlung, kein Meta-Text."""
+
+
+def new_book(lang: str = "DE", style: str | None = None, model: str = "qwen2.5:7b",
+             host: str = "http://localhost:11434") -> str:
+    """Stufe 1: neues Buch anlegen. Der Rahmen wird EINMAL eingefroren, danach nur angehaengt."""
+    locale = load_locale(lang)
+    styles = list(locale.get("styles", {}).keys())
+    if not styles:
+        raise ValueError(f"locales/{lang.lower()}.json enthaelt keine Stile.")
+    style_name = style or random.choice(styles)
+    lang_name = book_language_directive(lang, locale)
+    core_rule = locale.get("guardrail_prompt",
+                           "Schutz von Leben und koerperlicher Unversehrtheit hat Vorrang.")
+
+    # Schritt 1: Metadaten (JSON, deterministisch parsebar)
+    meta = run_ollama_json(build_book_meta_prompt(lang_name, style_name), model=model, host=host)
+    fehlend = [k for k in ("title", "pov", "characters", "setting_summary") if not meta.get(k)]
+    if fehlend:
+        raise ValueError(f"Buch-Metadaten unvollstaendig ({fehlend}) in {meta!r}")
+    if meta["pov"] not in POVS:
+        raise ValueError(f"Unbekannte Perspektive '{meta['pov']}' (erlaubt: {POVS})")
+    if not (3 <= len(meta["characters"]) <= 5):
+        raise ValueError(f"Erwartet 3-5 Figuren, erhalten {len(meta['characters'])}")
+
+    # Schritt 2: Verzeichnis + Rahmen einfrieren
+    index = next_book_index()
+    book_id = f"buch_{index:03d}_{sanitize_filename(meta['title']).lower()[:40]}"
+    buch_dir = os.path.join(BOOKS_DIR, book_id)
+    if os.path.exists(buch_dir):
+        raise FileExistsError(f"Buch existiert bereits: {buch_dir}")
+    os.makedirs(buch_dir)   # ohne exist_ok: ein Wettlauf soll auffallen, nicht still durchgehen
+
+    prolog = run_ollama_stream(build_prologue_prompt(meta, lang_name, style_name, core_rule),
+                               model=model, host=host)
+    if not prolog.strip():
+        raise RuntimeError("Leerer Prolog vom Modell — Buch wird nicht angelegt.")
+    write_new_file(os.path.join(buch_dir, "00_prolog.md"),
+                   f'---\nbook_id: "{book_id}"\nchapter_index: 0\nchapter_title: "Prolog"\n'
+                   f'article: ""\nlanguage: "{lang.upper()}"\nstyle: "{style_name}"\n'
+                   f'pov: "{meta["pov"]}"\n---\n\n' + prolog.strip() + "\n")
+
+    buch_meta = {
+        "book_id": book_id, "title": meta["title"], "pov": meta["pov"],
+        "language": lang.upper(), "style": style_name,
+        "setting_summary": meta["setting_summary"], "characters": meta["characters"],
+        "covered_articles": [], "current_chapter": 0,
+        "created_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+        "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner.",
+    }
+    write_new_file(os.path.join(buch_dir, "book.json"),
+                   json.dumps(buch_meta, ensure_ascii=False, indent=2) + "\n")
+    return book_id
+
+
 def synthesize_one(article_id: str, style: str, lang: str, model: str, host: str):
     art = load_article(article_id, lang)
     loc = load_locale(lang)
@@ -297,6 +424,11 @@ def main():
     parser.add_argument("--lang", default="DE",
                         help="Zielsprache. Die Anweisungssprache kommt aus prompts/<LANG>/ "
                              "bzw. aus instruction_language der Locale; ohne Direktive bricht der Lauf ab.")
+    parser.add_argument("--mode", choices=("tales", "new-book"), default="tales",
+                        help="tales = Einzelgeschichten (Default, unveraendert); "
+                             "new-book = neuen Buchrahmen anlegen (Stufe 1 der Buch-Erweiterung).")
+    parser.add_argument("--book-style", default=None,
+                        help="Stil fuer den Buchmodus; Default ist ein zufaelliger Stil der Locale.")
     parser.add_argument("--article", default=None)
     parser.add_argument("--style", default=None)
     parser.add_argument("--random", action="store_true")
@@ -306,6 +438,17 @@ def main():
     args = parser.parse_args()
 
     host = os.getenv("OLLAMA_HOST", "http://localhost:11434")
+
+    if args.mode == "new-book":
+        try:
+            book_id = new_book(lang=args.lang, style=args.book_style,
+                               model=args.model, host=host)
+        except (ValueError, FileExistsError, RuntimeError) as e:
+            print(f"[Buchmodus] Abbruch: {e}", flush=True)
+            sys.exit(1)
+        print(f"[Buchmodus] Buch angelegt: {os.path.join(BOOKS_DIR, book_id)}", flush=True)
+        sys.exit(0)
+
     locale_data = load_locale(args.lang)
     available_styles = list(locale_data.get("styles", {}).keys())
     available_articles = [
