@@ -37,7 +37,8 @@
     "r9:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit",
     "r9:nvidia/nemotron-3-ultra-550b-a55b:free:buch_011_das_haus_ohne_widerhall",
     "r9:nvidia/nemotron-3-super-120b-a12b:free:buch_012_manifest_der_unantastbaren",
-    "r9:nvidia/nemotron-3.5-lightning:free:buch_013_aufzeichnungen_eines_archivars"
+    "r9:nvidia/nemotron-3.5-lightning:free:buch_013_aufzeichnungen_eines_archivars",
+    "r10:deepseek-chat:buch_011_das_haus_ohne_widerhall"
   ],
   "runden": {
     "1": [
@@ -130,6 +131,23 @@
         "tokens": "6127",
         "versuche": "1",
         "woerter": 702
+      }
+    ],
+    "10": [
+      {
+        "backend": "deepseek",
+        "buch": "buch_011_das_haus_ohne_widerhall",
+        "code": "W-03-03",
+        "datei": "03_art_03_abschnitt_3_die_zentrale_der_lautlosen_d.md",
+        "dauer_s": "9.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 10,
+        "tokens": "1057",
+        "versuche": "1",
+        "woerter": 584
       }
     ],
     "2": [

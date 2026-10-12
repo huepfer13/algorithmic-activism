@@ -1219,13 +1219,14 @@
         "Timo",
         "Der Verwalter"
       ],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_02"
+        "art_02",
+        "art_03"
       ],
-      "words": 1182,
-      "reading_minutes": 6,
+      "words": 1766,
+      "reading_minutes": 9,
       "cover": null,
       "chapters": [
         {
@@ -1281,6 +1282,24 @@
           "leak_free": "true",
           "words": 303,
           "reading_minutes": 2
+        },
+        {
+          "file": "03_art_03_abschnitt_3_die_zentrale_der_lautlosen_d.md",
+          "index": 3,
+          "title": "Abschnitt 3: Die Zentrale der lautlosen Dinge",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1057",
+          "manual_ending_code": "W-03-03",
+          "backend": "deepseek",
+          "genre": "Gothic",
+          "leak_free": "true",
+          "words": 584,
+          "reading_minutes": 3
         }
       ]
     },
