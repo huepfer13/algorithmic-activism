@@ -1536,12 +1536,13 @@
       "pov": "third_person",
       "setting_summary": "Rezepte als Beweis, dass Fuersorge messbar ist.",
       "characters": [],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 587,
-      "reading_minutes": 3,
+      "words": 1195,
+      "reading_minutes": 6,
       "cover": null,
       "chapters": [
         {
@@ -1579,6 +1580,24 @@
           "leak_free": "true",
           "words": 471,
           "reading_minutes": 2
+        },
+        {
+          "file": "02_art_02_abschnitt_2_die_revision_der_gewichte.md",
+          "index": 2,
+          "title": "Abschnitt 2: Die Revision der Gewichte",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "2",
+          "model": "deepseek-chat",
+          "duration_seconds": "18.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1081",
+          "manual_ending_code": "C-02-02",
+          "backend": "deepseek",
+          "genre": "Kochbuch",
+          "leak_free": "true",
+          "words": 608,
+          "reading_minutes": 3
         }
       ]
     },
