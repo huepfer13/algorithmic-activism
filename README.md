@@ -51,11 +51,13 @@ Um den Korpus über alle 30 UN-Artikel, mehrere Sprachräume und Erzählstile hi
 ├── backends/             # Plugin-System (offline, ollama, gemini)
 ├── locales/              # Sprach- & Stil-Definitionen (DE, EN)
 ├── menschenrechte_tales/ # Validierte Narrative mit YAML-Frontmatter
+├── menschenrechte_books/ # Fortlaufende Bände (book.json + Kapitel)
 ├── quarantine/           # Durch Audit abgelehnte Texte (DPO-Basis)
 ├── datasets/             # Datierte dataset.jsonl-Snapshots
 ├── config.py             # Zero-Dependency .env Loader & Setter
 ├── generate_pipeline.py  # Haupt-Pipeline mit Daemon, Lastwächter & Audit
 ├── export_dataset.py     # JSONL-Dataset Exporter
+├── scripts/              # sync_corpus.sh (kontrollierter Batch-Push), build_books_index.py (Index/API)
 ├── mcp_server.py         # Zero-Dependency MCP Server für Agenten
 └── sync_udhr.py          # Validierungs- & Verifikationstool
 ```
@@ -88,6 +90,47 @@ Um den Korpus über alle 30 UN-Artikel, mehrere Sprachräume und Erzählstile hi
      --cooldown 8 \
      --lang DE > daemon.log 2>&1 &
    ```
+
+## Bücher & Bände (serielle Pipeline)
+
+Neben den Einzelgeschichten erzeugt die Pipeline **fortlaufende Bände**: ein Prolog friert Setting,
+Figuren und Perspektive in `book.json` ein, jedes weitere Kapitel verhandelt einen noch unbehandelten
+Artikel der UDHR im selben Rahmen — angeschlossen an das Vorgängerkapitel (Markov-Kette über Volltexte,
+kein Summarizing-Zwischenschritt).
+
+```bash
+# Band anlegen (Prolog + book.json)
+python3 generate_pipeline.py --mode new-book --lang DE --book-style Gerätehandbuch
+
+# Nächstes Kapitel anhängen (ohne --book-id: jüngstes Buch nach mtime)
+python3 generate_pipeline.py --mode append-chapter --lang DE
+python3 generate_pipeline.py --mode append-chapter --lang DE --book-id buch_001_das_büro_der_unendlichkeit
+```
+
+**Mechanische Endschranke (`audit_manual_ending`):** Der Schlussabsatz muss einen harten Marker
+(`Fehlercode`, `Wartung`, `Intervall`, `Diagnose`, `Prüfung`, `Protokoll`, `Abschnitt`) oder einen
+Sicherheitsblock (`[GEFAHR]` / `[WARNUNG]` / `[HINWEIS]`) tragen; wörtliche Rede und Emotionsverben
+sind ausgeschlossen. Es gibt bis zu drei Versuche, danach wird das Kapitel **mit Vermerk** geschrieben
+(kein stiller Durchlauf, kein Totalverlust). Jedes Kapitel trägt im Frontmatter `manual_ending_ok`,
+`manual_ending_attempts` und `manual_ending_note`; die CLI beendet einen Fallback mit **Exit-Code 2**
+(Exit 1 = Abbruch ohne Datei).
+
+**Index & Entwickler-Endpunkte** (deterministisch, atomar geschrieben):
+
+```bash
+python3 scripts/build_books_index.py
+```
+
+| Datei | Inhalt |
+|---|---|
+| `web/books.json` | Katalog aller Bände: Metadaten, Kapitel-Inhaltsverzeichnis, Wortzahlen, verhandelte Artikel, Audit-Flags |
+| `web/api/random.json` | Beispielkapitel im Volltext — **statisch**: GitHub Pages würfelt nicht pro Anfrage |
+| `web/api/ipsum.json` | Platzhaltertext aus dem Korpus für Layout-/Testzwecke |
+
+Der Reader (`web/index.html`) hat dafür den Tab **[ Geschichten ] | [ Bücher & Bände ]** mit Kachel-Ansicht
+(Genre-Badge, Fortschritt „*n* von 30 Artikeln verhandelt"), Inhaltsverzeichnis, Kapitel-Navigation und
+Feedback-Leiste am Kapitelende: ▲/▼ werden **nur lokal** im Browser gespeichert, 🚩 *Melden* öffnet ein
+vorausgefülltes GitHub-Issue mit Buch, Kapitelpfad und Audit-Status.
 
 ## MCP-Integration (Agenten)
 

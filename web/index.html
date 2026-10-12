@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:,">
   <title>Algorithmic Activism — Synthetischer Menschenrechte-Korpus</title>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
@@ -270,6 +271,114 @@
     }
     .about-links a:hover { border-color: var(--accent); }
 
+    /* Tabs (Geschichten | Buecher & Baende) */
+    .tabs {
+      display: flex;
+      gap: 4px;
+      padding: 12px 16px 0;
+      background: var(--search-bg);
+      border-bottom: 1px solid var(--border);
+    }
+    .tab-btn {
+      flex: 1;
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid transparent;
+      color: var(--muted);
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 8px 6px;
+      cursor: pointer;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .tab-btn:hover { color: var(--text); }
+    .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+    /* Buch-Kacheln */
+    .book-tiles {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 14px;
+      margin: 20px 0 28px;
+    }
+    .book-tile {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .book-tile:hover { background: var(--card-hover); border-color: var(--accent); }
+    .book-tile h3 { font-size: 1.02rem; color: var(--accent); margin-bottom: 6px; line-height: 1.35; }
+    .book-tile p { font-size: 0.84rem; color: var(--text-prose); line-height: 1.6; margin-bottom: 8px; }
+    .book-cover { width: 100%; max-height: 180px; object-fit: contain; border-radius: 6px; margin-bottom: 10px; background: var(--search-bg); }
+    .book-progress { height: 6px; background: var(--tag-bg); border-radius: 3px; overflow: hidden; margin: 8px 0 6px; }
+    .book-progress span { display: block; height: 100%; background: var(--accent); }
+    .book-meta { font-size: 0.72rem; color: var(--muted); display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
+
+    /* Inhaltsverzeichnis */
+    .toc { list-style: none; margin: 12px 0 0; padding: 0; }
+    .toc li { margin-bottom: 6px; }
+    .toc button {
+      width: 100%;
+      text-align: left;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 9px 11px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.86rem;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .toc button:hover { border-color: var(--accent); background: var(--card-hover); }
+    .toc .toc-num { color: var(--muted); margin-right: 6px; }
+    .toc .toc-art { color: var(--accent); font-size: 0.75rem; margin-left: 6px; }
+
+    /* Kapitel-Navigation + Feedback-Leiste */
+    .chapter-nav { display: flex; justify-content: space-between; gap: 10px; margin: 26px 0 8px; }
+    .chapter-nav button {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.82rem;
+    }
+    .chapter-nav button:hover:not(:disabled) { border-color: var(--accent); }
+    .chapter-nav button:disabled { opacity: 0.4; cursor: default; }
+    .feedback-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      border-top: 1px solid var(--border);
+      margin-top: 20px;
+      padding-top: 14px;
+      font-size: 0.8rem;
+    }
+    .fb-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 6px;
+      padding: 6px 10px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.8rem;
+    }
+    .fb-btn:hover { border-color: var(--accent); }
+    .fb-btn.active { background: var(--item-active-bg); border-color: var(--accent); }
+    .fb-report { color: var(--danger); text-decoration: none; border: 1px solid var(--border); border-radius: 6px; padding: 6px 10px; }
+    .fb-report:hover { border-color: var(--danger); }
+    .fb-audit { font-weight: 600; }
+    .fb-state { color: var(--muted); }
+
     /* Mobile */
     @media (max-width: 768px) {
       body { flex-direction: column; height: auto; overflow: visible; }
@@ -292,6 +401,10 @@
         <select id="ui-lang-select" class="lang-select" data-i18n-aria="lang_selector_label" aria-label="Oberflächensprache" hidden></select>
       </div>
     </div>
+      <div class="tabs">
+        <button type="button" class="tab-btn active" id="tab-tales" data-tab="tales" data-i18n="tab_tales">Geschichten</button>
+        <button type="button" class="tab-btn" id="tab-books" data-tab="books" data-i18n="tab_books">Bücher &amp; Bände</button>
+      </div>
     <div class="search-box">
       <div class="filter-row">
         <input type="text" id="filter-input" data-i18n-ph="filter_placeholder" placeholder="Titel, Volltext oder Modell suchen...">
@@ -883,10 +996,309 @@
     document.getElementById('random-btn').addEventListener('click', randomTale);
     document.getElementById('about-link').addEventListener('click', (e) => { e.preventDefault(); showAbout(); });
 
+    // ---- Buecher & Baende (Stufe 3) ------------------------------------------------------
+    // Quelle: web/books.json (vom Index-Builder erzeugt) + die Kapitel aus
+    // menschenrechte_books/. Beides wird im Pages-Build neben index.html ausgeliefert.
+    const BOOKS_FILE = './books.json';
+    const BOOKS_DIR = './menschenrechte_books/';
+    const FEEDBACK_KEY = 'aa-feedback';       // { "<book_id>/<file>": 1 | -1 } — rein lokal
+    const REPORT_URL = 'https://github.com/huepfer13/algorithmic-activism/issues/new';
+    const UDHR_ARTICLES = 30;                 // Die Allgemeine Erklaerung der Menschenrechte hat 30 Artikel.
+
+    let BOOKS = null;            // null = books.json nicht ladbar
+    let booksLoaded = false;
+    let activeTab = 'tales';     // 'tales' | 'books'
+    let currentBookId = null;    // offenes Buch (Detailansicht)
+    let currentChapterFile = null;
+
+    function bt(key, fallback) { return t(key, fallback); }
+    function bookOf(id) { return (BOOKS || []).filter(b => b.book_id === id)[0] || null; }
+    function chapterKey(bookId, file) { return bookId + '/' + file; }
+    function chapterLabel(ch) {
+      return (ch.index === 0) ? bt('book_prologue', 'Prolog')
+                              : bt('book_chapter', 'Kapitel') + ' ' + ch.index;
+    }
+    function auditLabel(ch) {
+      if (ch.ending_ok === 'true')  return { text: bt('book_audit_ok', '\u2713 Endschranke bestanden'), color: 'var(--success)' };
+      if (ch.ending_ok === 'false') return { text: bt('book_audit_fallback', '\u26a0 Fallback (Schranke verfehlt)'), color: 'var(--danger)' };
+      return { text: bt('book_audit_none', '\u2013 nicht geprueft'), color: 'var(--muted)' };
+    }
+    function feedbackMap() {
+      try { return JSON.parse(window.localStorage.getItem(FEEDBACK_KEY) || '{}') || {}; } catch (e) { return {}; }
+    }
+    function setFeedback(key, wert) {
+      const f = feedbackMap();
+      if (wert === 0) delete f[key]; else f[key] = wert;
+      try { window.localStorage.setItem(FEEDBACK_KEY, JSON.stringify(f)); } catch (e) { /* z. B. Privatmodus */ }
+    }
+
+    async function loadBooks() {
+      try {
+        const res = await fetch(BOOKS_FILE, { cache: 'no-store' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const data = await res.json();
+        if (!data || !Array.isArray(data.books)) throw new Error('books.json unbrauchbar');
+        BOOKS = data.books;
+        booksLoaded = true;
+        return true;
+      } catch (e) {
+        BOOKS = null;
+        console.warn('Buecher: ' + BOOKS_FILE + ' nicht ladbar (' + (e && e.message) + ')');
+        return false;
+      }
+    }
+
+    function setTab(tab) {
+      activeTab = tab;
+      const tTales = document.getElementById('tab-tales');
+      const tBooks = document.getElementById('tab-books');
+      if (tTales) tTales.classList.toggle('active', tab === 'tales');
+      if (tBooks) tBooks.classList.toggle('active', tab === 'books');
+      const box = document.querySelector('.search-box');
+      if (box) box.style.display = (tab === 'tales') ? '' : 'none';   // Filter gelten fuer die Geschichten
+      if (tab === 'tales') {
+        if (datasetLoaded) {
+          renderList(filteredTales);
+          updateCount();
+          if (currentTaleIndex >= 0 && tales[currentTaleIndex]) selectTale(currentTaleIndex);
+          else showAbout();
+        }
+        return;
+      }
+      currentBookId = null;
+      currentChapterFile = null;
+      renderBookList();
+      renderBooksHome();
+    }
+
+    function progressLabel(book) {
+      const artikel = (book.covered_articles || []).length;
+      return bt('book_progress', '{a} von {t} Artikeln verhandelt')
+        .replace('{a}', String(artikel)).replace('{t}', String(UDHR_ARTICLES));
+    }
+
+    // Sidebar-Liste im Buchmodus (bewusst dieselbe Optik wie die Geschichtenliste).
+    function renderBookList() {
+      const container = document.getElementById('tales-list');
+      if (!container) return;
+      container.innerHTML = '';
+      if (!booksLoaded || !BOOKS || BOOKS.length === 0) {
+        const leer = document.createElement('div');
+        leer.className = 'list-empty';
+        leer.textContent = booksLoaded ? bt('book_none', 'Noch kein Buch im Korpus.') : bt('book_load_error', 'Buecher nicht ladbar.');
+        container.appendChild(leer);
+        return;
+      }
+      BOOKS.forEach(b => {
+        const item = document.createElement('div');
+        item.className = 'tale-item' + (b.book_id === currentBookId ? ' active' : '');
+        item.dataset.book = b.book_id;
+        item.innerHTML = `
+          <div class="tale-title">${esc(b.title || b.book_id)}</div>
+          <div class="tale-meta">
+            <span class="tag">${esc(b.style || UI.noValue)}</span>
+            <span class="tag">${esc(b.language || UI.noValue)}</span>
+            <span class="tag">${esc(chapterLabel({ index: b.chapter_count }))}</span>
+          </div>`;
+        item.onclick = () => openBook(b.book_id);
+        container.appendChild(item);
+      });
+    }
+
+    function bookTile(b) {
+      const pct = Math.min(100, Math.round(((b.covered_articles || []).length / UDHR_ARTICLES) * 100));
+      const cover = b.cover ? `<img class="book-cover" src="${esc(b.cover)}" alt="">` : '';
+      return `
+        <div class="book-tile" data-book="${esc(b.book_id)}">
+          ${cover}
+          <h3>${esc(b.title || b.book_id)}</h3>
+          <p>${esc(b.setting_summary || '')}</p>
+          <div class="book-progress"><span style="width:${pct}%"></span></div>
+          <div class="book-meta">
+            <span class="tag">${esc(progressLabel(b))}</span>
+            <span class="tag">${esc(b.style || UI.noValue)}</span>
+            <span class="tag">${esc(b.language || UI.noValue)}</span>
+            <span class="tag">${esc((b.words || 0) + ' ' + bt('book_words', 'Woerter'))}</span>
+          </div>
+        </div>`;
+    }
+
+    function renderBooksHome() {
+      const view = document.getElementById('reader-view');
+      if (!view) return;
+      if (!booksLoaded || !BOOKS || BOOKS.length === 0) {
+        view.innerHTML = `<div class="about"><h2>${esc(bt('book_tab_head', 'Buecher & Baende'))}</h2>
+          <p class="about-note">${esc(booksLoaded ? bt('book_none', 'Noch kein Buch im Korpus.') : bt('book_load_error', 'Buecher nicht ladbar.'))}</p></div>`;
+        return;
+      }
+      view.innerHTML = `
+        <div class="about">
+          <h2>${esc(bt('book_tab_head', 'Buecher & Baende'))}</h2>
+          <p class="about-note">${esc(bt('book_intro', 'Fortlaufende Baende: ein Prolog setzt die Welt, jedes Kapitel verhandelt einen weiteren Artikel der Allgemeinen Erklaerung der Menschenrechte im selben Setting.'))}</p>
+        </div>
+        <div class="book-tiles">${BOOKS.map(bookTile).join('')}</div>`;
+      view.querySelectorAll('.book-tile').forEach(el => {
+        el.onclick = () => openBook(el.getAttribute('data-book'));
+      });
+      const main = document.getElementById('main-content');
+      if (main) main.scrollTop = 0;
+    }
+
+    function openBook(id) {
+      const b = bookOf(id);
+      if (!b) return;
+      currentBookId = id;
+      currentChapterFile = null;
+      renderBookList();
+      const view = document.getElementById('reader-view');
+      const cover = b.cover ? `<img class="book-cover" src="${esc(b.cover)}" alt="">` : '';
+      const figuren = (b.characters || []).length
+        ? `<div class="pro-item"><span>${esc(bt('book_cast', 'Figuren'))}</span><b>${esc((b.characters || []).join(', '))}</b></div>` : '';
+      view.innerHTML = `
+        <div class="about">
+          <h2>${esc(b.title || b.book_id)}</h2>
+          <p class="about-lede">${esc(b.setting_summary || '')}</p>
+        </div>
+        <div class="provenance">
+          ${cover}
+          <div class="provenance-grid">
+            <div class="pro-item"><span>${esc(UI.proStyle)}</span><b>${esc(b.style || 'N/A')}</b></div>
+            <div class="pro-item"><span>${esc(UI.proArticle)}</span><b>${esc((b.covered_articles || []).join(', ') || 'N/A')}</b></div>
+            <div class="pro-item"><span>${esc(bt('book_chapters', 'Kapitel'))}</span><b>${esc(String(b.chapter_count))}</b></div>
+            <div class="pro-item"><span>${esc(bt('book_length', 'Umfang'))}</span><b>${esc((b.words || 0) + ' ' + bt('book_words', 'Woerter'))}</b></div>
+            ${figuren}
+          </div>
+          <div class="book-progress"><span style="width:${Math.min(100, Math.round(((b.covered_articles || []).length / UDHR_ARTICLES) * 100))}%"></span></div>
+          <p class="about-note">${esc(progressLabel(b))}</p>
+        </div>
+        <h2 class="toc-head">${esc(bt('book_toc', 'Inhalt'))}</h2>
+        <ul class="toc">${(b.chapters || []).map(ch => `
+          <li><button type="button" data-file="${esc(ch.file)}">
+            <span class="toc-num">${esc(chapterLabel(ch))}</span>${esc(ch.title || ch.file)}
+            ${ch.article ? `<span class="toc-art">${esc(ch.article)}</span>` : ''}
+            <span class="toc-art">${esc(String(ch.words) + ' ' + bt('book_words', 'Woerter'))}</span>
+          </button></li>`).join('')}</ul>`;
+      view.querySelectorAll('.toc button').forEach(el => {
+        el.onclick = () => openChapter(el.getAttribute('data-file'));
+      });
+      const main = document.getElementById('main-content');
+      if (main) main.scrollTop = 0;
+    }
+
+    function stripFrontmatter(text) {
+      // Nur der YAML-Kopf des Kapitels faellt weg — der Rumpf bleibt unveraendert.
+      const m = /^---\r?\n[\s\S]*?\r?\n---\r?\n?/.exec(text);
+      return m ? text.slice(m[0].length) : text;
+    }
+
+    async function openChapter(file) {
+      const b = bookOf(currentBookId);
+      if (!b) return;
+      const ch = (b.chapters || []).filter(c => c.file === file)[0];
+      if (!ch) return;
+      currentChapterFile = file;
+      const view = document.getElementById('reader-view');
+      view.innerHTML = `<div class="about"><p class="about-note">${esc(UI.loading)}</p></div>`;
+      try {
+        const res = await fetch(BOOKS_DIR + encodeURIComponent(b.book_id) + '/' + encodeURIComponent(file), { cache: 'no-store' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const roh = await res.text();
+        const bodyHtml = marked.parse(stripFrontmatter(roh));
+        const liste = (b.chapters || []);
+        const pos = liste.map(c => c.file).indexOf(file);
+        const vor = pos > 0 ? liste[pos - 1] : null;
+        const nach = pos >= 0 && pos < liste.length - 1 ? liste[pos + 1] : null;
+        view.innerHTML = `
+          <div class="about">
+            <p class="about-note">${esc(b.title || b.book_id)}</p>
+            <h2>${esc(chapterLabel(ch) + (ch.title ? ': ' + ch.title : ''))}</h2>
+          </div>
+          <article class="article-body">${bodyHtml}</article>
+          <div class="chapter-nav">
+            <button type="button" id="ch-prev" ${vor ? 'data-file="' + esc(vor.file) + '"' : 'disabled'}>
+              \u25c0 ${esc(vor ? chapterLabel(vor) : bt('book_start', 'Anfang'))}</button>
+            <button type="button" id="ch-next" ${nach ? 'data-file="' + esc(nach.file) + '"' : 'disabled'}>
+              ${esc(nach ? chapterLabel(nach) : bt('book_end', 'Ende'))} \u25b6</button>
+          </div>
+          <div class="feedback-bar">
+            <span class="fb-audit" style="color:${esc(auditLabel(ch).color)}">${esc(auditLabel(ch).text)}</span>
+            ${ch.attempts ? `<span class="fb-state">${esc(bt('book_attempts', 'Versuche') + ': ' + ch.attempts)}</span>` : ''}
+            <button type="button" class="fb-btn" data-vote="1">\u25b2 ${esc(bt('book_vote_up', 'Hilfreich'))}</button>
+            <button type="button" class="fb-btn" data-vote="-1">\u25bc ${esc(bt('book_vote_down', 'Schwach'))}</button>
+            <a class="fb-report" href="${reportHref(b, ch)}" target="_blank" rel="noopener">\ud83d\udea9 ${esc(bt('book_report', 'Melden'))}</a>
+            <span class="fb-state" id="fb-state"></span>
+          </div>`;
+        const prev = document.getElementById('ch-prev');
+        const next = document.getElementById('ch-next');
+        if (prev && !prev.disabled) prev.onclick = () => openChapter(prev.getAttribute('data-file'));
+        if (next && !next.disabled) next.onclick = () => openChapter(next.getAttribute('data-file'));
+        wireFeedback(b, ch);
+        const main = document.getElementById('main-content');
+        if (main) main.scrollTop = 0;
+      } catch (e) {
+        view.innerHTML = `<div class="about"><h2>${esc(bt('book_chapter_error', 'Kapitel nicht ladbar'))}</h2>
+          <p class="about-note">${esc(file + ' \u2014 ' + (e && e.message))}</p></div>`;
+      }
+    }
+
+    function reportHref(b, ch) {
+      const titel = bt('book_report_title', 'Kapitel-Meldung') + ': ' + (b.title || b.book_id) + ' / ' + ch.file;
+      const audit = auditLabel(ch).text;
+      const koerper = [
+        bt('book_report_reason', 'Grund der Meldung (zutreffendes ankreuzen):'),
+        '- [ ] Harm Reduction / Safety',
+        '- [ ] Inhaltlicher Fehler',
+        '- [ ] Technisches Problem',
+        '',
+        'Buch: ' + b.book_id,
+        'Kapitel: ' + ch.file + ' (' + chapterLabel(ch) + ')',
+        'Artikel: ' + (ch.article || 'ohne'),
+        'Audit: ' + audit + (ch.attempts ? ' (' + bt('book_attempts', 'Versuche') + ': ' + ch.attempts + ')' : '')
+      ].join('\n');
+      return REPORT_URL + '?title=' + encodeURIComponent(titel) + '&body=' + encodeURIComponent(koerper);
+    }
+
+    function wireFeedback(b, ch) {
+      const key = chapterKey(b.book_id, ch.file);
+      const f = feedbackMap();
+      const state = document.getElementById('fb-state');
+      const malen = (wert) => {
+        document.querySelectorAll('.feedback-bar [data-vote]').forEach(btn => {
+          btn.classList.toggle('active', Number(btn.getAttribute('data-vote')) === wert);
+        });
+        if (state) {
+          state.textContent = (wert === 0) ? '' :
+            (wert === 1 ? bt('book_feedback_up', 'Danke — als hilfreich vermerkt (nur lokal gespeichert).')
+                        : bt('book_feedback_down', 'Notiert (nur lokal gespeichert).'));
+        }
+      };
+      malen(f[key] === 1 ? 1 : (f[key] === -1 ? -1 : 0));
+      document.querySelectorAll('.feedback-bar [data-vote]').forEach(btn => {
+        btn.onclick = () => {
+          const wert = Number(btn.getAttribute('data-vote'));
+          const neu = (f[key] === wert) ? 0 : wert;     // erneuter Klick nimmt die Stimme zurueck
+          f[key] = neu;
+          if (neu === 0) delete f[key];
+          try { window.localStorage.setItem(FEEDBACK_KEY, JSON.stringify(f)); } catch (e) { /* Privatmodus */ }
+          malen(neu);
+        };
+      });
+    }
+
     async function boot() {
       await loadLocales();   // ohne Woerterbuch laeuft die Seite mit den deutschen Literalen weiter
       initLanguage();
       await loadDataset();
+      await loadBooks();   // Buecher sind optional: faellt books.json aus, bleibt der Tab leer statt zu brechen
+      const tTales = document.getElementById('tab-tales');
+      const tBooks = document.getElementById('tab-books');
+      if (tTales) tTales.addEventListener('click', () => setTab('tales'));
+      if (tBooks) tBooks.addEventListener('click', () => setTab('books'));
+      const langSel = document.getElementById('ui-lang-select');
+      if (langSel) langSel.addEventListener('change', () => {
+        // Beschriftungen der Buchansicht neu ziehen (das offene Kapitel bleibt stehen, der Inhalt ist Text).
+        if (activeTab === 'books') { renderBookList(); if (!currentChapterFile) renderBooksHome(); }
+      });
     }
     window.onload = boot;
   </script>

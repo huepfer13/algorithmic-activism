@@ -7,6 +7,7 @@ on:
     paths:
       - 'menschenrechte_tales/**'
       - 'web/**'
+      - 'menschenrechte_books/**'
       - 'export_dataset.py'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
@@ -42,6 +43,9 @@ jobs:
           # GANZES web/ ausliefern: index.html UND ui-locales.json (i18n-Woerterbuch).
           # Vorher wurde nur index.html kopiert -> ui-locales.json lief auf Pages in einen 404.
           cp -r web/. _site/
+          # Die Kapiteltexte liegen NICHT unter web/: der Reader holt sie relativ zur Wurzel.
+          # Ohne diesen Schritt waeren alle Buecher auf Pages 404.
+          cp -r menschenrechte_books _site/
           cp dataset.jsonl _site/dataset.jsonl
 
       - name: Sync dataset to Hugging Face Hub

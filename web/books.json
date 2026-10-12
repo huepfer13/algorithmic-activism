@@ -32,6 +32,7 @@
           "title": "Prolog",
           "article": "",
           "ending_ok": "",
+          "attempts": "",
           "words": 382,
           "reading_minutes": 2
         },
@@ -41,6 +42,7 @@
           "title": "Kennzeichen und Identität",
           "article": "art_01",
           "ending_ok": "false",
+          "attempts": "",
           "words": 563,
           "reading_minutes": 3
         },
@@ -50,6 +52,7 @@
           "title": "Abschnitt 2: Kalibrierungsanpassung",
           "article": "art_03",
           "ending_ok": "",
+          "attempts": "",
           "words": 790,
           "reading_minutes": 4
         },
@@ -59,6 +62,7 @@
           "title": "Abschnitt 3: Kalibrierung und Isolierung",
           "article": "art_04",
           "ending_ok": "true",
+          "attempts": "2",
           "words": 700,
           "reading_minutes": 4
         }

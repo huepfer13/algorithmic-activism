@@ -67,6 +67,7 @@ def kapitel_daten(buch_dir: str) -> list[dict]:
             "title": kopf.get("chapter_title", ""),
             "article": kopf.get("article", ""),
             "ending_ok": kopf.get("manual_ending_ok", ""),
+            "attempts": kopf.get("manual_ending_attempts", ""),
             "words": worte,
             "reading_minutes": lesezeit(worte),
         })

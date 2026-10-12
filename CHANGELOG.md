@@ -9,6 +9,25 @@ und dieses Projekt hält sich an [Semantic Versioning](https://semver.org/spec/v
 
 ## [Unreleased]
 
+### Added
+- **Serielle Buch-Pipeline** (`generate_pipeline.py`): `--mode new-book` legt Prolog und `book.json` an,
+  `--mode append-chapter` hängt Kapitel an (jüngstes Buch nach mtime, nächster unbehandelter UN-Artikel,
+  Vorgängerkapitel im Prompt).
+- **Mechanische Endschranke** (`audit_manual_ending`): harte Abschlussmarker bzw. `[GEFAHR]`/`[WARNUNG]`/`[HINWEIS]`-Blöcke;
+  bis zu 3 Versuche, Ergebnis + Versuchszahl im Kapitel-Frontmatter (`manual_ending_ok`, `manual_ending_attempts`,
+  `manual_ending_note`), **Exit-Code 2** für Fallback-Kapitel.
+- **Buch-Index & Entwickler-Endpunkte**: `scripts/build_books_index.py` erzeugt atomar `web/books.json`,
+  `web/api/random.json` und `web/api/ipsum.json` (Nutzung in `README.md`).
+- **Reader-Erweiterung** (`web/index.html`): Tab `[ Geschichten ] | [ Bücher & Bände ]`, Kachel-Ansicht mit
+  Fortschritt, Inhaltsverzeichnis, Kapitel-Navigation und Feedback-Leiste (▲/▼ lokal, 🚩 Melde-Link);
+  neue Oberflächen-Schlüssel in `web/ui-locales.json` (de/en).
+- **Pages-Deploy**: `menschenrechte_books/` wird mit ausgeliefert, Workflow-Trigger um `menschenrechte_books/**` erweitert.
+
+### Changed
+- `scripts/sync_corpus.sh`: Guard erlaubt zusätzlich `menschenrechte_books/`, `web/books.json` und `web/api/`;
+  der Überschreib-Schutz deckt jetzt auch Buchkapitel ab.
+
+
 ### Planned
 - Automatisierte CI/CD-Pipelines via GitHub Actions für periodische Matrix-Synthese.
 - Erweiterung des Korpus um UN-Charta Artikel 5 (Verbot von Folter) und Artikel 12 (Privatsphäre).

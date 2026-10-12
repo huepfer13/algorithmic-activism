@@ -5,19 +5,54 @@
     "fallback": "en",
     "fallback_rule": "Fehlt ein Schluessel in der gewaehlten Sprache, greift 'en'. Fehlt er auch dort, bleibt das deutsche Literal der Oberflaeche stehen - niemals ein leerer String.",
     "languages_source": "Karte A (t_8b40f7dd): GO fuer AR/ZH/PT/RU/ES/FR, NO-GO fuer HI/SW (3/10, grammatisch unbrauchbar) - NO-GO-Sprachen sind hier bewusst NICHT enthalten.",
-    "directions": {"ar": "rtl", "default": "ltr"},
+    "directions": {
+      "ar": "rtl",
+      "default": "ltr"
+    },
     "scope": "Nur Oberflaechen-Beschriftungen. Die Tale-Texte und der Ueber-/Manifest-Text (Karte D2a) behalten ihre Originalsprache/ihren Autortext.",
     "key_style": "count_all/count_filtered/stats_summary/words_approx sind Vorlagen mit {platzhaltern}; alle uebrigen Schluessel sind reine Strings."
   },
   "languages": [
-    {"code": "de", "native": "Deutsch", "dir": "ltr"},
-    {"code": "en", "native": "English", "dir": "ltr"},
-    {"code": "es", "native": "Español", "dir": "ltr"},
-    {"code": "fr", "native": "Français", "dir": "ltr"},
-    {"code": "pt", "native": "Português", "dir": "ltr"},
-    {"code": "ru", "native": "Русский", "dir": "ltr"},
-    {"code": "zh", "native": "中文", "dir": "ltr"},
-    {"code": "ar", "native": "العربية", "dir": "rtl"}
+    {
+      "code": "de",
+      "native": "Deutsch",
+      "dir": "ltr"
+    },
+    {
+      "code": "en",
+      "native": "English",
+      "dir": "ltr"
+    },
+    {
+      "code": "es",
+      "native": "Español",
+      "dir": "ltr"
+    },
+    {
+      "code": "fr",
+      "native": "Français",
+      "dir": "ltr"
+    },
+    {
+      "code": "pt",
+      "native": "Português",
+      "dir": "ltr"
+    },
+    {
+      "code": "ru",
+      "native": "Русский",
+      "dir": "ltr"
+    },
+    {
+      "code": "zh",
+      "native": "中文",
+      "dir": "ltr"
+    },
+    {
+      "code": "ar",
+      "native": "العربية",
+      "dir": "rtl"
+    }
   ],
   "strings": {
     "de": {
@@ -62,7 +97,35 @@
       "prov_unknown": "Herkunft unklar",
       "audit_ok": "✓ Harm Reduction validiert",
       "audit_quarantine": "⚠ Quarantäne",
-      "audit_none": "– nicht auditiert (Altbestand)"
+      "audit_none": "– nicht auditiert (Altbestand)",
+      "tab_tales": "Geschichten",
+      "tab_books": "Bücher & Bände",
+      "book_tab_head": "Bücher & Bände",
+      "book_intro": "Fortlaufende Bände: ein Prolog setzt die Welt, jedes Kapitel verhandelt einen weiteren Artikel der Allgemeinen Erklärung der Menschenrechte im selben Setting.",
+      "book_prologue": "Prolog",
+      "book_chapter": "Kapitel",
+      "book_chapters": "Kapitel",
+      "book_progress": "{a} von {t} Artikeln verhandelt",
+      "book_length": "Umfang",
+      "book_words": "Wörter",
+      "book_cast": "Figuren",
+      "book_toc": "Inhalt",
+      "book_audit_ok": "✓ Endschranke bestanden",
+      "book_audit_fallback": "⚠ Fallback (Schranke verfehlt)",
+      "book_audit_none": "– nicht geprüft",
+      "book_attempts": "Versuche",
+      "book_vote_up": "Hilfreich",
+      "book_vote_down": "Schwach",
+      "book_report": "Melden",
+      "book_report_title": "Kapitel-Meldung",
+      "book_report_reason": "Grund der Meldung (zutreffendes ankreuzen):",
+      "book_feedback_up": "Danke — als hilfreich vermerkt (nur lokal gespeichert).",
+      "book_feedback_down": "Notiert (nur lokal gespeichert).",
+      "book_none": "Noch kein Buch im Korpus.",
+      "book_load_error": "Bücher nicht ladbar.",
+      "book_chapter_error": "Kapitel nicht ladbar",
+      "book_start": "Anfang",
+      "book_end": "Ende"
     },
     "en": {
       "doc_title": "Algorithmic Activism — A synthetic human rights corpus",
@@ -106,7 +169,35 @@
       "prov_unknown": "Origin unclear",
       "audit_ok": "✓ Harm reduction validated",
       "audit_quarantine": "⚠ Quarantined",
-      "audit_none": "– not audited (legacy entry)"
+      "audit_none": "– not audited (legacy entry)",
+      "tab_tales": "Stories",
+      "tab_books": "Books & Volumes",
+      "book_tab_head": "Books & Volumes",
+      "book_intro": "Serial volumes: a prologue sets the world, each chapter addresses another article of the Universal Declaration of Human Rights in the same setting.",
+      "book_prologue": "Prologue",
+      "book_chapter": "Chapter",
+      "book_chapters": "Chapters",
+      "book_progress": "{a} of {t} articles addressed",
+      "book_length": "Length",
+      "book_words": "words",
+      "book_cast": "Characters",
+      "book_toc": "Contents",
+      "book_audit_ok": "✓ ending barrier passed",
+      "book_audit_fallback": "⚠ fallback (barrier failed)",
+      "book_audit_none": "– not checked",
+      "book_attempts": "attempts",
+      "book_vote_up": "Helpful",
+      "book_vote_down": "Weak",
+      "book_report": "Report",
+      "book_report_title": "Chapter report",
+      "book_report_reason": "Reason for the report (tick what applies):",
+      "book_feedback_up": "Thanks — recorded as helpful (stored locally only).",
+      "book_feedback_down": "Noted (stored locally only).",
+      "book_none": "No book in the corpus yet.",
+      "book_load_error": "Books not loadable.",
+      "book_chapter_error": "Chapter not loadable",
+      "book_start": "Start",
+      "book_end": "End"
     },
     "es": {
       "doc_title": "Algorithmic Activism — Corpus sintético de derechos humanos",
