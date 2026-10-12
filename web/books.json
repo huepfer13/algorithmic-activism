@@ -16,9 +16,10 @@
         "Nova",
         "Omicron"
       ],
-      "chapter_count": 9,
+      "chapter_count": 10,
       "covered_articles": [
         "art_01",
+        "art_02",
         "art_03",
         "art_04",
         "art_05",
@@ -28,8 +29,8 @@
         "art_19",
         "art_26"
       ],
-      "words": 5315,
-      "reading_minutes": 27,
+      "words": 5865,
+      "reading_minutes": 29,
       "cover": null,
       "chapters": [
         {
@@ -131,6 +132,16 @@
           "attempts": "2",
           "words": 392,
           "reading_minutes": 2
+        },
+        {
+          "file": "10_art_02_abschnitt_10_kalibrierung_des_menschenre.md",
+          "index": 10,
+          "title": "Abschnitt 10: Kalibrierung des Menschenrechts",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "words": 550,
+          "reading_minutes": 3
         }
       ]
     }
