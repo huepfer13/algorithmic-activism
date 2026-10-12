@@ -536,13 +536,14 @@
       "pov": "third_person",
       "setting_summary": "Ein diskursives Nachdenken darueber, was Menschenrechte praktisch bedeuten.",
       "characters": [],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_02"
+        "art_02",
+        "art_03"
       ],
-      "words": 1706,
-      "reading_minutes": 9,
+      "words": 2042,
+      "reading_minutes": 10,
       "cover": null,
       "chapters": [
         {
@@ -597,6 +598,24 @@
           "genre": "Philosophischer_Essay",
           "leak_free": "true",
           "words": 467,
+          "reading_minutes": 2
+        },
+        {
+          "file": "03_art_03_abschnitt_3_die_frequenz_des_verbleibs.md",
+          "index": 3,
+          "title": "Abschnitt 3: Die Frequenz des Verbleibs",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "28.4",
+          "jaccard_max": "0.038",
+          "tokens_generated": "890",
+          "manual_ending_code": "P-03-03",
+          "backend": "openrouter",
+          "genre": "Philosophischer_Essay",
+          "leak_free": "true",
+          "words": 336,
           "reading_minutes": 2
         }
       ]

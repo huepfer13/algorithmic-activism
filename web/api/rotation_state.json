@@ -10,7 +10,8 @@
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_004_neon_exil",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_005_fragment_der_vernunft",
     "r2:nvidia/nemotron-3.5-lightning:free:buch_006_das_gericht_vor_der_mauer",
-    "r3:deepseek-chat:buch_004_neon_exil"
+    "r3:deepseek-chat:buch_004_neon_exil",
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_005_fragment_der_vernunft"
   ],
   "runden": {
     "1": [
@@ -182,6 +183,21 @@
         "tokens": "848",
         "versuche": "1",
         "woerter": 394
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_005_fragment_der_vernunft",
+        "code": "P-03-03",
+        "datei": "03_art_03_abschnitt_3_die_frequenz_des_verbleibs.md",
+        "dauer_s": "28.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 3,
+        "tokens": "890",
+        "versuche": "1",
+        "woerter": 336
       }
     ]
   }
