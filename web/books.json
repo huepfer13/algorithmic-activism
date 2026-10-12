@@ -387,10 +387,12 @@
       "pov": "third_person",
       "setting_summary": "Im Schattennetz dokumentieren Ausgeschlossene, wie Rechte Stueck fuer Stueck verschwinden.",
       "characters": [],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 380,
-      "reading_minutes": 2,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 876,
+      "reading_minutes": 4,
       "cover": null,
       "chapters": [
         {
@@ -409,6 +411,24 @@
           "genre": "SciFi_Dystopie",
           "leak_free": "",
           "words": 380,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_01_abschnitt_1_die_entfernung_des_todes.md",
+          "index": 1,
+          "title": "Abschnitt 1: Die Entfernung des Todes",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "mistral",
+          "duration_seconds": "181.6",
+          "jaccard_max": "0.048",
+          "tokens_generated": "1057",
+          "manual_ending_code": "S-01-01",
+          "backend": "ollama",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "true",
+          "words": 496,
           "reading_minutes": 2
         }
       ]

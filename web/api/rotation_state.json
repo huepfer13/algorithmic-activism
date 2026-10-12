@@ -1,7 +1,8 @@
 {
   "erledigt": [
     "r1:deepseek-chat:buch_002_die_sieben_quellen",
-    "r1:qwen2.5:7b:buch_003_der_rat_der_tiere"
+    "r1:qwen2.5:7b:buch_003_der_rat_der_tiere",
+    "r1:mistral:buch_004_neon_exil"
   ],
   "runden": {
     "1": [
@@ -34,6 +35,21 @@
         "tokens": "731",
         "versuche": "1",
         "woerter": 376
+      },
+      {
+        "backend": "ollama",
+        "buch": "buch_004_neon_exil",
+        "code": "S-01-01",
+        "datei": "01_art_01_abschnitt_1_die_entfernung_des_todes.md",
+        "dauer_s": "181.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "mistral",
+        "modell": "mistral",
+        "runde": 1,
+        "tokens": "1057",
+        "versuche": "1",
+        "woerter": 496
       }
     ]
   }
