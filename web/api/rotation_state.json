@@ -60,7 +60,8 @@
     "r4:apodex/apodex-1.1-mini:free:buch_018_rhymes_of_the_commons",
     "r5:deepseek-chat:buch_015_das_kochbuch_der_allmende",
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_016_faden_der_gelassenheit",
-    "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_017_des_volkes_mund"
+    "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_017_des_volkes_mund",
+    "r5:apodex/apodex-1.1-mini:free:buch_018_rhymes_of_the_commons"
   ],
   "runden": {
     "1": [
@@ -743,6 +744,16 @@
         "tokens": "6342",
         "versuche": "1",
         "woerter": 384
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_018_rhymes_of_the_commons",
+        "datei": null,
+        "dauer_s": 208.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "apodex/apodex-1.1-mini:free",
+        "runde": 5
       }
     ],
     "6": [
