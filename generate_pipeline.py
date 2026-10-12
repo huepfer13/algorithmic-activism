@@ -495,9 +495,8 @@ def new_book(lang: str = "DE", style: str | None = None, model: str = "qwen2.5:7
     index = next_book_index()
     book_id = f"buch_{index:03d}_{sanitize_filename(meta['title']).lower()[:40]}"
     buch_dir = os.path.join(BOOKS_DIR, book_id)
-    if os.path.exists(buch_dir):
+    if os.path.isdir(buch_dir):
         raise FileExistsError(f"Buch existiert bereits: {buch_dir}")
-    os.makedirs(buch_dir)   # ohne exist_ok: ein Wettlauf soll auffallen, nicht still durchgehen
 
     t_start = time.monotonic()
     details: dict = {}
@@ -507,6 +506,9 @@ def new_book(lang: str = "DE", style: str | None = None, model: str = "qwen2.5:7
     dauer = round(time.monotonic() - t_start, 1)
     if not prolog.strip():
         raise RuntimeError("Leerer Prolog vom Modell — Buch wird nicht angelegt.")
+    # Erst anlegen, wenn die Generierung steht: ein Backend-Abbruch hinterlaesst so KEIN leeres
+    # Buchverzeichnis, das naechstes_buch() als "neuestes Buch" waehlen wuerde (belegt 2026-10-12).
+    os.makedirs(buch_dir)   # ohne exist_ok: ein Wettlauf soll auffallen, nicht still durchgehen
     write_new_file(os.path.join(buch_dir, "00_prolog.md"),
                    f'---\nbook_id: "{book_id}"\nchapter_index: 0\nchapter_title: "Prolog"\n'
                    f'article: ""\nlanguage: "{lang.upper()}"\nstyle: "{style_name}"\n'
