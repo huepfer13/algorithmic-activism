@@ -966,12 +966,13 @@
         "Nadia",
         "Kroll"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 828,
-      "reading_minutes": 4,
+      "words": 1797,
+      "reading_minutes": 9,
       "cover": null,
       "chapters": [
         {
@@ -1009,6 +1010,24 @@
           "leak_free": "true",
           "words": 464,
           "reading_minutes": 2
+        },
+        {
+          "file": "02_art_02_abschnitt_2_schwingungen_im_eis.md",
+          "index": 2,
+          "title": "Abschnitt 2: Schwingungen im Eis",
+          "article": "art_02",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "247.5",
+          "jaccard_max": "0.033",
+          "tokens_generated": "3293",
+          "manual_ending_code": "B-02-02",
+          "backend": "openrouter",
+          "genre": "Briefroman",
+          "leak_free": "",
+          "words": 969,
+          "reading_minutes": 5
         }
       ]
     },
