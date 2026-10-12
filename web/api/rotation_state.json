@@ -42,7 +42,8 @@
     "r10:nvidia/nemotron-3-ultra-550b-a55b:free:buch_012_manifest_der_unantastbaren",
     "r10:nvidia/nemotron-3-super-120b-a12b:free:buch_013_aufzeichnungen_eines_archivars",
     "r10:nvidia/nemotron-3.5-lightning:free:buch_014_der_unberechenbare_humor",
-    "r1:deepseek-chat:buch_015_das_kochbuch_der_allmende"
+    "r1:deepseek-chat:buch_015_das_kochbuch_der_allmende",
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_016_faden_der_gelassenheit"
   ],
   "runden": {
     "1": [
@@ -150,6 +151,21 @@
         "tokens": "824",
         "versuche": "1",
         "woerter": 471
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_016_faden_der_gelassenheit",
+        "code": "L-01-01",
+        "datei": "01_art_01_abschnitt_1_die_wartung_der_mitte.md",
+        "dauer_s": "61.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 1,
+        "tokens": "2911",
+        "versuche": "1",
+        "woerter": 250
       }
     ],
     "10": [
