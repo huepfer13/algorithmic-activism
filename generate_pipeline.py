@@ -851,6 +851,25 @@ def audit_manual_ending(text: str, erwarteter_block: str | None = None,
         if not ((erlaube_rede and ist_rede) or (erlaube_emotion and not ist_rede)):
             art = "woertliche Rede" if ist_rede else "Dialog-/Emotionsverb"
             return False, f"{art} im Schlussabsatz ({treffer})"
+    # GANZKOERPER-PRUEFUNG — belegt 2026-10-12 an Kapitel 11: die Endschranke sah nur den letzten
+    # Absatz, waehrend der Koerper 26 Dialogzeichen, "Wir sind gut," fluestert sie leise. und den
+    # STATUS-Block 19x wiederholt enthielt (Artikel-6-Bezug: 0 Treffer). Kapitel 8 und 10 ebenso.
+    # Deshalb: das ganze Genre-Gesetz gilt fuer den ganzen Text, nicht nur fuer den Schlusstakt.
+    if not erlaube_rede and not erlaube_emotion:
+        dialog = sum(text.count(z) for z in DIALOG_ZEICHEN)
+        if dialog:
+            return False, (f"woertliche Rede im Kapitelkoerper ({dialog} Zeichen) — "
+                           "dieses Genre verlangt Sachtext, nicht nur einen sachlichen Schluss")
+        erzaehlend = [w for w in ("flüster", "lächel", "seufz", "nickt", "kicher", "stöhnt")
+                      if w in text.lower()]
+        if erzaehlend:
+            return False, ("Personenregie im Kapitelkoerper (" + ", ".join(erzaehlend) +
+                           ") — Handbuchgenres fuehren keine Figuren")
+    eigen = block_code(erwarteter_block) if erwarteter_block else ""
+    if eigen:
+        wie_oft = len(re.findall(re.escape(eigen), text))
+        if wie_oft > 1:
+            return False, f"Pflichtcode {eigen} {wie_oft}x im Text (Wiederholungsschleife statt Kapitel)"
     if erwarteter_block:
         muster = pflichtblock_muster(erwarteter_block)
         code = block_code(erwarteter_block) or "?"
