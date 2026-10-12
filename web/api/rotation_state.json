@@ -22,7 +22,8 @@
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_007_die_kammer_der_zeugen",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_008_flechtwerk_arkadien",
     "r5:nvidia/nemotron-3.5-lightning:free:buch_009_depeschen_aus_dem_kordon",
-    "r6:deepseek-chat:buch_007_die_kammer_der_zeugen"
+    "r6:deepseek-chat:buch_007_die_kammer_der_zeugen",
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_008_flechtwerk_arkadien"
   ],
   "runden": {
     "1": [
@@ -380,6 +381,21 @@
         "tokens": "1042",
         "versuche": "0",
         "woerter": 491
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_008_flechtwerk_arkadien",
+        "code": "U-03-03",
+        "datei": "03_art_03_abschnitt_3_die_entladung_der_schatten.md",
+        "dauer_s": "43.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 6,
+        "tokens": "1207",
+        "versuche": "1",
+        "woerter": 317
       }
     ]
   }
