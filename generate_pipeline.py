@@ -465,7 +465,7 @@ def pruefe_figuren(figuren) -> None:
 
 
 def new_book(lang: str = "DE", style: str | None = None, model: str = "qwen2.5:7b",
-             host: str = "http://localhost:11434") -> str:
+             host: str = "http://localhost:11434", backend: str = "ollama") -> str:
     """Stufe 1: neues Buch anlegen. Der Rahmen wird EINMAL eingefroren, danach nur angehaengt."""
     locale = load_locale(lang)
     styles = locale.get("styles", {})
@@ -499,15 +499,23 @@ def new_book(lang: str = "DE", style: str | None = None, model: str = "qwen2.5:7
         raise FileExistsError(f"Buch existiert bereits: {buch_dir}")
     os.makedirs(buch_dir)   # ohne exist_ok: ein Wettlauf soll auffallen, nicht still durchgehen
 
-    prolog = run_ollama_stream(build_prologue_prompt(meta, lang_name, style_name, style_desc,
-                                                     style_rules, core_rule),
-                               model=model, host=host)
+    t_start = time.monotonic()
+    details: dict = {}
+    prolog = erzeuge_text(build_prologue_prompt(meta, lang_name, style_name, style_desc,
+                                                style_rules, core_rule),
+                          model, host, backend=backend, details=details)
+    dauer = round(time.monotonic() - t_start, 1)
     if not prolog.strip():
         raise RuntimeError("Leerer Prolog vom Modell — Buch wird nicht angelegt.")
     write_new_file(os.path.join(buch_dir, "00_prolog.md"),
                    f'---\nbook_id: "{book_id}"\nchapter_index: 0\nchapter_title: "Prolog"\n'
                    f'article: ""\nlanguage: "{lang.upper()}"\nstyle: "{style_name}"\n'
-                   f'pov: "{meta["pov"]}"\n---\n\n' + prolog.strip() + "\n")
+                   f'pov: "{meta["pov"]}"\n'
+                   + (f'model: "{model}"\ngenre: "{style_name}"\nbackend: "{backend}"\n'
+                      f'duration_seconds: {dauer}\n'
+                      + (f'tokens_generated: {details["tokens_generated"]}\n'
+                         if details.get("tokens_generated") else ""))
+                   + '---\n\n' + prolog.strip() + "\n")
 
     buch_meta = {
         "book_id": book_id, "title": meta["title"], "pov": meta["pov"],
@@ -1047,7 +1055,8 @@ def main():
     if args.mode in ("new-book", "append-chapter"):
         try:
             if args.mode == "new-book":
-                book_id = new_book(lang=args.lang, style=args.book_style, model=args.model, host=host)
+                book_id = new_book(lang=args.lang, style=args.book_style, model=args.model,
+                                   host=host, backend=args.backend)
                 print(f"[Buchmodus] Buch angelegt: {os.path.join(BOOKS_DIR, book_id)}", flush=True)
             else:
                 pfad = append_chapter(book_id=args.book_id, lang=args.lang, model=args.model,
