@@ -179,8 +179,11 @@ def schreibe(pfad: str, daten: dict, dry_run: bool) -> None:
     if alt == text:
         print(f"  unveraendert: {pfad}")
         return
-    with open(pfad, "w", encoding="utf-8") as f:
+    # atomar: erst daneben schreiben, dann ersetzen - ein Abbruch hinterlaesst keine halbe Datei
+    tmp = pfad + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
         f.write(text)
+    os.replace(tmp, pfad)
     print(f"  geschrieben: {pfad} ({len(text)} B)")
 
 

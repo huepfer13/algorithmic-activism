@@ -491,8 +491,11 @@ def new_book(lang: str = "DE", style: str | None = None, model: str = "qwen2.5:7
 # --- Stufe 2: Kapitel anhaengen ("Unendliche Geschichte") ----------------------------------------
 DIALOG_ZEICHEN = ('"', '„', '“', '»', '«')
 EMOTIONS_VERBEN = ("flüsterte", "lächelte", "sagte", "nickte", "seufzte", "blickte", "lächeln", "flüstern")
-ABSCHLUSS_MARKER = ("fehlercode", "wartung", "intervall", "diagnose", "prüfung", "system", "abschnitt",
-                    "hinweis", "gefahr", "protokoll", "anweisung")
+ABSCHLUSS_MARKER = ("fehlercode", "wartung", "intervall", "diagnose", "prüfung", "protokoll", "abschnitt")
+# Weiche Woerter (system, gefahr, hinweis) flogen raus: sie kommen in normaler Prosa vor und
+# liessen narrative Schluesse durch (belegt 2026-10-12 an Kapitel 2, dessen Schlusssatz nur
+# ueber "System"/"Gefahr" bestand). Ein Sicherheitsblock ist die zweite zulaessige Form.
+SICHERHEITS_BLOECKE = ("[gefahr]", "[warnung]", "[hinweis]")
 
 
 def audit_manual_ending(text: str) -> tuple[bool, str]:
@@ -512,20 +515,25 @@ def audit_manual_ending(text: str) -> tuple[bool, str]:
     for v in EMOTIONS_VERBEN:
         if re.search(v, letzter, re.IGNORECASE):
             return False, f"Dialog-/Emotionsverb im Schlussabsatz ({v})"
-    if not any(m in letzter.lower() for m in ABSCHLUSS_MARKER):
-        return False, "kein technischer Abschlussmarker im Schlussabsatz"
-    return True, "Passed"
+    klein = letzter.lower()
+    marker = [m for m in ABSCHLUSS_MARKER if m in klein]
+    bloecke = [b for b in SICHERHEITS_BLOECKE if b in klein]
+    if not marker and not bloecke:
+        return False, ("kein harter Abschluss (Fehlercode/Wartung/Intervall/Diagnose/Pruefung/"
+                       "Protokoll/Abschnitt) und kein [GEFAHR]/[WARNUNG]/[HINWEIS]-Block")
+    return True, "Passed (" + "+".join(marker + bloecke) + ")"
 
 
 def erzeuge_mit_endschranke(prompt: str, model: str, host: str, style_flags: dict,
-                            label: str, versuche: int = 3) -> tuple[str, bool, str]:
+                            label: str, versuche: int = 3) -> tuple[str, bool, str, int]:
     """Generiert und prueft das Ende, solange das Genre es verlangt.
 
-    Rueckgabe (text, ende_ok, grund). Nach Ausschoepfung der Versuche wird der Text MIT Vermerk
+    Rueckgabe (text, ende_ok, grund, gebrauchte_versuche). Nach Ausschoepfung wird der Text MIT Vermerk
     geliefert: kein stiller Durchlauf, aber auch kein Totalverlust.
     """
     if not style_flags.get("manual_ending"):
-        return run_ollama_stream(prompt, model=model, host=host), True, "nicht geprueft (Stil ohne Endschranke)"
+        return (run_ollama_stream(prompt, model=model, host=host), True,
+                "nicht geprueft (Stil ohne Endschranke)", 0)
     text, grund = "", ""
     for i in range(1, versuche + 1):
         text = run_ollama_stream(prompt, model=model, host=host)
@@ -533,8 +541,8 @@ def erzeuge_mit_endschranke(prompt: str, model: str, host: str, style_flags: dic
         print(f"  [{label}] Versuch {i}/{versuche}: Endschranke "
               f"{'erfuellt' if ok else 'VERFEHLT'} ({grund})", flush=True)
         if ok:
-            return text, True, grund
-    return text, False, grund
+            return text, True, grund, i
+    return text, False, grund, versuche
 
 
 def naechstes_buch() -> str:
@@ -608,7 +616,7 @@ def append_chapter(book_id: str | None = None, lang: str | None = None, model: s
     prompt = build_chapter_prompt(meta, lang_name, style_name, style_desc, style_rules, core_rule,
                                   index, artikel, art["body"], vorgaenger, vorherige)
     print(f"[Kapitel {index}] Buch '{book_id}' | Artikel {artikel} | Vorgaenger {vorherige}", flush=True)
-    text, ende_ok, grund = erzeuge_mit_endschranke(prompt, model, host, style_flags,
+    text, ende_ok, grund, versuche = erzeuge_mit_endschranke(prompt, model, host, style_flags,
                                                    f"Kapitel {index}", versuche=3)
     if not text.strip():
         raise RuntimeError("Leere Antwort vom Modell — Kapitel wird nicht geschrieben.")
@@ -616,8 +624,9 @@ def append_chapter(book_id: str | None = None, lang: str | None = None, model: s
     titel = extract_title(text)
     # BEIDE Faelle markieren: ein Erfolg ohne Flag ist fuer Downstream-Parser (Index-Builder,
     # Monitoring) nicht von "nie geprueft" zu unterscheiden.
-    marke = (f'manual_ending_ok: true\nmanual_ending_note: "{grund}"\n' if ende_ok
-             else f'manual_ending_ok: false\nmanual_ending_note: "{grund}"\n')
+    marke = (f'manual_ending_ok: {"true" if ende_ok else "false"}\n'
+             f'manual_ending_attempts: {versuche}\n'
+             f'manual_ending_note: "{grund}"\n')
     datei = f"{index:02d}_{artikel}_{sanitize_filename(titel).lower()[:40]}.md"
     pfad = write_new_file(os.path.join(buch_dir, datei),
                           f'---\nbook_id: "{book_id}"\nchapter_index: {index}\n'
