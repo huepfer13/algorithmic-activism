@@ -1986,7 +1986,7 @@
       "pov": "third_person",
       "setting_summary": "Etymologische Miniaturen zu gefluegelten Worten.",
       "characters": [],
-      "chapter_count": 9,
+      "chapter_count": 10,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1996,10 +1996,11 @@
         "art_06",
         "art_07",
         "art_08",
-        "art_09"
+        "art_09",
+        "art_10"
       ],
-      "words": 3369,
-      "reading_minutes": 17,
+      "words": 3701,
+      "reading_minutes": 19,
       "cover": null,
       "chapters": [
         {
@@ -2180,6 +2181,24 @@
           "genre": "Sprichwoerter",
           "leak_free": "true",
           "words": 347,
+          "reading_minutes": 2
+        },
+        {
+          "file": "10_art_10_abschnitt_10_der_griff_im_nullpunkt.md",
+          "index": 10,
+          "title": "Abschnitt 10: Der Griff im Nullpunkt",
+          "article": "art_10",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "17.4",
+          "jaccard_max": "0.048",
+          "tokens_generated": "1952",
+          "manual_ending_code": "V-10-10",
+          "backend": "openrouter",
+          "genre": "Sprichwoerter",
+          "leak_free": "true",
+          "words": 332,
           "reading_minutes": 2
         }
       ]
