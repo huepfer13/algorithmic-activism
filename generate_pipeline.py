@@ -758,6 +758,39 @@ def archiv_artefakt(buch_dir: str, kapitel_index: int, book_id: str) -> str | No
             + " ".join(saetze[:2]).strip() + '"')
 
 
+# Woertliche Instruktionen aus UNSEREN Prompts. Belegt 2026-10-12 (Issue #5): das freie
+# nemotron-3.5-lightning kopierte den Schlusssatz des Prompts (generate_pipeline.py, Prompt-Bauer)
+# unveraendert ins Kapitel. Die Liste stammt daher aus dem Code, nicht aus geratenen Stichwoertern.
+PROMPT_VERBOTE = (
+    "Der vorherige Abschnitt ist abgeschlossen",
+    "Wiederhole seinen Wortlaut nicht",
+    "nenne kein anderes Aktenzeichen",
+    "Pflichtblock",
+    "Ausgabeformat",
+)
+
+# Funktionswoerter fuer die Sprachpruefung. Kalibriert gegen bekannte Kapitel (2026-10-12):
+# deutsche Kapitel 91-96 Prozent Sicherheit, das gemeldete englische 92, EN-Prolog 100.
+SPRACH_DE = frozenset(("der die das und nicht ist ein eine mit sich dem den des wird werden auch aber "
+                       "auf von zu im in wurde sind dass als nach bei").split())
+SPRACH_EN = frozenset(("the and of to a is in that it for on with as are this be by not or was were "
+                       "his her had from at but they").split())
+
+
+def textsprache(text: str) -> tuple[str, int, int, float]:
+    """Grobe Sprachbestimmung ueber Funktionswoerter: (Code, de, en, Sicherheit).
+
+    Kein Linguistik-Ersatz, aber mechanisch pruefbar und gegen den Bestand kalibriert. Kurze Texte
+    (< 20 Treffer) gelten als unsicher und werden nicht bewertet.
+    """
+    woerter = [w.lower().strip(".,;:!?\"'()[]") for w in text.split()]
+    de = sum(1 for w in woerter if w in SPRACH_DE)
+    en = sum(1 for w in woerter if w in SPRACH_EN)
+    gesamt = de + en
+    sicher = (max(de, en) / gesamt) if gesamt else 0.0
+    return ("DE" if de > en else "EN"), de, en, sicher
+
+
 def block_code(block: str) -> str:
     """Der kapitelgebundene Kennbezeichner eines Pflichtblocks — EINZIGE Quelle fuer Muster,
     Trace, Frontmatter und Leck-Pruefung.
@@ -885,7 +918,8 @@ def ist_wiederholung(schluss: str, vorgaenger: list, schwelle: float = SCHWELLE_
 
 
 def audit_manual_ending(text: str, erwarteter_block: str | None = None,
-                        style_flags: dict | None = None) -> tuple[bool, str]:
+                        style_flags: dict | None = None,
+                        sprache: str | None = None) -> tuple[bool, str]:
     """Mechanische Endschranke fuer Sach-/Handbuchgenres: prueft NUR den letzten Absatz.
 
     Grund (gemessen 2026-10-12): der Prompt-Bann hielt das Modell von Moral-Bekenntnissen ab — es
@@ -928,6 +962,17 @@ def audit_manual_ending(text: str, erwarteter_block: str | None = None,
         if falsch:
             return False, (f"Strophenform verletzt: {falsch[0][0]} Zeilen statt {verse} "
                            f"(\"{falsch[0][1]}...\")")
+    # Prompt-Leck: unsere eigenen Instruktionen duerfen nicht im Artefakt landen (Issue #5).
+    for verboten in PROMPT_VERBOTE:
+        if verboten.lower() in text.lower():
+            return False, (f"Prompt-Fragment im Kapiteltext (\"{verboten}\") — "
+                           "die Anweisung wurde als Erzaehltext uebernommen")
+    # Sprache: ein Kapitel muss in der Sprache des Buchs geschrieben sein.
+    if sprache:
+        erkannt, de, en, sicher = textsprache(text)
+        if (de + en) >= 20 and erkannt != sprache.upper() and sicher >= 0.6:
+            return False, (f"Sprache verletzt: Kapitel ist {erkannt} ({de} deutsche vs. {en} englische "
+                           f"Funktionswoerter, {sicher * 100:.0f}%), erwartet {sprache.upper()}")
     if not erlaube_emotion:
         erzaehlend = [w for w in ("flüster", "lächel", "seufz", "nickt", "kicher", "stöhnt")
                       if w in text.lower()]
@@ -994,7 +1039,8 @@ def erzeuge_mit_endschranke(prompt: str, model: str, host: str, style_flags: dic
                             vorgaenger_schluesse: list | None = None,
                             erwarteter_block: str | None = None,
                             details: dict | None = None,
-                            backend: str = "ollama") -> tuple[str, bool, str, int]:
+                            backend: str = "ollama",
+                            sprache: str | None = None) -> tuple[str, bool, str, int]:
     """Generiert und prueft das Ende, solange das Genre es verlangt.
 
     Rueckgabe (text, ende_ok, grund, gebrauchte_versuche). Nach Ausschoepfung wird der Text MIT Vermerk
@@ -1007,7 +1053,7 @@ def erzeuge_mit_endschranke(prompt: str, model: str, host: str, style_flags: dic
     for i in range(1, versuche + 1):
         text = erzeuge_text(prompt, model, host, backend=backend, details=details)
         ok, grund = audit_manual_ending(text, erwarteter_block=erwarteter_block,
-                                        style_flags=style_flags)
+                                        style_flags=style_flags, sprache=sprache)
         if ok and vorgaenger_schluesse:
             # Nur die Prosa vergleichen: der Pflichtblock ist per Kapitelcode eindeutig und darf
             # nicht als "Wiederholung" gelten.
@@ -1067,7 +1113,8 @@ def naechster_artikel(lang: str, covered: list) -> str | None:
 
 
 def append_chapter(book_id: str | None = None, lang: str | None = None, model: str = "qwen2.5:7b",
-                   host: str = "http://localhost:11434", backend: str = "ollama") -> str:
+                   host: str = "http://localhost:11434", backend: str = "ollama",
+                   artikel: str | None = None) -> str:
     """Stufe 2: naechstes Kapitel anhaengen — deterministisch, kollisionssicher, mit Endschranke."""
     book_id = book_id or naechstes_buch()
     buch_dir = os.path.join(BOOKS_DIR, book_id)
@@ -1104,7 +1151,13 @@ def append_chapter(book_id: str | None = None, lang: str | None = None, model: s
             covered.append(treffer.group(1))
     index = len([k for k in kapitel if k != "00_prolog.md"]) + 1
 
-    artikel = naechster_artikel(sprache, covered)
+    # Expliziter Artikel schlaegt die Automatik: beim Ersetzen eines Kapitels muss der verhandelte
+    # Artikel erhalten bleiben (belegt 2026-10-12, Kapitel 11 rutschte sonst auf art_07).
+    if artikel:
+        if not re.fullmatch(r"art_\d{2}", artikel):
+            raise ValueError(f"ungueltiger Artikel '{artikel}' — erwartet art_NN")
+        covered = [c for c in covered if c != artikel]
+    artikel = artikel or naechster_artikel(sprache, covered)
     if not artikel:
         raise RuntimeError(f"Alle Artikel in '{book_id}' verhandelt — neues Buch per --mode new-book.")
 
@@ -1134,6 +1187,7 @@ def append_chapter(book_id: str | None = None, lang: str | None = None, model: s
     t_start = time.monotonic()
     details: dict = {}
     text, ende_ok, grund, versuche = erzeuge_mit_endschranke(prompt, model, host, style_flags,
+                                        sprache=sprache,
                                                              label=f"Kapitel {index}", versuche=3,
                                                              vorgaenger_schluesse=vorgaenger_schluesse,
                                                              erwarteter_block=block, details=details,
@@ -1242,7 +1296,7 @@ def main():
                 print(f"[Buchmodus] Prolog ergaenzt: {pfad}", flush=True)
             else:
                 pfad = append_chapter(book_id=args.book_id, lang=args.lang, model=args.model,
-                                      host=host, backend=args.backend)
+                                      host=host, backend=args.backend, artikel=args.article)
                 print(f"[Buchmodus] Kapitel angehaengt: {pfad}", flush=True)
                 # Monitoring: ein Kapitel, das die Endschranke NICHT passiert hat, ist ein Fallback.
                 # Ohne eigenen Exit-Code bleibt das in CI/Langfuse unsichtbar (Exit 1 = Abbruch ohne Datei).
