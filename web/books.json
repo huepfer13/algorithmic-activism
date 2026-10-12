@@ -45,6 +45,7 @@
           "duration_seconds": "",
           "jaccard_max": "",
           "tokens_generated": "",
+          "manual_ending_code": "",
           "leak_free": "",
           "words": 382,
           "reading_minutes": 2
@@ -60,6 +61,7 @@
           "duration_seconds": "",
           "jaccard_max": "",
           "tokens_generated": "",
+          "manual_ending_code": "",
           "leak_free": "",
           "words": 563,
           "reading_minutes": 3
@@ -75,6 +77,7 @@
           "duration_seconds": "",
           "jaccard_max": "",
           "tokens_generated": "",
+          "manual_ending_code": "",
           "leak_free": "",
           "words": 790,
           "reading_minutes": 4
@@ -90,6 +93,7 @@
           "duration_seconds": "",
           "jaccard_max": "",
           "tokens_generated": "",
+          "manual_ending_code": "",
           "leak_free": "",
           "words": 700,
           "reading_minutes": 4
@@ -105,6 +109,7 @@
           "duration_seconds": "",
           "jaccard_max": "",
           "tokens_generated": "",
+          "manual_ending_code": "",
           "leak_free": "",
           "words": 558,
           "reading_minutes": 3
@@ -120,6 +125,7 @@
           "duration_seconds": "",
           "jaccard_max": "",
           "tokens_generated": "",
+          "manual_ending_code": "",
           "leak_free": "",
           "words": 530,
           "reading_minutes": 3
@@ -135,6 +141,7 @@
           "duration_seconds": "",
           "jaccard_max": "",
           "tokens_generated": "",
+          "manual_ending_code": "E-12-06",
           "leak_free": "",
           "words": 566,
           "reading_minutes": 3
@@ -150,6 +157,7 @@
           "duration_seconds": "",
           "jaccard_max": "",
           "tokens_generated": "",
+          "manual_ending_code": "E-14-07",
           "leak_free": "",
           "words": 372,
           "reading_minutes": 2
@@ -165,6 +173,7 @@
           "duration_seconds": "",
           "jaccard_max": "",
           "tokens_generated": "",
+          "manual_ending_code": "E-19-08",
           "leak_free": "",
           "words": 462,
           "reading_minutes": 2
@@ -180,6 +189,7 @@
           "duration_seconds": "",
           "jaccard_max": "",
           "tokens_generated": "",
+          "manual_ending_code": "E-26-09",
           "leak_free": "",
           "words": 392,
           "reading_minutes": 2
@@ -195,6 +205,7 @@
           "duration_seconds": "",
           "jaccard_max": "",
           "tokens_generated": "",
+          "manual_ending_code": "E-02-10",
           "leak_free": "",
           "words": 550,
           "reading_minutes": 3
@@ -210,6 +221,7 @@
           "duration_seconds": "438.2",
           "jaccard_max": "0.111",
           "tokens_generated": "1700",
+          "manual_ending_code": "E-06-11",
           "leak_free": "true",
           "words": 668,
           "reading_minutes": 3

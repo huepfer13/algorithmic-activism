@@ -1273,6 +1273,7 @@
         'Buch: ' + b.book_id,
         'Kapitel: ' + ch.file + ' (' + chapterLabel(ch) + ')',
         'Artikel: ' + (ch.article || 'ohne'),
+        'Code: ' + (ch.manual_ending_code || 'ohne'),
         'Audit: ' + audit + (ch.attempts ? ' (' + bt('book_attempts', 'Versuche') + ': ' + ch.attempts + ')' : '')
       ].join('\n');
       // Erzeugungs-Metriken mitgeben: der Meldende hat sie im Reader vor sich, und die Triage
