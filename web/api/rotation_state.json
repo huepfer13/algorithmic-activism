@@ -69,7 +69,8 @@
     "r7:deepseek-chat:buch_015_das_kochbuch_der_allmende",
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_016_faden_der_gelassenheit",
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_017_des_volkes_mund",
-    "r7:apodex/apodex-1.1-mini:free:buch_018_rhymes_of_the_commons"
+    "r7:apodex/apodex-1.1-mini:free:buch_018_rhymes_of_the_commons",
+    "r8:deepseek-chat:buch_015_das_kochbuch_der_allmende"
   ],
   "runden": {
     "1": [
@@ -1058,6 +1059,21 @@
         "tokens": "7322",
         "versuche": "1",
         "woerter": 293
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_015_das_kochbuch_der_allmende",
+        "code": "C-08-08",
+        "datei": "08_art_08_abschnitt_8_die_zentrale_verwahrung.md",
+        "dauer_s": "6.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 8,
+        "tokens": "723",
+        "versuche": "1",
+        "woerter": 349
       }
     ],
     "9": [
