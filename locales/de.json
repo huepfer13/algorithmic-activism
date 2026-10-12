@@ -132,7 +132,8 @@
   },
   "style_flags": {
     "Gerätehandbuch": {
-      "manual_ending": true
+      "manual_ending": true,
+      "figuren_verboten": true
     },
     "Märchen": {
       "manual_ending": true,
@@ -249,7 +250,8 @@
         "EINGETRAGEN",
         "BESTAETIGT"
       ],
-      "block_schema": "**[PROKLAMATION: {zustand} | REGISTER: {code}]**"
+      "block_schema": "**[PROKLAMATION: {zustand} | REGISTER: {code}]**",
+      "figuren_verboten": true
     },
     "Tagebuch": {
       "manual_ending": true,
@@ -288,7 +290,8 @@
         "GETEILT",
         "GERUESTET"
       ],
-      "block_schema": "**[KUECHE: {zustand} | REZEPT: {code}]**"
+      "block_schema": "**[KUECHE: {zustand} | REZEPT: {code}]**",
+      "figuren_verboten": true
     },
     "Lebensweisheiten": {
       "manual_ending": true,
@@ -301,7 +304,8 @@
         "GEPRUEFT",
         "BEWAHRT"
       ],
-      "block_schema": "**[EINBLICK: {zustand} | WEISHEIT: {code}]**"
+      "block_schema": "**[EINBLICK: {zustand} | WEISHEIT: {code}]**",
+      "figuren_verboten": true
     },
     "Sprichwoerter": {
       "manual_ending": true,
