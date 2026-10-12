@@ -751,13 +751,14 @@
         "Angeklagter Tomas Reiter",
         "Zeugin Elif Sarikaya"
       ],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_02"
+        "art_02",
+        "art_03"
       ],
-      "words": 1605,
-      "reading_minutes": 8,
+      "words": 1943,
+      "reading_minutes": 10,
       "cover": null,
       "chapters": [
         {
@@ -813,6 +814,24 @@
           "leak_free": "",
           "words": 514,
           "reading_minutes": 3
+        },
+        {
+          "file": "03_art_03_abschnitt_3_die_kalibrierung_des_atmens.md",
+          "index": 3,
+          "title": "Abschnitt 3: Die Kalibrierung des Atmens",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "0",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "32.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1278",
+          "manual_ending_code": "E-03-03",
+          "backend": "openrouter",
+          "genre": "Gerichtsdrama",
+          "leak_free": "",
+          "words": 338,
+          "reading_minutes": 2
         }
       ]
     },
