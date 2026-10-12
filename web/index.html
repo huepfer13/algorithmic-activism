@@ -6,7 +6,10 @@
   <title>Algorithmic Activism — Synthetischer Menschenrechte-Korpus</title>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
+    /* Dunkel ist der Vorgabewert; das helle Theme setzt genau dieselben Variablennamen.
+       Der Umschalter schreibt data-theme auf <html>. */
     :root {
+      color-scheme: dark;
       --bg: #0b0f19;
       --sidebar-bg: #111827;
       --card-bg: #1f2937;
@@ -18,6 +21,53 @@
       --border: #374151;
       --success: #34d399;
       --danger: #f87171;
+      --search-bg: #0d131f;
+      --tag-bg: #374151;
+      --item-active-bg: #1e3a5f;
+      --btn-bg: #0369a1;
+      --btn-bg-hover: #075985;
+    }
+    :root[data-theme="light"] {
+      color-scheme: light;
+      --bg: #f6f8fb;
+      --sidebar-bg: #ffffff;
+      --card-bg: #eef2f7;
+      --card-hover: #dde6f0;
+      --text: #0f172a;
+      --text-prose: #1f2937;
+      --muted: #4b5563;
+      --accent: #0369a1;
+      --border: #cbd5e1;
+      --success: #047857;
+      --danger: #b91c1c;
+      --search-bg: #f1f5f9;
+      --tag-bg: #dbe3ec;
+      --item-active-bg: #dbeafe;
+      --btn-bg: #0369a1;
+      --btn-bg-hover: #075985;
+    }
+    /* Fallback OHNE JavaScript: Systemwunsch "hell" greift nur, solange nichts gewaehlt wurde.
+       Sobald der Umschalter laeuft, steht data-theme immer explizit auf <html>. */
+    @media (prefers-color-scheme: light) {
+      :root:not([data-theme]) {
+        color-scheme: light;
+        --bg: #f6f8fb;
+        --sidebar-bg: #ffffff;
+        --card-bg: #eef2f7;
+        --card-hover: #dde6f0;
+        --text: #0f172a;
+        --text-prose: #1f2937;
+        --muted: #4b5563;
+        --accent: #0369a1;
+        --border: #cbd5e1;
+        --success: #047857;
+        --danger: #b91c1c;
+        --search-bg: #f1f5f9;
+        --tag-bg: #dbe3ec;
+        --item-active-bg: #dbeafe;
+        --btn-bg: #0369a1;
+        --btn-bg-hover: #075985;
+      }
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -44,22 +94,25 @@
     }
     .header h1 { font-size: 1.15rem; color: var(--accent); margin-bottom: 4px; font-weight: 700; }
     .header-desc { font-size: 0.8rem; color: var(--muted); margin-bottom: 10px; }
+    .header-actions { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
     .download-btn {
       display: inline-flex;
       align-items: center;
       gap: 6px;
       font-size: 0.75rem;
       padding: 5px 10px;
-      background: #0284c7;
+      background: var(--btn-bg);
       color: #fff;
       text-decoration: none;
       border-radius: 4px;
       font-weight: 600;
       transition: background 0.15s;
     }
-    .download-btn:hover { background: #0369a1; }
-    .about-btn { background: #374151; margin-left: 6px; }
+    .download-btn:hover { background: var(--btn-bg-hover); }
+    .about-btn { background: #374151; }
     .about-btn:hover { background: #4b5563; }
+    button.download-btn { border: none; font-family: inherit; cursor: pointer; }
+    .lang-select { font-size: 0.75rem; padding: 5px 8px; max-width: 150px; }
 
     /* Filter */
     .search-box {
@@ -68,7 +121,7 @@
       display: flex;
       gap: 8px;
       flex-direction: column;
-      background: #0d131f;
+      background: var(--search-bg);
     }
     input, select {
       background: var(--card-bg);
@@ -80,6 +133,23 @@
       outline: none;
     }
     input:focus, select:focus { border-color: var(--accent); }
+    .filter-row { display: flex; gap: 6px; }
+    .filter-row > input, .filter-row > select { flex: 1; min-width: 0; }
+    .random-btn {
+      flex: 0 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 6px;
+      padding: 8px 10px;
+      font-size: 0.8rem;
+      font-family: inherit;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .random-btn:hover { background: var(--card-hover); border-color: var(--accent); }
+    .result-count { font-size: 0.75rem; color: var(--muted); }
+    .result-count.empty { color: var(--danger); }
 
     /* Liste */
     #tales-list { flex: 1; overflow-y: auto; padding: 10px; }
@@ -93,10 +163,11 @@
       transition: all 0.15s;
     }
     .tale-item:hover { background: var(--card-hover); }
-    .tale-item.active { border-color: var(--accent); background: #1e3a5f; }
+    .tale-item.active { border-color: var(--accent); background: var(--item-active-bg); }
     .tale-title { font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; line-height: 1.3; }
     .tale-meta { font-size: 0.75rem; color: var(--muted); display: flex; gap: 6px; flex-wrap: wrap; }
-    .tag { background: #374151; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; }
+    .tag { background: var(--tag-bg); padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; }
+    .list-empty { color: var(--muted); padding: 16px; text-align: center; font-size: 0.85rem; }
 
     /* Reader */
     #main-content {
@@ -204,23 +275,34 @@
       body { flex-direction: column; height: auto; overflow: visible; }
       #sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--border); height: 45vh; }
       #main-content { padding: 24px 16px; }
+      .filter-row { flex-wrap: wrap; }
     }
   </style>
 </head>
 <body>
   <aside id="sidebar">
     <div class="header">
-      <h1>Algorithmic Activism</h1>
+      <h1 data-i18n="hero_title">Algorithmic Activism</h1>
+      <p class="header-desc" id="header-tagline" data-i18n="hero_subtitle">Synthetischer Menschenrechte-Korpus</p>
       <p class="header-desc" id="stats-summary">Lade Korpus...</p>
-      <a href="./dataset.jsonl" download id="download-link" class="download-btn">⬇ dataset.jsonl herunterladen</a>
-      <a href="#" id="about-link" class="download-btn about-btn">Über das Projekt</a>
+      <div class="header-actions">
+        <a href="./dataset.jsonl" download id="download-link" class="download-btn" data-i18n="download_button">⬇ dataset.jsonl herunterladen</a>
+        <a href="#" id="about-link" class="download-btn about-btn" data-i18n="about_button">Über das Projekt</a>
+        <button type="button" id="theme-toggle" class="download-btn about-btn" data-i18n-title="theme_title" title="Hell/Dunkel umschalten">☾ Dunkel</button>
+        <select id="ui-lang-select" class="lang-select" data-i18n-aria="lang_selector_label" aria-label="Oberflächensprache" hidden></select>
+      </div>
     </div>
     <div class="search-box">
-      <input type="text" id="filter-input" placeholder="Titel, Volltext oder Modell suchen...">
-      <div style="display: flex; gap: 6px;">
-        <select id="style-select" style="flex: 1;"><option value="">Alle Stile</option></select>
-        <select id="article-select" style="flex: 1;"><option value="">Alle Artikel</option></select>
+      <div class="filter-row">
+        <input type="text" id="filter-input" data-i18n-ph="filter_placeholder" placeholder="Titel, Volltext oder Modell suchen...">
+        <button type="button" id="random-btn" class="random-btn" data-i18n="random_tale" data-i18n-title="random_tale_title" title="Zufällige Geschichte aus der aktuellen Auswahl">🎲 Zufall</button>
       </div>
+      <div class="filter-row">
+        <select id="language-select" data-i18n-aria="label_language" aria-label="Sprache"><option value="">Alle Sprachen</option></select>
+        <select id="article-select" data-i18n-aria="label_article" aria-label="Artikel"><option value="">Alle Artikel</option></select>
+        <select id="style-select" data-i18n-aria="label_style" aria-label="Stil"><option value="">Alle Stile</option></select>
+      </div>
+      <div id="result-count" class="result-count" aria-live="polite" data-hits="0" data-total="0">Lade Korpus...</div>
     </div>
     <div id="tales-list"></div>
   </aside>
@@ -261,6 +343,252 @@
   </main>
 
   <script>
+    // ---- UI-Sprache (i18n) -------------------------------------------------------------
+    // Woerterbuch: web/ui-locales.json (Oberflaechen-Texte). NICHT locales/<lang>.json —
+    // das sind die DATEN-Locales der Pipeline und bleiben unangetastet.
+    // Aufloesung je Schluessel: gewaehlte Sprache -> 'en' -> deutsches Literal.
+    // Ein leerer String ist nie ein Ergebnis (nie leere Beschriftung, nie erfundener Text).
+    const I18N_KEY = 'aa-lang';
+    const I18N_FILE = './ui-locales.json';
+    let LOCALES = null;          // null = Woerterbuch nicht ladbar (file://, offline) -> deutsche Literale
+    let LANG = 'de';             // aktive Oberflaechensprache
+    let UI = {};                 // aufgeloeste Texte der aktuellen Sprache (Andockstelle aus Karte D3)
+    let datasetLoaded = false;
+    let datasetKb = 0;
+    let currentTaleIndex = -1;   // -1 = Ueber-Block sichtbar
+
+    // Deutsche Literale = letzte Rueckfallebene (Wortlaut wie vor Karte E).
+    // Gilt nur, wenn ein Schluessel WEDER in der gewaehlten Sprache NOCH in 'en' steht.
+    const UI_DEFAULTS = {
+      heroTitle: 'Algorithmic Activism',
+      heroSubtitle: 'Synthetischer Menschenrechte-Korpus',
+      docTitle: 'Algorithmic Activism \u2014 Synthetischer Menschenrechte-Korpus',
+      allLanguages: 'Alle Sprachen',
+      allArticles: 'Alle Artikel',
+      allStyles: 'Alle Stile',
+      allGeneric: 'Alle',
+      noValue: 'ohne Angabe',
+      noTitle: '(ohne Titel)',
+      emptyList: 'Keine passenden Narrative gefunden.',
+      randomEmpty: 'Zufall: keine Auswahl \u2014 Filter zuerst lockern.',
+      loading: 'Lade Korpus...',
+      loadError: 'Fehler beim Laden des Datensatzes',
+      themeTitle: 'Hell/Dunkel umschalten',
+      themeLightLabel: '\u2600\ufe0e Hell',
+      themeDarkLabel: '\u263e Dunkel',
+      provenanceHeader: 'Provenienz & Audit',
+      proArticle: 'UN-Artikel',
+      proStyle: 'Stil',
+      proModel: 'Inferenz-Modell',
+      proWords: 'Umfang',
+      proOrigin: 'Herkunft',
+      provMissingMeta: 'Altbestand (kein meta-Block)',
+      provNoYaml: 'Altbestand (kein YAML-Kopf)',
+      provYaml: 'YAML-Frontmatter',
+      provUnknown: 'Herkunft unklar',
+      auditOk: '\u2713 Harm Reduction validiert',
+      auditQuarantine: '\u26a0 Quarantaene',
+      auditNone: '\u2013 nicht auditiert (Altbestand)',
+      countAllTpl: '{total} Narrative',
+      countFilteredTpl: '{hits} von {total} Narrativen',
+      statsSummaryTpl: '{total} Narrative ({kb} KB)',
+      wordsApproxTpl: '~{n} W\u00f6rter'
+    };
+
+    // tOr() liefert null, wenn der Schluessel weder in der gewaehlten Sprache noch in 'en' steht.
+    function tOr(key) {
+      if (!LOCALES || !LOCALES.strings) return null;
+      const cur = LOCALES.strings[LANG];
+      if (cur && typeof cur[key] === 'string' && cur[key] !== '') return cur[key];
+      const en = LOCALES.strings['en'];
+      if (en && typeof en[key] === 'string' && en[key] !== '') return en[key];
+      return null;
+    }
+    function t(key, fallback) {
+      const v = tOr(key);
+      if (v !== null) return v;
+      return (typeof fallback === 'string') ? fallback : '';
+    }
+    // Sammel-Optionen: spezifischer Schluessel (gewaehlte Sprache -> en) -> generisches filter_all -> deutsches Literal.
+    function allLabel(specificKey, germanLiteral) {
+      return t(specificKey, t('filter_all', germanLiteral || UI_DEFAULTS.allGeneric));
+    }
+    function fmt(tpl, vars) {
+      return String(tpl).replace(/\{(\w+)\}/g, (m, k) => (Object.prototype.hasOwnProperty.call(vars, k) ? String(vars[k]) : m));
+    }
+    function buildUI() {
+      UI = {
+        heroTitle: t('hero_title', UI_DEFAULTS.heroTitle),
+        heroSubtitle: t('hero_subtitle', UI_DEFAULTS.heroSubtitle),
+        docTitle: t('doc_title', UI_DEFAULTS.docTitle),
+        allLanguages: allLabel('filter_all_language', UI_DEFAULTS.allLanguages),
+        allArticles: allLabel('filter_all_article', UI_DEFAULTS.allArticles),
+        allStyles: allLabel('filter_all_style', UI_DEFAULTS.allStyles),
+        noValue: t('no_value', UI_DEFAULTS.noValue),
+        noTitle: t('no_title', UI_DEFAULTS.noTitle),
+        emptyList: t('empty_list', UI_DEFAULTS.emptyList),
+        randomEmpty: t('random_empty', UI_DEFAULTS.randomEmpty),
+        loading: t('loading', UI_DEFAULTS.loading),
+        loadError: t('load_error', UI_DEFAULTS.loadError),
+        themeTitle: t('theme_title', UI_DEFAULTS.themeTitle),
+        themeLightLabel: t('theme_light_label', UI_DEFAULTS.themeLightLabel),
+        themeDarkLabel: t('theme_dark_label', UI_DEFAULTS.themeDarkLabel),
+        provenanceHeader: t('provenance_header', UI_DEFAULTS.provenanceHeader),
+        proArticle: t('pro_article', UI_DEFAULTS.proArticle),
+        proStyle: t('pro_style', UI_DEFAULTS.proStyle),
+        proModel: t('pro_model', UI_DEFAULTS.proModel),
+        proWords: t('pro_words', UI_DEFAULTS.proWords),
+        proOrigin: t('pro_origin', UI_DEFAULTS.proOrigin),
+        provMissingMeta: t('prov_missing_meta', UI_DEFAULTS.provMissingMeta),
+        provNoYaml: t('prov_no_yaml', UI_DEFAULTS.provNoYaml),
+        provYaml: t('prov_yaml', UI_DEFAULTS.provYaml),
+        provUnknown: t('prov_unknown', UI_DEFAULTS.provUnknown),
+        auditOk: t('audit_ok', UI_DEFAULTS.auditOk),
+        auditQuarantine: t('audit_quarantine', UI_DEFAULTS.auditQuarantine),
+        auditNone: t('audit_none', UI_DEFAULTS.auditNone),
+        countAll: (total) => fmt(t('count_all', UI_DEFAULTS.countAllTpl), { total }),
+        countFiltered: (hits, total) => fmt(t('count_filtered', UI_DEFAULTS.countFilteredTpl), { hits, total }),
+        statsSummary: (total, kb) => fmt(t('stats_summary', UI_DEFAULTS.statsSummaryTpl), { total, kb }),
+        wordsApprox: (n) => fmt(t('words_approx', UI_DEFAULTS.wordsApproxTpl), { n })
+      };
+    }
+    buildUI();   // ab dem ersten Statement gelten deutsche Literale; das Woerterbuch ersetzt sie nach dem Laden.
+
+    // Statische Beschriftungen aus dem Markup tragen data-i18n / data-i18n-ph / -title / -aria.
+    // Der deutsche Originaltext des Knotens wird EINMAL als letzte Rueckfallebene gesichert.
+    const I18N_ATTRS = [['data-i18n-ph', 'placeholder'], ['data-i18n-title', 'title'], ['data-i18n-aria', 'aria-label']];
+    function applyMarkupStrings() {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        if (!el.hasAttribute('data-i18n-de')) el.setAttribute('data-i18n-de', el.textContent || '');
+        const v = t(el.getAttribute('data-i18n'), el.getAttribute('data-i18n-de'));
+        if (v) el.textContent = v;   // nie leeren Text schreiben
+      });
+      I18N_ATTRS.forEach(pair => {
+        document.querySelectorAll('[' + pair[0] + ']').forEach(el => {
+          const store = pair[0] + '-de';
+          if (!el.hasAttribute(store)) el.setAttribute(store, el.getAttribute(pair[1]) || '');
+          const v = t(el.getAttribute(pair[0]), el.getAttribute(store));
+          if (v) el.setAttribute(pair[1], v);
+        });
+      });
+    }
+    const browserLang = (navigator.language || navigator.userLanguage || '').toString();
+    function availableLangs() {
+      if (LOCALES && Array.isArray(LOCALES.languages) && LOCALES.languages.length) {
+        return LOCALES.languages.map(l => l && l.code).filter(Boolean);
+      }
+      return ['de'];
+    }
+    // Startsprache: gespeicherte Wahl -> navigator.language ohne Region (de-AT -> de) -> 'en' -> erste Sprache.
+    function detectLang() {
+      const avail = availableLangs();
+      let stored = null;
+      try { stored = window.localStorage.getItem(I18N_KEY); } catch (e) { stored = null; }
+      if (stored && avail.indexOf(stored) !== -1) return stored;
+      const base = browserLang.toLowerCase().split('-')[0];
+      if (base && avail.indexOf(base) !== -1) return base;
+      return (avail.indexOf('en') !== -1) ? 'en' : avail[0];
+    }
+    function fillLangSelect() {
+      const sel = document.getElementById('ui-lang-select');
+      if (!sel) return;
+      if (!LOCALES) { sel.hidden = true; return; }   // ohne Woerterbuch bleibt nur die deutsche Oberflaeche
+      sel.textContent = '';
+      LOCALES.languages.forEach(l => {
+        const opt = document.createElement('option');
+        opt.value = l.code;
+        opt.textContent = l.native || l.code;        // Sprachnamen immer nativ
+        sel.appendChild(opt);
+      });
+      sel.value = LANG;
+      sel.hidden = false;
+    }
+    function applyLanguage(code) {
+      LANG = code;
+      // lang mitziehen: Screenreader, Silbentrennung; dir fuer RTL (ar).
+      document.documentElement.setAttribute('lang', code);
+      document.documentElement.setAttribute('dir', (code === 'ar') ? 'rtl' : 'ltr');
+      document.title = t('doc_title', UI_DEFAULTS.docTitle);
+      buildUI();
+      applyMarkupStrings();
+      applyTheme(document.documentElement.getAttribute('data-theme') || 'dark');
+      const sel = document.getElementById('ui-lang-select');
+      if (sel && !sel.hidden) sel.value = code;
+      refreshView();
+    }
+    // Nach einem Sprachwechsel wird NUR neu beschriftet - Filterzustand, Deep-Link und Auswahl bleiben.
+    function refreshView() {
+      const st = document.getElementById('stats-summary');
+      if (st) st.textContent = datasetLoaded ? UI.statsSummary(tales.length, datasetKb) : UI.loading;
+      if (!datasetLoaded) return;
+      renderList(filteredTales);
+      updateCount();
+      if (currentTaleIndex >= 0 && tales[currentTaleIndex]) selectTale(currentTaleIndex);
+      else fillAboutStats();
+    }
+    async function loadLocales() {
+      try {
+        const res = await fetch(I18N_FILE, { cache: 'no-store' });
+        if (!res || !res.ok) throw new Error('HTTP ' + (res ? res.status : 'n/a'));
+        const data = JSON.parse(await res.text());
+        if (!data || typeof data !== 'object' || !data.strings || !data.strings.de) throw new Error('Woerterbuch unbrauchbar');
+        LOCALES = data;
+        return true;
+      } catch (e) {
+        LOCALES = null;
+        console.warn('i18n: ' + I18N_FILE + ' nicht ladbar (' + (e && e.message) + ') - deutsche Literale bleiben aktiv');
+        return false;
+      }
+    }
+    function initLanguage() {
+      fillLangSelect();
+      applyLanguage(detectLang());
+      const sel = document.getElementById('ui-lang-select');
+      if (sel) sel.addEventListener('change', () => {
+        applyLanguage(sel.value);
+        try { window.localStorage.setItem(I18N_KEY, sel.value); } catch (e) { /* z. B. Privatmodus */ }
+      });
+    }
+
+    // Sentinels: '' = "alle"; NO_VALUE = Zeile ohne diesen Wert (Altbestand).
+    // Bewusst kein Kollisionsrisiko mit echten Korpus-Werten.
+    const NO_VALUE = '__ohne_angabe__';
+
+    // ---- Theme hell/dunkel --------------------------------------------------------------
+    // Startwert: gespeicherte Wahl, sonst Systemvorgabe (prefers-color-scheme).
+    const THEME_KEY = 'aa-theme';
+    function systemTheme() {
+      try {
+        return (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
+      } catch (e) { return 'dark'; }
+    }
+    function storedTheme() {
+      try {
+        const v = window.localStorage.getItem(THEME_KEY);
+        return (v === 'light' || v === 'dark') ? v : null;
+      } catch (e) { return null; }
+    }
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      const btn = document.getElementById('theme-toggle');
+      if (btn) {
+        // Beschriftung zeigt den AKTIVEN Zustand, der Titel beschreibt die Aktion.
+        btn.textContent = (theme === 'light') ? UI.themeLightLabel : UI.themeDarkLabel;
+        btn.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
+        btn.setAttribute('title', UI.themeTitle);
+      }
+    }
+    applyTheme(storedTheme() || systemTheme());
+    (function () {
+      const btn = document.getElementById('theme-toggle');
+      if (!btn) return;
+      btn.addEventListener('click', () => {
+        const next = (document.documentElement.getAttribute('data-theme') === 'light') ? 'dark' : 'light';
+        applyTheme(next);
+        try { window.localStorage.setItem(THEME_KEY, next); } catch (e) { /* z. B. Privatmodus */ }
+      });
+    })();
+
     // Korpus-Daten sind NICHT vertrauenswuerdig (maschinell erzeugte Tales).
     // Jeder Wert, der in ein innerHTML-Template oder in ein Attribut geht, laeuft durch esc().
     const HTML_ESCAPES = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
@@ -277,6 +605,9 @@
     // Startansicht ist der Ueber-Block ("Was ist das? / Warum / Harm Reduction").
     // Er wird VOR dem ersten Rendern gesichert, damit der Link "Ueber das Projekt" ihn zurueckholen kann.
     const ABOUT_HTML = document.getElementById('reader-view').innerHTML;
+
+    // Aktuell gefilterte Menge — Quelle fuer Liste UND Zufalls-Button.
+    let filteredTales = [];
 
     async function resolveDataset() {
       for (const cand of DATASET_CANDIDATES) {
@@ -297,22 +628,31 @@
         const dl = document.getElementById('download-link');
         if (dl) { dl.href = DATASET_URL; dl.setAttribute('download', 'algorithmic-activism-dataset.jsonl'); }
         const lines = text.trim().split("\n");
+        // Altbestand OHNE meta-Block wird NICHT mehr verworfen: die Zeile bekommt einen leeren
+        // Container plus die Markierung metaMissing und bleibt damit unter "ohne Angabe" filterbar.
+        // Dabei wird kein einziger Metadaten-Wert erfunden.
         tales = lines.map(line => {
           try { return JSON.parse(line); } catch (e) { return null; }
-        }).filter(r => r && r.meta);
+        }).filter(r => r && typeof r === 'object' && typeof r.output === 'string')
+          .map(r => {
+            if (!r.meta || typeof r.meta !== 'object') { r.meta = {}; r.metaMissing = true; }
+            else { r.metaMissing = false; }
+            return r;
+          });
 
         const kbSize = Math.round(new Blob([text]).size / 1024);
-        document.getElementById('stats-summary').textContent = `${tales.length} Narrative (${kbSize} KB)`;
+        datasetKb = kbSize;
+        datasetLoaded = true;
+        document.getElementById('stats-summary').textContent = UI.statsSummary(tales.length, kbSize);
         populateFilters();
-        renderList(tales);
-        fillAboutStats();
+        applyFilters();
 
         // Deep Link Check via Hash — ohne Hash bleibt der Ueber-Block stehen.
         const hash = decodeURIComponent(window.location.hash.replace('#', ''));
         const foundIdx = hash ? tales.findIndex(t => (t.meta.title || '').replace(/\s+/g, '_') === hash) : -1;
         if (foundIdx !== -1) selectTale(foundIdx); else showAbout();
       } catch (e) {
-        document.getElementById('stats-summary').textContent = "Fehler beim Laden des Datensatzes";
+        document.getElementById('stats-summary').textContent = UI.loadError;
         console.error(e);
       }
     }
@@ -325,9 +665,9 @@
       let provNone = 0;
       tales.forEach(t => {
         const meta = t.meta || {};
-        const l = meta.language || 'ohne Angabe';
+        const l = meta.language || UI.noValue;
         langs[l] = (langs[l] || 0) + 1;
-        if (meta.provenance === 'none') provNone++;
+        if (meta.provenance === 'none' || t.metaMissing) provNone++;
       });
       const styles = new Set(tales.map(t => (t.meta || {}).style).filter(Boolean));
       const articles = new Set(tales.map(t => (t.meta || {}).article).filter(Boolean));
@@ -339,48 +679,82 @@
     }
 
     function showAbout() {
+      currentTaleIndex = -1;
       document.getElementById('reader-view').innerHTML = ABOUT_HTML;
       fillAboutStats();
       document.querySelectorAll('.tale-item').forEach(el => el.classList.remove('active'));
     }
 
-    // Filter-Optionen ohne innerHTML aufbauen: value und Label sind Korpus-Daten.
-    function fillSelect(select, values) {
-      values.forEach(v => {
+    // Ein Feldwert als Filter-Kategorie: fehlend/leer wird zu NO_VALUE ("ohne Angabe"),
+    // niemals zu einem geratenen Ersatzwert.
+    function fieldOf(t, key) {
+      const v = (t.meta || {})[key];
+      return (v === undefined || v === null || v === '') ? NO_VALUE : String(v);
+    }
+
+    // Optionen werden ZUR LAUFZEIT aus den geladenen Daten gebaut (keine hartkodierte Liste):
+    // nach dem naechsten Export zeigt der Filter genau die Werte, die es wirklich gibt.
+    // Aufbau per createElement/textContent — Korpus-Werte landen nie im HTML-Parser.
+    function buildSelect(select, values, allLabel) {
+      if (!select) return;
+      select.textContent = '';
+      const all = document.createElement('option');
+      all.value = '';
+      all.textContent = allLabel;
+      select.appendChild(all);
+
+      const real = [...new Set(values.filter(v => v !== NO_VALUE))].sort((a, b) => a.localeCompare(b, 'de'));
+      real.forEach(v => {
         const opt = document.createElement('option');
-        opt.value = String(v);
-        opt.textContent = String(v);
+        opt.value = v;
+        opt.textContent = v;
         select.appendChild(opt);
       });
+
+      const missing = values.filter(v => v === NO_VALUE).length;
+      if (missing > 0) {
+        const opt = document.createElement('option');
+        opt.value = NO_VALUE;
+        opt.textContent = `${UI.noValue} (${missing})`;
+        select.appendChild(opt);
+      }
     }
 
     function populateFilters() {
-      const styles = [...new Set(tales.map(t => t.meta.style).filter(Boolean))].sort();
-      const articles = [...new Set(tales.map(t => t.meta.article).filter(Boolean))].sort();
-
-      fillSelect(document.getElementById('style-select'), styles);
-      fillSelect(document.getElementById('article-select'), articles);
+      buildSelect(document.getElementById('language-select'), tales.map(t => fieldOf(t, 'language')), UI.allLanguages);
+      buildSelect(document.getElementById('article-select'), tales.map(t => fieldOf(t, 'article')), UI.allArticles);
+      buildSelect(document.getElementById('style-select'), tales.map(t => fieldOf(t, 'style')), UI.allStyles);
     }
 
     function renderList(list) {
       const container = document.getElementById('tales-list');
       container.innerHTML = '';
       if (list.length === 0) {
-        container.innerHTML = '<div style="color:var(--muted); padding:16px; text-align:center; font-size:0.85rem;">Keine passenden Narrative gefunden.</div>';
+        const empty = document.createElement('div');
+        empty.className = 'list-empty';
+        empty.textContent = UI.emptyList;
+        container.appendChild(empty);
         return;
       }
 
       list.forEach((t) => {
         const item = document.createElement('div');
-        const title = t.meta.title || t.output.split('\n')[0].replace('# ', '');
+        const meta = t.meta || {};
+        const firstLine = String(t.output || '').split('\n')[0].replace(/^#\s*/, '');
+        const title = meta.title || firstLine || UI.noTitle;
         item.className = 'tale-item';
+        // data-*-Werte werden als Properties gesetzt (kein HTML-Parsing) — Grundlage der
+        // Zufalls- und Filterpruefungen im Testharness.
         item.dataset.title = title.replace(/\s+/g, '_');
+        item.dataset.style = fieldOf(t, 'style');
+        item.dataset.article = fieldOf(t, 'article');
+        item.dataset.language = fieldOf(t, 'language');
         item.innerHTML = `
           <div class="tale-title">${esc(title)}</div>
           <div class="tale-meta">
-            <span class="tag">${esc(t.meta.article || 'UDHR')}</span>
-            <span class="tag">${esc(t.meta.style || 'Narrative')}</span>
-            <span class="tag">${esc(t.meta.language || 'DE')}</span>
+            <span class="tag">${esc(meta.article || UI.noValue)}</span>
+            <span class="tag">${esc(meta.style || UI.noValue)}</span>
+            <span class="tag">${esc(meta.language || UI.noValue)}</span>
           </div>
         `;
         item.onclick = () => {
@@ -392,11 +766,44 @@
       });
     }
 
+    function updateCount() {
+      const el = document.getElementById('result-count');
+      if (!el) return;
+      const hits = filteredTales.length;
+      const total = tales.length;
+      el.textContent = (hits === total) ? UI.countAll(total) : UI.countFiltered(hits, total);
+      el.dataset.hits = String(hits);
+      el.dataset.total = String(total);
+      el.classList.toggle('empty', hits === 0);
+    }
+
+    function applyFilters() {
+      const q = document.getElementById('filter-input').value.trim().toLowerCase();
+      const lang = document.getElementById('language-select').value;
+      const art = document.getElementById('article-select').value;
+      const style = document.getElementById('style-select').value;
+
+      filteredTales = tales.filter(t => {
+        const meta = t.meta || {};
+        const haystack = (String(t.output || '') + '\n' + String(meta.title || '') + '\n' + String(meta.model || '')).toLowerCase();
+        const matchQ = !q || haystack.includes(q);
+        // Kombinierbar: jeder gesetzte Filter muss passen.
+        return matchQ
+          && (!lang || fieldOf(t, 'language') === lang)
+          && (!art || fieldOf(t, 'article') === art)
+          && (!style || fieldOf(t, 'style') === style);
+      });
+      renderList(filteredTales);
+      updateCount();
+    }
+
     function selectTale(index) {
       const t = tales[index];
       if (!t) return;
+      currentTaleIndex = index;
 
-      const title = t.meta.title || t.output.split('\n')[0].replace('# ', '');
+      const meta = t.meta || {};
+      const title = meta.title || String(t.output || '').split('\n')[0].replace(/^#\s*/, '');
       window.location.hash = encodeURIComponent(title.replace(/\s+/g, '_'));
 
       // Highlight in List
@@ -405,20 +812,20 @@
       });
 
       const htmlContent = marked.parse(t.output);
-      const audit = auditInfo(t.meta);
+      const audit = auditInfo(meta);
 
       document.getElementById('reader-view').innerHTML = `
         <div class="provenance">
           <div class="provenance-header">
-            <strong>Provenienz & Audit</strong>
+            <strong>${esc(UI.provenanceHeader)}</strong>
             <span style="color: ${esc(audit.color)}; font-weight:600;">${esc(audit.label)}</span>
           </div>
           <div class="provenance-grid">
-            <div class="pro-item"><span>UN-Artikel</span><b>${esc(t.meta.article || 'N/A')}</b></div>
-            <div class="pro-item"><span>Stil</span><b>${esc(t.meta.style || 'N/A')}</b></div>
-            <div class="pro-item"><span>Inferenz-Modell</span><b>${esc(t.meta.model || 'N/A')}</b></div>
-            <div class="pro-item"><span>Umfang</span><b>${esc(t.meta.approx_words ? '~' + t.meta.approx_words + ' Wörter' : 'N/A')}</b></div>
-            <div class="pro-item"><span>Herkunft</span><b>${esc(t.meta.provenance === 'none' ? 'Altbestand (kein YAML-Kopf)' : 'YAML-Frontmatter')}</b></div>
+            <div class="pro-item"><span>${esc(UI.proArticle)}</span><b>${esc(meta.article || 'N/A')}</b></div>
+            <div class="pro-item"><span>${esc(UI.proStyle)}</span><b>${esc(meta.style || 'N/A')}</b></div>
+            <div class="pro-item"><span>${esc(UI.proModel)}</span><b>${esc(meta.model || 'N/A')}</b></div>
+            <div class="pro-item"><span>${esc(UI.proWords)}</span><b>${esc(meta.approx_words ? UI.wordsApprox(meta.approx_words) : 'N/A')}</b></div>
+            <div class="pro-item"><span>${esc(UI.proOrigin)}</span><b>${esc(provenanceLabel(t))}</b></div>
           </div>
         </div>
         <!-- Markup-Pfad: htmlContent ist das bewusst als HTML gerenderte Markdown des Tales
@@ -430,6 +837,32 @@
       if (main) main.scrollTop = 0;
     }
 
+    // Herkunft nur behaupten, wenn sie belegt ist: YAML-Frontmatter, als Altbestand markiert
+    // (provenance: "none") oder gar kein meta-Block in der Zeile.
+    function provenanceLabel(t) {
+      const meta = t.meta || {};
+      if (t.metaMissing) return UI.provMissingMeta;
+      if (meta.provenance === 'none') return UI.provNoYaml;
+      if (meta.provenance === 'yaml-frontmatter' || meta.model || meta.created_at) return UI.provYaml;
+      return UI.provUnknown;
+    }
+
+    // Zufall: zieht ausschliesslich aus der AKTUELL GEFILTERTEN Menge.
+    function randomTale() {
+      const countEl = document.getElementById('result-count');
+      if (filteredTales.length === 0) {
+        if (countEl) { countEl.textContent = UI.randomEmpty; countEl.classList.add('empty'); }
+        return;
+      }
+      const pos = Math.floor(Math.random() * filteredTales.length);
+      const pick = filteredTales[pos];
+      selectTale(tales.indexOf(pick));
+      const items = document.querySelectorAll('.tale-item');
+      items.forEach(el => el.classList.remove('active'));
+      if (items[pos]) items[pos].classList.add('active');
+      updateCount();
+    }
+
     // Audit NUR behaupten, wenn er belegt ist. Drei Zustaende: validiert / Quarantaene / kein Audit vorliegend.
     function auditInfo(meta) {
       meta = meta || {};
@@ -438,31 +871,24 @@
       const statusText = (nested && nested.status) || meta.status || '';
       const passed = (passedRaw === true || passedRaw === 'true');
       const failed = (passedRaw === false || passedRaw === 'false');
-      if (passed) return { label: '\u2713 Harm Reduction validiert' + (statusText ? ' (' + statusText + ')' : ''), color: 'var(--success)' };
-      if (failed) return { label: '\u26a0 Quarantaene' + (statusText ? ' (' + statusText + ')' : ''), color: 'var(--danger)' };
-      return { label: '\u2013 nicht auditiert (Altbestand)', color: 'var(--muted)' };
+      if (passed) return { label: UI.auditOk + (statusText ? ' (' + statusText + ')' : ''), color: 'var(--success)' };
+      if (failed) return { label: UI.auditQuarantine + (statusText ? ' (' + statusText + ')' : ''), color: 'var(--danger)' };
+      return { label: UI.auditNone, color: 'var(--muted)' };
     }
 
-    function filterData() {
-      const q = document.getElementById('filter-input').value.toLowerCase();
-      const style = document.getElementById('style-select').value;
-      const art = document.getElementById('article-select').value;
-
-      const filtered = tales.filter(t => {
-        const matchQ = !q || (t.output.toLowerCase().includes(q) || (t.meta.title && t.meta.title.toLowerCase().includes(q)));
-        const matchStyle = !style || t.meta.style === style;
-        const matchArt = !art || t.meta.article === art;
-        return matchQ && matchStyle && matchArt;
-      });
-      renderList(filtered);
-    }
-
-    document.getElementById('filter-input').addEventListener('input', filterData);
-    document.getElementById('style-select').addEventListener('change', filterData);
-    document.getElementById('article-select').addEventListener('change', filterData);
+    document.getElementById('filter-input').addEventListener('input', applyFilters);
+    document.getElementById('language-select').addEventListener('change', applyFilters);
+    document.getElementById('article-select').addEventListener('change', applyFilters);
+    document.getElementById('style-select').addEventListener('change', applyFilters);
+    document.getElementById('random-btn').addEventListener('click', randomTale);
     document.getElementById('about-link').addEventListener('click', (e) => { e.preventDefault(); showAbout(); });
 
-    window.onload = loadDataset;
+    async function boot() {
+      await loadLocales();   // ohne Woerterbuch laeuft die Seite mit den deutschen Literalen weiter
+      initLanguage();
+      await loadDataset();
+    }
+    window.onload = boot;
   </script>
 </body>
 </html>
