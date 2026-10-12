@@ -920,7 +920,8 @@ def ist_wiederholung(schluss: str, vorgaenger: list, schwelle: float = SCHWELLE_
 
 def audit_manual_ending(text: str, erwarteter_block: str | None = None,
                         style_flags: dict | None = None,
-                        sprache: str | None = None) -> tuple[bool, str]:
+                        sprache: str | None = None,
+                        figuren: list | None = None) -> tuple[bool, str]:
     """Mechanische Endschranke fuer Sach-/Handbuchgenres: prueft NUR den letzten Absatz.
 
     Grund (gemessen 2026-10-12): der Prompt-Bann hielt das Modell von Moral-Bekenntnissen ab — es
@@ -974,6 +975,14 @@ def audit_manual_ending(text: str, erwarteter_block: str | None = None,
         if (de + en) >= 20 and erkannt != sprache.upper() and sicher >= 0.6:
             return False, (f"Sprache verletzt: Kapitel ist {erkannt} ({de} deutsche vs. {en} englische "
                            f"Funktionswoerter, {sicher * 100:.0f}%), erwartet {sprache.upper()}")
+    # Sterile Genres fuehren keine Figuren: die Handbuch-Regel verlangt woertlich "kein Vorname".
+    # Belegt 2026-10-12: das freie 550B-Modell schrieb "Milo" in ein steriles Kapitel, das die
+    # Ganzkoerper-Schranke passierte (Dialog, Figurenregie, Wiederholung, Stempelzahl alle sauber).
+    if figuren and not erlaube_rede:
+        for figur in figuren:
+            name = str(figur).strip()
+            if name and re.search(rf"\b{re.escape(name)}\b", text, re.IGNORECASE):
+                return False, (f"Figur '{name}' im sterilen Kapitel — dieses Genre fuehrt keine Namen")
     if not erlaube_emotion:
         erzaehlend = [w for w in ("flüster", "lächel", "seufz", "nickt", "kicher", "stöhnt")
                       if w in text.lower()]
@@ -1041,7 +1050,8 @@ def erzeuge_mit_endschranke(prompt: str, model: str, host: str, style_flags: dic
                             erwarteter_block: str | None = None,
                             details: dict | None = None,
                             backend: str = "ollama",
-                            sprache: str | None = None) -> tuple[str, bool, str, int]:
+                            sprache: str | None = None,
+                            figuren: list | None = None) -> tuple[str, bool, str, int]:
     """Generiert und prueft das Ende, solange das Genre es verlangt.
 
     Rueckgabe (text, ende_ok, grund, gebrauchte_versuche). Nach Ausschoepfung wird der Text MIT Vermerk
@@ -1054,7 +1064,7 @@ def erzeuge_mit_endschranke(prompt: str, model: str, host: str, style_flags: dic
     for i in range(1, versuche + 1):
         text = erzeuge_text(prompt, model, host, backend=backend, details=details)
         ok, grund = audit_manual_ending(text, erwarteter_block=erwarteter_block,
-                                        style_flags=style_flags, sprache=sprache)
+                                        style_flags=style_flags, sprache=sprache, figuren=figuren)
         if ok and vorgaenger_schluesse:
             # Nur die Prosa vergleichen: der Pflichtblock ist per Kapitelcode eindeutig und darf
             # nicht als "Wiederholung" gelten.
@@ -1208,10 +1218,11 @@ def _append_chapter_gesperrt(book_id: str | None = None, lang: str | None = None
                    "  -> Vorgabe: Lass dieses Ereignis kurz als Referenz oder Erinnerung einfliessen.")
     t_start = time.monotonic()
     details: dict = {}
-    text, ende_ok, grund, versuche = erzeuge_mit_endschranke(prompt, model, host, style_flags,
-                                        sprache=sprache,
-                                                             label=f"Kapitel {index}", versuche=3,
-                                                             vorgaenger_schluesse=vorgaenger_schluesse,
+    text, ende_ok, grund, versuche = erzeuge_mit_endschranke(
+        prompt, model, host, style_flags,
+        sprache=sprache, figuren=meta.get("characters") or [],
+        label=f"Kapitel {index}", versuche=3,
+        vorgaenger_schluesse=vorgaenger_schluesse,
                                                              erwarteter_block=block, details=details,
                                                              backend=backend)
     dauer = round(time.monotonic() - t_start, 1)
