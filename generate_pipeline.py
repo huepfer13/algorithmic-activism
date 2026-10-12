@@ -191,7 +191,8 @@ FORMATVORGABE:
     return prompt
 
 
-def run_ollama_stream(prompt: str, model: str = "qwen2.5:7b", host: str = "http://localhost:11434") -> str:
+def run_ollama_stream(prompt: str, model: str = "qwen2.5:7b", host: str = "http://localhost:11434",
+                      details: dict | None = None) -> str:
     import urllib.request
     url = f"{host}/api/generate"
     req_data = json.dumps({
@@ -203,7 +204,38 @@ def run_ollama_stream(prompt: str, model: str = "qwen2.5:7b", host: str = "http:
     req = urllib.request.Request(url, data=req_data, headers={"Content-Type": "application/json"})
     with urllib.request.urlopen(req) as resp:
         data = json.loads(resp.read().decode("utf-8"))
+        if details is not None:
+            # Ollama liefert die echten Zahlen mit — keine Wort-Proxies.
+            for schluessel, feld in (("eval_count", "tokens_generated"),
+                                     ("eval_duration", "generation_ns"),
+                                     ("total_duration", "total_ns")):
+                if data.get(schluessel) is not None:
+                    details[feld] = data[schluessel]
         return data.get("response", "")
+
+
+def erzeuge_text(prompt: str, model: str, host: str, backend: str = "ollama",
+                 details: dict | None = None) -> str:
+    """Generiert ueber das gewaehlte Backend — unbekannte oder nicht einsatzbereite brechen ab.
+
+    Kein stiller Ollama-Fallback: bis hierher war der --backend-Schalter wirkungslos, jede Angabe
+    landete in run_ollama_stream (belegt 2026-10-12). Ein Backend, das nicht liefern kann, muss
+    sichtbar scheitern statt heimlich etwas anderes zu tun.
+    """
+    if backend == "ollama":
+        return run_ollama_stream(prompt, model=model, host=host, details=details)
+    if backend == "offline":
+        from backends.offline import OfflinePlugin
+        plugin = OfflinePlugin()
+    elif backend == "gemini":
+        from backends.gemini import GeminiPlugin
+        plugin = GeminiPlugin()
+    else:
+        raise RuntimeError(f"unbekanntes Backend '{backend}' — erlaubt sind: ollama, offline, gemini")
+    bereit, meldung = plugin.is_available()
+    if not bereit:
+        raise RuntimeError(f"Backend '{backend}' nicht einsatzbereit: {meldung}")
+    return plugin.generate(prompt, model=model)
 
 
 def sanitize_filename(title: str) -> str:
@@ -781,18 +813,20 @@ def fremdcode_im_text(text: str, erwarteter_block: str) -> str | None:
 def erzeuge_mit_endschranke(prompt: str, model: str, host: str, style_flags: dict,
                             label: str, versuche: int = 3,
                             vorgaenger_schluesse: list | None = None,
-                            erwarteter_block: str | None = None) -> tuple[str, bool, str, int]:
+                            erwarteter_block: str | None = None,
+                            details: dict | None = None,
+                            backend: str = "ollama") -> tuple[str, bool, str, int]:
     """Generiert und prueft das Ende, solange das Genre es verlangt.
 
     Rueckgabe (text, ende_ok, grund, gebrauchte_versuche). Nach Ausschoepfung wird der Text MIT Vermerk
     geliefert: kein stiller Durchlauf, aber auch kein Totalverlust.
     """
     if not style_flags.get("manual_ending"):
-        return (run_ollama_stream(prompt, model=model, host=host), True,
+        return (erzeuge_text(prompt, model, host, backend, details), True,
                 "nicht geprueft (Stil ohne Endschranke)", 0)
     text, grund = "", ""
     for i in range(1, versuche + 1):
-        text = run_ollama_stream(prompt, model=model, host=host)
+        text = erzeuge_text(prompt, model, host, backend=backend, details=details)
         ok, grund = audit_manual_ending(text, erwarteter_block=erwarteter_block)
         if ok and vorgaenger_schluesse:
             # Nur die Prosa vergleichen: der Pflichtblock ist per Kapitelcode eindeutig und darf
@@ -801,6 +835,8 @@ def erzeuge_mit_endschranke(prompt: str, model: str, host: str, style_flags: dic
             # Sonst waechst mit jedem Kapitel die Trefferwahrscheinlichkeit gegen die Schwelle.
             fenster = [p for p in (schluss_prosa(v) for v in vorgaenger_schluesse) if p][-HISTORIE_FENSTER:]
             wieder, aehnlich = ist_wiederholung(schluss_prosa(text), fenster)
+            if details is not None:
+                details["jaccard_max"] = round(aehnlich, 3)
             if wieder:
                 ok, grund = False, ("Wiederholung des Schlussabsatzes "
                                     f"({aehnlich:.0%} Wortueberlappung mit einem Vorkapitel)")
@@ -809,6 +845,8 @@ def erzeuge_mit_endschranke(prompt: str, model: str, host: str, style_flags: dic
             if fremd:
                 ok, grund = False, (f"Fremd-Aktenzeichen im Kapiteltext ({fremd}) — "
                                     "Metatext/Prompt-Leck statt Erzaehlung")
+            elif details is not None:
+                details["leak_free"] = True
         print(f"  [{label}] Versuch {i}/{versuche}: Endschranke "
               f"{'erfuellt' if ok else 'VERFEHLT'} ({grund})", flush=True)
         if not ok:
@@ -849,7 +887,7 @@ def naechster_artikel(lang: str, covered: list) -> str | None:
 
 
 def append_chapter(book_id: str | None = None, lang: str | None = None, model: str = "qwen2.5:7b",
-                   host: str = "http://localhost:11434") -> str:
+                   host: str = "http://localhost:11434", backend: str = "ollama") -> str:
     """Stufe 2: naechstes Kapitel anhaengen — deterministisch, kollisionssicher, mit Endschranke."""
     book_id = book_id or naechstes_buch()
     buch_dir = os.path.join(BOOKS_DIR, book_id)
@@ -913,10 +951,14 @@ def append_chapter(book_id: str | None = None, lang: str | None = None, model: s
     if artefakt:
         prompt += (f"\n- Aktennotiz zur Beruecksichtigung:\n  {artefakt}\n"
                    "  -> Vorgabe: Lass dieses Ereignis kurz als Referenz oder Erinnerung einfliessen.")
+    t_start = time.monotonic()
+    details: dict = {}
     text, ende_ok, grund, versuche = erzeuge_mit_endschranke(prompt, model, host, style_flags,
-                                                   f"Kapitel {index}", versuche=3,
-                                                   vorgaenger_schluesse=vorgaenger_schluesse,
-                                                   erwarteter_block=block)
+                                                             label=f"Kapitel {index}", versuche=3,
+                                                             vorgaenger_schluesse=vorgaenger_schluesse,
+                                                             erwarteter_block=block, details=details,
+                                                             backend=backend)
+    dauer = round(time.monotonic() - t_start, 1)
     if not text.strip():
         raise RuntimeError("Leere Antwort vom Modell — Kapitel wird nicht geschrieben.")
 
@@ -924,11 +966,26 @@ def append_chapter(book_id: str | None = None, lang: str | None = None, model: s
     # BEIDE Faelle markieren: ein Erfolg ohne Flag ist fuer Downstream-Parser (Index-Builder,
     # Monitoring) nicht von "nie geprueft" zu unterscheiden.
     code_treffer = re.search(r"CODE:\s*([^|\]]+)", block)
+    # Erzeugungs-Metriken ins Artefakt: Modell, Genre, Dauer, Aehnlichkeitswert, Leck-Freiheit.
+    # "backend" ist bewusst der EFFEKTIVE Wert — der Buchpfad generiert heute ueber Ollama;
+    # der --backend-Schalter ist noch nicht verdrahtet (belegt 2026-10-12).
+    stats = ""
+    if details:
+        stats = (f'model: "{model}"\n'
+                 f'genre: "{meta.get("style", "")}"\n'
+                 f'backend: "{backend}"\n'
+                 f'duration_seconds: {dauer}\n'
+                 f'jaccard_max: {details.get("jaccard_max", 0.0)}\n'
+                 + (f'tokens_generated: {details["tokens_generated"]}\n'
+                    if details.get("tokens_generated") else "")
+                 + ('leak_free: true\n' if details.get("leak_free") else ""))
     marke = (f'manual_ending_ok: {"true" if ende_ok else "false"}\n'
              f'manual_ending_attempts: {versuche}\n'
-             f'manual_ending_code: "{code_treffer.group(1).strip() if code_treffer else ""}"\n'             f'scene_condition: "{stoerung["typ"]}"\n'
+             f'manual_ending_code: "{code_treffer.group(1).strip() if code_treffer else ""}"\n'
+             f'scene_condition: "{stoerung["typ"]}"\n'
              f'archive_note: "{("KAPITEL " + artefakt.split("KAPITEL ")[1][:2]) if artefakt else ""}"\n'
-             f'manual_ending_note: "{grund}"\n')
+             + stats
+             + f'manual_ending_note: "{grund}"\n')
     datei = f"{index:02d}_{artikel}_{sanitize_filename(titel).lower()[:40]}.md"
     pfad = write_new_file(os.path.join(buch_dir, datei),
                           f'---\nbook_id: "{book_id}"\nchapter_index: {index}\n'
@@ -993,7 +1050,8 @@ def main():
                 book_id = new_book(lang=args.lang, style=args.book_style, model=args.model, host=host)
                 print(f"[Buchmodus] Buch angelegt: {os.path.join(BOOKS_DIR, book_id)}", flush=True)
             else:
-                pfad = append_chapter(book_id=args.book_id, lang=args.lang, model=args.model, host=host)
+                pfad = append_chapter(book_id=args.book_id, lang=args.lang, model=args.model,
+                                      host=host, backend=args.backend)
                 print(f"[Buchmodus] Kapitel angehaengt: {pfad}", flush=True)
                 # Monitoring: ein Kapitel, das die Endschranke NICHT passiert hat, ist ein Fallback.
                 # Ohne eigenen Exit-Code bleibt das in CI/Langfuse unsichtbar (Exit 1 = Abbruch ohne Datei).
