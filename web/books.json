@@ -23,15 +23,15 @@
         "art_03",
         "art_04",
         "art_05",
-        "art_06",
+        "art_07",
         "art_09",
         "art_12",
         "art_14",
         "art_19",
         "art_26"
       ],
-      "words": 6533,
-      "reading_minutes": 33,
+      "words": 6239,
+      "reading_minutes": 31,
       "cover": null,
       "chapters": [
         {
@@ -233,22 +233,22 @@
           "reading_minutes": 3
         },
         {
-          "file": "11_art_06_abschnitt_11_kalibrierung_der_rechtschut.md",
+          "file": "11_art_07_abschnitt_11_wartungsprotokoll_der_gleic.md",
           "index": 11,
-          "title": "Abschnitt 11: Kalibrierung der Rechtschutzsysteme",
-          "article": "art_06",
+          "title": "Abschnitt 11: Wartungsprotokoll der Gleichbehandlungseinheit",
+          "article": "art_07",
           "ending_ok": "true",
-          "attempts": "1",
-          "model": "qwen2.5:7b",
-          "duration_seconds": "438.2",
-          "jaccard_max": "0.111",
-          "tokens_generated": "1700",
-          "manual_ending_code": "E-06-11",
-          "backend": "ollama",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "21.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "909",
+          "manual_ending_code": "E-07-11",
+          "backend": "deepseek",
           "genre": "Gerätehandbuch",
           "leak_free": "true",
-          "words": 668,
-          "reading_minutes": 3
+          "words": 374,
+          "reading_minutes": 2
         }
       ]
     },
