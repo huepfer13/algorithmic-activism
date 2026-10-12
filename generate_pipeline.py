@@ -215,7 +215,7 @@ def run_ollama_stream(prompt: str, model: str = "qwen2.5:7b", host: str = "http:
 
 
 def erzeuge_text(prompt: str, model: str, host: str, backend: str = "ollama",
-                 details: dict | None = None) -> str:
+                 details: dict | None = None, json_mode: bool = False) -> str:
     """Generiert ueber das gewaehlte Backend — unbekannte oder nicht einsatzbereite brechen ab.
 
     Kein stiller Ollama-Fallback: bis hierher war der --backend-Schalter wirkungslos, jede Angabe
@@ -223,7 +223,12 @@ def erzeuge_text(prompt: str, model: str, host: str, backend: str = "ollama",
     sichtbar scheitern statt heimlich etwas anderes zu tun.
     """
     if backend == "ollama":
+        if json_mode:
+            return run_ollama_json_raw(prompt, model=model, host=host, details=details)
         return run_ollama_stream(prompt, model=model, host=host, details=details)
+    if json_mode:
+        raise RuntimeError(f"Backend '{backend}' unterstuetzt keinen JSON-Modus "
+                           "(erzwungenes Format gibt es nur bei ollama)")
     if backend == "offline":
         from backends.offline import OfflinePlugin
         plugin = OfflinePlugin()
@@ -317,16 +322,34 @@ BOOKS_DIR = os.path.join(BASE_DIR, "menschenrechte_books")
 POVS = ("first_person", "third_person", "third_person_manual")
 
 
-def run_ollama_json(prompt: str, model: str = "qwen2.5:7b", host: str = "http://localhost:11434") -> dict:
-    """Wie run_ollama_stream, aber mit erzwungenem JSON-Format (fuer Buch-Metadaten)."""
+def run_ollama_json_raw(prompt: str, model: str = "qwen2.5:7b",
+                        host: str = "http://localhost:11434",
+                        details: dict | None = None) -> str:
+    """Wie run_ollama_stream, aber mit erzwungenem JSON-Format — liefert den ROHEN JSON-Text.
+
+    Fuellt details mit denselben echten Ollama-Zahlen wie run_ollama_stream (kein Wort-Proxy).
+    """
     import urllib.request
     req_data = json.dumps({"model": model, "prompt": prompt, "stream": False,
                            "format": "json", "options": {"temperature": 0.7}}).encode("utf-8")
     req = urllib.request.Request(f"{host}/api/generate", data=req_data,
                                  headers={"Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=600) as resp:
-        raw = json.loads(resp.read().decode()).get("response", "")
-    return json.loads(raw)
+        daten = json.loads(resp.read().decode())
+    if details is not None:
+        if daten.get("eval_count") is not None:
+            details["tokens_generated"] = int(daten["eval_count"])
+        if daten.get("eval_duration"):
+            details["generation_ns"] = int(daten["eval_duration"])
+        if daten.get("total_duration"):
+            details["total_ns"] = int(daten["total_duration"])
+    return daten.get("response", "")
+
+
+def run_ollama_json(prompt: str, model: str = "qwen2.5:7b",
+                    host: str = "http://localhost:11434") -> dict:
+    """Erzwungenes JSON-Format, geparst (fuer Buch-Metadaten)."""
+    return json.loads(run_ollama_json_raw(prompt, model=model, host=host))
 
 
 def book_language_directive(lang: str, locale: dict) -> str:
@@ -483,7 +506,12 @@ def new_book(lang: str = "DE", style: str | None = None, model: str = "qwen2.5:7
                  or "Schutz von Leben und koerperlicher Unversehrtheit hat Vorrang.")
 
     # Schritt 1: Metadaten (JSON, deterministisch parsebar)
-    meta = run_ollama_json(build_book_meta_prompt(lang_name, style_name, style_desc), model=model, host=host)
+    meta_details: dict = {}
+    t_meta = time.monotonic()
+    meta = json.loads(erzeuge_text(build_book_meta_prompt(lang_name, style_name, style_desc),
+                                   model, host, backend=backend, details=meta_details,
+                                   json_mode=True))
+    dauer_meta = round(time.monotonic() - t_meta, 1)
     fehlend = [k for k in ("title", "pov", "characters", "setting_summary") if not meta.get(k)]
     if fehlend:
         raise ValueError(f"Buch-Metadaten unvollstaendig ({fehlend}) in {meta!r}")
@@ -553,6 +581,9 @@ ABSCHLUSS_MARKER = (
 )
 SICHERHEITS_BLOECKE = ("[gefahr]", "[warnung]", "[hinweis]", "[status")
 _MARKDOWN_PRAEFIX_RE = re.compile(r"^\s*(?:[-*+>]\s+|\d+[.)]\s+|\*\*)+")
+# Ein Pflichtblock ist eine ALLEINSTEHENDE Klammerzeile "**[NAME: ... | ...]**".
+# Das deckt [STATUS: ...] ebenso ab wie [CHRONIK: ... | SIEGEL: M-06-11] — Forum statt Wortliste.
+STEMPEL_RE = re.compile(r"^\*{0,2}\[[A-Za-zÄÖÜäöü\-]{3,24}:[^\]]*\]\*{0,2}$")
 SCHWELLE_WIEDERHOLUNG = 0.4
 HISTORIE_FENSTER = 10          # Vergleich nur gegen die letzten N prosatragenden Vorgaenger
 
@@ -679,8 +710,15 @@ def pflichtblock_muster(erwarteter_block: str):
     wich aber bei einer Ziffer ab (553h statt 552h) und setzte Markdown-Fettung. Byte-Gleichheit war
     damit die falsche Schaerfe — eine narrative Wiederholung verhindert schon der exakte Code.
     """
-    treffer = re.search(r"CODE:\s*([^|\]]+)", erwarteter_block)
-    code = _normalisiere((treffer.group(1) if treffer else "").strip()).lower()
+    # Der kapitelgebundene Code ist der Anker: er traegt in JEDER Blockform Artikel und Kapitel
+    # (CODE/SIEGEL/KAPITEL/LOG/ZEUGNIS/...). Form statt Wortliste.
+    treffer = re.search(r":\s*([A-Za-z]{1,3}-\d{2,}-\d{2,})\s*[|\]]", erwarteter_block)
+    if treffer:
+        code = _normalisiere(treffer.group(1).strip()).lower()
+        return re.compile(r"^\*{0,2}\[[A-Za-zÄÖÜäöü\-]{3,24}:[^\]]*"
+                          + re.escape(code) + r"[^\]]*\]\*{0,2}$")
+    alt = re.search(r"CODE:\s*([^|\]]+)", erwarteter_block)
+    code = _normalisiere((alt.group(1) if alt else "").strip()).lower()
     return re.compile(r"^\[status:\s*\w+\s*\|\s*sub-sys:\s*sektor-\d+\s*\|\s*code:\s*"
                       + re.escape(code) + r"\s*\|\s*intervall:\s*\d+\s*h\]")
 
@@ -688,19 +726,28 @@ def pflichtblock_muster(erwarteter_block: str):
 def zeilen_marker(zeile: str) -> list:
     """Akzeptierte Marker EINER Zeile — formal (Doppelpunkt/Ziffer), nie als Teilwort."""
     rumpf = _normalisiere(_MARKDOWN_PRAEFIX_RE.sub("", zeile).strip().strip("*_#")).lower()
+    blank = _MARKDOWN_PRAEFIX_RE.sub("", zeile).strip()
     return ([name for name, muster in ABSCHLUSS_MARKER if re.match(muster, rumpf)]
-            + [b for b in SICHERHEITS_BLOECKE if rumpf.startswith(b)])
+            + [b for b in SICHERHEITS_BLOECKE if rumpf.startswith(b)]
+            + (["stempel"] if STEMPEL_RE.match(blank) else []))
 
 
-def status_block(book_id: str, artikel: str, index: int) -> str:
+def status_block(book_id: str, artikel: str, index: int, style_flags: dict | None = None) -> str:
     """Deterministischer Pflichtblock je Kapitel: gleiche Eingaben -> gleicher Block (nachpruefbar).
 
-    Der CODE traegt Artikel- und Kapitelnummer, deshalb kann eine wortgleiche Wiederholung aus dem
-    Vorgaengerkapitel die Schranke nicht passieren. Kein Zufall, kein Zeitstempel: reproduzierbar.
+    Form kommt aus dem STIL, wenn er ein block_schema traegt (z. B. Maerchen -> Chronik-Siegel);
+    ohne Schema gilt die Geraetehandbuch-Form. Der CODE traegt Artikel- und Kapitelnummer, deshalb
+    kann eine wortgleiche Wiederholung die Schranke nicht passieren — kein Zufall, kein Zeitstempel.
     """
     art = re.sub(r"\D", "", artikel) or "0"
     seed = hashlib.sha256(f"{book_id}|{artikel}|{index}".encode("utf-8")).hexdigest()
     n = int(seed[:12], 16)
+    flags = style_flags or {}
+    schema = flags.get("block_schema")
+    if schema:
+        zustaende = tuple(flags.get("zustaende") or ("BESTAETIGT", "GEPRUEFT", "BEREIT", "VERMERKT"))
+        return schema.format(zustand=zustaende[n % len(zustaende)],
+                             code=f"{flags.get('code_praefix', 'E')}-{int(art):02d}-{index:02d}")
     zustaende = ("NOMINAL", "DEGRADED", "PRUEFLAUF", "WARTUNGSMODUS")
     return (f"[STATUS: {zustaende[n % len(zustaende)]} | SUB-SYS: SEKTOR-{(n >> 4) % 30 + 1:02d} "
             f"| CODE: E-{int(art):02d}-{index:02d} | INTERVALL: {120 + (n >> 8) % 36 * 24}h]")
@@ -770,7 +817,8 @@ def ist_wiederholung(schluss: str, vorgaenger: list, schwelle: float = SCHWELLE_
 # ueber "System"/"Gefahr" bestand). Ein Sicherheitsblock ist die zweite zulaessige Form.
 
 
-def audit_manual_ending(text: str, erwarteter_block: str | None = None) -> tuple[bool, str]:
+def audit_manual_ending(text: str, erwarteter_block: str | None = None,
+                        style_flags: dict | None = None) -> tuple[bool, str]:
     """Mechanische Endschranke fuer Sach-/Handbuchgenres: prueft NUR den letzten Absatz.
 
     Grund (gemessen 2026-10-12): der Prompt-Bann hielt das Modell von Moral-Bekenntnissen ab — es
@@ -781,13 +829,19 @@ def audit_manual_ending(text: str, erwarteter_block: str | None = None) -> tuple
     if not absaetze:
         return False, "leerer Text"
     letzter = absaetze[-1]
+    # Rede- und Emotionssperre kommen aus dem STIL (style_flags). Ohne Flags bleibt der strenge
+    # Handbuch-Massstab — der Bestand (Kapitel 1-11) darf sich dadurch nicht veraendern.
+    erlaube_rede = bool((style_flags or {}).get("erlaube_rede"))
+    erlaube_emotion = bool((style_flags or {}).get("erlaube_emotion"))
     treffer = rede_oder_emotion(letzter)
     if treffer:
-        art = "woertliche Rede" if treffer in DIALOG_ZEICHEN else "Dialog-/Emotionsverb"
-        return False, f"{art} im Schlussabsatz ({treffer})"
+        ist_rede = treffer in DIALOG_ZEICHEN
+        if not ((erlaube_rede and ist_rede) or (erlaube_emotion and not ist_rede)):
+            art = "woertliche Rede" if ist_rede else "Dialog-/Emotionsverb"
+            return False, f"{art} im Schlussabsatz ({treffer})"
     if erwarteter_block:
         muster = pflichtblock_muster(erwarteter_block)
-        code_treffer = re.search(r"CODE:\s*([^|\]]+)", erwarteter_block)
+        code_treffer = re.search(r":\s*([A-Za-z]{1,3}-\d{2,}-\d{2,})\s*[|\]]", erwarteter_block)
         code = code_treffer.group(1).strip() if code_treffer else "?"
         for zeile in letzter.splitlines():
             rumpf = _MARKDOWN_PRAEFIX_RE.sub("", zeile).strip().strip("*_#").strip()
@@ -837,7 +891,8 @@ def erzeuge_mit_endschranke(prompt: str, model: str, host: str, style_flags: dic
     text, grund = "", ""
     for i in range(1, versuche + 1):
         text = erzeuge_text(prompt, model, host, backend=backend, details=details)
-        ok, grund = audit_manual_ending(text, erwarteter_block=erwarteter_block)
+        ok, grund = audit_manual_ending(text, erwarteter_block=erwarteter_block,
+                                        style_flags=style_flags)
         if ok and vorgaenger_schluesse:
             # Nur die Prosa vergleichen: der Pflichtblock ist per Kapitelcode eindeutig und darf
             # nicht als "Wiederholung" gelten.
@@ -950,7 +1005,7 @@ def append_chapter(book_id: str | None = None, lang: str | None = None, model: s
         sa = schlussabsatz(roh.split("---", 2)[2] if roh.startswith("---") else roh)
         if sa:
             vorgaenger_schluesse.append(sa)
-    block = status_block(book_id, artikel, index)
+    block = status_block(book_id, artikel, index, style_flags)
     prompt += pflichtblock_hinweis(block)
     # Salz: dosierte, deterministische Reibung — Sektor-Bedingung + Aktennotiz aus einem Vorkapitel.
     stoerung = stoerparameter(index)
