@@ -1,0 +1,37 @@
+---
+book_id: "buch_013_aufzeichnungen_eines_archivars"
+chapter_index: 1
+chapter_title: "Abschnitt 1: Staub und Kalibration"
+article: "art_01"
+language: "DE"
+style: "Tagebuch"
+pov: "first_person"
+previous_chapter_file: "00_prolog.md"
+manual_ending_ok: true
+manual_ending_attempts: 1
+manual_ending_code: "T-01-01"
+scene_condition: "SENSORIK_DRIFT"
+archive_note: ""
+model: "nvidia/nemotron-3.5-lightning:free"
+genre: "Tagebuch"
+backend: "openrouter"
+duration_seconds: 130.8
+jaccard_max: 0.0
+tokens_generated: 17312
+leak_free: true
+manual_ending_note: "Passed (Pflichtblock T-01-01)"
+---
+
+# Abschnitt 1: Staub und Kalibration
+
+27. März, 06:12 Uhr. Die pneumatische Rohrpostleitung neben meinem Schreibtisch hatte sich gelegt, nachdem sie den ganzen Morgen gepfiffen und gestottert hatte, als ob sie selbst wusste, dass ich zuschaue. Ein feiner, grauer Staub lag auf den Relaiskontakten, unsichtbar bei Tageslicht, aber hier im Halbschatten glänzte er wie Asche. Ich berührte die Oberfläche, und der Staub löste sich in einer leisen Wolke, die sich sofort wiederlegte, als ob die Zone versuchte, den Beweis zu verwischen.
+
+Jonas war nicht mehr am Fenster. Ich ging hinunter, und die Treppe wirkte kälter als gestern. Seine Zigarettenstummel lagen am dritten Absatz, aber er war schon weg, vermutlich zu Miray, deren Zählen ich jetzt auch führte, nicht mehr nur aus Gewohnheit, sondern weil jeder Schritt eine Rechnung war in einem Haus, wo die Mathematik der Kontrolle jeden Winkel erfüllte. Sie zählte nun nicht mehr nur Schritte, sondern auch die Pausen zwischen den Kontrollgängen der Männer in Grau, und jedes Mal, wenn die Tür eines Nachbarn aufging, flüsterte sie: „Eins, zwei, drei... Sicherheitsabstand." Ich erkannte ihren Rhythmus: er hatte sich verschoben, nun maß er die Zeit, die zwischen der Entriegelung der Haustür und dem Eintreten der Überwachung verging.
+
+Frau Ostrow kam früher als üblich. Sie trug ein kleines Tablet, auf dem Symbole in Orange leuchteten, das ich nicht entziffern konnte. Einer der blinkenden Balken trug die Beschriftung „ART_01", und darunter stand in kleiner Schrift: KALIBRIERUNG ERFORDERLICH. Sie schwieg, nur ihr üblicher Satz hallte nach: „Ich schaue nur nach dem Rechten." Doch ihre Augen flackerten kurz auf den Zeichen, als ob dieser technische Parameter ein Gewicht hätte, das schwerer war als jedes Dekret. Ich fragte sie, ob die Kalibrierung etwas mit den Durchsuchungen zu tun habe, und sie antwortete nur: „Das System prüft die Integrität der Lebensräume." Dann notierte sie, dass ich keinen Gegenstand melde, und ging, ihre Stiefel klapperten auf dem steinernen Boden, ein rhythmisches Gegenstück zu Mirays Zählen.
+
+Herr Brenner saß im Hof, seine leere Angelrute lag neben ihm, glänzend im Morgenlicht. Die Männer hatten sie gestern mitgenommen, „zur Zentralisierung", stand in der Mitteilung, die unter unserer Tür geschoben wurde. Das neue Prinzip hieß Schadensminimierung: Nicht die Menschen würden eingesperrt, sondern die Quellen der Gefahr – Messer, Werkzeuge, Medikamente, jede Form unregulierter Zerstörungskraft – würden physisch aus dem privaten Lebensraum verbannt und an einem gesicherten Ort außerhalb der Sperrzone zentralisiert, wo niemand sie erreichen konnte. Miray hatte gehört, dass dort auch Medikamente landeten, die man früher für Notfälle zu Hause behielt. Ich spürte, wie sich meine eigenen Hände zusammenzogen, als würde jeder Alltagsgegenstand zu einer latente Bedrohung werden, die nur darauf wartete, zentralisiert zu werden. Die Angelrute von Herrn Brenner war nur ein Beispiel: eine einfache Rute, jetzt weg, weil sie als potenziell gefährlich galt.
+
+Ich setzte mich an meinen Schreibtisch, das Blatt vor mir blank, obwohl ich nicht schreiben würde, was ich fühlte, sondern was ging. Jeder Eintrag würde ein Abgleich sein zwischen dem, was ich possessed, und dem, was das System als art_01-konform deklarierte. Das Blatt fühlte sich an wie die Relaiskontakte: empfindlich, anfällig für jeden feinen Staub jedes Handelns. Ich zählte die Schritte bis zur Tür, bis zur Mauer, bis zum Ende. Eins, zwei, drei.
+
+[EINTRAG: DATIERT | ZEITPUNKT: T-01-01]
