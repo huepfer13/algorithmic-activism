@@ -72,7 +72,8 @@
     "r7:apodex/apodex-1.1-mini:free:buch_018_rhymes_of_the_commons",
     "r8:deepseek-chat:buch_015_das_kochbuch_der_allmende",
     "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_016_faden_der_gelassenheit",
-    "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_017_des_volkes_mund"
+    "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_017_des_volkes_mund",
+    "r8:apodex/apodex-1.1-mini:free:buch_018_rhymes_of_the_commons"
   ],
   "runden": {
     "1": [
@@ -1106,6 +1107,21 @@
         "tokens": "3428",
         "versuche": "1",
         "woerter": 328
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_018_rhymes_of_the_commons",
+        "code": "E-05-05",
+        "datei": "05_art_05_abschnitt_5_der_nullpunkt_code.md",
+        "dauer_s": "48.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "apodex/apodex-1.1-mini:free",
+        "modell": "apodex/apodex-1.1-mini:free",
+        "runde": 8,
+        "tokens": "10039",
+        "versuche": "0",
+        "woerter": 306
       }
     ],
     "9": [
