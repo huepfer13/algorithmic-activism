@@ -811,10 +811,12 @@
         "Kell",
         "Nuri"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 737,
-      "reading_minutes": 4,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 1095,
+      "reading_minutes": 5,
       "cover": null,
       "chapters": [
         {
@@ -834,6 +836,24 @@
           "leak_free": "",
           "words": 737,
           "reading_minutes": 4
+        },
+        {
+          "file": "01_art_01_abschnitt_1_der_widerhall_des_stegs.md",
+          "index": 1,
+          "title": "Abschnitt 1: Der Widerhall des Stegs",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3.5-lightning:free",
+          "duration_seconds": "118.7",
+          "jaccard_max": "0.037",
+          "tokens_generated": "12803",
+          "manual_ending_code": "U-01-01",
+          "backend": "openrouter",
+          "genre": "Solarpunk",
+          "leak_free": "true",
+          "words": 358,
+          "reading_minutes": 2
         }
       ]
     },
