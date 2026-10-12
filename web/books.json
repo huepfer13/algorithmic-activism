@@ -16,7 +16,7 @@
         "Nova",
         "Omicron"
       ],
-      "chapter_count": 8,
+      "chapter_count": 9,
       "covered_articles": [
         "art_01",
         "art_03",
@@ -25,10 +25,11 @@
         "art_09",
         "art_12",
         "art_14",
-        "art_19"
+        "art_19",
+        "art_26"
       ],
-      "words": 4923,
-      "reading_minutes": 25,
+      "words": 5315,
+      "reading_minutes": 27,
       "cover": null,
       "chapters": [
         {
@@ -119,6 +120,16 @@
           "ending_ok": "true",
           "attempts": "1",
           "words": 462,
+          "reading_minutes": 2
+        },
+        {
+          "file": "09_art_26_abschnitt_9_kalibrierung_des_bildungsrec.md",
+          "index": 9,
+          "title": "Abschnitt 9: Kalibrierung des Bildungsrechts",
+          "article": "art_26",
+          "ending_ok": "true",
+          "attempts": "2",
+          "words": 392,
           "reading_minutes": 2
         }
       ]
