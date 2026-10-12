@@ -1,0 +1,13 @@
+{
+  "book_id": "buch_003_der_rat_der_tiere",
+  "title": "Der Rat der Tiere im Schattenwald",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Kinderbuch",
+  "setting_summary": "Die Tiere des Schattenwaldes halten Rat und finden fuer jeden Streit eine gute Loesung.",
+  "characters": [],
+  "covered_articles": [],
+  "current_chapter": "0",
+  "created_at": "2026-10-12T21:14:04Z",
+  "_hinweis": "Stub aus Betreiber-Vorgabe: Titel/Praemisse handgesetzt, characters bewusst leer (keine erfundenen Figuren), Prolog noch nicht erzeugt."
+}

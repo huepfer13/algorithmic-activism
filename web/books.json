@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 1,
+  "count": 5,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -251,6 +251,66 @@
           "reading_minutes": 3
         }
       ]
+    },
+    {
+      "book_id": "buch_002_die_sieben_quellen",
+      "title": "Die Chronik der sieben Quellen",
+      "language": "DE",
+      "style": "Märchen",
+      "pov": "third_person",
+      "setting_summary": "Sieben Quellen, sieben Pruefungen: eine Wanderung durch die Landschaften der Rechte.",
+      "characters": [],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 0,
+      "reading_minutes": 0,
+      "cover": null,
+      "chapters": []
+    },
+    {
+      "book_id": "buch_003_der_rat_der_tiere",
+      "title": "Der Rat der Tiere im Schattenwald",
+      "language": "DE",
+      "style": "Kinderbuch",
+      "pov": "third_person",
+      "setting_summary": "Die Tiere des Schattenwaldes halten Rat und finden fuer jeden Streit eine gute Loesung.",
+      "characters": [],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 0,
+      "reading_minutes": 0,
+      "cover": null,
+      "chapters": []
+    },
+    {
+      "book_id": "buch_004_neon_exil",
+      "title": "Neon-Exil: Protokolle aus dem Schattennetz",
+      "language": "DE",
+      "style": "SciFi_Dystopie",
+      "pov": "third_person",
+      "setting_summary": "Im Schattennetz dokumentieren Ausgeschlossene, wie Rechte Stueck fuer Stueck verschwinden.",
+      "characters": [],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 0,
+      "reading_minutes": 0,
+      "cover": null,
+      "chapters": []
+    },
+    {
+      "book_id": "buch_005_fragment_der_vernunft",
+      "title": "Fragmente der praktischen Vernunft",
+      "language": "DE",
+      "style": "Philosophischer_Essay",
+      "pov": "third_person",
+      "setting_summary": "Ein diskursives Nachdenken darueber, was Menschenrechte praktisch bedeuten.",
+      "characters": [],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 0,
+      "reading_minutes": 0,
+      "cover": null,
+      "chapters": []
     }
   ]
 }

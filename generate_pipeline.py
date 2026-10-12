@@ -855,11 +855,14 @@ def audit_manual_ending(text: str, erwarteter_block: str | None = None,
     # Absatz, waehrend der Koerper 26 Dialogzeichen, "Wir sind gut," fluestert sie leise. und den
     # STATUS-Block 19x wiederholt enthielt (Artikel-6-Bezug: 0 Treffer). Kapitel 8 und 10 ebenso.
     # Deshalb: das ganze Genre-Gesetz gilt fuer den ganzen Text, nicht nur fuer den Schlusstakt.
-    if not erlaube_rede and not erlaube_emotion:
+    # Pro Regel schalten, nicht pauschal: der Essay verbietet Rede, erlaubt aber Reflexion —
+    # eine gemeinsame Bedingung haette den Scan dort komplett abgeschaltet (gemessen 2026-10-12).
+    if not erlaube_rede:
         dialog = sum(text.count(z) for z in DIALOG_ZEICHEN)
         if dialog:
             return False, (f"woertliche Rede im Kapitelkoerper ({dialog} Zeichen) — "
                            "dieses Genre verlangt Sachtext, nicht nur einen sachlichen Schluss")
+    if not erlaube_emotion:
         erzaehlend = [w for w in ("flüster", "lächel", "seufz", "nickt", "kicher", "stöhnt")
                       if w in text.lower()]
         if erzaehlend:
@@ -867,14 +870,14 @@ def audit_manual_ending(text: str, erwarteter_block: str | None = None,
                            ") — Handbuchgenres fuehren keine Figuren")
         # Wiederholungs-Bremse (Repetition Guard): saetze > 2x wortgleich = Degenerations-Schleife.
         # Nur fuer die strengen Genres — im Maerchen ist ein Kehrvers Stilmittel, keine Degeneration.
-        saetze = [z.strip() for z in re.split(r"(?<=[.!?])\s+", text) if len(z.strip()) > 30]
-        zaehler: dict = {}
-        for satz in saetze:
-            zaehler[satz] = zaehler.get(satz, 0) + 1
-        schleifen = [(z, k) for z, k in zaehler.items() if k > 2]
-        if schleifen:
-            return False, (f"Wiederholungsschleife: ein Satz {schleifen[0][1]}x wortgleich "
-                           f"(\"{schleifen[0][0][:60]}...\")")
+    saetze = [z.strip() for z in re.split(r"(?<=[.!?])\s+", text) if len(z.strip()) > 30]
+    zaehler: dict = {}
+    for satz in saetze:
+        zaehler[satz] = zaehler.get(satz, 0) + 1
+    schleifen = [(z, k) for z, k in zaehler.items() if k > 2]
+    if schleifen:
+        return False, (f"Wiederholungsschleife: ein Satz {schleifen[0][1]}x wortgleich "
+                       f"(\"{schleifen[0][0][:60]}...\")")
     eigen = block_code(erwarteter_block) if erwarteter_block else ""
     if eigen:
         wie_oft = len(re.findall(re.escape(eigen), text))

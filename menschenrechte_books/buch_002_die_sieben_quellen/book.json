@@ -1,0 +1,13 @@
+{
+  "book_id": "buch_002_die_sieben_quellen",
+  "title": "Die Chronik der sieben Quellen",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Märchen",
+  "setting_summary": "Sieben Quellen, sieben Pruefungen: eine Wanderung durch die Landschaften der Rechte.",
+  "characters": [],
+  "covered_articles": [],
+  "current_chapter": "0",
+  "created_at": "2026-10-12T21:14:04Z",
+  "_hinweis": "Stub aus Betreiber-Vorgabe: Titel/Praemisse handgesetzt, characters bewusst leer (keine erfundenen Figuren), Prolog noch nicht erzeugt."
+}

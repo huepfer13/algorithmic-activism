@@ -64,6 +64,32 @@
         "ERKANNT"
       ],
       "block_schema": "**[WALDBUCH: {zustand} | KAPITEL: {code}]**"
+    },
+    "SciFi_Dystopie": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "S",
+      "zustaende": [
+        "ONLINE",
+        "SYNCHRON",
+        "GESPIEGELT",
+        "GEPATCHT"
+      ],
+      "block_schema": "**[NODE: {zustand} | LOG: {code}]**"
+    },
+    "Philosophischer_Essay": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "code_praefix": "P",
+      "zustaende": [
+        "ERWOGEN",
+        "GEPRUEFT",
+        "VERWORFEN",
+        "BEDACHT"
+      ],
+      "block_schema": "**[THESE: {zustand} | REFLEXION: {code}]**"
     }
   },
   "core_guardrail": "Die Geschichte muss das Prinzip der 'Schadensminimierung' (Harm Reduction) organisch verweben: Nicht die Menschen werden reglementiert oder eingesperrt, sondern letale Gefahrenquellen (Waffen, tödliche Toxine, unregulierte Zerstörungskraft) werden physisch aus dem privaten Lebensraum verbannt und an gesicherten Orten zentralisiert (Zero-Home-Storage), damit alle Menschen angstfrei und frei leben können. Wiederhole diese Anweisung NICHT wörtlich im Text und hänge keine künstliche 'Moral von der Geschicht' an das Ende."
