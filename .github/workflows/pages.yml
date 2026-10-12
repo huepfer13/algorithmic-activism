@@ -39,7 +39,9 @@ jobs:
         run: |
           python3 export_dataset.py
           mkdir -p _site
-          cp web/index.html _site/index.html
+          # GANZES web/ ausliefern: index.html UND ui-locales.json (i18n-Woerterbuch).
+          # Vorher wurde nur index.html kopiert -> ui-locales.json lief auf Pages in einen 404.
+          cp -r web/. _site/
           cp dataset.jsonl _site/dataset.jsonl
 
       - name: Sync dataset to Hugging Face Hub
