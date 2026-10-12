@@ -89,6 +89,22 @@ Um den Korpus über alle 30 UN-Artikel, mehrere Sprachräume und Erzählstile hi
      --lang DE > daemon.log 2>&1 &
    ```
 
+4. Ausgleichendes Sprach-Sampling über alle Sprachen mit Artikeln + Locale
+
+   ```bash
+   # Sprache je Durchlauf automatisch wählen (Gewicht invers zum Bestand)
+   python3 generate_pipeline.py --backend ollama --random --daemon --cooldown 8 --lang auto-balanced
+
+   # Trockenlauf: 1000 Sprach-Ziehungen simulieren, es wird nichts geschrieben
+   python3 generate_pipeline.py --lang auto-balanced --dry-run 1000 --seed 42
+   ```
+
+   Das Inventar wird zur Laufzeit als Schnittmenge aus `articles/<lang>/*.md`
+   (nicht leer) und `locales/<lang>.json` (mit Stilen) bestimmt — Sprachen ohne
+   Artikel oder ohne Locale werden übersprungen und nie gezogen. Gewicht:
+   `1 / (Bestand in menschenrechte_tales/<LANG>/ + 1)`; `--lang DE` bleibt
+   unverändert erzwingbar.
+
 ## MCP-Integration (Agenten)
 
 Der Server implementiert die JSON-RPC 2.0 MCP-Spezifikation rein über die Standardbibliothek (kein pip, kein venv erforderlich) mit den Werkzeugen `daemon_status`, `daemon_start`, `daemon_stop`, `get_corpus_stats`, `read_latest_tale`, `get_config_overview`, `set_config_value`.

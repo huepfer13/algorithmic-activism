@@ -9,6 +9,20 @@ und dieses Projekt hält sich an [Semantic Versioning](https://semver.org/spec/v
 
 ## [Unreleased]
 
+### Added
+- **Ausgleichendes Sprach-Sampling (`--lang auto-balanced`)** in `generate_pipeline.py`: Die
+  Zielsprache wird je Durchlauf gewichtet gezogen, Gewicht `1 / (Bestand + 1)` mit dem Bestand
+  an Tales unter `menschenrechte_tales/<LANG>/` — Rückstand wird aufgeholt, ohne starke Sprachen
+  auszutrocknen. Das Sprach-Inventar wird zur Laufzeit als Schnittmenge aus
+  `articles/<lang>/*.md` (nicht leer) und `locales/<lang>.json` (mit Stilen) bestimmt;
+  Sprachen ohne Artikel oder ohne Locale werden übersprungen und nie gezogen. Im Daemon wird
+  das Inventar jeden Durchlauf neu bestimmt (neu hinzugekommene Sprachen laufen ohne Neustart mit).
+- **Trockenlauf (`--dry-run N`)** in `generate_pipeline.py`: simuliert `N` Sprach-Ziehungen
+  (adaptiv wie der Daemon) und gibt eine Verteilungstabelle mit einer Spalte je Sprache aus;
+  es wird nichts geschrieben. `--seed N` macht die Ziehungen reproduzierbar.
+- `--lang <SPRACHE>` bleibt unverändert manuell erzwingbar — bestehende Aufrufe mit `--lang DE`
+  funktionieren weiter (Rückwärts-Kompatibilität).
+
 ### Planned
 - Automatisierte CI/CD-Pipelines via GitHub Actions für periodische Matrix-Synthese.
 - Erweiterung des Korpus um UN-Charta Artikel 5 (Verbot von Folter) und Artikel 12 (Privatsphäre).
