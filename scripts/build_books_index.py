@@ -73,6 +73,7 @@ def kapitel_daten(buch_dir: str) -> list[dict]:
             "model": kopf.get("model", ""),
             "duration_seconds": kopf.get("duration_seconds", ""),
             "jaccard_max": kopf.get("jaccard_max", ""),
+            "tokens_generated": kopf.get("tokens_generated", ""),
             "leak_free": kopf.get("leak_free", ""),
             "words": worte,
             "reading_minutes": lesezeit(worte),

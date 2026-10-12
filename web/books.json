@@ -44,6 +44,7 @@
           "model": "",
           "duration_seconds": "",
           "jaccard_max": "",
+          "tokens_generated": "",
           "leak_free": "",
           "words": 382,
           "reading_minutes": 2
@@ -58,6 +59,7 @@
           "model": "",
           "duration_seconds": "",
           "jaccard_max": "",
+          "tokens_generated": "",
           "leak_free": "",
           "words": 563,
           "reading_minutes": 3
@@ -72,6 +74,7 @@
           "model": "",
           "duration_seconds": "",
           "jaccard_max": "",
+          "tokens_generated": "",
           "leak_free": "",
           "words": 790,
           "reading_minutes": 4
@@ -86,6 +89,7 @@
           "model": "",
           "duration_seconds": "",
           "jaccard_max": "",
+          "tokens_generated": "",
           "leak_free": "",
           "words": 700,
           "reading_minutes": 4
@@ -100,6 +104,7 @@
           "model": "",
           "duration_seconds": "",
           "jaccard_max": "",
+          "tokens_generated": "",
           "leak_free": "",
           "words": 558,
           "reading_minutes": 3
@@ -114,6 +119,7 @@
           "model": "",
           "duration_seconds": "",
           "jaccard_max": "",
+          "tokens_generated": "",
           "leak_free": "",
           "words": 530,
           "reading_minutes": 3
@@ -128,6 +134,7 @@
           "model": "",
           "duration_seconds": "",
           "jaccard_max": "",
+          "tokens_generated": "",
           "leak_free": "",
           "words": 566,
           "reading_minutes": 3
@@ -142,6 +149,7 @@
           "model": "",
           "duration_seconds": "",
           "jaccard_max": "",
+          "tokens_generated": "",
           "leak_free": "",
           "words": 372,
           "reading_minutes": 2
@@ -156,6 +164,7 @@
           "model": "",
           "duration_seconds": "",
           "jaccard_max": "",
+          "tokens_generated": "",
           "leak_free": "",
           "words": 462,
           "reading_minutes": 2
@@ -170,6 +179,7 @@
           "model": "",
           "duration_seconds": "",
           "jaccard_max": "",
+          "tokens_generated": "",
           "leak_free": "",
           "words": 392,
           "reading_minutes": 2
@@ -184,6 +194,7 @@
           "model": "",
           "duration_seconds": "",
           "jaccard_max": "",
+          "tokens_generated": "",
           "leak_free": "",
           "words": 550,
           "reading_minutes": 3
@@ -198,6 +209,7 @@
           "model": "qwen2.5:7b",
           "duration_seconds": "438.2",
           "jaccard_max": "0.111",
+          "tokens_generated": "1700",
           "leak_free": "true",
           "words": 668,
           "reading_minutes": 3
