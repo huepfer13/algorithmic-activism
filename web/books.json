@@ -536,15 +536,14 @@
       "pov": "third_person",
       "setting_summary": "Ein diskursives Nachdenken darueber, was Menschenrechte praktisch bedeuten.",
       "characters": [],
-      "chapter_count": 4,
+      "chapter_count": 3,
       "covered_articles": [
-        "art_01",
         "art_02",
         "art_03",
         "art_04"
       ],
-      "words": 2644,
-      "reading_minutes": 13,
+      "words": 1942,
+      "reading_minutes": 10,
       "cover": null,
       "chapters": [
         {
@@ -564,24 +563,6 @@
           "leak_free": "",
           "words": 537,
           "reading_minutes": 3
-        },
-        {
-          "file": "01_art_01_abschnitt_1_nullpunkt_der_lagerung.md",
-          "index": 1,
-          "title": "Abschnitt 1: Nullpunkt der Lagerung",
-          "article": "art_01",
-          "ending_ok": "true",
-          "attempts": "1",
-          "model": "nvidia/nemotron-3.5-lightning:free",
-          "duration_seconds": "65.6",
-          "jaccard_max": "0.0",
-          "tokens_generated": "6127",
-          "manual_ending_code": "P-01-01",
-          "backend": "openrouter",
-          "genre": "Philosophischer_Essay",
-          "leak_free": "true",
-          "words": 702,
-          "reading_minutes": 4
         },
         {
           "file": "02_art_02_abschnitt_2_kalibrierung_der_grenze.md",

@@ -7,12 +7,11 @@
   "setting_summary": "Ein diskursives Nachdenken darueber, was Menschenrechte praktisch bedeuten.",
   "characters": [],
   "covered_articles": [
-    "art_01",
     "art_02",
     "art_03",
     "art_04"
   ],
-  "current_chapter": 4,
+  "current_chapter": "4",
   "created_at": "2026-10-12T21:14:04Z",
   "_hinweis": "Stub aus Betreiber-Vorgabe: Titel/Praemisse handgesetzt, characters bewusst leer (keine erfundenen Figuren), Prolog noch nicht erzeugt."
 }
