@@ -1720,13 +1720,14 @@
       "pov": "third_person",
       "setting_summary": "Etymologische Miniaturen zu gefluegelten Worten.",
       "characters": [],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_02"
+        "art_02",
+        "art_03"
       ],
-      "words": 877,
-      "reading_minutes": 4,
+      "words": 1216,
+      "reading_minutes": 6,
       "cover": null,
       "chapters": [
         {
@@ -1781,6 +1782,24 @@
           "genre": "Sprichwoerter",
           "leak_free": "true",
           "words": 441,
+          "reading_minutes": 2
+        },
+        {
+          "file": "03_art_03_abschnitt_3_der_nagel_im_licht.md",
+          "index": 3,
+          "title": "Abschnitt 3: Der Nagel im Licht",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "38.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "5233",
+          "manual_ending_code": "V-03-03",
+          "backend": "openrouter",
+          "genre": "Sprichwoerter",
+          "leak_free": "true",
+          "words": 339,
           "reading_minutes": 2
         }
       ]
