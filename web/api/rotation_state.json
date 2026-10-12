@@ -43,7 +43,8 @@
     "r10:nvidia/nemotron-3-super-120b-a12b:free:buch_013_aufzeichnungen_eines_archivars",
     "r10:nvidia/nemotron-3.5-lightning:free:buch_014_der_unberechenbare_humor",
     "r1:deepseek-chat:buch_015_das_kochbuch_der_allmende",
-    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_016_faden_der_gelassenheit"
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_016_faden_der_gelassenheit",
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_017_des_volkes_mund"
   ],
   "runden": {
     "1": [
@@ -166,6 +167,21 @@
         "tokens": "2911",
         "versuche": "1",
         "woerter": 250
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_017_des_volkes_mund",
+        "code": "V-01-01",
+        "datei": "01_art_01_abschnitt_1_der_funke_im_rohr.md",
+        "dauer_s": "73.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 1,
+        "tokens": "1901",
+        "versuche": "3",
+        "woerter": 335
       }
     ],
     "10": [

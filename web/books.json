@@ -1644,10 +1644,12 @@
       "pov": "third_person",
       "setting_summary": "Etymologische Miniaturen zu gefluegelten Worten.",
       "characters": [],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 101,
-      "reading_minutes": 1,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 436,
+      "reading_minutes": 2,
       "cover": null,
       "chapters": [
         {
@@ -1667,6 +1669,24 @@
           "leak_free": "",
           "words": 101,
           "reading_minutes": 1
+        },
+        {
+          "file": "01_art_01_abschnitt_1_der_funke_im_rohr.md",
+          "index": 1,
+          "title": "Abschnitt 1: Der Funke im Rohr",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "3",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "73.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1901",
+          "manual_ending_code": "V-01-01",
+          "backend": "openrouter",
+          "genre": "Sprichwoerter",
+          "leak_free": "true",
+          "words": 335,
+          "reading_minutes": 2
         }
       ]
     },
