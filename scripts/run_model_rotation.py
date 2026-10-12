@@ -28,12 +28,19 @@ ZUSTAND = os.path.join(REPO, "web", "api", "rotation_state.json")
 PROTOKOLL = os.path.join(REPO, "web", "api", "rotation_log.jsonl")
 LOCK = os.path.join(REPO, ".rotation.lock")
 
-# Modell -> Backend. deepseek laeuft ueber die API, die uebrigen lokal auf der GPU.
+# Modell -> Backend. Der Pool ist bewusst heterogen: der Free-Tier-Verbund (OpenRouter) und
+# DeepSeek laufen ueber die API, die lokalen Modelle bleiben als Option fuer Offline-Betrieb.
+# Gemessen 2026-10-12: alle vier API-Slots antworten in unter einer Sekunde; die lokalen Slugs
+# (qwen2.5:7b, mistral, cogito) sind hier auskommentiert, weil sie in sterilen Genres messbar
+# an der Ganzkoerper-Schranke scheitern (3/3 Versuche) und dann Fallbacks schreiben.
 POOL = [
     ("deepseek-chat", "deepseek"),
-    ("qwen2.5:7b", "ollama"),
-    ("mistral", "ollama"),
-    ("cogito", "ollama"),
+    ("nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter"),
+    ("nvidia/nemotron-3-super-120b-a12b:free", "openrouter"),
+    ("nvidia/nemotron-3.5-lightning:free", "openrouter"),
+    # ("qwen2.5:7b", "ollama"),
+    # ("mistral", "ollama"),
+    # ("cogito", "ollama"),
 ]
 
 

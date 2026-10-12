@@ -235,12 +235,16 @@ def erzeuge_text(prompt: str, model: str, host: str, backend: str = "ollama",
     elif backend == "deepseek":
         from backends.deepseek import DeepSeekPlugin
         plugin = DeepSeekPlugin()
+    elif backend == "openrouter":
+        # Free-Tier-Verbund: nur Anbieter mit gemessenem Endpunkt (siehe backends/openai_compat.py).
+        from backends.openai_compat import OpenAICompatPlugin
+        plugin = OpenAICompatPlugin("openrouter")
     else:
         raise RuntimeError(f"unbekanntes Backend '{backend}' — erlaubt sind: "
-                           "ollama, offline, gemini, deepseek")
+                           "ollama, offline, gemini, deepseek, openrouter")
     if json_mode and not getattr(plugin, "supports_json", False):
         raise RuntimeError(f"Backend '{backend}' unterstuetzt keinen JSON-Modus "
-                           "(erzwungenes Format gibt es bei ollama und deepseek)")
+                           "(erzwungenes Format gibt es bei ollama, deepseek und openrouter)")
     bereit, meldung = plugin.is_available()
     if not bereit:
         raise RuntimeError(f"Backend '{backend}' nicht einsatzbereit: {meldung}")
