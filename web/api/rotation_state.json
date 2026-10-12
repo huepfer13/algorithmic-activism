@@ -14,7 +14,8 @@
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_005_fragment_der_vernunft",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_006_das_gericht_vor_der_mauer",
     "r3:nvidia/nemotron-3.5-lightning:free:buch_007_die_kammer_der_zeugen",
-    "r4:deepseek-chat:buch_005_fragment_der_vernunft"
+    "r4:deepseek-chat:buch_005_fragment_der_vernunft",
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_006_das_gericht_vor_der_mauer"
   ],
   "runden": {
     "1": [
@@ -248,6 +249,21 @@
         "tokens": "1185",
         "versuche": "3",
         "woerter": 602
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_006_das_gericht_vor_der_mauer",
+        "code": "E-03-03",
+        "datei": "03_art_03_abschnitt_3_die_kalibrierung_des_atems.md",
+        "dauer_s": "57.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 4,
+        "tokens": "1279",
+        "versuche": "0",
+        "woerter": 356
       }
     ]
   }
