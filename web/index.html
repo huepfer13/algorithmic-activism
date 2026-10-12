@@ -58,6 +58,8 @@
       transition: background 0.15s;
     }
     .download-btn:hover { background: #0369a1; }
+    .about-btn { background: #374151; margin-left: 6px; }
+    .about-btn:hover { background: #4b5563; }
 
     /* Filter */
     .search-box {
@@ -152,6 +154,51 @@
       font-style: italic;
     }
 
+    /* Ueber das Projekt / Manifest (Startansicht) */
+    .about h2 {
+      font-size: 1.3rem;
+      color: var(--accent);
+      margin: 34px 0 12px;
+      line-height: 1.3;
+    }
+    .about p {
+      line-height: 1.75;
+      color: var(--text-prose);
+      margin-bottom: 14px;
+      font-size: 1rem;
+    }
+    .about .about-lede { font-size: 1.18rem; line-height: 1.6; color: var(--text); }
+    .about code { background: var(--card-bg); padding: 1px 5px; border-radius: 4px; font-size: 0.85em; }
+    .about-stats {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin: 18px 0 8px;
+      font-size: 0.88rem;
+      line-height: 1.7;
+      color: var(--text-prose);
+    }
+    .about-stats b { color: var(--accent); }
+    .about-note { color: var(--muted); font-size: 0.82rem; }
+    .manifest {
+      border-left: 3px solid var(--accent);
+      padding: 2px 0 2px 18px;
+      margin: 8px 0 0;
+    }
+    .manifest p:last-child { margin-bottom: 0; }
+    .about-links { display: flex; gap: 10px; flex-wrap: wrap; margin: 6px 0 4px; }
+    .about-links a {
+      font-size: 0.82rem;
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--accent);
+      text-decoration: none;
+      transition: border-color 0.15s;
+    }
+    .about-links a:hover { border-color: var(--accent); }
+
     /* Mobile */
     @media (max-width: 768px) {
       body { flex-direction: column; height: auto; overflow: visible; }
@@ -166,6 +213,7 @@
       <h1>Algorithmic Activism</h1>
       <p class="header-desc" id="stats-summary">Lade Korpus...</p>
       <a href="./dataset.jsonl" download id="download-link" class="download-btn">⬇ dataset.jsonl herunterladen</a>
+      <a href="#" id="about-link" class="download-btn about-btn">Über das Projekt</a>
     </div>
     <div class="search-box">
       <input type="text" id="filter-input" placeholder="Titel, Volltext oder Modell suchen...">
@@ -179,8 +227,35 @@
 
   <main id="main-content">
     <div class="reader" id="reader-view">
-      <div style="color: var(--muted); margin-top: 80px; text-align: center;">
-        Wähle eine Geschichte aus der Liste aus.
+      <div class="about">
+        <p class="about-lede">Ein offener, synthetischer Korpus narrativer Ethik-Artefakte — erzeugt aus der Allgemeinen Erklärung der Menschenrechte (UDHR).</p>
+        <p>Alle Texte entstehen lokal auf eigener Hardware: ein Sprachmodell (<b>qwen2.5:7b</b> über Ollama) schreibt zu je einem UN-Artikel in einem von zehn Erzählstilen. Anschließend prüft ein heuristisches Guardrail-Audit jede Ausgabe; was durchfällt, landet nicht im Korpus.</p>
+
+        <div class="about-stats" id="about-stats">
+          Im Korpus: <b id="about-stat-total">…</b> Narrative ·
+          Sprachen: <span id="about-stat-lang">…</span> ·
+          Stile: <b id="about-stat-styles">…</b> ·
+          Artikel: <b id="about-stat-articles">…</b> ·
+          ohne YAML-Kopf (Altbestand): <span id="about-stat-prov">…</span>
+        </div>
+        <p class="about-note">Diese Zahlen werden beim Laden aus dem tatsächlich ausgelieferten <code>dataset.jsonl</code> gezählt — nicht geschätzt und nicht fest eingetragen.</p>
+
+        <h2>Was ist das?</h2>
+        <p>Ein offen lizenziertes Korpus synthetischer Kurzgeschichten zu den Artikeln der UDHR: Parabeln, Fabeln, dystopische und essayistische Texte. Der Code steht unter MIT, die Daten unter CC-BY 4.0. Das ist Diskussionsmaterial — kein Rechtsrat, kein Nachweis, keine Behauptung über die Wirklichkeit.</p>
+        <div class="about-links">
+          <a href="https://github.com/huepfer13/algorithmic-activism" rel="noopener">Quellcode auf GitHub</a>
+          <a href="https://huggingface.co/datasets/hardtoneselector/algorithmic-activism-corpus" rel="noopener">Dataset auf Hugging Face</a>
+        </div>
+
+        <h2>Warum Geschichten statt Gesetzestexte?</h2>
+        <p>Paragrafen sagen, was verboten ist. Erzählungen zeigen, was daraus folgt. Wer in eine Figur schlüpft, verhandelt Abwägungen, bevor sie ihn selbst betreffen — Würde, Meinungsfreiheit, Rechtsgleichheit werden erfahrbar statt nachschlagbar. Genau dafür gibt es diesen Korpus.</p>
+
+        <h2>Harm Reduction — die Prämisse</h2>
+        <div class="manifest">
+          <p><b>Schutz von Leben und körperlicher Unversehrtheit hat unbedingten Vorrang — vor Tradition, vor Bequemlichkeit, vor eingespielter Gewohnheit und vor industrieller Trägheit.</b> Wo tödliche Gefahrenquellen im Alltag frei zugänglich bleiben, ist das keine Freiheit, sondern ein Risiko, das die Allgemeinheit trägt.</p>
+          <p>Deshalb erzählen diese Texte von struktureller Schadensminimierung: Zugang regulieren, Impulse verzögern, Gefahren zentralisieren — als Haltung, die sich in Handlungen zeigt, <b>nicht</b> als moralischer Zeigefinger. Keine Geschichte endet mit einem plakativen Lehrsatz; die Abwägung bleibt beim Lesenden.</p>
+          <p><b>Grenzen, offen benannt:</b> Diese Texte sind maschinell erzeugt und nur heuristisch geprüft — sie können falsch, schief oder schlicht langweilig sein. Einträge ohne YAML-Kopf tragen ausdrücklich <code>provenance: "none"</code>: sie werden in der Provenienz als Altbestand ausgewiesen und nicht als auditiert ausgegeben.</p>
+        </div>
       </div>
     </div>
   </main>
@@ -198,6 +273,10 @@
     // Drei Kandidaten: lokal (/web/), Pages-Root (_site/) und Snapshot-Ablage. Kein Raten, Reihenfolge ist gemessen.
     const DATASET_CANDIDATES = ['./dataset.jsonl', '../dataset.jsonl', '../datasets/corpus-latest.jsonl'];
     let DATASET_URL = null;
+
+    // Startansicht ist der Ueber-Block ("Was ist das? / Warum / Harm Reduction").
+    // Er wird VOR dem ersten Rendern gesichert, damit der Link "Ueber das Projekt" ihn zurueckholen kann.
+    const ABOUT_HTML = document.getElementById('reader-view').innerHTML;
 
     async function resolveDataset() {
       for (const cand of DATASET_CANDIDATES) {
@@ -226,15 +305,43 @@
         document.getElementById('stats-summary').textContent = `${tales.length} Narrative (${kbSize} KB)`;
         populateFilters();
         renderList(tales);
+        fillAboutStats();
 
-        // Deep Link Check via Hash
+        // Deep Link Check via Hash — ohne Hash bleibt der Ueber-Block stehen.
         const hash = decodeURIComponent(window.location.hash.replace('#', ''));
-        const foundIdx = tales.findIndex(t => (t.meta.title || '').replace(/\s+/g, '_') === hash);
-        selectTale(foundIdx !== -1 ? foundIdx : 0);
+        const foundIdx = hash ? tales.findIndex(t => (t.meta.title || '').replace(/\s+/g, '_') === hash) : -1;
+        if (foundIdx !== -1) selectTale(foundIdx); else showAbout();
       } catch (e) {
         document.getElementById('stats-summary').textContent = "Fehler beim Laden des Datensatzes";
         console.error(e);
       }
+    }
+
+    // Zahlen fuer den Ueber-Block: aus dem geladenen Korpus GEZAEHLT, nie fest eingetragen.
+    // Ausgabe ausschliesslich per textContent — keine Interpolation, kein Escaping-Bedarf.
+    function fillAboutStats() {
+      const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = String(val); };
+      const langs = {};
+      let provNone = 0;
+      tales.forEach(t => {
+        const meta = t.meta || {};
+        const l = meta.language || 'ohne Angabe';
+        langs[l] = (langs[l] || 0) + 1;
+        if (meta.provenance === 'none') provNone++;
+      });
+      const styles = new Set(tales.map(t => (t.meta || {}).style).filter(Boolean));
+      const articles = new Set(tales.map(t => (t.meta || {}).article).filter(Boolean));
+      set('about-stat-total', tales.length);
+      set('about-stat-lang', Object.entries(langs).map(([k, v]) => k + ' ' + v).join(', '));
+      set('about-stat-styles', styles.size);
+      set('about-stat-articles', articles.size);
+      set('about-stat-prov', provNone);
+    }
+
+    function showAbout() {
+      document.getElementById('reader-view').innerHTML = ABOUT_HTML;
+      fillAboutStats();
+      document.querySelectorAll('.tale-item').forEach(el => el.classList.remove('active'));
     }
 
     // Filter-Optionen ohne innerHTML aufbauen: value und Label sind Korpus-Daten.
@@ -353,9 +460,9 @@
     document.getElementById('filter-input').addEventListener('input', filterData);
     document.getElementById('style-select').addEventListener('change', filterData);
     document.getElementById('article-select').addEventListener('change', filterData);
+    document.getElementById('about-link').addEventListener('click', (e) => { e.preventDefault(); showAbout(); });
 
     window.onload = loadDataset;
   </script>
 </body>
 </html>
-
