@@ -425,14 +425,15 @@
       "pov": "third_person",
       "setting_summary": "Im Schattennetz dokumentieren Ausgeschlossene, wie Rechte Stueck fuer Stueck verschwinden.",
       "characters": [],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_02",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 1747,
-      "reading_minutes": 9,
+      "words": 2141,
+      "reading_minutes": 11,
       "cover": null,
       "chapters": [
         {
@@ -506,6 +507,24 @@
           "leak_free": "true",
           "words": 293,
           "reading_minutes": 1
+        },
+        {
+          "file": "04_art_04_abschnitt_4_kalibrierung_eins.md",
+          "index": 4,
+          "title": "Abschnitt 4: Kalibrierung Eins",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.0",
+          "jaccard_max": "0.091",
+          "tokens_generated": "848",
+          "manual_ending_code": "S-04-04",
+          "backend": "deepseek",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "true",
+          "words": 394,
+          "reading_minutes": 2
         }
       ]
     },
