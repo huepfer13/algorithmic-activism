@@ -156,9 +156,16 @@ def main() -> int:
         print(f"[Runner] zu wenige Buecher mit book.json: {alle}", flush=True)
         return 1
     z = zustand_laden()
-    offen = (args.runden * len(POOL)) - len(z["erledigt"])
+    # Offene Slots aus dem ECHTEN Plan zaehlen, nicht gegen den globalen Zustand: bei einem gefilterten
+    # Lauf (--buecher) haette die alte Rechnung "offen: 0" gemeldet, obwohl 40 Kapitel anstehen.
+    offen = 0
+    for runde in range(1, args.runden + 1):
+        for i, (modell, backend) in enumerate(POOL):
+            buch = band_waehlen(alle, ((runde - 1) * len(POOL) + i) % len(alle), backend)
+            if f"r{runde}:{modell}:{buch}" not in z["erledigt"]:
+                offen += 1
     print(f"[Runner] {len(alle)} Buecher | {len(POOL)} Modelle | {args.runden} Runden "
-          f"= {args.runden * len(POOL)} Kapitel | offen: {max(offen, 0)}", flush=True)
+          f"= {args.runden * len(POOL)} Slots | offen: {offen}", flush=True)
     print(f"[Runner] Pool: {', '.join(f'{m} ({b})' for m, b in POOL)}", flush=True)
 
     fehler = []
