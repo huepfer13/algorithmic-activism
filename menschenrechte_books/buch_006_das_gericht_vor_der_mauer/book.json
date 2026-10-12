@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_006_das_gericht_vor_der_mauer",
+  "title": "Das Gericht vor der Mauer",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Parabel",
+  "setting_summary": "In der Kuppelstadt Avelun regiert der Ältestenrat mit einem strikten Ressourcen- und Meinungssystem, das jede Bewegung und jeden Gedanken zu erfassen sucht. Die Luft ist knapp, die Zeit bis zur nächsten Ernte drängt, und wer sich widersetzt, verliert seinen Platz im Inneren. Fünf Bewohner geraten in einen stillen Aufstand, der die Grundfesten ihrer Gemeinschaft erschüttert.",
+  "characters": [
+    "Lior",
+    "Mira",
+    "Tomas",
+    "Vera",
+    "Juno"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-10-12T21:22:32.825343+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

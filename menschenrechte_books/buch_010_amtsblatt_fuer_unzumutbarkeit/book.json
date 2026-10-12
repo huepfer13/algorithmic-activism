@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_010_amtsblatt_fuer_unzumutbarkeit",
+  "title": "Amtsblatt fuer Unzustaendigkeit und Fristwahrung",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Satire",
+  "setting_summary": "In der fensterlosen zwölften Etage des Bundesamts für Grundrechtsabwicklung regiert ein überbordender Apparat aus Formularen, Wartemarken und Zuständigkeitsstreitigkeiten. Jeder Antrag auf ein Menschenrecht muss erst durch sieben Abteilungen, drei Vorprüfstellen und ein Kaffeeküchenprotokoll. Wer zu lange wartet, verliert laut Aktenlage sein Anliegen – und manchmal sich selbst.",
+  "characters": [
+    "Hedwig Klabundt",
+    "Bodo Pfütze",
+    "Dr. Marlene Zirbeldrüse",
+    "Kalle Ohm",
+    "Frau Säckel"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-10-12T21:23:29.143720+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

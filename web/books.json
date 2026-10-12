@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 5,
+  "count": 13,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -260,12 +260,51 @@
       "pov": "third_person",
       "setting_summary": "Sieben Quellen, sieben Pruefungen: eine Wanderung durch die Landschaften der Rechte.",
       "characters": [],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 0,
-      "reading_minutes": 0,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 1027,
+      "reading_minutes": 5,
       "cover": null,
-      "chapters": []
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.4",
+          "jaccard_max": "",
+          "tokens_generated": "967",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Märchen",
+          "leak_free": "",
+          "words": 564,
+          "reading_minutes": 3
+        },
+        {
+          "file": "01_art_01_abschnitt_1_der_erste_hügel_und_das_kalt.md",
+          "index": 1,
+          "title": "Abschnitt 1: Der erste Hügel und das kalte Eisen",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.1",
+          "jaccard_max": "0.047",
+          "tokens_generated": "831",
+          "manual_ending_code": "M-01-01",
+          "backend": "deepseek",
+          "genre": "Märchen",
+          "leak_free": "true",
+          "words": 463,
+          "reading_minutes": 2
+        }
+      ]
     },
     {
       "book_id": "buch_003_der_rat_der_tiere",
@@ -277,10 +316,29 @@
       "characters": [],
       "chapter_count": 0,
       "covered_articles": [],
-      "words": 0,
-      "reading_minutes": 0,
+      "words": 464,
+      "reading_minutes": 2,
       "cover": null,
-      "chapters": []
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.9",
+          "jaccard_max": "",
+          "tokens_generated": "842",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Kinderbuch",
+          "leak_free": "",
+          "words": 464,
+          "reading_minutes": 2
+        }
+      ]
     },
     {
       "book_id": "buch_004_neon_exil",
@@ -292,10 +350,29 @@
       "characters": [],
       "chapter_count": 0,
       "covered_articles": [],
-      "words": 0,
-      "reading_minutes": 0,
+      "words": 380,
+      "reading_minutes": 2,
       "cover": null,
-      "chapters": []
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.0",
+          "jaccard_max": "",
+          "tokens_generated": "725",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "",
+          "words": 380,
+          "reading_minutes": 2
+        }
+      ]
     },
     {
       "book_id": "buch_005_fragment_der_vernunft",
@@ -307,10 +384,349 @@
       "characters": [],
       "chapter_count": 0,
       "covered_articles": [],
-      "words": 0,
-      "reading_minutes": 0,
+      "words": 537,
+      "reading_minutes": 3,
       "cover": null,
-      "chapters": []
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.4",
+          "jaccard_max": "",
+          "tokens_generated": "917",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Philosophischer_Essay",
+          "leak_free": "",
+          "words": 537,
+          "reading_minutes": 3
+        }
+      ]
+    },
+    {
+      "book_id": "buch_006_das_gericht_vor_der_mauer",
+      "title": "Das Gericht vor der Mauer",
+      "language": "DE",
+      "style": "Parabel",
+      "pov": "third_person",
+      "setting_summary": "In der Kuppelstadt Avelun regiert der Ältestenrat mit einem strikten Ressourcen- und Meinungssystem, das jede Bewegung und jeden Gedanken zu erfassen sucht. Die Luft ist knapp, die Zeit bis zur nächsten Ernte drängt, und wer sich widersetzt, verliert seinen Platz im Inneren. Fünf Bewohner geraten in einen stillen Aufstand, der die Grundfesten ihrer Gemeinschaft erschüttert.",
+      "characters": [
+        "Lior",
+        "Mira",
+        "Tomas",
+        "Vera",
+        "Juno"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 446,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.0",
+          "jaccard_max": "",
+          "tokens_generated": "799",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Parabel",
+          "leak_free": "",
+          "words": 446,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_007_die_kammer_der_zeugen",
+      "title": "Die Kammer der Zeugen: Schiedsspruch XII",
+      "language": "DE",
+      "style": "Gerichtsdrama",
+      "pov": "third_person",
+      "setting_summary": "In einem fensterlosen Sonderjustizzentrum auf einem stillgelegten Hafengelände verhandelt ein Tribunal unter permanenter Videoüberwachung und strikter Zwei-Stunden-Taktung pro Sitzung. Der Fall eines Whistleblowers, der geheime Überwachungsdaten veröffentlichte, zwingt das Gericht, zwischen Staatssicherheit und individuellen Grundrechten abzuwägen. Jede Zeugenaussage kann die Karriere der Beteiligten beenden und das Vertrauen in die Justiz für immer beschädigen.",
+      "characters": [
+        "Richterin Aline Voss",
+        "Staatsanwalt Marek Dorn",
+        "Verteidigerin Yara Klein",
+        "Angeklagter Tomas Reiter",
+        "Zeugin Elif Sarikaya"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 422,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.0",
+          "jaccard_max": "",
+          "tokens_generated": "778",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Gerichtsdrama",
+          "leak_free": "",
+          "words": 422,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_008_flechtwerk_arkadien",
+      "title": "Flechtwerk: Annalen der vernetzten Allmende",
+      "language": "DE",
+      "style": "Solarpunk",
+      "pov": "third_person",
+      "setting_summary": "Osthafen ist ein schwimmendes Stadtviertel auf alten Frachtpontons, das sich mit dezentralen Bioreaktoren, Salzgärten und offenen Werkstätten selbst versorgt. Ein Rat aus gewählten Delegierten verwaltet die knappen Süßwasser- und Speicherzellen, doch ein neuer Zuteilungsschlüssel droht ganze Pontonringe von der Versorgung abzuschneiden. Als die Bewohner beginnen, die Entscheidung öffentlich anzufechten, wird aus einem Verteilungsstreit ein Kampf um Würde, Mitsprache und das Recht, gehört zu werden.",
+      "characters": [
+        "Mira",
+        "Tobias",
+        "Yara",
+        "Kell",
+        "Nuri"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 737,
+      "reading_minutes": 4,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "11.5",
+          "jaccard_max": "",
+          "tokens_generated": "1375",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Solarpunk",
+          "leak_free": "",
+          "words": 737,
+          "reading_minutes": 4
+        }
+      ]
+    },
+    {
+      "book_id": "buch_009_depeschen_aus_dem_kordon",
+      "title": "Depeschen aus dem Kordon",
+      "language": "DE",
+      "style": "Briefroman",
+      "pov": "first_person",
+      "setting_summary": "Eine abgeriegelte Forschungsstation tief unter dem Polareis, in der fünf Getrennte über einen einzigen Kurzwellenkanal nur nummerierte Depeschen austauschen dürfen. Die Station hat Sauerstoff für 400 Tage, doch die Aufsicht Kroll filtert jede Nachricht und droht mit Streichung der Rationen. Ein Riss im Reaktor zwingt die Gruppe, über Würde, Wahrheit und Überleben neu zu verhandeln.",
+      "characters": [
+        "Ilse",
+        "Baran",
+        "Tomas",
+        "Nadia",
+        "Kroll"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 364,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.2",
+          "jaccard_max": "",
+          "tokens_generated": "655",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Briefroman",
+          "leak_free": "",
+          "words": 364,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_010_amtsblatt_fuer_unzumutbarkeit",
+      "title": "Amtsblatt fuer Unzustaendigkeit und Fristwahrung",
+      "language": "DE",
+      "style": "Satire",
+      "pov": "third_person",
+      "setting_summary": "In der fensterlosen zwölften Etage des Bundesamts für Grundrechtsabwicklung regiert ein überbordender Apparat aus Formularen, Wartemarken und Zuständigkeitsstreitigkeiten. Jeder Antrag auf ein Menschenrecht muss erst durch sieben Abteilungen, drei Vorprüfstellen und ein Kaffeeküchenprotokoll. Wer zu lange wartet, verliert laut Aktenlage sein Anliegen – und manchmal sich selbst.",
+      "characters": [
+        "Hedwig Klabundt",
+        "Bodo Pfütze",
+        "Dr. Marlene Zirbeldrüse",
+        "Kalle Ohm",
+        "Frau Säckel"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 500,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.7",
+          "jaccard_max": "",
+          "tokens_generated": "973",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Satire",
+          "leak_free": "",
+          "words": 500,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_011_das_haus_ohne_widerhall",
+      "title": "Das Haus ohne Widerhall",
+      "language": "DE",
+      "style": "Gothic",
+      "pov": "first_person",
+      "setting_summary": "Ein schmales, graues Mietshaus in einer vergessenen Stadt, dessen Flure und Zimmer sich nachts umlagern, sodass Türen verschwinden und neue entstehen. Die Bewohner leben unter ständigem Platz- und Zeitmangel, weil das Haus jedem nur so viel Raum zugesteht, wie er sich verdient. Wer sich an frühere Freiheiten erinnert, wird von den Wänden enger umschlossen, bis er schweigt.",
+      "characters": [
+        "Vera",
+        "Jonas",
+        "Mutter Halb",
+        "Timo",
+        "Der Verwalter"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 458,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.8",
+          "jaccard_max": "",
+          "tokens_generated": "792",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Gothic",
+          "leak_free": "",
+          "words": 458,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_012_manifest_der_unantastbaren",
+      "title": "Manifest der Unantastbaren: Ruf an die Tore",
+      "language": "DE",
+      "style": "Manifest",
+      "pov": "first_person",
+      "setting_summary": "In einem unterirdischen Archivbunker, dem Sektor Neun, hausen die letzten freien Chronisten unter ständiger Überwachung durch die Obrigkeit. Ein Riss in der Betondecke lässt Wasser eindringen und markiert eine tickende Frist: In wenigen Wochen wird der Bunker geflutet, wenn niemand die Wahrheit nach außen trägt. Jeder ausgesprochene Satz kann Verhaftung, Folter oder Tod bedeuten – und doch muss gesprochen werden.",
+      "characters": [
+        "Ilka",
+        "Baran",
+        "Tomas",
+        "Sanna",
+        "Der Wächter"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 442,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.2",
+          "jaccard_max": "",
+          "tokens_generated": "736",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Manifest",
+          "leak_free": "",
+          "words": 442,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_013_aufzeichnungen_eines_archivars",
+      "title": "Schattenlinien: Tagebuch aus der Sperrzone",
+      "language": "DE",
+      "style": "Tagebuch",
+      "pov": "first_person",
+      "setting_summary": "Ein abgeriegelter Stadtteil, in dem die Bewohner unter ständiger Videoüberwachung und willkürlichen Ausgangssperren leben. Ein neues 'Sicherheitsdekret' entzieht ihnen Schritt für Schritt Grundrechte, während die Behörden jede Beschwerde als Störung der öffentlichen Ordnung werten. Die knappen Ressourcen und die allgegenwärtige Angst vor Denunziation treiben die Gemeinschaft an den Rand des Zusammenbruchs.",
+      "characters": [
+        "Klara",
+        "Jonas",
+        "Miray",
+        "Herr Brenner",
+        "Frau Ostrow"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 612,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.7",
+          "jaccard_max": "",
+          "tokens_generated": "1086",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Tagebuch",
+          "leak_free": "",
+          "words": 612,
+          "reading_minutes": 3
+        }
+      ]
     }
   ]
 }

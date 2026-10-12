@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_007_die_kammer_der_zeugen",
+  "title": "Die Kammer der Zeugen: Schiedsspruch XII",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Gerichtsdrama",
+  "setting_summary": "In einem fensterlosen Sonderjustizzentrum auf einem stillgelegten Hafengelände verhandelt ein Tribunal unter permanenter Videoüberwachung und strikter Zwei-Stunden-Taktung pro Sitzung. Der Fall eines Whistleblowers, der geheime Überwachungsdaten veröffentlichte, zwingt das Gericht, zwischen Staatssicherheit und individuellen Grundrechten abzuwägen. Jede Zeugenaussage kann die Karriere der Beteiligten beenden und das Vertrauen in die Justiz für immer beschädigen.",
+  "characters": [
+    "Richterin Aline Voss",
+    "Staatsanwalt Marek Dorn",
+    "Verteidigerin Yara Klein",
+    "Angeklagter Tomas Reiter",
+    "Zeugin Elif Sarikaya"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-10-12T21:22:42.454143+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

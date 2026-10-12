@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_011_das_haus_ohne_widerhall",
+  "title": "Das Haus ohne Widerhall",
+  "pov": "first_person",
+  "language": "DE",
+  "style": "Gothic",
+  "setting_summary": "Ein schmales, graues Mietshaus in einer vergessenen Stadt, dessen Flure und Zimmer sich nachts umlagern, sodass Türen verschwinden und neue entstehen. Die Bewohner leben unter ständigem Platz- und Zeitmangel, weil das Haus jedem nur so viel Raum zugesteht, wie er sich verdient. Wer sich an frühere Freiheiten erinnert, wird von den Wänden enger umschlossen, bis er schweigt.",
+  "characters": [
+    "Vera",
+    "Jonas",
+    "Mutter Halb",
+    "Timo",
+    "Der Verwalter"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-10-12T21:23:37.972308+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

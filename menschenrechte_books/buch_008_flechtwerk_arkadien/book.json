@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_008_flechtwerk_arkadien",
+  "title": "Flechtwerk: Annalen der vernetzten Allmende",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Solarpunk",
+  "setting_summary": "Osthafen ist ein schwimmendes Stadtviertel auf alten Frachtpontons, das sich mit dezentralen Bioreaktoren, Salzgärten und offenen Werkstätten selbst versorgt. Ein Rat aus gewählten Delegierten verwaltet die knappen Süßwasser- und Speicherzellen, doch ein neuer Zuteilungsschlüssel droht ganze Pontonringe von der Versorgung abzuschneiden. Als die Bewohner beginnen, die Entscheidung öffentlich anzufechten, wird aus einem Verteilungsstreit ein Kampf um Würde, Mitsprache und das Recht, gehört zu werden.",
+  "characters": [
+    "Mira",
+    "Tobias",
+    "Yara",
+    "Kell",
+    "Nuri"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-10-12T21:23:10.580783+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

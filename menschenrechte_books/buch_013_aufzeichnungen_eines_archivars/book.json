@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_013_aufzeichnungen_eines_archivars",
+  "title": "Schattenlinien: Tagebuch aus der Sperrzone",
+  "pov": "first_person",
+  "language": "DE",
+  "style": "Tagebuch",
+  "setting_summary": "Ein abgeriegelter Stadtteil, in dem die Bewohner unter ständiger Videoüberwachung und willkürlichen Ausgangssperren leben. Ein neues 'Sicherheitsdekret' entzieht ihnen Schritt für Schritt Grundrechte, während die Behörden jede Beschwerde als Störung der öffentlichen Ordnung werten. Die knappen Ressourcen und die allgegenwärtige Angst vor Denunziation treiben die Gemeinschaft an den Rand des Zusammenbruchs.",
+  "characters": [
+    "Klara",
+    "Jonas",
+    "Miray",
+    "Herr Brenner",
+    "Frau Ostrow"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-10-12T21:23:56.578831+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

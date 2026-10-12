@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_012_manifest_der_unantastbaren",
+  "title": "Manifest der Unantastbaren: Ruf an die Tore",
+  "pov": "first_person",
+  "language": "DE",
+  "style": "Manifest",
+  "setting_summary": "In einem unterirdischen Archivbunker, dem Sektor Neun, hausen die letzten freien Chronisten unter ständiger Überwachung durch die Obrigkeit. Ein Riss in der Betondecke lässt Wasser eindringen und markiert eine tickende Frist: In wenigen Wochen wird der Bunker geflutet, wenn niemand die Wahrheit nach außen trägt. Jeder ausgesprochene Satz kann Verhaftung, Folter oder Tod bedeuten – und doch muss gesprochen werden.",
+  "characters": [
+    "Ilka",
+    "Baran",
+    "Tomas",
+    "Sanna",
+    "Der Wächter"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-10-12T21:23:46.149190+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
