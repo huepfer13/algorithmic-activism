@@ -260,12 +260,13 @@
       "pov": "third_person",
       "setting_summary": "Sieben Quellen, sieben Pruefungen: eine Wanderung durch die Landschaften der Rechte.",
       "characters": [],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 1027,
-      "reading_minutes": 5,
+      "words": 1644,
+      "reading_minutes": 8,
       "cover": null,
       "chapters": [
         {
@@ -303,6 +304,24 @@
           "leak_free": "true",
           "words": 463,
           "reading_minutes": 2
+        },
+        {
+          "file": "02_art_02_abschnitt_2_die_brücke_aus_neun_balken.md",
+          "index": 2,
+          "title": "Abschnitt 2: Die Brücke aus neun Balken",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1074",
+          "manual_ending_code": "M-02-02",
+          "backend": "deepseek",
+          "genre": "Märchen",
+          "leak_free": "true",
+          "words": 617,
+          "reading_minutes": 3
         }
       ]
     },
