@@ -567,6 +567,29 @@ def inhaltliche_woerter(text: str) -> set:
     return {w for w in re.findall(r"[^\W\d_]{4,}", text.lower())}
 
 
+def ist_strukturzeile(zeile: str) -> bool:
+    """Zeile, die ein Strukturbaustein ist (Pflichtblock oder Marker am Zeilenanfang)."""
+    rumpf = _MARKDOWN_PRAEFIX_RE.sub("", zeile).strip().strip("*_#").strip()
+    return not rumpf or bool(zeilen_marker(rumpf))
+
+
+def schluss_prosa(text: str) -> str:
+    """Der letzte Absatz, der KEIN Strukturbaustein ist — die Historien-Schranke vergleicht nur Prosa.
+
+    Zwei Fallen waren hier zu umgehen (beide am 2026-10-12 belegt):
+    1. Der Pflichtblock darf nicht mitgezaehlt werden, sonst sind alle Kapitel zu 100 % "gleich"
+       (status, degraded, sektor, code, intervall) -> Fehlalarm.
+    2. Das Modell setzt den Block als EIGENEN Absatz ans Ende. Wird nur der letzte Absatz gefiltert,
+       bleibt nichts uebrig und die Schranke wird blind. Daher rueckwaerts den ersten inhaltstragenden
+       Absatz nehmen.
+    """
+    for absatz in reversed([a.strip() for a in text.split("\n\n") if a.strip()]):
+        reste = [z.strip() for z in absatz.splitlines() if z.strip() and not ist_strukturzeile(z)]
+        if reste:
+            return " ".join(reste)
+    return ""
+
+
 def ist_wiederholung(schluss: str, vorgaenger: list, schwelle: float = SCHWELLE_WIEDERHOLUNG):
     """Jaccard-Aehnlichkeit ueber Wortmengen gegen die Schlussabsaetze der Vorkapitel."""
     a = inhaltliche_woerter(schluss)
@@ -639,15 +662,22 @@ def erzeuge_mit_endschranke(prompt: str, model: str, host: str, style_flags: dic
         text = run_ollama_stream(prompt, model=model, host=host)
         ok, grund = audit_manual_ending(text, erwarteter_block=erwarteter_block)
         if ok and vorgaenger_schluesse:
-            wieder, aehnlich = ist_wiederholung(schlussabsatz(text), vorgaenger_schluesse)
+            # Nur die Prosa vergleichen: der Pflichtblock ist per Kapitelcode eindeutig und darf
+            # nicht als "Wiederholung" gelten.
+            wieder, aehnlich = ist_wiederholung(schluss_prosa(text),
+                                                [schluss_prosa(v) for v in vorgaenger_schluesse])
             if wieder:
                 ok, grund = False, ("Wiederholung des Schlussabsatzes "
                                     f"({aehnlich:.0%} Wortueberlappung mit einem Vorkapitel)")
         print(f"  [{label}] Versuch {i}/{versuche}: Endschranke "
               f"{'erfuellt' if ok else 'VERFEHLT'} ({grund})", flush=True)
         if not ok:
-            print(f"  [{label}]   abgelehnter Schluss: " + schlussabsatz(text)[-120:].replace(chr(10), " "),
-                  flush=True)
+            schluss = schlussabsatz(text)[-120:].replace(chr(10), " ")
+            print(f"  [{label}]   abgelehnter Schluss: " + schluss, flush=True)
+            prosa = schluss_prosa(text)[-120:].replace(chr(10), " ")
+            if prosa and prosa not in schluss:
+                # Bei einer Wiederholungs-Ablehnung liegt der Grund in der Prosa, nicht im Block.
+                print(f"  [{label}]   verglichene Prosa: " + prosa, flush=True)
         if ok:
             return text, True, grund, i
     return text, False, grund, versuche
