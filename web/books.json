@@ -1102,13 +1102,14 @@
         "Kalle Ohm",
         "Frau Säckel"
       ],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_02"
+        "art_02",
+        "art_03"
       ],
-      "words": 1324,
-      "reading_minutes": 7,
+      "words": 1647,
+      "reading_minutes": 8,
       "cover": null,
       "chapters": [
         {
@@ -1163,6 +1164,24 @@
           "genre": "Satire",
           "leak_free": "true",
           "words": 410,
+          "reading_minutes": 2
+        },
+        {
+          "file": "03_art_03_abschnitt_3_die_kalibrierung_des_atemzug.md",
+          "index": 3,
+          "title": "Abschnitt 3: Die Kalibrierung des Atemzugs",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "31.5",
+          "jaccard_max": "0.125",
+          "tokens_generated": "1367",
+          "manual_ending_code": "G-03-03",
+          "backend": "openrouter",
+          "genre": "Satire",
+          "leak_free": "true",
+          "words": 323,
           "reading_minutes": 2
         }
       ]
