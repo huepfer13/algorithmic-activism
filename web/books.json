@@ -1488,10 +1488,12 @@
       "pov": "third_person",
       "setting_summary": "Kurzgeschichten und Szenen, in denen Humor den Ernstfall entlarvt.",
       "characters": [],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 114,
-      "reading_minutes": 1,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 476,
+      "reading_minutes": 2,
       "cover": null,
       "chapters": [
         {
@@ -1511,6 +1513,24 @@
           "leak_free": "",
           "words": 114,
           "reading_minutes": 1
+        },
+        {
+          "file": "01_art_01_abschnitt_1_staub_im_apparat.md",
+          "index": 1,
+          "title": "Abschnitt 1: Staub im Apparat",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3.5-lightning:free",
+          "duration_seconds": "82.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "11135",
+          "manual_ending_code": "J-01-01",
+          "backend": "openrouter",
+          "genre": "Witzebuch",
+          "leak_free": "true",
+          "words": 362,
+          "reading_minutes": 2
         }
       ]
     },
