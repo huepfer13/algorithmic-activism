@@ -1666,15 +1666,16 @@
       "pov": "third_person",
       "setting_summary": "Kontemplative Einsichten fuer unruhige Zeiten.",
       "characters": [],
-      "chapter_count": 4,
+      "chapter_count": 5,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
-        "art_04"
+        "art_04",
+        "art_05"
       ],
-      "words": 1172,
-      "reading_minutes": 6,
+      "words": 1450,
+      "reading_minutes": 7,
       "cover": null,
       "chapters": [
         {
@@ -1765,6 +1766,24 @@
           "genre": "Lebensweisheiten",
           "leak_free": "true",
           "words": 265,
+          "reading_minutes": 1
+        },
+        {
+          "file": "05_art_05_abschnitt_5_die_kalibrierung_der_schmerz.md",
+          "index": 5,
+          "title": "Abschnitt 5: Die Kalibrierung der Schmerzschwelle",
+          "article": "art_05",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "19.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1060",
+          "manual_ending_code": "L-05-05",
+          "backend": "openrouter",
+          "genre": "Lebensweisheiten",
+          "leak_free": "true",
+          "words": 278,
           "reading_minutes": 1
         }
       ]
