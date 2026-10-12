@@ -37,7 +37,9 @@ POOL = [
     ("deepseek-chat", "deepseek"),
     ("nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter"),
     ("nvidia/nemotron-3-super-120b-a12b:free", "openrouter"),
-    ("nvidia/nemotron-3.5-lightning:free", "openrouter"),
+    # Lightning entfernt (2026-10-12): 114.563 Token bei 4.273 Woertern = 26,8 Token je Wort,
+    # ein Fallback und ein harter Abbruch in 10 Kapiteln. Ersatz: gemessen antwortfaehig.
+    ("apodex/apodex-1.1-mini:free", "openrouter"),
     # ("qwen2.5:7b", "ollama"),
     # ("mistral", "ollama"),
     # ("cogito", "ollama"),

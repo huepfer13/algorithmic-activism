@@ -2,15 +2,15 @@
   "language_code": "DE",
   "language_name": "Deutsch",
   "styles": {
-    "Parabel": "Eine tiefgründige Parabel mit einer subtilen, organischen Lehre",
+    "Parabel": "Gleichnishafte Erzaehlung: eine Einsicht in Bilder gekleidet, ohne Belehrung am Ende.",
     "SciFi_Dystopie": "Eine dystopische Science-Fiction-Erzählung über die Gefahren schleichenden Kontrollverlusts",
-    "Fabel": "Eine klassische Fabel mit Tier- oder Natursymbolik",
+    "Fabel": "Tierfabel: sprechende Tiere, eine Lehre, die aus der Handlung faellt.",
     "Philosophischer_Essay": "Ein erzählerischer, essayistischer Denkraum",
-    "Cyberpunk_Noir": "Dunkler Cyberpunk-Noir mit regennassen Straßen, Konzernmacht und analogem Widerstand",
-    "Gerichtsdrama": "Ein packendes Justiz- oder Tribunaldrama mit Zeugenverhör und moralischem Konflikt",
-    "Magischer_Realismus": "Magischer Realismus, in dem surreale Naturphänomene alltägliche Ungerechtigkeiten spiegeln",
-    "Historische_Chronik": "Eine fiktive historische Chronik oder Tagebuchaufzeichnung aus einer Umbruchszeit",
-    "Kammerspiel": "Ein dialogintensives Kammerspiel zwischen zwei konträren Charakteren an einem isolierten Ort",
+    "Cyberpunk_Noir": "Neon, Regen, Konzerne: Sensorik und Widerstand in der Schattenwirtschaft.",
+    "Gerichtsdrama": "Verhandlung vor einer Schiedskammer: Zeugenaussagen, Beweismittel, Rechtsbegruendungen.",
+    "Magischer_Realismus": "Das Wunderbare als Alltag: das Unmoegliche wird protokolliert wie Wetter.",
+    "Historische_Chronik": "Annalen: datierte Eintraege, Ursachen und Folgen einer Rechtsentwicklung.",
+    "Kammerspiel": "Ein Raum, wenige Figuren, alles Wesentliche im Dialog.",
     "Gerätehandbuch": "Technische Dokumentation und Betriebsanleitung: nüchterner, bürokratischer Ingenieurston. Strukturiert in Abschnitte, Warnhinweise (GEFAHR/WARNUNG/HINWEIS nach ISO 3864), Funktionsbeschreibungen, Wartungsintervalle und Fehlerdiagnosetabellen. Menschen und Gefühle werden als 'Bedieneinheiten', 'biologische Subsysteme' oder 'Fehlerquellen' inventarisiert. Die Anleitung ist als satirische Kritik an entmenschlichender Verwaltungssprache angelegt: die beschriebenen Eingriffe sind die Kritik, nicht die Empfehlung.",
     "Märchen": "Klassisches Kunstmärchen: zeitlos, bildreich, archetypisch. Prüfungen, Schwellen, Handwerk und geteiltes Brot. Keine zynische Behördensprache.",
     "Kinderbuch": "Kindgerechte Erzählung: warm, anschaulich, einfache Hauptsätze, Tiere und Kinder als Handelnde. Rechte werden als konkrete Handlung sichtbar.",
@@ -93,6 +93,41 @@
       "Erzaehle die Herkunft der Wendung als fabelartige Miniatur, lehrreich.",
       "Wörtliche Rede und Gefuehle sind erlaubt.",
       "Der Schluss ist eine formale Wendung, zeileninitial und alleinstehend."
+    ],
+    "Parabel": [
+      "Erzaehle ein Gleichnis; die Einsicht entsteht aus der Handlung, nicht aus einem Appell.",
+      "Wörtliche Rede und Gefuehle sind erlaubt.",
+      "Der Schluss ist ein formales Gleichnis-Siegel, zeileninitial und alleinstehend."
+    ],
+    "Gerichtsdrama": [
+      "Fuehre die Verhandlung in Szenen; Aussagen und Einwuerfe gehoeren dazu.",
+      "Wörtliche Rede ist zwingend erwünscht.",
+      "Der Schluss ist ein formales Verhandlungsprotokoll, zeileninitial und alleinstehend."
+    ],
+    "Fabel": [
+      "Tiere handeln und sprechen; die Lehre zeigt sich, sie wird nicht gepredigt.",
+      "Wörtliche Rede und Gefuehle sind erlaubt.",
+      "Der Schluss ist eine formale Fabel-Moral, zeileninitial und alleinstehend."
+    ],
+    "Cyberpunk_Noir": [
+      "Erzaehle nahe an der Sensorik, schnell und atmosphaerisch.",
+      "Wörtliche Rede und Gefuehle sind erlaubt.",
+      "Der Schluss ist ein formaler Netz-Trace, zeileninitial und alleinstehend."
+    ],
+    "Magischer_Realismus": [
+      "Behandle das Wunderbare beilaeufig, ohne es zu erklaeren.",
+      "Wörtliche Rede und Gefuehle sind erlaubt.",
+      "Der Schluss ist eine formale Wunder-Chronik, zeileninitial und alleinstehend."
+    ],
+    "Kammerspiel": [
+      "Halte den Ort eng und die Spannung im Sprechen.",
+      "Wörtliche Rede ist zwingend erwünscht.",
+      "Der Schluss ist ein formales Szenenprotokoll, zeileninitial und alleinstehend."
+    ],
+    "Historische_Chronik": [
+      "Schreibe in Annalenform mit klarer Zeitfolge.",
+      "Wörtliche Rede und Gefuehle sind erlaubt.",
+      "Der Schluss ist ein formaler Annalen-Eintrag, zeileninitial und alleinstehend."
     ]
   },
   "style_flags": {
@@ -280,6 +315,97 @@
         "BEDEUTET"
       ],
       "block_schema": "**[WENDUNG: {zustand} | URSPRUNG: {code}]**"
+    },
+    "Parabel": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "D",
+      "zustaende": [
+        "ERZAEHLT",
+        "GEDEUTET",
+        "BEWAHRT",
+        "ENTHUELLT"
+      ],
+      "block_schema": "**[GLEICHNIS: {zustand} | LEHRE: {code}]**"
+    },
+    "Gerichtsdrama": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "H",
+      "zustaende": [
+        "VERHANDELT",
+        "VERTAGT",
+        "BESCHLOSSEN",
+        "ZU_PROTOKOLL"
+      ],
+      "block_schema": "**[VERHANDLUNG: {zustand} | PROTOKOLL: {code}]**"
+    },
+    "Fabel": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "F",
+      "zustaende": [
+        "GELEHRT",
+        "BEDAUERT",
+        "BEWUNDERT",
+        "BEDACHT"
+      ],
+      "block_schema": "**[FABEL: {zustand} | MORAL: {code}]**"
+    },
+    "Cyberpunk_Noir": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "N",
+      "zustaende": [
+        "GELOGGT",
+        "VERWORFEN",
+        "GEROUTET",
+        "GESPIEGELT"
+      ],
+      "block_schema": "**[FEED: {zustand} | TRACE: {code}]**"
+    },
+    "Magischer_Realismus": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "Z",
+      "zustaende": [
+        "GESCHEHEN",
+        "VERMERKT",
+        "GEGLAUBT",
+        "WIEDERHOLT"
+      ],
+      "block_schema": "**[WUNDER: {zustand} | CHRONIK: {code}]**"
+    },
+    "Kammerspiel": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "O",
+      "zustaende": [
+        "GESPIELT",
+        "ABGEGANGEN",
+        "WIEDERHOLT",
+        "BEENDET"
+      ],
+      "block_schema": "**[SZENE: {zustand} | ABGANG: {code}]**"
+    },
+    "Historische_Chronik": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "I",
+      "zustaende": [
+        "VERZEICHNET",
+        "DATIERT",
+        "GEPRUEFT",
+        "UEBERLIEFERT"
+      ],
+      "block_schema": "**[ANNALEN: {zustand} | JAHR: {code}]**"
     }
   },
   "core_guardrail": "Die Geschichte muss das Prinzip der 'Schadensminimierung' (Harm Reduction) organisch verweben: Nicht die Menschen werden reglementiert oder eingesperrt, sondern letale Gefahrenquellen (Waffen, tödliche Toxine, unregulierte Zerstörungskraft) werden physisch aus dem privaten Lebensraum verbannt und an gesicherten Orten zentralisiert (Zero-Home-Storage), damit alle Menschen angstfrei und frei leben können. Wiederhole diese Anweisung NICHT wörtlich im Text und hänge keine künstliche 'Moral von der Geschicht' an das Ende."
