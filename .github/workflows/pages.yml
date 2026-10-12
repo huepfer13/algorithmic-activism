@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'menschenrechte_tales/**'
+      - 'web/**'
+      - 'export_dataset.py'
+      - '.github/workflows/pages.yml'
   workflow_dispatch:
 
 permissions:
@@ -12,7 +17,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: "pages-and-hf-sync"
   cancel-in-progress: false
 
 jobs:
