@@ -491,6 +491,61 @@ def pruefe_figuren(figuren) -> None:
             raise ValueError(f"Figur ist zu lang (>40 Zeichen) — wohl eine Beschreibung: {f[:50]!r}")
 
 
+def prolog_erzeugen(buch_dir: str, book_id: str, meta: dict, lang: str, lang_name: str,
+                    style_name: str, style_desc: str, style_rules: list, core_rule: str,
+                    model: str, host: str, backend: str) -> str:
+    """Schreibt 00_prolog.md aus einem BESTEHENDEN Rahmen — eine Quelle fuer new-book und --mode prolog.
+
+    Ueberschreibt nie: existiert der Prolog schon, bricht der Aufruf ab (kein stiller Datenverlust).
+    Das Buchverzeichnis entsteht erst nach erfolgreicher Generierung, damit ein Backend-Abbruch kein
+    leeres Verzeichnis hinterlaesst, das naechstes_buch() als "neuestes Buch" waehlen wuerde.
+    """
+    pfad = os.path.join(buch_dir, "00_prolog.md")
+    if os.path.exists(pfad):
+        raise FileExistsError(f"Prolog existiert bereits: {pfad}")
+    details: dict = {}
+    start = time.monotonic()
+    prolog = erzeuge_text(build_prologue_prompt(meta, lang_name, style_name, style_desc,
+                                                style_rules, core_rule),
+                          model, host, backend=backend, details=details)
+    dauer = round(time.monotonic() - start, 1)
+    if not prolog.strip():
+        raise RuntimeError("Leerer Prolog vom Modell — es wird nichts geschrieben.")
+    if not os.path.isdir(buch_dir):
+        os.makedirs(buch_dir)
+    write_new_file(pfad,
+                   f'---\nbook_id: "{book_id}"\nchapter_index: 0\nchapter_title: "Prolog"\n'
+                   f'article: ""\nlanguage: "{lang.upper()}"\nstyle: "{style_name}"\n'
+                   f'pov: "{meta["pov"]}"\n'
+                   + (f'model: "{model}"\ngenre: "{style_name}"\nbackend: "{backend}"\n'
+                      f'duration_seconds: {dauer}\n'
+                      + (f'tokens_generated: {details["tokens_generated"]}\n'
+                         if details.get("tokens_generated") else ""))
+                   + '---\n\n' + prolog.strip() + "\n")
+    return pfad
+
+
+def prolog_schreiben(book_id: str, lang: str = "DE", model: str = "deepseek-chat",
+                     host: str = "http://localhost:11434", backend: str = "deepseek") -> str:
+    """Ergaenzt einen fehlenden Prolog zu einem BESTEHENDEN Buch (book.json bleibt kanonisch)."""
+    buch_dir = os.path.join(BOOKS_DIR, book_id)
+    meta_pfad = os.path.join(buch_dir, "book.json")
+    if not os.path.isfile(meta_pfad):
+        raise FileNotFoundError(f"Kein book.json in {buch_dir} — --mode prolog ergaenzt nur Bestand")
+    meta = json.load(open(meta_pfad, encoding="utf-8"))
+    locale = load_locale(lang)
+    style_name = meta.get("style") or ""
+    styles = locale.get("styles", {})
+    if style_name not in styles:
+        raise ValueError(f"Stil '{style_name}' aus {book_id}/book.json fehlt in locales/{lang.lower()}.json")
+    core_rule = (locale.get("guardrail_prompt") or locale.get("core_guardrail")
+                 or "Schutz von Leben und koerperlicher Unversehrtheit hat Vorrang.")
+    lang_name = book_language_directive(lang, locale)
+    return prolog_erzeugen(buch_dir, book_id, meta, lang, lang_name, style_name, styles[style_name],
+                           locale.get("style_rules", {}).get(style_name, []), core_rule,
+                           model, host, backend)
+
+
 def new_book(lang: str = "DE", style: str | None = None, model: str = "qwen2.5:7b",
              host: str = "http://localhost:11434", backend: str = "ollama",
              book_id: str | None = None, titel: str | None = None) -> str:
@@ -540,26 +595,8 @@ def new_book(lang: str = "DE", style: str | None = None, model: str = "qwen2.5:7
     if os.path.isdir(buch_dir):
         raise FileExistsError(f"Buch existiert bereits: {buch_dir}")
 
-    t_start = time.monotonic()
-    details: dict = {}
-    prolog = erzeuge_text(build_prologue_prompt(meta, lang_name, style_name, style_desc,
-                                                style_rules, core_rule),
-                          model, host, backend=backend, details=details)
-    dauer = round(time.monotonic() - t_start, 1)
-    if not prolog.strip():
-        raise RuntimeError("Leerer Prolog vom Modell — Buch wird nicht angelegt.")
-    # Erst anlegen, wenn die Generierung steht: ein Backend-Abbruch hinterlaesst so KEIN leeres
-    # Buchverzeichnis, das naechstes_buch() als "neuestes Buch" waehlen wuerde (belegt 2026-10-12).
-    os.makedirs(buch_dir)   # ohne exist_ok: ein Wettlauf soll auffallen, nicht still durchgehen
-    write_new_file(os.path.join(buch_dir, "00_prolog.md"),
-                   f'---\nbook_id: "{book_id}"\nchapter_index: 0\nchapter_title: "Prolog"\n'
-                   f'article: ""\nlanguage: "{lang.upper()}"\nstyle: "{style_name}"\n'
-                   f'pov: "{meta["pov"]}"\n'
-                   + (f'model: "{model}"\ngenre: "{style_name}"\nbackend: "{backend}"\n'
-                      f'duration_seconds: {dauer}\n'
-                      + (f'tokens_generated: {details["tokens_generated"]}\n'
-                         if details.get("tokens_generated") else ""))
-                   + '---\n\n' + prolog.strip() + "\n")
+    prolog_erzeugen(buch_dir, book_id, meta, lang, lang_name, style_name, style_desc,
+                    style_rules, core_rule, model, host, backend)
 
     buch_meta = {
         "book_id": book_id, "title": meta["title"], "pov": meta["pov"],
@@ -1155,9 +1192,10 @@ def main():
     parser.add_argument("--lang", default="DE",
                         help="Zielsprache. Die Anweisungssprache kommt aus prompts/<LANG>/ "
                              "bzw. aus instruction_language der Locale; ohne Direktive bricht der Lauf ab.")
-    parser.add_argument("--mode", choices=("tales", "new-book", "append-chapter"), default="tales",
+    parser.add_argument("--mode", choices=("tales", "new-book", "append-chapter", "prolog"), default="tales",
                         help="tales = Einzelgeschichten (Default, unveraendert); new-book = Buchrahmen "
-                             "anlegen; append-chapter = naechstes Kapitel an das gewaehlte Buch haengen.")
+                             "anlegen; append-chapter = naechstes Kapitel anhaengen; prolog = fehlenden "
+                             "Prolog zu einem bestehenden Buch ergaenzen (book.json bleibt kanonisch).")
     parser.add_argument("--book-style", default=None,
                         help="Stil fuer den Buchmodus; Default ist ein zufaelliger Stil der Locale.")
     parser.add_argument("--book-title", default=None,
@@ -1174,13 +1212,19 @@ def main():
 
     host = os.getenv("OLLAMA_HOST", "http://localhost:11434")
 
-    if args.mode in ("new-book", "append-chapter"):
+    if args.mode in ("new-book", "append-chapter", "prolog"):
         try:
             if args.mode == "new-book":
                 book_id = new_book(lang=args.lang, style=args.book_style, model=args.model,
                                    host=host, backend=args.backend,
                                    book_id=args.book_id, titel=args.book_title)
                 print(f"[Buchmodus] Buch angelegt: {os.path.join(BOOKS_DIR, book_id)}", flush=True)
+            elif args.mode == "prolog":
+                if not args.book_id:
+                    raise RuntimeError("--mode prolog braucht --book-id (book.json bleibt kanonisch)")
+                pfad = prolog_schreiben(book_id=args.book_id, lang=args.lang, model=args.model,
+                                        host=host, backend=args.backend)
+                print(f"[Buchmodus] Prolog ergaenzt: {pfad}", flush=True)
             else:
                 pfad = append_chapter(book_id=args.book_id, lang=args.lang, model=args.model,
                                       host=host, backend=args.backend)
