@@ -1,5 +1,6 @@
 ---
 article: 9
+article_id: "art_09"
 title: Schutz vor willkürlicher Festnahme
 source: "UNRIC — Regionales Informationszentrum der Vereinten Nationen"
 url: https://unric.org/de/allgemeine-erklaerung-menschenrechte/

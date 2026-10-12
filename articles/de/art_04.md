@@ -1,5 +1,6 @@
 ---
 article: 4
+article_id: "art_04"
 title: Sklavereiverbot
 source: "UNRIC — Regionales Informationszentrum der Vereinten Nationen"
 url: https://unric.org/de/allgemeine-erklaerung-menschenrechte/

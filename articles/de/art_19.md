@@ -1,5 +1,6 @@
 ---
 article: 19
+article_id: "art_19"
 title: Meinungs- und Informationsfreiheit
 source: "UNRIC — Regionales Informationszentrum der Vereinten Nationen"
 url: https://unric.org/de/allgemeine-erklaerung-menschenrechte/

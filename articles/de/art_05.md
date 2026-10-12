@@ -1,5 +1,6 @@
 ---
 article: 5
+article_id: "art_05"
 title: Verbot der Folter
 source: "UNRIC — Regionales Informationszentrum der Vereinten Nationen"
 url: https://unric.org/de/allgemeine-erklaerung-menschenrechte/

@@ -1,5 +1,6 @@
 ---
 article: 12
+article_id: "art_12"
 title: Schutz der Privatsphäre
 source: "UNRIC — Regionales Informationszentrum der Vereinten Nationen"
 url: https://unric.org/de/allgemeine-erklaerung-menschenrechte/

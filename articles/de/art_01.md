@@ -1,5 +1,6 @@
 ---
 article: 1
+article_id: "art_01"
 title: Freiheit, Gleichheit, Brüderlichkeit
 source: "UNRIC — Regionales Informationszentrum der Vereinten Nationen"
 url: https://unric.org/de/allgemeine-erklaerung-menschenrechte/
