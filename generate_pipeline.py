@@ -614,7 +614,10 @@ def append_chapter(book_id: str | None = None, lang: str | None = None, model: s
         raise RuntimeError("Leere Antwort vom Modell — Kapitel wird nicht geschrieben.")
 
     titel = extract_title(text)
-    marke = "" if ende_ok else f'manual_ending_ok: false\nmanual_ending_note: "{grund}"\n'
+    # BEIDE Faelle markieren: ein Erfolg ohne Flag ist fuer Downstream-Parser (Index-Builder,
+    # Monitoring) nicht von "nie geprueft" zu unterscheiden.
+    marke = (f'manual_ending_ok: true\nmanual_ending_note: "{grund}"\n' if ende_ok
+             else f'manual_ending_ok: false\nmanual_ending_note: "{grund}"\n')
     datei = f"{index:02d}_{artikel}_{sanitize_filename(titel).lower()[:40]}.md"
     pfad = write_new_file(os.path.join(buch_dir, datei),
                           f'---\nbook_id: "{book_id}"\nchapter_index: {index}\n'
@@ -681,6 +684,12 @@ def main():
             else:
                 pfad = append_chapter(book_id=args.book_id, lang=args.lang, model=args.model, host=host)
                 print(f"[Buchmodus] Kapitel angehaengt: {pfad}", flush=True)
+                # Monitoring: ein Kapitel, das die Endschranke NICHT passiert hat, ist ein Fallback.
+                # Ohne eigenen Exit-Code bleibt das in CI/Langfuse unsichtbar (Exit 1 = Abbruch ohne Datei).
+                if "manual_ending_ok: false" in open(pfad, encoding="utf-8").read(400):
+                    print("[Buchmodus] WARNUNG: Fallback-Kapitel (Endschranke nicht erfuellt) "
+                          "— Exit-Code 2", flush=True)
+                    sys.exit(2)
         except (ValueError, FileExistsError, FileNotFoundError, RuntimeError) as e:
             print(f"[Buchmodus] Abbruch: {e}", flush=True)
             sys.exit(1)
