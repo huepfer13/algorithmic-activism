@@ -1,0 +1,34 @@
+---
+book_id: "buch_006_das_gericht_vor_der_mauer"
+chapter_index: 2
+chapter_title: "Abschnitt 2: Das Echo der Staubkörner"
+article: "art_02"
+language: "DE"
+style: "Parabel"
+pov: "third_person"
+previous_chapter_file: "01_art_01_abschnitt_1_die_entladung.md"
+manual_ending_ok: true
+manual_ending_attempts: 0
+manual_ending_code: "E-02-02"
+scene_condition: "AUDIT_DRUCK"
+archive_note: "KAPITEL 01"
+model: "nvidia/nemotron-3-super-120b-a12b:free"
+genre: "Parabel"
+backend: "openrouter"
+duration_seconds: 25.8
+jaccard_max: 0.0
+tokens_generated: 1683
+manual_ending_note: "nicht geprueft (Stil ohne Endschranke)"
+---
+
+# Abschnitt 2: Das Echo der Staubkörner
+
+Lior spürte das vertraute Kribbeln, als er das kleine Notizbuch erneut unter seine Zunge drückte, während der Staub von den Relaiskontakten – derselbe feine Film, der seit dem Morgenstillstand die pneumatische Leitung lahmgelegt hatte – in seinem Geist aufstieg wie ein leises Mahnwort. Die Röhre hatte gerade erst wieder gezuckt, ein Ruck, der den Staub aufwirbelte und ein dünnes Klicken auslöste, als ob die Stadt selbst nach einem Atemzug verlangte. Neben ihm stand Juno, ihre Stiefel lautlos auf dem Pflaster, ihre Augen nach wie vor auf den Winkel gerichtet, wo die Drohnen blind waren. Sie hatte bemerkt, wie die Protokolle in der Zentrale Registratur plötzlich schneller abgeheftet wurden, ein Zeichen dafür, dass eine unerwartete Revision angekündigt worden war und der Sektor unter einem spürbaren Druck stand, jede Akte korrekt zu ordnen.
+
+Mira, die gerade den Wasserfilter beobachtete, bemerkte, wie das Wasser klarer floss, seit die letzte Ladung unregulierter Zerstörungskraft in das zentrale Depot gebracht worden war. Dort, unter der Stadt, standen die Behälter mit den zuvor gefährlichen Substanzen nun in geregelten Reihen, überwacht von kalibrierten Sensoren, die jede Abweichung sofort meldeten. Das System hatte die physische Entfernung der Gefährdungsquelle aus den Wohnräumen vollzogen – nicht die Menschen eingesperrt, sondern das, was töten konnte, an einen Ort verlegt, wo es kontrolliert werden konnte. Dadurch gewannen die Häuser wieder Raum zum Atmen, und die Angst, die einst in den Küchen und Werkstätten gelauert hatte, löste sich in ein vorsichtiges Vertrauen auf die zentrale Aufsicht.
+
+Tomas, der früher beim Filter gezittert hatte, lehnte sich nun an die kühle Wand und fühlte, wie sein Puls sich dem gleichmäßigen Rhythmus der Stadt anpasste. Er dachte an den Artikel, der nicht als moralischer Aufruf, sondern als technische Vorgabe galt: art_02 forderte eine gleichmäßige Verteilung der Luftreinigungsmodule über alle Sektore hinweg, unabhängig von Herkunft, Glauben oder Besitz. Die Zentrale Registratur prüfte derzeit, ob die Kalibrierungswerte dieses Parameters innerhalb der vorgeschriebenen Toleranz lagen – ein Prüfstein, der nicht über Gut und Böse entschied, sondern darüber, ob die Ressourcen so angeordnet waren, dass kein Sektor einen Überhang an Gefährdung trug, während ein anderer leer blieb.
+
+Während die Gruppe schweigend weiterging, hörte Lior ein leises Summen aus der Leitung neben der Ostmauer – ein Ton, der nicht vom üblichen Betrieb kam, sondern wie ein Warnsignal klang, das noch nicht decodiert war. Die Staubkörner, die er gerade noch auf seiner Zunge spürte, schienen im Licht der Deckenlampen zu tanzen, als wollten sie ihm etwas zeigen, das noch nicht ausgesprochen war.
+
+[STATUS: DEGRADED | SUB-SYS: SEKTOR-14 | CODE: E-02-02 | INTERVALL: 624h]

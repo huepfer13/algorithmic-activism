@@ -634,12 +634,13 @@
         "Vera",
         "Juno"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 923,
-      "reading_minutes": 5,
+      "words": 1350,
+      "reading_minutes": 7,
       "cover": null,
       "chapters": [
         {
@@ -676,6 +677,24 @@
           "genre": "Parabel",
           "leak_free": "",
           "words": 477,
+          "reading_minutes": 2
+        },
+        {
+          "file": "02_art_02_abschnitt_2_das_echo_der_staubkörner.md",
+          "index": 2,
+          "title": "Abschnitt 2: Das Echo der Staubkörner",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "0",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "25.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1683",
+          "manual_ending_code": "E-02-02",
+          "backend": "openrouter",
+          "genre": "Parabel",
+          "leak_free": "",
+          "words": 427,
           "reading_minutes": 2
         }
       ]
