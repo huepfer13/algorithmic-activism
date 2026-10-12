@@ -21,7 +21,11 @@ import urllib.request
 
 QUELLE_URL = "https://unric.org/de/allgemeine-erklaerung-menschenrechte/"
 QUELLE_NAME = "UNRIC — Regionales Informationszentrum der Vereinten Nationen"
-ARTIKEL_DIR = "articles/de"
+# Pfad relativ zum SKRIPT, nicht zum Arbeitsverzeichnis: sonst findet ein Aufruf aus einem anderen
+# CWD still 0 Artikel (belegt 2026-10-12).
+HIER = os.path.dirname(os.path.abspath(__file__))
+REPO = os.path.dirname(HIER)
+ARTIKEL_DIR = os.path.join(REPO, "articles", "de")
 # Artikel, die der Bestand bereits traegt und die den Quellenvergleich belegen muessen.
 BESTANDS_PROBEN = (1, 3, 4, 5, 9, 12, 14, 19, 26)
 
@@ -79,6 +83,9 @@ def main() -> int:
         with open(pfad, encoding="utf-8") as f:
             vorhanden[nummer] = f.read()
     print(f"Bestand: {len(vorhanden)} Artikel -> {sorted(vorhanden)}")
+    if not vorhanden:
+        print(f"[ABBRUCH] kein Bestand in {ARTIKEL_DIR} — Pfad/Arbeitsverzeichnis pruefen.", file=sys.stderr)
+        return 1
 
     roh = als_text(hole_html(args.url))
     artikel = parse_artikel(roh)
