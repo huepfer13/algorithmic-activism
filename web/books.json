@@ -16,17 +16,18 @@
         "Nova",
         "Omicron"
       ],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
         "art_05",
         "art_09",
-        "art_12"
+        "art_12",
+        "art_14"
       ],
-      "words": 4089,
-      "reading_minutes": 20,
+      "words": 4461,
+      "reading_minutes": 22,
       "cover": null,
       "chapters": [
         {
@@ -98,6 +99,16 @@
           "attempts": "3",
           "words": 566,
           "reading_minutes": 3
+        },
+        {
+          "file": "07_art_14_abschnitt_7_neutralisierung_und_kalibrie.md",
+          "index": 7,
+          "title": "Abschnitt 7: Neutralisierung und Kalibrierung",
+          "article": "art_14",
+          "ending_ok": "false",
+          "attempts": "3",
+          "words": 372,
+          "reading_minutes": 2
         }
       ]
     }
