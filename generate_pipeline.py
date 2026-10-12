@@ -703,6 +703,18 @@ def archiv_artefakt(buch_dir: str, kapitel_index: int, book_id: str) -> str | No
             + " ".join(saetze[:2]).strip() + '"')
 
 
+def block_code(block: str) -> str:
+    """Der kapitelgebundene Kennbezeichner eines Pflichtblocks — EINZIGE Quelle fuer Muster,
+    Trace, Frontmatter und Leck-Pruefung.
+
+    Nicht mehr nach dem Wort "CODE" suchen: das Schluesselwort kommt aus dem block_schema des
+    Stils (CODE im Geraetehandbuch, SIEGEL im Maerchen, KAPITEL im Kinderbuch). Die FORM des
+    Werts (A-xx-yy) ist in jeder Blockform dieselbe.
+    """
+    treffer = re.search(r":\s*([A-Za-z]{1,3}-\d{2,}-\d{2,})\s*[|\]]", block)
+    return treffer.group(1).strip() if treffer else ""
+
+
 def pflichtblock_muster(erwarteter_block: str):
     """Regex fuer den Pflichtblock: der CODE ist der Anker (exakt), Zustand/Sektor/Intervall sind Dekoration.
 
@@ -712,9 +724,9 @@ def pflichtblock_muster(erwarteter_block: str):
     """
     # Der kapitelgebundene Code ist der Anker: er traegt in JEDER Blockform Artikel und Kapitel
     # (CODE/SIEGEL/KAPITEL/LOG/ZEUGNIS/...). Form statt Wortliste.
-    treffer = re.search(r":\s*([A-Za-z]{1,3}-\d{2,}-\d{2,})\s*[|\]]", erwarteter_block)
-    if treffer:
-        code = _normalisiere(treffer.group(1).strip()).lower()
+    eigen_code = block_code(erwarteter_block)
+    if eigen_code:
+        code = _normalisiere(eigen_code).lower()
         return re.compile(r"^\*{0,2}\[[A-Za-zÄÖÜäöü\-]{3,24}:[^\]]*"
                           + re.escape(code) + r"[^\]]*\]\*{0,2}$")
     alt = re.search(r"CODE:\s*([^|\]]+)", erwarteter_block)
@@ -841,14 +853,13 @@ def audit_manual_ending(text: str, erwarteter_block: str | None = None,
             return False, f"{art} im Schlussabsatz ({treffer})"
     if erwarteter_block:
         muster = pflichtblock_muster(erwarteter_block)
-        code_treffer = re.search(r":\s*([A-Za-z]{1,3}-\d{2,}-\d{2,})\s*[|\]]", erwarteter_block)
-        code = code_treffer.group(1).strip() if code_treffer else "?"
+        code = block_code(erwarteter_block) or "?"
         for zeile in letzter.splitlines():
             rumpf = _MARKDOWN_PRAEFIX_RE.sub("", zeile).strip().strip("*_#").strip()
             if muster.match(_normalisiere(rumpf).lower()):
                 return True, "Passed (Pflichtblock " + code + ")"
-        return False, ("Pflichtblock fehlt oder abgewandelt (erwartet: eine Zeile '[STATUS: <zustand> | "
-                       "SUB-SYS: SEKTOR-NN | CODE: " + code + " | INTERVALL: <n>h]')")
+        return False, ("ungueltiges Schema: keine alleinstehende Klammerzeile mit dem Code "
+                       + code + " am Kapitelende")
     treffer = []
     for zeile in letzter.splitlines():
         for t in zeilen_marker(zeile):
@@ -866,11 +877,12 @@ def fremdcode_im_text(text: str, erwarteter_block: str) -> str | None:
     Belegt 2026-10-12: der Prompt-Sperrvermerk wurde als Erzaehltext kopiert ("Der vorherige
     Wartungsabschluss lautete: ... E-14-07 ...") — Metatext im veroeffentlichten Artefakt.
     """
-    eigen = re.search(r"CODE:\s*([^|\]]+)", erwarteter_block)
-    eigen_code = _normalisiere((eigen.group(1) if eigen else "").strip()).lower()
-    for treffer in re.finditer(r"CODE:\s*([A-Za-z0-9\-]+)", _normalisiere(text)):
-        if treffer.group(1).lower() != eigen_code:
-            return treffer.group(1)
+    eigen_code = _normalisiere(block_code(erwarteter_block)).lower()
+    # Bewusst OHNE Endanker: der belegte Leck-Fall (Kapitel 9) nannte den Fremdcode mitten im Satz,
+    # nicht vor einem "|" oder "]". Der eigene Code wird per Gleichheit ausgenommen.
+    for treffer in re.finditer(r"[A-Za-z]{1,3}-\d{2,}-\d{2,}", _normalisiere(text)):
+        if treffer.group(0).lower() != eigen_code:
+            return treffer.group(0)
     return None
 
 
@@ -1030,7 +1042,6 @@ def append_chapter(book_id: str | None = None, lang: str | None = None, model: s
     titel = extract_title(text)
     # BEIDE Faelle markieren: ein Erfolg ohne Flag ist fuer Downstream-Parser (Index-Builder,
     # Monitoring) nicht von "nie geprueft" zu unterscheiden.
-    code_treffer = re.search(r"CODE:\s*([^|\]]+)", block)
     # Erzeugungs-Metriken ins Artefakt: Modell, Genre, Dauer, Aehnlichkeitswert, Leck-Freiheit.
     # "backend" ist bewusst der EFFEKTIVE Wert — der Buchpfad generiert heute ueber Ollama;
     # der --backend-Schalter ist noch nicht verdrahtet (belegt 2026-10-12).
@@ -1044,9 +1055,10 @@ def append_chapter(book_id: str | None = None, lang: str | None = None, model: s
                  + (f'tokens_generated: {details["tokens_generated"]}\n'
                     if details.get("tokens_generated") else "")
                  + ('leak_free: true\n' if details.get("leak_free") else ""))
+    code_fuer_frontmatter = block_code(block)
     marke = (f'manual_ending_ok: {"true" if ende_ok else "false"}\n'
              f'manual_ending_attempts: {versuche}\n'
-             f'manual_ending_code: "{code_treffer.group(1).strip() if code_treffer else ""}"\n'
+             f'manual_ending_code: "{code_fuer_frontmatter}"\n'
              f'scene_condition: "{stoerung["typ"]}"\n'
              f'archive_note: "{("KAPITEL " + artefakt.split("KAPITEL ")[1][:2]) if artefakt else ""}"\n'
              + stats
