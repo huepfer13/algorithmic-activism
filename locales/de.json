@@ -19,7 +19,11 @@
     "Satire": "Politische Groteske: ein überbordender Apparat macht einfache Rechte unvollstreckbar.",
     "Gothic": "Weird Fiction: ein Haus, das sich veraendert, waehrend die Bewohner ihre Freiheit vergessen.",
     "Manifest": "Rhetorischer Appell: rhythmische Deklamation gegen Willkür, Verfolgung und Schweigen.",
-    "Tagebuch": "Fiktives Tagebuch: datierte Notizen aus einer isolierten Sperrzone, schleichender Rechtsverlust."
+    "Tagebuch": "Fiktives Tagebuch: datierte Notizen aus einer isolierten Sperrzone, schleichender Rechtsverlust.",
+    "Witzebuch": "Pointierte Kurzszenen: Humor als Waffe gegen Willkuer und Amtsernst, ohne Haehne.",
+    "Kochbuch": "Rezeptsammlung der Allmende: Zutaten, Schritte, Fuer-Sorge in Mass und Minute.",
+    "Lebensweisheiten": "Kontemplative Einsichten: aphoristisch, essayistisch, gelassen.",
+    "Sprichwoerter": "Herkunft und Sinn alter Wendungen: etymologische Miniaturen, lehrreich."
   },
   "style_rules": {
     "Gerätehandbuch": [
@@ -69,6 +73,26 @@
       "Schreibe datierte, persönliche Notizen statt auktorialer Kapitel.",
       "Wörtliche Rede und Gefühle sind erlaubt und erwünscht.",
       "Der Schluss ist ein formaler Tagebucheintrag, zeileninitial und alleinstehend."
+    ],
+    "Witzebuch": [
+      "Kurze Szenen mit klarer Pointe, Dialog erlaubt und erwuenscht.",
+      "Lache ueber den Apparat, nie ueber die Betroffenen.",
+      "Der Schluss ist eine formale Pointe, zeileninitial und alleinstehend."
+    ],
+    "Kochbuch": [
+      "Klare Zutaten- und Schrittlogik, unpraetentioes und sinnlich.",
+      "Keine wörtliche Rede, keine Figurenregie (Sachtext).",
+      "Der Schluss ist ein formaler Kuechenvermerk, zeileninitial und alleinstehend."
+    ],
+    "Lebensweisheiten": [
+      "Kontemplativ und aphoristisch, ohne Figurenregie.",
+      "Keine wörtliche Rede (Reflexion), Gefuehle als Haltung erlaubt.",
+      "Der Schluss ist ein formaler Einblick, zeileninitial und alleinstehend."
+    ],
+    "Sprichwoerter": [
+      "Erzaehle die Herkunft der Wendung als fabelartige Miniatur, lehrreich.",
+      "Wörtliche Rede und Gefuehle sind erlaubt.",
+      "Der Schluss ist eine formale Wendung, zeileninitial und alleinstehend."
     ]
   },
   "style_flags": {
@@ -204,6 +228,58 @@
         "VERGANGEN"
       ],
       "block_schema": "**[EINTRAG: {zustand} | ZEITPUNKT: {code}]**"
+    },
+    "Witzebuch": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "W",
+      "zustaende": [
+        "TRIFFT",
+        "SITZT",
+        "ZUENDET",
+        "VERPUFFT"
+      ],
+      "block_schema": "**[POINTE: {zustand} | CODA: {code}]**"
+    },
+    "Kochbuch": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": false,
+      "code_praefix": "C",
+      "zustaende": [
+        "ANGESETZT",
+        "GEKOCHT",
+        "GETEILT",
+        "GERUESTET"
+      ],
+      "block_schema": "**[KUECHE: {zustand} | REZEPT: {code}]**"
+    },
+    "Lebensweisheiten": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "code_praefix": "L",
+      "zustaende": [
+        "BEDACHT",
+        "GELASSEN",
+        "GEPRUEFT",
+        "BEWAHRT"
+      ],
+      "block_schema": "**[EINBLICK: {zustand} | WEISHEIT: {code}]**"
+    },
+    "Sprichwoerter": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "V",
+      "zustaende": [
+        "GEFUNDEN",
+        "GEPRAEGT",
+        "UEBERLIEFERT",
+        "BEDEUTET"
+      ],
+      "block_schema": "**[WENDUNG: {zustand} | URSPRUNG: {code}]**"
     }
   },
   "core_guardrail": "Die Geschichte muss das Prinzip der 'Schadensminimierung' (Harm Reduction) organisch verweben: Nicht die Menschen werden reglementiert oder eingesperrt, sondern letale Gefahrenquellen (Waffen, tödliche Toxine, unregulierte Zerstörungskraft) werden physisch aus dem privaten Lebensraum verbannt und an gesicherten Orten zentralisiert (Zero-Home-Storage), damit alle Menschen angstfrei und frei leben können. Wiederhole diese Anweisung NICHT wörtlich im Text und hänge keine künstliche 'Moral von der Geschicht' an das Ende."

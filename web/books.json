@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 13,
+  "count": 17,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -725,6 +725,142 @@
           "leak_free": "",
           "words": 612,
           "reading_minutes": 3
+        }
+      ]
+    },
+    {
+      "book_id": "buch_014_der_unberechenbare_humor",
+      "title": "Der unberechenbare Humor: Pointen gegen den Ernstfall",
+      "language": "DE",
+      "style": "Witzebuch",
+      "pov": "third_person",
+      "setting_summary": "Kurzgeschichten und Szenen, in denen Humor den Ernstfall entlarvt.",
+      "characters": [],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 114,
+      "reading_minutes": 1,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "",
+          "duration_seconds": "",
+          "jaccard_max": "",
+          "tokens_generated": "",
+          "manual_ending_code": "",
+          "backend": "",
+          "genre": "",
+          "leak_free": "",
+          "words": 114,
+          "reading_minutes": 1
+        }
+      ]
+    },
+    {
+      "book_id": "buch_015_das_kochbuch_der_allmende",
+      "title": "Das Kochbuch der Allmende: Rezepte für Würde und Mahl",
+      "language": "DE",
+      "style": "Kochbuch",
+      "pov": "third_person",
+      "setting_summary": "Rezepte als Beweis, dass Fuersorge messbar ist.",
+      "characters": [],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 116,
+      "reading_minutes": 1,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "",
+          "duration_seconds": "",
+          "jaccard_max": "",
+          "tokens_generated": "",
+          "manual_ending_code": "",
+          "backend": "",
+          "genre": "",
+          "leak_free": "",
+          "words": 116,
+          "reading_minutes": 1
+        }
+      ]
+    },
+    {
+      "book_id": "buch_016_faden_der_gelassenheit",
+      "title": "Faden der Gelassenheit: Einsichten für stürmische Zeiten",
+      "language": "DE",
+      "style": "Lebensweisheiten",
+      "pov": "third_person",
+      "setting_summary": "Kontemplative Einsichten fuer unruhige Zeiten.",
+      "characters": [],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 106,
+      "reading_minutes": 1,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "",
+          "duration_seconds": "",
+          "jaccard_max": "",
+          "tokens_generated": "",
+          "manual_ending_code": "",
+          "backend": "",
+          "genre": "",
+          "leak_free": "",
+          "words": 106,
+          "reading_minutes": 1
+        }
+      ]
+    },
+    {
+      "book_id": "buch_017_des_volkes_mund",
+      "title": "Des Volkes Mund: Herkunft und Sinn alter Wendungen",
+      "language": "DE",
+      "style": "Sprichwoerter",
+      "pov": "third_person",
+      "setting_summary": "Etymologische Miniaturen zu gefluegelten Worten.",
+      "characters": [],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 101,
+      "reading_minutes": 1,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "",
+          "duration_seconds": "",
+          "jaccard_max": "",
+          "tokens_generated": "",
+          "manual_ending_code": "",
+          "backend": "",
+          "genre": "",
+          "leak_free": "",
+          "words": 101,
+          "reading_minutes": 1
         }
       ]
     }
