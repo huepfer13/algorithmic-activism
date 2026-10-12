@@ -1812,12 +1812,13 @@
       "pov": "third_person",
       "setting_summary": "Verse ledgers of the commons: five lines that dismantle grand decrees.",
       "characters": [],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 422,
-      "reading_minutes": 2,
+      "words": 801,
+      "reading_minutes": 4,
       "cover": null,
       "chapters": [
         {
@@ -1854,6 +1855,24 @@
           "genre": "Limericks",
           "leak_free": "",
           "words": 334,
+          "reading_minutes": 2
+        },
+        {
+          "file": "02_art_02_abschnitt_2_der_gleichgewichtete_riss.md",
+          "index": 2,
+          "title": "Abschnitt 2: Der gleichgewichtete Riss",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "0",
+          "model": "apodex/apodex-1.1-mini:free",
+          "duration_seconds": "34.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "10236",
+          "manual_ending_code": "E-02-02",
+          "backend": "openrouter",
+          "genre": "Limericks",
+          "leak_free": "",
+          "words": 379,
           "reading_minutes": 2
         }
       ]
