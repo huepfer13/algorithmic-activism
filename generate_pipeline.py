@@ -1146,6 +1146,127 @@ def naechster_artikel(lang: str, covered: list) -> str | None:
     return None
 
 
+def inject_chapter(book_id: str, datei: str, artikel: str | None = None, fork_from: str | None = None,
+                   lang: str = "DE") -> str:
+    """Externen Kapiteltext kontrolliert in den Kanon lassen (nur lineare Injektion).
+
+    Reihenfolge: erst pruefen, dann schreiben. Bei jedem Verstoss bleibt das Dateisystem unberuehrt.
+    Herkunft wird ausgewiesen (origin/source_file/injected_at) und es werden KEINE Modell-Statistiken
+    erfunden: model steht als "external", backend als "manual", tokens_generated auf 0. Der Injektor
+    erzeugt auch keinen Abschlussblock — der muss im eingereichten Text stehen, sonst waere die
+    Pruefung zirkulaer (wir wuerden unser eigenes Siegel auf einen ungeprueften Text kleben).
+
+    Abweichungen zur Auftragsskizze, bewusst:
+    * --fork-from bricht mit Exit 1 ab, nicht mit 2 — 2 heisst hier "Fallback geschrieben".
+    * Das Lock ist BOOKS_DIR/.append.lock (global), dieselbe Datei wie beim Anhang, damit sich
+      Injektion und Generierung nie ueberholen.
+    * Frontmatter bleibt flach (model/backend/tokens_generated), weil der Indexer diese Felder liest;
+      ein verschachtelter generation_stats-Block waere fuer ihn unsichtbar.
+    """
+    if fork_from:
+        raise RuntimeError("Verzweigungen (--fork-from) sind in Version 1 nicht freigegeben — nur lineare "
+                           "Injektion. Voraussetzung waere KAPITEL_RE auf ^\\d{2,}[a-z]?_ und ein Anker "
+                           "in block_code; siehe Epic 'Zweige'.")
+    buch_dir = os.path.join(BOOKS_DIR, book_id)
+    meta_pfad = os.path.join(buch_dir, "book.json")
+    if not os.path.isfile(meta_pfad):
+        raise FileNotFoundError(f"Kein book.json in {buch_dir}")
+    if not os.path.isfile(datei):
+        raise FileNotFoundError(f"Eingabedatei fehlt: {datei}")
+    rohtext = open(datei, encoding="utf-8").read()
+    if not rohtext.strip():
+        raise ValueError(f"Eingabedatei ist leer: {datei}")
+    meta = json.load(open(meta_pfad, encoding="utf-8"))
+    locale = load_locale(lang)
+    stil = meta.get("style") or ""
+    if stil not in locale.get("styles", {}):
+        raise ValueError(f"Stil '{stil}' des Buchs fehlt in locales/{lang.lower()}.json")
+    flags = locale.get("style_flags", {}).get(stil, {})
+
+    os.makedirs(BOOKS_DIR, exist_ok=True)
+    sperrpfad = os.path.join(BOOKS_DIR, ".append.lock")
+    with open(sperrpfad, "w") as sperre:
+        ende = time.monotonic() + 10.0
+        while True:
+            try:
+                fcntl.flock(sperre, fcntl.LOCK_EX | fcntl.LOCK_NB)
+                break
+            except BlockingIOError:
+                if time.monotonic() > ende:
+                    raise RuntimeError("Buch ist gesperrt (ein anderer Lauf schreibt) — nach 10 s aufgegeben")
+                time.sleep(0.5)
+        try:
+            return _inject_gesperrt(book_id, buch_dir, meta, meta_pfad, rohtext, datei, artikel, stil, flags, lang)
+        finally:
+            fcntl.flock(sperre, fcntl.LOCK_UN)
+
+
+def _inject_gesperrt(book_id: str, buch_dir: str, meta: dict, meta_pfad: str, rohtext: str, datei: str,
+                     artikel: str | None, stil: str, flags: dict, lang: str) -> str:
+    """Kern der Injektion — laeuft ausschliesslich unter der Sperre."""
+    kapitel = buch_kapitel(buch_dir)
+    indizes = []
+    for name in kapitel:
+        if name == "00_prolog.md":
+            continue
+        treffer = re.match(r"^(\d+)", name)
+        if treffer:
+            indizes.append(int(treffer.group(1)))
+    index = (max(indizes) + 1) if indizes else 1
+    covered = list(meta.get("covered_articles", []))
+    for name in kapitel:
+        if name == "00_prolog.md":
+            continue
+        t = open(os.path.join(buch_dir, name), encoding="utf-8").read()
+        m = re.search(r'article:\s*"([^"]*)"', t)
+        if m and m.group(1) and m.group(1) not in covered:
+            covered.append(m.group(1))
+    if artikel:
+        if not re.fullmatch(r"art_\d{2}", artikel):
+            raise ValueError(f"ungueltiger Artikel '{artikel}' — erwartet art_NN")
+        covered = [c for c in covered if c != artikel]
+    artikel = artikel or naechster_artikel(lang, covered)
+    if not artikel:
+        raise RuntimeError(f"kein offener Artikel fuer {book_id} — alle verhandelt")
+
+    block = status_block(book_id, artikel, index, flags)
+    ok, grund = audit_manual_ending(rohtext, erwarteter_block=block if flags.get("manual_ending") else None,
+                                    style_flags=flags, sprache=lang,
+                                    figuren=meta.get("characters") or [])
+    if not ok:
+        raise ValueError(f"Schrankenpruefung fehlgeschlagen ({grund}).\n"
+                         f"Erwartete Abschlusszeile fuer Index {index}, Artikel {artikel}:\n{block}")
+
+    titel = ""
+    for zeile in rohtext.splitlines():
+        if zeile.strip().startswith("# "):
+            titel = zeile.strip()[2:].strip()
+            break
+    titel = titel or f"Abschnitt {index}"
+    dateiname = f"{index:02d}_{artikel}_{sanitize_filename(titel).lower()[:40]}.md"
+    ziel = os.path.join(buch_dir, dateiname)
+    if os.path.exists(ziel):
+        raise FileExistsError(f"Zieldatei existiert bereits: {ziel}")
+    vorgaenger = kapitel[-1] if kapitel else ""
+    kopf = (f'---\nbook_id: "{book_id}"\nchapter_index: {index}\nchapter_title: "{titel}"\n'
+            f'article: "{artikel}"\nlanguage: "{lang.upper()}"\nstyle: "{stil}"\n'
+            f'pov: "{meta.get("pov", "third_person")}"\nprevious_chapter_file: "{vorgaenger}"\n'
+            f'origin: "external_injection"\nsource_file: "{os.path.basename(datei)}"\n'
+            f'injected_at: "{time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}"\n'
+            f'model: "external"\nbackend: "manual"\ntokens_generated: 0\n'
+            f'manual_ending_ok: true\nmanual_ending_code: "{block_code(block) or artikel}"\n---\n\n')
+    write_new_file(ziel, kopf + rohtext.strip() + "\n")
+    if artikel not in meta.setdefault("covered_articles", []):
+        meta["covered_articles"].append(artikel)
+    meta["current_chapter"] = str(index)
+    with open(meta_pfad, "w", encoding="utf-8") as f:
+        json.dump(meta, f, ensure_ascii=False, indent=2)
+        f.write("\n")
+    print(f"[Injektion] externes Kapitel aufgenommen: {os.path.basename(ziel)} "
+          f"(Artikel {artikel}, Index {index}, Herkunft {os.path.basename(datei)})", flush=True)
+    return ziel
+
+
 def append_chapter(book_id: str | None = None, lang: str | None = None, model: str = "qwen2.5:7b",
                    host: str = "http://localhost:11434", backend: str = "ollama",
                    artikel: str | None = None) -> str:
@@ -1317,7 +1438,11 @@ def main():
     parser.add_argument("--lang", default="DE",
                         help="Zielsprache. Die Anweisungssprache kommt aus prompts/<LANG>/ "
                              "bzw. aus instruction_language der Locale; ohne Direktive bricht der Lauf ab.")
-    parser.add_argument("--mode", choices=("tales", "new-book", "append-chapter", "prolog"), default="tales",
+    parser.add_argument("--file", default=None, help="Eingabedatei fuer inject-chapter.")
+    parser.add_argument("--fork-from", default=None,
+                        help="Verzweigung (nicht freigegeben) — inject-chapter lehnt das ab.")
+    parser.add_argument("--mode", choices=("tales", "new-book", "append-chapter", "prolog",
+                                           "inject-chapter"), default="tales",
                         help="tales = Einzelgeschichten (Default, unveraendert); new-book = Buchrahmen "
                              "anlegen; append-chapter = naechstes Kapitel anhaengen; prolog = fehlenden "
                              "Prolog zu einem bestehenden Buch ergaenzen (book.json bleibt kanonisch).")
@@ -1337,13 +1462,18 @@ def main():
 
     host = os.getenv("OLLAMA_HOST", "http://localhost:11434")
 
-    if args.mode in ("new-book", "append-chapter", "prolog"):
+    if args.mode in ("new-book", "append-chapter", "prolog", "inject-chapter"):
         try:
             if args.mode == "new-book":
                 book_id = new_book(lang=args.lang, style=args.book_style, model=args.model,
                                    host=host, backend=args.backend,
                                    book_id=args.book_id, titel=args.book_title)
                 print(f"[Buchmodus] Buch angelegt: {os.path.join(BOOKS_DIR, book_id)}", flush=True)
+            elif args.mode == "inject-chapter":
+                if not args.book_id or not args.file:
+                    raise RuntimeError("inject-chapter braucht --book-id und --file")
+                pfad = inject_chapter(book_id=args.book_id, datei=args.file, artikel=args.article,
+                                      fork_from=args.fork_from, lang=args.lang)
             elif args.mode == "prolog":
                 if not args.book_id:
                     raise RuntimeError("--mode prolog braucht --book-id (book.json bleibt kanonisch)")
