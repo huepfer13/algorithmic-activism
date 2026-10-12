@@ -1628,13 +1628,14 @@
       "pov": "third_person",
       "setting_summary": "Kontemplative Einsichten fuer unruhige Zeiten.",
       "characters": [],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_02"
+        "art_02",
+        "art_03"
       ],
-      "words": 682,
-      "reading_minutes": 3,
+      "words": 907,
+      "reading_minutes": 5,
       "cover": null,
       "chapters": [
         {
@@ -1690,6 +1691,24 @@
           "leak_free": "true",
           "words": 326,
           "reading_minutes": 2
+        },
+        {
+          "file": "03_art_03_abschnitt_3_die_kalibrierung_der_unverse.md",
+          "index": 3,
+          "title": "Abschnitt 3: Die Kalibrierung der Unversehrtheit",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "67.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1879",
+          "manual_ending_code": "L-03-03",
+          "backend": "openrouter",
+          "genre": "Lebensweisheiten",
+          "leak_free": "true",
+          "words": 225,
+          "reading_minutes": 1
         }
       ]
     },
