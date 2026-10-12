@@ -1536,16 +1536,17 @@
       "pov": "third_person",
       "setting_summary": "Rezepte als Beweis, dass Fuersorge messbar ist.",
       "characters": [],
-      "chapter_count": 5,
+      "chapter_count": 6,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_06"
       ],
-      "words": 2698,
-      "reading_minutes": 13,
+      "words": 3250,
+      "reading_minutes": 16,
       "cover": null,
       "chapters": [
         {
@@ -1654,6 +1655,24 @@
           "genre": "Kochbuch",
           "leak_free": "",
           "words": 549,
+          "reading_minutes": 3
+        },
+        {
+          "file": "06_art_06_abschnitt_6_die_dichtungsschule.md",
+          "index": 6,
+          "title": "Abschnitt 6: Die Dichtungsschule",
+          "article": "art_06",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1063",
+          "manual_ending_code": "C-06-06",
+          "backend": "deepseek",
+          "genre": "Kochbuch",
+          "leak_free": "true",
+          "words": 552,
           "reading_minutes": 3
         }
       ]
