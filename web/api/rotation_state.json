@@ -5,7 +5,8 @@
     "r1:mistral:buch_004_neon_exil",
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_003_der_rat_der_tiere",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_004_neon_exil",
-    "r1:nvidia/nemotron-3.5-lightning:free:buch_005_fragment_der_vernunft"
+    "r1:nvidia/nemotron-3.5-lightning:free:buch_005_fragment_der_vernunft",
+    "r2:deepseek-chat:buch_003_der_rat_der_tiere"
   ],
   "runden": {
     "1": [
@@ -98,6 +99,23 @@
         "tokens": "6127",
         "versuche": "1",
         "woerter": 702
+      }
+    ],
+    "2": [
+      {
+        "backend": "deepseek",
+        "buch": "buch_003_der_rat_der_tiere",
+        "code": "K-03-03",
+        "datei": "03_art_03_abschnitt_3_die_blaue_spur.md",
+        "dauer_s": "7.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 2,
+        "tokens": "912",
+        "versuche": "1",
+        "woerter": 482
       }
     ]
   }
