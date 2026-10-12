@@ -21,7 +21,8 @@
     "r5:deepseek-chat:buch_006_das_gericht_vor_der_mauer",
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_007_die_kammer_der_zeugen",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_008_flechtwerk_arkadien",
-    "r5:nvidia/nemotron-3.5-lightning:free:buch_009_depeschen_aus_dem_kordon"
+    "r5:nvidia/nemotron-3.5-lightning:free:buch_009_depeschen_aus_dem_kordon",
+    "r6:deepseek-chat:buch_007_die_kammer_der_zeugen"
   ],
   "runden": {
     "1": [
@@ -362,6 +363,23 @@
         "tokens": "17796",
         "versuche": "1",
         "woerter": 464
+      }
+    ],
+    "6": [
+      {
+        "backend": "deepseek",
+        "buch": "buch_007_die_kammer_der_zeugen",
+        "code": "E-04-04",
+        "datei": "04_art_04_abschnitt_4_die_tropfsteinhöhle.md",
+        "dauer_s": "9.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 6,
+        "tokens": "1042",
+        "versuche": "0",
+        "woerter": 491
       }
     ]
   }
