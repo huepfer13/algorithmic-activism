@@ -111,7 +111,12 @@ def main() -> int:
     print(f"\n  mit Schranke geprueft: {geprueft}/{gesamt} | ohne Pruefung: {gesamt - geprueft}")
 
     kopf("4. Stil- und Schranken-Audit (ungeschuetzte Baende)")
-    ungeschuetzt = [(x["buch"], x["modell"]) for x in e if zahl(x.get("versuche"), 0) == 0]
+    # Ein hartes Scheitern (exit weder 0 noch 2) ist KEIN ungeschuetzter Stil, sondern ein Fehlerlauf.
+    ungeschuetzt = [(x["buch"], x["modell"]) for x in e
+                    if zahl(x.get("versuche"), 0) == 0 and x.get("exit") in (0, 2)]
+    hart = [(x["buch"], x["modell"], x.get("exit")) for x in e if x.get("exit") not in (0, 2)]
+    for buch, modell, code in hart:
+        print(f"  {buch[:40]:42} {modell[:44]:46} -> exit {code} (harter Fehler, nicht ungeschuetzt)")
     for buch, gruppe in sorted(set(ungeschuetzt)):
         print(f"  {buch[:40]:42} {gruppe[:44]} -> versuche: 0 (Stil ohne style_flags)")
     if not ungeschuetzt:
