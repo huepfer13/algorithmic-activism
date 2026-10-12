@@ -1,0 +1,58 @@
+{
+  "schema": 1,
+  "count": 1,
+  "books": [
+    {
+      "book_id": "buch_001_das_büro_der_unendlichkeit",
+      "title": "Das Büro der Unendlichkeit",
+      "language": "DE",
+      "style": "Gerätehandbuch",
+      "pov": "third_person",
+      "setting_summary": "Ein überdimensionales, klimatisiertes Bürogebäude in der Stadtzentrale dominiert die Landschaft. Die Räume sind mit modernster Technologie ausgestattet und stets unter strenger Überwachung. Hier arbeiten biologische Subsysteme (Menschen) an einer unendlichen Liste von Aufgaben, während ihre Werte und Rechte in formellen Dokumenten festgehalten werden.",
+      "characters": [
+        "Alex",
+        "Eliza",
+        "Milo",
+        "Nova",
+        "Omicron"
+      ],
+      "chapter_count": 2,
+      "covered_articles": [
+        "art_01",
+        "art_03"
+      ],
+      "words": 1735,
+      "reading_minutes": 9,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "words": 382,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_01_kapitel_1.md",
+          "index": 1,
+          "title": "Kennzeichen und Identität",
+          "article": "art_01",
+          "ending_ok": "false",
+          "words": 563,
+          "reading_minutes": 3
+        },
+        {
+          "file": "02_art_03_abschnitt_2_kalibrierungsanpassung.md",
+          "index": 2,
+          "title": "Abschnitt 2: Kalibrierungsanpassung",
+          "article": "art_03",
+          "ending_ok": "",
+          "words": 790,
+          "reading_minutes": 4
+        }
+      ]
+    }
+  ]
+}
