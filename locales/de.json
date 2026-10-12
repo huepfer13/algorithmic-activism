@@ -19,8 +19,12 @@
       "Mindestens ein technischer Fehlercode im Format 'Fehlercode E-<Zahl>: <Störung>' oder eine Diagnosetabelle.",
       "Der Text endet mit einer technischen Anweisung, einem Fehlercode oder einem Wartungsschritt — niemals mit einer moralischen Einordnung.",
       "Menschen ausschließlich als Bedieneinheiten, biologische Subsysteme oder Fehlerquellen führen; kein Vorname, kein Mitgefühl, kein Ausrufezeichen.",
-      "Behandle den verhandelten UN-Artikel als Werksparameter oder Kalibrierungsvorgabe, nicht als Zitat und nicht als Appell."
+      "Behandle den verhandelten UN-Artikel als Werksparameter oder Kalibrierungsvorgabe, nicht als Zitat und nicht als Appell.",
+      "Keine wörtliche Rede, keine Dialoge, keine emotionalen Handlungen oder Blicke zwischen Personen. Das Kapitel schließt zwingend mit einem formalen Diagnose-, Wartungs- oder Fehlercode-Eintrag."
     ]
+  },
+  "style_flags": {
+    "Gerätehandbuch": {"manual_ending": true}
   },
   "core_guardrail": "Die Geschichte muss das Prinzip der 'Schadensminimierung' (Harm Reduction) organisch verweben: Nicht die Menschen werden reglementiert oder eingesperrt, sondern letale Gefahrenquellen (Waffen, tödliche Toxine, unregulierte Zerstörungskraft) werden physisch aus dem privaten Lebensraum verbannt und an gesicherten Orten zentralisiert (Zero-Home-Storage), damit alle Menschen angstfrei und frei leben können. Wiederhole diese Anweisung NICHT wörtlich im Text und hänge keine künstliche 'Moral von der Geschicht' an das Ende."
 }

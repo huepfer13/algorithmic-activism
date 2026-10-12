@@ -488,6 +488,151 @@ def new_book(lang: str = "DE", style: str | None = None, model: str = "qwen2.5:7
     return book_id
 
 
+# --- Stufe 2: Kapitel anhaengen ("Unendliche Geschichte") ----------------------------------------
+DIALOG_ZEICHEN = ('"', '„', '“', '»', '«')
+EMOTIONS_VERBEN = ("flüsterte", "lächelte", "sagte", "nickte", "seufzte", "blickte", "lächeln", "flüstern")
+ABSCHLUSS_MARKER = ("fehlercode", "wartung", "intervall", "diagnose", "prüfung", "system", "abschnitt",
+                    "hinweis", "gefahr", "protokoll", "anweisung")
+
+
+def audit_manual_ending(text: str) -> tuple[bool, str]:
+    """Mechanische Endschranke fuer Sach-/Handbuchgenres: prueft NUR den letzten Absatz.
+
+    Grund (gemessen 2026-10-12): der Prompt-Bann hielt das Modell von Moral-Bekenntnissen ab — es
+    floh danach in narrative Klischees ('"Gut gemacht.", flüsterte sie'). Prosa-Regeln im Prompt
+    sind dafuer zu weich, deshalb eine harte Pruefung mit begrenzten Wiederholungen.
+    """
+    absaetze = [a.strip() for a in text.strip().split("\n\n") if a.strip()]
+    if not absaetze:
+        return False, "leerer Text"
+    letzter = absaetze[-1]
+    for z in DIALOG_ZEICHEN:
+        if z in letzter:
+            return False, f"woertliche Rede im Schlussabsatz ({z})"
+    for v in EMOTIONS_VERBEN:
+        if re.search(v, letzter, re.IGNORECASE):
+            return False, f"Dialog-/Emotionsverb im Schlussabsatz ({v})"
+    if not any(m in letzter.lower() for m in ABSCHLUSS_MARKER):
+        return False, "kein technischer Abschlussmarker im Schlussabsatz"
+    return True, "Passed"
+
+
+def erzeuge_mit_endschranke(prompt: str, model: str, host: str, style_flags: dict,
+                            label: str, versuche: int = 3) -> tuple[str, bool, str]:
+    """Generiert und prueft das Ende, solange das Genre es verlangt.
+
+    Rueckgabe (text, ende_ok, grund). Nach Ausschoepfung der Versuche wird der Text MIT Vermerk
+    geliefert: kein stiller Durchlauf, aber auch kein Totalverlust.
+    """
+    if not style_flags.get("manual_ending"):
+        return run_ollama_stream(prompt, model=model, host=host), True, "nicht geprueft (Stil ohne Endschranke)"
+    text, grund = "", ""
+    for i in range(1, versuche + 1):
+        text = run_ollama_stream(prompt, model=model, host=host)
+        ok, grund = audit_manual_ending(text)
+        print(f"  [{label}] Versuch {i}/{versuche}: Endschranke "
+              f"{'erfuellt' if ok else 'VERFEHLT'} ({grund})", flush=True)
+        if ok:
+            return text, True, grund
+    return text, False, grund
+
+
+def naechstes_buch() -> str:
+    """Neuestes Buchverzeichnis nach mtime — kein Register, das driften kann."""
+    if os.path.isdir(BOOKS_DIR):
+        buende = [os.path.join(BOOKS_DIR, d) for d in os.listdir(BOOKS_DIR)
+                  if d.startswith("buch_") and os.path.isdir(os.path.join(BOOKS_DIR, d))]
+        if buende:
+            return os.path.basename(max(buende, key=os.path.getmtime))
+    raise FileNotFoundError(f"Kein Buch unter {BOOKS_DIR} — erst --mode new-book ausfuehren.")
+
+
+def buch_kapitel(buch_dir: str) -> list:
+    """Kapiteldateien in Reihenfolge (00_prolog.md zuerst), aus dem Dateisystem."""
+    return sorted(f for f in os.listdir(buch_dir) if re.match(r"^\d{2}_.*\.md$", f))
+
+
+def naechster_artikel(lang: str, covered: list) -> str | None:
+    """Erster noch unbenutzter Artikel in kanonischer (sortierter) Reihenfolge — nicht zufaellig."""
+    alle = [os.path.splitext(os.path.basename(p))[0]
+            for p in sorted(glob.glob(os.path.join(ARTICLES_DIR, lang.lower(), "*.md")))]
+    for a in alle:
+        if a not in covered:
+            return a
+    return None
+
+
+def append_chapter(book_id: str | None = None, lang: str | None = None, model: str = "qwen2.5:7b",
+                   host: str = "http://localhost:11434") -> str:
+    """Stufe 2: naechstes Kapitel anhaengen — deterministisch, kollisionssicher, mit Endschranke."""
+    book_id = book_id or naechstes_buch()
+    buch_dir = os.path.join(BOOKS_DIR, book_id)
+    if not os.path.isdir(buch_dir):
+        raise FileNotFoundError(f"Buch nicht gefunden: {buch_dir}")
+
+    meta = json.load(open(os.path.join(buch_dir, "book.json"), encoding="utf-8"))
+    sprache = (lang or meta.get("language", "DE")).upper()
+    style_name = meta["style"]
+    locale = load_locale(sprache)
+    style_desc = locale.get("styles", {}).get(style_name, style_name)
+    style_rules = locale.get("style_rules", {}).get(style_name, [])
+    style_flags = locale.get("style_flags", {}).get(style_name, {})
+    lang_name = book_language_directive(sprache, locale)
+    core_rule = (locale.get("guardrail_prompt") or locale.get("core_guardrail")
+                 or "Schutz von Leben und koerperlicher Unversehrtheit hat Vorrang.")
+
+    kapitel = buch_kapitel(buch_dir)
+    if not kapitel:
+        raise FileNotFoundError(f"Buch ohne Prolog: {buch_dir}")
+    vorherige = kapitel[-1]
+    vorgaenger = open(os.path.join(buch_dir, vorherige), encoding="utf-8").read()
+    if vorgaenger.startswith("---"):
+        vorgaenger = vorgaenger.split("---", 2)[-1].strip()
+    # Verhandelte Artikel aus dem DATEISYSTEM ergaenzen (Frontmatter der Kapitel): eine Liste in
+    # book.json kann driften, die Dateien nicht. Der Index kommt ohnehin schon von dort.
+    covered = list(meta.get("covered_articles", []))
+    for k in kapitel:
+        if k == "00_prolog.md":
+            continue
+        txt = open(os.path.join(buch_dir, k), encoding="utf-8").read()
+        treffer = re.search(r'^article:\s*"?([A-Za-z0-9_]+)"?\s*$', txt, re.M)
+        if treffer and treffer.group(1) not in covered:
+            covered.append(treffer.group(1))
+    index = len([k for k in kapitel if k != "00_prolog.md"]) + 1
+
+    artikel = naechster_artikel(sprache, covered)
+    if not artikel:
+        raise RuntimeError(f"Alle Artikel in '{book_id}' verhandelt — neues Buch per --mode new-book.")
+
+    art = load_article(artikel, sprache)
+    prompt = build_chapter_prompt(meta, lang_name, style_name, style_desc, style_rules, core_rule,
+                                  index, artikel, art["body"], vorgaenger, vorherige)
+    print(f"[Kapitel {index}] Buch '{book_id}' | Artikel {artikel} | Vorgaenger {vorherige}", flush=True)
+    text, ende_ok, grund = erzeuge_mit_endschranke(prompt, model, host, style_flags,
+                                                   f"Kapitel {index}", versuche=3)
+    if not text.strip():
+        raise RuntimeError("Leere Antwort vom Modell — Kapitel wird nicht geschrieben.")
+
+    titel = extract_title(text)
+    marke = "" if ende_ok else f'manual_ending_ok: false\nmanual_ending_note: "{grund}"\n'
+    datei = f"{index:02d}_{artikel}_{sanitize_filename(titel).lower()[:40]}.md"
+    pfad = write_new_file(os.path.join(buch_dir, datei),
+                          f'---\nbook_id: "{book_id}"\nchapter_index: {index}\n'
+                          f'chapter_title: "{titel}"\narticle: "{artikel}"\nlanguage: "{sprache}"\n'
+                          f'style: "{style_name}"\npov: "{meta["pov"]}"\n'
+                          f'previous_chapter_file: "{vorherige}"\n{marke}---\n\n' + text.strip() + "\n")
+
+    # book.json ATOMAR aktualisieren (temp + os.replace) — kein halber Zustand
+    meta["covered_articles"] = covered + [artikel]
+    meta["current_chapter"] = index
+    tmp = os.path.join(buch_dir, "book.json.tmp")
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(meta, f, ensure_ascii=False, indent=2)
+        f.write("\n")
+    os.replace(tmp, os.path.join(buch_dir, "book.json"))
+    return pfad
+
+
 def synthesize_one(article_id: str, style: str, lang: str, model: str, host: str):
     art = load_article(article_id, lang)
     loc = load_locale(lang)
@@ -511,11 +656,13 @@ def main():
     parser.add_argument("--lang", default="DE",
                         help="Zielsprache. Die Anweisungssprache kommt aus prompts/<LANG>/ "
                              "bzw. aus instruction_language der Locale; ohne Direktive bricht der Lauf ab.")
-    parser.add_argument("--mode", choices=("tales", "new-book"), default="tales",
-                        help="tales = Einzelgeschichten (Default, unveraendert); "
-                             "new-book = neuen Buchrahmen anlegen (Stufe 1 der Buch-Erweiterung).")
+    parser.add_argument("--mode", choices=("tales", "new-book", "append-chapter"), default="tales",
+                        help="tales = Einzelgeschichten (Default, unveraendert); new-book = Buchrahmen "
+                             "anlegen; append-chapter = naechstes Kapitel an das gewaehlte Buch haengen.")
     parser.add_argument("--book-style", default=None,
                         help="Stil fuer den Buchmodus; Default ist ein zufaelliger Stil der Locale.")
+    parser.add_argument("--book-id", default=None,
+                        help="Buch-ID fuer append-chapter; Default ist das neueste Buch (mtime).")
     parser.add_argument("--article", default=None)
     parser.add_argument("--style", default=None)
     parser.add_argument("--random", action="store_true")
@@ -526,14 +673,17 @@ def main():
 
     host = os.getenv("OLLAMA_HOST", "http://localhost:11434")
 
-    if args.mode == "new-book":
+    if args.mode in ("new-book", "append-chapter"):
         try:
-            book_id = new_book(lang=args.lang, style=args.book_style,
-                               model=args.model, host=host)
-        except (ValueError, FileExistsError, RuntimeError) as e:
+            if args.mode == "new-book":
+                book_id = new_book(lang=args.lang, style=args.book_style, model=args.model, host=host)
+                print(f"[Buchmodus] Buch angelegt: {os.path.join(BOOKS_DIR, book_id)}", flush=True)
+            else:
+                pfad = append_chapter(book_id=args.book_id, lang=args.lang, model=args.model, host=host)
+                print(f"[Buchmodus] Kapitel angehaengt: {pfad}", flush=True)
+        except (ValueError, FileExistsError, FileNotFoundError, RuntimeError) as e:
             print(f"[Buchmodus] Abbruch: {e}", flush=True)
             sys.exit(1)
-        print(f"[Buchmodus] Buch angelegt: {os.path.join(BOOKS_DIR, book_id)}", flush=True)
         sys.exit(0)
 
     locale_data = load_locale(args.lang)
