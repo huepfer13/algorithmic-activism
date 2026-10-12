@@ -751,12 +751,13 @@
         "Angeklagter Tomas Reiter",
         "Zeugin Elif Sarikaya"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 1091,
-      "reading_minutes": 5,
+      "words": 1605,
+      "reading_minutes": 8,
       "cover": null,
       "chapters": [
         {
@@ -793,6 +794,24 @@
           "genre": "Gerichtsdrama",
           "leak_free": "",
           "words": 669,
+          "reading_minutes": 3
+        },
+        {
+          "file": "02_art_02_abschnitt_2_das_echo_der_daten.md",
+          "index": 2,
+          "title": "Abschnitt 2: Das Echo der Daten",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "0",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "17.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "2114",
+          "manual_ending_code": "E-02-02",
+          "backend": "openrouter",
+          "genre": "Gerichtsdrama",
+          "leak_free": "",
+          "words": 514,
           "reading_minutes": 3
         }
       ]
