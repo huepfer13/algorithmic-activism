@@ -509,6 +509,81 @@ def _normalisiere(text: str) -> str:
     return (text.replace("ü", "ue").replace("ö", "oe").replace("ä", "ae").replace("ß", "ss"))
 
 
+STOER_PARAMETER_POOL = (
+    {"typ": "SENSORIK_DRIFT", "detail": "Pneumatische Rohrpostleitung blockiert; feiner Papierschliff auf den Relaiskontakten.",
+     "anweisung": "Lass die Figur beilaeufig die mechanische Blockade oder den Staub wahrnehmen."},
+    {"typ": "AUDIT_DRUCK", "detail": "Unerwartete Revision durch die Zentrale Registratur angekuendigt.",
+     "anweisung": "Spuerbare Nervositaet im Sektor; beschleunigtes Abheften von Protokollen."},
+    {"typ": "PHYSISCHE_ANOMALIE", "detail": "Flackernde Entladungslampen mit 47 Hz; stechender Ozongeruch an den Schaltschraenken.",
+     "anweisung": "Integriere die optische oder geruchliche Stoerung in die Arbeitsumgebung."},
+    {"typ": "KLIMATISIERUNG", "detail": "Thermische Drift im Zwischenboden; Kondensat tropft auf die Kabelschaechte.",
+     "anweisung": "Erwaehne die feuchte Kaelte oder das rhythmische Tropfen im Hintergrund."},
+    {"typ": "SIGNAL_INTERFERENZ", "detail": "Daempfungsfelder erzeugen ein hochfrequentes Fiepen in den Gegensprechanlagen.",
+     "anweisung": "Eine akustische Reizung unterbricht kurz die Konzentration."},
+)
+
+
+def stoerparameter(kapitel_index: int) -> dict:
+    """Deterministisch rotierende Sektor-Bedingung je Kapitel (Modulo, kein Zufall, kein Zeitstempel)."""
+    return STOER_PARAMETER_POOL[(kapitel_index - 1) % len(STOER_PARAMETER_POOL)]
+
+
+def ist_bausteinabsatz(absatz: str) -> bool:
+    """Absatz, dessen erste Zeile formal ist (Marker oder fett gesetzter Block wie **WARNUNG**)."""
+    erste = absatz.splitlines()[0]
+    rumpf = _normalisiere(_MARKDOWN_PRAEFIX_RE.sub("", erste).strip().strip("*_#")).lower()
+    return bool(zeilen_marker(erste)) or rumpf.startswith(("gefahr", "warnung", "hinweis", "status"))
+
+
+def archiv_artefakt(buch_dir: str, kapitel_index: int, book_id: str) -> str | None:
+    """Deterministischer Archiv-Splitter aus einem VORKAPITEL — nie aus dessen Schlussprosa.
+
+    Der Ausschluss des Schlussabsatzes ist kein Detail: er stammt aus der Historie der Endschranke.
+    Traegt der Splitter eine bereits abgewiesene Formulierung, setzt das Modell sie als eigenen
+    Abschluss ein und die Wiederholungsschranke schlaegt zu (belegt 2026-10-12 an Kapitel 3/4).
+    """
+    if kapitel_index <= 1:
+        return None
+    seed = int(hashlib.sha256(f"{book_id}:{kapitel_index}:artefakt".encode("utf-8")).hexdigest(), 16)
+    quell_index = (seed % (kapitel_index - 1)) + 1
+    dateien = sorted(glob.glob(os.path.join(buch_dir, f"{quell_index:02d}_*.md")))
+    if not dateien:
+        return None
+    roh = open(dateien[0], encoding="utf-8").read()
+    rumpf = roh.split("---", 2)[2] if roh.startswith("---") else roh
+    tabu = schluss_prosa(rumpf)                       # Schlussprosa des Quellkapitels: tabu
+    # Alle bisherigen Schlussprosas: ein Splitter, der einem davon zu aehnlich ist, wuerde das Modell
+    # in die Wiederholungsfalle fuehren. Gleiche Funktion und Schwelle wie die Schranke selbst.
+    andere_schluesse = []
+    for f in sorted(glob.glob(os.path.join(buch_dir, "*.md"))):
+        r = open(f, encoding="utf-8").read()
+        prosa = schluss_prosa(r.split("---", 2)[2] if r.startswith("---") else r)
+        if prosa:
+            andere_schluesse.append(prosa)
+    kandidaten = []
+    for absatz in (a.strip() for a in rumpf.split("\n\n")):
+        if not absatz or len(absatz) < 80:
+            continue
+        if ist_bausteinabsatz(absatz) or any(ist_strukturzeile(z) for z in absatz.splitlines()):
+            continue
+        # Derselbe formale Maßstab wie an den Schlussabsatz: eine Aktennotiz enthaelt keine
+        # woertliche Rede und keine Emotionsverben (belegt 2026-10-12: die ersten Splitter
+        # zitierten Dialoge und "fluestert sie mit einem leichten Laecheln").
+        if any(z in absatz for z in DIALOG_ZEICHEN) or any(re.search(v, absatz, re.I) for v in EMOTIONS_VERBEN):
+            continue
+        if tabu and schluss_prosa(absatz) == tabu:
+            continue
+        if ist_wiederholung(schluss_prosa(absatz), andere_schluesse)[0]:
+            continue
+        kandidaten.append(absatz)
+    if not kandidaten:
+        return None
+    gewaehlt = kandidaten[seed % len(kandidaten)]
+    saetze = re.split(r"(?<=[.!?])\s+", gewaehlt)
+    return (f'[ARCHIV-QUERVERWEIS AUS KAPITEL {quell_index:02d}]: "'
+            + " ".join(saetze[:2]).strip() + '"')
+
+
 def pflichtblock_muster(erwarteter_block: str):
     """Regex fuer den Pflichtblock: der CODE ist der Anker (exakt), Zustand/Sektor/Intervall sind Dekoration.
 
@@ -764,6 +839,15 @@ def append_chapter(book_id: str | None = None, lang: str | None = None, model: s
             vorgaenger_schluesse.append(sa)
     block = status_block(book_id, artikel, index)
     prompt += pflichtblock_hinweis(block, vorgaenger_schluesse[-1] if vorgaenger_schluesse else "")
+    # Salz: dosierte, deterministische Reibung — Sektor-Bedingung + Aktennotiz aus einem Vorkapitel.
+    stoerung = stoerparameter(index)
+    artefakt = archiv_artefakt(buch_dir, index, book_id)
+    prompt += (f"\n\n### BEHOERDLICHE RAHMENBEDINGUNGEN DIESES ABSCHNITTS:\n"
+               f"- Sektor-Bedingung ({stoerung['typ']}): {stoerung['detail']}\n"
+               f"  -> Vorgabe: {stoerung['anweisung']}")
+    if artefakt:
+        prompt += (f"\n- Aktennotiz zur Beruecksichtigung:\n  {artefakt}\n"
+                   "  -> Vorgabe: Lass dieses Ereignis kurz als Referenz oder Erinnerung einfliessen.")
     text, ende_ok, grund, versuche = erzeuge_mit_endschranke(prompt, model, host, style_flags,
                                                    f"Kapitel {index}", versuche=3,
                                                    vorgaenger_schluesse=vorgaenger_schluesse,
@@ -777,7 +861,8 @@ def append_chapter(book_id: str | None = None, lang: str | None = None, model: s
     code_treffer = re.search(r"CODE:\s*([^|\]]+)", block)
     marke = (f'manual_ending_ok: {"true" if ende_ok else "false"}\n'
              f'manual_ending_attempts: {versuche}\n'
-             f'manual_ending_code: "{code_treffer.group(1).strip() if code_treffer else ""}"\n'
+             f'manual_ending_code: "{code_treffer.group(1).strip() if code_treffer else ""}"\n'             f'scene_condition: "{stoerung["typ"]}"\n'
+             f'archive_note: "{("KAPITEL " + artefakt.split("KAPITEL ")[1][:2]) if artefakt else ""}"\n'
              f'manual_ending_note: "{grund}"\n')
     datei = f"{index:02d}_{artikel}_{sanitize_filename(titel).lower()[:40]}.md"
     pfad = write_new_file(os.path.join(buch_dir, datei),
