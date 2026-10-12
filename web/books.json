@@ -1536,17 +1536,18 @@
       "pov": "third_person",
       "setting_summary": "Rezepte als Beweis, dass Fuersorge messbar ist.",
       "characters": [],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
         "art_05",
-        "art_06"
+        "art_06",
+        "art_07"
       ],
-      "words": 3250,
-      "reading_minutes": 16,
+      "words": 3715,
+      "reading_minutes": 19,
       "cover": null,
       "chapters": [
         {
@@ -1674,6 +1675,24 @@
           "leak_free": "true",
           "words": 552,
           "reading_minutes": 3
+        },
+        {
+          "file": "07_art_07_abschnitt_7_die_kalibrierung_der_gleiche.md",
+          "index": 7,
+          "title": "Abschnitt 7: Die Kalibrierung der Gleichen",
+          "article": "art_07",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "25.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "909",
+          "manual_ending_code": "C-07-07",
+          "backend": "deepseek",
+          "genre": "Kochbuch",
+          "leak_free": "",
+          "words": 465,
+          "reading_minutes": 2
         }
       ]
     },

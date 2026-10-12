@@ -65,7 +65,8 @@
     "r6:deepseek-chat:buch_015_das_kochbuch_der_allmende",
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_016_faden_der_gelassenheit",
     "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_017_des_volkes_mund",
-    "r6:apodex/apodex-1.1-mini:free:buch_018_rhymes_of_the_commons"
+    "r6:apodex/apodex-1.1-mini:free:buch_018_rhymes_of_the_commons",
+    "r7:deepseek-chat:buch_015_das_kochbuch_der_allmende"
   ],
   "runden": {
     "1": [
@@ -932,6 +933,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3.5-lightning:free",
         "runde": 7
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_015_das_kochbuch_der_allmende",
+        "code": "C-07-07",
+        "datei": "07_art_07_abschnitt_7_die_kalibrierung_der_gleiche.md",
+        "dauer_s": "25.1",
+        "ending_ok": "false",
+        "exit": 2,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 7,
+        "tokens": "909",
+        "versuche": "3",
+        "woerter": 465
       }
     ],
     "8": [
