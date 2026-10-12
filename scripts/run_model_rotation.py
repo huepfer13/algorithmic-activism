@@ -152,7 +152,11 @@ def main() -> int:
     fehler = []
     for runde in range(1, args.runden + 1):
         for i, (modell, backend) in enumerate(POOL):
-            buch = band_waehlen(alle, (i + runde) % len(alle), backend)
+            # Fortlaufender Slot-Zaehler statt (i + runde): die alte Formel traf nur 13 der 18 Baende,
+            # buch_015 bis buch_018 fielen aus dem Lauf (belegt 2026-10-12). Mit Schrittweite 1 ueber
+            # den gesamten Slot-Index kommt jeder Band zuverlaessig dran.
+            slot = (runde - 1) * len(POOL) + i
+            buch = band_waehlen(alle, slot % len(alle), backend)
             marke = f"r{runde}:{modell}:{buch}"
             if marke in z["erledigt"]:
                 continue
