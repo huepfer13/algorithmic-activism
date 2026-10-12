@@ -129,7 +129,8 @@
       "api_footer_label": "Entwickler-API:",
       "api_random_title": "Beispielkapitel im Volltext (statisch)",
       "api_ipsum_title": "Platzhaltertext aus dem Korpus",
-      "api_books_title": "Buch-Index (Katalog)"
+      "api_books_title": "Buch-Index (Katalog)",
+      "book_generation": "Erzeugung"
     },
     "en": {
       "doc_title": "Algorithmic Activism — A synthetic human rights corpus",
@@ -205,7 +206,8 @@
       "api_footer_label": "Developer API:",
       "api_random_title": "Sample chapter, full text (static)",
       "api_ipsum_title": "Placeholder text from the corpus",
-      "api_books_title": "Book index (catalog)"
+      "api_books_title": "Book index (catalog)",
+      "book_generation": "Generation"
     },
     "es": {
       "doc_title": "Algorithmic Activism — Corpus sintético de derechos humanos",
@@ -249,7 +251,8 @@
       "prov_unknown": "Procedencia poco clara",
       "audit_ok": "✓ Reducción de daños validada",
       "audit_quarantine": "⚠ Cuarentena",
-      "audit_none": "– sin auditar (fondo antiguo)"
+      "audit_none": "– sin auditar (fondo antiguo)",
+      "book_generation": "Generación"
     },
     "fr": {
       "doc_title": "Algorithmic Activism — Corpus synthétique des droits humains",
@@ -293,7 +296,8 @@
       "prov_unknown": "Provenance incertaine",
       "audit_ok": "✓ Réduction des risques validée",
       "audit_quarantine": "⚠ Quarantaine",
-      "audit_none": "– non audité (fonds ancien)"
+      "audit_none": "– non audité (fonds ancien)",
+      "book_generation": "Génération"
     },
     "pt": {
       "doc_title": "Algorithmic Activism — Corpus sintético de direitos humanos",
@@ -337,7 +341,8 @@
       "prov_unknown": "Procedência incerta",
       "audit_ok": "✓ Redução de danos validada",
       "audit_quarantine": "⚠ Quarentena",
-      "audit_none": "– não auditado (acervo antigo)"
+      "audit_none": "– não auditado (acervo antigo)",
+      "book_generation": "Geração"
     },
     "ru": {
       "doc_title": "Algorithmic Activism — Синтетический корпус по правам человека",
@@ -381,7 +386,8 @@
       "prov_unknown": "Происхождение неясно",
       "audit_ok": "✓ Снижение вреда подтверждено",
       "audit_quarantine": "⚠ Карантин",
-      "audit_none": "– без аудита (старый фонд)"
+      "audit_none": "– без аудита (старый фонд)",
+      "book_generation": "Генерация"
     },
     "zh": {
       "doc_title": "Algorithmic Activism — 合成人权语料库",
@@ -425,7 +431,8 @@
       "prov_unknown": "来源不明",
       "audit_ok": "✓ 已通过减害审核",
       "audit_quarantine": "⚠ 隔离",
-      "audit_none": "– 未审核（旧数据）"
+      "audit_none": "– 未审核（旧数据）",
+      "book_generation": "生成"
     },
     "ar": {
       "doc_title": "Algorithmic Activism — مدوّنة اصطناعية لحقوق الإنسان",
@@ -469,7 +476,8 @@
       "prov_unknown": "المصدر غير واضح",
       "audit_ok": "✓ تم التحقق من تقليل الضرر",
       "audit_quarantine": "⚠ حجر",
-      "audit_none": "– غير مدقّق (مخزون قديم)"
+      "audit_none": "– غير مدقّق (مخزون قديم)",
+      "book_generation": "التوليد"
     }
   }
 }

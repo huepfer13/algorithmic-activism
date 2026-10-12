@@ -1275,8 +1275,19 @@
         'Artikel: ' + (ch.article || 'ohne'),
         'Audit: ' + audit + (ch.attempts ? ' (' + bt('book_attempts', 'Versuche') + ': ' + ch.attempts + ')' : '')
       ].join('\n');
-      return REPORT_URL + '?title=' + encodeURIComponent(titel) + '&body=' + encodeURIComponent(koerper);
-    }
+      // Erzeugungs-Metriken mitgeben: der Meldende hat sie im Reader vor sich, und die Triage
+      // braucht sie (Modell/Backend/Token/Jaccard) — sie stehen seit Kapitel 11 in books.json.
+      const stats = [
+        ch.model,
+        ch.backend,
+        ch.tokens_generated ? ch.tokens_generated + ' Token' : '',
+        ch.jaccard_max ? 'Jaccard ' + ch.jaccard_max : ''
+      ].filter(Boolean).join(' | ');
+      const erzeugung = stats ? '\n' + bt('book_generation', 'Erzeugung') + ': ' + stats : '';
+      return REPORT_URL + '?title=' + encodeURIComponent(titel)
+        + '&body=' + encodeURIComponent(koerper + erzeugung)
+        + '&labels=' + encodeURIComponent('kapitel-meldung');
+      }
 
     function wireFeedback(b, ch) {
       const key = chapterKey(b.book_id, ch.file);
