@@ -53,7 +53,8 @@
     "r3:deepseek-chat:buch_015_das_kochbuch_der_allmende",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_016_faden_der_gelassenheit",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_017_des_volkes_mund",
-    "r3:apodex/apodex-1.1-mini:free:buch_018_rhymes_of_the_commons"
+    "r3:apodex/apodex-1.1-mini:free:buch_018_rhymes_of_the_commons",
+    "r4:deepseek-chat:buch_015_das_kochbuch_der_allmende"
   ],
   "runden": {
     "1": [
@@ -569,6 +570,21 @@
         "tokens": "12803",
         "versuche": "1",
         "woerter": 358
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_015_das_kochbuch_der_allmende",
+        "code": "C-04-04",
+        "datei": "04_art_04_abschnitt_4_die_trockene_kammer.md",
+        "dauer_s": "8.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 4,
+        "tokens": "901",
+        "versuche": "1",
+        "woerter": 461
       }
     ],
     "5": [

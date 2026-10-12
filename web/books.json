@@ -1536,14 +1536,15 @@
       "pov": "third_person",
       "setting_summary": "Rezepte als Beweis, dass Fuersorge messbar ist.",
       "characters": [],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_02",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 1688,
-      "reading_minutes": 8,
+      "words": 2149,
+      "reading_minutes": 11,
       "cover": null,
       "chapters": [
         {
@@ -1616,6 +1617,24 @@
           "genre": "Kochbuch",
           "leak_free": "",
           "words": 493,
+          "reading_minutes": 2
+        },
+        {
+          "file": "04_art_04_abschnitt_4_die_trockene_kammer.md",
+          "index": 4,
+          "title": "Abschnitt 4: Die trockene Kammer",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "901",
+          "manual_ending_code": "C-04-04",
+          "backend": "deepseek",
+          "genre": "Kochbuch",
+          "leak_free": "true",
+          "words": 461,
           "reading_minutes": 2
         }
       ]
