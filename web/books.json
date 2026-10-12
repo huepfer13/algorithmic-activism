@@ -1536,7 +1536,7 @@
       "pov": "third_person",
       "setting_summary": "Rezepte als Beweis, dass Fuersorge messbar ist.",
       "characters": [],
-      "chapter_count": 9,
+      "chapter_count": 10,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1546,10 +1546,11 @@
         "art_06",
         "art_07",
         "art_08",
-        "art_09"
+        "art_09",
+        "art_10"
       ],
-      "words": 4405,
-      "reading_minutes": 22,
+      "words": 4807,
+      "reading_minutes": 24,
       "cover": null,
       "chapters": [
         {
@@ -1730,6 +1731,24 @@
           "genre": "Kochbuch",
           "leak_free": "true",
           "words": 341,
+          "reading_minutes": 2
+        },
+        {
+          "file": "10_art_10_abschnitt_10_die_prüfliste_der_griffe.md",
+          "index": 10,
+          "title": "Abschnitt 10: Die Prüfliste der Griffe",
+          "article": "art_10",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "804",
+          "manual_ending_code": "C-10-10",
+          "backend": "deepseek",
+          "genre": "Kochbuch",
+          "leak_free": "true",
+          "words": 402,
           "reading_minutes": 2
         }
       ]
