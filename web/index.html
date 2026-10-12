@@ -6,18 +6,68 @@
   <title>Algorithmic Activism — Synthetischer Menschenrechte-Korpus</title>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
+    /* Dunkel ist der Vorgabewert; das helle Theme setzt genau dieselben Variablennamen.
+       Der Umschalter schreibt data-theme auf <html>. */
     :root {
+      color-scheme: dark;
       --bg: #0b0f19;
       --sidebar-bg: #111827;
       --card-bg: #1f2937;
       --card-hover: #374151;
       --text: #f3f4f6;
       --text-prose: #e5e7eb;
-      --muted: #9ca3af;
+      --muted: #a8afbb;
       --accent: #38bdf8;
       --border: #374151;
       --success: #34d399;
       --danger: #f87171;
+      --search-bg: #0d131f;
+      --tag-bg: #374151;
+      --item-active-bg: #1e3a5f;
+      --btn-bg: #0369a1;
+      --btn-bg-hover: #075985;
+    }
+    :root[data-theme="light"] {
+      color-scheme: light;
+      --bg: #f6f8fb;
+      --sidebar-bg: #ffffff;
+      --card-bg: #eef2f7;
+      --card-hover: #dde6f0;
+      --text: #0f172a;
+      --text-prose: #1f2937;
+      --muted: #4b5563;
+      --accent: #0369a1;
+      --border: #cbd5e1;
+      --success: #047857;
+      --danger: #b91c1c;
+      --search-bg: #f1f5f9;
+      --tag-bg: #dbe3ec;
+      --item-active-bg: #dbeafe;
+      --btn-bg: #0369a1;
+      --btn-bg-hover: #075985;
+    }
+    /* Fallback OHNE JavaScript: Systemwunsch "hell" greift nur, solange nichts gewaehlt wurde.
+       Sobald der Umschalter laeuft, steht data-theme immer explizit auf <html>. */
+    @media (prefers-color-scheme: light) {
+      :root:not([data-theme]) {
+        color-scheme: light;
+        --bg: #f6f8fb;
+        --sidebar-bg: #ffffff;
+        --card-bg: #eef2f7;
+        --card-hover: #dde6f0;
+        --text: #0f172a;
+        --text-prose: #1f2937;
+        --muted: #4b5563;
+        --accent: #0369a1;
+        --border: #cbd5e1;
+        --success: #047857;
+        --danger: #b91c1c;
+        --search-bg: #f1f5f9;
+        --tag-bg: #dbe3ec;
+        --item-active-bg: #dbeafe;
+        --btn-bg: #0369a1;
+        --btn-bg-hover: #075985;
+      }
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -44,22 +94,24 @@
     }
     .header h1 { font-size: 1.15rem; color: var(--accent); margin-bottom: 4px; font-weight: 700; }
     .header-desc { font-size: 0.8rem; color: var(--muted); margin-bottom: 10px; }
+    .header-actions { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
     .download-btn {
       display: inline-flex;
       align-items: center;
       gap: 6px;
       font-size: 0.75rem;
       padding: 5px 10px;
-      background: #0284c7;
+      background: var(--btn-bg);
       color: #fff;
       text-decoration: none;
       border-radius: 4px;
       font-weight: 600;
       transition: background 0.15s;
     }
-    .download-btn:hover { background: #0369a1; }
-    .about-btn { background: #374151; margin-left: 6px; }
+    .download-btn:hover { background: var(--btn-bg-hover); }
+    .about-btn { background: #374151; }
     .about-btn:hover { background: #4b5563; }
+    button.download-btn { border: none; font-family: inherit; cursor: pointer; }
 
     /* Filter */
     .search-box {
@@ -68,7 +120,7 @@
       display: flex;
       gap: 8px;
       flex-direction: column;
-      background: #0d131f;
+      background: var(--search-bg);
     }
     input, select {
       background: var(--card-bg);
@@ -80,6 +132,23 @@
       outline: none;
     }
     input:focus, select:focus { border-color: var(--accent); }
+    .filter-row { display: flex; gap: 6px; }
+    .filter-row > input, .filter-row > select { flex: 1; min-width: 0; }
+    .random-btn {
+      flex: 0 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 6px;
+      padding: 8px 10px;
+      font-size: 0.8rem;
+      font-family: inherit;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .random-btn:hover { background: var(--card-hover); border-color: var(--accent); }
+    .result-count { font-size: 0.75rem; color: var(--muted); }
+    .result-count.empty { color: var(--danger); }
 
     /* Liste */
     #tales-list { flex: 1; overflow-y: auto; padding: 10px; }
@@ -93,10 +162,11 @@
       transition: all 0.15s;
     }
     .tale-item:hover { background: var(--card-hover); }
-    .tale-item.active { border-color: var(--accent); background: #1e3a5f; }
+    .tale-item.active { border-color: var(--accent); background: var(--item-active-bg); }
     .tale-title { font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; line-height: 1.3; }
     .tale-meta { font-size: 0.75rem; color: var(--muted); display: flex; gap: 6px; flex-wrap: wrap; }
-    .tag { background: #374151; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; }
+    .tag { background: var(--tag-bg); padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; }
+    .list-empty { color: var(--muted); padding: 16px; text-align: center; font-size: 0.85rem; }
 
     /* Reader */
     #main-content {
@@ -204,6 +274,7 @@
       body { flex-direction: column; height: auto; overflow: visible; }
       #sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--border); height: 45vh; }
       #main-content { padding: 24px 16px; }
+      .filter-row { flex-wrap: wrap; }
     }
   </style>
 </head>
@@ -212,15 +283,23 @@
     <div class="header">
       <h1>Algorithmic Activism</h1>
       <p class="header-desc" id="stats-summary">Lade Korpus...</p>
-      <a href="./dataset.jsonl" download id="download-link" class="download-btn">⬇ dataset.jsonl herunterladen</a>
-      <a href="#" id="about-link" class="download-btn about-btn">Über das Projekt</a>
+      <div class="header-actions">
+        <a href="./dataset.jsonl" download id="download-link" class="download-btn">⬇ dataset.jsonl herunterladen</a>
+        <a href="#" id="about-link" class="download-btn about-btn">Über das Projekt</a>
+        <button type="button" id="theme-toggle" class="download-btn about-btn" title="Hell/Dunkel umschalten">☾ Dunkel</button>
+      </div>
     </div>
     <div class="search-box">
-      <input type="text" id="filter-input" placeholder="Titel, Volltext oder Modell suchen...">
-      <div style="display: flex; gap: 6px;">
-        <select id="style-select" style="flex: 1;"><option value="">Alle Stile</option></select>
-        <select id="article-select" style="flex: 1;"><option value="">Alle Artikel</option></select>
+      <div class="filter-row">
+        <input type="text" id="filter-input" placeholder="Titel, Volltext oder Modell suchen...">
+        <button type="button" id="random-btn" class="random-btn" title="Zufällige Geschichte aus der aktuellen Auswahl">🎲 Zufall</button>
       </div>
+      <div class="filter-row">
+        <select id="language-select" aria-label="Sprache"><option value="">Alle Sprachen</option></select>
+        <select id="article-select" aria-label="Artikel"><option value="">Alle Artikel</option></select>
+        <select id="style-select" aria-label="Stil"><option value="">Alle Stile</option></select>
+      </div>
+      <div id="result-count" class="result-count" aria-live="polite" data-hits="0" data-total="0">Lade Korpus...</div>
     </div>
     <div id="tales-list"></div>
   </aside>
@@ -261,6 +340,61 @@
   </main>
 
   <script>
+    // ---- UI-Texte an EINER Stelle -------------------------------------------------------
+    // Karte E (i18n) ersetzt spaeter genau dieses Objekt. Deshalb stehen saemtliche
+    // dynamisch erzeugten Beschriftungen hier und nicht verstreut im Code.
+    const UI = {
+      allLanguages: 'Alle Sprachen',
+      allArticles: 'Alle Artikel',
+      allStyles: 'Alle Stile',
+      noValue: 'ohne Angabe',
+      emptyList: 'Keine passenden Narrative gefunden.',
+      randomEmpty: 'Zufall: keine Auswahl — Filter zuerst lockern.',
+      themeTitle: 'Hell/Dunkel umschalten',
+      themeLightLabel: '☀︎ Hell',
+      themeDarkLabel: '☾ Dunkel',
+      countAll: (total) => `${total} Narrative`,
+      countFiltered: (hits, total) => `${hits} von ${total} Narrativen`
+    };
+    // Sentinels: '' = "alle"; NO_VALUE = Zeile ohne diesen Wert (Altbestand).
+    // Bewusst kein Kollisionsrisiko mit echten Korpus-Werten.
+    const NO_VALUE = '__ohne_angabe__';
+
+    // ---- Theme hell/dunkel --------------------------------------------------------------
+    // Startwert: gespeicherte Wahl, sonst Systemvorgabe (prefers-color-scheme).
+    const THEME_KEY = 'aa-theme';
+    function systemTheme() {
+      try {
+        return (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
+      } catch (e) { return 'dark'; }
+    }
+    function storedTheme() {
+      try {
+        const v = window.localStorage.getItem(THEME_KEY);
+        return (v === 'light' || v === 'dark') ? v : null;
+      } catch (e) { return null; }
+    }
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      const btn = document.getElementById('theme-toggle');
+      if (btn) {
+        // Beschriftung zeigt den AKTIVEN Zustand, der Titel beschreibt die Aktion.
+        btn.textContent = (theme === 'light') ? UI.themeLightLabel : UI.themeDarkLabel;
+        btn.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
+        btn.setAttribute('title', UI.themeTitle);
+      }
+    }
+    applyTheme(storedTheme() || systemTheme());
+    (function () {
+      const btn = document.getElementById('theme-toggle');
+      if (!btn) return;
+      btn.addEventListener('click', () => {
+        const next = (document.documentElement.getAttribute('data-theme') === 'light') ? 'dark' : 'light';
+        applyTheme(next);
+        try { window.localStorage.setItem(THEME_KEY, next); } catch (e) { /* z. B. Privatmodus */ }
+      });
+    })();
+
     // Korpus-Daten sind NICHT vertrauenswuerdig (maschinell erzeugte Tales).
     // Jeder Wert, der in ein innerHTML-Template oder in ein Attribut geht, laeuft durch esc().
     const HTML_ESCAPES = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
@@ -277,6 +411,9 @@
     // Startansicht ist der Ueber-Block ("Was ist das? / Warum / Harm Reduction").
     // Er wird VOR dem ersten Rendern gesichert, damit der Link "Ueber das Projekt" ihn zurueckholen kann.
     const ABOUT_HTML = document.getElementById('reader-view').innerHTML;
+
+    // Aktuell gefilterte Menge — Quelle fuer Liste UND Zufalls-Button.
+    let filteredTales = [];
 
     async function resolveDataset() {
       for (const cand of DATASET_CANDIDATES) {
@@ -297,15 +434,22 @@
         const dl = document.getElementById('download-link');
         if (dl) { dl.href = DATASET_URL; dl.setAttribute('download', 'algorithmic-activism-dataset.jsonl'); }
         const lines = text.trim().split("\n");
+        // Altbestand OHNE meta-Block wird NICHT mehr verworfen: die Zeile bekommt einen leeren
+        // Container plus die Markierung metaMissing und bleibt damit unter "ohne Angabe" filterbar.
+        // Dabei wird kein einziger Metadaten-Wert erfunden.
         tales = lines.map(line => {
           try { return JSON.parse(line); } catch (e) { return null; }
-        }).filter(r => r && r.meta);
+        }).filter(r => r && typeof r === 'object' && typeof r.output === 'string')
+          .map(r => {
+            if (!r.meta || typeof r.meta !== 'object') { r.meta = {}; r.metaMissing = true; }
+            else { r.metaMissing = false; }
+            return r;
+          });
 
         const kbSize = Math.round(new Blob([text]).size / 1024);
         document.getElementById('stats-summary').textContent = `${tales.length} Narrative (${kbSize} KB)`;
         populateFilters();
-        renderList(tales);
-        fillAboutStats();
+        applyFilters();
 
         // Deep Link Check via Hash — ohne Hash bleibt der Ueber-Block stehen.
         const hash = decodeURIComponent(window.location.hash.replace('#', ''));
@@ -325,9 +469,9 @@
       let provNone = 0;
       tales.forEach(t => {
         const meta = t.meta || {};
-        const l = meta.language || 'ohne Angabe';
+        const l = meta.language || UI.noValue;
         langs[l] = (langs[l] || 0) + 1;
-        if (meta.provenance === 'none') provNone++;
+        if (meta.provenance === 'none' || t.metaMissing) provNone++;
       });
       const styles = new Set(tales.map(t => (t.meta || {}).style).filter(Boolean));
       const articles = new Set(tales.map(t => (t.meta || {}).article).filter(Boolean));
@@ -344,43 +488,76 @@
       document.querySelectorAll('.tale-item').forEach(el => el.classList.remove('active'));
     }
 
-    // Filter-Optionen ohne innerHTML aufbauen: value und Label sind Korpus-Daten.
-    function fillSelect(select, values) {
-      values.forEach(v => {
+    // Ein Feldwert als Filter-Kategorie: fehlend/leer wird zu NO_VALUE ("ohne Angabe"),
+    // niemals zu einem geratenen Ersatzwert.
+    function fieldOf(t, key) {
+      const v = (t.meta || {})[key];
+      return (v === undefined || v === null || v === '') ? NO_VALUE : String(v);
+    }
+
+    // Optionen werden ZUR LAUFZEIT aus den geladenen Daten gebaut (keine hartkodierte Liste):
+    // nach dem naechsten Export zeigt der Filter genau die Werte, die es wirklich gibt.
+    // Aufbau per createElement/textContent — Korpus-Werte landen nie im HTML-Parser.
+    function buildSelect(select, values, allLabel) {
+      if (!select) return;
+      select.textContent = '';
+      const all = document.createElement('option');
+      all.value = '';
+      all.textContent = allLabel;
+      select.appendChild(all);
+
+      const real = [...new Set(values.filter(v => v !== NO_VALUE))].sort((a, b) => a.localeCompare(b, 'de'));
+      real.forEach(v => {
         const opt = document.createElement('option');
-        opt.value = String(v);
-        opt.textContent = String(v);
+        opt.value = v;
+        opt.textContent = v;
         select.appendChild(opt);
       });
+
+      const missing = values.filter(v => v === NO_VALUE).length;
+      if (missing > 0) {
+        const opt = document.createElement('option');
+        opt.value = NO_VALUE;
+        opt.textContent = `${UI.noValue} (${missing})`;
+        select.appendChild(opt);
+      }
     }
 
     function populateFilters() {
-      const styles = [...new Set(tales.map(t => t.meta.style).filter(Boolean))].sort();
-      const articles = [...new Set(tales.map(t => t.meta.article).filter(Boolean))].sort();
-
-      fillSelect(document.getElementById('style-select'), styles);
-      fillSelect(document.getElementById('article-select'), articles);
+      buildSelect(document.getElementById('language-select'), tales.map(t => fieldOf(t, 'language')), UI.allLanguages);
+      buildSelect(document.getElementById('article-select'), tales.map(t => fieldOf(t, 'article')), UI.allArticles);
+      buildSelect(document.getElementById('style-select'), tales.map(t => fieldOf(t, 'style')), UI.allStyles);
     }
 
     function renderList(list) {
       const container = document.getElementById('tales-list');
       container.innerHTML = '';
       if (list.length === 0) {
-        container.innerHTML = '<div style="color:var(--muted); padding:16px; text-align:center; font-size:0.85rem;">Keine passenden Narrative gefunden.</div>';
+        const empty = document.createElement('div');
+        empty.className = 'list-empty';
+        empty.textContent = UI.emptyList;
+        container.appendChild(empty);
         return;
       }
 
       list.forEach((t) => {
         const item = document.createElement('div');
-        const title = t.meta.title || t.output.split('\n')[0].replace('# ', '');
+        const meta = t.meta || {};
+        const firstLine = String(t.output || '').split('\n')[0].replace(/^#\s*/, '');
+        const title = meta.title || firstLine || '(ohne Titel)';
         item.className = 'tale-item';
+        // data-*-Werte werden als Properties gesetzt (kein HTML-Parsing) — Grundlage der
+        // Zufalls- und Filterpruefungen im Testharness.
         item.dataset.title = title.replace(/\s+/g, '_');
+        item.dataset.style = fieldOf(t, 'style');
+        item.dataset.article = fieldOf(t, 'article');
+        item.dataset.language = fieldOf(t, 'language');
         item.innerHTML = `
           <div class="tale-title">${esc(title)}</div>
           <div class="tale-meta">
-            <span class="tag">${esc(t.meta.article || 'UDHR')}</span>
-            <span class="tag">${esc(t.meta.style || 'Narrative')}</span>
-            <span class="tag">${esc(t.meta.language || 'DE')}</span>
+            <span class="tag">${esc(meta.article || UI.noValue)}</span>
+            <span class="tag">${esc(meta.style || UI.noValue)}</span>
+            <span class="tag">${esc(meta.language || UI.noValue)}</span>
           </div>
         `;
         item.onclick = () => {
@@ -392,11 +569,43 @@
       });
     }
 
+    function updateCount() {
+      const el = document.getElementById('result-count');
+      if (!el) return;
+      const hits = filteredTales.length;
+      const total = tales.length;
+      el.textContent = (hits === total) ? UI.countAll(total) : UI.countFiltered(hits, total);
+      el.dataset.hits = String(hits);
+      el.dataset.total = String(total);
+      el.classList.toggle('empty', hits === 0);
+    }
+
+    function applyFilters() {
+      const q = document.getElementById('filter-input').value.trim().toLowerCase();
+      const lang = document.getElementById('language-select').value;
+      const art = document.getElementById('article-select').value;
+      const style = document.getElementById('style-select').value;
+
+      filteredTales = tales.filter(t => {
+        const meta = t.meta || {};
+        const haystack = (String(t.output || '') + '\n' + String(meta.title || '') + '\n' + String(meta.model || '')).toLowerCase();
+        const matchQ = !q || haystack.includes(q);
+        // Kombinierbar: jeder gesetzte Filter muss passen.
+        return matchQ
+          && (!lang || fieldOf(t, 'language') === lang)
+          && (!art || fieldOf(t, 'article') === art)
+          && (!style || fieldOf(t, 'style') === style);
+      });
+      renderList(filteredTales);
+      updateCount();
+    }
+
     function selectTale(index) {
       const t = tales[index];
       if (!t) return;
 
-      const title = t.meta.title || t.output.split('\n')[0].replace('# ', '');
+      const meta = t.meta || {};
+      const title = meta.title || String(t.output || '').split('\n')[0].replace(/^#\s*/, '');
       window.location.hash = encodeURIComponent(title.replace(/\s+/g, '_'));
 
       // Highlight in List
@@ -405,7 +614,7 @@
       });
 
       const htmlContent = marked.parse(t.output);
-      const audit = auditInfo(t.meta);
+      const audit = auditInfo(meta);
 
       document.getElementById('reader-view').innerHTML = `
         <div class="provenance">
@@ -414,11 +623,11 @@
             <span style="color: ${esc(audit.color)}; font-weight:600;">${esc(audit.label)}</span>
           </div>
           <div class="provenance-grid">
-            <div class="pro-item"><span>UN-Artikel</span><b>${esc(t.meta.article || 'N/A')}</b></div>
-            <div class="pro-item"><span>Stil</span><b>${esc(t.meta.style || 'N/A')}</b></div>
-            <div class="pro-item"><span>Inferenz-Modell</span><b>${esc(t.meta.model || 'N/A')}</b></div>
-            <div class="pro-item"><span>Umfang</span><b>${esc(t.meta.approx_words ? '~' + t.meta.approx_words + ' Wörter' : 'N/A')}</b></div>
-            <div class="pro-item"><span>Herkunft</span><b>${esc(t.meta.provenance === 'none' ? 'Altbestand (kein YAML-Kopf)' : 'YAML-Frontmatter')}</b></div>
+            <div class="pro-item"><span>UN-Artikel</span><b>${esc(meta.article || 'N/A')}</b></div>
+            <div class="pro-item"><span>Stil</span><b>${esc(meta.style || 'N/A')}</b></div>
+            <div class="pro-item"><span>Inferenz-Modell</span><b>${esc(meta.model || 'N/A')}</b></div>
+            <div class="pro-item"><span>Umfang</span><b>${esc(meta.approx_words ? '~' + meta.approx_words + ' Wörter' : 'N/A')}</b></div>
+            <div class="pro-item"><span>Herkunft</span><b>${esc(provenanceLabel(t))}</b></div>
           </div>
         </div>
         <!-- Markup-Pfad: htmlContent ist das bewusst als HTML gerenderte Markdown des Tales
@@ -428,6 +637,32 @@
 
       const main = document.getElementById('main-content');
       if (main) main.scrollTop = 0;
+    }
+
+    // Herkunft nur behaupten, wenn sie belegt ist: YAML-Frontmatter, als Altbestand markiert
+    // (provenance: "none") oder gar kein meta-Block in der Zeile.
+    function provenanceLabel(t) {
+      const meta = t.meta || {};
+      if (t.metaMissing) return 'Altbestand (kein meta-Block)';
+      if (meta.provenance === 'none') return 'Altbestand (kein YAML-Kopf)';
+      if (meta.provenance === 'yaml-frontmatter' || meta.model || meta.created_at) return 'YAML-Frontmatter';
+      return 'Herkunft unklar';
+    }
+
+    // Zufall: zieht ausschliesslich aus der AKTUELL GEFILTERTEN Menge.
+    function randomTale() {
+      const countEl = document.getElementById('result-count');
+      if (filteredTales.length === 0) {
+        if (countEl) { countEl.textContent = UI.randomEmpty; countEl.classList.add('empty'); }
+        return;
+      }
+      const pos = Math.floor(Math.random() * filteredTales.length);
+      const pick = filteredTales[pos];
+      selectTale(tales.indexOf(pick));
+      const items = document.querySelectorAll('.tale-item');
+      items.forEach(el => el.classList.remove('active'));
+      if (items[pos]) items[pos].classList.add('active');
+      updateCount();
     }
 
     // Audit NUR behaupten, wenn er belegt ist. Drei Zustaende: validiert / Quarantaene / kein Audit vorliegend.
@@ -443,23 +678,11 @@
       return { label: '\u2013 nicht auditiert (Altbestand)', color: 'var(--muted)' };
     }
 
-    function filterData() {
-      const q = document.getElementById('filter-input').value.toLowerCase();
-      const style = document.getElementById('style-select').value;
-      const art = document.getElementById('article-select').value;
-
-      const filtered = tales.filter(t => {
-        const matchQ = !q || (t.output.toLowerCase().includes(q) || (t.meta.title && t.meta.title.toLowerCase().includes(q)));
-        const matchStyle = !style || t.meta.style === style;
-        const matchArt = !art || t.meta.article === art;
-        return matchQ && matchStyle && matchArt;
-      });
-      renderList(filtered);
-    }
-
-    document.getElementById('filter-input').addEventListener('input', filterData);
-    document.getElementById('style-select').addEventListener('change', filterData);
-    document.getElementById('article-select').addEventListener('change', filterData);
+    document.getElementById('filter-input').addEventListener('input', applyFilters);
+    document.getElementById('language-select').addEventListener('change', applyFilters);
+    document.getElementById('article-select').addEventListener('change', applyFilters);
+    document.getElementById('style-select').addEventListener('change', applyFilters);
+    document.getElementById('random-btn').addEventListener('click', randomTale);
     document.getElementById('about-link').addEventListener('click', (e) => { e.preventDefault(); showAbout(); });
 
     window.onload = loadDataset;
