@@ -67,7 +67,8 @@
     "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_017_des_volkes_mund",
     "r6:apodex/apodex-1.1-mini:free:buch_018_rhymes_of_the_commons",
     "r7:deepseek-chat:buch_015_das_kochbuch_der_allmende",
-    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_016_faden_der_gelassenheit"
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_016_faden_der_gelassenheit",
+    "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_017_des_volkes_mund"
   ],
   "runden": {
     "1": [
@@ -964,6 +965,21 @@
         "tokens": "1098",
         "versuche": "1",
         "woerter": 243
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_017_des_volkes_mund",
+        "code": "V-07-07",
+        "datei": "07_art_07_abschnitt_7_das_gleichgewicht_der_worte.md",
+        "dauer_s": "31.9",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 7,
+        "tokens": "3394",
+        "versuche": "1",
+        "woerter": 349
       }
     ],
     "8": [
