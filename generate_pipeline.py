@@ -496,9 +496,19 @@ EMOTIONS_VERBEN = ("flüsterte", "lächelte", "sagte", "nickte", "seufzte", "bli
 # Strukturelle Marker: gelten NUR am Zeilenanfang (nach Aufzaehlung/Fettung). Substring-Treffer
 # im Fliesstext zaehlen nicht mehr — "Diagnosetabelle" hat die Schranke sonst passiert (belegt
 # 2026-10-12: Kapitel 3 und 4 endeten wortgleich, sha256[:8]=49259407).
-ABSCHLUSS_MARKER = ("diagnose", "wartung", "intervall", "prüfung", "prüfprotokoll",
-                    "protokoll", "abschnitt", "fehlercode")   # "anweisung"/"hinweis" flogen raus:
-# sie kommen in normaler Prosa am Zeilenanfang vor (Skill mechanische-endschranken, Pitfalls).
+# Marker MUESSEN formal sein: Doppelpunkt (bzw. Ziffer bei Abschnitt/Fehlercode). Ohne diese Schaerfe
+# rutschte Prosa durch ("Wartung war heute nicht noetig" galt als Abschluss — belegt 2026-10-12).
+# Muster in normalisierter Schreibweise (Umlaut-Mapping aus _normalisiere), Treffer auf Kleinschrift.
+ABSCHLUSS_MARKER = (
+    ("diagnose", r"^diagnose\s*:"),
+    ("wartung", r"^wartung\s*:"),
+    ("intervall", r"^intervall\s*:"),
+    ("pruefung", r"^pruefung\s*:"),
+    ("pruefprotokoll", r"^pruefprotokoll\s*:"),
+    ("protokoll", r"^protokoll\s*:"),
+    ("abschnitt", r"^abschnitt\s+\d+"),
+    ("fehlercode", r"^fehlercode\s+e-?\d+"),
+)
 SICHERHEITS_BLOECKE = ("[gefahr]", "[warnung]", "[hinweis]", "[status")
 _MARKDOWN_PRAEFIX_RE = re.compile(r"^\s*(?:[-*+>]\s+|\d+[.)]\s+|\*\*)+")
 SCHWELLE_WIEDERHOLUNG = 0.4
@@ -634,13 +644,10 @@ def pflichtblock_muster(erwarteter_block: str):
 
 
 def zeilen_marker(zeile: str) -> list:
-    """Akzeptierte Marker EINER Zeile — nur am Zeilenanfang, nie als Teilwort."""
-    rumpf = _normalisiere(_MARKDOWN_PRAEFIX_RE.sub("", zeile).strip().lower())
-    treffer = [t for t in ABSCHLUSS_MARKER if rumpf.startswith(_normalisiere(t))]
-    treffer += [b for b in SICHERHEITS_BLOECKE if rumpf.startswith(b)]
-    if "fehlercode" in treffer and not re.match(r"^fehlercode\s+e-?\d+", rumpf):
-        treffer.remove("fehlercode")            # Fehlercode zaehlt nur MIT Nummer
-    return treffer
+    """Akzeptierte Marker EINER Zeile — formal (Doppelpunkt/Ziffer), nie als Teilwort."""
+    rumpf = _normalisiere(_MARKDOWN_PRAEFIX_RE.sub("", zeile).strip().strip("*_#")).lower()
+    return ([name for name, muster in ABSCHLUSS_MARKER if re.match(muster, rumpf)]
+            + [b for b in SICHERHEITS_BLOECKE if rumpf.startswith(b)])
 
 
 def status_block(book_id: str, artikel: str, index: int) -> str:
