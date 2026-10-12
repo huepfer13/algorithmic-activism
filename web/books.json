@@ -1758,14 +1758,15 @@
       "pov": "third_person",
       "setting_summary": "Etymologische Miniaturen zu gefluegelten Worten.",
       "characters": [],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_02",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 1216,
-      "reading_minutes": 6,
+      "words": 1586,
+      "reading_minutes": 8,
       "cover": null,
       "chapters": [
         {
@@ -1838,6 +1839,24 @@
           "genre": "Sprichwoerter",
           "leak_free": "true",
           "words": 339,
+          "reading_minutes": 2
+        },
+        {
+          "file": "04_art_04_abschnitt_4_der_tropfen_im_takt.md",
+          "index": 4,
+          "title": "Abschnitt 4: Der Tropfen im Takt",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "23.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "2343",
+          "manual_ending_code": "V-04-04",
+          "backend": "openrouter",
+          "genre": "Sprichwoerter",
+          "leak_free": "true",
+          "words": 370,
           "reading_minutes": 2
         }
       ]
