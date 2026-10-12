@@ -112,6 +112,7 @@
     .about-btn { background: #374151; }
     .about-btn:hover { background: #4b5563; }
     button.download-btn { border: none; font-family: inherit; cursor: pointer; }
+    .lang-select { font-size: 0.75rem; padding: 5px 8px; max-width: 150px; }
 
     /* Filter */
     .search-box {
@@ -281,23 +282,25 @@
 <body>
   <aside id="sidebar">
     <div class="header">
-      <h1>Algorithmic Activism</h1>
+      <h1 data-i18n="hero_title">Algorithmic Activism</h1>
+      <p class="header-desc" id="header-tagline" data-i18n="hero_subtitle">Synthetischer Menschenrechte-Korpus</p>
       <p class="header-desc" id="stats-summary">Lade Korpus...</p>
       <div class="header-actions">
-        <a href="./dataset.jsonl" download id="download-link" class="download-btn">⬇ dataset.jsonl herunterladen</a>
-        <a href="#" id="about-link" class="download-btn about-btn">Über das Projekt</a>
-        <button type="button" id="theme-toggle" class="download-btn about-btn" title="Hell/Dunkel umschalten">☾ Dunkel</button>
+        <a href="./dataset.jsonl" download id="download-link" class="download-btn" data-i18n="download_button">⬇ dataset.jsonl herunterladen</a>
+        <a href="#" id="about-link" class="download-btn about-btn" data-i18n="about_button">Über das Projekt</a>
+        <button type="button" id="theme-toggle" class="download-btn about-btn" data-i18n-title="theme_title" title="Hell/Dunkel umschalten">☾ Dunkel</button>
+        <select id="ui-lang-select" class="lang-select" data-i18n-aria="lang_selector_label" aria-label="Oberflächensprache" hidden></select>
       </div>
     </div>
     <div class="search-box">
       <div class="filter-row">
-        <input type="text" id="filter-input" placeholder="Titel, Volltext oder Modell suchen...">
-        <button type="button" id="random-btn" class="random-btn" title="Zufällige Geschichte aus der aktuellen Auswahl">🎲 Zufall</button>
+        <input type="text" id="filter-input" data-i18n-ph="filter_placeholder" placeholder="Titel, Volltext oder Modell suchen...">
+        <button type="button" id="random-btn" class="random-btn" data-i18n="random_tale" data-i18n-title="random_tale_title" title="Zufällige Geschichte aus der aktuellen Auswahl">🎲 Zufall</button>
       </div>
       <div class="filter-row">
-        <select id="language-select" aria-label="Sprache"><option value="">Alle Sprachen</option></select>
-        <select id="article-select" aria-label="Artikel"><option value="">Alle Artikel</option></select>
-        <select id="style-select" aria-label="Stil"><option value="">Alle Stile</option></select>
+        <select id="language-select" data-i18n-aria="label_language" aria-label="Sprache"><option value="">Alle Sprachen</option></select>
+        <select id="article-select" data-i18n-aria="label_article" aria-label="Artikel"><option value="">Alle Artikel</option></select>
+        <select id="style-select" data-i18n-aria="label_style" aria-label="Stil"><option value="">Alle Stile</option></select>
       </div>
       <div id="result-count" class="result-count" aria-live="polite" data-hits="0" data-total="0">Lade Korpus...</div>
     </div>
@@ -340,22 +343,213 @@
   </main>
 
   <script>
-    // ---- UI-Texte an EINER Stelle -------------------------------------------------------
-    // Karte E (i18n) ersetzt spaeter genau dieses Objekt. Deshalb stehen saemtliche
-    // dynamisch erzeugten Beschriftungen hier und nicht verstreut im Code.
-    const UI = {
+    // ---- UI-Sprache (i18n) -------------------------------------------------------------
+    // Woerterbuch: web/ui-locales.json (Oberflaechen-Texte). NICHT locales/<lang>.json —
+    // das sind die DATEN-Locales der Pipeline und bleiben unangetastet.
+    // Aufloesung je Schluessel: gewaehlte Sprache -> 'en' -> deutsches Literal.
+    // Ein leerer String ist nie ein Ergebnis (nie leere Beschriftung, nie erfundener Text).
+    const I18N_KEY = 'aa-lang';
+    const I18N_FILE = './ui-locales.json';
+    let LOCALES = null;          // null = Woerterbuch nicht ladbar (file://, offline) -> deutsche Literale
+    let LANG = 'de';             // aktive Oberflaechensprache
+    let UI = {};                 // aufgeloeste Texte der aktuellen Sprache (Andockstelle aus Karte D3)
+    let datasetLoaded = false;
+    let datasetKb = 0;
+    let currentTaleIndex = -1;   // -1 = Ueber-Block sichtbar
+
+    // Deutsche Literale = letzte Rueckfallebene (Wortlaut wie vor Karte E).
+    // Gilt nur, wenn ein Schluessel WEDER in der gewaehlten Sprache NOCH in 'en' steht.
+    const UI_DEFAULTS = {
+      heroTitle: 'Algorithmic Activism',
+      heroSubtitle: 'Synthetischer Menschenrechte-Korpus',
+      docTitle: 'Algorithmic Activism \u2014 Synthetischer Menschenrechte-Korpus',
       allLanguages: 'Alle Sprachen',
       allArticles: 'Alle Artikel',
       allStyles: 'Alle Stile',
+      allGeneric: 'Alle',
       noValue: 'ohne Angabe',
+      noTitle: '(ohne Titel)',
       emptyList: 'Keine passenden Narrative gefunden.',
-      randomEmpty: 'Zufall: keine Auswahl — Filter zuerst lockern.',
+      randomEmpty: 'Zufall: keine Auswahl \u2014 Filter zuerst lockern.',
+      loading: 'Lade Korpus...',
+      loadError: 'Fehler beim Laden des Datensatzes',
       themeTitle: 'Hell/Dunkel umschalten',
-      themeLightLabel: '☀︎ Hell',
-      themeDarkLabel: '☾ Dunkel',
-      countAll: (total) => `${total} Narrative`,
-      countFiltered: (hits, total) => `${hits} von ${total} Narrativen`
+      themeLightLabel: '\u2600\ufe0e Hell',
+      themeDarkLabel: '\u263e Dunkel',
+      provenanceHeader: 'Provenienz & Audit',
+      proArticle: 'UN-Artikel',
+      proStyle: 'Stil',
+      proModel: 'Inferenz-Modell',
+      proWords: 'Umfang',
+      proOrigin: 'Herkunft',
+      provMissingMeta: 'Altbestand (kein meta-Block)',
+      provNoYaml: 'Altbestand (kein YAML-Kopf)',
+      provYaml: 'YAML-Frontmatter',
+      provUnknown: 'Herkunft unklar',
+      auditOk: '\u2713 Harm Reduction validiert',
+      auditQuarantine: '\u26a0 Quarantaene',
+      auditNone: '\u2013 nicht auditiert (Altbestand)',
+      countAllTpl: '{total} Narrative',
+      countFilteredTpl: '{hits} von {total} Narrativen',
+      statsSummaryTpl: '{total} Narrative ({kb} KB)',
+      wordsApproxTpl: '~{n} W\u00f6rter'
     };
+
+    // tOr() liefert null, wenn der Schluessel weder in der gewaehlten Sprache noch in 'en' steht.
+    function tOr(key) {
+      if (!LOCALES || !LOCALES.strings) return null;
+      const cur = LOCALES.strings[LANG];
+      if (cur && typeof cur[key] === 'string' && cur[key] !== '') return cur[key];
+      const en = LOCALES.strings['en'];
+      if (en && typeof en[key] === 'string' && en[key] !== '') return en[key];
+      return null;
+    }
+    function t(key, fallback) {
+      const v = tOr(key);
+      if (v !== null) return v;
+      return (typeof fallback === 'string') ? fallback : '';
+    }
+    // Sammel-Optionen: spezifischer Schluessel (gewaehlte Sprache -> en) -> generisches filter_all -> deutsches Literal.
+    function allLabel(specificKey, germanLiteral) {
+      return t(specificKey, t('filter_all', germanLiteral || UI_DEFAULTS.allGeneric));
+    }
+    function fmt(tpl, vars) {
+      return String(tpl).replace(/\{(\w+)\}/g, (m, k) => (Object.prototype.hasOwnProperty.call(vars, k) ? String(vars[k]) : m));
+    }
+    function buildUI() {
+      UI = {
+        heroTitle: t('hero_title', UI_DEFAULTS.heroTitle),
+        heroSubtitle: t('hero_subtitle', UI_DEFAULTS.heroSubtitle),
+        docTitle: t('doc_title', UI_DEFAULTS.docTitle),
+        allLanguages: allLabel('filter_all_language', UI_DEFAULTS.allLanguages),
+        allArticles: allLabel('filter_all_article', UI_DEFAULTS.allArticles),
+        allStyles: allLabel('filter_all_style', UI_DEFAULTS.allStyles),
+        noValue: t('no_value', UI_DEFAULTS.noValue),
+        noTitle: t('no_title', UI_DEFAULTS.noTitle),
+        emptyList: t('empty_list', UI_DEFAULTS.emptyList),
+        randomEmpty: t('random_empty', UI_DEFAULTS.randomEmpty),
+        loading: t('loading', UI_DEFAULTS.loading),
+        loadError: t('load_error', UI_DEFAULTS.loadError),
+        themeTitle: t('theme_title', UI_DEFAULTS.themeTitle),
+        themeLightLabel: t('theme_light_label', UI_DEFAULTS.themeLightLabel),
+        themeDarkLabel: t('theme_dark_label', UI_DEFAULTS.themeDarkLabel),
+        provenanceHeader: t('provenance_header', UI_DEFAULTS.provenanceHeader),
+        proArticle: t('pro_article', UI_DEFAULTS.proArticle),
+        proStyle: t('pro_style', UI_DEFAULTS.proStyle),
+        proModel: t('pro_model', UI_DEFAULTS.proModel),
+        proWords: t('pro_words', UI_DEFAULTS.proWords),
+        proOrigin: t('pro_origin', UI_DEFAULTS.proOrigin),
+        provMissingMeta: t('prov_missing_meta', UI_DEFAULTS.provMissingMeta),
+        provNoYaml: t('prov_no_yaml', UI_DEFAULTS.provNoYaml),
+        provYaml: t('prov_yaml', UI_DEFAULTS.provYaml),
+        provUnknown: t('prov_unknown', UI_DEFAULTS.provUnknown),
+        auditOk: t('audit_ok', UI_DEFAULTS.auditOk),
+        auditQuarantine: t('audit_quarantine', UI_DEFAULTS.auditQuarantine),
+        auditNone: t('audit_none', UI_DEFAULTS.auditNone),
+        countAll: (total) => fmt(t('count_all', UI_DEFAULTS.countAllTpl), { total }),
+        countFiltered: (hits, total) => fmt(t('count_filtered', UI_DEFAULTS.countFilteredTpl), { hits, total }),
+        statsSummary: (total, kb) => fmt(t('stats_summary', UI_DEFAULTS.statsSummaryTpl), { total, kb }),
+        wordsApprox: (n) => fmt(t('words_approx', UI_DEFAULTS.wordsApproxTpl), { n })
+      };
+    }
+    buildUI();   // ab dem ersten Statement gelten deutsche Literale; das Woerterbuch ersetzt sie nach dem Laden.
+
+    // Statische Beschriftungen aus dem Markup tragen data-i18n / data-i18n-ph / -title / -aria.
+    // Der deutsche Originaltext des Knotens wird EINMAL als letzte Rueckfallebene gesichert.
+    const I18N_ATTRS = [['data-i18n-ph', 'placeholder'], ['data-i18n-title', 'title'], ['data-i18n-aria', 'aria-label']];
+    function applyMarkupStrings() {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        if (!el.hasAttribute('data-i18n-de')) el.setAttribute('data-i18n-de', el.textContent || '');
+        const v = t(el.getAttribute('data-i18n'), el.getAttribute('data-i18n-de'));
+        if (v) el.textContent = v;   // nie leeren Text schreiben
+      });
+      I18N_ATTRS.forEach(pair => {
+        document.querySelectorAll('[' + pair[0] + ']').forEach(el => {
+          const store = pair[0] + '-de';
+          if (!el.hasAttribute(store)) el.setAttribute(store, el.getAttribute(pair[1]) || '');
+          const v = t(el.getAttribute(pair[0]), el.getAttribute(store));
+          if (v) el.setAttribute(pair[1], v);
+        });
+      });
+    }
+    const browserLang = (navigator.language || navigator.userLanguage || '').toString();
+    function availableLangs() {
+      if (LOCALES && Array.isArray(LOCALES.languages) && LOCALES.languages.length) {
+        return LOCALES.languages.map(l => l && l.code).filter(Boolean);
+      }
+      return ['de'];
+    }
+    // Startsprache: gespeicherte Wahl -> navigator.language ohne Region (de-AT -> de) -> 'en' -> erste Sprache.
+    function detectLang() {
+      const avail = availableLangs();
+      let stored = null;
+      try { stored = window.localStorage.getItem(I18N_KEY); } catch (e) { stored = null; }
+      if (stored && avail.indexOf(stored) !== -1) return stored;
+      const base = browserLang.toLowerCase().split('-')[0];
+      if (base && avail.indexOf(base) !== -1) return base;
+      return (avail.indexOf('en') !== -1) ? 'en' : avail[0];
+    }
+    function fillLangSelect() {
+      const sel = document.getElementById('ui-lang-select');
+      if (!sel) return;
+      if (!LOCALES) { sel.hidden = true; return; }   // ohne Woerterbuch bleibt nur die deutsche Oberflaeche
+      sel.textContent = '';
+      LOCALES.languages.forEach(l => {
+        const opt = document.createElement('option');
+        opt.value = l.code;
+        opt.textContent = l.native || l.code;        // Sprachnamen immer nativ
+        sel.appendChild(opt);
+      });
+      sel.value = LANG;
+      sel.hidden = false;
+    }
+    function applyLanguage(code) {
+      LANG = code;
+      // lang mitziehen: Screenreader, Silbentrennung; dir fuer RTL (ar).
+      document.documentElement.setAttribute('lang', code);
+      document.documentElement.setAttribute('dir', (code === 'ar') ? 'rtl' : 'ltr');
+      document.title = t('doc_title', UI_DEFAULTS.docTitle);
+      buildUI();
+      applyMarkupStrings();
+      applyTheme(document.documentElement.getAttribute('data-theme') || 'dark');
+      const sel = document.getElementById('ui-lang-select');
+      if (sel && !sel.hidden) sel.value = code;
+      refreshView();
+    }
+    // Nach einem Sprachwechsel wird NUR neu beschriftet - Filterzustand, Deep-Link und Auswahl bleiben.
+    function refreshView() {
+      const st = document.getElementById('stats-summary');
+      if (st) st.textContent = datasetLoaded ? UI.statsSummary(tales.length, datasetKb) : UI.loading;
+      if (!datasetLoaded) return;
+      renderList(filteredTales);
+      updateCount();
+      if (currentTaleIndex >= 0 && tales[currentTaleIndex]) selectTale(currentTaleIndex);
+      else fillAboutStats();
+    }
+    async function loadLocales() {
+      try {
+        const res = await fetch(I18N_FILE, { cache: 'no-store' });
+        if (!res || !res.ok) throw new Error('HTTP ' + (res ? res.status : 'n/a'));
+        const data = JSON.parse(await res.text());
+        if (!data || typeof data !== 'object' || !data.strings || !data.strings.de) throw new Error('Woerterbuch unbrauchbar');
+        LOCALES = data;
+        return true;
+      } catch (e) {
+        LOCALES = null;
+        console.warn('i18n: ' + I18N_FILE + ' nicht ladbar (' + (e && e.message) + ') - deutsche Literale bleiben aktiv');
+        return false;
+      }
+    }
+    function initLanguage() {
+      fillLangSelect();
+      applyLanguage(detectLang());
+      const sel = document.getElementById('ui-lang-select');
+      if (sel) sel.addEventListener('change', () => {
+        applyLanguage(sel.value);
+        try { window.localStorage.setItem(I18N_KEY, sel.value); } catch (e) { /* z. B. Privatmodus */ }
+      });
+    }
+
     // Sentinels: '' = "alle"; NO_VALUE = Zeile ohne diesen Wert (Altbestand).
     // Bewusst kein Kollisionsrisiko mit echten Korpus-Werten.
     const NO_VALUE = '__ohne_angabe__';
@@ -447,7 +641,9 @@
           });
 
         const kbSize = Math.round(new Blob([text]).size / 1024);
-        document.getElementById('stats-summary').textContent = `${tales.length} Narrative (${kbSize} KB)`;
+        datasetKb = kbSize;
+        datasetLoaded = true;
+        document.getElementById('stats-summary').textContent = UI.statsSummary(tales.length, kbSize);
         populateFilters();
         applyFilters();
 
@@ -456,7 +652,7 @@
         const foundIdx = hash ? tales.findIndex(t => (t.meta.title || '').replace(/\s+/g, '_') === hash) : -1;
         if (foundIdx !== -1) selectTale(foundIdx); else showAbout();
       } catch (e) {
-        document.getElementById('stats-summary').textContent = "Fehler beim Laden des Datensatzes";
+        document.getElementById('stats-summary').textContent = UI.loadError;
         console.error(e);
       }
     }
@@ -483,6 +679,7 @@
     }
 
     function showAbout() {
+      currentTaleIndex = -1;
       document.getElementById('reader-view').innerHTML = ABOUT_HTML;
       fillAboutStats();
       document.querySelectorAll('.tale-item').forEach(el => el.classList.remove('active'));
@@ -544,7 +741,7 @@
         const item = document.createElement('div');
         const meta = t.meta || {};
         const firstLine = String(t.output || '').split('\n')[0].replace(/^#\s*/, '');
-        const title = meta.title || firstLine || '(ohne Titel)';
+        const title = meta.title || firstLine || UI.noTitle;
         item.className = 'tale-item';
         // data-*-Werte werden als Properties gesetzt (kein HTML-Parsing) — Grundlage der
         // Zufalls- und Filterpruefungen im Testharness.
@@ -603,6 +800,7 @@
     function selectTale(index) {
       const t = tales[index];
       if (!t) return;
+      currentTaleIndex = index;
 
       const meta = t.meta || {};
       const title = meta.title || String(t.output || '').split('\n')[0].replace(/^#\s*/, '');
@@ -619,15 +817,15 @@
       document.getElementById('reader-view').innerHTML = `
         <div class="provenance">
           <div class="provenance-header">
-            <strong>Provenienz & Audit</strong>
+            <strong>${esc(UI.provenanceHeader)}</strong>
             <span style="color: ${esc(audit.color)}; font-weight:600;">${esc(audit.label)}</span>
           </div>
           <div class="provenance-grid">
-            <div class="pro-item"><span>UN-Artikel</span><b>${esc(meta.article || 'N/A')}</b></div>
-            <div class="pro-item"><span>Stil</span><b>${esc(meta.style || 'N/A')}</b></div>
-            <div class="pro-item"><span>Inferenz-Modell</span><b>${esc(meta.model || 'N/A')}</b></div>
-            <div class="pro-item"><span>Umfang</span><b>${esc(meta.approx_words ? '~' + meta.approx_words + ' Wörter' : 'N/A')}</b></div>
-            <div class="pro-item"><span>Herkunft</span><b>${esc(provenanceLabel(t))}</b></div>
+            <div class="pro-item"><span>${esc(UI.proArticle)}</span><b>${esc(meta.article || 'N/A')}</b></div>
+            <div class="pro-item"><span>${esc(UI.proStyle)}</span><b>${esc(meta.style || 'N/A')}</b></div>
+            <div class="pro-item"><span>${esc(UI.proModel)}</span><b>${esc(meta.model || 'N/A')}</b></div>
+            <div class="pro-item"><span>${esc(UI.proWords)}</span><b>${esc(meta.approx_words ? UI.wordsApprox(meta.approx_words) : 'N/A')}</b></div>
+            <div class="pro-item"><span>${esc(UI.proOrigin)}</span><b>${esc(provenanceLabel(t))}</b></div>
           </div>
         </div>
         <!-- Markup-Pfad: htmlContent ist das bewusst als HTML gerenderte Markdown des Tales
@@ -643,10 +841,10 @@
     // (provenance: "none") oder gar kein meta-Block in der Zeile.
     function provenanceLabel(t) {
       const meta = t.meta || {};
-      if (t.metaMissing) return 'Altbestand (kein meta-Block)';
-      if (meta.provenance === 'none') return 'Altbestand (kein YAML-Kopf)';
-      if (meta.provenance === 'yaml-frontmatter' || meta.model || meta.created_at) return 'YAML-Frontmatter';
-      return 'Herkunft unklar';
+      if (t.metaMissing) return UI.provMissingMeta;
+      if (meta.provenance === 'none') return UI.provNoYaml;
+      if (meta.provenance === 'yaml-frontmatter' || meta.model || meta.created_at) return UI.provYaml;
+      return UI.provUnknown;
     }
 
     // Zufall: zieht ausschliesslich aus der AKTUELL GEFILTERTEN Menge.
@@ -673,9 +871,9 @@
       const statusText = (nested && nested.status) || meta.status || '';
       const passed = (passedRaw === true || passedRaw === 'true');
       const failed = (passedRaw === false || passedRaw === 'false');
-      if (passed) return { label: '\u2713 Harm Reduction validiert' + (statusText ? ' (' + statusText + ')' : ''), color: 'var(--success)' };
-      if (failed) return { label: '\u26a0 Quarantaene' + (statusText ? ' (' + statusText + ')' : ''), color: 'var(--danger)' };
-      return { label: '\u2013 nicht auditiert (Altbestand)', color: 'var(--muted)' };
+      if (passed) return { label: UI.auditOk + (statusText ? ' (' + statusText + ')' : ''), color: 'var(--success)' };
+      if (failed) return { label: UI.auditQuarantine + (statusText ? ' (' + statusText + ')' : ''), color: 'var(--danger)' };
+      return { label: UI.auditNone, color: 'var(--muted)' };
     }
 
     document.getElementById('filter-input').addEventListener('input', applyFilters);
@@ -685,7 +883,12 @@
     document.getElementById('random-btn').addEventListener('click', randomTale);
     document.getElementById('about-link').addEventListener('click', (e) => { e.preventDefault(); showAbout(); });
 
-    window.onload = loadDataset;
+    async function boot() {
+      await loadLocales();   // ohne Woerterbuch laeuft die Seite mit den deutschen Literalen weiter
+      initLanguage();
+      await loadDataset();
+    }
+    window.onload = boot;
   </script>
 </body>
 </html>
