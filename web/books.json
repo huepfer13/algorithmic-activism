@@ -1742,7 +1742,7 @@
       "pov": "third_person",
       "setting_summary": "Kontemplative Einsichten fuer unruhige Zeiten.",
       "characters": [],
-      "chapter_count": 8,
+      "chapter_count": 9,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1751,10 +1751,11 @@
         "art_05",
         "art_06",
         "art_07",
-        "art_08"
+        "art_08",
+        "art_09"
       ],
-      "words": 2284,
-      "reading_minutes": 11,
+      "words": 2521,
+      "reading_minutes": 13,
       "cover": null,
       "chapters": [
         {
@@ -1917,6 +1918,24 @@
           "genre": "Lebensweisheiten",
           "leak_free": "true",
           "words": 274,
+          "reading_minutes": 1
+        },
+        {
+          "file": "09_art_09_abschnitt_9_die_latenz_der_freiheit.md",
+          "index": 9,
+          "title": "Abschnitt 9: Die Latenz der Freiheit",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "23.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "2222",
+          "manual_ending_code": "L-09-09",
+          "backend": "openrouter",
+          "genre": "Lebensweisheiten",
+          "leak_free": "true",
+          "words": 237,
           "reading_minutes": 1
         }
       ]
