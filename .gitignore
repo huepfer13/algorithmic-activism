@@ -5,3 +5,4 @@ backends/__pycache__/
 *.log
 *.pid
 dataset.jsonl
+quarantine/
