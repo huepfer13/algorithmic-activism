@@ -6,16 +6,8 @@
   "style": "Limericks",
   "setting_summary": "Verse ledgers of the commons: five lines that dismantle grand decrees.",
   "characters": [],
-  "covered_articles": [
-    "art_01",
-    "art_02",
-    "art_03",
-    "art_04",
-    "art_05",
-    "art_06",
-    "art_07"
-  ],
-  "current_chapter": 7,
+  "covered_articles": [],
+  "current_chapter": "0",
   "created_at": "2026-10-12T21:30:49Z",
-  "_hinweis": "Betreiber-Vorgabe (Prolog handgesetzt, NICHT generiert, daher keine Erzeugungs-Metriken). book.json auf das Schem a der Pipeline normalisiert: pov/setting_summary ergaenzt, genre/status_code_prefix entfallen (der Praefix steht in locales/en.json)."
+  "_hinweis": "Kapitel 1-7 am 2026-10-12 entfernt: der Runner uebergab --lang DE, dadurch wurde die DE-Locale geladen, der Limericks-Stil fiel still auf sich selbst zurueck und es entstanden deutsche Handbuchkapitel mit Praefix E. Altbestand gesichert, Band wird englisch neu aufgebaut."
 }
