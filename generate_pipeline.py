@@ -637,6 +637,13 @@ ABSCHLUSS_MARKER = (
 )
 SICHERHEITS_BLOECKE = ("[gefahr]", "[warnung]", "[hinweis]", "[status")
 _MARKDOWN_PRAEFIX_RE = re.compile(r"^\s*(?:[-*+>]\s+|\d+[.)]\s+|\*\*)+")
+
+# Bidi-Steuerzeichen (RLM/LRM, RLE/LRE/PDF, Isolate) sind fuer den Leser unsichtbar, stehen aber
+# im String. Gemessen 2026-10-13: ein RLM direkt vor der Stempelzeile verhindert sowohl das Abstreifen
+# des Markdown-Praefixes (der Anker greift am Zeilenanfang) als auch den Mustervergleich — ein korrekt
+# geschriebenes hebraeisches oder arabisches Kapitel waere als "ungueltiges Schema" durchgefallen.
+BIDI_STEUERZEICHEN = re.compile("[\u200e\u200f\u202a-\u202e\u2066-\u2069\u061c]")
+
 # Ein Pflichtblock ist eine ALLEINSTEHENDE Klammerzeile "**[NAME: ... | ...]**".
 # Das deckt [STATUS: ...] ebenso ab wie [CHRONIK: ... | SIEGEL: M-06-11] — Forum statt Wortliste.
 STEMPEL_RE = re.compile(r"^\*{0,2}\[[A-Za-zÄÖÜäöü\-]{3,24}:[^\]]*\]\*{0,2}$")
@@ -645,6 +652,8 @@ HISTORIE_FENSTER = 10          # Vergleich nur gegen die letzten N prosatragende
 
 
 def _normalisiere(text: str) -> str:
+    """Entfernt unsichtbare Bidi-Steuerzeichen, BEVOR verglichen wird (RTL-Sprachen, 2026-10-13)."""
+    text = BIDI_STEUERZEICHEN.sub("", text)
     """Erst NFC, dann Umlaut-Vereinheitlichung — sonst faellt Text still durch jede Pruefung.
 
     Zwei belegte Fallen (2026-10-12): ASCII-Umschrift ("Pruefprotokoll" vs "Prüfprotokoll") und
@@ -880,7 +889,7 @@ def inhaltliche_woerter(text: str) -> set:
 
 def ist_strukturzeile(zeile: str) -> bool:
     """Zeile, die ein Strukturbaustein ist (Pflichtblock oder Marker am Zeilenanfang)."""
-    rumpf = _MARKDOWN_PRAEFIX_RE.sub("", zeile).strip().strip("*_#").strip()
+    rumpf = BIDI_STEUERZEICHEN.sub("", _MARKDOWN_PRAEFIX_RE.sub("", BIDI_STEUERZEICHEN.sub("", zeile))).strip().strip("*_#").strip()
     return not rumpf or bool(zeilen_marker(rumpf))
 
 
@@ -1036,7 +1045,7 @@ def audit_manual_ending(text: str, erwarteter_block: str | None = None,
         muster = pflichtblock_muster(erwarteter_block)
         code = block_code(erwarteter_block) or "?"
         for zeile in letzter.splitlines():
-            rumpf = _MARKDOWN_PRAEFIX_RE.sub("", zeile).strip().strip("*_#").strip()
+            rumpf = BIDI_STEUERZEICHEN.sub("", _MARKDOWN_PRAEFIX_RE.sub("", BIDI_STEUERZEICHEN.sub("", zeile))).strip().strip("*_#").strip()
             if muster.match(_normalisiere(rumpf).lower()):
                 return True, "Passed (Pflichtblock " + code + ")"
         return False, ("ungueltiges Schema: keine alleinstehende Klammerzeile mit dem Code "
