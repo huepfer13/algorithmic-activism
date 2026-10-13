@@ -84,7 +84,8 @@
     "r10:apodex/apodex-1.1-mini:free:buch_018_rhymes_of_the_commons",
     "r1:deepseek-chat:buch_018_rhymes_of_the_commons",
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_018_rhymes_of_the_commons",
-    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_018_rhymes_of_the_commons"
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_018_rhymes_of_the_commons",
+    "r2:deepseek-chat:buch_018_rhymes_of_the_commons"
   ],
   "runden": {
     "1": [
@@ -516,6 +517,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "apodex/apodex-1.1-mini:free",
         "runde": 2
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_018_rhymes_of_the_commons",
+        "code": "A-04-03",
+        "datei": "03_art_04_abschnitt_3_the_servitude_switch.md",
+        "dauer_s": "5.8",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 2,
+        "tokens": "572",
+        "versuche": "1",
+        "woerter": 435
       }
     ],
     "3": [

@@ -2211,13 +2211,14 @@
       "pov": "third_person",
       "setting_summary": "Verse ledgers of the commons: five lines that dismantle grand decrees.",
       "characters": [],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 669,
-      "reading_minutes": 3,
+      "words": 1104,
+      "reading_minutes": 6,
       "cover": null,
       "chapters": [
         {
@@ -2272,6 +2273,24 @@
           "genre": "Limericks",
           "leak_free": "",
           "words": 315,
+          "reading_minutes": 2
+        },
+        {
+          "file": "03_art_04_abschnitt_3_the_servitude_switch.md",
+          "index": 3,
+          "title": "Abschnitt 3: The Servitude Switch",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "572",
+          "manual_ending_code": "A-04-03",
+          "backend": "deepseek",
+          "genre": "Limericks",
+          "leak_free": "true",
+          "words": 435,
           "reading_minutes": 2
         }
       ]
