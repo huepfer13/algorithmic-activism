@@ -2211,7 +2211,7 @@
       "pov": "third_person",
       "setting_summary": "Verse ledgers of the commons: five lines that dismantle grand decrees.",
       "characters": [],
-      "chapter_count": 7,
+      "chapter_count": 8,
       "covered_articles": [
         "art_01",
         "art_03",
@@ -2219,10 +2219,11 @@
         "art_05",
         "art_09",
         "art_12",
-        "art_14"
+        "art_14",
+        "art_19"
       ],
-      "words": 2386,
-      "reading_minutes": 12,
+      "words": 2726,
+      "reading_minutes": 14,
       "cover": null,
       "chapters": [
         {
@@ -2368,6 +2369,24 @@
           "leak_free": "true",
           "words": 292,
           "reading_minutes": 1
+        },
+        {
+          "file": "08_art_19_abschnitt_8_the_ozone_gauge.md",
+          "index": 8,
+          "title": "Abschnitt 8: The Ozone Gauge",
+          "article": "art_19",
+          "ending_ok": "true",
+          "attempts": "2",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "408.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "3808",
+          "manual_ending_code": "A-19-08",
+          "backend": "openrouter",
+          "genre": "Limericks",
+          "leak_free": "true",
+          "words": 340,
+          "reading_minutes": 2
         }
       ]
     }
