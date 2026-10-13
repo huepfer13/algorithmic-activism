@@ -83,7 +83,8 @@
     "r10:nvidia/nemotron-3-super-120b-a12b:free:buch_017_des_volkes_mund",
     "r10:apodex/apodex-1.1-mini:free:buch_018_rhymes_of_the_commons",
     "r1:deepseek-chat:buch_018_rhymes_of_the_commons",
-    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_018_rhymes_of_the_commons"
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_018_rhymes_of_the_commons",
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_018_rhymes_of_the_commons"
   ],
   "runden": {
     "1": [
@@ -261,6 +262,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
         "runde": 1
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_018_rhymes_of_the_commons",
+        "code": "A-03-02",
+        "datei": "02_art_03_abschnitt_2_the_gauges_whisper.md",
+        "dauer_s": "332.9",
+        "ending_ok": "false",
+        "exit": 2,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 1,
+        "tokens": "10979",
+        "versuche": "3",
+        "woerter": 315
       }
     ],
     "10": [

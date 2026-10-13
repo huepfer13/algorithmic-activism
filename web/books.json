@@ -2211,12 +2211,13 @@
       "pov": "third_person",
       "setting_summary": "Verse ledgers of the commons: five lines that dismantle grand decrees.",
       "characters": [],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_03"
       ],
-      "words": 354,
-      "reading_minutes": 2,
+      "words": 669,
+      "reading_minutes": 3,
       "cover": null,
       "chapters": [
         {
@@ -2254,6 +2255,24 @@
           "leak_free": "true",
           "words": 266,
           "reading_minutes": 1
+        },
+        {
+          "file": "02_art_03_abschnitt_2_the_gauges_whisper.md",
+          "index": 2,
+          "title": "Abschnitt 2: The Gauge’s Whisper",
+          "article": "art_03",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "332.9",
+          "jaccard_max": "0.0",
+          "tokens_generated": "10979",
+          "manual_ending_code": "A-03-02",
+          "backend": "openrouter",
+          "genre": "Limericks",
+          "leak_free": "",
+          "words": 315,
+          "reading_minutes": 2
         }
       ]
     }
