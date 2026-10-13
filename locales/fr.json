@@ -261,7 +261,7 @@
         "SERVICE",
         "RÉINITIALISÉ"
       ],
-      "block_schema": "**[ÉTAT: {zustand} | DOSSIER: {code}]**"
+      "block_schema": "**[ETAT: {zustand} | DOSSIER: {code}]**"
     },
     "Conte_de_Fées": {
       "manual_ending": true,

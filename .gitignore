@@ -6,3 +6,6 @@ backends/__pycache__/
 *.pid
 dataset.jsonl
 quarantine/
+
+# Lokale Sicherungen gehoeren nicht ins Repo
+locales/*.bak-*
