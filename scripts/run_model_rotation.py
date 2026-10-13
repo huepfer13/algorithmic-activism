@@ -327,7 +327,7 @@ def main() -> int:
                                capture_output=True, timeout=30)
         if args.dry_run:
             print(f"[Runde {runde}] Plan ausgegeben", flush=True)
-            if deckel_erreicht:
+        if deckel_erreicht:
                 print(f"[Runner] Kapitel-Deckel {args.kapitel} erreicht — sauberer Stopp.", flush=True)
                 break
     if not args.dry_run:

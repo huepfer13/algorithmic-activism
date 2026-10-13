@@ -333,14 +333,15 @@
       "pov": "third_person",
       "setting_summary": "Die Tiere des Schattenwaldes halten Rat und finden fuer jeden Streit eine gute Loesung.",
       "characters": [],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_02",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 1746,
-      "reading_minutes": 9,
+      "words": 2176,
+      "reading_minutes": 11,
       "cover": null,
       "chapters": [
         {
@@ -413,6 +414,24 @@
           "genre": "Kinderbuch",
           "leak_free": "true",
           "words": 482,
+          "reading_minutes": 2
+        },
+        {
+          "file": "04_art_04_abschnitt_4_die_kalte_kammer.md",
+          "index": 4,
+          "title": "Abschnitt 4: Die kalte Kammer",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "821",
+          "manual_ending_code": "K-04-04",
+          "backend": "deepseek",
+          "genre": "Kinderbuch",
+          "leak_free": "true",
+          "words": 430,
           "reading_minutes": 2
         }
       ]
