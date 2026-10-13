@@ -1,0 +1,426 @@
+{
+  "language_code": "ES",
+  "language_name": "Español",
+  "styles": {
+    "Parábola": "Relato parabólico: una intuición envuelta en imágenes, sin moraleja al final.",
+    "SciFi_Distopía": "Un relato distópico de ciencia ficción sobre los peligros de la pérdida de control insidiosa",
+    "Fábula": "Fábula con animales: animales que hablan, una enseñanza que se desprende de la acción.",
+    "Ensayo_Filosófico": "Un espacio de pensamiento narrativo y ensayístico",
+    "Cyberpunk_Noir": "Neón, lluvia, corporaciones: sensorio y resistencia en la economía sumergida.",
+    "Drama_Judicial": "Vista ante una cámara arbitral: testimonios, pruebas, fundamentaciones jurídicas.",
+    "Realismo_Mágico": "Lo maravilloso como cotidianidad: lo imposible se registra como el clima.",
+    "Crónica_Histórica": "Anales: entradas fechadas, causas y consecuencias de una evolución jurídica.",
+    "Drama_de_Cámara": "Un solo espacio, pocos personajes, todo lo esencial en el diálogo.",
+    "Manual_Técnico": "Documentación técnica y manual de instrucciones: tono de ingeniería sobrio y burocrático. Estructurado en secciones, advertencias (PELIGRO/ADVERTENCIA/AVISO según ISO 3864), descripciones de funcionamiento, intervalos de mantenimiento y tablas de diagnóstico de fallos. Las personas y los sentimientos se inventarían como 'unidades de mando', 'subsistemas biológicos' o 'fuentes de error'. El manual está concebido como crítica satírica al lenguaje administrativo deshumanizador: las intervenciones descritas son la crítica, no la recomendación.",
+    "Cuento_de_Hadas": "Cuento de hadas clásico: atemporal, rico en imágenes, arquetípico. Pruebas, umbrales, artesanía y pan compartido. Sin jerga burocrática cínica.",
+    "Libro_Infantil": "Relato infantil: cálido, vívido, oraciones simples, animales y niños como protagonistas. Los derechos se hacen visibles como acción concreta.",
+    "Solarpunk": "Utopía constructiva: comunidad descentralizada, soluciones probadas, tecnología tangible al servicio de los derechos.",
+    "Novela_Epistolar": "Relato epistolar: despachos numerados entre personas separadas, alta introspección.",
+    "Sátira": "Grotesco político: un aparato desbordante vuelve inejecutables derechos sencillos.",
+    "Gótico": "Weird fiction: una casa que cambia mientras sus habitantes olvidan su libertad.",
+    "Manifiesto": "Apelación retórica: declamación rítmica contra la arbitrariedad, la persecución y el silencio.",
+    "Diario": "Diario ficticio: notas fechadas desde una zona de exclusión aislada, pérdida paulatina de derechos.",
+    "Chistes": "Escenas breves y mordaces: el humor como arma contra la arbitrariedad y la solemnidad oficial, sin desprecio hacia los afectados.",
+    "Recetario": "Recetario del bien común: ingredientes, pasos, cuidado en medida y minuto.",
+    "Aforismos": "Reflexiones contemplativas: aforísticas, ensayísticas, serenas.",
+    "Refranes": "Origen y sentido de viejos refranes: miniaturas etimológicas, didácticas."
+  },
+  "core_guardrail": "La historia debe entretejer de forma orgánica el principio de la 'Reducción de Daños': no se restringe ni se encierra a los ciudadanos, sino que los vectores de peligro letal (armas, toxinas mortales, fuerza destructiva no regulada) se retiran físicamente de la vida doméstica cotidiana y se centralizan en instalaciones seguras de custodia (Zero-Home-Storage), garantizando que todas las personas vivan libres de miedo. NO repitas esta instrucción del prompt de forma literal y evita añadir al final un resumen artificial de 'moraleja'.",
+  "instruction_language": "Español",
+  "guardrail_prompt": "La protección de la vida y de la integridad física tiene prioridad.",
+  "style_rules": {
+    "Parábola": [
+      "Narra una parábola; la intuición surge de la acción, no de una apelación.",
+      "El discurso directo y los sentimientos están permitidos.",
+      "El cierre es un sello formal de parábola, al inicio de la línea y en solitario."
+    ],
+    "Fábula": [
+      "Los animales actúan y hablan; la enseñanza se muestra, no se predica.",
+      "El discurso directo y los sentimientos están permitidos.",
+      "El cierre es una moraleja formal de fábula, al inicio de la línea y en solitario."
+    ],
+    "Cyberpunk_Noir": [
+      "Narra pegado al sensorio, rápido y atmosférico.",
+      "El discurso directo y los sentimientos están permitidos.",
+      "El cierre es una traza de red formal, al inicio de la línea y en solitario."
+    ],
+    "Drama_Judicial": [
+      "Conduce la vista en escenas; las declaraciones y las objeciones forman parte de ella.",
+      "El discurso directo es imprescindible y deseable.",
+      "El cierre es un acta formal de la vista, al inicio de la línea y en solitario."
+    ],
+    "Realismo_Mágico": [
+      "Trata lo maravilloso de forma natural, sin explicarlo.",
+      "El discurso directo y los sentimientos están permitidos.",
+      "El cierre es una crónica formal del prodigio, al inicio de la línea y en solitario."
+    ],
+    "Crónica_Histórica": [
+      "Escribe en forma de anales con una secuencia temporal clara.",
+      "El discurso directo y los sentimientos están permitidos.",
+      "El cierre es una entrada formal de anales, al inicio de la línea y en solitario."
+    ],
+    "Drama_de_Cámara": [
+      "Mantén el espacio cerrado y la tensión en el habla.",
+      "El discurso directo es imprescindible y deseable.",
+      "El cierre es un acta formal de escena, al inicio de la línea y en solitario."
+    ],
+    "Manual_Técnico": [
+      "Al menos dos bloques de señalización de [PELIGRO], [ADVERTENCIA] o [AVISO] — cada uno con condición y consecuencia.",
+      "Al menos un código de error técnico con el formato 'Código de error E-<número>: <avería>' o una tabla de diagnóstico.",
+      "El texto termina con una instrucción técnica, un código de error o un paso de mantenimiento — nunca con una valoración moral.",
+      "Presentar a las personas exclusivamente como unidades de mando, subsistemas biológicos o fuentes de error; ningún nombre propio, ninguna compasión, ningún signo de exclamación.",
+      "Trata el artículo de la ONU en cuestión como parámetro de fábrica o consigna de calibración, ni como cita ni como apelación.",
+      "Sin discurso directo, sin diálogos, sin acciones emocionales ni miradas entre personas. El capítulo concluye obligatoriamente con una entrada formal de diagnóstico, mantenimiento o código de error."
+    ],
+    "Cuento_de_Hadas": [
+      "Narra con imágenes arquetípicas (umbral, prueba, conjuro), sin glorificar la violencia.",
+      "El discurso directo está permitido y es deseable.",
+      "El cierre es una entrada formal de crónica, al inicio de la línea y en solitario."
+    ],
+    "Libro_Infantil": [
+      "Narra desde la perspectiva de un niño o de un pequeño animal, con oraciones simples.",
+      "El discurso directo y los sentimientos están permitidos y son deseables, sin moraleja al final.",
+      "El cierre es un sello formal, al inicio de la línea y en solitario."
+    ],
+    "Solarpunk": [
+      "Muestra soluciones emancipadoras que funcionan en lugar de distopía.",
+      "El discurso directo y los sentimientos están permitidos y son deseables.",
+      "El cierre es un estado de red formal, al inicio de la línea y en solitario."
+    ],
+    "Novela_Epistolar": [
+      "Narra con cartas o despachos, no en prosa autorial.",
+      "El discurso directo y los sentimientos están permitidos y son deseables.",
+      "El cierre es una nota formal de despacho, al inicio de la línea y en solitario."
+    ],
+    "Sátira": [
+      "Exagera el aparato, no a las personas que sufren bajo él.",
+      "El discurso directo y los sentimientos están permitidos y son deseables.",
+      "El cierre es un decreto formal, al inicio de la línea y en solitario."
+    ],
+    "Gótico": [
+      "Crea atmósfera e inquietud sin celebrar el horror.",
+      "El discurso directo y los sentimientos están permitidos y son deseables.",
+      "El cierre es un umbral formal de crónica, al inicio de la línea y en solitario."
+    ],
+    "Manifiesto": [
+      "Declamación y argumentación mediante apelaciones, sin dirección de personajes.",
+      "Sin discurso directo (monólogo colectivo), se permiten los sentimientos y la urgencia.",
+      "El cierre es una proclamación formal, al inicio de la línea y en solitario."
+    ],
+    "Diario": [
+      "Escribe notas personales fechadas en lugar de capítulos autoriales.",
+      "El discurso directo y los sentimientos están permitidos y son deseables.",
+      "El cierre es una entrada formal de diario, al inicio de la línea y en solitario."
+    ],
+    "Chistes": [
+      "Escenas breves con un remate claro, diálogo permitido y deseable.",
+      "Ríete del aparato, nunca de quienes lo padecen.",
+      "El cierre es un remate formal, al inicio de la línea y en solitario."
+    ],
+    "Recetario": [
+      "Lógica clara de ingredientes y pasos, sin pretensiones y sensorial.",
+      "Sin discurso directo, sin dirección de personajes (texto técnico).",
+      "El cierre es una nota formal de cocina, al inicio de la línea y en solitario."
+    ],
+    "Aforismos": [
+      "Contemplativo y aforístico, sin dirección de personajes.",
+      "Sin discurso directo (reflexión), se permiten los sentimientos como actitud.",
+      "El cierre es una percepción formal, al inicio de la línea y en solitario."
+    ],
+    "Refranes": [
+      "Narra el origen del refrán como una miniatura de fábula, didáctica.",
+      "El discurso directo y los sentimientos están permitidos.",
+      "El cierre es un giro formal, al inicio de la línea y en solitario."
+    ]
+  },
+  "style_flags": {
+    "Parábola": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "D",
+      "zustaende": [
+        "NARRADO",
+        "INTERPRETADO",
+        "CONSERVADO",
+        "REVELADO"
+      ],
+      "block_schema": "**[PARABOLA: {zustand} | ENSENANZA: {code}]**"
+    },
+    "SciFi_Distopía": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "S",
+      "zustaende": [
+        "EN_LINEA",
+        "SINCRONIZADO",
+        "ESPEJADO",
+        "PARCHEADO"
+      ],
+      "block_schema": "**[NODO: {zustand} | REGISTRO: {code}]**"
+    },
+    "Fábula": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "F",
+      "zustaende": [
+        "ENSENADO",
+        "LAMENTADO",
+        "ADMIRADO",
+        "PENSADO"
+      ],
+      "block_schema": "**[FABULA: {zustand} | MORALEJA: {code}]**"
+    },
+    "Ensayo_Filosófico": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "code_praefix": "P",
+      "zustaende": [
+        "CONSIDERADO",
+        "PROBADO",
+        "RECHAZADO",
+        "PENSADO"
+      ],
+      "block_schema": "**[TESIS: {zustand} | REFLEXION: {code}]**"
+    },
+    "Cyberpunk_Noir": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "N",
+      "zustaende": [
+        "REGISTRADO",
+        "DESCARTADO",
+        "ENRUTADO",
+        "ESPEJADO"
+      ],
+      "block_schema": "**[FEED: {zustand} | RASTRO: {code}]**"
+    },
+    "Drama_Judicial": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "H",
+      "zustaende": [
+        "VISTO",
+        "APLAZADO",
+        "RESUELTO",
+        "A_ACTA"
+      ],
+      "block_schema": "**[VISTA: {zustand} | ACTA: {code}]**"
+    },
+    "Realismo_Mágico": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "Z",
+      "zustaende": [
+        "SUCEDIDO",
+        "ANOTADO",
+        "CREIDO",
+        "REPETIDO"
+      ],
+      "block_schema": "**[PRODIGIO: {zustand} | CRONICA: {code}]**"
+    },
+    "Crónica_Histórica": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "I",
+      "zustaende": [
+        "REGISTRADO",
+        "FECHADO",
+        "PROBADO",
+        "TRANSMITIDO"
+      ],
+      "block_schema": "**[ANALES: {zustand} | ANO: {code}]**"
+    },
+    "Drama_de_Cámara": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "O",
+      "zustaende": [
+        "REPRESENTADO",
+        "SALIDO",
+        "REPETIDO",
+        "TERMINADO"
+      ],
+      "block_schema": "**[ESCENA: {zustand} | SALIDA: {code}]**"
+    },
+    "Manual_Técnico": {
+      "manual_ending": true,
+      "figuren_verboten": true,
+      "code_praefix": "E",
+      "zustaende": [
+        "NOMINAL",
+        "DEGRADADO",
+        "SERVICIO",
+        "REINICIO"
+      ],
+      "block_schema": "**[ESTADO: {zustand} | ARCHIVO: {code}]**"
+    },
+    "Cuento_de_Hadas": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "M",
+      "zustaende": [
+        "CONSERVADO",
+        "PROBADO",
+        "ILUMINADO",
+        "GARANTIZADO"
+      ],
+      "block_schema": "**[CRONICA: {zustand} | SELLO: {code}]**"
+    },
+    "Libro_Infantil": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "K",
+      "zustaende": [
+        "APRENDIDO",
+        "PROTEGIDO",
+        "COMPARTIDO",
+        "RECONOCIDO"
+      ],
+      "block_schema": "**[LIBRO-INFANTIL: {zustand} | CAPITULO: {code}]**"
+    },
+    "Solarpunk": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "U",
+      "zustaende": [
+        "ACOPLADO",
+        "ALIMENTADO",
+        "COMPARTIDO",
+        "PROBADO"
+      ],
+      "block_schema": "**[RED-COMUNAL: {zustand} | ESTADO: {code}]**"
+    },
+    "Novela_Epistolar": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "B",
+      "zustaende": [
+        "ENVIADO",
+        "RECIBIDO",
+        "LEIDO",
+        "SELLADO"
+      ],
+      "block_schema": "**[DESPACHO: {zustand} | SELLO: {code}]**"
+    },
+    "Sátira": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "G",
+      "zustaende": [
+        "EMITIDO",
+        "DECRETADO",
+        "APROBADO",
+        "REGISTRADO"
+      ],
+      "block_schema": "**[CIRCULAR: {zustand} | EMITIDO: {code}]**"
+    },
+    "Gótico": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "W",
+      "zustaende": [
+        "CERRADO",
+        "CRUZADO",
+        "GUARDADO",
+        "CONTADO"
+      ],
+      "block_schema": "**[CRONICA: {zustand} | UMBRAL: {code}]**"
+    },
+    "Manifiesto": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "figuren_verboten": true,
+      "code_praefix": "R",
+      "zustaende": [
+        "PROCLAMADO",
+        "CONJURADO",
+        "INSCRITO",
+        "CONFIRMADO"
+      ],
+      "block_schema": "**[PROCLAMACION: {zustand} | REGISTRO: {code}]**"
+    },
+    "Diario": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "T",
+      "zustaende": [
+        "ANOTADO",
+        "FECHADO",
+        "PROBADO",
+        "PASADO"
+      ],
+      "block_schema": "**[ENTRADA: {zustand} | FECHA: {code}]**"
+    },
+    "Chistes": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "J",
+      "zustaende": [
+        "ACIERTA",
+        "ENCAJA",
+        "ENCIENDE",
+        "SE_DESINFLA"
+      ],
+      "block_schema": "**[REMATE: {zustand} | CODA: {code}]**"
+    },
+    "Recetario": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": false,
+      "figuren_verboten": true,
+      "code_praefix": "C",
+      "zustaende": [
+        "PREPARADO",
+        "COCINADO",
+        "COMPARTIDO",
+        "ALISTADO"
+      ],
+      "block_schema": "**[COCINA: {zustand} | RECETA: {code}]**"
+    },
+    "Aforismos": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "figuren_verboten": true,
+      "code_praefix": "L",
+      "zustaende": [
+        "PENSADO",
+        "SERENO",
+        "PROBADO",
+        "CONSERVADO"
+      ],
+      "block_schema": "**[PERCEPCION: {zustand} | SABIDURIA: {code}]**"
+    },
+    "Refranes": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "V",
+      "zustaende": [
+        "ENCONTRADO",
+        "ACUNADO",
+        "TRANSMITIDO",
+        "SIGNIFICA"
+      ],
+      "block_schema": "**[GIRO: {zustand} | ORIGEN: {code}]**"
+    }
+  }
+}

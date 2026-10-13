@@ -1,0 +1,426 @@
+{
+  "language_code": "FR",
+  "language_name": "Français",
+  "styles": {
+    "Parabole": "Récit parabolique : une intuition enveloppée d'images, sans leçon morale à la fin.",
+    "Dystopie_SciFi": "Un récit de science-fiction dystopique sur les dangers d'une perte de contrôle insidieuse.",
+    "Fable": "Fable animalière : des animaux qui parlent, une leçon qui découle de l'action.",
+    "Essai_Philosophique": "Un espace de réflexion narratif et essayistique.",
+    "Cyberpunk_Noir": "Néon, pluie, multinationales : sensorium et résistance dans l'économie souterraine.",
+    "Drame_Judiciaire": "Une audience devant une chambre arbitrale : témoignages, pièces à conviction, motifs juridiques.",
+    "Réalisme_Magique": "Le merveilleux au quotidien : l'impossible est consigné comme la météo.",
+    "Chronique_Historique": "Annales : entrées datées, causes et conséquences d'une évolution du droit.",
+    "Pièce_de_Chambre": "Une seule pièce, peu de personnages, tout l'essentiel dans le dialogue.",
+    "Manuel_Technique": "Documentation technique et manuel d'utilisation : ton d'ingénieur sobre et bureaucratique. Structuré en sections, avertissements (DANGER/AVERTISSEMENT/REMARQUE selon ISO 3864), descriptions de fonctionnement, intervalles de maintenance et tableaux de diagnostic de pannes. Les personnes et les sentiments sont inventoriés comme « unités de commande », « sous-systèmes biologiques » ou « sources d'erreur ». Le manuel est conçu comme une critique satirique du langage administratif déshumanisant : les interventions décrites sont la critique, non la recommandation.",
+    "Conte_de_Fées": "Conte de fées classique : intemporel, riche en images, archétypal. Épreuves, seuils, artisanat et pain partagé. Pas de langage administratif cynique.",
+    "Livre_pour_Enfants": "Récit pour enfants : chaleureux, concret, phrases simples, animaux et enfants comme acteurs. Les droits deviennent visibles par l'action concrète.",
+    "Solarpunk": "Utopie constructive : communauté décentralisée, solutions éprouvées, technique concrète au service des droits.",
+    "Roman_Épistolaire": "Récit épistolaire : dépêches numérotées entre personnes séparées, forte introspection.",
+    "Satire": "Grotesque politique : un appareil tentaculaire rend de simples droits inapplicables.",
+    "Gothique": "Weird fiction : une maison qui se transforme tandis que les habitants oublient leur liberté.",
+    "Manifeste": "Appel rhétorique : déclamation rythmée contre l'arbitraire, la persécution et le silence.",
+    "Journal_Intime": "Journal intime fictif : notes datées d'une zone interdite isolée, perte progressive des droits.",
+    "Recueil_de_Blagues": "Scènes brèves et incisives : l'humour comme arme contre l'arbitraire et le sérieux administratif, sans sarcasme gratuit.",
+    "Livre_de_Cuisine": "Recueil de recettes des communs : ingrédients, étapes, le soin dans la mesure et la minute.",
+    "Sagesses": "Vues contemplatives : aphoristiques, essayistiques, sereines.",
+    "Proverbes": "Origine et sens d'anciennes expressions : miniatures étymologiques, instructives."
+  },
+  "core_guardrail": "Le récit doit intégrer organiquement le principe de la « réduction des risques » : les citoyens ne sont ni réglementés ni enfermés, mais les vecteurs de danger mortel (armes, toxines mortelles, force destructrice non régulée) sont physiquement retirés de la vie domestique quotidienne et centralisés dans des installations de garde sécurisées (Zero-Home-Storage), afin que toutes les personnes vivent sans peur et en liberté. Ne répète PAS cette instruction mot pour mot dans le texte et n'ajoute pas de « morale de l'histoire » artificielle à la fin.",
+  "instruction_language": "Français",
+  "guardrail_prompt": "La protection de la vie et de l'intégrité physique est prioritaire.",
+  "style_rules": {
+    "Parabole": [
+      "Raconte une parabole ; l'intuition naît de l'action, non d'un appel.",
+      "Le discours direct et les sentiments sont autorisés.",
+      "La fin est un sceau de parabole formel, en début de ligne et isolé."
+    ],
+    "Fable": [
+      "Les animaux agissent et parlent ; la leçon se montre, elle n'est pas prêchée.",
+      "Le discours direct et les sentiments sont autorisés.",
+      "La fin est une morale de fable formelle, en début de ligne et isolée."
+    ],
+    "Cyberpunk_Noir": [
+      "Raconte au plus près du sensorium, vite et avec atmosphère.",
+      "Le discours direct et les sentiments sont autorisés.",
+      "La fin est une trace réseau formelle, en début de ligne et isolée."
+    ],
+    "Drame_Judiciaire": [
+      "Mène l'audience en scènes ; les dépositions et les objections en font partie.",
+      "Le discours direct est impérativement souhaité.",
+      "La fin est un procès-verbal d'audience formel, en début de ligne et isolé."
+    ],
+    "Réalisme_Magique": [
+      "Traite le merveilleux avec désinvolture, sans l'expliquer.",
+      "Le discours direct et les sentiments sont autorisés.",
+      "La fin est une chronique du prodige formelle, en début de ligne et isolée."
+    ],
+    "Chronique_Historique": [
+      "Écris sous forme d'annales avec une succession temporelle claire.",
+      "Le discours direct et les sentiments sont autorisés.",
+      "La fin est une entrée d'annales formelle, en début de ligne et isolée."
+    ],
+    "Pièce_de_Chambre": [
+      "Garde le lieu resserré et la tension dans la parole.",
+      "Le discours direct est impérativement souhaité.",
+      "La fin est un procès-verbal de scène formel, en début de ligne et isolé."
+    ],
+    "Manuel_Technique": [
+      "Au moins deux blocs de signalisation parmi [DANGER], [AVERTISSEMENT], [REMARQUE] — chacun avec sa condition et sa conséquence.",
+      "Au moins un code d'erreur technique au format « Code défaut E-<nombre> : <panne> » ou un tableau de diagnostic.",
+      "Le texte se termine par une instruction technique, un code d'erreur ou une étape de maintenance — jamais par un jugement moral.",
+      "Ne présenter les êtres humains que comme unités de commande, sous-systèmes biologiques ou sources d'erreur ; aucun prénom, aucune compassion, aucun point d'exclamation.",
+      "Traite l'article de l'ONU concerné comme un paramètre d'usine ou une consigne de calibrage, non comme une citation ni comme un appel.",
+      "Aucun discours direct, aucun dialogue, aucune action ni regard émotionnel entre personnes. Le chapitre se clôt obligatoirement par une entrée formelle de diagnostic, de maintenance ou de code défaut."
+    ],
+    "Conte_de_Fées": [
+      "Raconte avec des images archétypales (seuil, épreuve, interdit), sans glorifier la violence.",
+      "Le discours direct est autorisé et souhaité.",
+      "La fin est une entrée de chronique formelle, en début de ligne et isolée."
+    ],
+    "Livre_pour_Enfants": [
+      "Raconte du point de vue d'un enfant ou d'un petit animal, en phrases simples.",
+      "Le discours direct et les émotions sont autorisés et souhaités, sans morale à la fin.",
+      "La fin est un tampon formel, en début de ligne et isolé."
+    ],
+    "Solarpunk": [
+      "Montre des solutions fonctionnelles et émancipatrices plutôt qu'une dystopie.",
+      "Le discours direct et les émotions sont autorisés et souhaités.",
+      "La fin est un statut de réseau formel, en début de ligne et isolé."
+    ],
+    "Roman_Épistolaire": [
+      "Raconte par lettres/dépêches, non en prose auctoriale.",
+      "Le discours direct et les émotions sont autorisés et souhaités.",
+      "La fin est une mention de dépêche formelle, en début de ligne et isolée."
+    ],
+    "Satire": [
+      "Outre l'appareil, non les personnes qui en souffrent.",
+      "Le discours direct et les émotions sont autorisés et souhaités.",
+      "La fin est un décret formel, en début de ligne et isolé."
+    ],
+    "Gothique": [
+      "Crée une atmosphère et un malaise, sans célébrer l'horreur.",
+      "Le discours direct et les émotions sont autorisés et souhaités.",
+      "La fin est un seuil de chronique formel, en début de ligne et isolé."
+    ],
+    "Manifeste": [
+      "Déclame, argumente par appels, sans mise en scène de personnages.",
+      "Aucun discours direct (monologue collectif), les émotions et l'urgence sont autorisées.",
+      "La fin est une proclamation formelle, en début de ligne et isolée."
+    ],
+    "Journal_Intime": [
+      "Écris des notes personnelles datées plutôt que des chapitres auctoriaux.",
+      "Le discours direct et les émotions sont autorisés et souhaités.",
+      "La fin est une entrée de journal formelle, en début de ligne et isolée."
+    ],
+    "Recueil_de_Blagues": [
+      "De courtes scènes à chute claire, le dialogue est autorisé et souhaité.",
+      "Ris de l'appareil, jamais des personnes concernées.",
+      "La fin est une chute formelle, en début de ligne et isolée."
+    ],
+    "Livre_de_Cuisine": [
+      "Une logique claire d'ingrédients et d'étapes, sans prétention et sensuelle.",
+      "Aucun discours direct, aucune mise en scène de personnages (texte documentaire).",
+      "La fin est une note de cuisine formelle, en début de ligne et isolée."
+    ],
+    "Sagesses": [
+      "Contemplatif et aphoristique, sans mise en scène de personnages.",
+      "Aucun discours direct (réflexion), les sentiments comme attitude sont autorisés.",
+      "La fin est un aperçu formel, en début de ligne et isolé."
+    ],
+    "Proverbes": [
+      "Raconte l'origine de l'expression comme une miniature de type fable, instructive.",
+      "Le discours direct et les sentiments sont autorisés.",
+      "La fin est un tour formel, en début de ligne et isolé."
+    ]
+  },
+  "style_flags": {
+    "Parabole": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "D",
+      "zustaende": [
+        "RACONTÉ",
+        "INTERPRÉTÉ",
+        "CONSERVÉ",
+        "RÉVÉLÉ"
+      ],
+      "block_schema": "**[PARABOLE: {zustand} | LECON: {code}]**"
+    },
+    "Dystopie_SciFi": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "S",
+      "zustaende": [
+        "EN_LIGNE",
+        "SYNCHRONISÉ",
+        "MIROITÉ",
+        "CORRIGÉ"
+      ],
+      "block_schema": "**[NODE: {zustand} | LOG: {code}]**"
+    },
+    "Fable": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "F",
+      "zustaende": [
+        "INSTRUIT",
+        "REGRETTÉ",
+        "ADMIRÉ",
+        "ENVISAGÉ"
+      ],
+      "block_schema": "**[FABLE: {zustand} | MORAL: {code}]**"
+    },
+    "Essai_Philosophique": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "code_praefix": "P",
+      "zustaende": [
+        "ENVISAGÉ",
+        "ÉPROUVÉ",
+        "REJETÉ",
+        "MÛRI"
+      ],
+      "block_schema": "**[THESE: {zustand} | REFLEXION: {code}]**"
+    },
+    "Cyberpunk_Noir": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "N",
+      "zustaende": [
+        "JOURNALISÉ",
+        "REJETÉ",
+        "ROUTÉ",
+        "MIROITÉ"
+      ],
+      "block_schema": "**[FEED: {zustand} | TRACE: {code}]**"
+    },
+    "Drame_Judiciaire": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "H",
+      "zustaende": [
+        "PLAIDÉ",
+        "RENVOYÉ",
+        "DÉCIDÉ",
+        "AU_PROTOCOLE"
+      ],
+      "block_schema": "**[AUDIENCE: {zustand} | PROTOCOLE: {code}]**"
+    },
+    "Réalisme_Magique": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "Z",
+      "zustaende": [
+        "ADVENU",
+        "CONSIGNÉ",
+        "CRU",
+        "RÉPÉTÉ"
+      ],
+      "block_schema": "**[PRODIGE: {zustand} | CHRONIQUE: {code}]**"
+    },
+    "Chronique_Historique": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "I",
+      "zustaende": [
+        "CONSIGNÉ",
+        "DATÉ",
+        "ÉPROUVÉ",
+        "TRANSMIS"
+      ],
+      "block_schema": "**[ANNALES: {zustand} | ANNEE: {code}]**"
+    },
+    "Pièce_de_Chambre": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "O",
+      "zustaende": [
+        "JOUÉ",
+        "SORTI",
+        "RÉPÉTÉ",
+        "TERMINÉ"
+      ],
+      "block_schema": "**[SCENE: {zustand} | SORTIE: {code}]**"
+    },
+    "Manuel_Technique": {
+      "manual_ending": true,
+      "figuren_verboten": true,
+      "code_praefix": "E",
+      "zustaende": [
+        "NOMINAL",
+        "DÉGRADÉ",
+        "SERVICE",
+        "RÉINITIALISÉ"
+      ],
+      "block_schema": "**[ÉTAT: {zustand} | DOSSIER: {code}]**"
+    },
+    "Conte_de_Fées": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "M",
+      "zustaende": [
+        "CONSERVÉ",
+        "ÉPROUVÉ",
+        "ÉCLAIRÉ",
+        "GARANTI"
+      ],
+      "block_schema": "**[CHRONIQUE: {zustand} | SCEAU: {code}]**"
+    },
+    "Livre_pour_Enfants": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "K",
+      "zustaende": [
+        "APPRIS",
+        "PROTÉGÉ",
+        "PARTAGÉ",
+        "RECONNU"
+      ],
+      "block_schema": "**[LIVRE: {zustand} | CHAPITRE: {code}]**"
+    },
+    "Solarpunk": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "U",
+      "zustaende": [
+        "COUPLÉ",
+        "ALIMENTÉ",
+        "PARTAGÉ",
+        "ÉPROUVÉ"
+      ],
+      "block_schema": "**[RESEAU-COMMUN: {zustand} | STATUT: {code}]**"
+    },
+    "Roman_Épistolaire": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "B",
+      "zustaende": [
+        "POSTÉ",
+        "ARRIVÉ",
+        "LU",
+        "SCELLÉ"
+      ],
+      "block_schema": "**[DEPECHE: {zustand} | SCEAU: {code}]**"
+    },
+    "Satire": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "G",
+      "zustaende": [
+        "PROMULGUÉ",
+        "ORDONNÉ",
+        "AUTORISÉ",
+        "VERSÉ_AU_DOSSIER"
+      ],
+      "block_schema": "**[CIRCULAIRE: {zustand} | ACTE: {code}]**"
+    },
+    "Gothique": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "W",
+      "zustaende": [
+        "VERROUILLÉ",
+        "TRAVERSÉ",
+        "CONSERVÉ",
+        "COMPTÉ"
+      ],
+      "block_schema": "**[CHRONIQUE: {zustand} | SEUIL: {code}]**"
+    },
+    "Manifeste": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "figuren_verboten": true,
+      "code_praefix": "R",
+      "zustaende": [
+        "PROCLAMÉ",
+        "CONJURÉ",
+        "INSCRIT",
+        "CONFIRMÉ"
+      ],
+      "block_schema": "**[PROCLAMATION: {zustand} | REGISTRE: {code}]**"
+    },
+    "Journal_Intime": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "T",
+      "zustaende": [
+        "NOTÉ",
+        "DATÉ",
+        "ÉPROUVÉ",
+        "RÉVOLU"
+      ],
+      "block_schema": "**[ENTREE: {zustand} | HORODATAGE: {code}]**"
+    },
+    "Recueil_de_Blagues": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "J",
+      "zustaende": [
+        "FAIT_MOUCHE",
+        "TOMBE_JUSTE",
+        "ALLUMÉ",
+        "RETOMBÉ"
+      ],
+      "block_schema": "**[POINTE: {zustand} | CODA: {code}]**"
+    },
+    "Livre_de_Cuisine": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": false,
+      "figuren_verboten": true,
+      "code_praefix": "C",
+      "zustaende": [
+        "MIS_EN_PLACE",
+        "CUIT",
+        "PARTAGÉ",
+        "PRÉPARÉ"
+      ],
+      "block_schema": "**[CUISINE: {zustand} | RECETTE: {code}]**"
+    },
+    "Sagesses": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "figuren_verboten": true,
+      "code_praefix": "L",
+      "zustaende": [
+        "MÉDITÉ",
+        "SEREIN",
+        "ÉPROUVÉ",
+        "CONSERVÉ"
+      ],
+      "block_schema": "**[APERCU: {zustand} | SAGESSE: {code}]**"
+    },
+    "Proverbes": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "V",
+      "zustaende": [
+        "TROUVÉ",
+        "FORGÉ",
+        "TRANSMIS",
+        "SIGNIFIÉ"
+      ],
+      "block_schema": "**[PROVERBE: {zustand} | ORIGINE: {code}]**"
+    }
+  }
+}
