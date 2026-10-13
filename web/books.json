@@ -2211,14 +2211,15 @@
       "pov": "third_person",
       "setting_summary": "Verse ledgers of the commons: five lines that dismantle grand decrees.",
       "characters": [],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_03",
-        "art_04"
+        "art_04",
+        "art_05"
       ],
-      "words": 1104,
-      "reading_minutes": 6,
+      "words": 1399,
+      "reading_minutes": 7,
       "cover": null,
       "chapters": [
         {
@@ -2292,6 +2293,24 @@
           "leak_free": "true",
           "words": 435,
           "reading_minutes": 2
+        },
+        {
+          "file": "04_art_05_abschnitt_4_the_thermal_drift.md",
+          "index": 4,
+          "title": "Abschnitt 4: The Thermal Drift",
+          "article": "art_05",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "56.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "909",
+          "manual_ending_code": "A-05-04",
+          "backend": "openrouter",
+          "genre": "Limericks",
+          "leak_free": "true",
+          "words": 295,
+          "reading_minutes": 1
         }
       ]
     }
