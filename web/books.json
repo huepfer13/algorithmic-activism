@@ -574,14 +574,15 @@
       "pov": "third_person",
       "setting_summary": "Ein diskursives Nachdenken darueber, was Menschenrechte praktisch bedeuten.",
       "characters": [],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
+        "art_01",
         "art_02",
         "art_03",
         "art_04"
       ],
-      "words": 1942,
-      "reading_minutes": 10,
+      "words": 2578,
+      "reading_minutes": 13,
       "cover": null,
       "chapters": [
         {
@@ -637,6 +638,24 @@
           "leak_free": "true",
           "words": 336,
           "reading_minutes": 2
+        },
+        {
+          "file": "04_art_01_abschnitt_4_die_kalibrierung_der_nähe.md",
+          "index": 4,
+          "title": "Abschnitt 4: Die Kalibrierung der Nähe",
+          "article": "art_01",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "27.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1269",
+          "manual_ending_code": "P-01-04",
+          "backend": "deepseek",
+          "genre": "Philosophischer_Essay",
+          "leak_free": "",
+          "words": 636,
+          "reading_minutes": 3
         },
         {
           "file": "04_art_04_abschnitt_4_die_tropfenfrequenz_der_leer.md",
