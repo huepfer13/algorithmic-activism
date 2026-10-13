@@ -111,18 +111,19 @@ def pruefe(datei: str, referenz: dict) -> tuple[list, list]:
     for stil in stile:
         hart(fehler, warnungen, bool(stile[stil]), f"{stil}: leere Beschreibung")
 
-    # 4b. Praefix-Parität gegen de.json (jedes Genre traegt in jeder Sprache denselben Buchstaben)
+    # 4b. Praefix-Paritaet gegen de.json: kein deutsches Genre darf seinen Buchstaben verlieren.
+    # Zusaetzliche Buchstaben sind zulaessig (Limericks/A nutzt nur Englisch; die Fremdsprachen
+    # tragen fuer das Handbuch-Genre ein E, weil sie ihm ein eigenes Schema gegeben haben —
+    # de.json hat dort gar keinen code_praefix, weil es den Code-Default nutzt).
     if not ist_de:
         soll = collections.Counter(v.get("code_praefix") for v in referenz["style_flags"].values()
                                    if v.get("code_praefix"))
         ist = collections.Counter(v.get("code_praefix") for v in flags_map.values()
                                   if v.get("code_praefix"))
-        if soll != ist:
-            abw = {k: (soll.get(k, 0), ist.get(k, 0)) for k in set(soll) | set(ist)
-                   if soll.get(k, 0) != ist.get(k, 0)}
-            hart(fehler, warnungen, False,
-                 "Praefix-Verteilung weicht von de.json ab (Buchstabe: (soll, ist)): "
-                 + ", ".join(f"{k}:{s}/{i}" for k, (s, i) in sorted(abw.items())))
+        verloren = {k: (soll[k], ist.get(k, 0)) for k in soll if ist.get(k, 0) < soll[k]}
+        hart(fehler, warnungen, not verloren,
+             "Praefix-Paritaet verletzt (Buchstabe: soll/ist): "
+             + ", ".join(f"{k}:{s}/{i}" for k, (s, i) in sorted(verloren.items())))
 
     # 5. Laedt die Pipeline die Datei?
     try:
