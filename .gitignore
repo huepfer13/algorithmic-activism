@@ -9,3 +9,4 @@ quarantine/
 
 # Lokale Sicherungen gehoeren nicht ins Repo
 locales/*.bak-*
+*.lock
