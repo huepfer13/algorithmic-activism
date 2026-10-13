@@ -167,9 +167,13 @@ def main() -> int:
             return 1
         alle = gefiltert
         print(f"[Runner] eingeschraenkt auf {len(alle)} Baende: {[b[:24] for b in alle]}", flush=True)
-    if len(alle) < 2:
-        print(f"[Runner] zu wenige Buecher mit book.json: {alle}", flush=True)
+    if len(alle) < 1:
+        print(f"[Runner] kein Buch mit book.json gefunden: {alle}", flush=True)
         return 1
+    if len(alle) == 1:
+        # Ein-Band-Lauf ist zulaessig (gezielter Neuaufbau, z.B. der englische Limericks-Band).
+        print(f"[Runner] Ein-Band-Lauf: {alle[0][:44]} — jedes Modell schreibt in dasselbe Buch.",
+              flush=True)
     z = zustand_laden()
     # Offene Slots aus dem ECHTEN Plan zaehlen, nicht gegen den globalen Zustand: bei einem gefilterten
     # Lauf (--buecher) haette die alte Rechnung "offen: 0" gemeldet, obwohl 40 Kapitel anstehen.
