@@ -86,7 +86,8 @@
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_018_rhymes_of_the_commons",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_018_rhymes_of_the_commons",
     "r2:deepseek-chat:buch_018_rhymes_of_the_commons",
-    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_018_rhymes_of_the_commons"
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_018_rhymes_of_the_commons",
+    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_018_rhymes_of_the_commons"
   ],
   "runden": {
     "1": [
@@ -548,6 +549,21 @@
         "tokens": "909",
         "versuche": "1",
         "woerter": 295
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_018_rhymes_of_the_commons",
+        "code": "A-09-05",
+        "datei": "05_art_09_abschnitt_5_the_luminous_threshold.md",
+        "dauer_s": "206.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 2,
+        "tokens": "9119",
+        "versuche": "2",
+        "woerter": 329
       }
     ],
     "3": [

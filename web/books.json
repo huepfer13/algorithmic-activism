@@ -2211,15 +2211,16 @@
       "pov": "third_person",
       "setting_summary": "Verse ledgers of the commons: five lines that dismantle grand decrees.",
       "characters": [],
-      "chapter_count": 4,
+      "chapter_count": 5,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_09"
       ],
-      "words": 1399,
-      "reading_minutes": 7,
+      "words": 1728,
+      "reading_minutes": 9,
       "cover": null,
       "chapters": [
         {
@@ -2311,6 +2312,24 @@
           "leak_free": "true",
           "words": 295,
           "reading_minutes": 1
+        },
+        {
+          "file": "05_art_09_abschnitt_5_the_luminous_threshold.md",
+          "index": 5,
+          "title": "Abschnitt 5: The Luminous Threshold",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "2",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "206.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "9119",
+          "manual_ending_code": "A-09-05",
+          "backend": "openrouter",
+          "genre": "Limericks",
+          "leak_free": "true",
+          "words": 329,
+          "reading_minutes": 2
         }
       ]
     }
