@@ -99,6 +99,41 @@
       "Work with proverbs: each one is quoted and then tested against the case at hand.",
       "Direct speech is allowed inside the quotation; no narrator comments.",
       "The closing block is a formal entry, line-initial and standing alone."
+    ],
+    "Parable": [
+      "Tell a parable; the insight comes from the action, not from an appeal.",
+      "Direct speech and feeling are allowed.",
+      "The ending is a formal parable seal, line-initial and standing alone."
+    ],
+    "Fable": [
+      "Animals act and speak; the lesson shows itself, it is not preached.",
+      "Direct speech and feeling are allowed.",
+      "The ending is a formal fable moral, line-initial and standing alone."
+    ],
+    "Cyberpunk_Noir": [
+      "Tell it close to the sensorium, fast and atmospheric.",
+      "Direct speech and feeling are allowed.",
+      "The ending is a formal network trace, line-initial and standing alone."
+    ],
+    "Courtroom_Drama": [
+      "Run the hearing in scenes; testimony and objections belong to it.",
+      "Direct speech is required and wanted.",
+      "The ending is a formal hearing record, line-initial and standing alone."
+    ],
+    "Magical_Realism": [
+      "Treat the wondrous matter-of-factly, without explaining it.",
+      "Direct speech and feeling are allowed.",
+      "The ending is a formal wonder chronicle, line-initial and standing alone."
+    ],
+    "Historical_Chronicle": [
+      "Write in annal form with a clear sequence of time.",
+      "Direct speech and feeling are allowed.",
+      "The ending is a formal annal entry, line-initial and standing alone."
+    ],
+    "Chamber_Play": [
+      "Keep the place tight and the tension in the speaking.",
+      "Direct speech is required and wanted.",
+      "The ending is a formal scene record, line-initial and standing alone."
     ]
   },
   "style_flags": {
@@ -288,6 +323,123 @@
         "HELD"
       ],
       "block_schema": "**[PROVERB: {zustand} | FOLIO: {code}]**"
+    },
+    "Parable": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "D",
+      "zustaende": [
+        "NARRATED",
+        "READ",
+        "KEPT",
+        "REVEALED"
+      ],
+      "block_schema": "**[PARABLE: {zustand} | LESSON: {code}]**"
+    },
+    "SciFi_Dystopia": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "S",
+      "zustaende": [
+        "ONLINE",
+        "SYNCED",
+        "MIRRORED",
+        "PATCHED"
+      ],
+      "block_schema": "**[NODE: {zustand} | LOG: {code}]**"
+    },
+    "Fable": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "F",
+      "zustaende": [
+        "TAUGHT",
+        "REGRETTED",
+        "ADMIRED",
+        "CONSIDERED"
+      ],
+      "block_schema": "**[FABLE: {zustand} | MORAL: {code}]**"
+    },
+    "Philosophical_Essay": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "code_praefix": "P",
+      "zustaende": [
+        "WEIGHED",
+        "TESTED",
+        "REJECTED",
+        "CONSIDERED"
+      ],
+      "block_schema": "**[THESIS: {zustand} | REFLECTION: {code}]**"
+    },
+    "Cyberpunk_Noir": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "N",
+      "zustaende": [
+        "LOGGED",
+        "DISCARDED",
+        "ROUTED",
+        "MIRRORED"
+      ],
+      "block_schema": "**[FEED: {zustand} | TRACE: {code}]**"
+    },
+    "Courtroom_Drama": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "H",
+      "zustaende": [
+        "HEARD",
+        "ADJOURNED",
+        "DECIDED",
+        "ON_RECORD"
+      ],
+      "block_schema": "**[HEARING: {zustand} | RECORD: {code}]**"
+    },
+    "Magical_Realism": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "Z",
+      "zustaende": [
+        "HAPPENED",
+        "NOTED",
+        "BELIEVED",
+        "REPEATED"
+      ],
+      "block_schema": "**[WONDER: {zustand} | CHRONICLE: {code}]**"
+    },
+    "Historical_Chronicle": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "I",
+      "zustaende": [
+        "RECORDED",
+        "DATED",
+        "CHECKED",
+        "HANDED_DOWN"
+      ],
+      "block_schema": "**[ANNALS: {zustand} | YEAR: {code}]**"
+    },
+    "Chamber_Play": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "O",
+      "zustaende": [
+        "PLAYED",
+        "EXITED",
+        "REPEATED",
+        "ENDED"
+      ],
+      "block_schema": "**[SCENE: {zustand} | EXIT: {code}]**"
     }
   }
 }
