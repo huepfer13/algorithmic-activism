@@ -88,7 +88,8 @@
     "r2:deepseek-chat:buch_018_rhymes_of_the_commons",
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_018_rhymes_of_the_commons",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_018_rhymes_of_the_commons",
-    "r3:deepseek-chat:buch_018_rhymes_of_the_commons"
+    "r3:deepseek-chat:buch_018_rhymes_of_the_commons",
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_018_rhymes_of_the_commons"
   ],
   "runden": {
     "1": [
@@ -702,6 +703,21 @@
         "tokens": "515",
         "versuche": "1",
         "woerter": 366
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_018_rhymes_of_the_commons",
+        "code": "A-14-07",
+        "datei": "07_art_14_abschnitt_7_the_displacement_gauge.md",
+        "dauer_s": "120.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 3,
+        "tokens": "2019",
+        "versuche": "1",
+        "woerter": 292
       }
     ],
     "4": [

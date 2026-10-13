@@ -2211,17 +2211,18 @@
       "pov": "third_person",
       "setting_summary": "Verse ledgers of the commons: five lines that dismantle grand decrees.",
       "characters": [],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
         "art_05",
         "art_09",
-        "art_12"
+        "art_12",
+        "art_14"
       ],
-      "words": 2094,
-      "reading_minutes": 10,
+      "words": 2386,
+      "reading_minutes": 12,
       "cover": null,
       "chapters": [
         {
@@ -2349,6 +2350,24 @@
           "leak_free": "true",
           "words": 366,
           "reading_minutes": 2
+        },
+        {
+          "file": "07_art_14_abschnitt_7_the_displacement_gauge.md",
+          "index": 7,
+          "title": "Abschnitt 7: The Displacement Gauge",
+          "article": "art_14",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "120.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "2019",
+          "manual_ending_code": "A-14-07",
+          "backend": "openrouter",
+          "genre": "Limericks",
+          "leak_free": "true",
+          "words": 292,
+          "reading_minutes": 1
         }
       ]
     }
