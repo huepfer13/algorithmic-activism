@@ -82,7 +82,8 @@
     "r10:nvidia/nemotron-3-ultra-550b-a55b:free:buch_016_faden_der_gelassenheit",
     "r10:nvidia/nemotron-3-super-120b-a12b:free:buch_017_des_volkes_mund",
     "r10:apodex/apodex-1.1-mini:free:buch_018_rhymes_of_the_commons",
-    "r1:deepseek-chat:buch_018_rhymes_of_the_commons"
+    "r1:deepseek-chat:buch_018_rhymes_of_the_commons",
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_018_rhymes_of_the_commons"
   ],
   "runden": {
     "1": [
@@ -250,6 +251,16 @@
         "tokens": "359",
         "versuche": "1",
         "woerter": 266
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_018_rhymes_of_the_commons",
+        "datei": null,
+        "dauer_s": 3.6,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 1
       }
     ],
     "10": [
