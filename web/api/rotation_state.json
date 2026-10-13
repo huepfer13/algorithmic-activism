@@ -94,7 +94,8 @@
     "r1:deepseek-chat:buch_003_der_rat_der_tiere",
     "r1:deepseek-chat:buch_008_flechtwerk_arkadien",
     "r1:deepseek-chat:buch_001_das_büro_der_unendlichkeit",
-    "r1:deepseek-chat:buch_006_das_gericht_vor_der_mauer"
+    "r1:deepseek-chat:buch_006_das_gericht_vor_der_mauer",
+    "r1:deepseek-chat:buch_014_der_unberechenbare_humor"
   ],
   "runden": {
     "1": [
@@ -347,6 +348,21 @@
         "tokens": "917",
         "versuche": "1",
         "woerter": 440
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_014_der_unberechenbare_humor",
+        "code": "J-02-02",
+        "datei": "02_art_02_abschnitt_2_die_prüfliste_der_unterschie.md",
+        "dauer_s": "8.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 1,
+        "tokens": "928",
+        "versuche": "1",
+        "woerter": 485
       }
     ],
     "10": [

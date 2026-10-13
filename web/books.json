@@ -1558,12 +1558,13 @@
       "pov": "third_person",
       "setting_summary": "Kurzgeschichten und Szenen, in denen Humor den Ernstfall entlarvt.",
       "characters": [],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 476,
-      "reading_minutes": 2,
+      "words": 961,
+      "reading_minutes": 5,
       "cover": null,
       "chapters": [
         {
@@ -1600,6 +1601,24 @@
           "genre": "Witzebuch",
           "leak_free": "true",
           "words": 362,
+          "reading_minutes": 2
+        },
+        {
+          "file": "02_art_02_abschnitt_2_die_prüfliste_der_unterschie.md",
+          "index": 2,
+          "title": "Abschnitt 2: Die Prüfliste der Unterschiede",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "928",
+          "manual_ending_code": "J-02-02",
+          "backend": "deepseek",
+          "genre": "Witzebuch",
+          "leak_free": "true",
+          "words": 485,
           "reading_minutes": 2
         }
       ]
