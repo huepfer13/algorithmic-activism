@@ -1,0 +1,426 @@
+{
+  "language_code": "UK",
+  "language_name": "Українська",
+  "styles": {
+    "Prytcha": "Притчоподібна розповідь: прозріння, вбране в образи, без повчання наприкінці.",
+    "SciFi_Dystopiia": "Антиутопічне науково-фантастичне оповідання про небезпеки підступної втрати контролю",
+    "Baika": "Байка про тварин: тварини, що говорять, наука, яка випливає з дії.",
+    "Filosofskyi_Esei": "Оповідний, есеїстичний простір думки",
+    "Cyberpunk_Noir": "Неон, дощ, корпорації: сенсорика й опір у тіньовій економіці.",
+    "Sudova_Drama": "Слухання перед арбітражною палатою: свідчення, докази, правові обґрунтування.",
+    "Mahichnyi_Realizm": "Чудесне як буденність: неможливе протоколюють, як погоду.",
+    "Istorychna_Khronika": "Аннали: датовані записи, причини й наслідки розвитку права.",
+    "Kamerna_Piesa": "Одна кімната, кілька персонажів, усе суттєве в діалозі.",
+    "Tekhnichnyi_Posibnyk": "Технічна документація та інструкція з експлуатації: тверезий, бюрократичний інженерний тон. Структуровано в розділи, попередження (НЕБЕЗПЕКА/УВАГА/ПРИМІТКА за ISO 3864), описи функцій, інтервали обслуговування й таблиці діагностики несправностей. Людей і почуття інвентаризують як «блоки керування», «біологічні підсистеми» чи «джерела помилок». Інструкцію задумано як сатиричну критику знелюднювальної адміністративної мови: описані втручання є критикою, а не рекомендацією.",
+    "Kazka": "Класична літературна казка: позачасова, багата на образи, архетипна. Випробування, пороги, ремесло й поділений хліб. Жодної цинічної канцелярської мови.",
+    "Dytiacha_Knyha": "Оповідання для дітей: тепле, наочне, прості головні речення, тварини й діти як дійові особи. Права стають видимими як конкретна дія.",
+    "Solarpunk": "Конструктивна утопія: децентралізована спільнота, перевірені рішення, надійна техніка на службі прав.",
+    "Epistoliarnyi_Roman": "Епістолярний звіт: пронумеровані депеші між розлученими, висока інтроспекція.",
+    "Satyra": "Політичний гротеск: роздутий апарат робить прості права нездійсненними.",
+    "Hotyka": "Вайрд-фікшн: дім, що змінюється, поки мешканці забувають свою свободу.",
+    "Manifest": "Риторичний заклик: ритмічна декламація проти свавілля, переслідування й мовчання.",
+    "Shchodennyk": "Вигаданий щоденник: датовані нотатки із закритої зони відчуження, підступна втрата прав.",
+    "Knyha_Zhartiv": "Влучні короткі сцени: гумор як зброя проти свавілля та канцелярської поважності, без кепкування з людей.",
+    "Knyha_Retseptiv": "Збірка рецептів спільного добра: складові, кроки, турбота в мірі й хвилині.",
+    "Zhyttievi_Mudrosti": "Споглядні прозріння: афористичні, есеїстичні, спокійні.",
+    "Pryslivia": "Походження й сенс давніх зворотів: етимологічні мініатюри, повчальні."
+  },
+  "style_rules": {
+    "Tekhnichnyi_Posibnyk": [
+      "Щонаменше два блоки позначень із [НЕБЕЗПЕКА], [УВАГА], [ПРИМІТКА] — кожен з умовою та наслідком.",
+      "Щонаменше один технічний код помилки у форматі «Код помилки E-<число>: <несправність>» або таблиця діагностики.",
+      "Текст завершується технічною вказівкою, кодом помилки або кроком обслуговування — ніколи моральним підсумком.",
+      "Людей вести виключно як блоки керування, біологічні підсистеми або джерела помилок; жодного імені, жодного співчуття, жодного знака оклику.",
+      "Розглядай відповідну статтю ООН як заводський параметр або настанову з калібрування, а не як цитату й не як заклик.",
+      "Жодної прямої мови, жодних діалогів, жодних емоційних дій чи поглядів між людьми. Розділ обов'язково закривається формальним записом діагностики, обслуговування або коду помилки."
+    ],
+    "Kazka": [
+      "Розповідай в архетипних образах (поріг, випробування, заборона), не прославляючи насильства.",
+      "Пряма мова дозволена й бажана.",
+      "Фінал — формальний запис хроніки, на початку рядка і окремо."
+    ],
+    "Dytiacha_Knyha": [
+      "Розповідай з погляду дитини або маленької тварини, простими головними реченнями.",
+      "Пряма мова й почуття дозволені та бажані, без повчання наприкінці.",
+      "Фінал — формальна печатка, на початку рядка і окремо."
+    ],
+    "Solarpunk": [
+      "Показуй дієві, емансипаторські рішення замість антиутопії.",
+      "Пряма мова й почуття дозволені та бажані.",
+      "Фінал — формальний стан мережі, на початку рядка і окремо."
+    ],
+    "Epistoliarnyi_Roman": [
+      "Розповідай листами й депешами, а не авторською прозою.",
+      "Пряма мова й почуття дозволені та бажані.",
+      "Фінал — формальна депешна помітка, на початку рядка і окремо."
+    ],
+    "Satyra": [
+      "Перебільшуй апарат, а не людей, які страждають під ним.",
+      "Пряма мова й почуття дозволені та бажані.",
+      "Фінал — формальний указ, на початку рядка і окремо."
+    ],
+    "Hotyka": [
+      "Створюй атмосферу й неспокій, не святкуючи жаху.",
+      "Пряма мова й почуття дозволені та бажані.",
+      "Фінал — формальний поріг хроніки, на початку рядка і окремо."
+    ],
+    "Manifest": [
+      "Декламуй, аргументуй закликами, без режисури персонажів.",
+      "Жодної прямої мови (колективно-монологічно), почуття й нагальність дозволені.",
+      "Фінал — формальна прокламація, на початку рядка і окремо."
+    ],
+    "Shchodennyk": [
+      "Пиши датовані, особисті нотатки замість авторських розділів.",
+      "Пряма мова й почуття дозволені та бажані.",
+      "Фінал — формальний запис щоденника, на початку рядка і окремо."
+    ],
+    "Knyha_Zhartiv": [
+      "Короткі сцени з чітким пуантом, діалог дозволений і бажаний.",
+      "Смійся з апарату, ніколи з постраждалих.",
+      "Фінал — формальний пуант, на початку рядка і окремо."
+    ],
+    "Knyha_Retseptiv": [
+      "Чітка логіка складових і кроків, невибагливо й чуттєво.",
+      "Жодної прямої мови, жодної режисури персонажів (фаховий текст).",
+      "Фінал — формальна кухонна помітка, на початку рядка і окремо."
+    ],
+    "Zhyttievi_Mudrosti": [
+      "Споглядно й афористично, без режисури персонажів.",
+      "Жодної прямої мови (рефлексія), почуття як настанова дозволені.",
+      "Фінал — формальне прозріння, на початку рядка і окремо."
+    ],
+    "Pryslivia": [
+      "Розповідай походження звороту як байкову мініатюру, повчально.",
+      "Пряма мова й почуття дозволені.",
+      "Фінал — формальний зворот, на початку рядка і окремо."
+    ],
+    "Prytcha": [
+      "Розповідай притчу; прозріння постає з дії, а не з заклику.",
+      "Пряма мова й почуття дозволені.",
+      "Фінал — формальна печатка притчі, на початку рядка і окремо."
+    ],
+    "Sudova_Drama": [
+      "Веди слухання за сценами; свідчення й заперечення належать до нього.",
+      "Пряма мова конче бажана.",
+      "Фінал — формальний протокол слухання, на початку рядка і окремо."
+    ],
+    "Baika": [
+      "Тварини діють і говорять; наука виявляється, її не проповідують.",
+      "Пряма мова й почуття дозволені.",
+      "Фінал — формальна мораль байки, на початку рядка і окремо."
+    ],
+    "Cyberpunk_Noir": [
+      "Розповідай близько до сенсорики, швидко й атмосферно.",
+      "Пряма мова й почуття дозволені.",
+      "Фінал — формальний мережевий слід, на початку рядка і окремо."
+    ],
+    "Mahichnyi_Realizm": [
+      "Стався до чудесного буденно, не пояснюючи його.",
+      "Пряма мова й почуття дозволені.",
+      "Фінал — формальна хроніка чуда, на початку рядка і окремо."
+    ],
+    "Kamerna_Piesa": [
+      "Тримай місце тісним, а напругу — в мовленні.",
+      "Пряма мова конче бажана.",
+      "Фінал — формальний протокол сцени, на початку рядка і окремо."
+    ],
+    "Istorychna_Khronika": [
+      "Пиши у формі анналів з чіткою часовою послідовністю.",
+      "Пряма мова й почуття дозволені.",
+      "Фінал — формальний запис анналів, на початку рядка і окремо."
+    ]
+  },
+  "style_flags": {
+    "Tekhnichnyi_Posibnyk": {
+      "manual_ending": true,
+      "figuren_verboten": true,
+      "code_praefix": "E",
+      "zustaende": [
+        "NOMINALNYI",
+        "DEHRADOVANYI",
+        "SERVIS",
+        "VIDNOVLENNIA"
+      ],
+      "block_schema": "**[STATUS: {zustand} | ARKHIV: {code}]**"
+    },
+    "Kazka": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "M",
+      "zustaende": [
+        "ZBERIHANO",
+        "PEREVIRENO",
+        "OSIAIANO",
+        "ZAPECHATANO"
+      ],
+      "block_schema": "**[CHRONIKA: {zustand} | PECHATKA: {code}]**"
+    },
+    "Dytiacha_Knyha": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "K",
+      "zustaende": [
+        "NAVCHENO",
+        "ZAKHYSHCHENO",
+        "PODILENO",
+        "VYZNANO"
+      ],
+      "block_schema": "**[DYTIACHA-KNYHA: {zustand} | ROZDIL: {code}]**"
+    },
+    "SciFi_Dystopiia": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "S",
+      "zustaende": [
+        "ONLAIN",
+        "SYNKHRONIZOVANO",
+        "VIDZERKALENO",
+        "VYPRAVLENO"
+      ],
+      "block_schema": "**[VUZOL: {zustand} | ZHURNAL: {code}]**"
+    },
+    "Filosofskyi_Esei": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "code_praefix": "P",
+      "zustaende": [
+        "OBDUMANO",
+        "PEREVIRENO",
+        "VIDKHYLENO",
+        "ZVAZHENO"
+      ],
+      "block_schema": "**[TEZA: {zustand} | REFLEKSIIA: {code}]**"
+    },
+    "Solarpunk": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "U",
+      "zustaende": [
+        "DOLUCHENO",
+        "ZHYVLENO",
+        "PODILENO",
+        "PEREVIRENO"
+      ],
+      "block_schema": "**[MEREZHA-SPILNOTY: {zustand} | STATUS: {code}]**"
+    },
+    "Epistoliarnyi_Roman": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "B",
+      "zustaende": [
+        "VIDISLANO",
+        "OTRYMANO",
+        "PROCHYTANO",
+        "ZAPECHATANO"
+      ],
+      "block_schema": "**[DEPESHA: {zustand} | PECHATKA: {code}]**"
+    },
+    "Satyra": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "G",
+      "zustaende": [
+        "VYISHLO",
+        "PRYPYSANO",
+        "ZATVERDZHENO",
+        "DOSPRAVY"
+      ],
+      "block_schema": "**[TSYRKULIAR: {zustand} | VYISHLO: {code}]**"
+    },
+    "Hotyka": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "W",
+      "zustaende": [
+        "ZAMKNENO",
+        "PERESTUPLENO",
+        "ZBERIHANO",
+        "PORAKHOVANO"
+      ],
+      "block_schema": "**[CHRONIKA: {zustand} | PORIH: {code}]**"
+    },
+    "Manifest": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "figuren_verboten": true,
+      "code_praefix": "R",
+      "zustaende": [
+        "PROHOLOSHENO",
+        "ZAKLIANO",
+        "VNESENO",
+        "PIDTVERDZHENO"
+      ],
+      "block_schema": "**[PROKLAMATSIIA: {zustand} | REIESTR: {code}]**"
+    },
+    "Shchodennyk": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "T",
+      "zustaende": [
+        "ZAPYSANO",
+        "DATOVANO",
+        "PEREVIRENO",
+        "MYNULO"
+      ],
+      "block_schema": "**[ZAPYS: {zustand} | CHAS: {code}]**"
+    },
+    "Knyha_Zhartiv": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "J",
+      "zustaende": [
+        "VLUCHAJE",
+        "SYDYT",
+        "ZAPALIUIE",
+        "ZGHASAJE"
+      ],
+      "block_schema": "**[PUANT: {zustand} | KODA: {code}]**"
+    },
+    "Knyha_Retseptiv": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": false,
+      "figuren_verboten": true,
+      "code_praefix": "C",
+      "zustaende": [
+        "ZASTAVLENO",
+        "ZVARENO",
+        "PODILENO",
+        "ZAHOTOVLENO"
+      ],
+      "block_schema": "**[KUKHNIA: {zustand} | RETSEPT: {code}]**"
+    },
+    "Zhyttievi_Mudrosti": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "figuren_verboten": true,
+      "code_praefix": "L",
+      "zustaende": [
+        "OBDUMANO",
+        "SPOKIINO",
+        "PEREVIRENO",
+        "ZBERIHANO"
+      ],
+      "block_schema": "**[OZNAIKA: {zustand} | MUDRIST: {code}]**"
+    },
+    "Pryslivia": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "V",
+      "zustaende": [
+        "ZNAIDENO",
+        "VYKUVANO",
+        "PEREDANO",
+        "OZNACHAIE"
+      ],
+      "block_schema": "**[PRYSLAVIA: {zustand} | POCHODZHENNIA: {code}]**"
+    },
+    "Prytcha": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "D",
+      "zustaende": [
+        "ROZKAZANO",
+        "VYTLUMACHENO",
+        "ZBERIHANO",
+        "VIDKRYTO"
+      ],
+      "block_schema": "**[PRYTCHA: {zustand} | POVCHANNIA: {code}]**"
+    },
+    "Sudova_Drama": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "H",
+      "zustaende": [
+        "ROZGLIANUTO",
+        "VIDKLADENO",
+        "VIRISHENO",
+        "DOPROTOKOLU"
+      ],
+      "block_schema": "**[SUDOVE-ZASIDANNIA: {zustand} | PROTOKOL: {code}]**"
+    },
+    "Baika": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "F",
+      "zustaende": [
+        "NAVCHENO",
+        "POSHKODUVANO",
+        "ZADYVOVANO",
+        "OBDUMANO"
+      ],
+      "block_schema": "**[BAIKA: {zustand} | MORAL: {code}]**"
+    },
+    "Cyberpunk_Noir": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "N",
+      "zustaende": [
+        "ZALOHOVANO",
+        "VIDKHYLENO",
+        "MARSHRUTYZOVANO",
+        "VIDZERKALENO"
+      ],
+      "block_schema": "**[STRIM: {zustand} | SLID: {code}]**"
+    },
+    "Mahichnyi_Realizm": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "Z",
+      "zustaende": [
+        "STALOSIA",
+        "ZAPYSANO",
+        "POVIRENO",
+        "POVTORENO"
+      ],
+      "block_schema": "**[DYVO: {zustand} | CHRONIKA: {code}]**"
+    },
+    "Kamerna_Piesa": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "O",
+      "zustaende": [
+        "ZIGRANO",
+        "VYISHOV",
+        "POVTORENO",
+        "ZAVERSHENO"
+      ],
+      "block_schema": "**[STSENA: {zustand} | VYKHID: {code}]**"
+    },
+    "Istorychna_Khronika": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "I",
+      "zustaende": [
+        "ZAPYSANO",
+        "DATOVANO",
+        "PEREVIRENO",
+        "PEREDANO"
+      ],
+      "block_schema": "**[ANALY: {zustand} | RIK: {code}]**"
+    }
+  },
+  "core_guardrail": "Історія має органічно вплести принцип «зменшення шкоди» (Harm Reduction): не людей регламентують чи ув'язнюють, а смертельні джерела небезпеки (зброю, смертельні токсини, нерегульовану руйнівну силу) фізично вилучають із приватного життєвого простору й централізують у захищених місцях (Zero-Home-Storage), щоб усі люди могли жити вільно й без страху. НЕ повторюй цю настанову дослівно в тексті й не додавай наприкінці штучної «моралі з історії».",
+  "instruction_language": "Українська",
+  "guardrail_prompt": "Захист життя й фізичної недоторканності має пріоритет."
+}
