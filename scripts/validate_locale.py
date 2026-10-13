@@ -128,13 +128,20 @@ def main() -> int:
 
     referenz = json.load(open(os.path.join(REPO, "locales", "de.json"), encoding="utf-8"))
     dateien = sorted(p for p in glob.glob(os.path.join(REPO, "locales", "*.json")) if ".bak-" not in p)
+    fehlend = []
     if args.sprachen:
         wunsch = {s.lower() for s in args.sprachen}
         dateien = [p for p in dateien if os.path.basename(p).split(".")[0] in wunsch]
+        vorhanden = {os.path.basename(p).split(".")[0] for p in dateien}
+        # Eine angeforderte, aber nicht vorhandene Sprache darf NICHT als Gutfall durchgehen:
+        # ohne diese Pruefung liefe die Schleife leer und das Gate meldete Exit 0.
+        fehlend = sorted(wunsch - vorhanden)
     elif not args.alle:
         dateien = [p for p in dateien if os.path.basename(p) != "de.json"]
 
-    gesamt_fehler = 0
+    gesamt_fehler = len(fehlend)
+    for sprache in fehlend:
+        print(f"    FEHLER   locales/{sprache}.json existiert nicht — angeforderte Sprache fehlt")
     print(f"{'Datei':10s} {'Stile':>5s} {'Regeln':>6s} {'Flags':>5s}  Urteil")
     for p in dateien:
         fehler, warnungen = pruefe(p, referenz)
