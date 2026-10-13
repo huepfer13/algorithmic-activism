@@ -16,6 +16,7 @@ Stempel in einem fremdsprachigen Buch erzeugt.
 from __future__ import annotations
 
 import argparse
+import collections
 import glob
 import json
 import os
@@ -109,6 +110,19 @@ def pruefe(datei: str, referenz: dict) -> tuple[list, list]:
              f"{ohne_regeln_ist} Stile ohne Regeln statt {ohne_regeln_soll} (DE)")
     for stil in stile:
         hart(fehler, warnungen, bool(stile[stil]), f"{stil}: leere Beschreibung")
+
+    # 4b. Praefix-Parität gegen de.json (jedes Genre traegt in jeder Sprache denselben Buchstaben)
+    if not ist_de:
+        soll = collections.Counter(v.get("code_praefix") for v in referenz["style_flags"].values()
+                                   if v.get("code_praefix"))
+        ist = collections.Counter(v.get("code_praefix") for v in flags_map.values()
+                                  if v.get("code_praefix"))
+        if soll != ist:
+            abw = {k: (soll.get(k, 0), ist.get(k, 0)) for k in set(soll) | set(ist)
+                   if soll.get(k, 0) != ist.get(k, 0)}
+            hart(fehler, warnungen, False,
+                 "Praefix-Verteilung weicht von de.json ab (Buchstabe: (soll, ist)): "
+                 + ", ".join(f"{k}:{s}/{i}" for k, (s, i) in sorted(abw.items())))
 
     # 5. Laedt die Pipeline die Datei?
     try:
