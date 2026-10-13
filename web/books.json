@@ -2211,16 +2211,17 @@
       "pov": "third_person",
       "setting_summary": "Verse ledgers of the commons: five lines that dismantle grand decrees.",
       "characters": [],
-      "chapter_count": 5,
+      "chapter_count": 6,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
         "art_05",
-        "art_09"
+        "art_09",
+        "art_12"
       ],
-      "words": 1728,
-      "reading_minutes": 9,
+      "words": 2094,
+      "reading_minutes": 10,
       "cover": null,
       "chapters": [
         {
@@ -2329,6 +2330,24 @@
           "genre": "Limericks",
           "leak_free": "true",
           "words": 329,
+          "reading_minutes": 2
+        },
+        {
+          "file": "06_art_12_abschnitt_6_the_silted_contact.md",
+          "index": 6,
+          "title": "Abschnitt 6: The Silted Contact",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "515",
+          "manual_ending_code": "A-12-06",
+          "backend": "deepseek",
+          "genre": "Limericks",
+          "leak_free": "true",
+          "words": 366,
           "reading_minutes": 2
         }
       ]
