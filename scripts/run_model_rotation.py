@@ -51,12 +51,39 @@ POOL = [
 # belegt 2026-10-12). Ein lokales Modell springt dann auf den naechsten Band.
 NUR_API_MODELLE = ("buch_001_",)
 
+# Modelle, die unter Versmass unbrauchbar sind (belegt 2026-10-13, buch_018): super-120b brauchte
+# 24,29 Token je Wort und ueber 5 Minuten je Kapitel, waehrend deepseek 1,36 und ultra-550b 4,99
+# lagen. Sie werden fuer Genres mit "stanza_zeilen" (Lyrik) uebersprungen.
+KEIN_VERSMASS = ("nvidia/nemotron-3-super-120b-a12b:free",)
+_LOCALE_CACHE: dict = {}
 
-def band_waehlen(alle: list, index: int, backend: str) -> str:
-    """Naechster erlaubter Band ab index; lokale Modelle ueberspringen NUR_API_MODELLE."""
+
+def _stil_flags(book_id: str) -> dict:
+    """Flags des Buchstils aus der Locale seiner eigenen Sprache (mit kleinem Cache)."""
+    pfad = os.path.join(REPO, "menschenrechte_books", book_id, "book.json")
+    meta = json.load(open(pfad, encoding="utf-8"))
+    sprache = (meta.get("language") or "DE").upper()
+    if sprache not in _LOCALE_CACHE:
+        loc = json.load(open(os.path.join(REPO, "locales", sprache.lower() + ".json"), encoding="utf-8"))
+        _LOCALE_CACHE[sprache] = loc
+    return _LOCALE_CACHE[sprache].get("style_flags", {}).get(meta.get("style") or "", {})
+
+
+def band_erlaubt(book_id: str, modell: str) -> bool:
+    """Versmass-Genres nur mit Modellen, die sie messbar beherrschen."""
+    if modell not in KEIN_VERSMASS:
+        return True
+    return not _stil_flags(book_id).get("stanza_zeilen")
+
+
+def band_waehlen(alle: list, index: int, backend: str, modell: str = "") -> str:
+    """Naechster erlaubter Band ab index; lokale Modelle ueberspringen NUR_API_MODELLE,
+    Versmass-Modelle ueberspringen Lyrik-Baende."""
     for versatz in range(len(alle)):
         kandidat = alle[(index + versatz) % len(alle)]
         if backend == "ollama" and kandidat.startswith(NUR_API_MODELLE):
+            continue
+        if modell and not band_erlaubt(kandidat, modell):
             continue
         return kandidat
     raise RuntimeError("kein zulaessiger Band im Pool — Sperrliste zu gross?")
@@ -180,7 +207,7 @@ def main() -> int:
     offen = 0
     for runde in range(1, args.runden + 1):
         for i, (modell, backend) in enumerate(POOL):
-            buch = band_waehlen(alle, ((runde - 1) * len(POOL) + i) % len(alle), backend)
+            buch = band_waehlen(alle, ((runde - 1) * len(POOL) + i) % len(alle), backend, modell)
             if f"r{runde}:{modell}:{buch}" not in z["erledigt"]:
                 offen += 1
     print(f"[Runner] {len(alle)} Buecher | {len(POOL)} Modelle | {args.runden} Runden "
@@ -194,7 +221,7 @@ def main() -> int:
             # buch_015 bis buch_018 fielen aus dem Lauf (belegt 2026-10-12). Mit Schrittweite 1 ueber
             # den gesamten Slot-Index kommt jeder Band zuverlaessig dran.
             slot = (runde - 1) * len(POOL) + i
-            buch = band_waehlen(alle, slot % len(alle), backend)
+            buch = band_waehlen(alle, slot % len(alle), backend, modell)
             marke = f"r{runde}:{modell}:{buch}"
             if marke in z["erledigt"]:
                 continue
