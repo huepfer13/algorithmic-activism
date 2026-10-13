@@ -167,7 +167,9 @@ def git_schritt(buch_id: str, runde: int, modell: str) -> str:
         subprocess.run(["git", "add", "menschenrechte_books", "web/books.json", "web/api/"], cwd=REPO,
                        capture_output=True)
         nachricht = f"feat(rotation): Runde {runde} — {modell} in {buch_id}"
-        committen = subprocess.run(["git", "commit", "-q", "-m", nachricht], cwd=REPO,
+        committen = subprocess.run(["git", "-c", "user.name=agent-runner-xomni",
+                                     "-c", "user.email=agent-runner-xomni@homelab",
+                                     "commit", "-q", "-m", nachricht], cwd=REPO,
                                    capture_output=True, text=True)
         fcntl.flock(sperre, fcntl.LOCK_UN)
     if committen.returncode != 0 and "nothing to commit" not in (committen.stdout + committen.stderr):
