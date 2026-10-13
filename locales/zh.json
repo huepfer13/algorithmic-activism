@@ -1,0 +1,426 @@
+{
+  "language_code": "ZH",
+  "language_name": "简体中文",
+  "styles": {
+    "寓言": "寓言式叙述：将洞见裹入意象，结尾不作训诫。",
+    "科幻反乌托邦": "反乌托邦科幻故事：讲述悄然丧失控制的危险。",
+    "动物寓言": "动物寓言：会说话的动物，从行动中自然生出的教益。",
+    "哲学随笔": "叙事性的、随笔式的思考空间。",
+    "赛博朋克黑色": "霓虹、雨夜、企业：影子经济中的感官与抵抗。",
+    "法庭剧": "仲裁庭前的审理：证人证言、证据、法律理由。",
+    "魔幻现实主义": "奇迹即日常：不可能之事像天气一样被记录在案。",
+    "历史编年": "编年史：带日期的条目，一项法律发展的起因与后果。",
+    "室内剧": "一个房间，少数人物，一切要义都在对话之中。",
+    "设备手册": "技术文档与操作手册：冷静、官僚的工程语调。分节编排，警示（依 ISO 3864 分为 危险、警告、提示），功能说明、维护周期与故障诊断表。人与情感被登记为操作单元、生物子系统或故障源。本手册是对去人性化行政语言的讽刺性批判：所描述的操作是批判本身，而非建议。",
+    "童话": "经典艺术童话：超越时间，意象丰盈，具原型性。考验、门槛、手艺与分享的面包。没有犬儒的官僚腔。",
+    "儿童书": "适合儿童的叙述：温暖、具体、简单的主句，动物与儿童作为行动者。权利作为具体行动变得可见。",
+    "太阳朋克": "建设性乌托邦：去中心化的共同体，经过检验的方案，扎实的技术为权利服务。",
+    "书信体小说": "书信体报告：分隔两地者之间编号的急件，高度内省。",
+    "讽刺文学": "政治怪诞：过度膨胀的机器使一项简单的权利无法执行。",
+    "哥特": "怪奇小说：一座不断变化的宅邸，而居住者遗忘了自己的自由。",
+    "宣言": "修辞性的呼吁：以节奏鲜明的宣告反对专断、迫害与沉默。",
+    "日记": "虚构日记：来自被隔离禁区的带日期笔记，权利悄然流失。",
+    "笑话集": "精炼的短场景：以幽默为武器对抗专断与官腔，不取笑受害者。",
+    "食谱": "公地食谱集：食材、步骤，以分量与分钟计量的照料。",
+    "人生智慧": "静观的洞见：格言式、随笔式、从容。",
+    "谚语": "古老说法的来历与含义：词源学的微型小品，富有教益。"
+  },
+  "core_guardrail": "故事必须有机地编织 减害 原则：被约束或被关押的不是人，而是致命的危险源（武器、致命毒素、不受管制的破坏力）被物理地移出私人生活空间，集中存放于安全场所（Zero-Home-Storage），使所有人都能免于恐惧、自由生活。不要逐字重复这条指令，也不要在结尾附上人为的故事寓意。",
+  "instruction_language": "简体中文",
+  "guardrail_prompt": "生命与身体完整性的保护优先。",
+  "style_rules": {
+    "设备手册": [
+      "至少两个 [危险]、[警告]、[提示] 标注块，每个都含条件与后果。",
+      "至少一个 故障码 E-<数字>：<故障> 格式的技术错误码，或一张诊断表。",
+      "文本以技术指令、错误码或维护步骤收尾，绝不以道德评判结尾。",
+      "人只作为操作单元、生物子系统或故障源出现；不用名字，不动怜悯，不用感叹号。",
+      "把所处理的联合国条款当作工厂参数或校准规定，而非引文，也不是呼吁。",
+      "不用直接引语，不用对话，不用人与人之间的情感动作或目光。本章必须以一条正式的诊断、维护或错误码条目收尾。"
+    ],
+    "童话": [
+      "以原型意象（门槛、考验、禁令）讲述，不美化暴力。",
+      "直接引语允许且欢迎。",
+      "结尾是一条正式的编年条目，置于行首，独立成行。"
+    ],
+    "儿童书": [
+      "从孩子或小动物的视角，用简单的主句讲述。",
+      "直接引语与情感允许且欢迎，结尾不作训诫。",
+      "结尾是一枚正式的印记，置于行首，独立成行。"
+    ],
+    "太阳朋克": [
+      "展示行之有效的、解放性的方案，而非反乌托邦。",
+      "直接引语与情感允许且欢迎。",
+      "结尾是一份正式的网络状态，置于行首，独立成行。"
+    ],
+    "书信体小说": [
+      "以书信或急件叙述，而非全知散文。",
+      "直接引语与情感允许且欢迎。",
+      "结尾是一则正式的急件批注，置于行首，独立成行。"
+    ],
+    "讽刺文学": [
+      "夸张机器，而不是在其下受苦的人。",
+      "直接引语与情感允许且欢迎。",
+      "结尾是一道正式的敕令，置于行首，独立成行。"
+    ],
+    "哥特": [
+      "营造氛围与不安，而不礼拜恐怖。",
+      "直接引语与情感允许且欢迎。",
+      "结尾是一道正式的编年门槛，置于行首，独立成行。"
+    ],
+    "宣言": [
+      "以呼吁宣告、论辩，不设人物调度。",
+      "不用直接引语（集体独白），情感与紧迫感允许。",
+      "结尾是一份正式的公告，置于行首，独立成行。"
+    ],
+    "日记": [
+      "写带日期的个人笔记，而非全知章节。",
+      "直接引语与情感允许且欢迎。",
+      "结尾是一则正式的日记条目，置于行首，独立成行。"
+    ],
+    "笑话集": [
+      "短小场景，包袱明确，对话允许且欢迎。",
+      "嘲笑机器，绝不嘲笑受害者。",
+      "结尾是一个正式的包袱，置于行首，独立成行。"
+    ],
+    "食谱": [
+      "清晰的食材与步骤逻辑，朴素而有感官性。",
+      "不用直接引语，不设人物调度（说明文）。",
+      "结尾是一条正式的厨房批注，置于行首，独立成行。"
+    ],
+    "人生智慧": [
+      "静观而格言式，不设人物调度。",
+      "不用直接引语（反思），情感作为姿态允许。",
+      "结尾是一则正式的洞见，置于行首，独立成行。"
+    ],
+    "谚语": [
+      "把说法的来历写成寓言式小品，富有教益。",
+      "直接引语与情感允许。",
+      "结尾是一个正式的说法，置于行首，独立成行。"
+    ],
+    "寓言": [
+      "讲述一则寓言；洞见源自行动，而非呼吁。",
+      "直接引语与情感允许。",
+      "结尾是一枚正式的寓言印记，置于行首，独立成行。"
+    ],
+    "法庭剧": [
+      "以场次推进审理；陈述与异议都在其中。",
+      "直接引语是必须且欢迎的。",
+      "结尾是一份正式的审理记录，置于行首，独立成行。"
+    ],
+    "动物寓言": [
+      "动物行动并开口；教益自会显现，不被说教。",
+      "直接引语与情感允许。",
+      "结尾是一条正式的寓言寓意，置于行首，独立成行。"
+    ],
+    "赛博朋克黑色": [
+      "贴近感官地叙述，迅速而富有氛围。",
+      "直接引语与情感允许。",
+      "结尾是一道正式的网络痕迹，置于行首，独立成行。"
+    ],
+    "魔幻现实主义": [
+      "把奇迹当作寻常事处理，不加解释。",
+      "直接引语与情感允许。",
+      "结尾是一部正式的奇迹编年，置于行首，独立成行。"
+    ],
+    "室内剧": [
+      "把地点收窄，把张力放进对话。",
+      "直接引语是必须且欢迎的。",
+      "结尾是一份正式的场次记录，置于行首，独立成行。"
+    ],
+    "历史编年": [
+      "以编年体书写，时间顺序清晰。",
+      "直接引语与情感允许。",
+      "结尾是一则正式的编年条目，置于行首，独立成行。"
+    ]
+  },
+  "style_flags": {
+    "设备手册": {
+      "manual_ending": true,
+      "figuren_verboten": true,
+      "code_praefix": "E",
+      "zustaende": [
+        "标称",
+        "降级",
+        "维护",
+        "复位"
+      ],
+      "block_schema": "**[STATUS: {zustand} | SUB-SYS: {code}]**"
+    },
+    "童话": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "M",
+      "zustaende": [
+        "守护",
+        "考验",
+        "照亮",
+        "盟约"
+      ],
+      "block_schema": "**[CHRONICLE: {zustand} | SEAL: {code}]**"
+    },
+    "儿童书": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "K",
+      "zustaende": [
+        "学会",
+        "被守护",
+        "分享",
+        "认得"
+      ],
+      "block_schema": "**[BOOK: {zustand} | CHAPTER: {code}]**"
+    },
+    "科幻反乌托邦": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "S",
+      "zustaende": [
+        "在线",
+        "同步",
+        "镜像",
+        "修补"
+      ],
+      "block_schema": "**[NODE: {zustand} | LOG: {code}]**"
+    },
+    "哲学随笔": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "code_praefix": "P",
+      "zustaende": [
+        "思量",
+        "核验",
+        "舍弃",
+        "斟酌"
+      ],
+      "block_schema": "**[THESIS: {zustand} | REFLECTION: {code}]**"
+    },
+    "太阳朋克": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "U",
+      "zustaende": [
+        "接入",
+        "供能",
+        "共享",
+        "验证"
+      ],
+      "block_schema": "**[COMMONS: {zustand} | NOTE: {code}]**"
+    },
+    "书信体小说": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "B",
+      "zustaende": [
+        "寄出",
+        "抵达",
+        "阅毕",
+        "封缄"
+      ],
+      "block_schema": "**[DOSSIER: {zustand} | REF: {code}]**"
+    },
+    "讽刺文学": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "G",
+      "zustaende": [
+        "已发",
+        "已裁",
+        "已准",
+        "已归档"
+      ],
+      "block_schema": "**[MINUTE: {zustand} | ITEM: {code}]**"
+    },
+    "哥特": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "W",
+      "zustaende": [
+        "封闭",
+        "穿行",
+        "保管",
+        "清点"
+      ],
+      "block_schema": "**[RECORD: {zustand} | LEDGER: {code}]**"
+    },
+    "宣言": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "figuren_verboten": true,
+      "code_praefix": "R",
+      "zustaende": [
+        "宣告",
+        "誓约",
+        "登记",
+        "确认"
+      ],
+      "block_schema": "**[MANIFEST: {zustand} | ARTICLE: {code}]**"
+    },
+    "日记": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "T",
+      "zustaende": [
+        "记下",
+        "标日",
+        "核验",
+        "已逝"
+      ],
+      "block_schema": "**[DIARY: {zustand} | ENTRY: {code}]**"
+    },
+    "笑话集": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "J",
+      "zustaende": [
+        "命中",
+        "稳坐",
+        "点燃",
+        "散去"
+      ],
+      "block_schema": "**[JOKE: {zustand} | NUMBER: {code}]**"
+    },
+    "食谱": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": false,
+      "figuren_verboten": true,
+      "code_praefix": "C",
+      "zustaende": [
+        "开火",
+        "烹成",
+        "分食",
+        "备齐"
+      ],
+      "block_schema": "**[RECIPE: {zustand} | SHEET: {code}]**"
+    },
+    "人生智慧": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "figuren_verboten": true,
+      "code_praefix": "L",
+      "zustaende": [
+        "沉思",
+        "从容",
+        "核验",
+        "守护"
+      ],
+      "block_schema": "**[APHORISM: {zustand} | FOLIO: {code}]**"
+    },
+    "谚语": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "V",
+      "zustaende": [
+        "寻得",
+        "铸成",
+        "流传",
+        "意谓"
+      ],
+      "block_schema": "**[PROVERB: {zustand} | FOLIO: {code}]**"
+    },
+    "寓言": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "D",
+      "zustaende": [
+        "讲述",
+        "解悟",
+        "留存",
+        "揭示"
+      ],
+      "block_schema": "**[PARABLE: {zustand} | LESSON: {code}]**"
+    },
+    "法庭剧": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "H",
+      "zustaende": [
+        "庭审",
+        "休庭",
+        "裁决",
+        "在案"
+      ],
+      "block_schema": "**[HEARING: {zustand} | RECORD: {code}]**"
+    },
+    "动物寓言": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "F",
+      "zustaende": [
+        "受教",
+        "惋惜",
+        "赞叹",
+        "深思"
+      ],
+      "block_schema": "**[FABLE: {zustand} | MORAL: {code}]**"
+    },
+    "赛博朋克黑色": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "N",
+      "zustaende": [
+        "已记录",
+        "已丢弃",
+        "已路由",
+        "已镜像"
+      ],
+      "block_schema": "**[FEED: {zustand} | TRACE: {code}]**"
+    },
+    "魔幻现实主义": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "Z",
+      "zustaende": [
+        "发生",
+        "备注",
+        "相信",
+        "重复"
+      ],
+      "block_schema": "**[WONDER: {zustand} | CHRONICLE: {code}]**"
+    },
+    "室内剧": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "O",
+      "zustaende": [
+        "上演",
+        "退场",
+        "重演",
+        "落幕"
+      ],
+      "block_schema": "**[SCENE: {zustand} | EXIT: {code}]**"
+    },
+    "历史编年": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "I",
+      "zustaende": [
+        "记载",
+        "定年",
+        "核验",
+        "传承"
+      ],
+      "block_schema": "**[ANNALS: {zustand} | YEAR: {code}]**"
+    }
+  }
+}
