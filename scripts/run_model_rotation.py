@@ -19,6 +19,7 @@ import fcntl
 import glob
 import json
 import os
+import random
 import subprocess
 import sys
 import time
@@ -182,9 +183,61 @@ def main() -> int:
     p.add_argument("--buecher", default=None,
                    help="Komma-Liste von Band-Praefixen, auf die der Lauf beschraenkt wird "
                         "(z.B. buch_015,buch_016); Default ist der ganze Bestand.")
+    p.add_argument("--kapitel", type=int, default=0,
+                   help="Deckel: nach genau N geschriebenen Kapiteln sauber stoppen (0 = kein Deckel).")
+    p.add_argument("--zufall", action="store_true",
+                   help="Kapitel an einem zufaelligen zugelassenen Band statt nach der Rotationsformel.")
+    p.add_argument("--neues-buch", action="store_true",
+                   help="Statt Kapiteln: ein neues Buchprojekt anlegen (Sprache aus --sprachen).")
+    p.add_argument("--sprachen", default="de,en",
+                   help="Sprach-Pool fuer --neues-buch (Default: Sprachen mit vollstaendiger Locale).")
     args = p.parse_args()
 
+    if args.neues_buch:
+
+        sprachen = [x.strip().lower() for x in args.sprachen.split(",") if x.strip()]
+
+        modell, backend = POOL[0]
+
+        lang = random.choice(sprachen)
+
+        print(f"[Runner] neues Buch: Sprache {lang.upper()}, Modell {modell} ({backend})", flush=True)
+
+        if args.dry_run:
+
+            print("[Runner] Trockenlauf — kein Buch angelegt.", flush=True)
+
+            return 0
+
+        r = subprocess.run([sys.executable, "generate_pipeline.py", "--mode", "new-book",
+
+                            "--lang", lang.upper(), "--backend", backend, "--model", modell],
+
+                           cwd=REPO, capture_output=True, text=True, timeout=7200)
+
+        for zeile in (r.stdout + r.stderr).strip().splitlines()[-6:]:
+
+            print("  " + zeile, flush=True)
+
+        if r.returncode != 0:
+
+            print(f"[Runner] new-book abgebrochen (exit={r.returncode}) — kein Commit.", flush=True)
+
+            return r.returncode
+
+        neu = sorted(buecher())[-1]
+
+        print(f"  git: {git_schritt(neu, 0, modell)}", flush=True)
+
+        if args.push:
+
+            subprocess.run(["git", "push", "origin", "main"], cwd=REPO, capture_output=True, timeout=30)
+
+        return 0
+
+
     alle = buecher()
+
     if args.buecher:
         wunsch = [b.strip() for b in args.buecher.split(",") if b.strip()]
         gefiltert = [b for b in alle if any(b.startswith(w) for w in wunsch)]
@@ -215,19 +268,35 @@ def main() -> int:
     print(f"[Runner] Pool: {', '.join(f'{m} ({b})' for m, b in POOL)}", flush=True)
 
     fehler = []
+
+    geschrieben = 0
+
+    deckel_erreicht = False
+
     for runde in range(1, args.runden + 1):
+
         for i, (modell, backend) in enumerate(POOL):
+
+            if args.kapitel and geschrieben >= args.kapitel:
+
+                deckel_erreicht = True
+
+                break
             # Fortlaufender Slot-Zaehler statt (i + runde): die alte Formel traf nur 13 der 18 Baende,
             # buch_015 bis buch_018 fielen aus dem Lauf (belegt 2026-10-12). Mit Schrittweite 1 ueber
             # den gesamten Slot-Index kommt jeder Band zuverlaessig dran.
             slot = (runde - 1) * len(POOL) + i
-            buch = band_waehlen(alle, slot % len(alle), backend, modell)
+            # Zufallsstart innerhalb der erlaubten Baende: band_waehlen() ueberspringt weiterhin
+            # Versmass-Baende fuer ungeeignete Modelle — auch im Zufallsmodus.
+            start_index = random.randrange(len(alle)) if args.zufall else slot % len(alle)
+            buch = band_waehlen(alle, start_index, backend, modell)
             marke = f"r{runde}:{modell}:{buch}"
             if marke in z["erledigt"]:
                 continue
             print(f"\n[Runde {runde}] {modell} ({backend}) -> {buch}", flush=True)
             if args.dry_run:
                 z["erledigt"].append(marke + ":dry")
+                geschrieben += 1
                 continue
             vorher = {os.path.basename(p) for p in glob.glob(
                 os.path.join(REPO, "menschenrechte_books", buch, "[0-9][0-9]_*.md"))}
@@ -252,10 +321,15 @@ def main() -> int:
             zustand_speichern(z)
             meldung = git_schritt(buch, runde, modell)
             print(f"  git: {meldung}", flush=True)
+            geschrieben += 1
             if args.push:
-                subprocess.run(["git", "push", "origin", "main"], cwd=REPO, capture_output=True)
+                subprocess.run(["git", "push", "origin", "main"], cwd=REPO,
+                               capture_output=True, timeout=30)
         if args.dry_run:
             print(f"[Runde {runde}] Plan ausgegeben", flush=True)
+            if deckel_erreicht:
+                print(f"[Runner] Kapitel-Deckel {args.kapitel} erreicht — sauberer Stopp.", flush=True)
+                break
     if not args.dry_run:
         zustand_speichern(z)
         print(f"\n[Runner] fertig. Fehlerhafte Laeufe: {fehler or 'keine'}", flush=True)
