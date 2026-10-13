@@ -195,7 +195,7 @@
       "manual_ending": true,
       "erlaube_rede": true,
       "erlaube_emotion": true,
-      "code_praefix": "P",
+      "code_praefix": "U",
       "zustaende": [
         "REPAIRED",
         "SHARED",
@@ -221,7 +221,7 @@
       "manual_ending": true,
       "erlaube_rede": true,
       "erlaube_emotion": true,
-      "code_praefix": "T",
+      "code_praefix": "G",
       "zustaende": [
         "NOTED",
         "DEFERRED",
@@ -234,7 +234,7 @@
       "manual_ending": true,
       "erlaube_rede": true,
       "erlaube_emotion": true,
-      "code_praefix": "G",
+      "code_praefix": "W",
       "zustaende": [
         "HAUNTED",
         "SEALED",
