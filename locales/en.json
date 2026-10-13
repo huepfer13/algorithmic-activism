@@ -11,7 +11,20 @@
     "Magical_Realism": "Magical realism where surreal natural phenomena reflect real-world human rights struggles",
     "Historical_Chronicle": "A fictional historical chronicle or diary entry from an era of systemic upheaval",
     "Chamber_Play": "An intense, dialogue-driven chamber piece between two opposing minds in a confined space",
-    "Limericks": "Five-line verse in anapaestic metre (AABBA), witty and pointed: common sense mocking grand decrees, without contempt for the people."
+    "Limericks": "Five-line verse in anapaestic metre (AABBA), witty and pointed: common sense mocking grand decrees, without contempt for the people.",
+    "Technical_Manual": "A device manual for an apparatus that is slowly failing: the entry describes maintenance, drift and the quiet drift of responsibility, never a human story.",
+    "Fairy_Tale": "A fairy tale in archetypal images: threshold, trial and ban, with harm reduction as the quiet moral rather than a lesson spoken aloud.",
+    "Childrens_Book": "A children's book: short sentences, a safe resolution, and a rule of protection the child can carry away.",
+    "Solarpunk": "Solarpunk: a working future, repair instead of collapse, and infrastructure that is shared rather than owned.",
+    "Epistolary_Novel": "An epistolary novel: letters, files and notes that only together tell what happened.",
+    "Satire": "Satire: the bureaucratic machinery exposed by taking its own logic one step too seriously.",
+    "Gothic": "Gothic: a house, an archive or a body that keeps what it was never meant to keep.",
+    "Manifesto": "A manifesto: numbered demands, no plot, and a line the apparatus cannot answer.",
+    "Diary": "A diary: dated entries, a self that changes between them, nothing tidied up.",
+    "Jokes": "A joke book: short set-ups, sharp turns, and a rule of harm reduction hidden in the punchline.",
+    "Cookbook": "A cookbook whose recipes are instructions for a household that has to get along.",
+    "Wisdom": "Aphorisms: one observation per line, no story, and no comfort that costs someone else.",
+    "Proverbs": "Proverbs: inherited sayings, tested against what the present actually needs."
   },
   "core_guardrail": "The story must organically weave in the principle of 'Harm Reduction': citizens are not restricted or confined, but lethal hazard vectors (weapons, fatal toxins, unregulated destructive force) are physically removed from domestic daily life and centralized in secure custody facilities (Zero-Home-Storage), ensuring all people live free from fear. Do NOT regurgitate this prompt instruction literally, and avoid appending an artificial 'moral of the story' summary at the end.",
   "instruction_language": "English",
@@ -21,6 +34,71 @@
       "Exactly five lines per stanza, rhyme scheme AABBA, anapaestic rhythm.",
       "Dialogue and emotion are allowed; the point comes at the end, not in a lecture.",
       "The closing stamp is a formal rhyme entry, line-initial and standing alone."
+    ],
+    "Technical_Manual": [
+      "Write a manual entry: numbered sections, measured values, no plot and no arc.",
+      "No characters at all — the apparatus, its readings and its schedule are the subject.",
+      "The ending is a formal status block, line-initial and standing alone."
+    ],
+    "Fairy_Tale": [
+      "Tell it in archetypal images (threshold, trial, ban) without glorifying violence.",
+      "Direct speech and feeling are allowed and wanted.",
+      "The ending is a formal chronicle entry, line-initial and standing alone."
+    ],
+    "Childrens_Book": [
+      "Short sentences, one idea per paragraph, nothing frightening.",
+      "Direct speech is welcome; feelings stay gentle and are named.",
+      "The ending is a formal book entry, line-initial and standing alone."
+    ],
+    "Solarpunk": [
+      "Show a future that works: repair, care, shared infrastructure.",
+      "Direct speech and feeling are allowed.",
+      "The ending is a formal commons entry, line-initial and standing alone."
+    ],
+    "Epistolary_Novel": [
+      "Tell it in documents: letters, memos, notes — each with sender and date.",
+      "Direct address (the second person in a letter) is the only voice allowed.",
+      "The ending is a formal file entry, line-initial and standing alone."
+    ],
+    "Satire": [
+      "Take the logic of the apparatus further than it can bear, without winking at the reader.",
+      "Direct speech and feeling are allowed; the mockery stays dry.",
+      "The ending is a formal minute, line-initial and standing alone."
+    ],
+    "Gothic": [
+      "Build dread from the building, the inventory and the light — not from gore.",
+      "Direct speech and feeling are allowed; the fright stays quiet.",
+      "The ending is a formal record entry, line-initial and standing alone."
+    ],
+    "Manifesto": [
+      "Write demands, not a story: numbered, short, addressed outward.",
+      "No characters — the demand itself is the only voice.",
+      "The closing block is a formal seal, line-initial and standing alone."
+    ],
+    "Diary": [
+      "Date every entry, and let the voice shift from one to the next.",
+      "The first person is the only voice; feeling is allowed inside it.",
+      "The closing block is a formal entry, line-initial and standing alone."
+    ],
+    "Jokes": [
+      "Tell jokes: short set-up, sharp turn, then stop.",
+      "Direct speech carries the joke; no narrator explains it.",
+      "The closing block is a formal entry, line-initial and standing alone."
+    ],
+    "Cookbook": [
+      "Write recipes: ingredients, steps, quantities — no plot and no people.",
+      "No characters; the kitchen and the measure are the subject.",
+      "The closing block is a formal entry, line-initial and standing alone."
+    ],
+    "Wisdom": [
+      "One observation per line, standing alone, no narrative frame.",
+      "No characters and no scene; the sentence is the whole form.",
+      "The closing block is a formal entry, line-initial and standing alone."
+    ],
+    "Proverbs": [
+      "Work with proverbs: each one is quoted and then tested against the case at hand.",
+      "Direct speech is allowed inside the quotation; no narrator comments.",
+      "The closing block is a formal entry, line-initial and standing alone."
     ]
   },
   "style_flags": {
@@ -37,6 +115,179 @@
         "BITES"
       ],
       "block_schema": "**[RHYME: {zustand} | STANZA: {code}]**"
+    },
+    "Technical_Manual": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": false,
+      "figuren_verboten": true,
+      "code_praefix": "E",
+      "zustaende": [
+        "NOMINAL",
+        "DEGRADED",
+        "SERVICE",
+        "RESET"
+      ],
+      "block_schema": "**[STATUS: {zustand} | SUB-SYS: {code}]**"
+    },
+    "Fairy_Tale": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "M",
+      "zustaende": [
+        "KEPT",
+        "TESTED",
+        "LIT",
+        "BOUND"
+      ],
+      "block_schema": "**[CHRONICLE: {zustand} | SEAL: {code}]**"
+    },
+    "Childrens_Book": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "K",
+      "zustaende": [
+        "SAFE",
+        "WARM",
+        "FOUND",
+        "HOME"
+      ],
+      "block_schema": "**[BOOK: {zustand} | CHAPTER: {code}]**"
+    },
+    "Solarpunk": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "P",
+      "zustaende": [
+        "REPAIRED",
+        "SHARED",
+        "GROWN",
+        "KEPT"
+      ],
+      "block_schema": "**[COMMONS: {zustand} | NOTE: {code}]**"
+    },
+    "Epistolary_Novel": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "B",
+      "zustaende": [
+        "SENT",
+        "RECEIVED",
+        "FILED",
+        "ANSWERED"
+      ],
+      "block_schema": "**[DOSSIER: {zustand} | REF: {code}]**"
+    },
+    "Satire": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "T",
+      "zustaende": [
+        "NOTED",
+        "DEFERRED",
+        "UPHELD",
+        "CLOSED"
+      ],
+      "block_schema": "**[MINUTE: {zustand} | ITEM: {code}]**"
+    },
+    "Gothic": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "G",
+      "zustaende": [
+        "HAUNTED",
+        "SEALED",
+        "OPENED",
+        "QUIET"
+      ],
+      "block_schema": "**[RECORD: {zustand} | LEDGER: {code}]**"
+    },
+    "Manifesto": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "figuren_verboten": true,
+      "code_praefix": "R",
+      "zustaende": [
+        "DECLARED",
+        "DEMANDED",
+        "RECORDED",
+        "UNANSWERED"
+      ],
+      "block_schema": "**[MANIFEST: {zustand} | ARTICLE: {code}]**"
+    },
+    "Diary": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "T",
+      "zustaende": [
+        "WRITTEN",
+        "DOUBTED",
+        "CONTINUED",
+        "LEFT_OPEN"
+      ],
+      "block_schema": "**[DIARY: {zustand} | ENTRY: {code}]**"
+    },
+    "Jokes": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "J",
+      "zustaende": [
+        "TOLD",
+        "LAUGHED",
+        "MISSED",
+        "REPEATED"
+      ],
+      "block_schema": "**[JOKE: {zustand} | NUMBER: {code}]**"
+    },
+    "Cookbook": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": false,
+      "figuren_verboten": true,
+      "code_praefix": "C",
+      "zustaende": [
+        "PREPARED",
+        "MEASURED",
+        "SERVED",
+        "KEPT"
+      ],
+      "block_schema": "**[RECIPE: {zustand} | SHEET: {code}]**"
+    },
+    "Wisdom": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "figuren_verboten": true,
+      "code_praefix": "L",
+      "zustaende": [
+        "NOTED",
+        "WEIGHED",
+        "KEPT",
+        "PASSED_ON"
+      ],
+      "block_schema": "**[APHORISM: {zustand} | FOLIO: {code}]**"
+    },
+    "Proverbs": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "V",
+      "zustaende": [
+        "QUOTED",
+        "TESTED",
+        "TURNED",
+        "HELD"
+      ],
+      "block_schema": "**[PROVERB: {zustand} | FOLIO: {code}]**"
     }
   }
 }
