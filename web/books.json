@@ -2211,10 +2211,12 @@
       "pov": "third_person",
       "setting_summary": "Verse ledgers of the commons: five lines that dismantle grand decrees.",
       "characters": [],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 88,
-      "reading_minutes": 1,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 354,
+      "reading_minutes": 2,
       "cover": null,
       "chapters": [
         {
@@ -2233,6 +2235,24 @@
           "genre": "",
           "leak_free": "",
           "words": 88,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_01_abschnitt_1_the_clerk_of_the_pneumatic_l.md",
+          "index": 1,
+          "title": "Abschnitt 1: The Clerk of the Pneumatic Line",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "4.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "359",
+          "manual_ending_code": "A-01-01",
+          "backend": "deepseek",
+          "genre": "Limericks",
+          "leak_free": "true",
+          "words": 266,
           "reading_minutes": 1
         }
       ]
