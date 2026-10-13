@@ -1,0 +1,426 @@
+{
+  "language_code": "PT",
+  "language_name": "Português",
+  "styles": {
+    "Parábola": "Narrativa parabólica: uma intuição revestida de imagens, sem lição moral no final.",
+    "SciFi_Distopia": "Uma narrativa distópica de ficção científica sobre os perigos da perda insidiosa de controlo",
+    "Fábula": "Fábula animal: animais que falam, uma lição que decorre da ação.",
+    "Ensaio_Filosófico": "Um espaço de pensamento narrativo e ensaístico",
+    "Cyberpunk_Noir": "Néon, chuva, empresas: sensorialidade e resistência na economia subterrânea.",
+    "Drama_Judicial": "Audiência perante uma câmara arbitral: testemunhos, provas, fundamentações jurídicas.",
+    "Realismo_Mágico": "O maravilhoso como quotidiano: o impossível é registado como o tempo.",
+    "Crónica_Histórica": "Anais: entradas datadas, causas e consequências de uma evolução jurídica.",
+    "Drama_de_Câmara": "Um só espaço, poucas personagens, tudo o essencial no diálogo.",
+    "Manual_Técnico": "Documentação técnica e manual de instruções: tom de engenharia sóbrio e burocrático. Estruturado em secções, advertências (PERIGO/ADVERTÊNCIA/AVISO segundo a ISO 3864), descrições de funcionamento, intervalos de manutenção e tabelas de diagnóstico de falhas. As pessoas e os sentimentos são inventariados como 'unidades de comando', 'subsistemas biológicos' ou 'fontes de erro'. O manual está concebido como crítica satírica à linguagem administrativa desumanizadora: as intervenções descritas são a crítica, não a recomendação.",
+    "Conto_de_Fadas": "Conto de fadas clássico: intemporal, rico em imagens, arquetípico. Provas, limiares, ofício e pão partilhado. Sem linguagem burocrática cínica.",
+    "Livro_Infantil": "Narrativa para crianças: calorosa, viva, frases simples, animais e crianças como protagonistas. Os direitos tornam-se visíveis como ação concreta.",
+    "Solarpunk": "Utopia construtiva: comunidade descentralizada, soluções testadas, técnica concreta ao serviço dos direitos.",
+    "Romance_Epistolar": "Relato epistolar: despachos numerados entre pessoas separadas, alta introspeção.",
+    "Sátira": "Grotesco político: um aparato desmedido torna inexecutáveis direitos simples.",
+    "Gótico": "Weird fiction: uma casa que muda enquanto os seus habitantes esquecem a liberdade.",
+    "Manifesto": "Apelo retórico: declamação rítmica contra a arbitrariedade, a perseguição e o silêncio.",
+    "Diário": "Diário ficcional: notas datadas de uma zona de exclusão isolada, perda progressiva de direitos.",
+    "Livro_de_Piadas": "Cenas breves e incisivas: o humor como arma contra a arbitrariedade e a solenidade oficial, sem desprezo pelas pessoas afetadas.",
+    "Livro_de_Receitas": "Coleção de receitas dos comuns: ingredientes, passos, cuidado em medida e minuto.",
+    "Aforismos": "Intuições contemplativas: aforísticas, ensaísticas, serenas.",
+    "Provérbios": "Origem e sentido de antigas expressões: miniaturas etimológicas, instrutivas."
+  },
+  "style_rules": {
+    "Manual_Técnico": [
+      "Pelo menos dois blocos de sinalização de [PERIGO], [ADVERTÊNCIA] ou [AVISO] — cada um com condição e consequência.",
+      "Pelo menos um código de erro técnico no formato 'Código de erro E-<número>: <avaria>' ou uma tabela de diagnóstico.",
+      "O texto termina com uma instrução técnica, um código de erro ou um passo de manutenção — nunca com uma avaliação moral.",
+      "Apresentar as pessoas exclusivamente como unidades de comando, subsistemas biológicos ou fontes de erro; nenhum nome próprio, nenhuma compaixão, nenhum ponto de exclamação.",
+      "Trata o artigo da ONU em causa como parâmetro de fábrica ou indicação de calibração, nem como citação nem como apelo.",
+      "Sem discurso direto, sem diálogos, sem ações emocionais nem olhares entre pessoas. O capítulo termina obrigatoriamente com um registo formal de diagnóstico, manutenção ou código de erro."
+    ],
+    "Conto_de_Fadas": [
+      "Narra com imagens arquetípicas (limiar, prova, encanto), sem glorificar a violência.",
+      "O discurso direto é permitido e desejado.",
+      "O final é um registo formal de crónica, no início da linha e isolado."
+    ],
+    "Livro_Infantil": [
+      "Narra do ponto de vista de uma criança ou de um pequeno animal, em frases simples.",
+      "O discurso direto e os sentimentos são permitidos e desejados, sem lição moral no final.",
+      "O final é um selo formal, no início da linha e isolado."
+    ],
+    "Solarpunk": [
+      "Mostra soluções emancipadoras que funcionam em vez de distopia.",
+      "O discurso direto e os sentimentos são permitidos e desejados.",
+      "O final é um estado de rede formal, no início da linha e isolado."
+    ],
+    "Romance_Epistolar": [
+      "Narra em cartas/despachos, não em prosa autoral.",
+      "O discurso direto e os sentimentos são permitidos e desejados.",
+      "O final é uma nota formal de despacho, no início da linha e isolado."
+    ],
+    "Sátira": [
+      "Exagera o aparato, não as pessoas que sofrem sob ele.",
+      "O discurso direto e os sentimentos são permitidos e desejados.",
+      "O final é um decreto formal, no início da linha e isolado."
+    ],
+    "Gótico": [
+      "Cria atmosfera e inquietação, sem celebrar o horror.",
+      "O discurso direto e os sentimentos são permitidos e desejados.",
+      "O final é um limiar formal de crónica, no início da linha e isolado."
+    ],
+    "Manifesto": [
+      "Declama, argumenta através de apelos, sem encenação de personagens.",
+      "Sem discurso direto (monólogo coletivo), sentimentos e urgência permitidos.",
+      "O final é uma proclamação formal, no início da linha e isolado."
+    ],
+    "Diário": [
+      "Escreve notas pessoais datadas em vez de capítulos autorais.",
+      "O discurso direto e os sentimentos são permitidos e desejados.",
+      "O final é um registo formal de diário, no início da linha e isolado."
+    ],
+    "Livro_de_Piadas": [
+      "Cenas curtas com um remate claro, diálogo permitido e desejado.",
+      "Ri-te do aparato, nunca das pessoas afetadas.",
+      "O final é um remate formal, no início da linha e isolado."
+    ],
+    "Livro_de_Receitas": [
+      "Lógica clara de ingredientes e passos, sem pretensão e sensorial.",
+      "Sem discurso direto, sem encenação de personagens (texto técnico).",
+      "O final é uma nota formal de cozinha, no início da linha e isolado."
+    ],
+    "Aforismos": [
+      "Contemplativo e aforístico, sem encenação de personagens.",
+      "Sem discurso direto (reflexão), sentimentos como atitude permitidos.",
+      "O final é uma intuição formal, no início da linha e isolado."
+    ],
+    "Provérbios": [
+      "Narra a origem da expressão como uma miniatura de fábula, instrutiva.",
+      "O discurso direto e os sentimentos são permitidos.",
+      "O final é um giro formal, no início da linha e isolado."
+    ],
+    "Parábola": [
+      "Narra uma parábola; a intuição nasce da ação, não de um apelo.",
+      "O discurso direto e os sentimentos são permitidos.",
+      "O final é um selo formal de parábola, no início da linha e isolado."
+    ],
+    "Drama_Judicial": [
+      "Conduz a audiência em cenas; as declarações e as objeções fazem parte dela.",
+      "O discurso direto é obrigatório e desejado.",
+      "O final é uma ata formal da audiência, no início da linha e isolado."
+    ],
+    "Fábula": [
+      "Os animais agem e falam; a lição mostra-se, não é pregada.",
+      "O discurso direto e os sentimentos são permitidos.",
+      "O final é uma moral formal de fábula, no início da linha e isolado."
+    ],
+    "Cyberpunk_Noir": [
+      "Narra junto à sensorialidade, rápido e atmosférico.",
+      "O discurso direto e os sentimentos são permitidos.",
+      "O final é um rasto de rede formal, no início da linha e isolado."
+    ],
+    "Realismo_Mágico": [
+      "Trata o maravilhoso com naturalidade, sem o explicar.",
+      "O discurso direto e os sentimentos são permitidos.",
+      "O final é uma crónica formal do prodígio, no início da linha e isolado."
+    ],
+    "Drama_de_Câmara": [
+      "Mantém o espaço fechado e a tensão na fala.",
+      "O discurso direto é obrigatório e desejado.",
+      "O final é uma ata formal de cena, no início da linha e isolado."
+    ],
+    "Crónica_Histórica": [
+      "Escreve em forma de anais com uma sequência temporal clara.",
+      "O discurso direto e os sentimentos são permitidos.",
+      "O final é um registo formal de anais, no início da linha e isolado."
+    ]
+  },
+  "style_flags": {
+    "Manual_Técnico": {
+      "manual_ending": true,
+      "figuren_verboten": true,
+      "code_praefix": "E",
+      "zustaende": [
+        "NOMINAL",
+        "DEGRADADO",
+        "SERVICO",
+        "REINICIO"
+      ],
+      "block_schema": "**[ESTADO: {zustand} | ARQUIVO: {code}]**"
+    },
+    "Conto_de_Fadas": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "M",
+      "zustaende": [
+        "CONSERVADO",
+        "TESTADO",
+        "ILUMINADO",
+        "GARANTIDO"
+      ],
+      "block_schema": "**[CRONICA: {zustand} | SELO: {code}]**"
+    },
+    "Livro_Infantil": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "K",
+      "zustaende": [
+        "APRENDIDO",
+        "PROTEGIDO",
+        "COMPARTILHADO",
+        "RECONHECIDO"
+      ],
+      "block_schema": "**[LIVRO-INFANTIL: {zustand} | CAPITULO: {code}]**"
+    },
+    "SciFi_Distopia": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "S",
+      "zustaende": [
+        "ONLINE",
+        "SINCRONIZADO",
+        "ESPELHADO",
+        "CORRIGIDO"
+      ],
+      "block_schema": "**[NODO: {zustand} | REGISTO: {code}]**"
+    },
+    "Ensaio_Filosófico": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "code_praefix": "P",
+      "zustaende": [
+        "CONSIDERADO",
+        "TESTADO",
+        "REJEITADO",
+        "PENSADO"
+      ],
+      "block_schema": "**[TESE: {zustand} | REFLEXAO: {code}]**"
+    },
+    "Solarpunk": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "U",
+      "zustaende": [
+        "ACOPLADO",
+        "ALIMENTADO",
+        "COMPARTILHADO",
+        "TESTADO"
+      ],
+      "block_schema": "**[REDE-COMUM: {zustand} | ESTADO: {code}]**"
+    },
+    "Romance_Epistolar": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "B",
+      "zustaende": [
+        "ENVIADO",
+        "RECEBIDO",
+        "LIDO",
+        "SELADO"
+      ],
+      "block_schema": "**[DESPACHO: {zustand} | SELO: {code}]**"
+    },
+    "Sátira": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "G",
+      "zustaende": [
+        "EMITIDO",
+        "DECRETADO",
+        "APROVADO",
+        "REGISTADO"
+      ],
+      "block_schema": "**[CIRCULAR: {zustand} | EMITIDO: {code}]**"
+    },
+    "Gótico": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "W",
+      "zustaende": [
+        "FECHADO",
+        "ATRAVESSADO",
+        "GUARDADO",
+        "CONTADO"
+      ],
+      "block_schema": "**[CRONICA: {zustand} | LIMIAR: {code}]**"
+    },
+    "Manifesto": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "code_praefix": "R",
+      "zustaende": [
+        "PROCLAMADO",
+        "CONJURADO",
+        "INSCRITO",
+        "CONFIRMADO"
+      ],
+      "block_schema": "**[PROCLAMACAO: {zustand} | REGISTO: {code}]**",
+      "figuren_verboten": true
+    },
+    "Diário": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "T",
+      "zustaende": [
+        "ANOTADO",
+        "DATADO",
+        "VERIFICADO",
+        "PASSADO"
+      ],
+      "block_schema": "**[ENTRADA: {zustand} | DATA: {code}]**"
+    },
+    "Livro_de_Piadas": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "J",
+      "zustaende": [
+        "ACERTA",
+        "ENCAIXA",
+        "ACENDE",
+        "DESINFLA"
+      ],
+      "block_schema": "**[REMATE: {zustand} | CODA: {code}]**"
+    },
+    "Livro_de_Receitas": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": false,
+      "code_praefix": "C",
+      "zustaende": [
+        "PREPARADO",
+        "COZINHADO",
+        "COMPARTILHADO",
+        "PRONTO"
+      ],
+      "block_schema": "**[COZINHA: {zustand} | RECEITA: {code}]**",
+      "figuren_verboten": true
+    },
+    "Aforismos": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "code_praefix": "L",
+      "zustaende": [
+        "PENSADO",
+        "SERENO",
+        "TESTADO",
+        "CONSERVADO"
+      ],
+      "block_schema": "**[PERCEPCAO: {zustand} | SABEDORIA: {code}]**",
+      "figuren_verboten": true
+    },
+    "Provérbios": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "V",
+      "zustaende": [
+        "ENCONTRADO",
+        "CUNHADO",
+        "TRANSMITIDO",
+        "SIGNIFICA"
+      ],
+      "block_schema": "**[DITO: {zustand} | ORIGEM: {code}]**"
+    },
+    "Parábola": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "D",
+      "zustaende": [
+        "NARRADO",
+        "INTERPRETADO",
+        "CONSERVADO",
+        "REVELADO"
+      ],
+      "block_schema": "**[PARABOLA: {zustand} | ENSINAMENTO: {code}]**"
+    },
+    "Drama_Judicial": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "H",
+      "zustaende": [
+        "JULGADO",
+        "ADIADO",
+        "DECIDIDO",
+        "EM_ATA"
+      ],
+      "block_schema": "**[JULGAMENTO: {zustand} | ATA: {code}]**"
+    },
+    "Fábula": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "F",
+      "zustaende": [
+        "ENSINADO",
+        "LAMENTADO",
+        "ADMIRADO",
+        "PENSADO"
+      ],
+      "block_schema": "**[FABULA: {zustand} | MORAL: {code}]**"
+    },
+    "Cyberpunk_Noir": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "N",
+      "zustaende": [
+        "REGISTADO",
+        "DESCARTADO",
+        "ENCAMINHADO",
+        "ESPELHADO"
+      ],
+      "block_schema": "**[FEED: {zustand} | RASTRO: {code}]**"
+    },
+    "Realismo_Mágico": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "Z",
+      "zustaende": [
+        "ACONTECIDO",
+        "ANOTADO",
+        "ACREDITADO",
+        "REPETIDO"
+      ],
+      "block_schema": "**[PRODIGIO: {zustand} | CRONICA: {code}]**"
+    },
+    "Drama_de_Câmara": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "O",
+      "zustaende": [
+        "REPRESENTADO",
+        "RETIRADO",
+        "REPETIDO",
+        "TERMINADO"
+      ],
+      "block_schema": "**[CENA: {zustand} | SAIDA: {code}]**"
+    },
+    "Crónica_Histórica": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "I",
+      "zustaende": [
+        "REGISTADO",
+        "DATADO",
+        "VERIFICADO",
+        "TRANSMITIDO"
+      ],
+      "block_schema": "**[ANAIS: {zustand} | ANO: {code}]**"
+    }
+  },
+  "core_guardrail": "A história deve entrelaçar organicamente o princípio da 'Redução de Danos': não são os cidadãos que são regulamentados ou encerrados, mas sim as fontes de perigo letal (armas, toxinas mortais, força destrutiva não regulada) que são fisicamente removidas da vida doméstica privada e centralizadas em locais seguros (Zero-Home-Storage), para que todas as pessoas possam viver sem medo e em liberdade. NÃO repitas esta instrução literalmente no texto e não acrescentes nenhuma 'moral da história' artificial ao final.",
+  "instruction_language": "Português",
+  "guardrail_prompt": "A proteção da vida e da integridade física tem prioridade."
+}

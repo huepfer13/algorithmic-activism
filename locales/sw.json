@@ -1,0 +1,426 @@
+{
+  "language_code": "SW",
+  "language_name": "Kiswahili",
+  "styles": {
+    "Mfano": "Simulizi la mfano: ufahamu umefungwa katika picha, bila mawaidha mwishoni.",
+    "Sayansi_Dystopia": "Simulizi la kubuni la sayansi la dystopia kuhusu hatari za kupoteza udhibiti kwa taratibu.",
+    "Hadithi_ya_Wanyama": "Hadithi ya wanyama: wanyama wanaozungumza, fundisho linalotokana na matendo.",
+    "Insha_ya_Falsafa": "Nafasi ya kufikiri ya kisimulizi na kimaandishi.",
+    "Cyberpunk_Noir": "Neoni, mvua, makampuni: hisi na upinzani katika uchumi wa kivuli.",
+    "Tamthilia_ya_Mahakama": "Kesi mbele ya baraza la usuluhishi: ushahidi wa mashahidi, vielelezo, hoja za kisheria.",
+    "Uhalisia_wa_Kichawi": "Ya ajabu kama maisha ya kila siku: kisichowezekana kinarekodiwa kama hali ya hewa.",
+    "Kumbukumbu_za_Historia": "Kumbukumbu: maandishi yenye tarehe, sababu na matokeo ya maendeleo ya kisheria.",
+    "Tamthilia_ya_Chumba": "Chumba kimoja, wahusika wachache, kila jambo la msingi katika mazungumzo.",
+    "Mwongozo_wa_Kifaa": "Nyaraka za kiufundi na mwongozo wa uendeshaji: sauti ya uhandisi ya ukavu na ya kiurasimu. Imepangwa kwa sehemu, tahadhari (HATARI/ONYO/TAARIFA kwa mujibu wa ISO 3864), maelezo ya utendaji, vipindi vya matengenezo na majedwali ya utambuzi wa hitilafu. Watu na hisia huorodheshwa kama 'vitengo vya uendeshaji', 'mifumo ndogo ya kibiolojia' au 'vyanzo vya hitilafu'. Mwongozo umeundwa kama ukosoaji wa kejeli dhidi ya lugha ya utawala inayomfanya mtu asiwe mtu: hatua zilizoelezwa ni ukosoaji, si pendekezo.",
+    "Hadithi_ya_Kale": "Hadithi ya kale ya kifasihi: isiyo na wakati, yenye picha nyingi, ya kihenga. Mitihani, vizingiti, ufundi na mkate ulioshirikiwa. Hakuna lugha ya kiurasimu ya dharau.",
+    "Kitabu_cha_Watoto": "Simulizi linalofaa watoto: la joto, la wazi, sentensi rahisi, wanyama na watoto kama watendaji. Haki zinaonekana kama matendo ya dhati.",
+    "Solarpunk": "Utopia ya kujenga: jamii isiyo na mfumo mmoja, suluhisho zilizojaribiwa, teknolojia ya dhati katika huduma ya haki.",
+    "Riwaya_ya_Barua": "Ripoti ya barua: barua zilizohesabiwa kati ya walioachana, utafakari wa ndani mwingi.",
+    "Kejeli": "Kejeli za kisiasa: mfumo unaozidi mipaka hufanya haki rahisi zisitekelezeke.",
+    "Gotiki": "Fasihi ya ajabu: nyumba inayobadilika, wakati wakazi wake wanasahau uhuru wao.",
+    "Tamko": "Mwito wa balagha: tamko la mdundo dhidi ya uonevu, ufuatiliaji na ukimya.",
+    "Shajara": "Shajara ya kubuni: maelezo yenye tarehe kutoka eneo lililozuiliwa peke yake, upotevu wa haki unaokuja taratibu.",
+    "Vichekesho": "Matukio mafupi yenye utani: ucheshi kama silaha dhidi ya uonevu na uzito wa kiofisi, bila dhihaka.",
+    "Mapishi": "Mkusanyiko wa mapishi ya jamii: viungo, hatua, uangalifu kwa kipimo na dakika.",
+    "Hekima": "Maarifa ya kutafakari: ya kimethali, ya kiinsha, ya utulivu.",
+    "Methali": "Asili na maana ya misemo ya kale: vielelezo vidogo vya asili ya maneno, vya kufundisha."
+  },
+  "core_guardrail": "Simulizi lazima liunganishe kiasili kanuni ya 'Kupunguza Madhara' (Harm Reduction): si kwamba watu wanawekewa masharti au wanafungwa, bali vyanzo vya hatari ya kifo (silaha, sumu mbaya, nguvu za uharibifu zisizodhibitiwa) huondolewa kifizikia kutoka maisha ya nyumbani ya kila siku na kuwekwa pamoja mahali salama (Zero-Home-Storage), ili watu wote waweze kuishi bila hofu na kwa uhuru. USIRUDIE maagizo haya kwa neno kwa neno katika maandishi, na usiongeze 'mawaidha' ya kutengeneza mwishoni.",
+  "instruction_language": "Kiswahili",
+  "guardrail_prompt": "Ulinzi wa uhai na uadilifu wa kimwili unatangulia.",
+  "style_rules": {
+    "Mfano": [
+      "Simulia mfano; ufahamu unatokana na matendo, si kwa mwito.",
+      "Usemi wa moja kwa moja na hisia zinaruhusiwa.",
+      "Mwisho ni muhuri rasmi wa mfano, mwanzoni mwa mstari na peke yake."
+    ],
+    "Hadithi_ya_Wanyama": [
+      "Wanyama wanatenda na kuzungumza; fundisho linajidhihirisha, halihubiriwa.",
+      "Usemi wa moja kwa moja na hisia zinaruhusiwa.",
+      "Mwisho ni maadili rasmi ya ngano, mwanzoni mwa mstari na peke yake."
+    ],
+    "Cyberpunk_Noir": [
+      "Simulia kwa karibu na hisi, kwa kasi na hali ya anga.",
+      "Usemi wa moja kwa moja na hisia zinaruhusiwa.",
+      "Mwisho ni alama rasmi ya mtandao, mwanzoni mwa mstari na peke yake."
+    ],
+    "Tamthilia_ya_Mahakama": [
+      "Endesha kesi kwa matukio; ushuhuda na pingamizi ni sehemu yake.",
+      "Usemi wa moja kwa moja unahitajika na unatarajiwa.",
+      "Mwisho ni kumbukumbu rasmi ya kesi, mwanzoni mwa mstari na peke yake."
+    ],
+    "Uhalisia_wa_Kichawi": [
+      "Shughulikia ya ajabu kwa kawaida, bila kuieleza.",
+      "Usemi wa moja kwa moja na hisia zinaruhusiwa.",
+      "Mwisho ni kumbukumbu rasmi ya maajabu, mwanzoni mwa mstari na peke yake."
+    ],
+    "Kumbukumbu_za_Historia": [
+      "Andika kwa mtindo wa kumbukumbu na mfuatano wazi wa muda.",
+      "Usemi wa moja kwa moja na hisia zinaruhusiwa.",
+      "Mwisho ni kiingilio rasmi cha kumbukumbu, mwanzoni mwa mstari na peke yake."
+    ],
+    "Tamthilia_ya_Chumba": [
+      "Weka mahali padogo na mvutano katika kuzungumza.",
+      "Usemi wa moja kwa moja unahitajika na unatarajiwa.",
+      "Mwisho ni kumbukumbu rasmi ya tukio, mwanzoni mwa mstari na peke yake."
+    ],
+    "Mwongozo_wa_Kifaa": [
+      "Angalau vitalu viwili vya alama vya [HATARI], [ONYO], [TAARIFA] — kila kimoja kiwe na sharti na matokeo.",
+      "Angalau msimbo mmoja wa hitilafu wa kiufundi kwa muundo 'Msimbo wa hitilafu E-<namba>: <hitilafu>' au jedwali la utambuzi.",
+      "Maandishi yanaisha kwa maelekezo ya kiufundi, msimbo wa hitilafu au hatua ya matengenezo — kamwe si kwa tathmini ya kimaadili.",
+      "Watu watajwe tu kama vitengo vya uendeshaji, mifumo ndogo ya kibiolojia au vyanzo vya hitilafu; hakuna jina la kwanza, hakuna huruma, hakuna alama ya mshangao.",
+      "Chukulia kifungu cha UN kinachojadiliwa kama kigezo cha kiwanda au maagizo ya urekebishaji, si kama nukuu na si kama mwito.",
+      "Hakuna usemi wa moja kwa moja, hakuna mazungumzo, hakuna matendo ya kihisia au macho kati ya watu. Sura inahitimisha kwa lazima kwa kiingilio rasmi cha utambuzi, matengenezo au msimbo wa hitilafu."
+    ],
+    "Hadithi_ya_Kale": [
+      "Simulia kwa picha za kihenga (kizingiti, mtihani, laana), bila kutukuza vurugu.",
+      "Usemi wa moja kwa moja unaruhusiwa na unatarajiwa.",
+      "Mwisho ni kiingilio rasmi cha kronika, mwanzoni mwa mstari na peke yake."
+    ],
+    "Kitabu_cha_Watoto": [
+      "Simulia kwa mtazamo wa mtoto au mnyama mdogo, kwa sentensi rahisi.",
+      "Usemi wa moja kwa moja na hisia zinaruhusiwa na zinarajiwa, bila mawaidha mwishoni.",
+      "Mwisho ni muhuri rasmi, mwanzoni mwa mstari na peke yake."
+    ],
+    "Solarpunk": [
+      "Onyesha suluhisho zinazofanya kazi na za ukombozi badala ya dystopia.",
+      "Usemi wa moja kwa moja na hisia zinaruhusiwa na zinarajiwa.",
+      "Mwisho ni hali rasmi ya mtandao, mwanzoni mwa mstari na peke yake."
+    ],
+    "Riwaya_ya_Barua": [
+      "Simulia kwa barua, si kwa nathari ya msimulizi.",
+      "Usemi wa moja kwa moja na hisia zinaruhusiwa na zinarajiwa.",
+      "Mwisho ni dokezo rasmi la barua, mwanzoni mwa mstari na peke yake."
+    ],
+    "Kejeli": [
+      "Kuzidisha mfumo, si watu wanaoteseka chini yake.",
+      "Usemi wa moja kwa moja na hisia zinaruhusiwa na zinarajiwa.",
+      "Mwisho ni amri rasmi, mwanzoni mwa mstari na peke yake."
+    ],
+    "Gotiki": [
+      "Unda hali ya anga na wasiwasi, bila kusherehekea hofu.",
+      "Usemi wa moja kwa moja na hisia zinaruhusiwa na zinarajiwa.",
+      "Mwisho ni kizingiti rasmi cha kronika, mwanzoni mwa mstari na peke yake."
+    ],
+    "Tamko": [
+      "Tamka, toa hoja kwa mwito, bila uongozi wa wahusika.",
+      "Hakuna usemi wa moja kwa moja (monologo wa pamoja), hisia na haraka zinaruhusiwa.",
+      "Mwisho ni tangazo rasmi, mwanzoni mwa mstari na peke yake."
+    ],
+    "Shajara": [
+      "Andika maelezo ya kibinafsi yenye tarehe badala ya sura za msimulizi.",
+      "Usemi wa moja kwa moja na hisia zinaruhusiwa na zinarajiwa.",
+      "Mwisho ni kiingilio rasmi cha shajara, mwanzoni mwa mstari na peke yake."
+    ],
+    "Vichekesho": [
+      "Matukio mafupi yenye kilele wazi, mazungumzo yanaruhusiwa na yanatarajiwa.",
+      "Cheka kuhusu mfumo, kamwe si kuhusu walioathirika.",
+      "Mwisho ni kilele rasmi, mwanzoni mwa mstari na peke yake."
+    ],
+    "Mapishi": [
+      "Mpangilio wazi wa viungo na hatua, usio na majivuno na wa hisi.",
+      "Hakuna usemi wa moja kwa moja, hakuna uongozi wa wahusika (maandishi ya maelezo).",
+      "Mwisho ni dokezo rasmi la jikoni, mwanzoni mwa mstari na peke yake."
+    ],
+    "Hekima": [
+      "Ya kutafakari na ya kimethali, bila uongozi wa wahusika.",
+      "Hakuna usemi wa moja kwa moja (tafakuri), hisia kama mwelekeo zinaruhusiwa.",
+      "Mwisho ni ufahamu rasmi, mwanzoni mwa mstari na peke yake."
+    ],
+    "Methali": [
+      "Simulia asili ya usemi kama kifano kidogo cha ngano, kwa kufundisha.",
+      "Usemi wa moja kwa moja na hisia zinaruhusiwa.",
+      "Mwisho ni usemi rasmi, mwanzoni mwa mstari na peke yake."
+    ]
+  },
+  "style_flags": {
+    "Mfano": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "D",
+      "zustaende": [
+        "SIMULIWA",
+        "FAFANULIWA",
+        "TUNZWA",
+        "FUNULIWA"
+      ],
+      "block_schema": "**[MFANO: {zustand} | FUNUO: {code}]**"
+    },
+    "Sayansi_Dystopia": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "S",
+      "zustaende": [
+        "MTANDAONI",
+        "SANJARI",
+        "AKISIWA",
+        "REKEBISHWA"
+      ],
+      "block_schema": "**[NODI: {zustand} | KUMBUKUMBU: {code}]**"
+    },
+    "Hadithi_ya_Wanyama": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "F",
+      "zustaende": [
+        "FUNZWA",
+        "JUTIWA",
+        "SHANGILIWA",
+        "FIKIRIWA"
+      ],
+      "block_schema": "**[NGANO: {zustand} | MAADILI: {code}]**"
+    },
+    "Insha_ya_Falsafa": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "code_praefix": "P",
+      "zustaende": [
+        "FIKIRIWA",
+        "JARIBIWA",
+        "KATALIWA",
+        "ZINGATIWA"
+      ],
+      "block_schema": "**[HOJA: {zustand} | TAFAKURI: {code}]**"
+    },
+    "Cyberpunk_Noir": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "N",
+      "zustaende": [
+        "REKODIWA",
+        "TUPWA",
+        "ELEKEZWA",
+        "AKISIWA"
+      ],
+      "block_schema": "**[MTANDAO: {zustand} | MWENENDO: {code}]**"
+    },
+    "Tamthilia_ya_Mahakama": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "H",
+      "zustaende": [
+        "IMEJADILIWA",
+        "IMEAHIRISHWA",
+        "IMEAMULIWA",
+        "IMEANDIKWA"
+      ],
+      "block_schema": "**[MAHAKAMA: {zustand} | PROTOKOLI: {code}]**"
+    },
+    "Uhalisia_wa_Kichawi": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "Z",
+      "zustaende": [
+        "IMETOKEA",
+        "IMEANDIKWA",
+        "ILIAMINIWA",
+        "IMERUDIWA"
+      ],
+      "block_schema": "**[MAAJABU: {zustand} | KRONIKA: {code}]**"
+    },
+    "Kumbukumbu_za_Historia": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "I",
+      "zustaende": [
+        "IMEORODHESHWA",
+        "IMEWEKWA_TAREHE",
+        "IMETHIBITISHWA",
+        "IMERITHISHWA"
+      ],
+      "block_schema": "**[KRONIKA: {zustand} | MWAKA: {code}]**"
+    },
+    "Tamthilia_ya_Chumba": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "O",
+      "zustaende": [
+        "IMECHEZWA",
+        "IMETOKA",
+        "IMERUDIWA",
+        "IMEKAMILIKA"
+      ],
+      "block_schema": "**[TUKIO: {zustand} | KUTOKA: {code}]**"
+    },
+    "Mwongozo_wa_Kifaa": {
+      "manual_ending": true,
+      "figuren_verboten": true,
+      "code_praefix": "E",
+      "zustaende": [
+        "NOMINAL",
+        "IMEPUNGUA",
+        "HUDUMA",
+        "ANZISHA_UPYA"
+      ],
+      "block_schema": "**[HALI: {zustand} | KIFAA: {code}]**"
+    },
+    "Hadithi_ya_Kale": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "M",
+      "zustaende": [
+        "IMEHIFADHIWA",
+        "IMEPIMWA",
+        "IMEANGAZWA",
+        "IMEHAKIKISHWA"
+      ],
+      "block_schema": "**[KRONIKA: {zustand} | MUHURI: {code}]**"
+    },
+    "Kitabu_cha_Watoto": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "K",
+      "zustaende": [
+        "IMEJIFUNZWA",
+        "IMELINDWA",
+        "IMESHIRIKIWA",
+        "IMETAMBULIKA"
+      ],
+      "block_schema": "**[KITABU-CHA-WATOTO: {zustand} | SURA: {code}]**"
+    },
+    "Solarpunk": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "U",
+      "zustaende": [
+        "IMEUNGANISHWA",
+        "IMELISHWA",
+        "IMEGAWANYWA",
+        "IMETHIBITISHWA"
+      ],
+      "block_schema": "**[GRIDI-YA-JAMII: {zustand} | HALI: {code}]**"
+    },
+    "Riwaya_ya_Barua": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "B",
+      "zustaende": [
+        "IMETUMWA",
+        "IMEPOKELEWA",
+        "IMESOMWA",
+        "IMETIWA_MUHURI"
+      ],
+      "block_schema": "**[BARUA: {zustand} | MUHURI: {code}]**"
+    },
+    "Kejeli": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "G",
+      "zustaende": [
+        "IMETOLEWA",
+        "IMEAMRIWA",
+        "IMEIDHINISHWA",
+        "IMEANDIKISHWA"
+      ],
+      "block_schema": "**[DUARA: {zustand} | IMETOLEWA: {code}]**"
+    },
+    "Gotiki": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "W",
+      "zustaende": [
+        "IMEFUNGWA",
+        "IMEPITWA",
+        "IMETUNZWA",
+        "IMEHESABIWA"
+      ],
+      "block_schema": "**[KRONIKA: {zustand} | KIZINGITI: {code}]**"
+    },
+    "Tamko": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "figuren_verboten": true,
+      "code_praefix": "R",
+      "zustaende": [
+        "IMETANGAZWA",
+        "IMESISITIZWA",
+        "IMEINGIZWA",
+        "IMETHIBITISHWA"
+      ],
+      "block_schema": "**[TANGAZO: {zustand} | REJISTA: {code}]**"
+    },
+    "Shajara": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "T",
+      "zustaende": [
+        "IMEREKODIWA",
+        "IMETIWA_TAREHE",
+        "IMEPIMWA",
+        "IMEPITA"
+      ],
+      "block_schema": "**[KIINGILIO: {zustand} | MUDA: {code}]**"
+    },
+    "Vichekesho": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "J",
+      "zustaende": [
+        "INAGUSA",
+        "INAKAA",
+        "INAWAKA",
+        "INAPOTEA"
+      ],
+      "block_schema": "**[KILELE: {zustand} | MWISHO: {code}]**"
+    },
+    "Mapishi": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": false,
+      "figuren_verboten": true,
+      "code_praefix": "C",
+      "zustaende": [
+        "IMEANZISHWA",
+        "IMEPIKWA",
+        "IMESHIRIKIWA",
+        "IMEANDALIWA"
+      ],
+      "block_schema": "**[JIKONI: {zustand} | RESIPI: {code}]**"
+    },
+    "Hekima": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "figuren_verboten": true,
+      "code_praefix": "L",
+      "zustaende": [
+        "IMEFIKIRIWA",
+        "IMETULIA",
+        "IMEPIMWA",
+        "IMEHIFADHIWA"
+      ],
+      "block_schema": "**[UFAHAMU: {zustand} | HEKIMA: {code}]**"
+    },
+    "Methali": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "V",
+      "zustaende": [
+        "IMEPATIKANA",
+        "IMEBUNIWA",
+        "IMEPITISHWA",
+        "INAMAANISHA"
+      ],
+      "block_schema": "**[MSEMO: {zustand} | ASILI: {code}]**"
+    }
+  }
+}
