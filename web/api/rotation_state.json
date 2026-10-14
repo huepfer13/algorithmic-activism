@@ -117,7 +117,8 @@
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_013_aufzeichnungen_eines_archivars",
     "r2:deepseek-chat:buch_006_das_gericht_vor_der_mauer",
     "r1:deepseek-chat:buch_012_manifest_der_unantastbaren",
-    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_010_amtsblatt_fuer_unzumutbarkeit"
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_010_amtsblatt_fuer_unzumutbarkeit",
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_011_das_haus_ohne_widerhall"
   ],
   "runden": {
     "1": [
@@ -690,6 +691,21 @@
         "tokens": "5550",
         "versuche": "1",
         "woerter": 366
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_011_das_haus_ohne_widerhall",
+        "code": "W-05-05",
+        "datei": "05_art_05_abschnitt_5_die_kammer_der_stille.md",
+        "dauer_s": "19.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 1,
+        "tokens": "1386",
+        "versuche": "1",
+        "woerter": 452
       }
     ],
     "10": [
