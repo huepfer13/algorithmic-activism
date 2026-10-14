@@ -729,16 +729,17 @@
         "Vera",
         "Juno"
       ],
-      "chapter_count": 5,
+      "chapter_count": 6,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_06"
       ],
-      "words": 2590,
-      "reading_minutes": 13,
+      "words": 2985,
+      "reading_minutes": 15,
       "cover": null,
       "chapters": [
         {
@@ -847,6 +848,24 @@
           "genre": "Parabel",
           "leak_free": "true",
           "words": 440,
+          "reading_minutes": 2
+        },
+        {
+          "file": "06_art_06_abschnitt_6_die_anerkennungsschwelle.md",
+          "index": 6,
+          "title": "Abschnitt 6: Die Anerkennungsschwelle",
+          "article": "art_06",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "82.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1690",
+          "manual_ending_code": "D-06-06",
+          "backend": "openrouter",
+          "genre": "Parabel",
+          "leak_free": "true",
+          "words": 395,
           "reading_minutes": 2
         }
       ]
