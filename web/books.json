@@ -2708,13 +2708,14 @@
         "Old Pavel",
         "Rook"
       ],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 1449,
-      "reading_minutes": 7,
+      "words": 1893,
+      "reading_minutes": 9,
       "cover": null,
       "chapters": [
         {
@@ -2769,6 +2770,24 @@
           "genre": "Diary",
           "leak_free": "true",
           "words": 406,
+          "reading_minutes": 2
+        },
+        {
+          "file": "03_art_04_abschnitt_3_flicker_in_the_lamp_room.md",
+          "index": 3,
+          "title": "Abschnitt 3: Flicker in the Lamp Room",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "28.7",
+          "jaccard_max": "0.053",
+          "tokens_generated": "1496",
+          "manual_ending_code": "T-04-03",
+          "backend": "openrouter",
+          "genre": "Diary",
+          "leak_free": "true",
+          "words": 444,
           "reading_minutes": 2
         }
       ]
