@@ -118,7 +118,8 @@
     "r2:deepseek-chat:buch_006_das_gericht_vor_der_mauer",
     "r1:deepseek-chat:buch_012_manifest_der_unantastbaren",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_010_amtsblatt_fuer_unzumutbarkeit",
-    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_011_das_haus_ohne_widerhall"
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_011_das_haus_ohne_widerhall",
+    "r1:deepseek-chat:buch_009_depeschen_aus_dem_kordon"
   ],
   "runden": {
     "1": [
@@ -706,6 +707,21 @@
         "tokens": "1386",
         "versuche": "1",
         "woerter": 452
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_009_depeschen_aus_dem_kordon",
+        "code": "B-05-05",
+        "datei": "05_art_05_abschnitt_5_die_kalibrierung_der_stille.md",
+        "dauer_s": "6.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 1,
+        "tokens": "795",
+        "versuche": "1",
+        "woerter": 416
       }
     ],
     "10": [
