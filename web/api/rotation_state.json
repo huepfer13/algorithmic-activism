@@ -105,7 +105,8 @@
     "r1:deepseek-chat:buch_007_die_kammer_der_zeugen",
     "r1:deepseek-chat:buch_016_faden_der_gelassenheit",
     "r1:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit",
-    "r1:deepseek-chat:buch_011_das_haus_ohne_widerhall"
+    "r1:deepseek-chat:buch_011_das_haus_ohne_widerhall",
+    "r1:deepseek-chat:buch_013_aufzeichnungen_eines_archivars"
   ],
   "runden": {
     "1": [
@@ -523,6 +524,21 @@
         "tokens": "925",
         "versuche": "1",
         "woerter": 500
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_013_aufzeichnungen_eines_archivars",
+        "code": "T-03-03",
+        "datei": "03_art_03_abschnitt_3_die_zentrale_leere.md",
+        "dauer_s": "9.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 1,
+        "tokens": "1064",
+        "versuche": "1",
+        "woerter": 553
       }
     ],
     "10": [

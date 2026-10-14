@@ -1618,13 +1618,14 @@
         "Herr Brenner",
         "Frau Ostrow"
       ],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_02"
+        "art_02",
+        "art_03"
       ],
-      "words": 1653,
-      "reading_minutes": 8,
+      "words": 2206,
+      "reading_minutes": 11,
       "cover": null,
       "chapters": [
         {
@@ -1679,6 +1680,24 @@
           "genre": "Tagebuch",
           "leak_free": "true",
           "words": 507,
+          "reading_minutes": 3
+        },
+        {
+          "file": "03_art_03_abschnitt_3_die_zentrale_leere.md",
+          "index": 3,
+          "title": "Abschnitt 3: Die zentrale Leere",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.6",
+          "jaccard_max": "0.034",
+          "tokens_generated": "1064",
+          "manual_ending_code": "T-03-03",
+          "backend": "deepseek",
+          "genre": "Tagebuch",
+          "leak_free": "true",
+          "words": 553,
           "reading_minutes": 3
         }
       ]
