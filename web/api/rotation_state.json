@@ -113,7 +113,8 @@
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_019_the_salt_diaries",
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_011_das_haus_ohne_widerhall",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_006_das_gericht_vor_der_mauer",
-    "r1:deepseek-chat:buch_004_neon_exil"
+    "r1:deepseek-chat:buch_004_neon_exil",
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_013_aufzeichnungen_eines_archivars"
   ],
   "runden": {
     "1": [
@@ -641,6 +642,21 @@
         "tokens": "932",
         "versuche": "1",
         "woerter": 453
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_013_aufzeichnungen_eines_archivars",
+        "code": "T-04-04",
+        "datei": "04_art_04_abschnitt_4_die_kalibrierung_der_leere.md",
+        "dauer_s": "43.7",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 1,
+        "tokens": "1052",
+        "versuche": "1",
+        "woerter": 311
       }
     ],
     "10": [

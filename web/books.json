@@ -1675,14 +1675,15 @@
         "Herr Brenner",
         "Frau Ostrow"
       ],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_02",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 2206,
-      "reading_minutes": 11,
+      "words": 2517,
+      "reading_minutes": 13,
       "cover": null,
       "chapters": [
         {
@@ -1756,6 +1757,24 @@
           "leak_free": "true",
           "words": 553,
           "reading_minutes": 3
+        },
+        {
+          "file": "04_art_04_abschnitt_4_die_kalibrierung_der_leere.md",
+          "index": 4,
+          "title": "Abschnitt 4: Die Kalibrierung der Leere",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "43.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1052",
+          "manual_ending_code": "T-04-04",
+          "backend": "openrouter",
+          "genre": "Tagebuch",
+          "leak_free": "true",
+          "words": 311,
+          "reading_minutes": 2
         }
       ]
     },
