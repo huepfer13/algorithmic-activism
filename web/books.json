@@ -1409,14 +1409,15 @@
         "Timo",
         "Der Verwalter"
       ],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_02",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 1766,
-      "reading_minutes": 9,
+      "words": 2266,
+      "reading_minutes": 11,
       "cover": null,
       "chapters": [
         {
@@ -1490,6 +1491,24 @@
           "leak_free": "true",
           "words": 584,
           "reading_minutes": 3
+        },
+        {
+          "file": "04_art_04_abschnitt_4_die_kammer_der_abgelegten_di.md",
+          "index": 4,
+          "title": "Abschnitt 4: Die Kammer der abgelegten Dinge",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "925",
+          "manual_ending_code": "W-04-04",
+          "backend": "deepseek",
+          "genre": "Gothic",
+          "leak_free": "true",
+          "words": 500,
+          "reading_minutes": 2
         }
       ]
     },
