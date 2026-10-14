@@ -114,7 +114,8 @@
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_011_das_haus_ohne_widerhall",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_006_das_gericht_vor_der_mauer",
     "r1:deepseek-chat:buch_004_neon_exil",
-    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_013_aufzeichnungen_eines_archivars"
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_013_aufzeichnungen_eines_archivars",
+    "r2:deepseek-chat:buch_006_das_gericht_vor_der_mauer"
   ],
   "runden": {
     "1": [
@@ -941,6 +942,21 @@
         "tokens": "9119",
         "versuche": "2",
         "woerter": 329
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_006_das_gericht_vor_der_mauer",
+        "code": "D-08-08",
+        "datei": "08_art_08_abschnitt_8_die_kalibrierung_der_stummen.md",
+        "dauer_s": "7.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 2,
+        "tokens": "820",
+        "versuche": "1",
+        "woerter": 404
       }
     ],
     "3": [
