@@ -501,15 +501,16 @@
       "pov": "third_person",
       "setting_summary": "Im Schattennetz dokumentieren Ausgeschlossene, wie Rechte Stueck fuer Stueck verschwinden.",
       "characters": [],
-      "chapter_count": 4,
+      "chapter_count": 5,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
-        "art_04"
+        "art_04",
+        "art_05"
       ],
-      "words": 2141,
-      "reading_minutes": 11,
+      "words": 2594,
+      "reading_minutes": 13,
       "cover": null,
       "chapters": [
         {
@@ -600,6 +601,24 @@
           "genre": "SciFi_Dystopie",
           "leak_free": "true",
           "words": 394,
+          "reading_minutes": 2
+        },
+        {
+          "file": "05_art_05_abschnitt_5_selektive_isolation.md",
+          "index": 5,
+          "title": "Abschnitt 5: Selektive Isolation",
+          "article": "art_05",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.4",
+          "jaccard_max": "0.091",
+          "tokens_generated": "932",
+          "manual_ending_code": "S-05-05",
+          "backend": "deepseek",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "true",
+          "words": 453,
           "reading_minutes": 2
         }
       ]

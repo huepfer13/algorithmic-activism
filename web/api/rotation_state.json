@@ -112,7 +112,8 @@
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_019_the_salt_diaries",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_019_the_salt_diaries",
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_011_das_haus_ohne_widerhall",
-    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_006_das_gericht_vor_der_mauer"
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_006_das_gericht_vor_der_mauer",
+    "r1:deepseek-chat:buch_004_neon_exil"
   ],
   "runden": {
     "1": [
@@ -625,6 +626,21 @@
         "tokens": "1795",
         "versuche": "1",
         "woerter": 466
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_004_neon_exil",
+        "code": "S-05-05",
+        "datei": "05_art_05_abschnitt_5_selektive_isolation.md",
+        "dauer_s": "8.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 1,
+        "tokens": "932",
+        "versuche": "1",
+        "woerter": 453
       }
     ],
     "10": [
