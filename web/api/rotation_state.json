@@ -98,7 +98,8 @@
     "r1:deepseek-chat:buch_014_der_unberechenbare_humor",
     "r1:deepseek-chat:buch_005_fragment_der_vernunft",
     "r1:deepseek-chat:buch_019_the_salt_diaries",
-    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_010_amtsblatt_fuer_unzumutbarkeit"
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_010_amtsblatt_fuer_unzumutbarkeit",
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_015_das_kochbuch_der_allmende"
   ],
   "runden": {
     "1": [
@@ -411,6 +412,21 @@
         "tokens": "1919",
         "versuche": "1",
         "woerter": 367
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_015_das_kochbuch_der_allmende",
+        "code": "C-11-11",
+        "datei": "11_art_11_abschnitt_11_die_kalibrierung_der_unschu.md",
+        "dauer_s": "94.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 1,
+        "tokens": "897",
+        "versuche": "2",
+        "woerter": 299
       }
     ],
     "10": [
