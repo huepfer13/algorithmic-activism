@@ -16,7 +16,7 @@
         "Nova",
         "Omicron"
       ],
-      "chapter_count": 12,
+      "chapter_count": 13,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -25,14 +25,15 @@
         "art_05",
         "art_06",
         "art_07",
+        "art_08",
         "art_09",
         "art_12",
         "art_14",
         "art_19",
         "art_26"
       ],
-      "words": 6604,
-      "reading_minutes": 33,
+      "words": 6922,
+      "reading_minutes": 35,
       "cover": null,
       "chapters": [
         {
@@ -267,6 +268,24 @@
           "genre": "Gerätehandbuch",
           "leak_free": "",
           "words": 365,
+          "reading_minutes": 2
+        },
+        {
+          "file": "13_art_08_abschnitt_13_kalibrierung_des_rechtsbehe.md",
+          "index": 13,
+          "title": "Abschnitt 13: Kalibrierung des Rechtsbehelfsparameters und Zero-Home-Storage",
+          "article": "art_08",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "115.0",
+          "jaccard_max": "0.037",
+          "tokens_generated": "9816",
+          "manual_ending_code": "E-08-13",
+          "backend": "openrouter",
+          "genre": "Gerätehandbuch",
+          "leak_free": "true",
+          "words": 318,
           "reading_minutes": 2
         }
       ]

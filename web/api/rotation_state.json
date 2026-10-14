@@ -99,7 +99,8 @@
     "r1:deepseek-chat:buch_005_fragment_der_vernunft",
     "r1:deepseek-chat:buch_019_the_salt_diaries",
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_010_amtsblatt_fuer_unzumutbarkeit",
-    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_015_das_kochbuch_der_allmende"
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_015_das_kochbuch_der_allmende",
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_001_das_büro_der_unendlichkeit"
   ],
   "runden": {
     "1": [
@@ -427,6 +428,21 @@
         "tokens": "897",
         "versuche": "2",
         "woerter": 299
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_001_das_büro_der_unendlichkeit",
+        "code": "E-08-13",
+        "datei": "13_art_08_abschnitt_13_kalibrierung_des_rechtsbehe.md",
+        "dauer_s": "115.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 1,
+        "tokens": "9816",
+        "versuche": "1",
+        "woerter": 318
       }
     ],
     "10": [
