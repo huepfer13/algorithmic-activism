@@ -110,7 +110,8 @@
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_001_das_büro_der_unendlichkeit",
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_006_das_gericht_vor_der_mauer",
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_019_the_salt_diaries",
-    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_019_the_salt_diaries"
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_019_the_salt_diaries",
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_011_das_haus_ohne_widerhall"
   ],
   "runden": {
     "1": [
@@ -598,6 +599,16 @@
         "tokens": "1496",
         "versuche": "1",
         "woerter": 444
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_011_das_haus_ohne_widerhall",
+        "datei": null,
+        "dauer_s": 68.6,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 1
       }
     ],
     "10": [
