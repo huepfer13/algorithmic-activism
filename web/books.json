@@ -1330,17 +1330,18 @@
         "Kalle Ohm",
         "Frau Säckel"
       ],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
         "art_05",
-        "art_06"
+        "art_06",
+        "art_07"
       ],
-      "words": 2884,
-      "reading_minutes": 14,
+      "words": 3250,
+      "reading_minutes": 16,
       "cover": null,
       "chapters": [
         {
@@ -1467,6 +1468,24 @@
           "genre": "Satire",
           "leak_free": "true",
           "words": 443,
+          "reading_minutes": 2
+        },
+        {
+          "file": "07_art_07_abschnitt_7_der_kalibrierungssturm.md",
+          "index": 7,
+          "title": "Abschnitt 7: Der Kalibrierungssturm",
+          "article": "art_07",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "75.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "5550",
+          "manual_ending_code": "G-07-07",
+          "backend": "openrouter",
+          "genre": "Satire",
+          "leak_free": "true",
+          "words": 366,
           "reading_minutes": 2
         }
       ]

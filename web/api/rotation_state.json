@@ -116,7 +116,8 @@
     "r1:deepseek-chat:buch_004_neon_exil",
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_013_aufzeichnungen_eines_archivars",
     "r2:deepseek-chat:buch_006_das_gericht_vor_der_mauer",
-    "r1:deepseek-chat:buch_012_manifest_der_unantastbaren"
+    "r1:deepseek-chat:buch_012_manifest_der_unantastbaren",
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_010_amtsblatt_fuer_unzumutbarkeit"
   ],
   "runden": {
     "1": [
@@ -674,6 +675,21 @@
         "tokens": "744",
         "versuche": "1",
         "woerter": 413
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_010_amtsblatt_fuer_unzumutbarkeit",
+        "code": "G-07-07",
+        "datei": "07_art_07_abschnitt_7_der_kalibrierungssturm.md",
+        "dauer_s": "75.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 1,
+        "tokens": "5550",
+        "versuche": "1",
+        "woerter": 366
       }
     ],
     "10": [
