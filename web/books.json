@@ -1596,14 +1596,15 @@
       "pov": "first_person",
       "setting_summary": "In einem unterirdischen Archivbunker, dem Sektor Neun, hausen die letzten freien Chronisten unter ständiger Überwachung durch die Obrigkeit. Ein Riss in der Betondecke lässt Wasser eindringen und markiert eine tickende Frist: In wenigen Wochen wird der Bunker geflutet, wenn niemand die Wahrheit nach außen trägt. Jeder ausgesprochene Satz kann Verhaftung, Folter oder Tod bedeuten – und doch muss gesprochen werden.",
       "characters": [],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_02",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 1338,
-      "reading_minutes": 7,
+      "words": 1751,
+      "reading_minutes": 9,
       "cover": null,
       "chapters": [
         {
@@ -1677,6 +1678,24 @@
           "leak_free": "true",
           "words": 291,
           "reading_minutes": 1
+        },
+        {
+          "file": "04_art_04_abschnitt_4_die_stille_kammer.md",
+          "index": 4,
+          "title": "Abschnitt 4: Die stille Kammer",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "744",
+          "manual_ending_code": "R-04-04",
+          "backend": "deepseek",
+          "genre": "Manifest",
+          "leak_free": "true",
+          "words": 413,
+          "reading_minutes": 2
         }
       ]
     },
