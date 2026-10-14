@@ -101,7 +101,8 @@
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_010_amtsblatt_fuer_unzumutbarkeit",
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_015_das_kochbuch_der_allmende",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_001_das_büro_der_unendlichkeit",
-    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_002_die_sieben_quellen"
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_002_die_sieben_quellen",
+    "r1:deepseek-chat:buch_007_die_kammer_der_zeugen"
   ],
   "runden": {
     "1": [
@@ -459,6 +460,21 @@
         "tokens": "1554",
         "versuche": "1",
         "woerter": 406
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_007_die_kammer_der_zeugen",
+        "code": "H-05-05",
+        "datei": "05_art_05_abschnitt_5_die_rekalibrierung.md",
+        "dauer_s": "10.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 1,
+        "tokens": "1074",
+        "versuche": "1",
+        "woerter": 538
       }
     ],
     "10": [
