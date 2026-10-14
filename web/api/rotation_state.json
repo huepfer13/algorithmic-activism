@@ -106,7 +106,8 @@
     "r1:deepseek-chat:buch_016_faden_der_gelassenheit",
     "r1:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit",
     "r1:deepseek-chat:buch_011_das_haus_ohne_widerhall",
-    "r1:deepseek-chat:buch_013_aufzeichnungen_eines_archivars"
+    "r1:deepseek-chat:buch_013_aufzeichnungen_eines_archivars",
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_001_das_büro_der_unendlichkeit"
   ],
   "runden": {
     "1": [
@@ -539,6 +540,16 @@
         "tokens": "1064",
         "versuche": "1",
         "woerter": 553
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_001_das_büro_der_unendlichkeit",
+        "datei": null,
+        "dauer_s": 91.8,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 1
       }
     ],
     "10": [
