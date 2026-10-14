@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 18,
+  "count": 19,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -2501,6 +2501,66 @@
           "leak_free": "true",
           "words": 340,
           "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_019_the_salt_diaries",
+      "title": "The Salt Diaries",
+      "language": "EN",
+      "style": "Diary",
+      "pov": "first_person",
+      "setting_summary": "A decommissioned lighthouse repurposed as a rationing station on a shrinking island, where five residents must log every calorie and every word. The tide is rising faster than predicted, cutting the island off for longer each month, and the mainland broadcasts only silence. Their survival depends on a strict hierarchy and a dwindling supply of fresh water, forcing daily negotiations over who deserves to speak, eat, and live.",
+      "characters": [
+        "Ines",
+        "Tomas",
+        "Mira",
+        "Old Pavel",
+        "Rook"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 1043,
+      "reading_minutes": 5,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.7",
+          "jaccard_max": "",
+          "tokens_generated": "704",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Diary",
+          "leak_free": "",
+          "words": 536,
+          "reading_minutes": 3
+        },
+        {
+          "file": "01_art_01_abschnitt_1_kalibrierung_der_stille.md",
+          "index": 1,
+          "title": "Abschnitt 1: Kalibrierung der Stille",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "2",
+          "model": "deepseek-chat",
+          "duration_seconds": "13.6",
+          "jaccard_max": "0.228",
+          "tokens_generated": "676",
+          "manual_ending_code": "T-01-01",
+          "backend": "deepseek",
+          "genre": "Diary",
+          "leak_free": "true",
+          "words": 507,
+          "reading_minutes": 3
         }
       ]
     }
