@@ -2708,12 +2708,13 @@
         "Old Pavel",
         "Rook"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_03"
       ],
-      "words": 1043,
-      "reading_minutes": 5,
+      "words": 1449,
+      "reading_minutes": 7,
       "cover": null,
       "chapters": [
         {
@@ -2751,6 +2752,24 @@
           "leak_free": "true",
           "words": 507,
           "reading_minutes": 3
+        },
+        {
+          "file": "02_art_03_abschnitt_2_driftparameter.md",
+          "index": 2,
+          "title": "Abschnitt 2: Driftparameter",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "43.3",
+          "jaccard_max": "0.075",
+          "tokens_generated": "953",
+          "manual_ending_code": "T-03-02",
+          "backend": "openrouter",
+          "genre": "Diary",
+          "leak_free": "true",
+          "words": 406,
+          "reading_minutes": 2
         }
       ]
     }
