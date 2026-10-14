@@ -119,7 +119,8 @@
     "r1:deepseek-chat:buch_012_manifest_der_unantastbaren",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_010_amtsblatt_fuer_unzumutbarkeit",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_011_das_haus_ohne_widerhall",
-    "r1:deepseek-chat:buch_009_depeschen_aus_dem_kordon"
+    "r1:deepseek-chat:buch_009_depeschen_aus_dem_kordon",
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_012_manifest_der_unantastbaren"
   ],
   "runden": {
     "1": [
@@ -722,6 +723,21 @@
         "tokens": "795",
         "versuche": "1",
         "woerter": 416
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_012_manifest_der_unantastbaren",
+        "code": "R-05-05",
+        "datei": "05_art_05_abschnitt_5_die_kalibrierung_des_schmerz.md",
+        "dauer_s": "60.9",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 1,
+        "tokens": "1315",
+        "versuche": "1",
+        "woerter": 312
       }
     ],
     "10": [

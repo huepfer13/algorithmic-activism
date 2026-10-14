@@ -1653,15 +1653,16 @@
       "pov": "first_person",
       "setting_summary": "In einem unterirdischen Archivbunker, dem Sektor Neun, hausen die letzten freien Chronisten unter ständiger Überwachung durch die Obrigkeit. Ein Riss in der Betondecke lässt Wasser eindringen und markiert eine tickende Frist: In wenigen Wochen wird der Bunker geflutet, wenn niemand die Wahrheit nach außen trägt. Jeder ausgesprochene Satz kann Verhaftung, Folter oder Tod bedeuten – und doch muss gesprochen werden.",
       "characters": [],
-      "chapter_count": 4,
+      "chapter_count": 5,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
-        "art_04"
+        "art_04",
+        "art_05"
       ],
-      "words": 1751,
-      "reading_minutes": 9,
+      "words": 2063,
+      "reading_minutes": 10,
       "cover": null,
       "chapters": [
         {
@@ -1752,6 +1753,24 @@
           "genre": "Manifest",
           "leak_free": "true",
           "words": 413,
+          "reading_minutes": 2
+        },
+        {
+          "file": "05_art_05_abschnitt_5_die_kalibrierung_des_schmerz.md",
+          "index": 5,
+          "title": "Abschnitt 5: Die Kalibrierung des Schmerzes",
+          "article": "art_05",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "60.9",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1315",
+          "manual_ending_code": "R-05-05",
+          "backend": "openrouter",
+          "genre": "Manifest",
+          "leak_free": "true",
+          "words": 312,
           "reading_minutes": 2
         }
       ]
