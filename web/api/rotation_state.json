@@ -134,7 +134,8 @@
     "r2:deepseek-chat:buch_017_des_volkes_mund",
     "r2:deepseek-chat:buch_012_manifest_der_unantastbaren",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_015_das_kochbuch_der_allmende",
-    "r2:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit"
+    "r2:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit",
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_020_die_quote_der_stille"
   ],
   "runden": {
     "1": [
@@ -882,6 +883,16 @@
         "tokens": "5445",
         "versuche": "2",
         "woerter": 349
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_020_die_quote_der_stille",
+        "datei": null,
+        "dauer_s": 0.6,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 1
       }
     ],
     "10": [
