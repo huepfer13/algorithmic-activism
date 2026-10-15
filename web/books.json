@@ -1656,16 +1656,17 @@
         "Timo",
         "Der Verwalter"
       ],
-      "chapter_count": 5,
+      "chapter_count": 6,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_06"
       ],
-      "words": 2718,
-      "reading_minutes": 14,
+      "words": 3350,
+      "reading_minutes": 17,
       "cover": null,
       "chapters": [
         {
@@ -1775,6 +1776,24 @@
           "leak_free": "true",
           "words": 452,
           "reading_minutes": 2
+        },
+        {
+          "file": "06_art_06_abschnitt_6_die_anerkennung_der_leere.md",
+          "index": 6,
+          "title": "Abschnitt 6: Die Anerkennung der Leere",
+          "article": "art_06",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "10.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1144",
+          "manual_ending_code": "W-06-06",
+          "backend": "deepseek",
+          "genre": "Gothic",
+          "leak_free": "true",
+          "words": 632,
+          "reading_minutes": 3
         }
       ]
     },
