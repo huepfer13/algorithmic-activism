@@ -998,16 +998,17 @@
         "Angeklagter Tomas Reiter",
         "Zeugin Elif Sarikaya"
       ],
-      "chapter_count": 5,
+      "chapter_count": 6,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_06"
       ],
-      "words": 2972,
-      "reading_minutes": 15,
+      "words": 3456,
+      "reading_minutes": 17,
       "cover": null,
       "chapters": [
         {
@@ -1117,6 +1118,24 @@
           "leak_free": "true",
           "words": 538,
           "reading_minutes": 3
+        },
+        {
+          "file": "06_art_06_abschnitt_6_die_kalibrierung_des_rechts.md",
+          "index": 6,
+          "title": "Abschnitt 6: Die Kalibrierung des Rechts",
+          "article": "art_06",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "77.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1867",
+          "manual_ending_code": "H-06-06",
+          "backend": "openrouter",
+          "genre": "Gerichtsdrama",
+          "leak_free": "true",
+          "words": 484,
+          "reading_minutes": 2
         }
       ]
     },
