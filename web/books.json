@@ -3281,12 +3281,13 @@
         "Dorn",
         "Elia"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 914,
-      "reading_minutes": 5,
+      "words": 1420,
+      "reading_minutes": 7,
       "cover": null,
       "chapters": [
         {
@@ -3324,6 +3325,24 @@
           "leak_free": "true",
           "words": 408,
           "reading_minutes": 2
+        },
+        {
+          "file": "02_art_02_abschnitt_2_die_prognose.md",
+          "index": 2,
+          "title": "Abschnitt 2: Die Prognose",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.0",
+          "jaccard_max": "0.083",
+          "tokens_generated": "964",
+          "manual_ending_code": "S-02-02",
+          "backend": "deepseek",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "true",
+          "words": 506,
+          "reading_minutes": 3
         }
       ]
     }
