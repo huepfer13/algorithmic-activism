@@ -298,14 +298,15 @@
       "pov": "third_person",
       "setting_summary": "Sieben Quellen, sieben Pruefungen: eine Wanderung durch die Landschaften der Rechte.",
       "characters": [],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_02",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 2050,
-      "reading_minutes": 10,
+      "words": 2518,
+      "reading_minutes": 13,
       "cover": null,
       "chapters": [
         {
@@ -378,6 +379,24 @@
           "genre": "Märchen",
           "leak_free": "true",
           "words": 406,
+          "reading_minutes": 2
+        },
+        {
+          "file": "04_art_04_abschnitt_4_die_kammer_des_verwahrten_st.md",
+          "index": 4,
+          "title": "Abschnitt 4: Die Kammer des verwahrten Stahls",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "2",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "139.7",
+          "jaccard_max": "0.054",
+          "tokens_generated": "1858",
+          "manual_ending_code": "M-04-04",
+          "backend": "openrouter",
+          "genre": "Märchen",
+          "leak_free": "true",
+          "words": 468,
           "reading_minutes": 2
         }
       ]
