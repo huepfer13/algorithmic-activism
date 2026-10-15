@@ -128,7 +128,8 @@
     "r2:deepseek-chat:buch_008_flechtwerk_arkadien",
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_017_des_volkes_mund",
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_014_der_unberechenbare_humor",
-    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_012_manifest_der_unantastbaren"
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_012_manifest_der_unantastbaren",
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_008_flechtwerk_arkadien"
   ],
   "runden": {
     "1": [
@@ -836,6 +837,16 @@
         "tokens": "1970",
         "versuche": "1",
         "woerter": 369
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_008_flechtwerk_arkadien",
+        "datei": null,
+        "dauer_s": 0.6,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 1
       }
     ],
     "10": [
