@@ -10,6 +10,9 @@ und dieses Projekt hält sich an [Semantic Versioning](https://semver.org/spec/v
 ## [Unreleased]
 
 ### Added
+- **Korpus-Publish automatisiert** (systemd-User-Timer `algorithmic-corpus-sync.timer`, taeglich 05:30):
+  ruft `scripts/sync_corpus.sh` und veroeffentlicht angesammelte Tales als einen Batch —
+  Pages-Build und Hugging-Face-Upload laufen damit ohne Handgriff, ohne einen Push je Tale.
 - **Serielle Buch-Pipeline** (`generate_pipeline.py`): `--mode new-book` legt Prolog und `book.json` an,
   `--mode append-chapter` hängt Kapitel an (jüngstes Buch nach mtime, nächster unbehandelter UN-Artikel,
   Vorgängerkapitel im Prompt).
@@ -26,6 +29,11 @@ und dieses Projekt hält sich an [Semantic Versioning](https://semver.org/spec/v
 ### Changed
 - `scripts/sync_corpus.sh`: Guard erlaubt zusätzlich `menschenrechte_books/`, `web/books.json` und `web/api/`;
   der Überschreib-Schutz deckt jetzt auch Buchkapitel ab.
+- **`web/index.html` (Ueber-Block)**: Der Satz zur Entstehung nennt die tatsaechliche Kette —
+  Erzaehlungen lokal ueber `qwen2.5:7b` (Ollama), Buchkapitel in der Modellrotation ueber
+  OpenRouter (`nvidia/nemotron-3-ultra-550b`, `nvidia/nemotron-3-super-120b`) und DeepSeek
+  (`deepseek-chat`), je Kapitel belegt in `web/books.json`. Die Stilzahl im Satz wird wie die
+  uebrigen Kennzahlen zur Laufzeit aus dem ausgelieferten `dataset.jsonl` gezaehlt.
 
 
 ### Planned
