@@ -2537,7 +2537,7 @@
       "pov": "third_person",
       "setting_summary": "Etymologische Miniaturen zu gefluegelten Worten.",
       "characters": [],
-      "chapter_count": 10,
+      "chapter_count": 11,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -2548,10 +2548,11 @@
         "art_07",
         "art_08",
         "art_09",
-        "art_10"
+        "art_10",
+        "art_11"
       ],
-      "words": 3701,
-      "reading_minutes": 19,
+      "words": 3987,
+      "reading_minutes": 20,
       "cover": null,
       "chapters": [
         {
@@ -2751,6 +2752,24 @@
           "leak_free": "true",
           "words": 332,
           "reading_minutes": 2
+        },
+        {
+          "file": "11_art_11_abschnitt_11_die_waage_vor_dem_urteil.md",
+          "index": 11,
+          "title": "Abschnitt 11: Die Waage vor dem Urteil",
+          "article": "art_11",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "19.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1001",
+          "manual_ending_code": "V-11-11",
+          "backend": "openrouter",
+          "genre": "Sprichwoerter",
+          "leak_free": "true",
+          "words": 286,
+          "reading_minutes": 1
         }
       ]
     },
