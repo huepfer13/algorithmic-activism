@@ -138,7 +138,8 @@
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_020_die_quote_der_stille",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_014_der_unberechenbare_humor",
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_001_das_büro_der_unendlichkeit",
-    "r2:deepseek-chat:buch_013_aufzeichnungen_eines_archivars"
+    "r2:deepseek-chat:buch_013_aufzeichnungen_eines_archivars",
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_013_aufzeichnungen_eines_archivars"
   ],
   "runden": {
     "1": [
@@ -911,6 +912,21 @@
         "tokens": "1754",
         "versuche": "1",
         "woerter": 424
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_013_aufzeichnungen_eines_archivars",
+        "code": "T-06-06",
+        "datei": "06_art_06_abschnitt_6_die_kalibrierung_des_rechts.md",
+        "dauer_s": "91.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 1,
+        "tokens": "1632",
+        "versuche": "1",
+        "woerter": 498
       }
     ],
     "10": [
