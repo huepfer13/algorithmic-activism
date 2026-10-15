@@ -1729,17 +1729,18 @@
       "pov": "first_person",
       "setting_summary": "In einem unterirdischen Archivbunker, dem Sektor Neun, hausen die letzten freien Chronisten unter ständiger Überwachung durch die Obrigkeit. Ein Riss in der Betondecke lässt Wasser eindringen und markiert eine tickende Frist: In wenigen Wochen wird der Bunker geflutet, wenn niemand die Wahrheit nach außen trägt. Jeder ausgesprochene Satz kann Verhaftung, Folter oder Tod bedeuten – und doch muss gesprochen werden.",
       "characters": [],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
         "art_05",
-        "art_06"
+        "art_06",
+        "art_07"
       ],
-      "words": 2432,
-      "reading_minutes": 12,
+      "words": 2901,
+      "reading_minutes": 15,
       "cover": null,
       "chapters": [
         {
@@ -1866,6 +1867,24 @@
           "genre": "Manifest",
           "leak_free": "true",
           "words": 369,
+          "reading_minutes": 2
+        },
+        {
+          "file": "07_art_07_abschnitt_7_die_kalibrierung_der_gleiche.md",
+          "index": 7,
+          "title": "Abschnitt 7: Die Kalibrierung der gleichen Schwelle",
+          "article": "art_07",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "856",
+          "manual_ending_code": "R-07-07",
+          "backend": "deepseek",
+          "genre": "Manifest",
+          "leak_free": "true",
+          "words": 469,
           "reading_minutes": 2
         }
       ]
