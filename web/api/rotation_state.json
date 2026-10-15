@@ -135,7 +135,8 @@
     "r2:deepseek-chat:buch_012_manifest_der_unantastbaren",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_015_das_kochbuch_der_allmende",
     "r2:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit",
-    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_020_die_quote_der_stille"
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_020_die_quote_der_stille",
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_014_der_unberechenbare_humor"
   ],
   "runden": {
     "1": [
@@ -893,6 +894,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
         "runde": 1
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_014_der_unberechenbare_humor",
+        "code": "J-04-04",
+        "datei": "04_art_04_abschnitt_4_der_feuchte_filter.md",
+        "dauer_s": "75.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 1,
+        "tokens": "1754",
+        "versuche": "1",
+        "woerter": 424
       }
     ],
     "10": [

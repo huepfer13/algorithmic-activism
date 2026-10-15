@@ -2033,14 +2033,15 @@
       "pov": "third_person",
       "setting_summary": "Kurzgeschichten und Szenen, in denen Humor den Ernstfall entlarvt.",
       "characters": [],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_02",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 1268,
-      "reading_minutes": 6,
+      "words": 1692,
+      "reading_minutes": 8,
       "cover": null,
       "chapters": [
         {
@@ -2113,6 +2114,24 @@
           "genre": "Witzebuch",
           "leak_free": "true",
           "words": 307,
+          "reading_minutes": 2
+        },
+        {
+          "file": "04_art_04_abschnitt_4_der_feuchte_filter.md",
+          "index": 4,
+          "title": "Abschnitt 4: Der Feuchte Filter",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "75.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1754",
+          "manual_ending_code": "J-04-04",
+          "backend": "openrouter",
+          "genre": "Witzebuch",
+          "leak_free": "true",
+          "words": 424,
           "reading_minutes": 2
         }
       ]
