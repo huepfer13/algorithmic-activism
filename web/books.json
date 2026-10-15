@@ -1425,7 +1425,7 @@
         "Kalle Ohm",
         "Frau Säckel"
       ],
-      "chapter_count": 7,
+      "chapter_count": 8,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1433,10 +1433,11 @@
         "art_04",
         "art_05",
         "art_06",
-        "art_07"
+        "art_07",
+        "art_08"
       ],
-      "words": 3250,
-      "reading_minutes": 16,
+      "words": 3704,
+      "reading_minutes": 19,
       "cover": null,
       "chapters": [
         {
@@ -1581,6 +1582,24 @@
           "genre": "Satire",
           "leak_free": "true",
           "words": 366,
+          "reading_minutes": 2
+        },
+        {
+          "file": "08_art_08_abschnitt_8_die_rechtsbehelfslatenz.md",
+          "index": 8,
+          "title": "Abschnitt 8: Die Rechtsbehelfslatenz",
+          "article": "art_08",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1061",
+          "manual_ending_code": "G-08-08",
+          "backend": "deepseek",
+          "genre": "Satire",
+          "leak_free": "true",
+          "words": 454,
           "reading_minutes": 2
         }
       ]
