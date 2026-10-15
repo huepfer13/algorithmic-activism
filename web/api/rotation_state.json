@@ -136,7 +136,8 @@
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_015_das_kochbuch_der_allmende",
     "r2:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit",
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_020_die_quote_der_stille",
-    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_014_der_unberechenbare_humor"
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_014_der_unberechenbare_humor",
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_001_das_büro_der_unendlichkeit"
   ],
   "runden": {
     "1": [
@@ -1278,6 +1279,16 @@
         "tokens": "1061",
         "versuche": "1",
         "woerter": 454
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_001_das_büro_der_unendlichkeit",
+        "datei": null,
+        "dauer_s": 0.8,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 2
       }
     ],
     "3": [
