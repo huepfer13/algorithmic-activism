@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 20,
+  "count": 21,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -3400,6 +3400,46 @@
           "leak_free": "true",
           "words": 506,
           "reading_minutes": 3
+        }
+      ]
+    },
+    {
+      "book_id": "buch_021_the_bell_of_the_ninth_gate",
+      "title": "The Bell of the Ninth Gate",
+      "language": "EN",
+      "style": "Fairy_Tale",
+      "pov": "third_person",
+      "setting_summary": "A walled city of seven tiers, each gated by a bell that rings only when the council permits passage. Water is rationed by the Bell-Keeper's ledger, and every spoken word in the lower tiers is recorded by listeners hidden in the stone. When the ninth bell—silent for a generation—begins to hum on its own, five lives are drawn into a trial of thresholds, bans, and the quiet arithmetic of mercy.",
+      "characters": [
+        "Mira",
+        "Corin",
+        "Old Sable",
+        "Tobin",
+        "The Keeper"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 497,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.2",
+          "jaccard_max": "",
+          "tokens_generated": "595",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Fairy_Tale",
+          "leak_free": "",
+          "words": 497,
+          "reading_minutes": 2
         }
       ]
     }

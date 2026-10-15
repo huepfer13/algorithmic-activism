@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_021_the_bell_of_the_ninth_gate",
+  "title": "The Bell of the Ninth Gate",
+  "pov": "third_person",
+  "language": "EN",
+  "style": "Fairy_Tale",
+  "setting_summary": "A walled city of seven tiers, each gated by a bell that rings only when the council permits passage. Water is rationed by the Bell-Keeper's ledger, and every spoken word in the lower tiers is recorded by listeners hidden in the stone. When the ninth bell—silent for a generation—begins to hum on its own, five lives are drawn into a trial of thresholds, bans, and the quiet arithmetic of mercy.",
+  "characters": [
+    "Mira",
+    "Corin",
+    "Old Sable",
+    "Tobin",
+    "The Keeper"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-10-15T22:05:29.675650+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
