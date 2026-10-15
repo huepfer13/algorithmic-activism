@@ -1976,13 +1976,14 @@
       "pov": "third_person",
       "setting_summary": "Kurzgeschichten und Szenen, in denen Humor den Ernstfall entlarvt.",
       "characters": [],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_02"
+        "art_02",
+        "art_03"
       ],
-      "words": 961,
-      "reading_minutes": 5,
+      "words": 1268,
+      "reading_minutes": 6,
       "cover": null,
       "chapters": [
         {
@@ -2037,6 +2038,24 @@
           "genre": "Witzebuch",
           "leak_free": "true",
           "words": 485,
+          "reading_minutes": 2
+        },
+        {
+          "file": "03_art_03_abschnitt_3_der_lebensdauersensor.md",
+          "index": 3,
+          "title": "Abschnitt 3: Der Lebensdauersensor",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "61.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "983",
+          "manual_ending_code": "J-03-03",
+          "backend": "openrouter",
+          "genre": "Witzebuch",
+          "leak_free": "true",
+          "words": 307,
           "reading_minutes": 2
         }
       ]
