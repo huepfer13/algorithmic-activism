@@ -1343,7 +1343,26 @@ def _append_chapter_gesperrt(book_id: str | None = None, lang: str | None = None
         treffer = re.search(r'^article:\s*"?([A-Za-z0-9_]+)"?\s*$', txt, re.M)
         if treffer and treffer.group(1) not in covered:
             covered.append(treffer.group(1))
-    index = len([k for k in kapitel if k != "00_prolog.md"]) + 1
+    # Kapitelnummer = hoechste vorhandene Nummer + 1, NICHT die Zahl der Kapiteldateien: wird ein
+    # mittleres Kapitel geloescht, ist die Dateizahl zu klein und die naechste Nummer wird doppelt
+    # vergeben (belegt 2026-10-14: buch_005 bekam `04_art_01_...` neben `04_art_04_...`, weil
+    # Kapitel 01 am 2026-10-12 geloescht worden war und die Zaehlung 3+1 auf den belegten Index 4
+    # zeigte). Der Injektionspfad rechnet seit jeher so: `(max(indizes) + 1) if indizes else 1`.
+    indizes = []
+    for k in kapitel:
+        if k == "00_prolog.md":
+            continue
+        treffer = re.match(r"^(\d+)", k)
+        if treffer:
+            indizes.append(int(treffer.group(1)))
+    index = (max(indizes) + 1) if indizes else 1
+    # Lueckenwarnung (kein Abbruch): eine geloeschte Nummer bleibt geloescht — sie wird NICHT
+    # aufgefuellt, sonst waere die Reihenfolge der Dateinamen wieder mehrdeutig.
+    fehlende = [n for n in range(1, (max(indizes) if indizes else 0) + 1) if n not in indizes]
+    if fehlende:
+        print(f"[Luecke] {book_id}: Kapitelnummer(n) {fehlende} fehlen zwischen 1 und {max(indizes)} "
+              f"({len(indizes)} Kapiteldatei(en), hoechste Nummer {max(indizes)}) — die naechste "
+              f"Nummer bleibt {index}.", flush=True)
 
     # Expliziter Artikel schlaegt die Automatik: beim Ersetzen eines Kapitels muss der verhandelte
     # Artikel erhalten bleiben (belegt 2026-10-12, Kapitel 11 rutschte sonst auf art_07).
@@ -1416,7 +1435,17 @@ def _append_chapter_gesperrt(book_id: str | None = None, lang: str | None = None
              + stats
              + f'manual_ending_note: "{grund}"\n')
     datei = f"{index:02d}_{artikel}_{sanitize_filename(titel).lower()[:40]}.md"
-    pfad = write_new_file(os.path.join(buch_dir, datei),
+    # Kollisionspruefung: die Kapitelnummer darf im Buch nicht zweimal vergeben werden und die
+    # Zieldatei darf nicht schon liegen. `write_new_file` haengt bei Namensgleichheit still `_2` an —
+    # fuer die Tale-Ablage gewollt, hier nicht: eine zweite Datei mit demselben Praefix ist genau
+    # der Defekt vom 2026-10-14. Deshalb hier Abbruch mit Klartext statt Schreiben.
+    belegt = [k for k in kapitel if k.startswith(f"{index:02d}_")]
+    ziel = os.path.join(buch_dir, datei)
+    if belegt or os.path.exists(ziel):
+        raise FileExistsError(
+            f"Kapitelindex {index} ist in '{book_id}' bereits belegt ({belegt or [datei]}) — "
+            f"nichts geschrieben, nichts umbenannt. Bestand pruefen, dann erneut anhaengen.")
+    pfad = write_new_file(ziel,
                           f'---\nbook_id: "{book_id}"\nchapter_index: {index}\n'
                           f'chapter_title: "{titel}"\narticle: "{artikel}"\nlanguage: "{sprache}"\n'
                           f'style: "{style_name}"\npov: "{meta["pov"]}"\n'
