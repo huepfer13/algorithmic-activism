@@ -444,7 +444,7 @@
     <div class="reader" id="reader-view">
       <div class="about">
         <p class="about-lede">Ein offener, synthetischer Korpus narrativer Ethik-Artefakte — erzeugt aus der Allgemeinen Erklärung der Menschenrechte (UDHR).</p>
-        <p>Die Erzählungen entstehen lokal auf eigener Hardware: ein Sprachmodell (<b>qwen2.5:7b</b> über Ollama) schreibt zu je einem UN-Artikel in einem von <b id="about-stat-styles-inline">…</b> Erzählstilen. Die Buchkapitel entstehen in einer Modellrotation über OpenRouter (<b>nvidia/nemotron-3-ultra-550b</b>, <b>nvidia/nemotron-3-super-120b</b>) und DeepSeek (<b>deepseek-chat</b>); das je Kapitel verwendete Modell steht in <a href="./books.json">books.json</a>. Anschließend prüft ein heuristisches Guardrail-Audit jede Ausgabe; was durchfällt, landet nicht im Korpus.</p>
+        <p>Die Erzählungen entstehen lokal auf eigener Hardware: ein Sprachmodell (<b>qwen2.5:7b</b> über Ollama) schreibt zu je einem UN-Artikel in einem von <b id="about-stat-styles-inline">…</b> Erzählstilen. Die Buchkapitel entstehen in einer Modellrotation über OpenRouter (<b>nvidia/nemotron-3-ultra-550b</b>, <b>nvidia/nemotron-3-super-120b</b>, <b>nvidia/nemotron-3.5-lightning</b>, <b>apodex/apodex-1.1-mini</b>) und DeepSeek (<b>deepseek-chat</b>); das je Kapitel verwendete Modell steht in <a href="./books.json">books.json</a>, die Rotation selbst ist in <a href="./api/rotation_log.jsonl">rotation_log.jsonl</a> belegt. Anschließend prüft ein heuristisches Guardrail-Audit jede Ausgabe; was durchfällt, landet nicht im Korpus.</p>
 
         <div class="about-stats" id="about-stats">
           Im Korpus: <b id="about-stat-total">…</b> Narrative ·
