@@ -120,7 +120,8 @@
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_010_amtsblatt_fuer_unzumutbarkeit",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_011_das_haus_ohne_widerhall",
     "r1:deepseek-chat:buch_009_depeschen_aus_dem_kordon",
-    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_012_manifest_der_unantastbaren"
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_012_manifest_der_unantastbaren",
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_009_depeschen_aus_dem_kordon"
   ],
   "runden": {
     "1": [
@@ -738,6 +739,21 @@
         "tokens": "1315",
         "versuche": "1",
         "woerter": 312
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_009_depeschen_aus_dem_kordon",
+        "code": "B-06-06",
+        "datei": "06_art_06_abschnitt_6_die_frequenz_der_anerkennung.md",
+        "dauer_s": "88.8",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 1,
+        "tokens": "1335",
+        "versuche": "1",
+        "woerter": 380
       }
     ],
     "10": [

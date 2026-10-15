@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 19,
+  "count": 20,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -1213,16 +1213,17 @@
         "Nadia",
         "Kroll"
       ],
-      "chapter_count": 5,
+      "chapter_count": 6,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_06"
       ],
-      "words": 2958,
-      "reading_minutes": 15,
+      "words": 3338,
+      "reading_minutes": 17,
       "cover": null,
       "chapters": [
         {
@@ -1331,6 +1332,24 @@
           "genre": "Briefroman",
           "leak_free": "true",
           "words": 416,
+          "reading_minutes": 2
+        },
+        {
+          "file": "06_art_06_abschnitt_6_die_frequenz_der_anerkennung.md",
+          "index": 6,
+          "title": "Abschnitt 6: Die Frequenz der Anerkennung",
+          "article": "art_06",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "88.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1335",
+          "manual_ending_code": "B-06-06",
+          "backend": "openrouter",
+          "genre": "Briefroman",
+          "leak_free": "true",
+          "words": 380,
           "reading_minutes": 2
         }
       ]
@@ -2960,6 +2979,46 @@
           "leak_free": "true",
           "words": 444,
           "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_020_die_quote_der_stille",
+      "title": "Die Quote der Stille",
+      "language": "DE",
+      "style": "SciFi_Dystopie",
+      "pov": "third_person",
+      "setting_summary": "In der unterirdischen Stadt Kaskade regelt ein allgegenwärtiges Punktesystem namens QUOTE den Zugang zu Nahrung, Wohnraum und medizinischer Hilfe; wer zu viele Strafpunkte sammelt, wird in die Reklamation überstellt und kehrt nicht zurück. Die Bewohner leben in engen Schichten unter permanenter akustischer und biometrischer Überwachung, während eine knappe Energiequote jede Woche neu verhandelt wird. Mira Voss, eine junge Systemarchivarin, entdeckt, dass die QUOTE nicht nur Verhalten bewertet, sondern Gedankenäußerungen vorausberechnet – und dass ihre eigene Quote seit Jahren manipuliert wird.",
+      "characters": [
+        "Mira Voss",
+        "Jarek Lund",
+        "Sana",
+        "Dorn",
+        "Elia"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 506,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.0",
+          "jaccard_max": "",
+          "tokens_generated": "883",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "",
+          "words": 506,
+          "reading_minutes": 3
         }
       ]
     }

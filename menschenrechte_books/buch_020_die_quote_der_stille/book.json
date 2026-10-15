@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_020_die_quote_der_stille",
+  "title": "Die Quote der Stille",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "SciFi_Dystopie",
+  "setting_summary": "In der unterirdischen Stadt Kaskade regelt ein allgegenwärtiges Punktesystem namens QUOTE den Zugang zu Nahrung, Wohnraum und medizinischer Hilfe; wer zu viele Strafpunkte sammelt, wird in die Reklamation überstellt und kehrt nicht zurück. Die Bewohner leben in engen Schichten unter permanenter akustischer und biometrischer Überwachung, während eine knappe Energiequote jede Woche neu verhandelt wird. Mira Voss, eine junge Systemarchivarin, entdeckt, dass die QUOTE nicht nur Verhalten bewertet, sondern Gedankenäußerungen vorausberechnet – und dass ihre eigene Quote seit Jahren manipuliert wird.",
+  "characters": [
+    "Mira Voss",
+    "Jarek Lund",
+    "Sana",
+    "Dorn",
+    "Elia"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-10-14T22:05:11.726451+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
