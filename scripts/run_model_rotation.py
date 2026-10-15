@@ -159,19 +159,43 @@ def kapitel_statistik(book_id: str, vorher: set) -> dict:
     }
 
 
+_SPERRE = None  # Prozessweite Sperrdatei: EINMAL erwerben, dann wiederverwenden.
+
+
+def _sperre_erwerb():
+    """Erwirbt .rotation.lock einmalig je Prozess.
+
+    Lehre 2026-10-15 (zwei Naechte Haenger, je exakt 7200 s): flock-Sperren haengen an der
+    open-file-description. Sperrt eine systemd-Unit die Datei VOR dem Start
+    (flock -w 300 ... .rotation.lock), so blockiert ein zweiter flock(LOCK_EX) im selben
+    Prozess fuer immer — der Tages-Lauf hing genau daran und wurde abgeschossen.
+    Deshalb: einmal erwerben, im Prozess wiederverwenden, nie erneut sperren.
+    Die Sperre wird absichtlich bis Prozessende gehalten (Serialisierung gegen Tale-Sync).
+    """
+    global _SPERRE
+    if _SPERRE is None:
+        f = open(LOCK, "w")
+        fcntl.flock(f, fcntl.LOCK_EX)
+        _SPERRE = f
+    return _SPERRE
+
+
 def git_schritt(buch_id: str, runde: int, modell: str) -> str:
-    """Ein Commit pro Kapitel — mit Datei-Lock, damit sich nichts mit dem Tale-Sync ueberschneidet."""
-    with open(LOCK, "w") as sperre:
-        fcntl.flock(sperre, fcntl.LOCK_EX)
-        subprocess.run([sys.executable, "scripts/build_books_index.py"], cwd=REPO, capture_output=True)
-        subprocess.run(["git", "add", "menschenrechte_books", "web/books.json", "web/api/"], cwd=REPO,
-                       capture_output=True)
-        nachricht = f"feat(rotation): Runde {runde} — {modell} in {buch_id}"
-        committen = subprocess.run(["git", "-c", "user.name=agent-runner-xomni",
-                                     "-c", "user.email=agent-runner-xomni@homelab",
-                                     "commit", "-q", "-m", nachricht], cwd=REPO,
-                                   capture_output=True, text=True)
-        fcntl.flock(sperre, fcntl.LOCK_UN)
+    """Ein Commit pro Kapitel — mit Datei-Lock, damit sich nichts mit dem Tale-Sync ueberschneidet.
+
+    Alle Unteraufrufe haben Zeitlimits: haengt git oder der Indexbauer, gibt es einen klaren
+    Abbruch statt eines stundenlangen Stillstands, und die Ursache bleibt im Journal lesbar.
+    """
+    _sperre_erwerb()
+    subprocess.run([sys.executable, "scripts/build_books_index.py"], cwd=REPO,
+                   capture_output=True, timeout=300)
+    subprocess.run(["git", "add", "menschenrechte_books", "web/books.json", "web/api/"], cwd=REPO,
+                   capture_output=True, timeout=120)
+    nachricht = f"feat(rotation): Runde {runde} — {modell} in {buch_id}"
+    committen = subprocess.run(["git", "-c", "user.name=agent-runner-xomni",
+                                 "-c", "user.email=agent-runner-xomni@homelab",
+                                 "commit", "-q", "-m", nachricht], cwd=REPO,
+                               capture_output=True, text=True, timeout=120)
     if committen.returncode != 0 and "nothing to commit" not in (committen.stdout + committen.stderr):
         return "Commit uebersprungen: " + (committen.stderr or committen.stdout).strip()[:80]
     return "committet"
@@ -215,7 +239,7 @@ def main() -> int:
 
                             "--lang", lang.upper(), "--backend", backend, "--model", modell],
 
-                           cwd=REPO, capture_output=True, text=True, timeout=7200)
+                           cwd=REPO, capture_output=True, text=True, timeout=6600)
 
         for zeile in (r.stdout + r.stderr).strip().splitlines()[-6:]:
 
@@ -305,7 +329,7 @@ def main() -> int:
             start = time.monotonic()
             r = subprocess.run([sys.executable, "generate_pipeline.py", "--mode", "append-chapter",
                                 "--book-id", buch, "--lang", band_sprache(buch), "--backend", backend,
-                                "--model", modell], cwd=REPO, capture_output=True, text=True, timeout=7200)
+                                "--model", modell], cwd=REPO, capture_output=True, text=True, timeout=6600)
             dauer = round(time.monotonic() - start, 1)
             for zeile in (r.stdout + r.stderr).strip().splitlines()[-4:]:
                 print("  " + zeile, flush=True)
