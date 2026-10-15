@@ -143,7 +143,8 @@
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_007_die_kammer_der_zeugen",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_002_die_sieben_quellen",
     "r2:deepseek-chat:buch_020_die_quote_der_stille",
-    "r2:deepseek-chat:buch_011_das_haus_ohne_widerhall"
+    "r2:deepseek-chat:buch_011_das_haus_ohne_widerhall",
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_002_die_sieben_quellen"
   ],
   "runden": {
     "1": [
@@ -1385,6 +1386,21 @@
         "tokens": "1144",
         "versuche": "1",
         "woerter": 632
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_002_die_sieben_quellen",
+        "code": "M-05-05",
+        "datei": "05_art_05_abschnitt_5_die_kammer_des_gedämpften_sc.md",
+        "dauer_s": "42.5",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 2,
+        "tokens": "1146",
+        "versuche": "1",
+        "woerter": 293
       }
     ],
     "3": [
