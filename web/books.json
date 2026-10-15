@@ -2106,7 +2106,7 @@
       "pov": "third_person",
       "setting_summary": "Rezepte als Beweis, dass Fuersorge messbar ist.",
       "characters": [],
-      "chapter_count": 11,
+      "chapter_count": 12,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -2118,10 +2118,11 @@
         "art_08",
         "art_09",
         "art_10",
-        "art_11"
+        "art_11",
+        "art_12"
       ],
-      "words": 5106,
-      "reading_minutes": 26,
+      "words": 5455,
+      "reading_minutes": 27,
       "cover": null,
       "chapters": [
         {
@@ -2339,6 +2340,24 @@
           "leak_free": "true",
           "words": 299,
           "reading_minutes": 1
+        },
+        {
+          "file": "12_art_12_abschnitt_12_die_zentrale_lagerung_des_u.md",
+          "index": 12,
+          "title": "Abschnitt 12: Die Zentrale Lagerung des Unvermeidlichen",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "2",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "264.5",
+          "jaccard_max": "0.0",
+          "tokens_generated": "5445",
+          "manual_ending_code": "C-12-12",
+          "backend": "openrouter",
+          "genre": "Kochbuch",
+          "leak_free": "true",
+          "words": 349,
+          "reading_minutes": 2
         }
       ]
     },
