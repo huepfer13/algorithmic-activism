@@ -11,9 +11,10 @@
     "art_02",
     "art_03",
     "art_04",
-    "art_05"
+    "art_05",
+    "art_06"
   ],
-  "current_chapter": 5,
+  "current_chapter": 6,
   "created_at": "2026-10-12T21:23:46.149190+00:00",
   "_hinweis": "Figurenfeld am 2026-10-12 geleert: das Genre Manifest ist personenfrei, das Modell hatte beim Anlegen faelschlich Figuren eingetragen. Die vier Bestandskapitel bleiben als historische Uebergaenge getrackt."
 }

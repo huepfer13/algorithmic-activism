@@ -1729,16 +1729,17 @@
       "pov": "first_person",
       "setting_summary": "In einem unterirdischen Archivbunker, dem Sektor Neun, hausen die letzten freien Chronisten unter ständiger Überwachung durch die Obrigkeit. Ein Riss in der Betondecke lässt Wasser eindringen und markiert eine tickende Frist: In wenigen Wochen wird der Bunker geflutet, wenn niemand die Wahrheit nach außen trägt. Jeder ausgesprochene Satz kann Verhaftung, Folter oder Tod bedeuten – und doch muss gesprochen werden.",
       "characters": [],
-      "chapter_count": 5,
+      "chapter_count": 6,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_06"
       ],
-      "words": 2063,
-      "reading_minutes": 10,
+      "words": 2432,
+      "reading_minutes": 12,
       "cover": null,
       "chapters": [
         {
@@ -1847,6 +1848,24 @@
           "genre": "Manifest",
           "leak_free": "true",
           "words": 312,
+          "reading_minutes": 2
+        },
+        {
+          "file": "06_art_06_abschnitt_6_der_riss_und_die_schwelle.md",
+          "index": 6,
+          "title": "Abschnitt 6: Der Riss und die Schwelle",
+          "article": "art_06",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "68.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1970",
+          "manual_ending_code": "R-06-06",
+          "backend": "openrouter",
+          "genre": "Manifest",
+          "leak_free": "true",
+          "words": 369,
           "reading_minutes": 2
         }
       ]
