@@ -137,7 +137,8 @@
     "r2:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit",
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_020_die_quote_der_stille",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_014_der_unberechenbare_humor",
-    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_001_das_büro_der_unendlichkeit"
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_001_das_büro_der_unendlichkeit",
+    "r2:deepseek-chat:buch_013_aufzeichnungen_eines_archivars"
   ],
   "runden": {
     "1": [
@@ -1289,6 +1290,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
         "runde": 2
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_013_aufzeichnungen_eines_archivars",
+        "code": "T-05-05",
+        "datei": "05_art_05_abschnitt_5_der_abhängigkeitsquotient.md",
+        "dauer_s": "7.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 2,
+        "tokens": "901",
+        "versuche": "1",
+        "woerter": 424
       }
     ],
     "3": [

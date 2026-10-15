@@ -1922,15 +1922,16 @@
         "Herr Brenner",
         "Frau Ostrow"
       ],
-      "chapter_count": 4,
+      "chapter_count": 5,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
-        "art_04"
+        "art_04",
+        "art_05"
       ],
-      "words": 2517,
-      "reading_minutes": 13,
+      "words": 2941,
+      "reading_minutes": 15,
       "cover": null,
       "chapters": [
         {
@@ -2021,6 +2022,24 @@
           "genre": "Tagebuch",
           "leak_free": "true",
           "words": 311,
+          "reading_minutes": 2
+        },
+        {
+          "file": "05_art_05_abschnitt_5_der_abhängigkeitsquotient.md",
+          "index": 5,
+          "title": "Abschnitt 5: Der Abhängigkeitsquotient",
+          "article": "art_05",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "901",
+          "manual_ending_code": "T-05-05",
+          "backend": "deepseek",
+          "genre": "Tagebuch",
+          "leak_free": "true",
+          "words": 424,
           "reading_minutes": 2
         }
       ]
