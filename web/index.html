@@ -209,6 +209,10 @@
       font-size: 1.1rem;
       color: var(--text-prose);
       font-family: Georgia, Cambria, "Times New Roman", serif;
+      /* Zeilenbreite im lesbaren Korridor halten (65-75 Zeichen). Der Block sitzt im
+         760px-Rahmen; ohne Deckel laufen lange Absaetze ueber die volle Breite. */
+      max-width: 68ch;
+      margin: 0 auto;
     }
     .article-body h1 {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -225,6 +229,220 @@
       margin: 20px 0;
       font-style: italic;
     }
+
+    /* ================= Buch-Themewelten =================
+       Eine Farbwelt je Stil-Kategorie. Der Haken steht als data-book-theme auf #reader-view
+       (gesetzt in openBook/openChapter aus BOOK_THEMES); jede Kategorie ist genau ein Block
+       mit denselben sieben Variablen. Neue Baende eines Stils erben sie ohne CSS-Aenderung,
+       ein neuer Stil braucht EINEN Block + einen Eintrag in BOOK_THEMES.
+       Ausserhalb eines Bandes gilt die Standardansicht: die Variablen stehen dann auf den
+       Grundwerten aus :root. */
+    #reader-view {
+      --book-bg: transparent;
+      --book-surface: var(--card-bg);
+      --book-text: var(--text-prose);
+      --book-accent: var(--accent);
+      --book-rule: var(--border);
+      --book-font: inherit;
+      --book-head-font: inherit;
+    }
+    #reader-view[data-book-theme="geraetehandbuch"], .book-tile[data-book-theme="geraetehandbuch"] {
+      /* Werkshandbuch */
+      --book-bg: #0e1216; --book-surface: #161c22; --book-text: #cbd5e1;
+      --book-accent: #f0b429; --book-rule: #2a3540;
+      --book-font: "SFMono-Regular", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+      --book-head-font: inherit;
+    }
+    #reader-view[data-book-theme="maerchen"], .book-tile[data-book-theme="maerchen"] {
+      /* Maerchen */
+      --book-bg: #fdf6e6; --book-surface: #f7edd6; --book-text: #3b2f1e;
+      --book-accent: #a0522d; --book-rule: #e0cfa8;
+      --book-font: Georgia, "Iowan Old Style", serif;
+      --book-head-font: Georgia, serif;
+    }
+    #reader-view[data-book-theme="kinderbuch"], .book-tile[data-book-theme="kinderbuch"] {
+      /* Kinderbuch */
+      --book-bg: #fffdf5; --book-surface: #fef3c7; --book-text: #1f2937;
+      --book-accent: #e11d48; --book-rule: #fcd34d;
+      --book-font: "Trebuchet MS", Verdana, sans-serif;
+      --book-head-font: "Trebuchet MS", Verdana, sans-serif;
+    }
+    #reader-view[data-book-theme="scifi-dystopie"], .book-tile[data-book-theme="scifi-dystopie"] {
+      /* SciFi-Dystopie */
+      --book-bg: #050a12; --book-surface: #0a1520; --book-text: #d7f9ff;
+      --book-accent: #22d3ee; --book-rule: #134e5e;
+      --book-font: "Segoe UI", Roboto, sans-serif;
+      --book-head-font: inherit;
+    }
+    #reader-view[data-book-theme="philosophischer-essay"], .book-tile[data-book-theme="philosophischer-essay"] {
+      /* Philosophischer Essay */
+      --book-bg: #fbfaf7; --book-surface: #f2f0ea; --book-text: #232323;
+      --book-accent: #3f4a8a; --book-rule: #dcd8cc;
+      --book-font: Georgia, serif;
+      --book-head-font: Georgia, serif;
+    }
+    #reader-view[data-book-theme="parabel"], .book-tile[data-book-theme="parabel"] {
+      /* Parabel */
+      --book-bg: #fbf7ec; --book-surface: #f4ecda; --book-text: #31302b;
+      --book-accent: #7c6a3f; --book-rule: #e2d6bb;
+      --book-font: Georgia, serif;
+      --book-head-font: Georgia, serif;
+    }
+    #reader-view[data-book-theme="gerichtsdrama"], .book-tile[data-book-theme="gerichtsdrama"] {
+      /* Gerichtsdrama */
+      --book-bg: #f7f8fa; --book-surface: #eef2f6; --book-text: #1b2430;
+      --book-accent: #1d4ed8; --book-rule: #d7dee6;
+      --book-font: Georgia, "Times New Roman", serif;
+      --book-head-font: inherit;
+    }
+    #reader-view[data-book-theme="solarpunk"], .book-tile[data-book-theme="solarpunk"] {
+      /* Solarpunk */
+      --book-bg: #f4fbf3; --book-surface: #e6f5e3; --book-text: #1f3324;
+      --book-accent: #15803d; --book-rule: #c8e6c9;
+      --book-font: Georgia, serif;
+      --book-head-font: "Trebuchet MS", Verdana, sans-serif;
+    }
+    #reader-view[data-book-theme="briefroman"], .book-tile[data-book-theme="briefroman"] {
+      /* Briefroman */
+      --book-bg: #fdf8f0; --book-surface: #f6ecdd; --book-text: #40342a;
+      --book-accent: #8b5e3c; --book-rule: #e5d5bd;
+      --book-font: Georgia, "Iowan Old Style", serif;
+      --book-head-font: Georgia, serif;
+    }
+    #reader-view[data-book-theme="satire"], .book-tile[data-book-theme="satire"] {
+      /* Satire */
+      --book-bg: #fdfbf0; --book-surface: #f5efd5; --book-text: #2b2b20;
+      --book-accent: #a16207; --book-rule: #e3d9a5;
+      --book-font: Georgia, serif;
+      --book-head-font: "Trebuchet MS", Verdana, sans-serif;
+    }
+    #reader-view[data-book-theme="gothic"], .book-tile[data-book-theme="gothic"] {
+      /* Gothic */
+      --book-bg: #0d0a10; --book-surface: #171221; --book-text: #e6dff0;
+      --book-accent: #a78bfa; --book-rule: #33294a;
+      --book-font: Georgia, "Iowan Old Style", serif;
+      --book-head-font: Georgia, serif;
+    }
+    #reader-view[data-book-theme="manifest"], .book-tile[data-book-theme="manifest"] {
+      /* Manifest */
+      --book-bg: #120a0a; --book-surface: #1d0f0f; --book-text: #f6eaea;
+      --book-accent: #ef4444; --book-rule: #5b1f1f;
+      --book-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --book-head-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    #reader-view[data-book-theme="tagebuch"], .book-tile[data-book-theme="tagebuch"] {
+      /* Tagebuch */
+      --book-bg: #fbfbf7; --book-surface: #f4f5ee; --book-text: #2f3437;
+      --book-accent: #2f6f6b; --book-rule: #dde0d3;
+      --book-font: Georgia, serif;
+      --book-head-font: inherit;
+    }
+    #reader-view[data-book-theme="witzebuch"], .book-tile[data-book-theme="witzebuch"] {
+      /* Witzebuch */
+      --book-bg: #fffbeb; --book-surface: #fff1cc; --book-text: #2b1d0e;
+      --book-accent: #ea580c; --book-rule: #fdba74;
+      --book-font: "Trebuchet MS", Verdana, sans-serif;
+      --book-head-font: "Trebuchet MS", Verdana, sans-serif;
+    }
+    #reader-view[data-book-theme="kochbuch"], .book-tile[data-book-theme="kochbuch"] {
+      /* Kochbuch */
+      --book-bg: #fdf6ee; --book-surface: #f8e7d4; --book-text: #3a2c22;
+      --book-accent: #b23a1f; --book-rule: #e7cfb4;
+      --book-font: Georgia, serif;
+      --book-head-font: Georgia, serif;
+    }
+    #reader-view[data-book-theme="lebensweisheiten"], .book-tile[data-book-theme="lebensweisheiten"] {
+      /* Lebensweisheiten */
+      --book-bg: #f7faf6; --book-surface: #edf3ea; --book-text: #28352b;
+      --book-accent: #4b7f52; --book-rule: #d5e0d3;
+      --book-font: Georgia, serif;
+      --book-head-font: Georgia, serif;
+    }
+    #reader-view[data-book-theme="sprichwoerter"], .book-tile[data-book-theme="sprichwoerter"] {
+      /* Sprichwoerter */
+      --book-bg: #fbf6ec; --book-surface: #f3e8d3; --book-text: #33291c;
+      --book-accent: #8a6d1f; --book-rule: #e2d3b0;
+      --book-font: Georgia, serif;
+      --book-head-font: inherit;
+    }
+    #reader-view[data-book-theme="limericks"], .book-tile[data-book-theme="limericks"] {
+      /* Limericks */
+      --book-bg: #f7fdfb; --book-surface: #e9fbf4; --book-text: #1f2b2b;
+      --book-accent: #db2777; --book-rule: #bfeee0;
+      --book-font: "Trebuchet MS", Verdana, sans-serif;
+      --book-head-font: "Trebuchet MS", Verdana, sans-serif;
+    }
+    #reader-view[data-book-theme="diary"], .book-tile[data-book-theme="diary"] {
+      /* Diary (engl. Band) */
+      --book-bg: #0b1020; --book-surface: #141b32; --book-text: #e2e8f5;
+      --book-accent: #60a5fa; --book-rule: #27324f;
+      --book-font: Georgia, "Iowan Old Style", serif;
+      --book-head-font: inherit;
+    }
+
+    /* Anwendung: die Variablen wirken nur, wo der Haken steht. */
+    #reader-view[data-book-theme] { background: var(--book-bg); border-radius: 10px; padding: 26px 24px; }
+    #reader-view[data-book-theme] .about h2,
+    #reader-view[data-book-theme] .toc-head { color: var(--book-accent); font-family: var(--book-head-font); }
+    #reader-view[data-book-theme] .about-lede,
+    #reader-view[data-book-theme] .about-note { color: var(--book-text); }
+    #reader-view[data-book-theme] .provenance { background: var(--book-surface); border-color: var(--book-rule); }
+    #reader-view[data-book-theme] .pro-item b { color: var(--book-text); }
+    #reader-view[data-book-theme] .article-body { color: var(--book-text); font-family: var(--book-font); }
+    #reader-view[data-book-theme] .article-body h1,
+    #reader-view[data-book-theme] .article-body h2,
+    #reader-view[data-book-theme] .article-body h3 { color: var(--book-accent); font-family: var(--book-head-font); }
+    #reader-view[data-book-theme] .article-body blockquote { border-left-color: var(--book-accent); color: var(--book-text); }
+    #reader-view[data-book-theme] .toc button,
+    #reader-view[data-book-theme] .chapter-nav button { background: var(--book-surface); border-color: var(--book-rule); color: var(--book-text); }
+    #reader-view[data-book-theme] .toc button:hover,
+    #reader-view[data-book-theme] .chapter-nav button:hover:not(:disabled) { border-color: var(--book-accent); }
+    /* Ein Stil, eine Zutat: das Manifest setzt seine Ueberschriften in Versalien. */
+    #reader-view[data-book-theme="manifest"] .about h2,
+    #reader-view[data-book-theme="manifest"] .article-body h1 { text-transform: uppercase; letter-spacing: 0.04em; }
+
+    /* Ein-/ausklappbares Inhaltsverzeichnis (Buchseite offen, Kapitelansicht als Leiste) */
+    .toc-bar {
+      margin: 12px 0 0;
+      border: 1px solid var(--book-rule, var(--border));
+      border-radius: 8px;
+      background: var(--book-surface, var(--card-bg));
+    }
+    .toc-bar > summary {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      padding: 9px 12px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--book-accent, var(--accent));
+    }
+    .toc-bar > summary::-webkit-details-marker { display: none; }
+    .toc-bar > summary::after { content: "\25be"; color: var(--muted); margin-left: auto; }
+    .toc-bar[open] > summary::after { content: "\25b4"; }
+    .toc-bar .toc-count { color: var(--muted); font-weight: 400; }
+    .toc-bar .toc { margin: 0; padding: 0 10px 10px; }
+    .toc-bar .toc button { width: 100%; }
+
+    /* Typografisches Ersatzcover: das Katalogfeld "cover" ist nicht in jedem Band gefuellt —
+       dann traegt die Kachel Titel und Stil statt eines leeren Bildes. */
+    .cover-fallback {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+      min-height: 150px;
+      padding: 14px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      background: var(--book-bg, var(--search-bg));
+      border: 1px solid var(--book-rule, var(--border));
+      border-left: 5px solid var(--book-accent, var(--accent));
+    }
+    .cover-fallback .cover-style { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--book-accent, var(--accent)); }
+    .cover-fallback .cover-title { font-family: var(--book-head-font, inherit); font-size: 0.95rem; font-weight: 700; color: var(--book-text, var(--text)); line-height: 1.3; }
+    .cover-fallback .cover-lang { font-size: 0.62rem; color: var(--muted); }
 
     /* Ueber das Projekt / Manifest (Startansicht) */
     .about h2 {
@@ -815,6 +1033,7 @@
 
     function showAbout() {
       currentTaleIndex = -1;
+      applyBookTheme(null);              // Startansicht der Geschichten: Standardansicht
       document.getElementById('reader-view').innerHTML = ABOUT_HTML;
       fillAboutStats();
       document.querySelectorAll('.tale-item').forEach(el => el.classList.remove('active'));
@@ -1027,6 +1246,86 @@
     const REPORT_URL = 'https://github.com/huepfer13/algorithmic-activism/issues/new';
     const UDHR_ARTICLES = 30;                 // Die Allgemeine Erklaerung der Menschenrechte hat 30 Artikel.
 
+    // ---- Buch-Themewelten: Stil-Kategorie -> Farbwelt ------------------------------------
+    // Eine Farbwelt je Stil-Kategorie, NICHT je Band: alle Baende eines Stils teilen sie,
+    // neue Baende erben automatisch. Der Haken steht als data-book-theme auf #reader-view,
+    // die Variablenbloecke liegen im <style>-Kopf (Abschnitt "Buch-Themewelten").
+    // Zuordnung explizit, weil die Kategorien Umlaute und Unterstriche tragen
+    // (Gerätehandbuch, SciFi_Dystopie, Sprichwoerter) — als Attributwert unbrauchbar.
+    const BOOK_THEMES = {
+      'Briefroman': 'briefroman',
+      'Diary': 'diary',
+      'Gerichtsdrama': 'gerichtsdrama',
+      'Gerätehandbuch': 'geraetehandbuch',
+      'Gothic': 'gothic',
+      'Kinderbuch': 'kinderbuch',
+      'Kochbuch': 'kochbuch',
+      'Lebensweisheiten': 'lebensweisheiten',
+      'Limericks': 'limericks',
+      'Manifest': 'manifest',
+      'Märchen': 'maerchen',
+      'Parabel': 'parabel',
+      'Philosophischer_Essay': 'philosophischer-essay',
+      'Satire': 'satire',
+      'SciFi_Dystopie': 'scifi-dystopie',
+      'Solarpunk': 'solarpunk',
+      'Sprichwoerter': 'sprichwoerter',
+      'Tagebuch': 'tagebuch',
+      'Witzebuch': 'witzebuch'
+    };
+
+    // Unbekannter Stil -> '' : dann bleibt die Standardansicht stehen, statt eine Farbwelt zu raten.
+    function themeOf(book) { return (book && BOOK_THEMES[book.style]) || ''; }
+
+    function applyBookTheme(book) {
+      const view = document.getElementById('reader-view');
+      if (!view) return;
+      const slug = themeOf(book);
+      if (slug) view.setAttribute('data-book-theme', slug);
+      else view.removeAttribute('data-book-theme');
+    }
+
+    // Lesezeit steht in books.json (reading_minutes, je Band und je Kapitel) — sie wird
+    // gelesen, nicht geschaetzt.
+    function readingTimeLabel(part) {
+      const min = Number(part && part.reading_minutes);
+      return min ? '~' + min + ' ' + bt('book_minutes', 'Min') : '';
+    }
+
+    // Cover: das Katalogfeld traegt bei den Baenden ohne Bildmaterial einen leeren Wert.
+    // Dann tritt ein typografisches Cover aus Titel und Stil an dieselbe Stelle.
+    function coverMarkup(b, cls) {
+      if (b.cover) return '<img class="' + cls + '" src="' + esc(b.cover) + '" alt="">';
+      return '<div class="' + cls + ' cover-fallback" aria-hidden="true">'
+        + '<span class="cover-style">' + esc(b.style || UI.noValue) + '</span>'
+        + '<span class="cover-title">' + esc(b.title || b.book_id) + '</span>'
+        + '<span class="cover-lang">' + esc(b.language || '') + '</span></div>';
+    }
+
+    // Inhaltsverzeichnis: dieselbe Liste an zwei Einhaengungen (Buchseite, Kapitel-Leiste) —
+    // deshalb eine Funktion statt zweier Kopien.
+    function tocMarkup(b, offen) {
+      const liste = (b.chapters || []).map(ch => {
+        const zeit = readingTimeLabel(ch);
+        return '<li><button type="button" data-file="' + esc(ch.file) + '">'
+          + '<span class="toc-num">' + esc(chapterLabel(ch)) + '</span>' + esc(ch.title || ch.file)
+          + (ch.article ? '<span class="toc-art">' + esc(ch.article) + '</span>' : '')
+          + '<span class="toc-art">' + esc(String(ch.words) + ' ' + bt('book_words', 'Woerter'))
+          + (zeit ? ' \u00b7 ' + esc(zeit) : '') + '</span>'
+          + '</button></li>';
+      }).join('');
+      return '<details class="toc-bar"' + (offen ? ' open' : '') + '>'
+        + '<summary>' + esc(bt('book_toc', 'Inhalt'))
+        + '<span class="toc-count">' + esc(String((b.chapters || []).length)) + '</span></summary>'
+        + '<ul class="toc">' + liste + '</ul></details>';
+    }
+
+    function wireToc(view) {
+      view.querySelectorAll('.toc button').forEach(el => {
+        el.onclick = () => openChapter(el.getAttribute('data-file'));
+      });
+    }
+
     let BOOKS = null;            // null = books.json nicht ladbar
     let booksLoaded = false;
     let activeTab = 'tales';     // 'tales' | 'books'
@@ -1079,6 +1378,7 @@
       const box = document.querySelector('.search-box');
       if (box) box.style.display = (tab === 'tales') ? '' : 'none';   // Filter gelten fuer die Geschichten
       if (tab === 'tales') {
+        applyBookTheme(null);            // Geschichtenansicht hat keine Buch-Farbwelt
         if (datasetLoaded) {
           renderList(filteredTales);
           updateCount();
@@ -1129,10 +1429,10 @@
 
     function bookTile(b) {
       const pct = Math.min(100, Math.round(((b.covered_articles || []).length / UDHR_ARTICLES) * 100));
-      const cover = b.cover ? `<img class="book-cover" src="${esc(b.cover)}" alt="">` : '';
+      const theme = themeOf(b);      // dieselbe Farbwelt wie im Reader, auch auf der Kachel
       return `
-        <div class="book-tile" data-book="${esc(b.book_id)}">
-          ${cover}
+        <div class="book-tile" data-book="${esc(b.book_id)}" data-book-theme="${esc(theme)}">
+          ${coverMarkup(b, 'book-cover')}
           <h3>${esc(b.title || b.book_id)}</h3>
           <p>${esc(b.setting_summary || '')}</p>
           <div class="book-progress"><span style="width:${pct}%"></span></div>
@@ -1141,6 +1441,7 @@
             <span class="tag">${esc(b.style || UI.noValue)}</span>
             <span class="tag">${esc(b.language || UI.noValue)}</span>
             <span class="tag">${esc((b.words || 0) + ' ' + bt('book_words', 'Woerter'))}</span>
+            ${readingTimeLabel(b) ? `<span class="tag">${esc(readingTimeLabel(b))}</span>` : ''}
           </div>
         </div>`;
     }
@@ -1148,6 +1449,7 @@
     function renderBooksHome() {
       const view = document.getElementById('reader-view');
       if (!view) return;
+      applyBookTheme(null);              // Uebersicht: Kacheln tragen ihre Farbwelt selbst
       if (!booksLoaded || !BOOKS || BOOKS.length === 0) {
         view.innerHTML = `<div class="about"><h2>${esc(bt('book_tab_head', 'Buecher & Baende'))}</h2>
           <p class="about-note">${esc(booksLoaded ? bt('book_none', 'Noch kein Buch im Korpus.') : bt('book_load_error', 'Buecher nicht ladbar.'))}</p></div>`;
@@ -1171,9 +1473,10 @@
       if (!b) return;
       currentBookId = id;
       currentChapterFile = null;
+      applyBookTheme(b);                 // Farbwelt des Bandes auf den Reader setzen
       renderBookList();
       const view = document.getElementById('reader-view');
-      const cover = b.cover ? `<img class="book-cover" src="${esc(b.cover)}" alt="">` : '';
+      const cover = coverMarkup(b, 'book-cover');
       const figuren = (b.characters || []).length
         ? `<div class="pro-item"><span>${esc(bt('book_cast', 'Figuren'))}</span><b>${esc((b.characters || []).join(', '))}</b></div>` : '';
       view.innerHTML = `
@@ -1188,21 +1491,14 @@
             <div class="pro-item"><span>${esc(UI.proArticle)}</span><b>${esc((b.covered_articles || []).join(', ') || 'N/A')}</b></div>
             <div class="pro-item"><span>${esc(bt('book_chapters', 'Kapitel'))}</span><b>${esc(String(b.chapter_count))}</b></div>
             <div class="pro-item"><span>${esc(bt('book_length', 'Umfang'))}</span><b>${esc((b.words || 0) + ' ' + bt('book_words', 'Woerter'))}</b></div>
+            ${readingTimeLabel(b) ? `<div class="pro-item"><span>${esc(bt('book_reading_time', 'Lesezeit'))}</span><b>${esc(readingTimeLabel(b))}</b></div>` : ''}
             ${figuren}
           </div>
           <div class="book-progress"><span style="width:${Math.min(100, Math.round(((b.covered_articles || []).length / UDHR_ARTICLES) * 100))}%"></span></div>
           <p class="about-note">${esc(progressLabel(b))}</p>
         </div>
-        <h2 class="toc-head">${esc(bt('book_toc', 'Inhalt'))}</h2>
-        <ul class="toc">${(b.chapters || []).map(ch => `
-          <li><button type="button" data-file="${esc(ch.file)}">
-            <span class="toc-num">${esc(chapterLabel(ch))}</span>${esc(ch.title || ch.file)}
-            ${ch.article ? `<span class="toc-art">${esc(ch.article)}</span>` : ''}
-            <span class="toc-art">${esc(String(ch.words) + ' ' + bt('book_words', 'Woerter'))}</span>
-          </button></li>`).join('')}</ul>`;
-      view.querySelectorAll('.toc button').forEach(el => {
-        el.onclick = () => openChapter(el.getAttribute('data-file'));
-      });
+        ${tocMarkup(b, true)}`;
+      wireToc(view);
       const main = document.getElementById('main-content');
       if (main) main.scrollTop = 0;
     }
@@ -1226,6 +1522,7 @@
         if (!res.ok) throw new Error('HTTP ' + res.status);
         const roh = await res.text();
         const bodyHtml = marked.parse(stripFrontmatter(roh));
+        applyBookTheme(b);                 // Farbwelt bleibt beim Kapitelwechsel stehen
         const liste = (b.chapters || []);
         const pos = liste.map(c => c.file).indexOf(file);
         const vor = pos > 0 ? liste[pos - 1] : null;
@@ -1234,7 +1531,9 @@
           <div class="about">
             <p class="about-note">${esc(b.title || b.book_id)}</p>
             <h2>${esc(chapterLabel(ch) + (ch.title ? ': ' + ch.title : ''))}</h2>
+            <p class="about-note">${esc([readingTimeLabel(ch), ch.article || ''].filter(Boolean).join(' · '))}</p>
           </div>
+          ${tocMarkup(b, false)}
           <article class="article-body">${bodyHtml}</article>
 
           <div class="feedback-bar">
@@ -1255,6 +1554,7 @@
         if (prev && !prev.disabled) prev.onclick = () => openChapter(prev.getAttribute('data-file'));
         if (next && !next.disabled) next.onclick = () => openChapter(next.getAttribute('data-file'));
         wireFeedback(b, ch);
+        wireToc(view);                     // Verweise der Leiste im Kapitel
         const main = document.getElementById('main-content');
         if (main) main.scrollTop = 0;
       } catch (e) {

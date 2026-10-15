@@ -130,7 +130,9 @@
       "api_random_title": "Beispielkapitel im Volltext (statisch)",
       "api_ipsum_title": "Platzhaltertext aus dem Korpus",
       "api_books_title": "Buch-Index (Katalog)",
-      "book_generation": "Erzeugung"
+      "book_generation": "Erzeugung",
+      "book_reading_time": "Lesezeit",
+      "book_minutes": "Min"
     },
     "en": {
       "doc_title": "Algorithmic Activism — A synthetic human rights corpus",
@@ -207,7 +209,9 @@
       "api_random_title": "Sample chapter, full text (static)",
       "api_ipsum_title": "Placeholder text from the corpus",
       "api_books_title": "Book index (catalog)",
-      "book_generation": "Generation"
+      "book_generation": "Generation",
+      "book_reading_time": "Reading time",
+      "book_minutes": "min"
     },
     "es": {
       "doc_title": "Algorithmic Activism — Corpus sintético de derechos humanos",
