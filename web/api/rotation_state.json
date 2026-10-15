@@ -145,7 +145,8 @@
     "r2:deepseek-chat:buch_020_die_quote_der_stille",
     "r2:deepseek-chat:buch_011_das_haus_ohne_widerhall",
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_002_die_sieben_quellen",
-    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_007_die_kammer_der_zeugen"
+    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_007_die_kammer_der_zeugen",
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_013_aufzeichnungen_eines_archivars"
   ],
   "runden": {
     "1": [
@@ -1417,6 +1418,21 @@
         "tokens": "1686",
         "versuche": "1",
         "woerter": 475
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_013_aufzeichnungen_eines_archivars",
+        "code": "T-07-07",
+        "datei": "07_art_07_abschnitt_7_die_gleichheitsschwelle.md",
+        "dauer_s": "29.8",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 2,
+        "tokens": "985",
+        "versuche": "1",
+        "woerter": 326
       }
     ],
     "3": [
