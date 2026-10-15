@@ -390,15 +390,16 @@
       "pov": "third_person",
       "setting_summary": "Die Tiere des Schattenwaldes halten Rat und finden fuer jeden Streit eine gute Loesung.",
       "characters": [],
-      "chapter_count": 4,
+      "chapter_count": 5,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
-        "art_04"
+        "art_04",
+        "art_05"
       ],
-      "words": 2176,
-      "reading_minutes": 11,
+      "words": 2481,
+      "reading_minutes": 12,
       "cover": null,
       "chapters": [
         {
@@ -489,6 +490,24 @@
           "genre": "Kinderbuch",
           "leak_free": "true",
           "words": 430,
+          "reading_minutes": 2
+        },
+        {
+          "file": "05_art_05_abschnitt_5_der_sichere_stein.md",
+          "index": 5,
+          "title": "Abschnitt 5: Der sichere Stein",
+          "article": "art_05",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "26.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1654",
+          "manual_ending_code": "K-05-05",
+          "backend": "openrouter",
+          "genre": "Kinderbuch",
+          "leak_free": "true",
+          "words": 305,
           "reading_minutes": 2
         }
       ]
