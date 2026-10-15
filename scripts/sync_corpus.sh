@@ -1,11 +1,17 @@
 #!/usr/bin/env bash
-# sync_corpus.sh — bewusster, manueller Corpus-Publish (GitHub -> Pages + Hugging Face).
+# sync_corpus.sh — bewusster, gebuendelter Corpus-Publish (GitHub -> Pages + Hugging Face).
 #
-# WARUM MANUELL:
-#   Der Daemon erzeugt ~34 Tales/Stunde. Liesse man ihn automatisch pushen, waeren das
+# WARUM GEBUENDELT (und nicht pro Tale):
+#   Der Daemon erzeugt ~34 Tales/Stunde. Liesse man ihn einzeln pushen, waeren das
 #   ~82 Pushes/Tag — und jeder Push loest den Pages-Build UND den Hugging-Face-Upload
 #   aus (dataset.jsonl, derzeit ~6,5 MB und mit jedem Lauf wachsend). Dieses Skript
-#   macht daraus einen kontrollierten Batch, den ein Mensch ausloest.
+#   macht daraus EINEN kontrollierten Batch.
+#
+# WER ES AUSLOEST:
+#   Der Timer `algorithmic-corpus-sync.timer` (taeglich 05:30, Persistent) faehrt es
+#   automatisch. Ein manueller Aufruf ist jederzeit moeglich und tut dasselbe.
+#   Korrigiert 2026-10-15: Der Kopf behauptete "manuell", obwohl der Timer es faehrt -
+#   wer sich auf den Kopf verliess, baute den falschen Ablauf.
 #
 # WAS ES TUT (die Reihenfolge ist wichtig, siehe Bugfix unten):
 #   1. prueft, ob AUSSERHALB von menschenrechte_tales/ uncommittete Aenderungen liegen -> Abbruch
