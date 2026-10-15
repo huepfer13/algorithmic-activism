@@ -1,0 +1,8 @@
+---
+article: 2
+article_id: "art_02"
+title: "Chacun peut se prévaloir de tous les droits et de toutes ..."
+source: "OHCHR — Office of the High Commissioner for Human Rights (UDHR franzoesisch)"
+url: https://www.ohchr.org/sites/default/files/UDHR/Documents/UDHR_Translations/frn.pdf
+---
+Chacun peut se prévaloir de tous les droits et de toutes les libertés proclamés dans la présente Déclaration, sans distinction aucune, notamment de race, de couleur, de sexe, de langue, de religion, d'opinion politique ou de toute autre opinion, d'origine nationale ou sociale, de fortune, de naissance ou de toute autre situation. De plus, il ne sera fait aucune distinction fondée sur le statut politique, juridique ou international du pays ou du territoire dont une personne est ressortissante, que ce pays ou territoire soit indépendant, sous tutelle, non autonome ou soumis à une limitation quelconque de souveraineté.
