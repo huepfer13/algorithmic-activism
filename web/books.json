@@ -3110,10 +3110,12 @@
         "Dorn",
         "Elia"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 506,
-      "reading_minutes": 3,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 914,
+      "reading_minutes": 5,
       "cover": null,
       "chapters": [
         {
@@ -3133,6 +3135,24 @@
           "leak_free": "",
           "words": 506,
           "reading_minutes": 3
+        },
+        {
+          "file": "01_art_01_abschnitt_1_die_kalibrierung_der_stille.md",
+          "index": 1,
+          "title": "Abschnitt 1: Die Kalibrierung der Stille",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.3",
+          "jaccard_max": "0.077",
+          "tokens_generated": "746",
+          "manual_ending_code": "S-01-01",
+          "backend": "deepseek",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "true",
+          "words": 408,
+          "reading_minutes": 2
         }
       ]
     }
