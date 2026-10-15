@@ -650,15 +650,16 @@
       "pov": "third_person",
       "setting_summary": "Ein diskursives Nachdenken darueber, was Menschenrechte praktisch bedeuten.",
       "characters": [],
-      "chapter_count": 4,
+      "chapter_count": 5,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
-        "art_04"
+        "art_04",
+        "art_05"
       ],
-      "words": 2578,
-      "reading_minutes": 13,
+      "words": 3242,
+      "reading_minutes": 16,
       "cover": null,
       "chapters": [
         {
@@ -749,6 +750,24 @@
           "genre": "Philosophischer_Essay",
           "leak_free": "",
           "words": 602,
+          "reading_minutes": 3
+        },
+        {
+          "file": "05_art_05_abschnitt_5_die_frequenz_der_schmerzschw.md",
+          "index": 5,
+          "title": "Abschnitt 5: Die Frequenz der Schmerzschwelle",
+          "article": "art_05",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "69.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1300",
+          "manual_ending_code": "P-05-05",
+          "backend": "deepseek",
+          "genre": "Philosophischer_Essay",
+          "leak_free": "",
+          "words": 664,
           "reading_minutes": 3
         }
       ]
