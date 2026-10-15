@@ -130,7 +130,8 @@
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_014_der_unberechenbare_humor",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_012_manifest_der_unantastbaren",
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_008_flechtwerk_arkadien",
-    "r1:deepseek-chat:buch_020_die_quote_der_stille"
+    "r1:deepseek-chat:buch_020_die_quote_der_stille",
+    "r2:deepseek-chat:buch_017_des_volkes_mund"
   ],
   "runden": {
     "1": [
@@ -1187,6 +1188,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "deepseek-chat",
         "runde": 2
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_017_des_volkes_mund",
+        "code": "V-12-12",
+        "datei": "12_art_12_abschnitt_12_das_versiegelte_haus.md",
+        "dauer_s": "7.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 2,
+        "tokens": "731",
+        "versuche": "1",
+        "woerter": 385
       }
     ],
     "3": [

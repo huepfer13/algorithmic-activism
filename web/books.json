@@ -2575,7 +2575,7 @@
       "pov": "third_person",
       "setting_summary": "Etymologische Miniaturen zu gefluegelten Worten.",
       "characters": [],
-      "chapter_count": 11,
+      "chapter_count": 12,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -2587,10 +2587,11 @@
         "art_08",
         "art_09",
         "art_10",
-        "art_11"
+        "art_11",
+        "art_12"
       ],
-      "words": 3987,
-      "reading_minutes": 20,
+      "words": 4372,
+      "reading_minutes": 22,
       "cover": null,
       "chapters": [
         {
@@ -2808,6 +2809,24 @@
           "leak_free": "true",
           "words": 286,
           "reading_minutes": 1
+        },
+        {
+          "file": "12_art_12_abschnitt_12_das_versiegelte_haus.md",
+          "index": 12,
+          "title": "Abschnitt 12: Das versiegelte Haus",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.1",
+          "jaccard_max": "0.04",
+          "tokens_generated": "731",
+          "manual_ending_code": "V-12-12",
+          "backend": "deepseek",
+          "genre": "Sprichwoerter",
+          "leak_free": "true",
+          "words": 385,
+          "reading_minutes": 2
         }
       ]
     },
