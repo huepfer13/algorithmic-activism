@@ -650,16 +650,17 @@
       "pov": "third_person",
       "setting_summary": "Ein diskursives Nachdenken darueber, was Menschenrechte praktisch bedeuten.",
       "characters": [],
-      "chapter_count": 5,
+      "chapter_count": 6,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_06"
       ],
-      "words": 3242,
-      "reading_minutes": 16,
+      "words": 3593,
+      "reading_minutes": 18,
       "cover": null,
       "chapters": [
         {
@@ -769,6 +770,24 @@
           "leak_free": "",
           "words": 664,
           "reading_minutes": 3
+        },
+        {
+          "file": "06_art_06_abschnitt_6_die_latenz_der_rechtspersönl.md",
+          "index": 6,
+          "title": "Abschnitt 6: Die Latenz der Rechtspersönlichkeit",
+          "article": "art_06",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "185.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1162",
+          "manual_ending_code": "P-06-06",
+          "backend": "openrouter",
+          "genre": "Philosophischer_Essay",
+          "leak_free": "",
+          "words": 351,
+          "reading_minutes": 2
         }
       ]
     },
