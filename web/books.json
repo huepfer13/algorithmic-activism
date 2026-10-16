@@ -2673,7 +2673,7 @@
       "pov": "third_person",
       "setting_summary": "Kontemplative Einsichten fuer unruhige Zeiten.",
       "characters": [],
-      "chapter_count": 11,
+      "chapter_count": 12,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -2685,10 +2685,11 @@
         "art_08",
         "art_09",
         "art_10",
-        "art_11"
+        "art_11",
+        "art_12"
       ],
-      "words": 3156,
-      "reading_minutes": 16,
+      "words": 3570,
+      "reading_minutes": 18,
       "cover": null,
       "chapters": [
         {
@@ -2905,6 +2906,24 @@
           "genre": "Lebensweisheiten",
           "leak_free": "true",
           "words": 390,
+          "reading_minutes": 2
+        },
+        {
+          "file": "12_art_12_abschnitt_12_die_wohnung_als_geschützter.md",
+          "index": 12,
+          "title": "Abschnitt 12: Die Wohnung als geschützter Raum",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "834",
+          "manual_ending_code": "L-12-12",
+          "backend": "deepseek",
+          "genre": "Lebensweisheiten",
+          "leak_free": "true",
+          "words": 414,
           "reading_minutes": 2
         }
       ]

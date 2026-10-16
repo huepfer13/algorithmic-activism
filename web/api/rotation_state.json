@@ -157,7 +157,8 @@
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_008_flechtwerk_arkadien",
     "r2:deepseek-chat:buch_009_depeschen_aus_dem_kordon",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_020_die_quote_der_stille",
-    "r2:deepseek-chat:buch_019_the_salt_diaries"
+    "r2:deepseek-chat:buch_019_the_salt_diaries",
+    "r2:deepseek-chat:buch_016_faden_der_gelassenheit"
   ],
   "runden": {
     "1": [
@@ -1604,6 +1605,21 @@
         "tokens": "739",
         "versuche": "1",
         "woerter": 557
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_016_faden_der_gelassenheit",
+        "code": "L-12-12",
+        "datei": "12_art_12_abschnitt_12_die_wohnung_als_geschützter.md",
+        "dauer_s": "6.8",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 2,
+        "tokens": "834",
+        "versuche": "1",
+        "woerter": 414
       }
     ],
     "3": [
