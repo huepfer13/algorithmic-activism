@@ -843,7 +843,7 @@
         "Vera",
         "Juno"
       ],
-      "chapter_count": 8,
+      "chapter_count": 9,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -852,10 +852,11 @@
         "art_05",
         "art_06",
         "art_07",
-        "art_08"
+        "art_08",
+        "art_09"
       ],
-      "words": 3855,
-      "reading_minutes": 19,
+      "words": 4216,
+      "reading_minutes": 21,
       "cover": null,
       "chapters": [
         {
@@ -1018,6 +1019,24 @@
           "genre": "Parabel",
           "leak_free": "true",
           "words": 404,
+          "reading_minutes": 2
+        },
+        {
+          "file": "09_art_09_abschnitt_9_die_entkopplung_der_zugriffs.md",
+          "index": 9,
+          "title": "Abschnitt 9: Die Entkopplung der Zugriffspfade",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "84.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1596",
+          "manual_ending_code": "D-09-09",
+          "backend": "openrouter",
+          "genre": "Parabel",
+          "leak_free": "true",
+          "words": 361,
           "reading_minutes": 2
         }
       ]
