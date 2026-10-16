@@ -1365,17 +1365,18 @@
         "Nadia",
         "Kroll"
       ],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
         "art_05",
-        "art_06"
+        "art_06",
+        "art_07"
       ],
-      "words": 3338,
-      "reading_minutes": 17,
+      "words": 3766,
+      "reading_minutes": 19,
       "cover": null,
       "chapters": [
         {
@@ -1502,6 +1503,24 @@
           "genre": "Briefroman",
           "leak_free": "true",
           "words": 380,
+          "reading_minutes": 2
+        },
+        {
+          "file": "07_art_07_abschnitt_7_das_vierte_knoten.md",
+          "index": 7,
+          "title": "Abschnitt 7: Das vierte Knoten",
+          "article": "art_07",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "178.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "2296",
+          "manual_ending_code": "B-07-07",
+          "backend": "openrouter",
+          "genre": "Briefroman",
+          "leak_free": "true",
+          "words": 428,
           "reading_minutes": 2
         }
       ]
