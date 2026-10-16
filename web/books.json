@@ -2711,7 +2711,7 @@
       "pov": "third_person",
       "setting_summary": "Kontemplative Einsichten fuer unruhige Zeiten.",
       "characters": [],
-      "chapter_count": 12,
+      "chapter_count": 13,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -2724,10 +2724,11 @@
         "art_09",
         "art_10",
         "art_11",
-        "art_12"
+        "art_12",
+        "art_13"
       ],
-      "words": 3570,
-      "reading_minutes": 18,
+      "words": 3879,
+      "reading_minutes": 19,
       "cover": null,
       "chapters": [
         {
@@ -2962,6 +2963,24 @@
           "genre": "Lebensweisheiten",
           "leak_free": "true",
           "words": 414,
+          "reading_minutes": 2
+        },
+        {
+          "file": "13_art_13_abschnitt_13_die_kalibrierung_der_bewegu.md",
+          "index": 13,
+          "title": "Abschnitt 13: Die Kalibrierung der Bewegung",
+          "article": "art_13",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "39.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1416",
+          "manual_ending_code": "L-13-13",
+          "backend": "openrouter",
+          "genre": "Lebensweisheiten",
+          "leak_free": "true",
+          "words": 309,
           "reading_minutes": 2
         }
       ]

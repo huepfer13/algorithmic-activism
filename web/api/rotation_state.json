@@ -167,7 +167,8 @@
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_011_das_haus_ohne_widerhall",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_002_die_sieben_quellen",
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_007_die_kammer_der_zeugen",
-    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_021_the_bell_of_the_ninth_gate"
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_021_the_bell_of_the_ninth_gate",
+    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_016_faden_der_gelassenheit"
   ],
   "runden": {
     "1": [
@@ -1734,6 +1735,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
         "runde": 2
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_016_faden_der_gelassenheit",
+        "code": "L-13-13",
+        "datei": "13_art_13_abschnitt_13_die_kalibrierung_der_bewegu.md",
+        "dauer_s": "39.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 2,
+        "tokens": "1416",
+        "versuche": "1",
+        "woerter": 309
       }
     ],
     "3": [
