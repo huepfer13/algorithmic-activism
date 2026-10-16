@@ -2879,7 +2879,7 @@
       "pov": "third_person",
       "setting_summary": "Etymologische Miniaturen zu gefluegelten Worten.",
       "characters": [],
-      "chapter_count": 12,
+      "chapter_count": 13,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -2892,10 +2892,11 @@
         "art_09",
         "art_10",
         "art_11",
-        "art_12"
+        "art_12",
+        "art_13"
       ],
-      "words": 4372,
-      "reading_minutes": 22,
+      "words": 4729,
+      "reading_minutes": 24,
       "cover": null,
       "chapters": [
         {
@@ -3130,6 +3131,24 @@
           "genre": "Sprichwoerter",
           "leak_free": "true",
           "words": 385,
+          "reading_minutes": 2
+        },
+        {
+          "file": "13_art_13_abschnitt_13_die_flackernde_lampe.md",
+          "index": 13,
+          "title": "Abschnitt 13: Die flackernde Lampe",
+          "article": "art_13",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "712",
+          "manual_ending_code": "V-13-13",
+          "backend": "deepseek",
+          "genre": "Sprichwoerter",
+          "leak_free": "true",
+          "words": 357,
           "reading_minutes": 2
         }
       ]

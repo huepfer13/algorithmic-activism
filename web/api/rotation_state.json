@@ -151,7 +151,8 @@
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_006_das_gericht_vor_der_mauer",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_009_depeschen_aus_dem_kordon",
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_009_depeschen_aus_dem_kordon",
-    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_013_aufzeichnungen_eines_archivars"
+    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_013_aufzeichnungen_eines_archivars",
+    "r1:deepseek-chat:buch_017_des_volkes_mund"
   ],
   "runden": {
     "1": [
@@ -999,6 +1000,21 @@
         "tokens": "2296",
         "versuche": "1",
         "woerter": 428
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_017_des_volkes_mund",
+        "code": "V-13-13",
+        "datei": "13_art_13_abschnitt_13_die_flackernde_lampe.md",
+        "dauer_s": "6.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 1,
+        "tokens": "712",
+        "versuche": "1",
+        "woerter": 357
       }
     ],
     "10": [
