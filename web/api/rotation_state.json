@@ -158,7 +158,8 @@
     "r2:deepseek-chat:buch_009_depeschen_aus_dem_kordon",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_020_die_quote_der_stille",
     "r2:deepseek-chat:buch_019_the_salt_diaries",
-    "r2:deepseek-chat:buch_016_faden_der_gelassenheit"
+    "r2:deepseek-chat:buch_016_faden_der_gelassenheit",
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_007_die_kammer_der_zeugen"
   ],
   "runden": {
     "1": [
@@ -1051,6 +1052,16 @@
         "tokens": "1531",
         "versuche": "3",
         "woerter": 414
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_007_die_kammer_der_zeugen",
+        "datei": null,
+        "dauer_s": 300.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 1
       }
     ],
     "10": [
