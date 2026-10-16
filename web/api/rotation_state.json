@@ -159,7 +159,8 @@
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_020_die_quote_der_stille",
     "r2:deepseek-chat:buch_019_the_salt_diaries",
     "r2:deepseek-chat:buch_016_faden_der_gelassenheit",
-    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_007_die_kammer_der_zeugen"
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_007_die_kammer_der_zeugen",
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_003_der_rat_der_tiere"
   ],
   "runden": {
     "1": [
@@ -1631,6 +1632,16 @@
         "tokens": "834",
         "versuche": "1",
         "woerter": 414
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_003_der_rat_der_tiere",
+        "datei": null,
+        "dauer_s": 300.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 2
       }
     ],
     "3": [
