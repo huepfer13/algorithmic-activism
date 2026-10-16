@@ -298,16 +298,17 @@
       "pov": "third_person",
       "setting_summary": "Sieben Quellen, sieben Pruefungen: eine Wanderung durch die Landschaften der Rechte.",
       "characters": [],
-      "chapter_count": 5,
+      "chapter_count": 6,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_06"
       ],
-      "words": 2811,
-      "reading_minutes": 14,
+      "words": 3287,
+      "reading_minutes": 16,
       "cover": null,
       "chapters": [
         {
@@ -417,6 +418,24 @@
           "leak_free": "true",
           "words": 293,
           "reading_minutes": 1
+        },
+        {
+          "file": "06_art_06_abschnitt_6_die_prüfung_des_stillen_hafe.md",
+          "index": 6,
+          "title": "Abschnitt 6: Die Prüfung des stillen Hafens",
+          "article": "art_06",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "60.5",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1732",
+          "manual_ending_code": "M-06-06",
+          "backend": "openrouter",
+          "genre": "Märchen",
+          "leak_free": "true",
+          "words": 476,
+          "reading_minutes": 2
         }
       ]
     },

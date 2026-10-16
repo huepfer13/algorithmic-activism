@@ -164,7 +164,8 @@
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_021_the_bell_of_the_ninth_gate",
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_005_fragment_der_vernunft",
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_010_amtsblatt_fuer_unzumutbarkeit",
-    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_011_das_haus_ohne_widerhall"
+    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_011_das_haus_ohne_widerhall",
+    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_002_die_sieben_quellen"
   ],
   "runden": {
     "1": [
@@ -1691,6 +1692,21 @@
         "tokens": "1727",
         "versuche": "1",
         "woerter": 441
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_002_die_sieben_quellen",
+        "code": "M-06-06",
+        "datei": "06_art_06_abschnitt_6_die_prüfung_des_stillen_hafe.md",
+        "dauer_s": "60.5",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 2,
+        "tokens": "1732",
+        "versuche": "1",
+        "woerter": 476
       }
     ],
     "3": [
