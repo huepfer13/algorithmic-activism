@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_022_the_ledger_of_vanishing_rain",
+  "title": "The Ledger of Vanishing Rain",
+  "pov": "third_person",
+  "language": "EN",
+  "style": "Magical_Realism",
+  "setting_summary": "In the sealed city of Kaltbrunn, rain falls only on the rooftops of government buildings while the outer districts parch under a permanent drought. A bureaucratic Ministry of Hydration assigns every citizen a daily water ration and records their words in a public ledger, so that speech and thirst are measured by the same hand. When a young cartographer discovers that the rain's path can be redrawn, she becomes the center of a quiet rebellion that tests dignity, equality, and the right to life itself.",
+  "characters": [
+    "Ilse",
+    "Marek",
+    "Tomas",
+    "Nadia",
+    "The Inspector"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-10-16T22:05:30.466609+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
