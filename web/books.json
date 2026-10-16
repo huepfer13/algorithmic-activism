@@ -3490,13 +3490,14 @@
         "Dorn",
         "Elia"
       ],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_02"
+        "art_02",
+        "art_03"
       ],
-      "words": 1420,
-      "reading_minutes": 7,
+      "words": 1834,
+      "reading_minutes": 9,
       "cover": null,
       "chapters": [
         {
@@ -3552,6 +3553,24 @@
           "leak_free": "true",
           "words": 506,
           "reading_minutes": 3
+        },
+        {
+          "file": "03_art_03_abschnitt_3_der_vorlauf.md",
+          "index": 3,
+          "title": "Abschnitt 3: Der Vorlauf",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "3",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "168.6",
+          "jaccard_max": "0.024",
+          "tokens_generated": "1531",
+          "manual_ending_code": "S-03-03",
+          "backend": "openrouter",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "true",
+          "words": 414,
+          "reading_minutes": 2
         }
       ]
     },
