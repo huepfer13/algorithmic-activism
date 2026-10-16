@@ -447,16 +447,17 @@
       "pov": "third_person",
       "setting_summary": "Die Tiere des Schattenwaldes halten Rat und finden fuer jeden Streit eine gute Loesung.",
       "characters": [],
-      "chapter_count": 5,
+      "chapter_count": 6,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_06"
       ],
-      "words": 2481,
-      "reading_minutes": 12,
+      "words": 2782,
+      "reading_minutes": 14,
       "cover": null,
       "chapters": [
         {
@@ -565,6 +566,24 @@
           "genre": "Kinderbuch",
           "leak_free": "true",
           "words": 305,
+          "reading_minutes": 2
+        },
+        {
+          "file": "06_art_06_abschnitt_6_das_leuchtende_stück.md",
+          "index": 6,
+          "title": "Abschnitt 6: Das leuchtende Stück",
+          "article": "art_06",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "90.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "4234",
+          "manual_ending_code": "K-06-06",
+          "backend": "openrouter",
+          "genre": "Kinderbuch",
+          "leak_free": "true",
+          "words": 301,
           "reading_minutes": 2
         }
       ]
