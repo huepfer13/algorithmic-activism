@@ -160,7 +160,8 @@
     "r2:deepseek-chat:buch_019_the_salt_diaries",
     "r2:deepseek-chat:buch_016_faden_der_gelassenheit",
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_007_die_kammer_der_zeugen",
-    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_003_der_rat_der_tiere"
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_003_der_rat_der_tiere",
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_021_the_bell_of_the_ninth_gate"
   ],
   "runden": {
     "1": [
@@ -1057,6 +1058,16 @@
       {
         "backend": "openrouter",
         "buch": "buch_007_die_kammer_der_zeugen",
+        "datei": null,
+        "dauer_s": 300.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 1
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_021_the_bell_of_the_ninth_gate",
         "datei": null,
         "dauer_s": 300.2,
         "exit": 1,
