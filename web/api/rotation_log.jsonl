@@ -160,3 +160,4 @@
 {"backend": "openrouter", "buch": "buch_007_die_kammer_der_zeugen", "datei": null, "dauer_s": 300.2, "exit": 1, "hinweis": "kein Kapitel geschrieben", "modell": "nvidia/nemotron-3-ultra-550b-a55b:free", "runde": 1}
 {"backend": "openrouter", "buch": "buch_003_der_rat_der_tiere", "datei": null, "dauer_s": 300.2, "exit": 1, "hinweis": "kein Kapitel geschrieben", "modell": "nvidia/nemotron-3-ultra-550b-a55b:free", "runde": 2}
 {"backend": "openrouter", "buch": "buch_021_the_bell_of_the_ninth_gate", "datei": null, "dauer_s": 300.2, "exit": 1, "hinweis": "kein Kapitel geschrieben", "modell": "nvidia/nemotron-3-ultra-550b-a55b:free", "runde": 1}
+{"backend": "openrouter", "buch": "buch_005_fragment_der_vernunft", "datei": null, "dauer_s": 300.2, "exit": 1, "hinweis": "kein Kapitel geschrieben", "modell": "nvidia/nemotron-3-ultra-550b-a55b:free", "runde": 2}
