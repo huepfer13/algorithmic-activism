@@ -3664,12 +3664,13 @@
         "Tobin",
         "The Keeper"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_03"
       ],
-      "words": 893,
-      "reading_minutes": 4,
+      "words": 1392,
+      "reading_minutes": 7,
       "cover": null,
       "chapters": [
         {
@@ -3706,6 +3707,24 @@
           "genre": "Fairy_Tale",
           "leak_free": "true",
           "words": 396,
+          "reading_minutes": 2
+        },
+        {
+          "file": "02_art_03_abschnitt_2_the_humming_ninth.md",
+          "index": 2,
+          "title": "Abschnitt 2: The Humming Ninth",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "73.1",
+          "jaccard_max": "0.057",
+          "tokens_generated": "1765",
+          "manual_ending_code": "M-03-02",
+          "backend": "openrouter",
+          "genre": "Fairy_Tale",
+          "leak_free": "true",
+          "words": 499,
           "reading_minutes": 2
         }
       ]
