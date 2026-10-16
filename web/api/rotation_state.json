@@ -153,7 +153,8 @@
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_009_depeschen_aus_dem_kordon",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_013_aufzeichnungen_eines_archivars",
     "r1:deepseek-chat:buch_017_des_volkes_mund",
-    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_021_the_bell_of_the_ninth_gate"
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_021_the_bell_of_the_ninth_gate",
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_008_flechtwerk_arkadien"
   ],
   "runden": {
     "1": [
@@ -1016,6 +1017,21 @@
         "tokens": "712",
         "versuche": "1",
         "woerter": 357
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_008_flechtwerk_arkadien",
+        "code": "U-06-06",
+        "datei": "06_art_06_abschnitt_6_die_kalibrierung_der_stimme.md",
+        "dauer_s": "72.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 1,
+        "tokens": "1699",
+        "versuche": "1",
+        "woerter": 467
       }
     ],
     "10": [
