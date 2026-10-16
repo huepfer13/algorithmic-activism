@@ -154,7 +154,8 @@
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_013_aufzeichnungen_eines_archivars",
     "r1:deepseek-chat:buch_017_des_volkes_mund",
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_021_the_bell_of_the_ninth_gate",
-    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_008_flechtwerk_arkadien"
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_008_flechtwerk_arkadien",
+    "r2:deepseek-chat:buch_009_depeschen_aus_dem_kordon"
   ],
   "runden": {
     "1": [
@@ -1556,6 +1557,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
         "runde": 2
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_009_depeschen_aus_dem_kordon",
+        "code": "B-09-09",
+        "datei": "09_art_09_abschnitt_9_die_neunte_verriegelung.md",
+        "dauer_s": "7.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 2,
+        "tokens": "805",
+        "versuche": "1",
+        "woerter": 398
       }
     ],
     "3": [

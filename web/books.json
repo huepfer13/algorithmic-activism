@@ -1384,7 +1384,7 @@
         "Nadia",
         "Kroll"
       ],
-      "chapter_count": 8,
+      "chapter_count": 9,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1393,10 +1393,11 @@
         "art_05",
         "art_06",
         "art_07",
-        "art_08"
+        "art_08",
+        "art_09"
       ],
-      "words": 4077,
-      "reading_minutes": 20,
+      "words": 4475,
+      "reading_minutes": 22,
       "cover": null,
       "chapters": [
         {
@@ -1559,6 +1560,24 @@
           "genre": "Briefroman",
           "leak_free": "true",
           "words": 311,
+          "reading_minutes": 2
+        },
+        {
+          "file": "09_art_09_abschnitt_9_die_neunte_verriegelung.md",
+          "index": 9,
+          "title": "Abschnitt 9: Die neunte Verriegelung",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "805",
+          "manual_ending_code": "B-09-09",
+          "backend": "deepseek",
+          "genre": "Briefroman",
+          "leak_free": "true",
+          "words": 398,
           "reading_minutes": 2
         }
       ]
