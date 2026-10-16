@@ -3436,10 +3436,12 @@
         "Tobin",
         "The Keeper"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 497,
-      "reading_minutes": 2,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 893,
+      "reading_minutes": 4,
       "cover": null,
       "chapters": [
         {
@@ -3458,6 +3460,24 @@
           "genre": "Fairy_Tale",
           "leak_free": "",
           "words": 497,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_01_abschnitt_1_the_ledgers_hollow.md",
+          "index": 1,
+          "title": "Abschnitt 1: The Ledger's Hollow",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.8",
+          "jaccard_max": "0.036",
+          "tokens_generated": "523",
+          "manual_ending_code": "M-01-01",
+          "backend": "deepseek",
+          "genre": "Fairy_Tale",
+          "leak_free": "true",
+          "words": 396,
           "reading_minutes": 2
         }
       ]

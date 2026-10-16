@@ -146,7 +146,8 @@
     "r2:deepseek-chat:buch_011_das_haus_ohne_widerhall",
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_002_die_sieben_quellen",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_007_die_kammer_der_zeugen",
-    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_013_aufzeichnungen_eines_archivars"
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_013_aufzeichnungen_eines_archivars",
+    "r1:deepseek-chat:buch_021_the_bell_of_the_ninth_gate"
   ],
   "runden": {
     "1": [
@@ -964,6 +965,21 @@
         "tokens": "1858",
         "versuche": "2",
         "woerter": 468
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_021_the_bell_of_the_ninth_gate",
+        "code": "M-01-01",
+        "datei": "01_art_01_abschnitt_1_the_ledgers_hollow.md",
+        "dauer_s": "5.8",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 1,
+        "tokens": "523",
+        "versuche": "1",
+        "woerter": 396
       }
     ],
     "10": [
