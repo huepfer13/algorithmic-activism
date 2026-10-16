@@ -3392,14 +3392,15 @@
         "Old Pavel",
         "Rook"
       ],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_03",
-        "art_04"
+        "art_04",
+        "art_05"
       ],
-      "words": 1893,
-      "reading_minutes": 9,
+      "words": 2450,
+      "reading_minutes": 12,
       "cover": null,
       "chapters": [
         {
@@ -3473,6 +3474,24 @@
           "leak_free": "true",
           "words": 444,
           "reading_minutes": 2
+        },
+        {
+          "file": "04_art_05_abschnitt_4_the_wet_between_the_floors.md",
+          "index": 4,
+          "title": "Abschnitt 4: The Wet Between the Floors",
+          "article": "art_05",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.8",
+          "jaccard_max": "0.05",
+          "tokens_generated": "739",
+          "manual_ending_code": "T-05-04",
+          "backend": "deepseek",
+          "genre": "Diary",
+          "leak_free": "true",
+          "words": 557,
+          "reading_minutes": 3
         }
       ]
     },

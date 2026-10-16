@@ -156,7 +156,8 @@
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_021_the_bell_of_the_ninth_gate",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_008_flechtwerk_arkadien",
     "r2:deepseek-chat:buch_009_depeschen_aus_dem_kordon",
-    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_020_die_quote_der_stille"
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_020_die_quote_der_stille",
+    "r2:deepseek-chat:buch_019_the_salt_diaries"
   ],
   "runden": {
     "1": [
@@ -1588,6 +1589,21 @@
         "tokens": "805",
         "versuche": "1",
         "woerter": 398
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_019_the_salt_diaries",
+        "code": "T-05-04",
+        "datei": "04_art_05_abschnitt_4_the_wet_between_the_floors.md",
+        "dauer_s": "7.8",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 2,
+        "tokens": "739",
+        "versuche": "1",
+        "woerter": 557
       }
     ],
     "3": [
