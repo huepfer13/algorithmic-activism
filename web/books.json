@@ -1381,17 +1381,18 @@
         "Kell",
         "Nuri"
       ],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
         "art_05",
-        "art_06"
+        "art_06",
+        "art_07"
       ],
-      "words": 3279,
-      "reading_minutes": 16,
+      "words": 3728,
+      "reading_minutes": 19,
       "cover": null,
       "chapters": [
         {
@@ -1518,6 +1519,24 @@
           "genre": "Solarpunk",
           "leak_free": "true",
           "words": 467,
+          "reading_minutes": 2
+        },
+        {
+          "file": "07_art_07_abschnitt_7_der_gleichschutzkalibrator.md",
+          "index": 7,
+          "title": "Abschnitt 7: Der Gleichschutz‑Kalibrator",
+          "article": "art_07",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "59.2",
+          "jaccard_max": "0.083",
+          "tokens_generated": "1446",
+          "manual_ending_code": "U-07-07",
+          "backend": "openrouter",
+          "genre": "Solarpunk",
+          "leak_free": "true",
+          "words": 449,
           "reading_minutes": 2
         }
       ]

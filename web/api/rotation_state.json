@@ -188,7 +188,8 @@
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_022_the_ledger_of_vanishing_rain",
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_022_the_ledger_of_vanishing_rain",
     "r3:deepseek-chat:buch_002_die_sieben_quellen",
-    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_001_das_büro_der_unendlichkeit"
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_001_das_büro_der_unendlichkeit",
+    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_008_flechtwerk_arkadien"
   ],
   "runden": {
     "1": [
@@ -1990,6 +1991,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
         "runde": 2
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_008_flechtwerk_arkadien",
+        "code": "U-07-07",
+        "datei": "07_art_07_abschnitt_7_der_gleichschutzkalibrator.md",
+        "dauer_s": "59.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 2,
+        "tokens": "1446",
+        "versuche": "1",
+        "woerter": 449
       }
     ],
     "3": [
