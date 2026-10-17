@@ -183,7 +183,8 @@
     "r2:deepseek-chat:buch_002_die_sieben_quellen",
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_012_manifest_der_unantastbaren",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_005_fragment_der_vernunft",
-    "r3:deepseek-chat:buch_014_der_unberechenbare_humor"
+    "r3:deepseek-chat:buch_014_der_unberechenbare_humor",
+    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_019_the_salt_diaries"
   ],
   "runden": {
     "1": [
@@ -1945,6 +1946,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
         "runde": 2
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_019_the_salt_diaries",
+        "code": "T-09-05",
+        "datei": "05_art_09_abschnitt_5_the_calibration_of_silence.md",
+        "dauer_s": "56.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 2,
+        "tokens": "1578",
+        "versuche": "1",
+        "woerter": 544
       }
     ],
     "3": [

@@ -3620,15 +3620,16 @@
         "Old Pavel",
         "Rook"
       ],
-      "chapter_count": 4,
+      "chapter_count": 5,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_09"
       ],
-      "words": 2450,
-      "reading_minutes": 12,
+      "words": 2994,
+      "reading_minutes": 15,
       "cover": null,
       "chapters": [
         {
@@ -3719,6 +3720,24 @@
           "genre": "Diary",
           "leak_free": "true",
           "words": 557,
+          "reading_minutes": 3
+        },
+        {
+          "file": "05_art_09_abschnitt_5_the_calibration_of_silence.md",
+          "index": 5,
+          "title": "Abschnitt 5: The Calibration of Silence",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "56.0",
+          "jaccard_max": "0.038",
+          "tokens_generated": "1578",
+          "manual_ending_code": "T-09-05",
+          "backend": "openrouter",
+          "genre": "Diary",
+          "leak_free": "true",
+          "words": 544,
           "reading_minutes": 3
         }
       ]
