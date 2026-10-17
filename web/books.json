@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 22,
+  "count": 23,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -4127,6 +4127,45 @@
           "genre": "Magical_Realism",
           "leak_free": "true",
           "words": 475,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_023_the_gravity_room",
+      "title": "The Gravity Room",
+      "language": "EN",
+      "style": "Chamber_Play",
+      "pov": "third_person",
+      "setting_summary": "Four strangers wake sealed inside a decommissioned orbital habitat module with a failing oxygen recycler and a countdown clock that no one set. Each holds a fragment of the access code needed to open the hatch, but the code only assembles if all four agree aloud on how to share the remaining air, water, and decision-making power. As the module drifts toward re-entry, every choice about dignity, speech, survival, and equality becomes a life-or-death negotiation.",
+      "characters": [
+        "Vera",
+        "Oskar",
+        "Mirela",
+        "Tobias"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 452,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.7",
+          "jaccard_max": "",
+          "tokens_generated": "640",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Chamber_Play",
+          "leak_free": "",
+          "words": 452,
           "reading_minutes": 2
         }
       ]

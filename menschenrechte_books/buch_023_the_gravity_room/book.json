@@ -1,0 +1,18 @@
+{
+  "book_id": "buch_023_the_gravity_room",
+  "title": "The Gravity Room",
+  "pov": "third_person",
+  "language": "EN",
+  "style": "Chamber_Play",
+  "setting_summary": "Four strangers wake sealed inside a decommissioned orbital habitat module with a failing oxygen recycler and a countdown clock that no one set. Each holds a fragment of the access code needed to open the hatch, but the code only assembles if all four agree aloud on how to share the remaining air, water, and decision-making power. As the module drifts toward re-entry, every choice about dignity, speech, survival, and equality becomes a life-or-death negotiation.",
+  "characters": [
+    "Vera",
+    "Oskar",
+    "Mirela",
+    "Tobias"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-10-17T22:05:29.092348+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
