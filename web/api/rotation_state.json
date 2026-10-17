@@ -190,7 +190,8 @@
     "r3:deepseek-chat:buch_002_die_sieben_quellen",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_001_das_büro_der_unendlichkeit",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_008_flechtwerk_arkadien",
-    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_020_die_quote_der_stille"
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_020_die_quote_der_stille",
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_019_the_salt_diaries"
   ],
   "runden": {
     "1": [
@@ -2011,6 +2012,16 @@
       {
         "backend": "openrouter",
         "buch": "buch_020_die_quote_der_stille",
+        "datei": null,
+        "dauer_s": 0.8,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 2
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_019_the_salt_diaries",
         "datei": null,
         "dauer_s": 0.8,
         "exit": 1,
