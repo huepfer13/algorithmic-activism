@@ -171,7 +171,8 @@
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_016_faden_der_gelassenheit",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_003_der_rat_der_tiere",
     "r3:deepseek-chat:buch_009_depeschen_aus_dem_kordon",
-    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_022_the_ledger_of_vanishing_rain"
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_022_the_ledger_of_vanishing_rain",
+    "r2:deepseek-chat:buch_021_the_bell_of_the_ninth_gate"
   ],
   "runden": {
     "1": [
@@ -1783,6 +1784,21 @@
         "tokens": "4234",
         "versuche": "1",
         "woerter": 301
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_021_the_bell_of_the_ninth_gate",
+        "code": "M-04-03",
+        "datei": "03_art_04_abschnitt_3_the_calibration_of_chains.md",
+        "dauer_s": "6.8",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 2,
+        "tokens": "628",
+        "versuche": "1",
+        "woerter": 462
       }
     ],
     "3": [

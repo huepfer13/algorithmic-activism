@@ -3721,13 +3721,14 @@
         "Tobin",
         "The Keeper"
       ],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 1392,
-      "reading_minutes": 7,
+      "words": 1854,
+      "reading_minutes": 9,
       "cover": null,
       "chapters": [
         {
@@ -3782,6 +3783,24 @@
           "genre": "Fairy_Tale",
           "leak_free": "true",
           "words": 499,
+          "reading_minutes": 2
+        },
+        {
+          "file": "03_art_04_abschnitt_3_the_calibration_of_chains.md",
+          "index": 3,
+          "title": "Abschnitt 3: The Calibration of Chains",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.8",
+          "jaccard_max": "0.065",
+          "tokens_generated": "628",
+          "manual_ending_code": "M-04-03",
+          "backend": "deepseek",
+          "genre": "Fairy_Tale",
+          "leak_free": "true",
+          "words": 462,
           "reading_minutes": 2
         }
       ]
