@@ -3819,12 +3819,13 @@
         "Nadia",
         "The Inspector"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_03"
       ],
-      "words": 1102,
-      "reading_minutes": 6,
+      "words": 1573,
+      "reading_minutes": 8,
       "cover": null,
       "chapters": [
         {
@@ -3862,6 +3863,24 @@
           "leak_free": "true",
           "words": 505,
           "reading_minutes": 3
+        },
+        {
+          "file": "02_art_03_abschnitt_2_the_calibration_of_breath.md",
+          "index": 2,
+          "title": "Abschnitt 2: The Calibration of Breath",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.4",
+          "jaccard_max": "0.071",
+          "tokens_generated": "591",
+          "manual_ending_code": "Z-03-02",
+          "backend": "deepseek",
+          "genre": "Magical_Realism",
+          "leak_free": "true",
+          "words": 471,
+          "reading_minutes": 2
         }
       ]
     }

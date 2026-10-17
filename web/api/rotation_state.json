@@ -172,7 +172,8 @@
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_003_der_rat_der_tiere",
     "r3:deepseek-chat:buch_009_depeschen_aus_dem_kordon",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_022_the_ledger_of_vanishing_rain",
-    "r2:deepseek-chat:buch_021_the_bell_of_the_ninth_gate"
+    "r2:deepseek-chat:buch_021_the_bell_of_the_ninth_gate",
+    "r1:deepseek-chat:buch_022_the_ledger_of_vanishing_rain"
   ],
   "runden": {
     "1": [
@@ -1115,6 +1116,21 @@
         "tokens": "5397",
         "versuche": "1",
         "woerter": 505
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_022_the_ledger_of_vanishing_rain",
+        "code": "Z-03-02",
+        "datei": "02_art_03_abschnitt_2_the_calibration_of_breath.md",
+        "dauer_s": "5.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 1,
+        "tokens": "591",
+        "versuche": "1",
+        "woerter": 471
       }
     ],
     "10": [
