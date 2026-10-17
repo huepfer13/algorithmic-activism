@@ -16,7 +16,7 @@
         "Nova",
         "Omicron"
       ],
-      "chapter_count": 13,
+      "chapter_count": 14,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -27,13 +27,14 @@
         "art_07",
         "art_08",
         "art_09",
+        "art_10",
         "art_12",
         "art_14",
         "art_19",
         "art_26"
       ],
-      "words": 6922,
-      "reading_minutes": 35,
+      "words": 7260,
+      "reading_minutes": 36,
       "cover": null,
       "chapters": [
         {
@@ -286,6 +287,24 @@
           "genre": "Gerätehandbuch",
           "leak_free": "true",
           "words": 318,
+          "reading_minutes": 2
+        },
+        {
+          "file": "14_art_10_abschnitt_14_inbetriebnahme_der_verfahre.md",
+          "index": 14,
+          "title": "Abschnitt 14: Inbetriebnahme der Verfahrensgleichheitseinheit bei thermischer Drift",
+          "article": "art_10",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "18.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "821",
+          "manual_ending_code": "E-10-14",
+          "backend": "deepseek",
+          "genre": "Gerätehandbuch",
+          "leak_free": "",
+          "words": 338,
           "reading_minutes": 2
         }
       ]

@@ -174,7 +174,8 @@
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_022_the_ledger_of_vanishing_rain",
     "r2:deepseek-chat:buch_021_the_bell_of_the_ninth_gate",
     "r1:deepseek-chat:buch_022_the_ledger_of_vanishing_rain",
-    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_006_das_gericht_vor_der_mauer"
+    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_006_das_gericht_vor_der_mauer",
+    "r2:deepseek-chat:buch_001_das_büro_der_unendlichkeit"
   ],
   "runden": {
     "1": [
@@ -1831,6 +1832,21 @@
         "tokens": "1520",
         "versuche": "1",
         "woerter": 359
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_001_das_büro_der_unendlichkeit",
+        "code": "E-10-14",
+        "datei": "14_art_10_abschnitt_14_inbetriebnahme_der_verfahre.md",
+        "dauer_s": "18.3",
+        "ending_ok": "false",
+        "exit": 2,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 2,
+        "tokens": "821",
+        "versuche": "3",
+        "woerter": 338
       }
     ],
     "3": [
