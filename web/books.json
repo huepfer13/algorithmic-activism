@@ -3971,13 +3971,14 @@
         "Nadia",
         "The Inspector"
       ],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 1573,
-      "reading_minutes": 8,
+      "words": 2048,
+      "reading_minutes": 10,
       "cover": null,
       "chapters": [
         {
@@ -4032,6 +4033,24 @@
           "genre": "Magical_Realism",
           "leak_free": "true",
           "words": 471,
+          "reading_minutes": 2
+        },
+        {
+          "file": "03_art_04_abschnitt_3_the_servitude_threshold.md",
+          "index": 3,
+          "title": "Abschnitt 3: The Servitude Threshold",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "63.9",
+          "jaccard_max": "0.029",
+          "tokens_generated": "1676",
+          "manual_ending_code": "Z-04-03",
+          "backend": "openrouter",
+          "genre": "Magical_Realism",
+          "leak_free": "true",
+          "words": 475,
           "reading_minutes": 2
         }
       ]
