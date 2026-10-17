@@ -173,7 +173,8 @@
     "r3:deepseek-chat:buch_009_depeschen_aus_dem_kordon",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_022_the_ledger_of_vanishing_rain",
     "r2:deepseek-chat:buch_021_the_bell_of_the_ninth_gate",
-    "r1:deepseek-chat:buch_022_the_ledger_of_vanishing_rain"
+    "r1:deepseek-chat:buch_022_the_ledger_of_vanishing_rain",
+    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_006_das_gericht_vor_der_mauer"
   ],
   "runden": {
     "1": [
@@ -1815,6 +1816,21 @@
         "tokens": "628",
         "versuche": "1",
         "woerter": 462
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_006_das_gericht_vor_der_mauer",
+        "code": "D-10-10",
+        "datei": "10_art_10_abschnitt_10_das_echo_der_rohrpost.md",
+        "dauer_s": "45.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 2,
+        "tokens": "1520",
+        "versuche": "1",
+        "woerter": 359
       }
     ],
     "3": [
