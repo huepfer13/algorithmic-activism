@@ -3778,14 +3778,15 @@
         "Tobin",
         "The Keeper"
       ],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_03",
-        "art_04"
+        "art_04",
+        "art_05"
       ],
-      "words": 1854,
-      "reading_minutes": 9,
+      "words": 2328,
+      "reading_minutes": 12,
       "cover": null,
       "chapters": [
         {
@@ -3858,6 +3859,24 @@
           "genre": "Fairy_Tale",
           "leak_free": "true",
           "words": 462,
+          "reading_minutes": 2
+        },
+        {
+          "file": "04_art_05_abschnitt_4_the_drip_of_threshold.md",
+          "index": 4,
+          "title": "Abschnitt 4: The Drip of Threshold",
+          "article": "art_05",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "71.6",
+          "jaccard_max": "0.048",
+          "tokens_generated": "1523",
+          "manual_ending_code": "M-05-04",
+          "backend": "openrouter",
+          "genre": "Fairy_Tale",
+          "leak_free": "true",
+          "words": 474,
           "reading_minutes": 2
         }
       ]
