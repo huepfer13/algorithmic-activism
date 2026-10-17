@@ -317,7 +317,7 @@
       "pov": "third_person",
       "setting_summary": "Sieben Quellen, sieben Pruefungen: eine Wanderung durch die Landschaften der Rechte.",
       "characters": [],
-      "chapter_count": 7,
+      "chapter_count": 8,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -325,10 +325,11 @@
         "art_04",
         "art_05",
         "art_06",
-        "art_07"
+        "art_07",
+        "art_08"
       ],
-      "words": 3813,
-      "reading_minutes": 19,
+      "words": 4267,
+      "reading_minutes": 21,
       "cover": null,
       "chapters": [
         {
@@ -474,6 +475,24 @@
           "leak_free": "true",
           "words": 526,
           "reading_minutes": 3
+        },
+        {
+          "file": "08_art_08_abschnitt_8_die_prüfung_des_wirksamen_re.md",
+          "index": 8,
+          "title": "Abschnitt 8: Die Prüfung des wirksamen Rechtsbehelfs",
+          "article": "art_08",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.5",
+          "jaccard_max": "0.0",
+          "tokens_generated": "871",
+          "manual_ending_code": "M-08-08",
+          "backend": "deepseek",
+          "genre": "Märchen",
+          "leak_free": "true",
+          "words": 454,
+          "reading_minutes": 2
         }
       ]
     },
