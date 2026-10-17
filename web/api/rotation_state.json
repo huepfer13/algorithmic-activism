@@ -179,7 +179,8 @@
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_011_das_haus_ohne_widerhall",
     "r2:deepseek-chat:buch_004_neon_exil",
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_022_the_ledger_of_vanishing_rain",
-    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_021_the_bell_of_the_ninth_gate"
+    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_021_the_bell_of_the_ninth_gate",
+    "r2:deepseek-chat:buch_002_die_sieben_quellen"
   ],
   "runden": {
     "1": [
@@ -1901,6 +1902,21 @@
         "tokens": "1523",
         "versuche": "1",
         "woerter": 474
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_002_die_sieben_quellen",
+        "code": "M-07-07",
+        "datei": "07_art_07_abschnitt_7_die_prüfung_der_gleichen_sch.md",
+        "dauer_s": "7.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 2,
+        "tokens": "930",
+        "versuche": "1",
+        "woerter": 526
       }
     ],
     "3": [

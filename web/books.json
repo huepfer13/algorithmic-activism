@@ -317,17 +317,18 @@
       "pov": "third_person",
       "setting_summary": "Sieben Quellen, sieben Pruefungen: eine Wanderung durch die Landschaften der Rechte.",
       "characters": [],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
         "art_05",
-        "art_06"
+        "art_06",
+        "art_07"
       ],
-      "words": 3287,
-      "reading_minutes": 16,
+      "words": 3813,
+      "reading_minutes": 19,
       "cover": null,
       "chapters": [
         {
@@ -455,6 +456,24 @@
           "leak_free": "true",
           "words": 476,
           "reading_minutes": 2
+        },
+        {
+          "file": "07_art_07_abschnitt_7_die_prüfung_der_gleichen_sch.md",
+          "index": 7,
+          "title": "Abschnitt 7: Die Prüfung der gleichen Schwelle",
+          "article": "art_07",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "930",
+          "manual_ending_code": "M-07-07",
+          "backend": "deepseek",
+          "genre": "Märchen",
+          "leak_free": "true",
+          "words": 526,
+          "reading_minutes": 3
         }
       ]
     },
