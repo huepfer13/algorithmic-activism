@@ -4047,14 +4047,15 @@
         "Nadia",
         "The Inspector"
       ],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_03",
-        "art_04"
+        "art_04",
+        "art_05"
       ],
-      "words": 2048,
-      "reading_minutes": 10,
+      "words": 2508,
+      "reading_minutes": 13,
       "cover": null,
       "chapters": [
         {
@@ -4127,6 +4128,24 @@
           "genre": "Magical_Realism",
           "leak_free": "true",
           "words": 475,
+          "reading_minutes": 2
+        },
+        {
+          "file": "04_art_05_abschnitt_4_the_calibration_of_cruelty.md",
+          "index": 4,
+          "title": "Abschnitt 4: The Calibration of Cruelty",
+          "article": "art_05",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.6",
+          "jaccard_max": "0.067",
+          "tokens_generated": "606",
+          "manual_ending_code": "Z-05-04",
+          "backend": "deepseek",
+          "genre": "Magical_Realism",
+          "leak_free": "true",
+          "words": 460,
           "reading_minutes": 2
         }
       ]

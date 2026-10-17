@@ -193,7 +193,8 @@
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_020_die_quote_der_stille",
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_019_the_salt_diaries",
     "r3:deepseek-chat:buch_017_des_volkes_mund",
-    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_020_die_quote_der_stille"
+    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_020_die_quote_der_stille",
+    "r2:deepseek-chat:buch_022_the_ledger_of_vanishing_rain"
   ],
   "runden": {
     "1": [
@@ -2045,6 +2046,21 @@
         "tokens": "2008",
         "versuche": "1",
         "woerter": 510
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_022_the_ledger_of_vanishing_rain",
+        "code": "Z-05-04",
+        "datei": "04_art_05_abschnitt_4_the_calibration_of_cruelty.md",
+        "dauer_s": "5.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 2,
+        "tokens": "606",
+        "versuche": "1",
+        "woerter": 460
       }
     ],
     "3": [
