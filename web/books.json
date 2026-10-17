@@ -3800,10 +3800,12 @@
         "Nadia",
         "The Inspector"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 597,
-      "reading_minutes": 3,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 1102,
+      "reading_minutes": 6,
       "cover": null,
       "chapters": [
         {
@@ -3822,6 +3824,24 @@
           "genre": "Magical_Realism",
           "leak_free": "",
           "words": 597,
+          "reading_minutes": 3
+        },
+        {
+          "file": "01_art_01_abschnitt_1_the_weight_of_dust.md",
+          "index": 1,
+          "title": "Abschnitt 1: The Weight of Dust",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "146.0",
+          "jaccard_max": "0.121",
+          "tokens_generated": "5397",
+          "manual_ending_code": "Z-01-01",
+          "backend": "openrouter",
+          "genre": "Magical_Realism",
+          "leak_free": "true",
+          "words": 505,
           "reading_minutes": 3
         }
       ]

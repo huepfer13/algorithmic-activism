@@ -170,7 +170,8 @@
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_021_the_bell_of_the_ninth_gate",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_016_faden_der_gelassenheit",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_003_der_rat_der_tiere",
-    "r3:deepseek-chat:buch_009_depeschen_aus_dem_kordon"
+    "r3:deepseek-chat:buch_009_depeschen_aus_dem_kordon",
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_022_the_ledger_of_vanishing_rain"
   ],
   "runden": {
     "1": [
@@ -1098,6 +1099,21 @@
         "tokens": "1765",
         "versuche": "1",
         "woerter": 499
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_022_the_ledger_of_vanishing_rain",
+        "code": "Z-01-01",
+        "datei": "01_art_01_abschnitt_1_the_weight_of_dust.md",
+        "dauer_s": "146.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 1,
+        "tokens": "5397",
+        "versuche": "1",
+        "woerter": 505
       }
     ],
     "10": [
