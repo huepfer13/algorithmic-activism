@@ -3183,7 +3183,7 @@
       "pov": "third_person",
       "setting_summary": "Etymologische Miniaturen zu gefluegelten Worten.",
       "characters": [],
-      "chapter_count": 13,
+      "chapter_count": 14,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -3197,10 +3197,11 @@
         "art_10",
         "art_11",
         "art_12",
-        "art_13"
+        "art_13",
+        "art_14"
       ],
-      "words": 4729,
-      "reading_minutes": 24,
+      "words": 5137,
+      "reading_minutes": 26,
       "cover": null,
       "chapters": [
         {
@@ -3453,6 +3454,24 @@
           "genre": "Sprichwoerter",
           "leak_free": "true",
           "words": 357,
+          "reading_minutes": 2
+        },
+        {
+          "file": "14_art_14_abschnitt_14_die_kalte_naht.md",
+          "index": 14,
+          "title": "Abschnitt 14: Die kalte Naht",
+          "article": "art_14",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.4",
+          "jaccard_max": "0.028",
+          "tokens_generated": "773",
+          "manual_ending_code": "V-14-14",
+          "backend": "deepseek",
+          "genre": "Sprichwoerter",
+          "leak_free": "true",
+          "words": 408,
           "reading_minutes": 2
         }
       ]
