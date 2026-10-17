@@ -615,16 +615,17 @@
       "pov": "third_person",
       "setting_summary": "Im Schattennetz dokumentieren Ausgeschlossene, wie Rechte Stueck fuer Stueck verschwinden.",
       "characters": [],
-      "chapter_count": 5,
+      "chapter_count": 6,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_06"
       ],
-      "words": 2594,
-      "reading_minutes": 13,
+      "words": 3179,
+      "reading_minutes": 16,
       "cover": null,
       "chapters": [
         {
@@ -734,6 +735,24 @@
           "leak_free": "true",
           "words": 453,
           "reading_minutes": 2
+        },
+        {
+          "file": "06_art_06_abschnitt_6_die_kalibrierung_der_rechtsf.md",
+          "index": 6,
+          "title": "Abschnitt 6: Die Kalibrierung der Rechtsfähigkeit",
+          "article": "art_06",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1209",
+          "manual_ending_code": "S-06-06",
+          "backend": "deepseek",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "true",
+          "words": 585,
+          "reading_minutes": 3
         }
       ]
     },

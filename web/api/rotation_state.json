@@ -176,7 +176,8 @@
     "r1:deepseek-chat:buch_022_the_ledger_of_vanishing_rain",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_006_das_gericht_vor_der_mauer",
     "r2:deepseek-chat:buch_001_das_büro_der_unendlichkeit",
-    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_011_das_haus_ohne_widerhall"
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_011_das_haus_ohne_widerhall",
+    "r2:deepseek-chat:buch_004_neon_exil"
   ],
   "runden": {
     "1": [
@@ -1858,6 +1859,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
         "runde": 2
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_004_neon_exil",
+        "code": "S-06-06",
+        "datei": "06_art_06_abschnitt_6_die_kalibrierung_der_rechtsf.md",
+        "dauer_s": "9.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 2,
+        "tokens": "1209",
+        "versuche": "1",
+        "woerter": 585
       }
     ],
     "3": [
