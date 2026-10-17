@@ -185,7 +185,8 @@
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_005_fragment_der_vernunft",
     "r3:deepseek-chat:buch_014_der_unberechenbare_humor",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_019_the_salt_diaries",
-    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_022_the_ledger_of_vanishing_rain"
+    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_022_the_ledger_of_vanishing_rain",
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_022_the_ledger_of_vanishing_rain"
   ],
   "runden": {
     "1": [
@@ -1977,6 +1978,16 @@
         "tokens": "1676",
         "versuche": "1",
         "woerter": 475
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_022_the_ledger_of_vanishing_rain",
+        "datei": null,
+        "dauer_s": 0.7,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 2
       }
     ],
     "3": [
