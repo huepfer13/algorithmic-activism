@@ -181,7 +181,8 @@
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_022_the_ledger_of_vanishing_rain",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_021_the_bell_of_the_ninth_gate",
     "r2:deepseek-chat:buch_002_die_sieben_quellen",
-    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_012_manifest_der_unantastbaren"
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_012_manifest_der_unantastbaren",
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_005_fragment_der_vernunft"
   ],
   "runden": {
     "1": [
@@ -1149,6 +1150,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
         "runde": 1
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_005_fragment_der_vernunft",
+        "code": "P-07-07",
+        "datei": "07_art_07_abschnitt_7_die_schwelle_der_gleichheit.md",
+        "dauer_s": "252.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 1,
+        "tokens": "4500",
+        "versuche": "3",
+        "woerter": 393
       }
     ],
     "10": [
