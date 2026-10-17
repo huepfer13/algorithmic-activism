@@ -180,7 +180,8 @@
     "r2:deepseek-chat:buch_004_neon_exil",
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_022_the_ledger_of_vanishing_rain",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_021_the_bell_of_the_ninth_gate",
-    "r2:deepseek-chat:buch_002_die_sieben_quellen"
+    "r2:deepseek-chat:buch_002_die_sieben_quellen",
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_012_manifest_der_unantastbaren"
   ],
   "runden": {
     "1": [
@@ -1917,6 +1918,16 @@
         "tokens": "930",
         "versuche": "1",
         "woerter": 526
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_012_manifest_der_unantastbaren",
+        "datei": null,
+        "dauer_s": 0.6,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 2
       }
     ],
     "3": [
