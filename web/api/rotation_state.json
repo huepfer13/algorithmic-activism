@@ -192,7 +192,8 @@
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_008_flechtwerk_arkadien",
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_020_die_quote_der_stille",
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_019_the_salt_diaries",
-    "r3:deepseek-chat:buch_017_des_volkes_mund"
+    "r3:deepseek-chat:buch_017_des_volkes_mund",
+    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_020_die_quote_der_stille"
   ],
   "runden": {
     "1": [
@@ -2029,6 +2030,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
         "runde": 2
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_020_die_quote_der_stille",
+        "code": "S-04-04",
+        "datei": "04_art_04_abschnitt_4_der_schwellende_schwellenwer.md",
+        "dauer_s": "62.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 2,
+        "tokens": "2008",
+        "versuche": "1",
+        "woerter": 510
       }
     ],
     "3": [

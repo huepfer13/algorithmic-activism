@@ -3813,14 +3813,15 @@
         "Dorn",
         "Elia"
       ],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_02",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 1834,
-      "reading_minutes": 9,
+      "words": 2344,
+      "reading_minutes": 12,
       "cover": null,
       "chapters": [
         {
@@ -3894,6 +3895,24 @@
           "leak_free": "true",
           "words": 414,
           "reading_minutes": 2
+        },
+        {
+          "file": "04_art_04_abschnitt_4_der_schwellende_schwellenwer.md",
+          "index": 4,
+          "title": "Abschnitt 4: Der schwellende Schwellenwert",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "62.1",
+          "jaccard_max": "0.024",
+          "tokens_generated": "2008",
+          "manual_ending_code": "S-04-04",
+          "backend": "openrouter",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "true",
+          "words": 510,
+          "reading_minutes": 3
         }
       ]
     },
