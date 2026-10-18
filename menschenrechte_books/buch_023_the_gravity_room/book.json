@@ -13,9 +13,10 @@
   ],
   "covered_articles": [
     "art_01",
-    "art_03"
+    "art_03",
+    "art_04"
   ],
-  "current_chapter": 2,
+  "current_chapter": 3,
   "created_at": "2026-10-17T22:05:29.092348+00:00",
   "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
 }

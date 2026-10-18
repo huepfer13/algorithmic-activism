@@ -4334,13 +4334,14 @@
         "Mirela",
         "Tobias"
       ],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 1399,
-      "reading_minutes": 7,
+      "words": 1960,
+      "reading_minutes": 10,
       "cover": null,
       "chapters": [
         {
@@ -4396,6 +4397,24 @@
           "leak_free": "true",
           "words": 476,
           "reading_minutes": 2
+        },
+        {
+          "file": "03_art_04_abschnitt_3_the_calibration_of_servitude.md",
+          "index": 3,
+          "title": "Abschnitt 3: The Calibration of Servitude",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "774",
+          "manual_ending_code": "O-04-03",
+          "backend": "deepseek",
+          "genre": "Chamber_Play",
+          "leak_free": "true",
+          "words": 561,
+          "reading_minutes": 3
         }
       ]
     }
