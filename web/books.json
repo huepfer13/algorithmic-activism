@@ -1438,7 +1438,7 @@
         "Kell",
         "Nuri"
       ],
-      "chapter_count": 7,
+      "chapter_count": 8,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1446,10 +1446,11 @@
         "art_04",
         "art_05",
         "art_06",
-        "art_07"
+        "art_07",
+        "art_08"
       ],
-      "words": 3728,
-      "reading_minutes": 19,
+      "words": 4098,
+      "reading_minutes": 20,
       "cover": null,
       "chapters": [
         {
@@ -1594,6 +1595,24 @@
           "genre": "Solarpunk",
           "leak_free": "true",
           "words": 449,
+          "reading_minutes": 2
+        },
+        {
+          "file": "08_art_08_abschnitt_8_der_rekurspfad.md",
+          "index": 8,
+          "title": "Abschnitt 8: Der Rekurs‑Pfad",
+          "article": "art_08",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "57.5",
+          "jaccard_max": "0.026",
+          "tokens_generated": "1481",
+          "manual_ending_code": "U-08-08",
+          "backend": "openrouter",
+          "genre": "Solarpunk",
+          "leak_free": "true",
+          "words": 370,
           "reading_minutes": 2
         }
       ]
