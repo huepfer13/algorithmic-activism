@@ -4047,15 +4047,16 @@
         "Nadia",
         "The Inspector"
       ],
-      "chapter_count": 4,
+      "chapter_count": 5,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_09"
       ],
-      "words": 2508,
-      "reading_minutes": 13,
+      "words": 2914,
+      "reading_minutes": 15,
       "cover": null,
       "chapters": [
         {
@@ -4146,6 +4147,24 @@
           "genre": "Magical_Realism",
           "leak_free": "true",
           "words": 460,
+          "reading_minutes": 2
+        },
+        {
+          "file": "05_art_09_abschnitt_5_the_calibration_of_absence.md",
+          "index": 5,
+          "title": "Abschnitt 5: The Calibration of Absence",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.8",
+          "jaccard_max": "0.043",
+          "tokens_generated": "553",
+          "manual_ending_code": "Z-09-05",
+          "backend": "deepseek",
+          "genre": "Magical_Realism",
+          "leak_free": "true",
+          "words": 406,
           "reading_minutes": 2
         }
       ]

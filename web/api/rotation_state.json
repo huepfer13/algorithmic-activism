@@ -194,7 +194,8 @@
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_019_the_salt_diaries",
     "r3:deepseek-chat:buch_017_des_volkes_mund",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_020_die_quote_der_stille",
-    "r2:deepseek-chat:buch_022_the_ledger_of_vanishing_rain"
+    "r2:deepseek-chat:buch_022_the_ledger_of_vanishing_rain",
+    "r3:deepseek-chat:buch_022_the_ledger_of_vanishing_rain"
   ],
   "runden": {
     "1": [
@@ -2298,6 +2299,21 @@
         "tokens": "773",
         "versuche": "1",
         "woerter": 408
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_022_the_ledger_of_vanishing_rain",
+        "code": "Z-09-05",
+        "datei": "05_art_09_abschnitt_5_the_calibration_of_absence.md",
+        "dauer_s": "6.8",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 3,
+        "tokens": "553",
+        "versuche": "1",
+        "woerter": 406
       }
     ],
     "4": [
