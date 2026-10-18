@@ -3240,7 +3240,7 @@
       "pov": "third_person",
       "setting_summary": "Etymologische Miniaturen zu gefluegelten Worten.",
       "characters": [],
-      "chapter_count": 14,
+      "chapter_count": 15,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -3255,10 +3255,11 @@
         "art_11",
         "art_12",
         "art_13",
-        "art_14"
+        "art_14",
+        "art_15"
       ],
-      "words": 5137,
-      "reading_minutes": 26,
+      "words": 5493,
+      "reading_minutes": 27,
       "cover": null,
       "chapters": [
         {
@@ -3529,6 +3530,24 @@
           "genre": "Sprichwoerter",
           "leak_free": "true",
           "words": 408,
+          "reading_minutes": 2
+        },
+        {
+          "file": "15_art_15_abschnitt_15_die_staatenlose_fracht.md",
+          "index": 15,
+          "title": "Abschnitt 15: Die staatenlose Fracht",
+          "article": "art_15",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "15.5",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1815",
+          "manual_ending_code": "V-15-15",
+          "backend": "openrouter",
+          "genre": "Sprichwoerter",
+          "leak_free": "true",
+          "words": 356,
           "reading_minutes": 2
         }
       ]

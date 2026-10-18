@@ -200,7 +200,8 @@
     "r1:deepseek-chat:buch_023_the_gravity_room",
     "r2:deepseek-chat:buch_007_die_kammer_der_zeugen",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_015_das_kochbuch_der_allmende",
-    "r3:deepseek-chat:buch_006_das_gericht_vor_der_mauer"
+    "r3:deepseek-chat:buch_006_das_gericht_vor_der_mauer",
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_017_des_volkes_mund"
   ],
   "runden": {
     "1": [
@@ -2112,6 +2113,21 @@
         "tokens": "909",
         "versuche": "1",
         "woerter": 449
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_017_des_volkes_mund",
+        "code": "V-15-15",
+        "datei": "15_art_15_abschnitt_15_die_staatenlose_fracht.md",
+        "dauer_s": "15.5",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 2,
+        "tokens": "1815",
+        "versuche": "1",
+        "woerter": 356
       }
     ],
     "3": [
