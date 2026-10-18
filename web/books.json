@@ -2901,7 +2901,7 @@
       "pov": "third_person",
       "setting_summary": "Kontemplative Einsichten fuer unruhige Zeiten.",
       "characters": [],
-      "chapter_count": 13,
+      "chapter_count": 14,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -2915,10 +2915,11 @@
         "art_10",
         "art_11",
         "art_12",
-        "art_13"
+        "art_13",
+        "art_14"
       ],
-      "words": 3879,
-      "reading_minutes": 19,
+      "words": 4261,
+      "reading_minutes": 21,
       "cover": null,
       "chapters": [
         {
@@ -3171,6 +3172,24 @@
           "genre": "Lebensweisheiten",
           "leak_free": "true",
           "words": 309,
+          "reading_minutes": 2
+        },
+        {
+          "file": "14_art_14_abschnitt_14_die_stille_justierung.md",
+          "index": 14,
+          "title": "Abschnitt 14: Die stille Justierung",
+          "article": "art_14",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "87.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1290",
+          "manual_ending_code": "L-14-14",
+          "backend": "openrouter",
+          "genre": "Lebensweisheiten",
+          "leak_free": "true",
+          "words": 382,
           "reading_minutes": 2
         }
       ]
