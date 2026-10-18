@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_024_die_kammer_der_stimmen",
+  "title": "Die Kammer der Stimmen",
+  "pov": "first_person",
+  "language": "DE",
+  "style": "Philosophischer_Essay",
+  "setting_summary": "Ein unterirdisches Archiv, in dem fünf Menschen auf engstem Raum leben und täglich Aufzeichnungen über vergangene Gesellschaften ordnen müssen. Ein strenger Zeitplan, knappe Ressourcen und die allgegenwärtige Stimme des Chronisten erzeugen einen permanenten Druck, in dem jede Meinung gewogen und jede Abweichung notiert wird.",
+  "characters": [
+    "Elian",
+    "Mara",
+    "Jost",
+    "Vera",
+    "Der Chronist"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-10-18T22:05:30.559646+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

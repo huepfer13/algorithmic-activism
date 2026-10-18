@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 23,
+  "count": 24,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -4604,6 +4604,46 @@
           "genre": "Chamber_Play",
           "leak_free": "true",
           "words": 449,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_024_die_kammer_der_stimmen",
+      "title": "Die Kammer der Stimmen",
+      "language": "DE",
+      "style": "Philosophischer_Essay",
+      "pov": "first_person",
+      "setting_summary": "Ein unterirdisches Archiv, in dem fünf Menschen auf engstem Raum leben und täglich Aufzeichnungen über vergangene Gesellschaften ordnen müssen. Ein strenger Zeitplan, knappe Ressourcen und die allgegenwärtige Stimme des Chronisten erzeugen einen permanenten Druck, in dem jede Meinung gewogen und jede Abweichung notiert wird.",
+      "characters": [
+        "Elian",
+        "Mara",
+        "Jost",
+        "Vera",
+        "Der Chronist"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 493,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.3",
+          "jaccard_max": "",
+          "tokens_generated": "855",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Philosophischer_Essay",
+          "leak_free": "",
+          "words": 493,
           "reading_minutes": 2
         }
       ]
