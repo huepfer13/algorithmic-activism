@@ -208,7 +208,8 @@
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_023_the_gravity_room",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_019_the_salt_diaries",
     "r3:deepseek-chat:buch_023_the_gravity_room",
-    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_022_the_ledger_of_vanishing_rain"
+    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_022_the_ledger_of_vanishing_rain",
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_015_das_kochbuch_der_allmende"
   ],
   "runden": {
     "1": [
@@ -2165,6 +2166,21 @@
         "tokens": "1257",
         "versuche": "1",
         "woerter": 476
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_015_das_kochbuch_der_allmende",
+        "code": "C-13-13",
+        "datei": "13_art_13_abschnitt_13_die_kalibrierung_des_durchl.md",
+        "dauer_s": "28.9",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 2,
+        "tokens": "1483",
+        "versuche": "1",
+        "woerter": 356
       }
     ],
     "3": [

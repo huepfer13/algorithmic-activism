@@ -2733,7 +2733,7 @@
       "pov": "third_person",
       "setting_summary": "Rezepte als Beweis, dass Fuersorge messbar ist.",
       "characters": [],
-      "chapter_count": 12,
+      "chapter_count": 13,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -2746,10 +2746,11 @@
         "art_09",
         "art_10",
         "art_11",
-        "art_12"
+        "art_12",
+        "art_13"
       ],
-      "words": 5455,
-      "reading_minutes": 27,
+      "words": 5811,
+      "reading_minutes": 29,
       "cover": null,
       "chapters": [
         {
@@ -2984,6 +2985,24 @@
           "genre": "Kochbuch",
           "leak_free": "true",
           "words": 349,
+          "reading_minutes": 2
+        },
+        {
+          "file": "13_art_13_abschnitt_13_die_kalibrierung_des_durchl.md",
+          "index": 13,
+          "title": "Abschnitt 13: Die Kalibrierung des Durchlasses",
+          "article": "art_13",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "28.9",
+          "jaccard_max": "0.167",
+          "tokens_generated": "1483",
+          "manual_ending_code": "C-13-13",
+          "backend": "openrouter",
+          "genre": "Kochbuch",
+          "leak_free": "true",
+          "words": 356,
           "reading_minutes": 2
         }
       ]
