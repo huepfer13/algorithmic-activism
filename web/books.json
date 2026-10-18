@@ -1862,7 +1862,7 @@
         "Kalle Ohm",
         "Frau Säckel"
       ],
-      "chapter_count": 8,
+      "chapter_count": 9,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1871,10 +1871,11 @@
         "art_05",
         "art_06",
         "art_07",
-        "art_08"
+        "art_08",
+        "art_09"
       ],
-      "words": 3704,
-      "reading_minutes": 19,
+      "words": 4092,
+      "reading_minutes": 20,
       "cover": null,
       "chapters": [
         {
@@ -2037,6 +2038,24 @@
           "genre": "Satire",
           "leak_free": "true",
           "words": 454,
+          "reading_minutes": 2
+        },
+        {
+          "file": "09_art_09_abschnitt_9_das_tropfen_der_sicherheit.md",
+          "index": 9,
+          "title": "Abschnitt 9: Das Tropfen der Sicherheit",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "82.6",
+          "jaccard_max": "0.017",
+          "tokens_generated": "1853",
+          "manual_ending_code": "G-09-09",
+          "backend": "openrouter",
+          "genre": "Satire",
+          "leak_free": "true",
+          "words": 388,
           "reading_minutes": 2
         }
       ]

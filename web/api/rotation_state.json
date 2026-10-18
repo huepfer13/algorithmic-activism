@@ -214,7 +214,8 @@
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_023_the_gravity_room",
     "r3:deepseek-chat:buch_016_faden_der_gelassenheit",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_012_manifest_der_unantastbaren",
-    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_013_aufzeichnungen_eines_archivars"
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_013_aufzeichnungen_eines_archivars",
+    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_010_amtsblatt_fuer_unzumutbarkeit"
   ],
   "runden": {
     "1": [
@@ -2613,6 +2614,21 @@
         "tokens": "1690",
         "versuche": "1",
         "woerter": 352
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_010_amtsblatt_fuer_unzumutbarkeit",
+        "code": "G-09-09",
+        "datei": "09_art_09_abschnitt_9_das_tropfen_der_sicherheit.md",
+        "dauer_s": "82.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 3,
+        "tokens": "1853",
+        "versuche": "1",
+        "woerter": 388
       }
     ],
     "4": [
