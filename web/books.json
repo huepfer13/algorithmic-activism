@@ -4196,15 +4196,16 @@
         "Tobin",
         "The Keeper"
       ],
-      "chapter_count": 4,
+      "chapter_count": 5,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_09"
       ],
-      "words": 2328,
-      "reading_minutes": 12,
+      "words": 2753,
+      "reading_minutes": 14,
       "cover": null,
       "chapters": [
         {
@@ -4295,6 +4296,24 @@
           "genre": "Fairy_Tale",
           "leak_free": "true",
           "words": 474,
+          "reading_minutes": 2
+        },
+        {
+          "file": "05_art_09_abschnitt_5_the_arithmetic_of_holding.md",
+          "index": 5,
+          "title": "Abschnitt 5: The Arithmetic of Holding",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "594",
+          "manual_ending_code": "M-09-05",
+          "backend": "deepseek",
+          "genre": "Fairy_Tale",
+          "leak_free": "true",
+          "words": 425,
           "reading_minutes": 2
         }
       ]
