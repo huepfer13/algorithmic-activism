@@ -4391,14 +4391,15 @@
         "Mirela",
         "Tobias"
       ],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_03",
-        "art_04"
+        "art_04",
+        "art_05"
       ],
-      "words": 1960,
-      "reading_minutes": 10,
+      "words": 2358,
+      "reading_minutes": 12,
       "cover": null,
       "chapters": [
         {
@@ -4472,6 +4473,24 @@
           "leak_free": "true",
           "words": 561,
           "reading_minutes": 3
+        },
+        {
+          "file": "04_art_05_abschnitt_4_the_drift_protocol.md",
+          "index": 4,
+          "title": "Abschnitt 4: The Drift Protocol",
+          "article": "art_05",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "168.0",
+          "jaccard_max": "0.032",
+          "tokens_generated": "6678",
+          "manual_ending_code": "O-05-04",
+          "backend": "openrouter",
+          "genre": "Chamber_Play",
+          "leak_free": "true",
+          "words": 398,
+          "reading_minutes": 2
         }
       ]
     }
