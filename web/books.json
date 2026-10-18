@@ -4467,15 +4467,16 @@
         "Mirela",
         "Tobias"
       ],
-      "chapter_count": 4,
+      "chapter_count": 5,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_09"
       ],
-      "words": 2358,
-      "reading_minutes": 12,
+      "words": 2807,
+      "reading_minutes": 14,
       "cover": null,
       "chapters": [
         {
@@ -4566,6 +4567,24 @@
           "genre": "Chamber_Play",
           "leak_free": "true",
           "words": 398,
+          "reading_minutes": 2
+        },
+        {
+          "file": "05_art_09_abschnitt_5_the_detention_threshold.md",
+          "index": 5,
+          "title": "Abschnitt 5: The Detention Threshold",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.4",
+          "jaccard_max": "0.026",
+          "tokens_generated": "675",
+          "manual_ending_code": "O-09-05",
+          "backend": "deepseek",
+          "genre": "Chamber_Play",
+          "leak_free": "true",
+          "words": 449,
           "reading_minutes": 2
         }
       ]
