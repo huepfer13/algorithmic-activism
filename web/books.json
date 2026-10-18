@@ -2435,7 +2435,7 @@
         "Herr Brenner",
         "Frau Ostrow"
       ],
-      "chapter_count": 8,
+      "chapter_count": 9,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -2444,10 +2444,11 @@
         "art_05",
         "art_06",
         "art_07",
-        "art_08"
+        "art_08",
+        "art_09"
       ],
-      "words": 4184,
-      "reading_minutes": 21,
+      "words": 4536,
+      "reading_minutes": 23,
       "cover": null,
       "chapters": [
         {
@@ -2610,6 +2611,24 @@
           "genre": "Tagebuch",
           "leak_free": "true",
           "words": 419,
+          "reading_minutes": 2
+        },
+        {
+          "file": "09_art_09_abschnitt_9_die_dunkelheit_kalibriert_si.md",
+          "index": 9,
+          "title": "Abschnitt 9: Die Dunkelheit kalibriert sich neu",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "50.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1690",
+          "manual_ending_code": "T-09-09",
+          "backend": "openrouter",
+          "genre": "Tagebuch",
+          "leak_free": "true",
+          "words": 352,
           "reading_minutes": 2
         }
       ]

@@ -213,7 +213,8 @@
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_008_flechtwerk_arkadien",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_023_the_gravity_room",
     "r3:deepseek-chat:buch_016_faden_der_gelassenheit",
-    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_012_manifest_der_unantastbaren"
+    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_012_manifest_der_unantastbaren",
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_013_aufzeichnungen_eines_archivars"
   ],
   "runden": {
     "1": [
@@ -2597,6 +2598,21 @@
         "tokens": "652",
         "versuche": "1",
         "woerter": 345
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_013_aufzeichnungen_eines_archivars",
+        "code": "T-09-09",
+        "datei": "09_art_09_abschnitt_9_die_dunkelheit_kalibriert_si.md",
+        "dauer_s": "50.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 3,
+        "tokens": "1690",
+        "versuche": "1",
+        "woerter": 352
       }
     ],
     "4": [
