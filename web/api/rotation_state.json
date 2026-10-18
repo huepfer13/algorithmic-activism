@@ -196,7 +196,8 @@
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_020_die_quote_der_stille",
     "r2:deepseek-chat:buch_022_the_ledger_of_vanishing_rain",
     "r3:deepseek-chat:buch_022_the_ledger_of_vanishing_rain",
-    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_016_faden_der_gelassenheit"
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_016_faden_der_gelassenheit",
+    "r1:deepseek-chat:buch_023_the_gravity_room"
   ],
   "runden": {
     "1": [
@@ -1194,6 +1195,21 @@
         "tokens": "1290",
         "versuche": "1",
         "woerter": 382
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_023_the_gravity_room",
+        "code": "O-01-01",
+        "datei": "01_art_01_abschnitt_1_the_calibration_of_breath.md",
+        "dauer_s": "6.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 1,
+        "tokens": "680",
+        "versuche": "1",
+        "woerter": 471
       }
     ],
     "10": [

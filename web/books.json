@@ -4201,10 +4201,12 @@
         "Mirela",
         "Tobias"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 452,
-      "reading_minutes": 2,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 923,
+      "reading_minutes": 5,
       "cover": null,
       "chapters": [
         {
@@ -4223,6 +4225,24 @@
           "genre": "Chamber_Play",
           "leak_free": "",
           "words": 452,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_01_abschnitt_1_the_calibration_of_breath.md",
+          "index": 1,
+          "title": "Abschnitt 1: The Calibration of Breath",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.2",
+          "jaccard_max": "0.024",
+          "tokens_generated": "680",
+          "manual_ending_code": "O-01-01",
+          "backend": "deepseek",
+          "genre": "Chamber_Play",
+          "leak_free": "true",
+          "words": 471,
           "reading_minutes": 2
         }
       ]
