@@ -3034,7 +3034,7 @@
       "pov": "third_person",
       "setting_summary": "Kontemplative Einsichten fuer unruhige Zeiten.",
       "characters": [],
-      "chapter_count": 14,
+      "chapter_count": 15,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -3049,10 +3049,11 @@
         "art_11",
         "art_12",
         "art_13",
-        "art_14"
+        "art_14",
+        "art_15"
       ],
-      "words": 4261,
-      "reading_minutes": 21,
+      "words": 4606,
+      "reading_minutes": 23,
       "cover": null,
       "chapters": [
         {
@@ -3323,6 +3324,24 @@
           "genre": "Lebensweisheiten",
           "leak_free": "true",
           "words": 382,
+          "reading_minutes": 2
+        },
+        {
+          "file": "15_art_15_abschnitt_15_die_entfernung_der_gefahr.md",
+          "index": 15,
+          "title": "Abschnitt 15: Die Entfernung der Gefahr",
+          "article": "art_15",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "652",
+          "manual_ending_code": "L-15-15",
+          "backend": "deepseek",
+          "genre": "Lebensweisheiten",
+          "leak_free": "true",
+          "words": 345,
           "reading_minutes": 2
         }
       ]
