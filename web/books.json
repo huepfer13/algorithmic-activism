@@ -653,17 +653,18 @@
       "pov": "third_person",
       "setting_summary": "Im Schattennetz dokumentieren Ausgeschlossene, wie Rechte Stueck fuer Stueck verschwinden.",
       "characters": [],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
         "art_05",
-        "art_06"
+        "art_06",
+        "art_07"
       ],
-      "words": 3179,
-      "reading_minutes": 16,
+      "words": 3503,
+      "reading_minutes": 18,
       "cover": null,
       "chapters": [
         {
@@ -791,6 +792,24 @@
           "leak_free": "true",
           "words": 585,
           "reading_minutes": 3
+        },
+        {
+          "file": "07_art_07_abschnitt_7_die_gleichheit_der_knoten.md",
+          "index": 7,
+          "title": "Abschnitt 7: Die Gleichheit der Knoten",
+          "article": "art_07",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "22.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1135",
+          "manual_ending_code": "S-07-07",
+          "backend": "openrouter",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "true",
+          "words": 324,
+          "reading_minutes": 2
         }
       ]
     },
