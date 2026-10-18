@@ -4199,16 +4199,17 @@
         "Nadia",
         "The Inspector"
       ],
-      "chapter_count": 5,
+      "chapter_count": 6,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
         "art_05",
-        "art_09"
+        "art_09",
+        "art_12"
       ],
-      "words": 2914,
-      "reading_minutes": 15,
+      "words": 3380,
+      "reading_minutes": 17,
       "cover": null,
       "chapters": [
         {
@@ -4317,6 +4318,24 @@
           "genre": "Magical_Realism",
           "leak_free": "true",
           "words": 406,
+          "reading_minutes": 2
+        },
+        {
+          "file": "06_art_12_abschnitt_6_the_dust_in_the_tubes.md",
+          "index": 6,
+          "title": "Abschnitt 6: The Dust in the Tubes",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "190.5",
+          "jaccard_max": "0.038",
+          "tokens_generated": "4752",
+          "manual_ending_code": "Z-12-06",
+          "backend": "openrouter",
+          "genre": "Magical_Realism",
+          "leak_free": "true",
+          "words": 466,
           "reading_minutes": 2
         }
       ]
