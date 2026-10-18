@@ -205,7 +205,8 @@
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_014_der_unberechenbare_humor",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_004_neon_exil",
     "r3:deepseek-chat:buch_011_das_haus_ohne_widerhall",
-    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_023_the_gravity_room"
+    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_023_the_gravity_room",
+    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_019_the_salt_diaries"
   ],
   "runden": {
     "1": [
@@ -2469,6 +2470,21 @@
         "tokens": "774",
         "versuche": "1",
         "woerter": 433
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_019_the_salt_diaries",
+        "code": "T-12-06",
+        "datei": "06_art_12_abschnitt_6_the_drift_of_dust.md",
+        "dauer_s": "69.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 3,
+        "tokens": "1863",
+        "versuche": "1",
+        "woerter": 569
       }
     ],
     "4": [
