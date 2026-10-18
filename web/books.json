@@ -2036,7 +2036,7 @@
         "Timo",
         "Der Verwalter"
       ],
-      "chapter_count": 7,
+      "chapter_count": 8,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -2044,10 +2044,11 @@
         "art_04",
         "art_05",
         "art_06",
-        "art_07"
+        "art_07",
+        "art_08"
       ],
-      "words": 3791,
-      "reading_minutes": 19,
+      "words": 4224,
+      "reading_minutes": 21,
       "cover": null,
       "chapters": [
         {
@@ -2192,6 +2193,24 @@
           "genre": "Gothic",
           "leak_free": "true",
           "words": 441,
+          "reading_minutes": 2
+        },
+        {
+          "file": "08_art_08_abschnitt_8_die_revision_der_rechtswege.md",
+          "index": 8,
+          "title": "Abschnitt 8: Die Revision der Rechtswege",
+          "article": "art_08",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "774",
+          "manual_ending_code": "W-08-08",
+          "backend": "deepseek",
+          "genre": "Gothic",
+          "leak_free": "true",
+          "words": 433,
           "reading_minutes": 2
         }
       ]
