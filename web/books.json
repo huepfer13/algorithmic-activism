@@ -976,7 +976,7 @@
         "Vera",
         "Juno"
       ],
-      "chapter_count": 10,
+      "chapter_count": 11,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -987,10 +987,11 @@
         "art_07",
         "art_08",
         "art_09",
-        "art_10"
+        "art_10",
+        "art_11"
       ],
-      "words": 4575,
-      "reading_minutes": 23,
+      "words": 5030,
+      "reading_minutes": 25,
       "cover": null,
       "chapters": [
         {
@@ -1189,6 +1190,24 @@
           "genre": "Parabel",
           "leak_free": "true",
           "words": 359,
+          "reading_minutes": 2
+        },
+        {
+          "file": "11_art_11_abschnitt_11_der_staub_der_relais.md",
+          "index": 11,
+          "title": "Abschnitt 11: Der Staub der Relais",
+          "article": "art_11",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "858",
+          "manual_ending_code": "D-11-11",
+          "backend": "deepseek",
+          "genre": "Parabel",
+          "leak_free": "true",
+          "words": 455,
           "reading_minutes": 2
         }
       ]
