@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_025_the_hold",
+  "title": "The Hold",
+  "pov": "first_person",
+  "language": "EN",
+  "style": "Jokes",
+  "setting_summary": "An aging cargo ship named the Hold drifts in a decaying orbit, its crew rationing air, water, and patience while a corporate salvage deadline ticks down. Every decision gets logged by a shipboard system that rewards compliance and quietly punishes dissent, and the only thing scarcer than supplies is the benefit of the doubt.",
+  "characters": [
+    "Mara",
+    "Pike",
+    "Osei",
+    "Tiny",
+    "the Auditor"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-10-19T22:05:29.058100+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

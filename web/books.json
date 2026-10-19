@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 24,
+  "count": 25,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -5101,6 +5101,46 @@
           "genre": "Philosophischer_Essay",
           "leak_free": "true",
           "words": 402,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_025_the_hold",
+      "title": "The Hold",
+      "language": "EN",
+      "style": "Jokes",
+      "pov": "first_person",
+      "setting_summary": "An aging cargo ship named the Hold drifts in a decaying orbit, its crew rationing air, water, and patience while a corporate salvage deadline ticks down. Every decision gets logged by a shipboard system that rewards compliance and quietly punishes dissent, and the only thing scarcer than supplies is the benefit of the doubt.",
+      "characters": [
+        "Mara",
+        "Pike",
+        "Osei",
+        "Tiny",
+        "the Auditor"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 448,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.8",
+          "jaccard_max": "",
+          "tokens_generated": "653",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Jokes",
+          "leak_free": "",
+          "words": 448,
           "reading_minutes": 2
         }
       ]
