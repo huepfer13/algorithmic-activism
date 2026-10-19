@@ -2888,7 +2888,7 @@
       "pov": "third_person",
       "setting_summary": "Kurzgeschichten und Szenen, in denen Humor den Ernstfall entlarvt.",
       "characters": [],
-      "chapter_count": 7,
+      "chapter_count": 8,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -2896,10 +2896,11 @@
         "art_04",
         "art_05",
         "art_06",
-        "art_07"
+        "art_07",
+        "art_08"
       ],
-      "words": 2852,
-      "reading_minutes": 14,
+      "words": 3276,
+      "reading_minutes": 16,
       "cover": null,
       "chapters": [
         {
@@ -3044,6 +3045,24 @@
           "genre": "Witzebuch",
           "leak_free": "true",
           "words": 395,
+          "reading_minutes": 2
+        },
+        {
+          "file": "08_art_08_abschnitt_8_der_rechtsbehelf_im_stromkre.md",
+          "index": 8,
+          "title": "Abschnitt 8: Der Rechtsbehelf im Stromkreis",
+          "article": "art_08",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "53.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1888",
+          "manual_ending_code": "J-08-08",
+          "backend": "openrouter",
+          "genre": "Witzebuch",
+          "leak_free": "true",
+          "words": 424,
           "reading_minutes": 2
         }
       ]
