@@ -1457,7 +1457,7 @@
         "Kell",
         "Nuri"
       ],
-      "chapter_count": 8,
+      "chapter_count": 9,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1466,10 +1466,11 @@
         "art_05",
         "art_06",
         "art_07",
-        "art_08"
+        "art_08",
+        "art_09"
       ],
-      "words": 4098,
-      "reading_minutes": 20,
+      "words": 4634,
+      "reading_minutes": 23,
       "cover": null,
       "chapters": [
         {
@@ -1633,6 +1634,24 @@
           "leak_free": "true",
           "words": 370,
           "reading_minutes": 2
+        },
+        {
+          "file": "09_art_09_abschnitt_9_der_schwellenwert.md",
+          "index": 9,
+          "title": "Abschnitt 9: Der Schwellenwert",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "66.8",
+          "jaccard_max": "0.043",
+          "tokens_generated": "1992",
+          "manual_ending_code": "U-09-09",
+          "backend": "openrouter",
+          "genre": "Solarpunk",
+          "leak_free": "true",
+          "words": 536,
+          "reading_minutes": 3
         }
       ]
     },
