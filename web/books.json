@@ -4351,17 +4351,18 @@
         "Nadia",
         "The Inspector"
       ],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
         "art_05",
         "art_09",
-        "art_12"
+        "art_12",
+        "art_14"
       ],
-      "words": 3380,
-      "reading_minutes": 17,
+      "words": 3773,
+      "reading_minutes": 19,
       "cover": null,
       "chapters": [
         {
@@ -4488,6 +4489,24 @@
           "genre": "Magical_Realism",
           "leak_free": "true",
           "words": 466,
+          "reading_minutes": 2
+        },
+        {
+          "file": "07_art_14_abschnitt_7_the_calibration_of_sanctuary.md",
+          "index": 7,
+          "title": "Abschnitt 7: The Calibration of Sanctuary",
+          "article": "art_14",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "37.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1018",
+          "manual_ending_code": "Z-14-07",
+          "backend": "openrouter",
+          "genre": "Magical_Realism",
+          "leak_free": "true",
+          "words": 393,
           "reading_minutes": 2
         }
       ]
