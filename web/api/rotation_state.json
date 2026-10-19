@@ -219,7 +219,8 @@
     "r2:deepseek-chat:buch_023_the_gravity_room",
     "r4:deepseek-chat:buch_021_the_bell_of_the_ninth_gate",
     "r3:deepseek-chat:buch_012_manifest_der_unantastbaren",
-    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_022_the_ledger_of_vanishing_rain"
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_022_the_ledger_of_vanishing_rain",
+    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_024_die_kammer_der_stimmen"
   ],
   "runden": {
     "1": [
@@ -2251,6 +2252,21 @@
         "tokens": "675",
         "versuche": "1",
         "woerter": 449
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_024_die_kammer_der_stimmen",
+        "code": "P-01-01",
+        "datei": "01_art_01_abschnitt_1_der_staub_der_rohrpost.md",
+        "dauer_s": "250.7",
+        "ending_ok": "false",
+        "exit": 2,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 2,
+        "tokens": "1413",
+        "versuche": "3",
+        "woerter": 358
       }
     ],
     "3": [

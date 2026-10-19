@@ -4660,10 +4660,12 @@
         "Vera",
         "Der Chronist"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 493,
-      "reading_minutes": 2,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 851,
+      "reading_minutes": 4,
       "cover": null,
       "chapters": [
         {
@@ -4682,6 +4684,24 @@
           "genre": "Philosophischer_Essay",
           "leak_free": "",
           "words": 493,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_01_abschnitt_1_der_staub_der_rohrpost.md",
+          "index": 1,
+          "title": "Abschnitt 1: Der Staub der Rohrpost",
+          "article": "art_01",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "250.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1413",
+          "manual_ending_code": "P-01-01",
+          "backend": "openrouter",
+          "genre": "Philosophischer_Essay",
+          "leak_free": "",
+          "words": 358,
           "reading_minutes": 2
         }
       ]
