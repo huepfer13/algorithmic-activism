@@ -4926,16 +4926,17 @@
         "Vera",
         "Der Chronist"
       ],
-      "chapter_count": 5,
+      "chapter_count": 6,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_06"
       ],
-      "words": 2291,
-      "reading_minutes": 11,
+      "words": 2693,
+      "reading_minutes": 13,
       "cover": null,
       "chapters": [
         {
@@ -5045,6 +5046,24 @@
           "leak_free": "true",
           "words": 286,
           "reading_minutes": 1
+        },
+        {
+          "file": "06_art_06_abschnitt_6_die_anerkennung_als_störgröß.md",
+          "index": 6,
+          "title": "Abschnitt 6: Die Anerkennung als Störgröße",
+          "article": "art_06",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.3",
+          "jaccard_max": "0.012",
+          "tokens_generated": "769",
+          "manual_ending_code": "P-06-06",
+          "backend": "deepseek",
+          "genre": "Philosophischer_Essay",
+          "leak_free": "true",
+          "words": 402,
+          "reading_minutes": 2
         }
       ]
     }

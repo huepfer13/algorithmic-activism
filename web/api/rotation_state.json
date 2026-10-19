@@ -238,7 +238,8 @@
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_020_die_quote_der_stille",
     "r3:deepseek-chat:buch_008_flechtwerk_arkadien",
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_004_neon_exil",
-    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_008_flechtwerk_arkadien"
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_008_flechtwerk_arkadien",
+    "r2:deepseek-chat:buch_024_die_kammer_der_stimmen"
   ],
   "runden": {
     "1": [
@@ -2390,6 +2391,21 @@
         "tokens": "1321",
         "versuche": "1",
         "woerter": 361
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_024_die_kammer_der_stimmen",
+        "code": "P-06-06",
+        "datei": "06_art_06_abschnitt_6_die_anerkennung_als_störgröß.md",
+        "dauer_s": "6.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 2,
+        "tokens": "769",
+        "versuche": "1",
+        "woerter": 402
       }
     ],
     "3": [
