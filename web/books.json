@@ -4736,12 +4736,13 @@
         "Vera",
         "Der Chronist"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 851,
-      "reading_minutes": 4,
+      "words": 1335,
+      "reading_minutes": 7,
       "cover": null,
       "chapters": [
         {
@@ -4778,6 +4779,24 @@
           "genre": "Philosophischer_Essay",
           "leak_free": "",
           "words": 358,
+          "reading_minutes": 2
+        },
+        {
+          "file": "02_art_02_abschnitt_2_das_eichholz_der_stimmen.md",
+          "index": 2,
+          "title": "Abschnitt 2: Das Eichholz der Stimmen",
+          "article": "art_02",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "24.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "867",
+          "manual_ending_code": "P-02-02",
+          "backend": "deepseek",
+          "genre": "Philosophischer_Essay",
+          "leak_free": "",
+          "words": 484,
           "reading_minutes": 2
         }
       ]
