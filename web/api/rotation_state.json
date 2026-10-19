@@ -228,7 +228,8 @@
     "r1:deepseek-chat:buch_024_die_kammer_der_stimmen",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_008_flechtwerk_arkadien",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_024_die_kammer_der_stimmen",
-    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_024_die_kammer_der_stimmen"
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_024_die_kammer_der_stimmen",
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_019_the_salt_diaries"
   ],
   "runden": {
     "1": [
@@ -2822,6 +2823,21 @@
         "tokens": "1133",
         "versuche": "3",
         "woerter": 309
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_019_the_salt_diaries",
+        "code": "T-14-07",
+        "datei": "07_art_14_abschnitt_7_the_asylum_parameter.md",
+        "dauer_s": "57.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 3,
+        "tokens": "1023",
+        "versuche": "1",
+        "woerter": 377
       }
     ],
     "4": [
