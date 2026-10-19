@@ -226,7 +226,8 @@
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_023_the_gravity_room",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_006_das_gericht_vor_der_mauer",
     "r1:deepseek-chat:buch_024_die_kammer_der_stimmen",
-    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_008_flechtwerk_arkadien"
+    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_008_flechtwerk_arkadien",
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_024_die_kammer_der_stimmen"
   ],
   "runden": {
     "1": [
@@ -2790,6 +2791,21 @@
         "tokens": "1992",
         "versuche": "1",
         "woerter": 536
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_024_die_kammer_der_stimmen",
+        "code": "P-03-03",
+        "datei": "03_art_03_abschnitt_3_die_kalibrierung_der_schwell.md",
+        "dauer_s": "139.9",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 3,
+        "tokens": "1133",
+        "versuche": "3",
+        "woerter": 309
       }
     ],
     "4": [

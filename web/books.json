@@ -4755,13 +4755,14 @@
         "Vera",
         "Der Chronist"
       ],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_02"
+        "art_02",
+        "art_03"
       ],
-      "words": 1335,
-      "reading_minutes": 7,
+      "words": 1644,
+      "reading_minutes": 8,
       "cover": null,
       "chapters": [
         {
@@ -4816,6 +4817,24 @@
           "genre": "Philosophischer_Essay",
           "leak_free": "",
           "words": 484,
+          "reading_minutes": 2
+        },
+        {
+          "file": "03_art_03_abschnitt_3_die_kalibrierung_der_schwell.md",
+          "index": 3,
+          "title": "Abschnitt 3: Die Kalibrierung der Schwellen",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "3",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "139.9",
+          "jaccard_max": "0.049",
+          "tokens_generated": "1133",
+          "manual_ending_code": "P-03-03",
+          "backend": "openrouter",
+          "genre": "Philosophischer_Essay",
+          "leak_free": "true",
+          "words": 309,
           "reading_minutes": 2
         }
       ]
