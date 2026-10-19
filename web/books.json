@@ -4019,7 +4019,7 @@
         "Old Pavel",
         "Rook"
       ],
-      "chapter_count": 7,
+      "chapter_count": 8,
       "covered_articles": [
         "art_01",
         "art_03",
@@ -4027,10 +4027,11 @@
         "art_05",
         "art_09",
         "art_12",
-        "art_14"
+        "art_14",
+        "art_19"
       ],
-      "words": 3940,
-      "reading_minutes": 20,
+      "words": 4401,
+      "reading_minutes": 22,
       "cover": null,
       "chapters": [
         {
@@ -4175,6 +4176,24 @@
           "genre": "Diary",
           "leak_free": "true",
           "words": 377,
+          "reading_minutes": 2
+        },
+        {
+          "file": "08_art_19_abschnitt_8_the_expression_parameter.md",
+          "index": 8,
+          "title": "Abschnitt 8: The Expression Parameter",
+          "article": "art_19",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.2",
+          "jaccard_max": "0.051",
+          "tokens_generated": "623",
+          "manual_ending_code": "T-19-08",
+          "backend": "deepseek",
+          "genre": "Diary",
+          "leak_free": "true",
+          "words": 461,
           "reading_minutes": 2
         }
       ]
