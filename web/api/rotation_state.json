@@ -231,7 +231,8 @@
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_024_die_kammer_der_stimmen",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_019_the_salt_diaries",
     "r3:deepseek-chat:buch_019_the_salt_diaries",
-    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_003_der_rat_der_tiere"
+    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_003_der_rat_der_tiere",
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_024_die_kammer_der_stimmen"
   ],
   "runden": {
     "1": [
@@ -1289,6 +1290,21 @@
         "tokens": "867",
         "versuche": "3",
         "woerter": 484
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_024_die_kammer_der_stimmen",
+        "code": "P-05-05",
+        "datei": "05_art_05_abschnitt_5_die_kalibrierung_des_schmerz.md",
+        "dauer_s": "24.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 1,
+        "tokens": "952",
+        "versuche": "1",
+        "woerter": 286
       }
     ],
     "10": [
