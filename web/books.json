@@ -2888,17 +2888,18 @@
       "pov": "third_person",
       "setting_summary": "Kurzgeschichten und Szenen, in denen Humor den Ernstfall entlarvt.",
       "characters": [],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
         "art_05",
-        "art_06"
+        "art_06",
+        "art_07"
       ],
-      "words": 2457,
-      "reading_minutes": 12,
+      "words": 2852,
+      "reading_minutes": 14,
       "cover": null,
       "chapters": [
         {
@@ -3025,6 +3026,24 @@
           "genre": "Witzebuch",
           "leak_free": "true",
           "words": 330,
+          "reading_minutes": 2
+        },
+        {
+          "file": "07_art_07_abschnitt_7_die_gleichbehandlungsmaske.md",
+          "index": 7,
+          "title": "Abschnitt 7: Die Gleichbehandlungsmaske",
+          "article": "art_07",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "808",
+          "manual_ending_code": "J-07-07",
+          "backend": "deepseek",
+          "genre": "Witzebuch",
+          "leak_free": "true",
+          "words": 395,
           "reading_minutes": 2
         }
       ]
