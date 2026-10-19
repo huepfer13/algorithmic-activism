@@ -4755,14 +4755,15 @@
         "Vera",
         "Der Chronist"
       ],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_02",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 1644,
-      "reading_minutes": 8,
+      "words": 2005,
+      "reading_minutes": 10,
       "cover": null,
       "chapters": [
         {
@@ -4835,6 +4836,24 @@
           "genre": "Philosophischer_Essay",
           "leak_free": "true",
           "words": 309,
+          "reading_minutes": 2
+        },
+        {
+          "file": "04_art_04_abschnitt_4_die_toleranzschwelle_der_sti.md",
+          "index": 4,
+          "title": "Abschnitt 4: Die Toleranzschwelle der Stille",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "56.8",
+          "jaccard_max": "0.022",
+          "tokens_generated": "1321",
+          "manual_ending_code": "P-04-04",
+          "backend": "openrouter",
+          "genre": "Philosophischer_Essay",
+          "leak_free": "true",
+          "words": 361,
           "reading_minutes": 2
         }
       ]
