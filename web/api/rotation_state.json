@@ -220,7 +220,8 @@
     "r4:deepseek-chat:buch_021_the_bell_of_the_ninth_gate",
     "r3:deepseek-chat:buch_012_manifest_der_unantastbaren",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_022_the_ledger_of_vanishing_rain",
-    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_024_die_kammer_der_stimmen"
+    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_024_die_kammer_der_stimmen",
+    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_010_amtsblatt_fuer_unzumutbarkeit"
   ],
   "runden": {
     "1": [
@@ -2267,6 +2268,21 @@
         "tokens": "1413",
         "versuche": "3",
         "woerter": 358
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_010_amtsblatt_fuer_unzumutbarkeit",
+        "code": "G-10-10",
+        "datei": "10_art_10_abschnitt_10_die_kalibrierung_des_unverm.md",
+        "dauer_s": "70.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 2,
+        "tokens": "2681",
+        "versuche": "1",
+        "woerter": 555
       }
     ],
     "3": [

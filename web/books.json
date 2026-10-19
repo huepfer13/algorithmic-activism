@@ -1862,7 +1862,7 @@
         "Kalle Ohm",
         "Frau Säckel"
       ],
-      "chapter_count": 9,
+      "chapter_count": 10,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1872,10 +1872,11 @@
         "art_06",
         "art_07",
         "art_08",
-        "art_09"
+        "art_09",
+        "art_10"
       ],
-      "words": 4092,
-      "reading_minutes": 20,
+      "words": 4647,
+      "reading_minutes": 23,
       "cover": null,
       "chapters": [
         {
@@ -2057,6 +2058,24 @@
           "leak_free": "true",
           "words": 388,
           "reading_minutes": 2
+        },
+        {
+          "file": "10_art_10_abschnitt_10_die_kalibrierung_des_unverm.md",
+          "index": 10,
+          "title": "Abschnitt 10: Die Kalibrierung des Unvermeidlichen",
+          "article": "art_10",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "70.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "2681",
+          "manual_ending_code": "G-10-10",
+          "backend": "openrouter",
+          "genre": "Satire",
+          "leak_free": "true",
+          "words": 555,
+          "reading_minutes": 3
         }
       ]
     },
