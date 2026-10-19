@@ -237,7 +237,8 @@
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_007_die_kammer_der_zeugen",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_020_die_quote_der_stille",
     "r3:deepseek-chat:buch_008_flechtwerk_arkadien",
-    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_004_neon_exil"
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_004_neon_exil",
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_008_flechtwerk_arkadien"
   ],
   "runden": {
     "1": [
@@ -2966,6 +2967,21 @@
         "tokens": "852",
         "versuche": "1",
         "woerter": 441
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_008_flechtwerk_arkadien",
+        "code": "U-11-11",
+        "datei": "11_art_11_abschnitt_11_der_staub_auf_den_kontakten.md",
+        "dauer_s": "48.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 3,
+        "tokens": "1165",
+        "versuche": "1",
+        "woerter": 335
       }
     ],
     "4": [
