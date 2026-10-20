@@ -258,7 +258,8 @@
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_021_the_bell_of_the_ninth_gate",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_004_neon_exil",
     "r4:deepseek-chat:buch_011_das_haus_ohne_widerhall",
-    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_021_the_bell_of_the_ninth_gate"
+    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_021_the_bell_of_the_ninth_gate",
+    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_013_aufzeichnungen_eines_archivars"
   ],
   "runden": {
     "1": [
@@ -3253,6 +3254,16 @@
         "buch": "buch_021_the_bell_of_the_ninth_gate",
         "datei": null,
         "dauer_s": 0.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 3
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_013_aufzeichnungen_eines_archivars",
+        "datei": null,
+        "dauer_s": 0.3,
         "exit": 1,
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
