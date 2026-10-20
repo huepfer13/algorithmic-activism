@@ -265,7 +265,9 @@
     "r4:deepseek-chat:buch_022_the_ledger_of_vanishing_rain",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_016_faden_der_gelassenheit",
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_018_rhymes_of_the_commons",
-    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_010_amtsblatt_fuer_unzumutbarkeit"
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_010_amtsblatt_fuer_unzumutbarkeit",
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_024_die_kammer_der_stimmen",
+    "r3:deepseek-chat:buch_013_aufzeichnungen_eines_archivars"
   ],
   "runden": {
     "1": [
@@ -1383,6 +1385,16 @@
         "tokens": "651",
         "versuche": "1",
         "woerter": 419
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_024_die_kammer_der_stimmen",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 1
       }
     ],
     "10": [
@@ -3324,6 +3336,21 @@
         "tokens": "1677",
         "versuche": "1",
         "woerter": 356
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_013_aufzeichnungen_eines_archivars",
+        "code": "T-10-10",
+        "datei": "10_art_10_abschnitt_10_die_kalibrierung_der_stille.md",
+        "dauer_s": "9.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 3,
+        "tokens": "1125",
+        "versuche": "1",
+        "woerter": 550
       }
     ],
     "4": [

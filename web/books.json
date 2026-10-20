@@ -2777,7 +2777,7 @@
         "Herr Brenner",
         "Frau Ostrow"
       ],
-      "chapter_count": 9,
+      "chapter_count": 10,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -2787,10 +2787,11 @@
         "art_06",
         "art_07",
         "art_08",
-        "art_09"
+        "art_09",
+        "art_10"
       ],
-      "words": 4536,
-      "reading_minutes": 23,
+      "words": 5086,
+      "reading_minutes": 25,
       "cover": null,
       "chapters": [
         {
@@ -2972,6 +2973,24 @@
           "leak_free": "true",
           "words": 352,
           "reading_minutes": 2
+        },
+        {
+          "file": "10_art_10_abschnitt_10_die_kalibrierung_der_stille.md",
+          "index": 10,
+          "title": "Abschnitt 10: Die Kalibrierung der Stille",
+          "article": "art_10",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1125",
+          "manual_ending_code": "T-10-10",
+          "backend": "deepseek",
+          "genre": "Tagebuch",
+          "leak_free": "true",
+          "words": 550,
+          "reading_minutes": 3
         }
       ]
     },
