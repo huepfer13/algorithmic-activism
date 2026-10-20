@@ -264,7 +264,8 @@
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_011_das_haus_ohne_widerhall",
     "r4:deepseek-chat:buch_022_the_ledger_of_vanishing_rain",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_016_faden_der_gelassenheit",
-    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_018_rhymes_of_the_commons"
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_018_rhymes_of_the_commons",
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_010_amtsblatt_fuer_unzumutbarkeit"
   ],
   "runden": {
     "1": [
@@ -3308,6 +3309,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 3
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_010_amtsblatt_fuer_unzumutbarkeit",
+        "code": "G-11-11",
+        "datei": "11_art_11_abschnitt_11_die_inversion_der_unschulds.md",
+        "dauer_s": "35.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 3,
+        "tokens": "1677",
+        "versuche": "1",
+        "woerter": 356
       }
     ],
     "4": [
