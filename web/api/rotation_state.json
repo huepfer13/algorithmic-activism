@@ -261,7 +261,8 @@
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_021_the_bell_of_the_ninth_gate",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_013_aufzeichnungen_eines_archivars",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_001_das_büro_der_unendlichkeit",
-    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_011_das_haus_ohne_widerhall"
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_011_das_haus_ohne_widerhall",
+    "r4:deepseek-chat:buch_022_the_ledger_of_vanishing_rain"
   ],
   "runden": {
     "1": [
@@ -3462,6 +3463,21 @@
         "tokens": "839",
         "versuche": "1",
         "woerter": 471
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_022_the_ledger_of_vanishing_rain",
+        "code": "Z-19-08",
+        "datei": "08_art_19_abschnitt_8_the_calibration_of_whispers.md",
+        "dauer_s": "5.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 4,
+        "tokens": "596",
+        "versuche": "1",
+        "woerter": 468
       }
     ],
     "5": [

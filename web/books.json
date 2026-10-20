@@ -4788,7 +4788,7 @@
         "Nadia",
         "The Inspector"
       ],
-      "chapter_count": 7,
+      "chapter_count": 8,
       "covered_articles": [
         "art_01",
         "art_03",
@@ -4796,10 +4796,11 @@
         "art_05",
         "art_09",
         "art_12",
-        "art_14"
+        "art_14",
+        "art_19"
       ],
-      "words": 3773,
-      "reading_minutes": 19,
+      "words": 4241,
+      "reading_minutes": 21,
       "cover": null,
       "chapters": [
         {
@@ -4944,6 +4945,24 @@
           "genre": "Magical_Realism",
           "leak_free": "true",
           "words": 393,
+          "reading_minutes": 2
+        },
+        {
+          "file": "08_art_19_abschnitt_8_the_calibration_of_whispers.md",
+          "index": 8,
+          "title": "Abschnitt 8: The Calibration of Whispers",
+          "article": "art_19",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "596",
+          "manual_ending_code": "Z-19-08",
+          "backend": "deepseek",
+          "genre": "Magical_Realism",
+          "leak_free": "true",
+          "words": 468,
           "reading_minutes": 2
         }
       ]
