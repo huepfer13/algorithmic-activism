@@ -4866,7 +4866,7 @@
         "Mirela",
         "Tobias"
       ],
-      "chapter_count": 7,
+      "chapter_count": 8,
       "covered_articles": [
         "art_01",
         "art_03",
@@ -4874,10 +4874,11 @@
         "art_05",
         "art_09",
         "art_12",
-        "art_14"
+        "art_14",
+        "art_19"
       ],
-      "words": 3693,
-      "reading_minutes": 18,
+      "words": 4163,
+      "reading_minutes": 21,
       "cover": null,
       "chapters": [
         {
@@ -5022,6 +5023,24 @@
           "genre": "Chamber_Play",
           "leak_free": "true",
           "words": 402,
+          "reading_minutes": 2
+        },
+        {
+          "file": "08_art_19_abschnitt_8_the_expression_parameter.md",
+          "index": 8,
+          "title": "Abschnitt 8: The Expression Parameter",
+          "article": "art_19",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "16.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1104",
+          "manual_ending_code": "O-19-08",
+          "backend": "openrouter",
+          "genre": "Chamber_Play",
+          "leak_free": "true",
+          "words": 470,
           "reading_minutes": 2
         }
       ]

@@ -249,7 +249,8 @@
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_025_the_hold",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_004_neon_exil",
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_025_the_hold",
-    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_025_the_hold"
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_025_the_hold",
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_023_the_gravity_room"
   ],
   "runden": {
     "1": [
@@ -2476,6 +2477,21 @@
         "tokens": "734",
         "versuche": "1",
         "woerter": 256
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_023_the_gravity_room",
+        "code": "O-19-08",
+        "datei": "08_art_19_abschnitt_8_the_expression_parameter.md",
+        "dauer_s": "16.7",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 2,
+        "tokens": "1104",
+        "versuche": "1",
+        "woerter": 470
       }
     ],
     "3": [
