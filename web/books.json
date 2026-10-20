@@ -4073,7 +4073,7 @@
       "pov": "third_person",
       "setting_summary": "Verse ledgers of the commons: five lines that dismantle grand decrees.",
       "characters": [],
-      "chapter_count": 8,
+      "chapter_count": 9,
       "covered_articles": [
         "art_01",
         "art_03",
@@ -4082,10 +4082,11 @@
         "art_09",
         "art_12",
         "art_14",
-        "art_19"
+        "art_19",
+        "art_26"
       ],
-      "words": 2726,
-      "reading_minutes": 14,
+      "words": 3229,
+      "reading_minutes": 16,
       "cover": null,
       "chapters": [
         {
@@ -4249,6 +4250,24 @@
           "leak_free": "true",
           "words": 340,
           "reading_minutes": 2
+        },
+        {
+          "file": "09_art_26_abschnitt_9_the_merit_ladder.md",
+          "index": 9,
+          "title": "Abschnitt 9: The Merit Ladder",
+          "article": "art_26",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "24.9",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1312",
+          "manual_ending_code": "A-26-09",
+          "backend": "openrouter",
+          "genre": "Limericks",
+          "leak_free": "true",
+          "words": 503,
+          "reading_minutes": 3
         }
       ]
     },
