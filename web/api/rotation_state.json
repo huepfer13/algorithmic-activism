@@ -260,7 +260,8 @@
     "r4:deepseek-chat:buch_011_das_haus_ohne_widerhall",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_021_the_bell_of_the_ninth_gate",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_013_aufzeichnungen_eines_archivars",
-    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_001_das_büro_der_unendlichkeit"
+    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_001_das_büro_der_unendlichkeit",
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_011_das_haus_ohne_widerhall"
   ],
   "runden": {
     "1": [
@@ -3279,6 +3280,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 3
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_011_das_haus_ohne_widerhall",
+        "code": "W-10-10",
+        "datei": "10_art_10_abschnitt_10_die_waage_im_wand.md",
+        "dauer_s": "43.8",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 3,
+        "tokens": "1192",
+        "versuche": "1",
+        "woerter": 332
       }
     ],
     "4": [

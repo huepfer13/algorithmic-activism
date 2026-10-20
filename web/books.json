@@ -2321,7 +2321,7 @@
         "Timo",
         "Der Verwalter"
       ],
-      "chapter_count": 9,
+      "chapter_count": 10,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -2331,10 +2331,11 @@
         "art_06",
         "art_07",
         "art_08",
-        "art_09"
+        "art_09",
+        "art_10"
       ],
-      "words": 4695,
-      "reading_minutes": 23,
+      "words": 5027,
+      "reading_minutes": 25,
       "cover": null,
       "chapters": [
         {
@@ -2515,6 +2516,24 @@
           "genre": "Gothic",
           "leak_free": "true",
           "words": 471,
+          "reading_minutes": 2
+        },
+        {
+          "file": "10_art_10_abschnitt_10_die_waage_im_wand.md",
+          "index": 10,
+          "title": "Abschnitt 10: Die Waage im Wand",
+          "article": "art_10",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "43.8",
+          "jaccard_max": "0.036",
+          "tokens_generated": "1192",
+          "manual_ending_code": "W-10-10",
+          "backend": "openrouter",
+          "genre": "Gothic",
+          "leak_free": "true",
+          "words": 332,
           "reading_minutes": 2
         }
       ]
