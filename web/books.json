@@ -5233,14 +5233,15 @@
         "Tiny",
         "the Auditor"
       ],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_03",
-        "art_04"
+        "art_04",
+        "art_05"
       ],
-      "words": 1315,
-      "reading_minutes": 7,
+      "words": 1734,
+      "reading_minutes": 9,
       "cover": null,
       "chapters": [
         {
@@ -5314,6 +5315,24 @@
           "leak_free": "true",
           "words": 291,
           "reading_minutes": 1
+        },
+        {
+          "file": "04_art_05_abschnitt_4_calibration_drift.md",
+          "index": 4,
+          "title": "Abschnitt 4: Calibration Drift",
+          "article": "art_05",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.5",
+          "jaccard_max": "0.0",
+          "tokens_generated": "651",
+          "manual_ending_code": "J-05-04",
+          "backend": "deepseek",
+          "genre": "Jokes",
+          "leak_free": "true",
+          "words": 419,
+          "reading_minutes": 2
         }
       ]
     }
