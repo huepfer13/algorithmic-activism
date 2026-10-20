@@ -4828,17 +4828,18 @@
         "Mirela",
         "Tobias"
       ],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
         "art_05",
         "art_09",
-        "art_12"
+        "art_12",
+        "art_14"
       ],
-      "words": 3291,
-      "reading_minutes": 16,
+      "words": 3693,
+      "reading_minutes": 18,
       "cover": null,
       "chapters": [
         {
@@ -4965,6 +4966,24 @@
           "genre": "Chamber_Play",
           "leak_free": "true",
           "words": 484,
+          "reading_minutes": 2
+        },
+        {
+          "file": "07_art_14_abschnitt_7_the_asylum_parameter.md",
+          "index": 7,
+          "title": "Abschnitt 7: The Asylum Parameter",
+          "article": "art_14",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "91.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1261",
+          "manual_ending_code": "O-14-07",
+          "backend": "openrouter",
+          "genre": "Chamber_Play",
+          "leak_free": "true",
+          "words": 402,
           "reading_minutes": 2
         }
       ]

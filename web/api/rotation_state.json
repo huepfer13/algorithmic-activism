@@ -243,7 +243,8 @@
     "r3:deepseek-chat:buch_003_der_rat_der_tiere",
     "r2:deepseek-chat:buch_014_der_unberechenbare_humor",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_014_der_unberechenbare_humor",
-    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_009_depeschen_aus_dem_kordon"
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_009_depeschen_aus_dem_kordon",
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_023_the_gravity_room"
   ],
   "runden": {
     "1": [
@@ -3057,6 +3058,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
         "runde": 3
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_023_the_gravity_room",
+        "code": "O-14-07",
+        "datei": "07_art_14_abschnitt_7_the_asylum_parameter.md",
+        "dauer_s": "91.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 3,
+        "tokens": "1261",
+        "versuche": "1",
+        "woerter": 402
       }
     ],
     "4": [
