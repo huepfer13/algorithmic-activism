@@ -4421,16 +4421,17 @@
         "Dorn",
         "Elia"
       ],
-      "chapter_count": 5,
+      "chapter_count": 6,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_06"
       ],
-      "words": 2755,
-      "reading_minutes": 14,
+      "words": 3099,
+      "reading_minutes": 15,
       "cover": null,
       "chapters": [
         {
@@ -4539,6 +4540,24 @@
           "genre": "SciFi_Dystopie",
           "leak_free": "true",
           "words": 411,
+          "reading_minutes": 2
+        },
+        {
+          "file": "06_art_06_abschnitt_6_der_kalibrierungsgriff.md",
+          "index": 6,
+          "title": "Abschnitt 6: Der Kalibrierungsgriff",
+          "article": "art_06",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "119.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "4324",
+          "manual_ending_code": "S-06-06",
+          "backend": "openrouter",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "true",
+          "words": 344,
           "reading_minutes": 2
         }
       ]
