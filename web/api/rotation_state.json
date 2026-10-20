@@ -267,7 +267,9 @@
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_018_rhymes_of_the_commons",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_010_amtsblatt_fuer_unzumutbarkeit",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_024_die_kammer_der_stimmen",
-    "r3:deepseek-chat:buch_013_aufzeichnungen_eines_archivars"
+    "r3:deepseek-chat:buch_013_aufzeichnungen_eines_archivars",
+    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_007_die_kammer_der_zeugen",
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_020_die_quote_der_stille"
   ],
   "runden": {
     "1": [
@@ -3351,6 +3353,16 @@
         "tokens": "1125",
         "versuche": "1",
         "woerter": 550
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_007_die_kammer_der_zeugen",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 3
       }
     ],
     "4": [
@@ -3548,6 +3560,21 @@
         "tokens": "1312",
         "versuche": "1",
         "woerter": 503
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_020_die_quote_der_stille",
+        "code": "S-07-07",
+        "datei": "07_art_07_abschnitt_7_der_gleichheitsparameter.md",
+        "dauer_s": "45.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 4,
+        "tokens": "1133",
+        "versuche": "1",
+        "woerter": 437
       }
     ],
     "5": [
