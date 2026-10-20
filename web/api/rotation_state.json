@@ -254,7 +254,8 @@
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_020_die_quote_der_stille",
     "r1:deepseek-chat:buch_025_the_hold",
     "r3:deepseek-chat:buch_005_fragment_der_vernunft",
-    "r2:deepseek-chat:buch_025_the_hold"
+    "r2:deepseek-chat:buch_025_the_hold",
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_021_the_bell_of_the_ninth_gate"
   ],
   "runden": {
     "1": [
@@ -3218,6 +3219,21 @@
         "tokens": "914",
         "versuche": "2",
         "woerter": 436
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_021_the_bell_of_the_ninth_gate",
+        "code": "M-12-06",
+        "datei": "06_art_12_abschnitt_6_the_ledgers_threshold.md",
+        "dauer_s": "41.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 3,
+        "tokens": "1154",
+        "versuche": "1",
+        "woerter": 442
       }
     ],
     "4": [

@@ -4595,16 +4595,17 @@
         "Tobin",
         "The Keeper"
       ],
-      "chapter_count": 5,
+      "chapter_count": 6,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
         "art_05",
-        "art_09"
+        "art_09",
+        "art_12"
       ],
-      "words": 2753,
-      "reading_minutes": 14,
+      "words": 3195,
+      "reading_minutes": 16,
       "cover": null,
       "chapters": [
         {
@@ -4713,6 +4714,24 @@
           "genre": "Fairy_Tale",
           "leak_free": "true",
           "words": 425,
+          "reading_minutes": 2
+        },
+        {
+          "file": "06_art_12_abschnitt_6_the_ledgers_threshold.md",
+          "index": 6,
+          "title": "Abschnitt 6: The Ledger's Threshold",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "41.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1154",
+          "manual_ending_code": "M-12-06",
+          "backend": "openrouter",
+          "genre": "Fairy_Tale",
+          "leak_free": "true",
+          "words": 442,
           "reading_minutes": 2
         }
       ]
