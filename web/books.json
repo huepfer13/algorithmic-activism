@@ -5252,15 +5252,16 @@
         "Tiny",
         "the Auditor"
       ],
-      "chapter_count": 4,
+      "chapter_count": 5,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_09"
       ],
-      "words": 1734,
-      "reading_minutes": 9,
+      "words": 2114,
+      "reading_minutes": 11,
       "cover": null,
       "chapters": [
         {
@@ -5351,6 +5352,24 @@
           "genre": "Jokes",
           "leak_free": "true",
           "words": 419,
+          "reading_minutes": 2
+        },
+        {
+          "file": "05_art_09_abschnitt_5_arbitrary_threshold.md",
+          "index": 5,
+          "title": "Abschnitt 5: Arbitrary Threshold",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "4.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "588",
+          "manual_ending_code": "J-09-05",
+          "backend": "deepseek",
+          "genre": "Jokes",
+          "leak_free": "true",
+          "words": 380,
           "reading_minutes": 2
         }
       ]
