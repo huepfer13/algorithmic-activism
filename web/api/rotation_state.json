@@ -246,7 +246,8 @@
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_009_depeschen_aus_dem_kordon",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_023_the_gravity_room",
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_019_the_salt_diaries",
-    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_025_the_hold"
+    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_025_the_hold",
+    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_004_neon_exil"
   ],
   "runden": {
     "1": [
@@ -3090,6 +3091,21 @@
         "tokens": "1261",
         "versuche": "1",
         "woerter": 402
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_004_neon_exil",
+        "code": "S-09-09",
+        "datei": "09_art_09_abschnitt_9_das_tropfenprotokoll.md",
+        "dauer_s": "66.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 3,
+        "tokens": "1394",
+        "versuche": "1",
+        "woerter": 331
       }
     ],
     "4": [

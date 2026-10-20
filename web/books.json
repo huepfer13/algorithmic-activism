@@ -710,7 +710,7 @@
       "pov": "third_person",
       "setting_summary": "Im Schattennetz dokumentieren Ausgeschlossene, wie Rechte Stueck fuer Stueck verschwinden.",
       "characters": [],
-      "chapter_count": 8,
+      "chapter_count": 9,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -719,10 +719,11 @@
         "art_05",
         "art_06",
         "art_07",
-        "art_08"
+        "art_08",
+        "art_09"
       ],
-      "words": 3836,
-      "reading_minutes": 19,
+      "words": 4167,
+      "reading_minutes": 21,
       "cover": null,
       "chapters": [
         {
@@ -885,6 +886,24 @@
           "genre": "SciFi_Dystopie",
           "leak_free": "true",
           "words": 333,
+          "reading_minutes": 2
+        },
+        {
+          "file": "09_art_09_abschnitt_9_das_tropfenprotokoll.md",
+          "index": 9,
+          "title": "Abschnitt 9: Das Tropfenprotokoll",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-super-120b-a12b:free",
+          "duration_seconds": "66.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1394",
+          "manual_ending_code": "S-09-09",
+          "backend": "openrouter",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "true",
+          "words": 331,
           "reading_minutes": 2
         }
       ]
