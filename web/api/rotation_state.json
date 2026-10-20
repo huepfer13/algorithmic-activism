@@ -248,7 +248,8 @@
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_019_the_salt_diaries",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_025_the_hold",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_004_neon_exil",
-    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_025_the_hold"
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_025_the_hold",
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_025_the_hold"
   ],
   "runden": {
     "1": [
@@ -1336,6 +1337,21 @@
         "tokens": "1194",
         "versuche": "1",
         "woerter": 333
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_025_the_hold",
+        "code": "J-04-03",
+        "datei": "03_art_04_abschnitt_3_ownership_drift.md",
+        "dauer_s": "26.9",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 1,
+        "tokens": "914",
+        "versuche": "1",
+        "woerter": 291
       }
     ],
     "10": [
