@@ -252,7 +252,8 @@
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_025_the_hold",
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_023_the_gravity_room",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_020_die_quote_der_stille",
-    "r1:deepseek-chat:buch_025_the_hold"
+    "r1:deepseek-chat:buch_025_the_hold",
+    "r3:deepseek-chat:buch_005_fragment_der_vernunft"
   ],
   "runden": {
     "1": [
@@ -3186,6 +3187,21 @@
         "tokens": "4324",
         "versuche": "1",
         "woerter": 344
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_005_fragment_der_vernunft",
+        "code": "P-08-08",
+        "datei": "08_art_08_abschnitt_8_die_kalibrierung_des_rechtsw.md",
+        "dauer_s": "14.8",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 3,
+        "tokens": "914",
+        "versuche": "2",
+        "woerter": 436
       }
     ],
     "4": [
