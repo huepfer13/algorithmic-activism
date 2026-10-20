@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_026_the_ledger_of_ash_harbour",
+  "title": "The Ledger of Ash Harbour",
+  "pov": "first_person",
+  "language": "EN",
+  "style": "Historical_Chronicle",
+  "setting_summary": "In the walled port city of Ash Harbour, a brutal quarantine is enforced after a plague ship docks, sealing every district behind armed checkpoints and rationing water by written permit. A civic ledger records each citizen's worth, and the Harbourmaster's clerks decide who eats, who speaks, and who is forgotten. As the siege drags on, the city's quarrels over dignity, voice, life, and equality become matters of survival.",
+  "characters": [
+    "Maren Holt",
+    "Elias Ward",
+    "Sister Cora",
+    "Tobias Renn",
+    "The Harbourmaster"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-10-20T22:05:28.589616+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
