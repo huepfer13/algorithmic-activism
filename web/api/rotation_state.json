@@ -245,7 +245,8 @@
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_014_der_unberechenbare_humor",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_009_depeschen_aus_dem_kordon",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_023_the_gravity_room",
-    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_019_the_salt_diaries"
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_019_the_salt_diaries",
+    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_025_the_hold"
   ],
   "runden": {
     "1": [
@@ -2427,6 +2428,21 @@
         "tokens": "808",
         "versuche": "1",
         "woerter": 395
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_025_the_hold",
+        "code": "J-01-01",
+        "datei": "01_art_01_abschnitt_1_pressure_drop.md",
+        "dauer_s": "63.5",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-super-120b-a12b:free",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 2,
+        "tokens": "1812",
+        "versuche": "1",
+        "woerter": 320
       }
     ],
     "3": [
