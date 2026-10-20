@@ -5195,12 +5195,13 @@
         "Tiny",
         "the Auditor"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_03"
       ],
-      "words": 768,
-      "reading_minutes": 4,
+      "words": 1024,
+      "reading_minutes": 5,
       "cover": null,
       "chapters": [
         {
@@ -5238,6 +5239,24 @@
           "leak_free": "true",
           "words": 320,
           "reading_minutes": 2
+        },
+        {
+          "file": "02_art_03_abschnitt_2_audit_drift.md",
+          "index": 2,
+          "title": "Abschnitt 2: Audit Drift",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "13.0",
+          "jaccard_max": "0.059",
+          "tokens_generated": "734",
+          "manual_ending_code": "J-03-02",
+          "backend": "openrouter",
+          "genre": "Jokes",
+          "leak_free": "true",
+          "words": 256,
+          "reading_minutes": 1
         }
       ]
     }
