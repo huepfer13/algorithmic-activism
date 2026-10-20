@@ -244,7 +244,8 @@
     "r2:deepseek-chat:buch_014_der_unberechenbare_humor",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_014_der_unberechenbare_humor",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_009_depeschen_aus_dem_kordon",
-    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_023_the_gravity_room"
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_023_the_gravity_room",
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_019_the_salt_diaries"
   ],
   "runden": {
     "1": [
@@ -3210,6 +3211,21 @@
         "tokens": "594",
         "versuche": "1",
         "woerter": 425
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_019_the_salt_diaries",
+        "code": "T-26-09",
+        "datei": "09_art_26_abschnitt_9_the_education_parameter.md",
+        "dauer_s": "15.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 4,
+        "tokens": "1104",
+        "versuche": "1",
+        "woerter": 373
       }
     ],
     "5": [

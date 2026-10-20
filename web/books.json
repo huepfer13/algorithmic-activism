@@ -4190,7 +4190,7 @@
         "Old Pavel",
         "Rook"
       ],
-      "chapter_count": 8,
+      "chapter_count": 9,
       "covered_articles": [
         "art_01",
         "art_03",
@@ -4199,10 +4199,11 @@
         "art_09",
         "art_12",
         "art_14",
-        "art_19"
+        "art_19",
+        "art_26"
       ],
-      "words": 4401,
-      "reading_minutes": 22,
+      "words": 4774,
+      "reading_minutes": 24,
       "cover": null,
       "chapters": [
         {
@@ -4365,6 +4366,24 @@
           "genre": "Diary",
           "leak_free": "true",
           "words": 461,
+          "reading_minutes": 2
+        },
+        {
+          "file": "09_art_26_abschnitt_9_the_education_parameter.md",
+          "index": 9,
+          "title": "Abschnitt 9: The Education Parameter",
+          "article": "art_26",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "15.6",
+          "jaccard_max": "0.028",
+          "tokens_generated": "1104",
+          "manual_ending_code": "T-26-09",
+          "backend": "openrouter",
+          "genre": "Diary",
+          "leak_free": "true",
+          "words": 373,
           "reading_minutes": 2
         }
       ]
