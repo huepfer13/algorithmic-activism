@@ -5363,17 +5363,18 @@
         "Vera",
         "Der Chronist"
       ],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
         "art_05",
-        "art_06"
+        "art_06",
+        "art_07"
       ],
-      "words": 2693,
-      "reading_minutes": 13,
+      "words": 3019,
+      "reading_minutes": 15,
       "cover": null,
       "chapters": [
         {
@@ -5500,6 +5501,24 @@
           "genre": "Philosophischer_Essay",
           "leak_free": "true",
           "words": 402,
+          "reading_minutes": 2
+        },
+        {
+          "file": "07_art_07_abschnitt_7_die_gleichheit_als_toleranzf.md",
+          "index": 7,
+          "title": "Abschnitt 7: Die Gleichheit als Toleranzfenster",
+          "article": "art_07",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "29.3",
+          "jaccard_max": "0.024",
+          "tokens_generated": "924",
+          "manual_ending_code": "P-07-07",
+          "backend": "openrouter",
+          "genre": "Philosophischer_Essay",
+          "leak_free": "true",
+          "words": 326,
           "reading_minutes": 2
         }
       ]
