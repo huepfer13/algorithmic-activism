@@ -1647,7 +1647,7 @@
         "Kell",
         "Nuri"
       ],
-      "chapter_count": 11,
+      "chapter_count": 12,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1659,10 +1659,11 @@
         "art_08",
         "art_09",
         "art_10",
-        "art_11"
+        "art_11",
+        "art_12"
       ],
-      "words": 5410,
-      "reading_minutes": 27,
+      "words": 5753,
+      "reading_minutes": 29,
       "cover": null,
       "chapters": [
         {
@@ -1879,6 +1880,24 @@
           "genre": "Solarpunk",
           "leak_free": "true",
           "words": 335,
+          "reading_minutes": 2
+        },
+        {
+          "file": "12_art_12_abschnitt_12_die_kalibrierte_wand.md",
+          "index": 12,
+          "title": "Abschnitt 12: Die kalibrierte Wand",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.6",
+          "jaccard_max": "0.026",
+          "tokens_generated": "650",
+          "manual_ending_code": "U-12-12",
+          "backend": "deepseek",
+          "genre": "Solarpunk",
+          "leak_free": "true",
+          "words": 343,
           "reading_minutes": 2
         }
       ]
