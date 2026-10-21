@@ -18,9 +18,10 @@
     "art_04",
     "art_05",
     "art_09",
-    "art_12"
+    "art_12",
+    "art_14"
   ],
-  "current_chapter": 6,
+  "current_chapter": 7,
   "created_at": "2026-10-15T22:05:29.675650+00:00",
   "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
 }

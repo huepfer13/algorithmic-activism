@@ -4804,17 +4804,18 @@
         "Tobin",
         "The Keeper"
       ],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
         "art_05",
         "art_09",
-        "art_12"
+        "art_12",
+        "art_14"
       ],
-      "words": 3195,
-      "reading_minutes": 16,
+      "words": 3557,
+      "reading_minutes": 18,
       "cover": null,
       "chapters": [
         {
@@ -4941,6 +4942,24 @@
           "genre": "Fairy_Tale",
           "leak_free": "true",
           "words": 442,
+          "reading_minutes": 2
+        },
+        {
+          "file": "07_art_14_abschnitt_7_the_margin_of_the_unnamed.md",
+          "index": 7,
+          "title": "Abschnitt 7: The Margin of the Unnamed",
+          "article": "art_14",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "4.9",
+          "jaccard_max": "0.0",
+          "tokens_generated": "515",
+          "manual_ending_code": "M-14-07",
+          "backend": "deepseek",
+          "genre": "Fairy_Tale",
+          "leak_free": "true",
+          "words": 362,
           "reading_minutes": 2
         }
       ]
