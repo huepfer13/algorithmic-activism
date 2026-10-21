@@ -3604,7 +3604,7 @@
       "pov": "third_person",
       "setting_summary": "Kontemplative Einsichten fuer unruhige Zeiten.",
       "characters": [],
-      "chapter_count": 15,
+      "chapter_count": 16,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -3620,10 +3620,11 @@
         "art_12",
         "art_13",
         "art_14",
-        "art_15"
+        "art_15",
+        "art_16"
       ],
-      "words": 4606,
-      "reading_minutes": 23,
+      "words": 4970,
+      "reading_minutes": 25,
       "cover": null,
       "chapters": [
         {
@@ -3912,6 +3913,24 @@
           "genre": "Lebensweisheiten",
           "leak_free": "true",
           "words": 345,
+          "reading_minutes": 2
+        },
+        {
+          "file": "16_art_16_abschnitt_16_die_entfernung_der_bindung.md",
+          "index": 16,
+          "title": "Abschnitt 16: Die Entfernung der Bindung",
+          "article": "art_16",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.9",
+          "jaccard_max": "0.0",
+          "tokens_generated": "689",
+          "manual_ending_code": "L-16-16",
+          "backend": "deepseek",
+          "genre": "Lebensweisheiten",
+          "leak_free": "true",
+          "words": 364,
           "reading_minutes": 2
         }
       ]
