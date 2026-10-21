@@ -3981,7 +3981,7 @@
       "pov": "third_person",
       "setting_summary": "Etymologische Miniaturen zu gefluegelten Worten.",
       "characters": [],
-      "chapter_count": 16,
+      "chapter_count": 17,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -3998,10 +3998,11 @@
         "art_13",
         "art_14",
         "art_15",
-        "art_16"
+        "art_16",
+        "art_17"
       ],
-      "words": 5967,
-      "reading_minutes": 30,
+      "words": 6419,
+      "reading_minutes": 32,
       "cover": null,
       "chapters": [
         {
@@ -4308,6 +4309,24 @@
           "genre": "Sprichwoerter",
           "leak_free": "true",
           "words": 474,
+          "reading_minutes": 2
+        },
+        {
+          "file": "17_art_17_abschnitt_17_die_kalibrierte_kette.md",
+          "index": 17,
+          "title": "Abschnitt 17: Die kalibrierte Kette",
+          "article": "art_17",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.3",
+          "jaccard_max": "0.027",
+          "tokens_generated": "843",
+          "manual_ending_code": "V-17-17",
+          "backend": "deepseek",
+          "genre": "Sprichwoerter",
+          "leak_free": "true",
+          "words": 452,
           "reading_minutes": 2
         }
       ]
