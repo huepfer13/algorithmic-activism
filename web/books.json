@@ -523,7 +523,7 @@
       "pov": "third_person",
       "setting_summary": "Die Tiere des Schattenwaldes halten Rat und finden fuer jeden Streit eine gute Loesung.",
       "characters": [],
-      "chapter_count": 9,
+      "chapter_count": 10,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -533,10 +533,11 @@
         "art_06",
         "art_07",
         "art_08",
-        "art_09"
+        "art_09",
+        "art_10"
       ],
-      "words": 3934,
-      "reading_minutes": 20,
+      "words": 4342,
+      "reading_minutes": 22,
       "cover": null,
       "chapters": [
         {
@@ -717,6 +718,24 @@
           "genre": "Kinderbuch",
           "leak_free": "true",
           "words": 320,
+          "reading_minutes": 2
+        },
+        {
+          "file": "10_art_10_abschnitt_10_das_fiepen_im_gericht.md",
+          "index": 10,
+          "title": "Abschnitt 10: Das Fiepen im Gericht",
+          "article": "art_10",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "800",
+          "manual_ending_code": "K-10-10",
+          "backend": "deepseek",
+          "genre": "Kinderbuch",
+          "leak_free": "true",
+          "words": 408,
           "reading_minutes": 2
         }
       ]
