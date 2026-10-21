@@ -270,7 +270,9 @@
     "r3:deepseek-chat:buch_013_aufzeichnungen_eines_archivars",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_007_die_kammer_der_zeugen",
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_020_die_quote_der_stille",
-    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_014_der_unberechenbare_humor"
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_014_der_unberechenbare_humor",
+    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_002_die_sieben_quellen",
+    "r4:deepseek-chat:buch_009_depeschen_aus_dem_kordon"
   ],
   "runden": {
     "1": [
@@ -3379,6 +3381,16 @@
         "tokens": "913",
         "versuche": "1",
         "woerter": 270
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_002_die_sieben_quellen",
+        "datei": null,
+        "dauer_s": 0.4,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 3
       }
     ],
     "4": [
@@ -3591,6 +3603,21 @@
         "tokens": "1133",
         "versuche": "1",
         "woerter": 437
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_009_depeschen_aus_dem_kordon",
+        "code": "B-12-12",
+        "datei": "12_art_12_abschnitt_12_die_zwölfte_kalibrierung.md",
+        "dauer_s": "9.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 4,
+        "tokens": "1167",
+        "versuche": "1",
+        "woerter": 593
       }
     ],
     "5": [

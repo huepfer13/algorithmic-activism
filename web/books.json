@@ -1840,7 +1840,7 @@
         "Nadia",
         "Kroll"
       ],
-      "chapter_count": 11,
+      "chapter_count": 12,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1852,10 +1852,11 @@
         "art_08",
         "art_09",
         "art_10",
-        "art_11"
+        "art_11",
+        "art_12"
       ],
-      "words": 5325,
-      "reading_minutes": 27,
+      "words": 5918,
+      "reading_minutes": 30,
       "cover": null,
       "chapters": [
         {
@@ -2073,6 +2074,24 @@
           "leak_free": "true",
           "words": 478,
           "reading_minutes": 2
+        },
+        {
+          "file": "12_art_12_abschnitt_12_die_zwölfte_kalibrierung.md",
+          "index": 12,
+          "title": "Abschnitt 12: Die zwölfte Kalibrierung",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1167",
+          "manual_ending_code": "B-12-12",
+          "backend": "deepseek",
+          "genre": "Briefroman",
+          "leak_free": "true",
+          "words": 593,
+          "reading_minutes": 3
         }
       ]
     },
