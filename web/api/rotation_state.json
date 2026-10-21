@@ -299,7 +299,9 @@
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_023_the_gravity_room",
     "r4:deepseek-chat:buch_008_flechtwerk_arkadien",
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_026_the_ledger_of_ash_harbour",
-    "r4:deepseek-chat:buch_003_der_rat_der_tiere"
+    "r4:deepseek-chat:buch_003_der_rat_der_tiere",
+    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_015_das_kochbuch_der_allmende",
+    "r3:deepseek-chat:buch_020_die_quote_der_stille"
   ],
   "runden": {
     "1": [
@@ -2666,6 +2668,16 @@
         "tokens": "1030",
         "versuche": "2",
         "woerter": 389
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_015_das_kochbuch_der_allmende",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 2
       }
     ],
     "3": [
@@ -3628,6 +3640,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 3
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_020_die_quote_der_stille",
+        "code": "S-08-08",
+        "datei": "08_art_08_abschnitt_8_der_rechtsbehelf.md",
+        "dauer_s": "7.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 3,
+        "tokens": "961",
+        "versuche": "1",
+        "woerter": 476
       }
     ],
     "4": [
