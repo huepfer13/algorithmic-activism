@@ -2147,7 +2147,7 @@
         "Kalle Ohm",
         "Frau Säckel"
       ],
-      "chapter_count": 11,
+      "chapter_count": 12,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -2159,10 +2159,11 @@
         "art_08",
         "art_09",
         "art_10",
-        "art_11"
+        "art_11",
+        "art_12"
       ],
-      "words": 5003,
-      "reading_minutes": 25,
+      "words": 5521,
+      "reading_minutes": 28,
       "cover": null,
       "chapters": [
         {
@@ -2380,6 +2381,24 @@
           "leak_free": "true",
           "words": 356,
           "reading_minutes": 2
+        },
+        {
+          "file": "12_art_12_abschnitt_12_die_ehre_als_leckstelle.md",
+          "index": 12,
+          "title": "Abschnitt 12: Die Ehre als Leckstelle",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.3",
+          "jaccard_max": "0.027",
+          "tokens_generated": "1183",
+          "manual_ending_code": "G-12-12",
+          "backend": "deepseek",
+          "genre": "Satire",
+          "leak_free": "true",
+          "words": 518,
+          "reading_minutes": 3
         }
       ]
     },

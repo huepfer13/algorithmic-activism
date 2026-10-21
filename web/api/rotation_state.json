@@ -287,7 +287,8 @@
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_011_das_haus_ohne_widerhall",
     "r4:deepseek-chat:buch_016_faden_der_gelassenheit",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_026_the_ledger_of_ash_harbour",
-    "r2:deepseek-chat:buch_026_the_ledger_of_ash_harbour"
+    "r2:deepseek-chat:buch_026_the_ledger_of_ash_harbour",
+    "r3:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit"
   ],
   "runden": {
     "1": [
@@ -3536,6 +3537,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 3
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_010_amtsblatt_fuer_unzumutbarkeit",
+        "code": "G-12-12",
+        "datei": "12_art_12_abschnitt_12_die_ehre_als_leckstelle.md",
+        "dauer_s": "9.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 3,
+        "tokens": "1183",
+        "versuche": "1",
+        "woerter": 518
       }
     ],
     "4": [
