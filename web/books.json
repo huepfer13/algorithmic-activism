@@ -523,7 +523,7 @@
       "pov": "third_person",
       "setting_summary": "Die Tiere des Schattenwaldes halten Rat und finden fuer jeden Streit eine gute Loesung.",
       "characters": [],
-      "chapter_count": 8,
+      "chapter_count": 9,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -532,10 +532,11 @@
         "art_05",
         "art_06",
         "art_07",
-        "art_08"
+        "art_08",
+        "art_09"
       ],
-      "words": 3614,
-      "reading_minutes": 18,
+      "words": 3934,
+      "reading_minutes": 20,
       "cover": null,
       "chapters": [
         {
@@ -698,6 +699,24 @@
           "genre": "Kinderbuch",
           "leak_free": "true",
           "words": 382,
+          "reading_minutes": 2
+        },
+        {
+          "file": "09_art_09_abschnitt_9_der_schlüssel_im_tropfen.md",
+          "index": 9,
+          "title": "Abschnitt 9: Der Schlüssel im Tropfen",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "31.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1041",
+          "manual_ending_code": "K-09-09",
+          "backend": "openrouter",
+          "genre": "Kinderbuch",
+          "leak_free": "true",
+          "words": 320,
           "reading_minutes": 2
         }
       ]

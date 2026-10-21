@@ -281,7 +281,8 @@
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_024_die_kammer_der_stimmen",
     "r4:deepseek-chat:buch_013_aufzeichnungen_eines_archivars",
     "r4:deepseek-chat:buch_017_des_volkes_mund",
-    "r3:deepseek-chat:buch_026_the_ledger_of_ash_harbour"
+    "r3:deepseek-chat:buch_026_the_ledger_of_ash_harbour",
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_003_der_rat_der_tiere"
   ],
   "runden": {
     "1": [
@@ -3470,6 +3471,21 @@
         "tokens": "796",
         "versuche": "1",
         "woerter": 605
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_003_der_rat_der_tiere",
+        "code": "K-09-09",
+        "datei": "09_art_09_abschnitt_9_der_schlüssel_im_tropfen.md",
+        "dauer_s": "31.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 3,
+        "tokens": "1041",
+        "versuche": "1",
+        "woerter": 320
       }
     ],
     "4": [
