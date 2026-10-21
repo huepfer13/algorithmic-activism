@@ -3002,7 +3002,7 @@
       "pov": "third_person",
       "setting_summary": "Kurzgeschichten und Szenen, in denen Humor den Ernstfall entlarvt.",
       "characters": [],
-      "chapter_count": 8,
+      "chapter_count": 9,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -3011,10 +3011,11 @@
         "art_05",
         "art_06",
         "art_07",
-        "art_08"
+        "art_08",
+        "art_09"
       ],
-      "words": 3276,
-      "reading_minutes": 16,
+      "words": 3546,
+      "reading_minutes": 18,
       "cover": null,
       "chapters": [
         {
@@ -3178,6 +3179,24 @@
           "leak_free": "true",
           "words": 424,
           "reading_minutes": 2
+        },
+        {
+          "file": "09_art_09_abschnitt_9_der_freiheitsparameter_im_kü.md",
+          "index": 9,
+          "title": "Abschnitt 9: Der Freiheitsparameter im Kühlwasser",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "21.9",
+          "jaccard_max": "0.0",
+          "tokens_generated": "913",
+          "manual_ending_code": "J-09-09",
+          "backend": "openrouter",
+          "genre": "Witzebuch",
+          "leak_free": "true",
+          "words": 270,
+          "reading_minutes": 1
         }
       ]
     },

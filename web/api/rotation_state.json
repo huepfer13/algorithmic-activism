@@ -269,7 +269,8 @@
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_024_die_kammer_der_stimmen",
     "r3:deepseek-chat:buch_013_aufzeichnungen_eines_archivars",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_007_die_kammer_der_zeugen",
-    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_020_die_quote_der_stille"
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_020_die_quote_der_stille",
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_014_der_unberechenbare_humor"
   ],
   "runden": {
     "1": [
@@ -3363,6 +3364,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 3
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_014_der_unberechenbare_humor",
+        "code": "J-09-09",
+        "datei": "09_art_09_abschnitt_9_der_freiheitsparameter_im_kü.md",
+        "dauer_s": "21.9",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 3,
+        "tokens": "913",
+        "versuche": "1",
+        "woerter": 270
       }
     ],
     "4": [
