@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_027_das_haus_das_die_namen_fraß",
+  "title": "Das Haus, das die Namen fraß",
+  "pov": "first_person",
+  "language": "DE",
+  "style": "Gothic",
+  "setting_summary": "Ein herrschaftliches, langsam verfallendes Stadthaus, in dem die Zimmerzahl von Woche zu Woche schwankt und Türen nur an bestimmten Tagen zu bestimmten Räumen führen. Die Bewohner leben unter der ständigen Beobachtung einer unsichtbaren Hausordnung, die ihre Räume, Vorräte und selbst ihre Erinnerungen zuteilt, während das Haus ihre Namen und Freiheiten nach und nach verschluckt.",
+  "characters": [
+    "Elisabeth Voss",
+    "Mira",
+    "Herr Kaltenbrunn",
+    "Tobias",
+    "Die Stimme im Gebälk"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-10-21T22:05:31.143582+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

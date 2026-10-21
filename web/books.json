@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 26,
+  "count": 27,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -6001,6 +6001,46 @@
           "leak_free": "true",
           "words": 389,
           "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_027_das_haus_das_die_namen_fraß",
+      "title": "Das Haus, das die Namen fraß",
+      "language": "DE",
+      "style": "Gothic",
+      "pov": "first_person",
+      "setting_summary": "Ein herrschaftliches, langsam verfallendes Stadthaus, in dem die Zimmerzahl von Woche zu Woche schwankt und Türen nur an bestimmten Tagen zu bestimmten Räumen führen. Die Bewohner leben unter der ständigen Beobachtung einer unsichtbaren Hausordnung, die ihre Räume, Vorräte und selbst ihre Erinnerungen zuteilt, während das Haus ihre Namen und Freiheiten nach und nach verschluckt.",
+      "characters": [
+        "Elisabeth Voss",
+        "Mira",
+        "Herr Kaltenbrunn",
+        "Tobias",
+        "Die Stimme im Gebälk"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 541,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.7",
+          "jaccard_max": "",
+          "tokens_generated": "953",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Gothic",
+          "leak_free": "",
+          "words": 541,
+          "reading_minutes": 3
         }
       ]
     }
