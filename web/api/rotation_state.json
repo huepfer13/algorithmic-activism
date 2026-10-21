@@ -272,7 +272,8 @@
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_020_die_quote_der_stille",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_014_der_unberechenbare_humor",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_002_die_sieben_quellen",
-    "r4:deepseek-chat:buch_009_depeschen_aus_dem_kordon"
+    "r4:deepseek-chat:buch_009_depeschen_aus_dem_kordon",
+    "r3:deepseek-chat:buch_007_die_kammer_der_zeugen"
   ],
   "runden": {
     "1": [
@@ -3391,6 +3392,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 3
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_007_die_kammer_der_zeugen",
+        "code": "H-10-10",
+        "datei": "10_art_10_abschnitt_10_die_gleichheit_der_waffen.md",
+        "dauer_s": "7.7",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 3,
+        "tokens": "892",
+        "versuche": "1",
+        "woerter": 432
       }
     ],
     "4": [
