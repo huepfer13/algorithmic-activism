@@ -290,7 +290,9 @@
     "r2:deepseek-chat:buch_026_the_ledger_of_ash_harbour",
     "r3:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit",
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_023_the_gravity_room",
-    "r1:deepseek-chat:buch_026_the_ledger_of_ash_harbour"
+    "r1:deepseek-chat:buch_026_the_ledger_of_ash_harbour",
+    "r4:deepseek-chat:buch_019_the_salt_diaries",
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_007_die_kammer_der_zeugen"
   ],
   "runden": {
     "1": [
@@ -3886,6 +3888,31 @@
         "tokens": "1063",
         "versuche": "1",
         "woerter": 326
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_019_the_salt_diaries",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 4
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_007_die_kammer_der_zeugen",
+        "code": "H-11-11",
+        "datei": "11_art_11_abschnitt_11_die_unschuldsvermutung_als_.md",
+        "dauer_s": "37.7",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 4,
+        "tokens": "1418",
+        "versuche": "1",
+        "woerter": 362
       }
     ],
     "5": [

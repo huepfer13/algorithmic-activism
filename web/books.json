@@ -1397,7 +1397,7 @@
         "Angeklagter Tomas Reiter",
         "Zeugin Elif Sarikaya"
       ],
-      "chapter_count": 10,
+      "chapter_count": 11,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1408,10 +1408,11 @@
         "art_07",
         "art_08",
         "art_09",
-        "art_10"
+        "art_10",
+        "art_11"
       ],
-      "words": 5117,
-      "reading_minutes": 26,
+      "words": 5479,
+      "reading_minutes": 27,
       "cover": null,
       "chapters": [
         {
@@ -1610,6 +1611,24 @@
           "genre": "Gerichtsdrama",
           "leak_free": "true",
           "words": 432,
+          "reading_minutes": 2
+        },
+        {
+          "file": "11_art_11_abschnitt_11_die_unschuldsvermutung_als_.md",
+          "index": 11,
+          "title": "Abschnitt 11: Die Unschuldsvermutung als Kalibriergröße",
+          "article": "art_11",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "37.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1418",
+          "manual_ending_code": "H-11-11",
+          "backend": "openrouter",
+          "genre": "Gerichtsdrama",
+          "leak_free": "true",
+          "words": 362,
           "reading_minutes": 2
         }
       ]
