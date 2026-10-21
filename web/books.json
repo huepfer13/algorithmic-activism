@@ -3905,7 +3905,7 @@
       "pov": "third_person",
       "setting_summary": "Etymologische Miniaturen zu gefluegelten Worten.",
       "characters": [],
-      "chapter_count": 15,
+      "chapter_count": 16,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -3921,10 +3921,11 @@
         "art_12",
         "art_13",
         "art_14",
-        "art_15"
+        "art_15",
+        "art_16"
       ],
-      "words": 5493,
-      "reading_minutes": 27,
+      "words": 5967,
+      "reading_minutes": 30,
       "cover": null,
       "chapters": [
         {
@@ -4213,6 +4214,24 @@
           "genre": "Sprichwoerter",
           "leak_free": "true",
           "words": 356,
+          "reading_minutes": 2
+        },
+        {
+          "file": "16_art_16_abschnitt_16_die_kalibrierte_naht.md",
+          "index": 16,
+          "title": "Abschnitt 16: Die kalibrierte Naht",
+          "article": "art_16",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "900",
+          "manual_ending_code": "V-16-16",
+          "backend": "deepseek",
+          "genre": "Sprichwoerter",
+          "leak_free": "true",
+          "words": 474,
           "reading_minutes": 2
         }
       ]
