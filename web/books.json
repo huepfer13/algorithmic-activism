@@ -2378,7 +2378,7 @@
         "Timo",
         "Der Verwalter"
       ],
-      "chapter_count": 10,
+      "chapter_count": 11,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -2389,10 +2389,11 @@
         "art_07",
         "art_08",
         "art_09",
-        "art_10"
+        "art_10",
+        "art_11"
       ],
-      "words": 5027,
-      "reading_minutes": 25,
+      "words": 5326,
+      "reading_minutes": 27,
       "cover": null,
       "chapters": [
         {
@@ -2592,6 +2593,24 @@
           "leak_free": "true",
           "words": 332,
           "reading_minutes": 2
+        },
+        {
+          "file": "11_art_11_abschnitt_11_die_unschuldsvermutung_als_.md",
+          "index": 11,
+          "title": "Abschnitt 11: Die Unschuldsvermutung als Dämpfungsglied",
+          "article": "art_11",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "25.9",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1172",
+          "manual_ending_code": "W-11-11",
+          "backend": "openrouter",
+          "genre": "Gothic",
+          "leak_free": "true",
+          "words": 299,
+          "reading_minutes": 1
         }
       ]
     },
