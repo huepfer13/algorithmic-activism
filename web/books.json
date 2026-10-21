@@ -5711,10 +5711,12 @@
         "Tobias Renn",
         "The Harbourmaster"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 447,
-      "reading_minutes": 2,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 1052,
+      "reading_minutes": 5,
       "cover": null,
       "chapters": [
         {
@@ -5734,6 +5736,24 @@
           "leak_free": "",
           "words": 447,
           "reading_minutes": 2
+        },
+        {
+          "file": "01_art_01_abschnitt_1_the_paper_grind.md",
+          "index": 1,
+          "title": "Abschnitt 1: The Paper Grind",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.9",
+          "jaccard_max": "0.062",
+          "tokens_generated": "796",
+          "manual_ending_code": "I-01-01",
+          "backend": "deepseek",
+          "genre": "Historical_Chronicle",
+          "leak_free": "true",
+          "words": 605,
+          "reading_minutes": 3
         }
       ]
     }
