@@ -297,7 +297,8 @@
     "r3:deepseek-chat:buch_025_the_hold",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_025_the_hold",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_023_the_gravity_room",
-    "r4:deepseek-chat:buch_008_flechtwerk_arkadien"
+    "r4:deepseek-chat:buch_008_flechtwerk_arkadien",
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_026_the_ledger_of_ash_harbour"
   ],
   "runden": {
     "1": [
@@ -2649,6 +2650,21 @@
         "tokens": "832",
         "versuche": "1",
         "woerter": 658
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_026_the_ledger_of_ash_harbour",
+        "code": "I-05-04",
+        "datei": "04_art_05_abschnitt_4_the_calibration_of_silence.md",
+        "dauer_s": "36.8",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 2,
+        "tokens": "1030",
+        "versuche": "2",
+        "woerter": 389
       }
     ],
     "3": [
