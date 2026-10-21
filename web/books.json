@@ -5787,13 +5787,14 @@
         "Tobias Renn",
         "The Harbourmaster"
       ],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 1710,
-      "reading_minutes": 9,
+      "words": 2389,
+      "reading_minutes": 12,
       "cover": null,
       "chapters": [
         {
@@ -5848,6 +5849,24 @@
           "genre": "Historical_Chronicle",
           "leak_free": "true",
           "words": 658,
+          "reading_minutes": 3
+        },
+        {
+          "file": "03_art_04_abschnitt_3_the_audit_of_breath.md",
+          "index": 3,
+          "title": "Abschnitt 3: The Audit of Breath",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.6",
+          "jaccard_max": "0.051",
+          "tokens_generated": "840",
+          "manual_ending_code": "I-04-03",
+          "backend": "deepseek",
+          "genre": "Historical_Chronicle",
+          "leak_free": "true",
+          "words": 679,
           "reading_minutes": 3
         }
       ]
