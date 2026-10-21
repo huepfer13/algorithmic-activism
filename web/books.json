@@ -5689,16 +5689,17 @@
         "Tiny",
         "the Auditor"
       ],
-      "chapter_count": 5,
+      "chapter_count": 6,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
         "art_05",
-        "art_09"
+        "art_09",
+        "art_12"
       ],
-      "words": 2114,
-      "reading_minutes": 11,
+      "words": 2519,
+      "reading_minutes": 13,
       "cover": null,
       "chapters": [
         {
@@ -5807,6 +5808,24 @@
           "genre": "Jokes",
           "leak_free": "true",
           "words": 380,
+          "reading_minutes": 2
+        },
+        {
+          "file": "06_art_12_abschnitt_6_paper_grit.md",
+          "index": 6,
+          "title": "Abschnitt 6: Paper Grit",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "4.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "611",
+          "manual_ending_code": "J-12-06",
+          "backend": "deepseek",
+          "genre": "Jokes",
+          "leak_free": "true",
+          "words": 405,
           "reading_minutes": 2
         }
       ]
