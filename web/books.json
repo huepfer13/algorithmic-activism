@@ -5265,7 +5265,7 @@
         "Mirela",
         "Tobias"
       ],
-      "chapter_count": 8,
+      "chapter_count": 9,
       "covered_articles": [
         "art_01",
         "art_03",
@@ -5274,10 +5274,11 @@
         "art_09",
         "art_12",
         "art_14",
-        "art_19"
+        "art_19",
+        "art_26"
       ],
-      "words": 4163,
-      "reading_minutes": 21,
+      "words": 4489,
+      "reading_minutes": 22,
       "cover": null,
       "chapters": [
         {
@@ -5440,6 +5441,24 @@
           "genre": "Chamber_Play",
           "leak_free": "true",
           "words": 470,
+          "reading_minutes": 2
+        },
+        {
+          "file": "09_art_26_abschnitt_9_the_calibration_floor.md",
+          "index": 9,
+          "title": "Abschnitt 9: The Calibration Floor",
+          "article": "art_26",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "34.4",
+          "jaccard_max": "0.051",
+          "tokens_generated": "1063",
+          "manual_ending_code": "O-26-09",
+          "backend": "openrouter",
+          "genre": "Chamber_Play",
+          "leak_free": "true",
+          "words": 326,
           "reading_minutes": 2
         }
       ]

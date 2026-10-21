@@ -288,7 +288,8 @@
     "r4:deepseek-chat:buch_016_faden_der_gelassenheit",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_026_the_ledger_of_ash_harbour",
     "r2:deepseek-chat:buch_026_the_ledger_of_ash_harbour",
-    "r3:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit"
+    "r3:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit",
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_023_the_gravity_room"
   ],
   "runden": {
     "1": [
@@ -3854,6 +3855,21 @@
         "tokens": "689",
         "versuche": "1",
         "woerter": 364
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_023_the_gravity_room",
+        "code": "O-26-09",
+        "datei": "09_art_26_abschnitt_9_the_calibration_floor.md",
+        "dauer_s": "34.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 4,
+        "tokens": "1063",
+        "versuche": "1",
+        "woerter": 326
       }
     ],
     "5": [
