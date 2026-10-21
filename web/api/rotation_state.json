@@ -285,7 +285,9 @@
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_003_der_rat_der_tiere",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_014_der_unberechenbare_humor",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_011_das_haus_ohne_widerhall",
-    "r4:deepseek-chat:buch_016_faden_der_gelassenheit"
+    "r4:deepseek-chat:buch_016_faden_der_gelassenheit",
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_026_the_ledger_of_ash_harbour",
+    "r2:deepseek-chat:buch_026_the_ledger_of_ash_harbour"
   ],
   "runden": {
     "1": [
@@ -1409,6 +1411,16 @@
         "buch": "buch_024_die_kammer_der_stimmen",
         "datei": null,
         "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 1
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_026_the_ledger_of_ash_harbour",
+        "datei": null,
+        "dauer_s": 0.4,
         "exit": 1,
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
@@ -2587,6 +2599,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 2
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_026_the_ledger_of_ash_harbour",
+        "code": "I-03-02",
+        "datei": "02_art_03_abschnitt_2_the_reading_aloud.md",
+        "dauer_s": "6.7",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 2,
+        "tokens": "832",
+        "versuche": "1",
+        "woerter": 658
       }
     ],
     "3": [

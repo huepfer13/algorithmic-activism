@@ -5749,12 +5749,13 @@
         "Tobias Renn",
         "The Harbourmaster"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_03"
       ],
-      "words": 1052,
-      "reading_minutes": 5,
+      "words": 1710,
+      "reading_minutes": 9,
       "cover": null,
       "chapters": [
         {
@@ -5791,6 +5792,24 @@
           "genre": "Historical_Chronicle",
           "leak_free": "true",
           "words": 605,
+          "reading_minutes": 3
+        },
+        {
+          "file": "02_art_03_abschnitt_2_the_reading_aloud.md",
+          "index": 2,
+          "title": "Abschnitt 2: The Reading Aloud",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "832",
+          "manual_ending_code": "I-03-02",
+          "backend": "deepseek",
+          "genre": "Historical_Chronicle",
+          "leak_free": "true",
+          "words": 658,
           "reading_minutes": 3
         }
       ]
