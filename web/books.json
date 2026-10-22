@@ -6113,13 +6113,14 @@
         "Tobias",
         "Die Stimme im Gebälk"
       ],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_02"
+        "art_02",
+        "art_03"
       ],
-      "words": 1343,
-      "reading_minutes": 7,
+      "words": 1722,
+      "reading_minutes": 9,
       "cover": null,
       "chapters": [
         {
@@ -6174,6 +6175,24 @@
           "genre": "Gothic",
           "leak_free": "true",
           "words": 392,
+          "reading_minutes": 2
+        },
+        {
+          "file": "03_art_03_abschnitt_3_die_kalibrierung_der_klingen.md",
+          "index": 3,
+          "title": "Abschnitt 3: Die Kalibrierung der Klingen",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "51.2",
+          "jaccard_max": "0.043",
+          "tokens_generated": "1074",
+          "manual_ending_code": "W-03-03",
+          "backend": "openrouter",
+          "genre": "Gothic",
+          "leak_free": "true",
+          "words": 379,
           "reading_minutes": 2
         }
       ]
