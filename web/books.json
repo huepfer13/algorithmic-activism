@@ -16,7 +16,7 @@
         "Nova",
         "Omicron"
       ],
-      "chapter_count": 14,
+      "chapter_count": 15,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -28,13 +28,14 @@
         "art_08",
         "art_09",
         "art_10",
+        "art_11",
         "art_12",
         "art_14",
         "art_19",
         "art_26"
       ],
-      "words": 7260,
-      "reading_minutes": 36,
+      "words": 7638,
+      "reading_minutes": 38,
       "cover": null,
       "chapters": [
         {
@@ -305,6 +306,24 @@
           "genre": "Gerätehandbuch",
           "leak_free": "",
           "words": 338,
+          "reading_minutes": 2
+        },
+        {
+          "file": "15_art_11_abschnitt_15_kalibrierung_des_unschuldsv.md",
+          "index": 15,
+          "title": "Abschnitt 15: Kalibrierung des Unschuldsvermutungspuffers bei Signalinterferenz im Sektor-30",
+          "article": "art_11",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "19.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "978",
+          "manual_ending_code": "E-11-15",
+          "backend": "deepseek",
+          "genre": "Gerätehandbuch",
+          "leak_free": "",
+          "words": 378,
           "reading_minutes": 2
         }
       ]

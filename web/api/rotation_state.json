@@ -348,7 +348,8 @@
     "r5:deepseek-chat:buch_014_der_unberechenbare_humor",
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_027_das_haus_das_die_namen_fraß",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_026_the_ledger_of_ash_harbour",
-    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_008_flechtwerk_arkadien"
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_008_flechtwerk_arkadien",
+    "r4:deepseek-chat:buch_001_das_büro_der_unendlichkeit"
   ],
   "runden": {
     "1": [
@@ -4419,6 +4420,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 4
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_001_das_büro_der_unendlichkeit",
+        "code": "E-11-15",
+        "datei": "15_art_11_abschnitt_15_kalibrierung_des_unschuldsv.md",
+        "dauer_s": "19.0",
+        "ending_ok": "false",
+        "exit": 2,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 4,
+        "tokens": "978",
+        "versuche": "3",
+        "woerter": 378
       }
     ],
     "5": [
