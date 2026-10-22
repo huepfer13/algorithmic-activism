@@ -5898,17 +5898,18 @@
         "Tiny",
         "the Auditor"
       ],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
         "art_05",
         "art_09",
-        "art_12"
+        "art_12",
+        "art_14"
       ],
-      "words": 2519,
-      "reading_minutes": 13,
+      "words": 2806,
+      "reading_minutes": 14,
       "cover": null,
       "chapters": [
         {
@@ -6036,6 +6037,24 @@
           "leak_free": "true",
           "words": 405,
           "reading_minutes": 2
+        },
+        {
+          "file": "07_art_14_abschnitt_7_border_logic.md",
+          "index": 7,
+          "title": "Abschnitt 7: Border Logic",
+          "article": "art_14",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "20.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "771",
+          "manual_ending_code": "J-14-07",
+          "backend": "openrouter",
+          "genre": "Jokes",
+          "leak_free": "true",
+          "words": 287,
+          "reading_minutes": 1
         }
       ]
     },

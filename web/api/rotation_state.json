@@ -326,7 +326,9 @@
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_013_aufzeichnungen_eines_archivars",
     "r1:deepseek-chat:buch_027_das_haus_das_die_namen_fraß",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_025_the_hold",
-    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_005_fragment_der_vernunft"
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_005_fragment_der_vernunft",
+    "r2:deepseek-chat:buch_027_das_haus_das_die_namen_fraß",
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_025_the_hold"
   ],
   "runden": {
     "1": [
@@ -2743,6 +2745,16 @@
         "tokens": "1425",
         "versuche": "1",
         "woerter": 410
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_027_das_haus_das_die_namen_fraß",
+        "datei": null,
+        "dauer_s": 0.7,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 2
       }
     ],
     "3": [
@@ -3770,6 +3782,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 3
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_025_the_hold",
+        "code": "J-14-07",
+        "datei": "07_art_14_abschnitt_7_border_logic.md",
+        "dauer_s": "20.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 3,
+        "tokens": "771",
+        "versuche": "1",
+        "woerter": 287
       }
     ],
     "4": [
