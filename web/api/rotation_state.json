@@ -336,7 +336,9 @@
     "r5:deepseek-chat:buch_022_the_ledger_of_vanishing_rain",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_015_das_kochbuch_der_allmende",
     "r6:deepseek-chat:buch_023_the_gravity_room",
-    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_017_des_volkes_mund"
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_017_des_volkes_mund",
+    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_024_die_kammer_der_stimmen",
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_012_manifest_der_unantastbaren"
   ],
   "runden": {
     "1": [
@@ -3805,6 +3807,16 @@
         "tokens": "771",
         "versuche": "1",
         "woerter": 287
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_024_die_kammer_der_stimmen",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 3
       }
     ],
     "4": [
@@ -4332,6 +4344,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 4
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_012_manifest_der_unantastbaren",
+        "code": "R-11-11",
+        "datei": "11_art_11_abschnitt_11_der_parameter_der_unschulds.md",
+        "dauer_s": "52.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 4,
+        "tokens": "1129",
+        "versuche": "1",
+        "woerter": 318
       }
     ],
     "5": [

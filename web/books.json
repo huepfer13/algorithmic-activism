@@ -2793,7 +2793,7 @@
       "pov": "first_person",
       "setting_summary": "In einem unterirdischen Archivbunker, dem Sektor Neun, hausen die letzten freien Chronisten unter ständiger Überwachung durch die Obrigkeit. Ein Riss in der Betondecke lässt Wasser eindringen und markiert eine tickende Frist: In wenigen Wochen wird der Bunker geflutet, wenn niemand die Wahrheit nach außen trägt. Jeder ausgesprochene Satz kann Verhaftung, Folter oder Tod bedeuten – und doch muss gesprochen werden.",
       "characters": [],
-      "chapter_count": 10,
+      "chapter_count": 11,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -2804,10 +2804,11 @@
         "art_07",
         "art_08",
         "art_09",
-        "art_10"
+        "art_10",
+        "art_11"
       ],
-      "words": 4013,
-      "reading_minutes": 20,
+      "words": 4331,
+      "reading_minutes": 22,
       "cover": null,
       "chapters": [
         {
@@ -3006,6 +3007,24 @@
           "genre": "Manifest",
           "leak_free": "true",
           "words": 332,
+          "reading_minutes": 2
+        },
+        {
+          "file": "11_art_11_abschnitt_11_der_parameter_der_unschulds.md",
+          "index": 11,
+          "title": "Abschnitt 11: Der Parameter der Unschuldsvermutung",
+          "article": "art_11",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "52.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1129",
+          "manual_ending_code": "R-11-11",
+          "backend": "openrouter",
+          "genre": "Manifest",
+          "leak_free": "true",
+          "words": 318,
           "reading_minutes": 2
         }
       ]
