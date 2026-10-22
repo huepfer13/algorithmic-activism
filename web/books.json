@@ -336,7 +336,7 @@
       "pov": "third_person",
       "setting_summary": "Sieben Quellen, sieben Pruefungen: eine Wanderung durch die Landschaften der Rechte.",
       "characters": [],
-      "chapter_count": 10,
+      "chapter_count": 11,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -347,10 +347,11 @@
         "art_07",
         "art_08",
         "art_09",
-        "art_10"
+        "art_10",
+        "art_11"
       ],
-      "words": 5194,
-      "reading_minutes": 26,
+      "words": 5856,
+      "reading_minutes": 29,
       "cover": null,
       "chapters": [
         {
@@ -550,6 +551,24 @@
           "leak_free": "true",
           "words": 487,
           "reading_minutes": 2
+        },
+        {
+          "file": "11_art_11_abschnitt_11_die_prüfung_der_unschuld.md",
+          "index": 11,
+          "title": "Abschnitt 11: Die Prüfung der Unschuld",
+          "article": "art_11",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "11.1",
+          "jaccard_max": "0.067",
+          "tokens_generated": "1129",
+          "manual_ending_code": "M-11-11",
+          "backend": "deepseek",
+          "genre": "Märchen",
+          "leak_free": "true",
+          "words": 662,
+          "reading_minutes": 3
         }
       ]
     },
