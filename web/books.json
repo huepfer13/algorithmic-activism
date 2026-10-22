@@ -954,7 +954,7 @@
       "pov": "third_person",
       "setting_summary": "Ein diskursives Nachdenken darueber, was Menschenrechte praktisch bedeuten.",
       "characters": [],
-      "chapter_count": 8,
+      "chapter_count": 9,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -963,10 +963,11 @@
         "art_05",
         "art_06",
         "art_07",
-        "art_08"
+        "art_08",
+        "art_09"
       ],
-      "words": 4422,
-      "reading_minutes": 22,
+      "words": 4716,
+      "reading_minutes": 24,
       "cover": null,
       "chapters": [
         {
@@ -1130,6 +1131,24 @@
           "leak_free": "true",
           "words": 436,
           "reading_minutes": 2
+        },
+        {
+          "file": "09_art_09_abschnitt_9_die_ortsbestimmung_des_freir.md",
+          "index": 9,
+          "title": "Abschnitt 9: Die Ortsbestimmung des Freiraums",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "2",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "87.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1210",
+          "manual_ending_code": "P-09-09",
+          "backend": "openrouter",
+          "genre": "Philosophischer_Essay",
+          "leak_free": "true",
+          "words": 294,
+          "reading_minutes": 1
         }
       ]
     },
