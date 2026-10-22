@@ -5146,7 +5146,7 @@
         "Tobin",
         "The Keeper"
       ],
-      "chapter_count": 8,
+      "chapter_count": 9,
       "covered_articles": [
         "art_01",
         "art_03",
@@ -5155,10 +5155,11 @@
         "art_09",
         "art_12",
         "art_14",
-        "art_19"
+        "art_19",
+        "art_26"
       ],
-      "words": 3892,
-      "reading_minutes": 19,
+      "words": 4274,
+      "reading_minutes": 21,
       "cover": null,
       "chapters": [
         {
@@ -5321,6 +5322,24 @@
           "genre": "Fairy_Tale",
           "leak_free": "true",
           "words": 335,
+          "reading_minutes": 2
+        },
+        {
+          "file": "09_art_26_abschnitt_9_the_calibration_of_unlearned.md",
+          "index": 9,
+          "title": "Abschnitt 9: The Calibration of Unlearned Things",
+          "article": "art_26",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "21.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "791",
+          "manual_ending_code": "M-26-09",
+          "backend": "openrouter",
+          "genre": "Fairy_Tale",
+          "leak_free": "true",
+          "words": 382,
           "reading_minutes": 2
         }
       ]
