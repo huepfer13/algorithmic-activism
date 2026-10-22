@@ -3005,7 +3005,7 @@
         "Herr Brenner",
         "Frau Ostrow"
       ],
-      "chapter_count": 11,
+      "chapter_count": 12,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -3017,10 +3017,11 @@
         "art_08",
         "art_09",
         "art_10",
-        "art_11"
+        "art_11",
+        "art_12"
       ],
-      "words": 5678,
-      "reading_minutes": 28,
+      "words": 6032,
+      "reading_minutes": 30,
       "cover": null,
       "chapters": [
         {
@@ -3238,6 +3239,24 @@
           "leak_free": "true",
           "words": 592,
           "reading_minutes": 3
+        },
+        {
+          "file": "12_art_12_abschnitt_12_die_privatheitssperre.md",
+          "index": 12,
+          "title": "Abschnitt 12: Die Privatheitssperre",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "31.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1803",
+          "manual_ending_code": "T-12-12",
+          "backend": "openrouter",
+          "genre": "Tagebuch",
+          "leak_free": "true",
+          "words": 354,
+          "reading_minutes": 2
         }
       ]
     },

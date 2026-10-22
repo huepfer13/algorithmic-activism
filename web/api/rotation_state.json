@@ -319,7 +319,11 @@
     "r3:deepseek-chat:buch_027_das_haus_das_die_namen_fraß",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_021_the_bell_of_the_ninth_gate",
     "r5:deepseek-chat:buch_013_aufzeichnungen_eines_archivars",
-    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_011_das_haus_ohne_widerhall"
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_011_das_haus_ohne_widerhall",
+    "r5:deepseek-chat:buch_018_rhymes_of_the_commons",
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_018_rhymes_of_the_commons",
+    "r6:deepseek-chat:buch_001_das_büro_der_unendlichkeit",
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_013_aufzeichnungen_eines_archivars"
   ],
   "runden": {
     "1": [
@@ -4402,6 +4406,26 @@
         "tokens": "1138",
         "versuche": "1",
         "woerter": 309
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_018_rhymes_of_the_commons",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 5
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_018_rhymes_of_the_commons",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 5
       }
     ],
     "6": [
@@ -4519,6 +4543,31 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "apodex/apodex-1.1-mini:free",
         "runde": 6
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_001_das_büro_der_unendlichkeit",
+        "datei": null,
+        "dauer_s": 0.7,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 6
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_013_aufzeichnungen_eines_archivars",
+        "code": "T-12-12",
+        "datei": "12_art_12_abschnitt_12_die_privatheitssperre.md",
+        "dauer_s": "31.8",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 6,
+        "tokens": "1803",
+        "versuche": "1",
+        "woerter": 354
       }
     ],
     "7": [
