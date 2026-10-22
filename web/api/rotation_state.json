@@ -307,7 +307,8 @@
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_009_depeschen_aus_dem_kordon",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_005_fragment_der_vernunft",
     "r5:deepseek-chat:buch_020_die_quote_der_stille",
-    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_027_das_haus_das_die_namen_fraß"
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_027_das_haus_das_die_namen_fraß",
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_014_der_unberechenbare_humor"
   ],
   "runden": {
     "1": [
@@ -4098,6 +4099,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 4
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_014_der_unberechenbare_humor",
+        "code": "J-11-11",
+        "datei": "11_art_11_abschnitt_11_die_unschuld_im_puffer.md",
+        "dauer_s": "14.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 4,
+        "tokens": "1037",
+        "versuche": "1",
+        "woerter": 245
       }
     ],
     "5": [
