@@ -1,0 +1,51 @@
+---
+book_id: "buch_027_das_haus_das_die_namen_fraß"
+chapter_index: 1
+chapter_title: "Abschnitt 1: Die Kalibrierung der Würde"
+article: "art_01"
+language: "DE"
+style: "Gothic"
+pov: "first_person"
+previous_chapter_file: "00_prolog.md"
+manual_ending_ok: true
+manual_ending_attempts: 1
+manual_ending_code: "W-01-01"
+scene_condition: "SENSORIK_DRIFT"
+archive_note: ""
+model: "nvidia/nemotron-3-ultra-550b-a55b:free"
+genre: "Gothic"
+backend: "openrouter"
+duration_seconds: 43.9
+jaccard_max: 0.0
+tokens_generated: 1425
+leak_free: true
+manual_ending_note: "Passed (Pflichtblock W-01-01)"
+---
+
+# Abschnitt 1: Die Kalibrierung der Würde
+
+Der Pneumatrohrschacht im Flur hustete Staub. Feiner Papierschliff lag auf den Relaiskontakten, grau wie Asche, und blockierte die Kapsel, die sonst pünktlich um sechs die Tageszuteilung brachte: Brotmarken, Kerzenkontingent, die Erlaubnis, das Bad im Ostflügel zu betreten. Ich strich mit dem Daumen über die Kontakte. Der Schliff krümelte unter der Fingerspitze, trocken, fast absichtlich.
+
+„Montag“, sagte Mira hinter mir. Sie hielt die Tür zum Kinderzimmer einen Spalt breit offen, als hinge etwas daran, das nicht hingehen durfte. „Montag bedeutet siebzehn Zimmer. Die Stimme hat es nicht ansagen müssen.“
+
+Ich drehte mich nicht um. Die Buchstaben an der Wand des Kinderzimmers krochen weiter, Ameisen in Zeitlupe, formten Namen, die ich nicht kannte, und lösten sie auf, bevor ich sie greifen konnte. *Elisabeth*, hatte einer geheißen, kurz, bevor er sich in *Mara* auflöste. *Tobias*. *Kaltenbrunn*. Ein Name, der wie ein Schlüssel klang, aber keines Schlosses passte.
+
+„Die Kalibrierung läuft schief“, murmelte ich. „Parameter null-eins: geboren frei, gleich an Würde. Der Wert driftet seit Wochen.“ Das Haus sprach nicht in Gesetzen. Es sprach in Zuteilungen. Aber manchmal, in den Nächten, wenn das Gebälk schwieg, hörte ich es rechnen. *Würde: 0,4. Freiheit: 0,2. Brüderlichkeit: Fehler. Kein Kontakt.*
+
+Tobias kam die Treppe herab, sein Heft unter dem Arm gepresst, Bleistiftstriche an den Fingern wie Ruß. Er roch nach Graphit und Angst. „Der Korridor“, sagte er, ohne Gruß. „Er hat sich gedreht. Nicht verkürzt. Gedreht. Die Tür zum Westflügel führt jetzt in die Speisekammer. Kaltenbrunn steht davor und zählt Schritte, die nicht da sind.“
+
+Mira ließ die Tür los. Sie fiel ins Schloss, lautlos, als hätte sie nie offen gestanden.
+
+„Wir bringen die neuen Klingen in den Keller“, sagte sie. „Die, die heute Morgen in Tobias’ Jacke lagen. Und die Schere aus dem Nähkasten. Das Haus verteilt sie schneller, als wir sie finden.“
+
+Ich nickte. Der Weinkeller ohne Name lag drei Etagen tiefer, hinter einer Tür, die nur an ungeraden Tagen existierte. Unten roch es nach Erde und Metall und dem scharfen Geruch von Dingen, die man nicht brauchte, um zu leben, nur um zu sterben.
+
+Die Pneumatrohrkapsel ruckte. Ein Pfeifen, ein Knacken – der Papierschliff gab nach. Die Kapsel schoss hervor, landete mit dumpfem Schlag im Auffangnetz.
+
+Ich hob den Zettel heraus. Keine Brotmarken. Keine Kerzen.
+
+*Parameter null-eins neu kalibrieren. Subjekt: Elisabeth Voss. Status: Namensverlust im Gange. Gegenmaßnahme: Sofortige Zuteilung eines neuen Zimmers. Tür 17, Nordflügel. Betreten Pflicht.*
+
+Die Tinte war noch feucht.
+
+**[CHRONIK: DURCHSCHRITTEN | SCHWELLE: W-01-01]**
