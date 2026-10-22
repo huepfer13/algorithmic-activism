@@ -308,7 +308,10 @@
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_005_fragment_der_vernunft",
     "r5:deepseek-chat:buch_020_die_quote_der_stille",
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_027_das_haus_das_die_namen_fraß",
-    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_014_der_unberechenbare_humor"
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_014_der_unberechenbare_humor",
+    "r3:deepseek-chat:buch_024_die_kammer_der_stimmen",
+    "r4:deepseek-chat:buch_027_das_haus_das_die_namen_fraß",
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_009_depeschen_aus_dem_kordon"
   ],
   "runden": {
     "1": [
@@ -3702,6 +3705,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 3
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_024_die_kammer_der_stimmen",
+        "datei": null,
+        "dauer_s": 0.7,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 3
       }
     ],
     "4": [
@@ -4114,6 +4127,31 @@
         "tokens": "1037",
         "versuche": "1",
         "woerter": 245
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_027_das_haus_das_die_namen_fraß",
+        "datei": null,
+        "dauer_s": 0.7,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 4
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_009_depeschen_aus_dem_kordon",
+        "code": "B-13-13",
+        "datei": "13_art_13_abschnitt_13_die_dreizehnte_bewegung.md",
+        "dauer_s": "28.7",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 4,
+        "tokens": "1531",
+        "versuche": "1",
+        "woerter": 467
       }
     ],
     "5": [

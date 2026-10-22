@@ -1935,7 +1935,7 @@
         "Nadia",
         "Kroll"
       ],
-      "chapter_count": 12,
+      "chapter_count": 13,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1948,10 +1948,11 @@
         "art_09",
         "art_10",
         "art_11",
-        "art_12"
+        "art_12",
+        "art_13"
       ],
-      "words": 5918,
-      "reading_minutes": 30,
+      "words": 6385,
+      "reading_minutes": 32,
       "cover": null,
       "chapters": [
         {
@@ -2187,6 +2188,24 @@
           "leak_free": "true",
           "words": 593,
           "reading_minutes": 3
+        },
+        {
+          "file": "13_art_13_abschnitt_13_die_dreizehnte_bewegung.md",
+          "index": 13,
+          "title": "Abschnitt 13: Die dreizehnte Bewegung",
+          "article": "art_13",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "28.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1531",
+          "manual_ending_code": "B-13-13",
+          "backend": "openrouter",
+          "genre": "Briefroman",
+          "leak_free": "true",
+          "words": 467,
+          "reading_minutes": 2
         }
       ]
     },
