@@ -306,7 +306,8 @@
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_027_das_haus_das_die_namen_fraß",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_009_depeschen_aus_dem_kordon",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_005_fragment_der_vernunft",
-    "r5:deepseek-chat:buch_020_die_quote_der_stille"
+    "r5:deepseek-chat:buch_020_die_quote_der_stille",
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_027_das_haus_das_die_namen_fraß"
   ],
   "runden": {
     "1": [
@@ -1469,6 +1470,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 1
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_027_das_haus_das_die_namen_fraß",
+        "code": "W-02-02",
+        "datei": "02_art_02_abschnitt_2_die_differenzierung_der_klin.md",
+        "dauer_s": "16.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 1,
+        "tokens": "1197",
+        "versuche": "1",
+        "woerter": 392
       }
     ],
     "10": [

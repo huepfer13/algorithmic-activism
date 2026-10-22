@@ -6056,12 +6056,13 @@
         "Tobias",
         "Die Stimme im Gebälk"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 951,
-      "reading_minutes": 5,
+      "words": 1343,
+      "reading_minutes": 7,
       "cover": null,
       "chapters": [
         {
@@ -6098,6 +6099,24 @@
           "genre": "Gothic",
           "leak_free": "true",
           "words": 410,
+          "reading_minutes": 2
+        },
+        {
+          "file": "02_art_02_abschnitt_2_die_differenzierung_der_klin.md",
+          "index": 2,
+          "title": "Abschnitt 2: Die Differenzierung der Klingen",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "16.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1197",
+          "manual_ending_code": "W-02-02",
+          "backend": "openrouter",
+          "genre": "Gothic",
+          "leak_free": "true",
+          "words": 392,
           "reading_minutes": 2
         }
       ]
