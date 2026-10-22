@@ -2606,7 +2606,7 @@
         "Timo",
         "Der Verwalter"
       ],
-      "chapter_count": 12,
+      "chapter_count": 13,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -2619,10 +2619,11 @@
         "art_09",
         "art_10",
         "art_11",
-        "art_12"
+        "art_12",
+        "art_13"
       ],
-      "words": 5635,
-      "reading_minutes": 28,
+      "words": 6176,
+      "reading_minutes": 31,
       "cover": null,
       "chapters": [
         {
@@ -2858,6 +2859,24 @@
           "leak_free": "true",
           "words": 309,
           "reading_minutes": 2
+        },
+        {
+          "file": "13_art_13_abschnitt_13_die_kalibrierung_der_flucht.md",
+          "index": 13,
+          "title": "Abschnitt 13: Die Kalibrierung der Fluchtlinie",
+          "article": "art_13",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1036",
+          "manual_ending_code": "W-13-13",
+          "backend": "deepseek",
+          "genre": "Gothic",
+          "leak_free": "true",
+          "words": 541,
+          "reading_minutes": 3
         }
       ]
     },

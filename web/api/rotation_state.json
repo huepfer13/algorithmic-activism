@@ -353,7 +353,9 @@
     "r4:deepseek-chat:buch_007_die_kammer_der_zeugen",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_023_the_gravity_room",
     "r5:deepseek-chat:buch_019_the_salt_diaries",
-    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_014_der_unberechenbare_humor"
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_014_der_unberechenbare_humor",
+    "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_019_the_salt_diaries",
+    "r5:deepseek-chat:buch_011_das_haus_ohne_widerhall"
   ],
   "runden": {
     "1": [
@@ -4464,6 +4466,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 4
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_019_the_salt_diaries",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 4
       }
     ],
     "5": [
@@ -4791,6 +4803,21 @@
         "tokens": "925",
         "versuche": "1",
         "woerter": 240
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_011_das_haus_ohne_widerhall",
+        "code": "W-13-13",
+        "datei": "13_art_13_abschnitt_13_die_kalibrierung_der_flucht.md",
+        "dauer_s": "9.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 5,
+        "tokens": "1036",
+        "versuche": "1",
+        "woerter": 541
       }
     ],
     "6": [
