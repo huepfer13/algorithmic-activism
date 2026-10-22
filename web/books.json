@@ -2511,7 +2511,7 @@
         "Timo",
         "Der Verwalter"
       ],
-      "chapter_count": 11,
+      "chapter_count": 12,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -2523,10 +2523,11 @@
         "art_08",
         "art_09",
         "art_10",
-        "art_11"
+        "art_11",
+        "art_12"
       ],
-      "words": 5326,
-      "reading_minutes": 27,
+      "words": 5635,
+      "reading_minutes": 28,
       "cover": null,
       "chapters": [
         {
@@ -2744,6 +2745,24 @@
           "leak_free": "true",
           "words": 299,
           "reading_minutes": 1
+        },
+        {
+          "file": "12_art_12_abschnitt_12_die_privatsphäre_als_puffer.md",
+          "index": 12,
+          "title": "Abschnitt 12: Die Privatsphäre als Pufferzone",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "21.9",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1138",
+          "manual_ending_code": "W-12-12",
+          "backend": "openrouter",
+          "genre": "Gothic",
+          "leak_free": "true",
+          "words": 309,
+          "reading_minutes": 2
         }
       ]
     },
