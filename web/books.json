@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 27,
+  "count": 28,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -6497,6 +6497,46 @@
           "genre": "Gothic",
           "leak_free": "true",
           "words": 402,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+      "title": "Das Amt für Grundrechtsvollzugsverfahren",
+      "language": "DE",
+      "style": "Satire",
+      "pov": "third_person",
+      "setting_summary": "Im fiktiven Kleinstaat Gross-Rübenau kontrolliert die Behörde für Grundrechtsausübung jedes Menschenrecht über ein mehrstufiges Formular- und Wartemarken-System; wer sein Recht wahrnehmen will, braucht zuerst einen Termin, dann einen Antrag, dann eine Bestätigung des Antrags, dann eine Vollzugsfreigabe. Der Schauplatz ist ein fensterloses Amtsgebäude mit nummerierten Wartesälen, in dem eine ständig wechselnde Wartemarkenausgabe, akuter Platzmangel und eine alles erfassende Lautsprecherdurchsage den Ton angeben. Ein neuer Erlass verlangt, dass sämtliche Grundrechte künftig nur noch in der Reihenfolge ihrer Artikelnummer ausgeübt werden dürfen, was das gesamte System in eine Endlosschleife stürzt.",
+      "characters": [
+        "Hedwig Traublinger",
+        "Konsul Balthasar Kreml",
+        "Oberamtsrat Püschel",
+        "Mira Sandoval",
+        "Herr Zwirbel"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 488,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.1",
+          "jaccard_max": "",
+          "tokens_generated": "958",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Satire",
+          "leak_free": "",
+          "words": 488,
           "reading_minutes": 2
         }
       ]

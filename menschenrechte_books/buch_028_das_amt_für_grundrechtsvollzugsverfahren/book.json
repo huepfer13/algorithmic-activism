@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+  "title": "Das Amt für Grundrechtsvollzugsverfahren",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Satire",
+  "setting_summary": "Im fiktiven Kleinstaat Gross-Rübenau kontrolliert die Behörde für Grundrechtsausübung jedes Menschenrecht über ein mehrstufiges Formular- und Wartemarken-System; wer sein Recht wahrnehmen will, braucht zuerst einen Termin, dann einen Antrag, dann eine Bestätigung des Antrags, dann eine Vollzugsfreigabe. Der Schauplatz ist ein fensterloses Amtsgebäude mit nummerierten Wartesälen, in dem eine ständig wechselnde Wartemarkenausgabe, akuter Platzmangel und eine alles erfassende Lautsprecherdurchsage den Ton angeben. Ein neuer Erlass verlangt, dass sämtliche Grundrechte künftig nur noch in der Reihenfolge ihrer Artikelnummer ausgeübt werden dürfen, was das gesamte System in eine Endlosschleife stürzt.",
+  "characters": [
+    "Hedwig Traublinger",
+    "Konsul Balthasar Kreml",
+    "Oberamtsrat Püschel",
+    "Mira Sandoval",
+    "Herr Zwirbel"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-10-22T22:05:24.769630+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
