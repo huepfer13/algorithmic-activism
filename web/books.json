@@ -5146,7 +5146,7 @@
         "Tobin",
         "The Keeper"
       ],
-      "chapter_count": 7,
+      "chapter_count": 8,
       "covered_articles": [
         "art_01",
         "art_03",
@@ -5154,10 +5154,11 @@
         "art_05",
         "art_09",
         "art_12",
-        "art_14"
+        "art_14",
+        "art_19"
       ],
-      "words": 3557,
-      "reading_minutes": 18,
+      "words": 3892,
+      "reading_minutes": 19,
       "cover": null,
       "chapters": [
         {
@@ -5302,6 +5303,24 @@
           "genre": "Fairy_Tale",
           "leak_free": "true",
           "words": 362,
+          "reading_minutes": 2
+        },
+        {
+          "file": "08_art_19_abschnitt_8_the_threshold_of_unspoken_na.md",
+          "index": 8,
+          "title": "Abschnitt 8: The Threshold of Unspoken Names",
+          "article": "art_19",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "19.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "911",
+          "manual_ending_code": "M-19-08",
+          "backend": "openrouter",
+          "genre": "Fairy_Tale",
+          "leak_free": "true",
+          "words": 335,
           "reading_minutes": 2
         }
       ]
