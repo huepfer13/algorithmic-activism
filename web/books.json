@@ -6284,14 +6284,15 @@
         "Tobias",
         "Die Stimme im Gebälk"
       ],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_02",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 1722,
-      "reading_minutes": 9,
+      "words": 2124,
+      "reading_minutes": 11,
       "cover": null,
       "chapters": [
         {
@@ -6364,6 +6365,24 @@
           "genre": "Gothic",
           "leak_free": "true",
           "words": 379,
+          "reading_minutes": 2
+        },
+        {
+          "file": "04_art_04_abschnitt_4_die_inventur_der_leeren_häls.md",
+          "index": 4,
+          "title": "Abschnitt 4: Die Inventur der leeren Hälse",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "128.2",
+          "jaccard_max": "0.048",
+          "tokens_generated": "1225",
+          "manual_ending_code": "W-04-04",
+          "backend": "openrouter",
+          "genre": "Gothic",
+          "leak_free": "true",
+          "words": 402,
           "reading_minutes": 2
         }
       ]
