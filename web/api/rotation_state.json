@@ -332,7 +332,11 @@
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_021_the_bell_of_the_ninth_gate",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_006_das_gericht_vor_der_mauer",
     "r5:deepseek-chat:buch_021_the_bell_of_the_ninth_gate",
-    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_021_the_bell_of_the_ninth_gate"
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_021_the_bell_of_the_ninth_gate",
+    "r5:deepseek-chat:buch_022_the_ledger_of_vanishing_rain",
+    "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_015_das_kochbuch_der_allmende",
+    "r6:deepseek-chat:buch_023_the_gravity_room",
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_017_des_volkes_mund"
   ],
   "runden": {
     "1": [
@@ -4545,6 +4549,26 @@
         "tokens": "791",
         "versuche": "1",
         "woerter": 382
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_022_the_ledger_of_vanishing_rain",
+        "datei": null,
+        "dauer_s": 0.8,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 5
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_015_das_kochbuch_der_allmende",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 5
       }
     ],
     "6": [
@@ -4687,6 +4711,31 @@
         "tokens": "1803",
         "versuche": "1",
         "woerter": 354
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_023_the_gravity_room",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 6
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_017_des_volkes_mund",
+        "code": "V-18-18",
+        "datei": "18_art_18_abschnitt_18_die_kalte_leitung.md",
+        "dauer_s": "38.7",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 6,
+        "tokens": "1453",
+        "versuche": "1",
+        "woerter": 263
       }
     ],
     "7": [
