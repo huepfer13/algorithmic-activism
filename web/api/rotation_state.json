@@ -355,7 +355,9 @@
     "r5:deepseek-chat:buch_019_the_salt_diaries",
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_014_der_unberechenbare_humor",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_019_the_salt_diaries",
-    "r5:deepseek-chat:buch_011_das_haus_ohne_widerhall"
+    "r5:deepseek-chat:buch_011_das_haus_ohne_widerhall",
+    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_012_manifest_der_unantastbaren",
+    "r4:deepseek-chat:buch_002_die_sieben_quellen"
   ],
   "runden": {
     "1": [
@@ -3834,6 +3836,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 3
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_012_manifest_der_unantastbaren",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 3
       }
     ],
     "4": [
@@ -4476,6 +4488,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 4
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_002_die_sieben_quellen",
+        "code": "M-10-10",
+        "datei": "10_art_10_abschnitt_10_die_prüfung_des_offenen_ver.md",
+        "dauer_s": "9.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 4,
+        "tokens": "906",
+        "versuche": "1",
+        "woerter": 487
       }
     ],
     "5": [
