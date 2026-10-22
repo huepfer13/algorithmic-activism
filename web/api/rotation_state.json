@@ -349,7 +349,8 @@
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_027_das_haus_das_die_namen_fraß",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_026_the_ledger_of_ash_harbour",
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_008_flechtwerk_arkadien",
-    "r4:deepseek-chat:buch_001_das_büro_der_unendlichkeit"
+    "r4:deepseek-chat:buch_001_das_büro_der_unendlichkeit",
+    "r4:deepseek-chat:buch_007_die_kammer_der_zeugen"
   ],
   "runden": {
     "1": [
@@ -4435,6 +4436,21 @@
         "tokens": "978",
         "versuche": "3",
         "woerter": 378
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_007_die_kammer_der_zeugen",
+        "code": "H-12-12",
+        "datei": "12_art_12_abschnitt_12_die_wohnung_als_beweismitte.md",
+        "dauer_s": "7.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 4,
+        "tokens": "770",
+        "versuche": "1",
+        "woerter": 379
       }
     ],
     "5": [
