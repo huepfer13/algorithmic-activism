@@ -2223,7 +2223,7 @@
         "Kalle Ohm",
         "Frau Säckel"
       ],
-      "chapter_count": 12,
+      "chapter_count": 13,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -2236,10 +2236,11 @@
         "art_09",
         "art_10",
         "art_11",
-        "art_12"
+        "art_12",
+        "art_13"
       ],
-      "words": 5521,
-      "reading_minutes": 28,
+      "words": 5899,
+      "reading_minutes": 29,
       "cover": null,
       "chapters": [
         {
@@ -2475,6 +2476,24 @@
           "leak_free": "true",
           "words": 518,
           "reading_minutes": 3
+        },
+        {
+          "file": "13_art_13_abschnitt_13_die_ortsveränderung_als_puf.md",
+          "index": 13,
+          "title": "Abschnitt 13: Die Ortsveränderung als Pufferüberlauf",
+          "article": "art_13",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "37.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1666",
+          "manual_ending_code": "G-13-13",
+          "backend": "openrouter",
+          "genre": "Satire",
+          "leak_free": "true",
+          "words": 378,
+          "reading_minutes": 2
         }
       ]
     },
