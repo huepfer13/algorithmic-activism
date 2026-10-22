@@ -338,7 +338,11 @@
     "r6:deepseek-chat:buch_023_the_gravity_room",
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_017_des_volkes_mund",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_024_die_kammer_der_stimmen",
-    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_012_manifest_der_unantastbaren"
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_012_manifest_der_unantastbaren",
+    "r4:deepseek-chat:buch_025_the_hold",
+    "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_024_die_kammer_der_stimmen",
+    "r5:deepseek-chat:buch_012_manifest_der_unantastbaren",
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_006_das_gericht_vor_der_mauer"
   ],
   "runden": {
     "1": [
@@ -4359,6 +4363,26 @@
         "tokens": "1129",
         "versuche": "1",
         "woerter": 318
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_025_the_hold",
+        "datei": null,
+        "dauer_s": 0.7,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 4
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_024_die_kammer_der_stimmen",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 4
       }
     ],
     "5": [
@@ -4596,6 +4620,31 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 5
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_012_manifest_der_unantastbaren",
+        "datei": null,
+        "dauer_s": 0.7,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 5
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_006_das_gericht_vor_der_mauer",
+        "code": "D-13-13",
+        "datei": "13_art_13_abschnitt_13_die_frequenz_des_ganges.md",
+        "dauer_s": "60.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 5,
+        "tokens": "1085",
+        "versuche": "1",
+        "woerter": 326
       }
     ],
     "6": [
