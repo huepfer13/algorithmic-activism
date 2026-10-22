@@ -3382,7 +3382,7 @@
       "pov": "third_person",
       "setting_summary": "Kurzgeschichten und Szenen, in denen Humor den Ernstfall entlarvt.",
       "characters": [],
-      "chapter_count": 11,
+      "chapter_count": 12,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -3394,10 +3394,11 @@
         "art_08",
         "art_09",
         "art_10",
-        "art_11"
+        "art_11",
+        "art_12"
       ],
-      "words": 4059,
-      "reading_minutes": 20,
+      "words": 4299,
+      "reading_minutes": 21,
       "cover": null,
       "chapters": [
         {
@@ -3614,6 +3615,24 @@
           "genre": "Witzebuch",
           "leak_free": "true",
           "words": 245,
+          "reading_minutes": 1
+        },
+        {
+          "file": "12_art_12_abschnitt_12_die_privatsphäre_als_puffer.md",
+          "index": 12,
+          "title": "Abschnitt 12: Die Privatsphäre als Pufferüberlauf",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "33.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "925",
+          "manual_ending_code": "J-12-12",
+          "backend": "openrouter",
+          "genre": "Witzebuch",
+          "leak_free": "true",
+          "words": 240,
           "reading_minutes": 1
         }
       ]

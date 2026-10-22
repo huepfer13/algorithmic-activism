@@ -350,7 +350,10 @@
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_026_the_ledger_of_ash_harbour",
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_008_flechtwerk_arkadien",
     "r4:deepseek-chat:buch_001_das_büro_der_unendlichkeit",
-    "r4:deepseek-chat:buch_007_die_kammer_der_zeugen"
+    "r4:deepseek-chat:buch_007_die_kammer_der_zeugen",
+    "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_023_the_gravity_room",
+    "r5:deepseek-chat:buch_019_the_salt_diaries",
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_014_der_unberechenbare_humor"
   ],
   "runden": {
     "1": [
@@ -4451,6 +4454,16 @@
         "tokens": "770",
         "versuche": "1",
         "woerter": 379
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_023_the_gravity_room",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 4
       }
     ],
     "5": [
@@ -4753,6 +4766,31 @@
         "tokens": "1163",
         "versuche": "1",
         "woerter": 342
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_019_the_salt_diaries",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 5
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_014_der_unberechenbare_humor",
+        "code": "J-12-12",
+        "datei": "12_art_12_abschnitt_12_die_privatsphäre_als_puffer.md",
+        "dauer_s": "33.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 5,
+        "tokens": "925",
+        "versuche": "1",
+        "woerter": 240
       }
     ],
     "6": [
