@@ -1704,7 +1704,7 @@
         "Kell",
         "Nuri"
       ],
-      "chapter_count": 12,
+      "chapter_count": 13,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1717,10 +1717,11 @@
         "art_09",
         "art_10",
         "art_11",
-        "art_12"
+        "art_12",
+        "art_13"
       ],
-      "words": 5753,
-      "reading_minutes": 29,
+      "words": 6095,
+      "reading_minutes": 30,
       "cover": null,
       "chapters": [
         {
@@ -1955,6 +1956,24 @@
           "genre": "Solarpunk",
           "leak_free": "true",
           "words": 343,
+          "reading_minutes": 2
+        },
+        {
+          "file": "13_art_13_abschnitt_13_der_durchlass_algorithmus.md",
+          "index": 13,
+          "title": "Abschnitt 13: Der Durchlass-Algorithmus",
+          "article": "art_13",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "58.1",
+          "jaccard_max": "0.045",
+          "tokens_generated": "1163",
+          "manual_ending_code": "U-13-13",
+          "backend": "openrouter",
+          "genre": "Solarpunk",
+          "leak_free": "true",
+          "words": 342,
           "reading_minutes": 2
         }
       ]

@@ -346,7 +346,9 @@
     "r4:deepseek-chat:buch_012_manifest_der_unantastbaren",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_016_faden_der_gelassenheit",
     "r5:deepseek-chat:buch_014_der_unberechenbare_humor",
-    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_027_das_haus_das_die_namen_fraß"
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_027_das_haus_das_die_namen_fraß",
+    "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_026_the_ledger_of_ash_harbour",
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_008_flechtwerk_arkadien"
   ],
   "runden": {
     "1": [
@@ -4407,6 +4409,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 4
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_026_the_ledger_of_ash_harbour",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 4
       }
     ],
     "5": [
@@ -4694,6 +4706,21 @@
         "tokens": "1225",
         "versuche": "1",
         "woerter": 402
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_008_flechtwerk_arkadien",
+        "code": "U-13-13",
+        "datei": "13_art_13_abschnitt_13_der_durchlass_algorithmus.md",
+        "dauer_s": "58.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 5,
+        "tokens": "1163",
+        "versuche": "1",
+        "woerter": 342
       }
     ],
     "6": [
