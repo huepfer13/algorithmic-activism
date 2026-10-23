@@ -394,7 +394,9 @@
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_012_manifest_der_unantastbaren",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_021_the_bell_of_the_ninth_gate",
     "r6:deepseek-chat:buch_003_der_rat_der_tiere",
-    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren"
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+    "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_011_das_haus_ohne_widerhall",
+    "r6:deepseek-chat:buch_020_die_quote_der_stille"
   ],
   "runden": {
     "1": [
@@ -5337,6 +5339,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 5
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_011_das_haus_ohne_widerhall",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 5
       }
     ],
     "6": [
@@ -5534,6 +5546,21 @@
         "tokens": "816",
         "versuche": "1",
         "woerter": 420
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_020_die_quote_der_stille",
+        "code": "S-11-11",
+        "datei": "11_art_11_abschnitt_11_die_unschuldsvermutung.md",
+        "dauer_s": "10.7",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 6,
+        "tokens": "1275",
+        "versuche": "1",
+        "woerter": 588
       }
     ],
     "7": [
