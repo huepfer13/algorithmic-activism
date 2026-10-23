@@ -370,7 +370,9 @@
     "r4:deepseek-chat:buch_018_rhymes_of_the_commons",
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_013_aufzeichnungen_eines_archivars",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
-    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_002_die_sieben_quellen"
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_002_die_sieben_quellen",
+    "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_015_das_kochbuch_der_allmende"
   ],
   "runden": {
     "1": [
@@ -4616,6 +4618,16 @@
         "tokens": "1345",
         "versuche": "2",
         "woerter": 482
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 4
       }
     ],
     "5": [
@@ -5008,6 +5020,21 @@
         "tokens": "1362",
         "versuche": "1",
         "woerter": 443
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_015_das_kochbuch_der_allmende",
+        "code": "C-14-14",
+        "datei": "14_art_14_abschnitt_14_die_kalibrierung_des_asylve.md",
+        "dauer_s": "47.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 5,
+        "tokens": "1525",
+        "versuche": "1",
+        "woerter": 407
       }
     ],
     "6": [

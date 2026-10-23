@@ -3816,7 +3816,7 @@
       "pov": "third_person",
       "setting_summary": "Rezepte als Beweis, dass Fuersorge messbar ist.",
       "characters": [],
-      "chapter_count": 13,
+      "chapter_count": 14,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -3830,10 +3830,11 @@
         "art_10",
         "art_11",
         "art_12",
-        "art_13"
+        "art_13",
+        "art_14"
       ],
-      "words": 5811,
-      "reading_minutes": 29,
+      "words": 6218,
+      "reading_minutes": 31,
       "cover": null,
       "chapters": [
         {
@@ -4086,6 +4087,24 @@
           "genre": "Kochbuch",
           "leak_free": "true",
           "words": 356,
+          "reading_minutes": 2
+        },
+        {
+          "file": "14_art_14_abschnitt_14_die_kalibrierung_des_asylve.md",
+          "index": 14,
+          "title": "Abschnitt 14: Die Kalibrierung des Asylvektors",
+          "article": "art_14",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "47.1",
+          "jaccard_max": "0.1",
+          "tokens_generated": "1525",
+          "manual_ending_code": "C-14-14",
+          "backend": "openrouter",
+          "genre": "Kochbuch",
+          "leak_free": "true",
+          "words": 407,
           "reading_minutes": 2
         }
       ]
