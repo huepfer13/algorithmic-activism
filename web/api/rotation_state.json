@@ -379,7 +379,8 @@
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_026_the_ledger_of_ash_harbour",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_026_the_ledger_of_ash_harbour",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_015_das_kochbuch_der_allmende",
-    "r4:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit"
+    "r4:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit",
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren"
   ],
   "runden": {
     "1": [
@@ -3958,6 +3959,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 3
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+        "code": "G-02-02",
+        "datei": "02_art_02_abschnitt_2_die_differenzierung_der_glei.md",
+        "dauer_s": "77.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 3,
+        "tokens": "1551",
+        "versuche": "1",
+        "woerter": 467
       }
     ],
     "4": [
