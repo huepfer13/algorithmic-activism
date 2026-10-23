@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 28,
+  "count": 29,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -6995,6 +6995,46 @@
           "leak_free": "true",
           "words": 457,
           "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_029_the_glass_tribunal",
+      "title": "The Glass Tribunal",
+      "language": "EN",
+      "style": "Courtroom_Drama",
+      "pov": "third_person",
+      "setting_summary": "A sealed offshore arbitration court aboard a converted research vessel, where a multinational water consortium is tried for contaminating a river that sustains three million people. The vessel is cramped, the hearing clock is fixed at forty days, and every word is recorded by cameras the consortium controls. Testimony must navigate corporate surveillance, a hostile tribunal hierarchy, and witnesses whose lives depend on the verdict.",
+      "characters": [
+        "Mara Voss",
+        "Elias Trent",
+        "Judge Okonkwo",
+        "Sister Adaeze",
+        "Piotr Halvorsen"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 535,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.2",
+          "jaccard_max": "",
+          "tokens_generated": "706",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Courtroom_Drama",
+          "leak_free": "",
+          "words": 535,
+          "reading_minutes": 3
         }
       ]
     }
