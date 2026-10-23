@@ -618,7 +618,7 @@
       "pov": "third_person",
       "setting_summary": "Die Tiere des Schattenwaldes halten Rat und finden fuer jeden Streit eine gute Loesung.",
       "characters": [],
-      "chapter_count": 11,
+      "chapter_count": 12,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -630,10 +630,11 @@
         "art_08",
         "art_09",
         "art_10",
-        "art_11"
+        "art_11",
+        "art_12"
       ],
-      "words": 4676,
-      "reading_minutes": 23,
+      "words": 5096,
+      "reading_minutes": 25,
       "cover": null,
       "chapters": [
         {
@@ -850,6 +851,24 @@
           "genre": "Kinderbuch",
           "leak_free": "true",
           "words": 334,
+          "reading_minutes": 2
+        },
+        {
+          "file": "12_art_12_abschnitt_12_die_schwarze_akte.md",
+          "index": 12,
+          "title": "Abschnitt 12: Die schwarze Akte",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "816",
+          "manual_ending_code": "K-12-12",
+          "backend": "deepseek",
+          "genre": "Kinderbuch",
+          "leak_free": "true",
+          "words": 420,
           "reading_minutes": 2
         }
       ]
