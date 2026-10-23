@@ -2451,7 +2451,7 @@
         "Kalle Ohm",
         "Frau Säckel"
       ],
-      "chapter_count": 13,
+      "chapter_count": 14,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -2465,10 +2465,11 @@
         "art_10",
         "art_11",
         "art_12",
-        "art_13"
+        "art_13",
+        "art_14"
       ],
-      "words": 5899,
-      "reading_minutes": 29,
+      "words": 6293,
+      "reading_minutes": 31,
       "cover": null,
       "chapters": [
         {
@@ -2721,6 +2722,24 @@
           "genre": "Satire",
           "leak_free": "true",
           "words": 378,
+          "reading_minutes": 2
+        },
+        {
+          "file": "14_art_14_abschnitt_14_die_kalibrierung_der_zufluc.md",
+          "index": 14,
+          "title": "Abschnitt 14: Die Kalibrierung der Zuflucht als Tropfsteinhöhle",
+          "article": "art_14",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "907",
+          "manual_ending_code": "G-14-14",
+          "backend": "deepseek",
+          "genre": "Satire",
+          "leak_free": "true",
+          "words": 394,
           "reading_minutes": 2
         }
       ]

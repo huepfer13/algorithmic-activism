@@ -377,7 +377,9 @@
     "r4:deepseek-chat:buch_024_die_kammer_der_stimmen",
     "r1:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_026_the_ledger_of_ash_harbour",
-    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_026_the_ledger_of_ash_harbour"
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_026_the_ledger_of_ash_harbour",
+    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_015_das_kochbuch_der_allmende",
+    "r4:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit"
   ],
   "runden": {
     "1": [
@@ -3946,6 +3948,16 @@
         "tokens": "848",
         "versuche": "1",
         "woerter": 292
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_015_das_kochbuch_der_allmende",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 3
       }
     ],
     "4": [
@@ -4703,6 +4715,21 @@
         "tokens": "1217",
         "versuche": "2",
         "woerter": 619
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_010_amtsblatt_fuer_unzumutbarkeit",
+        "code": "G-14-14",
+        "datei": "14_art_14_abschnitt_14_die_kalibrierung_der_zufluc.md",
+        "dauer_s": "8.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 4,
+        "tokens": "907",
+        "versuche": "1",
+        "woerter": 394
       }
     ],
     "5": [
