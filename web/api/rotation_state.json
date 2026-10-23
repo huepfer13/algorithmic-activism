@@ -372,7 +372,9 @@
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_002_die_sieben_quellen",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
-    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_015_das_kochbuch_der_allmende"
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_015_das_kochbuch_der_allmende",
+    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_027_das_haus_das_die_namen_fraß",
+    "r4:deepseek-chat:buch_024_die_kammer_der_stimmen"
   ],
   "runden": {
     "1": [
@@ -2809,6 +2811,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 2
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_027_das_haus_das_die_namen_fraß",
+        "datei": null,
+        "dauer_s": 0.4,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 2
       }
     ],
     "3": [
@@ -4628,6 +4640,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 4
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_024_die_kammer_der_stimmen",
+        "code": "P-08-08",
+        "datei": "08_art_08_abschnitt_8_die_frist_als_fenstersturz.md",
+        "dauer_s": "19.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 4,
+        "tokens": "1217",
+        "versuche": "2",
+        "woerter": 619
       }
     ],
     "5": [
