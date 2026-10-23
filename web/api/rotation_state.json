@@ -375,7 +375,8 @@
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_015_das_kochbuch_der_allmende",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_027_das_haus_das_die_namen_fraß",
     "r4:deepseek-chat:buch_024_die_kammer_der_stimmen",
-    "r1:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren"
+    "r1:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_026_the_ledger_of_ash_harbour"
   ],
   "runden": {
     "1": [
@@ -1578,6 +1579,21 @@
         "tokens": "1098",
         "versuche": "1",
         "woerter": 545
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_026_the_ledger_of_ash_harbour",
+        "code": "I-09-05",
+        "datei": "05_art_09_abschnitt_5_the_breach_of_parameter_nine.md",
+        "dauer_s": "64.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 1,
+        "tokens": "939",
+        "versuche": "1",
+        "woerter": 326
       }
     ],
     "10": [

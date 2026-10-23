@@ -6452,15 +6452,16 @@
         "Tobias Renn",
         "The Harbourmaster"
       ],
-      "chapter_count": 4,
+      "chapter_count": 5,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_09"
       ],
-      "words": 2778,
-      "reading_minutes": 14,
+      "words": 3104,
+      "reading_minutes": 16,
       "cover": null,
       "chapters": [
         {
@@ -6551,6 +6552,24 @@
           "genre": "Historical_Chronicle",
           "leak_free": "true",
           "words": 389,
+          "reading_minutes": 2
+        },
+        {
+          "file": "05_art_09_abschnitt_5_the_breach_of_parameter_nine.md",
+          "index": 5,
+          "title": "Abschnitt 5: The Breach of Parameter Nine",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "64.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "939",
+          "manual_ending_code": "I-09-05",
+          "backend": "openrouter",
+          "genre": "Historical_Chronicle",
+          "leak_free": "true",
+          "words": 326,
           "reading_minutes": 2
         }
       ]
