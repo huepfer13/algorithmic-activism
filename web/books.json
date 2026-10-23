@@ -3252,7 +3252,7 @@
         "Herr Brenner",
         "Frau Ostrow"
       ],
-      "chapter_count": 12,
+      "chapter_count": 13,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -3265,10 +3265,11 @@
         "art_09",
         "art_10",
         "art_11",
-        "art_12"
+        "art_12",
+        "art_13"
       ],
-      "words": 6032,
-      "reading_minutes": 30,
+      "words": 6338,
+      "reading_minutes": 32,
       "cover": null,
       "chapters": [
         {
@@ -3503,6 +3504,24 @@
           "genre": "Tagebuch",
           "leak_free": "true",
           "words": 354,
+          "reading_minutes": 2
+        },
+        {
+          "file": "13_art_13_abschnitt_13_die_bewegungsbremse.md",
+          "index": 13,
+          "title": "Abschnitt 13: Die Bewegungsbremse",
+          "article": "art_13",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "73.5",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1269",
+          "manual_ending_code": "T-13-13",
+          "backend": "openrouter",
+          "genre": "Tagebuch",
+          "leak_free": "true",
+          "words": 306,
           "reading_minutes": 2
         }
       ]

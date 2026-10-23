@@ -366,7 +366,9 @@
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_004_neon_exil",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_013_aufzeichnungen_eines_archivars",
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_009_depeschen_aus_dem_kordon",
-    "r3:deepseek-chat:buch_001_das_büro_der_unendlichkeit"
+    "r3:deepseek-chat:buch_001_das_büro_der_unendlichkeit",
+    "r4:deepseek-chat:buch_018_rhymes_of_the_commons",
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_013_aufzeichnungen_eines_archivars"
   ],
   "runden": {
     "1": [
@@ -4562,6 +4564,31 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 4
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_018_rhymes_of_the_commons",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 4
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_013_aufzeichnungen_eines_archivars",
+        "code": "T-13-13",
+        "datei": "13_art_13_abschnitt_13_die_bewegungsbremse.md",
+        "dauer_s": "73.5",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 4,
+        "tokens": "1269",
+        "versuche": "1",
+        "woerter": 306
       }
     ],
     "5": [
