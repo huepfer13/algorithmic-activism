@@ -362,7 +362,8 @@
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_014_der_unberechenbare_humor",
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_023_the_gravity_room",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_014_der_unberechenbare_humor",
-    "r6:deepseek-chat:buch_005_fragment_der_vernunft"
+    "r6:deepseek-chat:buch_005_fragment_der_vernunft",
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_004_neon_exil"
   ],
   "runden": {
     "1": [
@@ -4518,6 +4519,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 4
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_004_neon_exil",
+        "code": "S-10-10",
+        "datei": "10_art_10_abschnitt_10_das_fairness_threshold.md",
+        "dauer_s": "23.5",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 4,
+        "tokens": "1108",
+        "versuche": "1",
+        "woerter": 215
       }
     ],
     "5": [
