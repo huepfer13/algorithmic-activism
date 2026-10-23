@@ -355,7 +355,7 @@
       "pov": "third_person",
       "setting_summary": "Sieben Quellen, sieben Pruefungen: eine Wanderung durch die Landschaften der Rechte.",
       "characters": [],
-      "chapter_count": 11,
+      "chapter_count": 12,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -367,10 +367,11 @@
         "art_08",
         "art_09",
         "art_10",
-        "art_11"
+        "art_11",
+        "art_12"
       ],
-      "words": 5856,
-      "reading_minutes": 29,
+      "words": 6338,
+      "reading_minutes": 32,
       "cover": null,
       "chapters": [
         {
@@ -588,6 +589,24 @@
           "leak_free": "true",
           "words": 662,
           "reading_minutes": 3
+        },
+        {
+          "file": "12_art_12_abschnitt_12_die_prüfung_des_verborgenen.md",
+          "index": 12,
+          "title": "Abschnitt 12: Die Prüfung des verborgenen Raums",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "2",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "150.3",
+          "jaccard_max": "0.03",
+          "tokens_generated": "1345",
+          "manual_ending_code": "M-12-12",
+          "backend": "openrouter",
+          "genre": "Märchen",
+          "leak_free": "true",
+          "words": 482,
+          "reading_minutes": 2
         }
       ]
     },
