@@ -383,7 +383,10 @@
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_001_das_büro_der_unendlichkeit",
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_022_the_ledger_of_vanishing_rain",
-    "r4:deepseek-chat:buch_020_die_quote_der_stille"
+    "r4:deepseek-chat:buch_020_die_quote_der_stille",
+    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_027_das_haus_das_die_namen_fraß",
+    "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_003_der_rat_der_tiere",
+    "r5:deepseek-chat:buch_008_flechtwerk_arkadien"
   ],
   "runden": {
     "1": [
@@ -3987,6 +3990,16 @@
         "tokens": "1551",
         "versuche": "1",
         "woerter": 467
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_027_das_haus_das_die_namen_fraß",
+        "datei": null,
+        "dauer_s": 0.5,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 3
       }
     ],
     "4": [
@@ -4774,6 +4787,16 @@
         "tokens": "865",
         "versuche": "1",
         "woerter": 446
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_003_der_rat_der_tiere",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 4
       }
     ],
     "5": [
@@ -5196,6 +5219,21 @@
         "tokens": "984",
         "versuche": "1",
         "woerter": 407
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_008_flechtwerk_arkadien",
+        "code": "U-14-14",
+        "datei": "14_art_14_abschnitt_14_die_kalibrierung_der_zufluc.md",
+        "dauer_s": "9.7",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 5,
+        "tokens": "991",
+        "versuche": "1",
+        "woerter": 513
       }
     ],
     "6": [
