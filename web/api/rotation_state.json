@@ -388,7 +388,8 @@
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_003_der_rat_der_tiere",
     "r5:deepseek-chat:buch_008_flechtwerk_arkadien",
     "r5:deepseek-chat:buch_003_der_rat_der_tiere",
-    "r2:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren"
+    "r2:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_017_des_volkes_mund"
   ],
   "runden": {
     "1": [
@@ -4017,6 +4018,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 3
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_017_des_volkes_mund",
+        "code": "V-19-19",
+        "datei": "19_art_19_abschnitt_19_der_offene_kanal.md",
+        "dauer_s": "94.8",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 3,
+        "tokens": "1997",
+        "versuche": "1",
+        "woerter": 290
       }
     ],
     "4": [
