@@ -387,7 +387,8 @@
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_027_das_haus_das_die_namen_fraß",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_003_der_rat_der_tiere",
     "r5:deepseek-chat:buch_008_flechtwerk_arkadien",
-    "r5:deepseek-chat:buch_003_der_rat_der_tiere"
+    "r5:deepseek-chat:buch_003_der_rat_der_tiere",
+    "r2:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren"
   ],
   "runden": {
     "1": [
@@ -2874,6 +2875,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 2
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+        "code": "G-03-03",
+        "datei": "03_art_03_abschnitt_3_die_lagerung_der_sicherheit.md",
+        "dauer_s": "9.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 2,
+        "tokens": "1071",
+        "versuche": "1",
+        "woerter": 494
       }
     ],
     "3": [
