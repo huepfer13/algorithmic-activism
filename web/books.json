@@ -2106,7 +2106,7 @@
         "Nadia",
         "Kroll"
       ],
-      "chapter_count": 13,
+      "chapter_count": 14,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -2120,10 +2120,11 @@
         "art_10",
         "art_11",
         "art_12",
-        "art_13"
+        "art_13",
+        "art_14"
       ],
-      "words": 6385,
-      "reading_minutes": 32,
+      "words": 6828,
+      "reading_minutes": 34,
       "cover": null,
       "chapters": [
         {
@@ -2376,6 +2377,24 @@
           "genre": "Briefroman",
           "leak_free": "true",
           "words": 467,
+          "reading_minutes": 2
+        },
+        {
+          "file": "14_art_14_abschnitt_14_die_vierzehnte_kalibrierung.md",
+          "index": 14,
+          "title": "Abschnitt 14: Die vierzehnte Kalibrierung",
+          "article": "art_14",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "57.4",
+          "jaccard_max": "0.029",
+          "tokens_generated": "1362",
+          "manual_ending_code": "B-14-14",
+          "backend": "openrouter",
+          "genre": "Briefroman",
+          "leak_free": "true",
+          "words": 443,
           "reading_minutes": 2
         }
       ]

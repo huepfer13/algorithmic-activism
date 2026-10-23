@@ -363,7 +363,9 @@
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_023_the_gravity_room",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_014_der_unberechenbare_humor",
     "r6:deepseek-chat:buch_005_fragment_der_vernunft",
-    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_004_neon_exil"
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_004_neon_exil",
+    "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_013_aufzeichnungen_eines_archivars",
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_009_depeschen_aus_dem_kordon"
   ],
   "runden": {
     "1": [
@@ -4534,6 +4536,16 @@
         "tokens": "1108",
         "versuche": "1",
         "woerter": 215
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_013_aufzeichnungen_eines_archivars",
+        "datei": null,
+        "dauer_s": 0.5,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 4
       }
     ],
     "5": [
@@ -4911,6 +4923,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 5
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_009_depeschen_aus_dem_kordon",
+        "code": "B-14-14",
+        "datei": "14_art_14_abschnitt_14_die_vierzehnte_kalibrierung.md",
+        "dauer_s": "57.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 5,
+        "tokens": "1362",
+        "versuche": "1",
+        "woerter": 443
       }
     ],
     "6": [
