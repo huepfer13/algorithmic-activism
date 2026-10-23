@@ -1011,7 +1011,7 @@
       "pov": "third_person",
       "setting_summary": "Ein diskursives Nachdenken darueber, was Menschenrechte praktisch bedeuten.",
       "characters": [],
-      "chapter_count": 9,
+      "chapter_count": 10,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1021,10 +1021,11 @@
         "art_06",
         "art_07",
         "art_08",
-        "art_09"
+        "art_09",
+        "art_10"
       ],
-      "words": 4716,
-      "reading_minutes": 24,
+      "words": 5093,
+      "reading_minutes": 25,
       "cover": null,
       "chapters": [
         {
@@ -1206,6 +1207,24 @@
           "leak_free": "true",
           "words": 294,
           "reading_minutes": 1
+        },
+        {
+          "file": "10_art_10_abschnitt_10_die_kalibrierung_der_gleich.md",
+          "index": 10,
+          "title": "Abschnitt 10: Die Kalibrierung der Gleichheit",
+          "article": "art_10",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "825",
+          "manual_ending_code": "P-10-10",
+          "backend": "deepseek",
+          "genre": "Philosophischer_Essay",
+          "leak_free": "true",
+          "words": 377,
+          "reading_minutes": 2
         }
       ]
     },

@@ -358,7 +358,11 @@
     "r5:deepseek-chat:buch_011_das_haus_ohne_widerhall",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_012_manifest_der_unantastbaren",
     "r4:deepseek-chat:buch_002_die_sieben_quellen",
-    "r5:deepseek-chat:buch_002_die_sieben_quellen"
+    "r5:deepseek-chat:buch_002_die_sieben_quellen",
+    "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_014_der_unberechenbare_humor",
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_023_the_gravity_room",
+    "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_014_der_unberechenbare_humor",
+    "r6:deepseek-chat:buch_005_fragment_der_vernunft"
   ],
   "runden": {
     "1": [
@@ -4504,6 +4508,16 @@
         "tokens": "906",
         "versuche": "1",
         "woerter": 487
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_014_der_unberechenbare_humor",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 4
       }
     ],
     "5": [
@@ -4861,6 +4875,26 @@
         "tokens": "1129",
         "versuche": "1",
         "woerter": 662
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_023_the_gravity_room",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 5
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_014_der_unberechenbare_humor",
+        "datei": null,
+        "dauer_s": 0.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 5
       }
     ],
     "6": [
@@ -5028,6 +5062,21 @@
         "tokens": "1453",
         "versuche": "1",
         "woerter": 263
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_005_fragment_der_vernunft",
+        "code": "P-10-10",
+        "datei": "10_art_10_abschnitt_10_die_kalibrierung_der_gleich.md",
+        "dauer_s": "7.8",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 6,
+        "tokens": "825",
+        "versuche": "1",
+        "woerter": 377
       }
     ],
     "7": [
