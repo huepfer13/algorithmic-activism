@@ -374,7 +374,8 @@
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_015_das_kochbuch_der_allmende",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_027_das_haus_das_die_namen_fraß",
-    "r4:deepseek-chat:buch_024_die_kammer_der_stimmen"
+    "r4:deepseek-chat:buch_024_die_kammer_der_stimmen",
+    "r1:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren"
   ],
   "runden": {
     "1": [
@@ -1562,6 +1563,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "deepseek-chat",
         "runde": 1
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+        "code": "G-01-01",
+        "datei": "01_art_01_abschnitt_1_die_kalibrierung_der_unmessb.md",
+        "dauer_s": "10.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 1,
+        "tokens": "1098",
+        "versuche": "1",
+        "woerter": 545
       }
     ],
     "10": [
