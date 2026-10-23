@@ -5700,7 +5700,7 @@
         "Nadia",
         "The Inspector"
       ],
-      "chapter_count": 8,
+      "chapter_count": 9,
       "covered_articles": [
         "art_01",
         "art_03",
@@ -5709,10 +5709,11 @@
         "art_09",
         "art_12",
         "art_14",
-        "art_19"
+        "art_19",
+        "art_26"
       ],
-      "words": 4241,
-      "reading_minutes": 21,
+      "words": 4648,
+      "reading_minutes": 23,
       "cover": null,
       "chapters": [
         {
@@ -5875,6 +5876,24 @@
           "genre": "Magical_Realism",
           "leak_free": "true",
           "words": 468,
+          "reading_minutes": 2
+        },
+        {
+          "file": "09_art_26_abschnitt_9_the_calibration_of_knowing.md",
+          "index": 9,
+          "title": "Abschnitt 9: The Calibration of Knowing",
+          "article": "art_26",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "46.4",
+          "jaccard_max": "0.047",
+          "tokens_generated": "984",
+          "manual_ending_code": "Z-26-09",
+          "backend": "openrouter",
+          "genre": "Magical_Realism",
+          "leak_free": "true",
+          "words": 407,
           "reading_minutes": 2
         }
       ]
