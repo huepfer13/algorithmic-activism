@@ -5276,7 +5276,7 @@
         "Dorn",
         "Elia"
       ],
-      "chapter_count": 9,
+      "chapter_count": 10,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -5286,10 +5286,11 @@
         "art_06",
         "art_07",
         "art_08",
-        "art_09"
+        "art_09",
+        "art_10"
       ],
-      "words": 4476,
-      "reading_minutes": 22,
+      "words": 4922,
+      "reading_minutes": 25,
       "cover": null,
       "chapters": [
         {
@@ -5470,6 +5471,24 @@
           "genre": "SciFi_Dystopie",
           "leak_free": "true",
           "words": 464,
+          "reading_minutes": 2
+        },
+        {
+          "file": "10_art_10_abschnitt_10_die_gleichheitsvorgabe.md",
+          "index": 10,
+          "title": "Abschnitt 10: Die Gleichheitsvorgabe",
+          "article": "art_10",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.3",
+          "jaccard_max": "0.062",
+          "tokens_generated": "865",
+          "manual_ending_code": "S-10-10",
+          "backend": "deepseek",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "true",
+          "words": 446,
           "reading_minutes": 2
         }
       ]
