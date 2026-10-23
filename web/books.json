@@ -6876,14 +6876,15 @@
         "Mira Sandoval",
         "Herr Zwirbel"
       ],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_02",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 1994,
-      "reading_minutes": 10,
+      "words": 2451,
+      "reading_minutes": 12,
       "cover": null,
       "chapters": [
         {
@@ -6956,6 +6957,24 @@
           "genre": "Satire",
           "leak_free": "true",
           "words": 494,
+          "reading_minutes": 2
+        },
+        {
+          "file": "04_art_04_abschnitt_4_die_kalibrierung_der_unfreih.md",
+          "index": 4,
+          "title": "Abschnitt 4: Die Kalibrierung der Unfreiheit",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "3",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "100.8",
+          "jaccard_max": "0.038",
+          "tokens_generated": "1492",
+          "manual_ending_code": "G-04-04",
+          "backend": "openrouter",
+          "genre": "Satire",
+          "leak_free": "true",
+          "words": 457,
           "reading_minutes": 2
         }
       ]

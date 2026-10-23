@@ -393,7 +393,8 @@
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_015_das_kochbuch_der_allmende",
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_012_manifest_der_unantastbaren",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_021_the_bell_of_the_ninth_gate",
-    "r6:deepseek-chat:buch_003_der_rat_der_tiere"
+    "r6:deepseek-chat:buch_003_der_rat_der_tiere",
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren"
   ],
   "runden": {
     "1": [
@@ -2895,6 +2896,21 @@
         "tokens": "1071",
         "versuche": "1",
         "woerter": 494
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+        "code": "G-04-04",
+        "datei": "04_art_04_abschnitt_4_die_kalibrierung_der_unfreih.md",
+        "dauer_s": "100.8",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 2,
+        "tokens": "1492",
+        "versuche": "3",
+        "woerter": 457
       }
     ],
     "3": [
