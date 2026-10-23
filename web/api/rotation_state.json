@@ -386,7 +386,8 @@
     "r4:deepseek-chat:buch_020_die_quote_der_stille",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_027_das_haus_das_die_namen_fraß",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_003_der_rat_der_tiere",
-    "r5:deepseek-chat:buch_008_flechtwerk_arkadien"
+    "r5:deepseek-chat:buch_008_flechtwerk_arkadien",
+    "r5:deepseek-chat:buch_003_der_rat_der_tiere"
   ],
   "runden": {
     "1": [
@@ -5234,6 +5235,21 @@
         "tokens": "991",
         "versuche": "1",
         "woerter": 513
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_003_der_rat_der_tiere",
+        "code": "K-11-11",
+        "datei": "11_art_11_abschnitt_11_das_knurren_hinter_dem_tisc.md",
+        "dauer_s": "6.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 5,
+        "tokens": "660",
+        "versuche": "1",
+        "woerter": 334
       }
     ],
     "6": [
