@@ -365,7 +365,8 @@
     "r6:deepseek-chat:buch_005_fragment_der_vernunft",
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_004_neon_exil",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_013_aufzeichnungen_eines_archivars",
-    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_009_depeschen_aus_dem_kordon"
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_009_depeschen_aus_dem_kordon",
+    "r3:deepseek-chat:buch_001_das_büro_der_unendlichkeit"
   ],
   "runden": {
     "1": [
@@ -3854,6 +3855,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 3
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_001_das_büro_der_unendlichkeit",
+        "code": "E-13-16",
+        "datei": "16_art_13_abschnitt_16_freizügigkeitsparameter_und.md",
+        "dauer_s": "20.4",
+        "ending_ok": "false",
+        "exit": 2,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 3,
+        "tokens": "904",
+        "versuche": "3",
+        "woerter": 356
       }
     ],
     "4": [

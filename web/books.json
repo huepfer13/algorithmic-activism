@@ -16,7 +16,7 @@
         "Nova",
         "Omicron"
       ],
-      "chapter_count": 15,
+      "chapter_count": 16,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -30,12 +30,13 @@
         "art_10",
         "art_11",
         "art_12",
+        "art_13",
         "art_14",
         "art_19",
         "art_26"
       ],
-      "words": 7638,
-      "reading_minutes": 38,
+      "words": 7994,
+      "reading_minutes": 40,
       "cover": null,
       "chapters": [
         {
@@ -324,6 +325,24 @@
           "genre": "Gerätehandbuch",
           "leak_free": "",
           "words": 378,
+          "reading_minutes": 2
+        },
+        {
+          "file": "16_art_13_abschnitt_16_freizügigkeitsparameter_und.md",
+          "index": 16,
+          "title": "Abschnitt 16: Freizügigkeitsparameter und zentrale Verwahrung im Sektor-27",
+          "article": "art_13",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "20.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "904",
+          "manual_ending_code": "E-13-16",
+          "backend": "deepseek",
+          "genre": "Gerätehandbuch",
+          "leak_free": "",
+          "words": 356,
           "reading_minutes": 2
         }
       ]
