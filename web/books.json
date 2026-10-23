@@ -3078,7 +3078,7 @@
       "pov": "first_person",
       "setting_summary": "In einem unterirdischen Archivbunker, dem Sektor Neun, hausen die letzten freien Chronisten unter ständiger Überwachung durch die Obrigkeit. Ein Riss in der Betondecke lässt Wasser eindringen und markiert eine tickende Frist: In wenigen Wochen wird der Bunker geflutet, wenn niemand die Wahrheit nach außen trägt. Jeder ausgesprochene Satz kann Verhaftung, Folter oder Tod bedeuten – und doch muss gesprochen werden.",
       "characters": [],
-      "chapter_count": 11,
+      "chapter_count": 12,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -3090,10 +3090,11 @@
         "art_08",
         "art_09",
         "art_10",
-        "art_11"
+        "art_11",
+        "art_12"
       ],
-      "words": 4331,
-      "reading_minutes": 22,
+      "words": 4626,
+      "reading_minutes": 23,
       "cover": null,
       "chapters": [
         {
@@ -3311,6 +3312,24 @@
           "leak_free": "true",
           "words": 318,
           "reading_minutes": 2
+        },
+        {
+          "file": "12_art_12_abschnitt_12_der_parameter_der_sphärensi.md",
+          "index": 12,
+          "title": "Abschnitt 12: Der Parameter der Sphärensicherung",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "46.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1633",
+          "manual_ending_code": "R-12-12",
+          "backend": "openrouter",
+          "genre": "Manifest",
+          "leak_free": "true",
+          "words": 295,
+          "reading_minutes": 1
         }
       ]
     },

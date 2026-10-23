@@ -389,7 +389,9 @@
     "r5:deepseek-chat:buch_008_flechtwerk_arkadien",
     "r5:deepseek-chat:buch_003_der_rat_der_tiere",
     "r2:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
-    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_017_des_volkes_mund"
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_017_des_volkes_mund",
+    "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_015_das_kochbuch_der_allmende",
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_012_manifest_der_unantastbaren"
   ],
   "runden": {
     "1": [
@@ -4830,6 +4832,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 4
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_015_das_kochbuch_der_allmende",
+        "datei": null,
+        "dauer_s": 0.4,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 4
       }
     ],
     "5": [
@@ -5282,6 +5294,21 @@
         "tokens": "660",
         "versuche": "1",
         "woerter": 334
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_012_manifest_der_unantastbaren",
+        "code": "R-12-12",
+        "datei": "12_art_12_abschnitt_12_der_parameter_der_sphärensi.md",
+        "dauer_s": "46.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 5,
+        "tokens": "1633",
+        "versuche": "1",
+        "woerter": 295
       }
     ],
     "6": [
