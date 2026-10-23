@@ -396,7 +396,8 @@
     "r6:deepseek-chat:buch_003_der_rat_der_tiere",
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_011_das_haus_ohne_widerhall",
-    "r6:deepseek-chat:buch_020_die_quote_der_stille"
+    "r6:deepseek-chat:buch_020_die_quote_der_stille",
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren"
   ],
   "runden": {
     "1": [
@@ -4862,6 +4863,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 4
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+        "code": "G-05-05",
+        "datei": "05_art_05_abschnitt_5_die_auslagerung_des_unerträg.md",
+        "dauer_s": "20.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 4,
+        "tokens": "1322",
+        "versuche": "1",
+        "woerter": 401
       }
     ],
     "5": [

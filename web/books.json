@@ -6895,15 +6895,16 @@
         "Mira Sandoval",
         "Herr Zwirbel"
       ],
-      "chapter_count": 4,
+      "chapter_count": 5,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
-        "art_04"
+        "art_04",
+        "art_05"
       ],
-      "words": 2451,
-      "reading_minutes": 12,
+      "words": 2852,
+      "reading_minutes": 14,
       "cover": null,
       "chapters": [
         {
@@ -6994,6 +6995,24 @@
           "genre": "Satire",
           "leak_free": "true",
           "words": 457,
+          "reading_minutes": 2
+        },
+        {
+          "file": "05_art_05_abschnitt_5_die_auslagerung_des_unerträg.md",
+          "index": 5,
+          "title": "Abschnitt 5: Die Auslagerung des Unerträglichen",
+          "article": "art_05",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "20.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1322",
+          "manual_ending_code": "G-05-05",
+          "backend": "openrouter",
+          "genre": "Satire",
+          "leak_free": "true",
+          "words": 401,
           "reading_minutes": 2
         }
       ]
