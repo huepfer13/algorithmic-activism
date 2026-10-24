@@ -422,7 +422,8 @@
     "r6:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_003_der_rat_der_tiere",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_027_das_haus_das_die_namen_fraß",
-    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_013_aufzeichnungen_eines_archivars"
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_013_aufzeichnungen_eines_archivars",
+    "r1:deepseek-chat:buch_029_the_glass_tribunal"
   ],
   "runden": {
     "1": [
@@ -1660,6 +1661,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 1
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_029_the_glass_tribunal",
+        "code": "H-03-02",
+        "datei": "02_art_03_abschnitt_2_the_calibration_of_breath.md",
+        "dauer_s": "5.8",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 1,
+        "tokens": "602",
+        "versuche": "1",
+        "woerter": 434
       }
     ],
     "10": [

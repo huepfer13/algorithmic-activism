@@ -7297,12 +7297,13 @@
         "Sister Adaeze",
         "Piotr Halvorsen"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_03"
       ],
-      "words": 1048,
-      "reading_minutes": 5,
+      "words": 1482,
+      "reading_minutes": 7,
       "cover": null,
       "chapters": [
         {
@@ -7340,6 +7341,24 @@
           "leak_free": "true",
           "words": 513,
           "reading_minutes": 3
+        },
+        {
+          "file": "02_art_03_abschnitt_2_the_calibration_of_breath.md",
+          "index": 2,
+          "title": "Abschnitt 2: The Calibration of Breath",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "602",
+          "manual_ending_code": "H-03-02",
+          "backend": "deepseek",
+          "genre": "Courtroom_Drama",
+          "leak_free": "true",
+          "words": 434,
+          "reading_minutes": 2
         }
       ]
     }
