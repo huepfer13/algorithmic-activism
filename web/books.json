@@ -4402,7 +4402,7 @@
       "pov": "third_person",
       "setting_summary": "Kontemplative Einsichten fuer unruhige Zeiten.",
       "characters": [],
-      "chapter_count": 17,
+      "chapter_count": 18,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -4420,10 +4420,11 @@
         "art_14",
         "art_15",
         "art_16",
-        "art_17"
+        "art_17",
+        "art_18"
       ],
-      "words": 5388,
-      "reading_minutes": 27,
+      "words": 5774,
+      "reading_minutes": 29,
       "cover": null,
       "chapters": [
         {
@@ -4748,6 +4749,24 @@
           "genre": "Lebensweisheiten",
           "leak_free": "",
           "words": 418,
+          "reading_minutes": 2
+        },
+        {
+          "file": "18_art_18_abschnitt_18_die_offene_tür.md",
+          "index": 18,
+          "title": "Abschnitt 18: Die offene Tür",
+          "article": "art_18",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "18.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "737",
+          "manual_ending_code": "L-18-18",
+          "backend": "deepseek",
+          "genre": "Lebensweisheiten",
+          "leak_free": "",
+          "words": 386,
           "reading_minutes": 2
         }
       ]

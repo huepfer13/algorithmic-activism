@@ -431,7 +431,9 @@
     "r6:deepseek-chat:buch_022_the_ledger_of_vanishing_rain",
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_014_der_unberechenbare_humor",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_010_amtsblatt_fuer_unzumutbarkeit",
-    "r6:deepseek-chat:buch_024_die_kammer_der_stimmen"
+    "r6:deepseek-chat:buch_024_die_kammer_der_stimmen",
+    "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_019_the_salt_diaries",
+    "r6:deepseek-chat:buch_016_faden_der_gelassenheit"
   ],
   "runden": {
     "1": [
@@ -5754,6 +5756,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 5
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_019_the_salt_diaries",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 5
       }
     ],
     "6": [
@@ -6051,6 +6063,21 @@
         "tokens": "1228",
         "versuche": "1",
         "woerter": 622
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_016_faden_der_gelassenheit",
+        "code": "L-18-18",
+        "datei": "18_art_18_abschnitt_18_die_offene_tür.md",
+        "dauer_s": "18.6",
+        "ending_ok": "false",
+        "exit": 2,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 6,
+        "tokens": "737",
+        "versuche": "3",
+        "woerter": 386
       }
     ],
     "7": [
