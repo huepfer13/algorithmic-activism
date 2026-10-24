@@ -397,7 +397,8 @@
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_011_das_haus_ohne_widerhall",
     "r6:deepseek-chat:buch_020_die_quote_der_stille",
-    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren"
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+    "r4:deepseek-chat:buch_004_neon_exil"
   ],
   "runden": {
     "1": [
@@ -4878,6 +4879,21 @@
         "tokens": "1322",
         "versuche": "1",
         "woerter": 401
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_004_neon_exil",
+        "code": "S-11-11",
+        "datei": "11_art_11_abschnitt_11_die_unschuldsvermutung_als_.md",
+        "dauer_s": "7.9",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 4,
+        "tokens": "819",
+        "versuche": "1",
+        "woerter": 386
       }
     ],
     "5": [
