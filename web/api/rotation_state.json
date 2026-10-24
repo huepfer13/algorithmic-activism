@@ -420,7 +420,9 @@
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_026_the_ledger_of_ash_harbour",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_026_the_ledger_of_ash_harbour",
     "r6:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
-    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_003_der_rat_der_tiere"
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_003_der_rat_der_tiere",
+    "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_027_das_haus_das_die_namen_fraß",
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_013_aufzeichnungen_eines_archivars"
   ],
   "runden": {
     "1": [
@@ -5036,6 +5038,16 @@
         "tokens": "773",
         "versuche": "1",
         "woerter": 241
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_027_das_haus_das_die_namen_fraß",
+        "datei": null,
+        "dauer_s": 0.6,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 4
       }
     ],
     "5": [
@@ -5643,6 +5655,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 5
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_013_aufzeichnungen_eines_archivars",
+        "code": "T-15-15",
+        "datei": "15_art_15_abschnitt_15_die_entstaatlichungskonstan.md",
+        "dauer_s": "63.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 5,
+        "tokens": "1420",
+        "versuche": "1",
+        "woerter": 451
       }
     ],
     "6": [
