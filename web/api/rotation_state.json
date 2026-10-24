@@ -408,7 +408,8 @@
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_026_the_ledger_of_ash_harbour",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_022_the_ledger_of_vanishing_rain",
     "r5:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit",
-    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_025_the_hold"
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_025_the_hold",
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_008_flechtwerk_arkadien"
   ],
   "runden": {
     "1": [
@@ -4964,6 +4965,21 @@
         "tokens": "802",
         "versuche": "1",
         "woerter": 259
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_008_flechtwerk_arkadien",
+        "code": "U-15-15",
+        "datei": "15_art_15_abschnitt_15_die_zugehörigkeitskalibrier.md",
+        "dauer_s": "47.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 4,
+        "tokens": "1537",
+        "versuche": "1",
+        "woerter": 443
       }
     ],
     "5": [

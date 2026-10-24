@@ -1913,7 +1913,7 @@
         "Kell",
         "Nuri"
       ],
-      "chapter_count": 14,
+      "chapter_count": 15,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1928,10 +1928,11 @@
         "art_11",
         "art_12",
         "art_13",
-        "art_14"
+        "art_14",
+        "art_15"
       ],
-      "words": 6608,
-      "reading_minutes": 33,
+      "words": 7051,
+      "reading_minutes": 35,
       "cover": null,
       "chapters": [
         {
@@ -2203,6 +2204,24 @@
           "leak_free": "true",
           "words": 513,
           "reading_minutes": 3
+        },
+        {
+          "file": "15_art_15_abschnitt_15_die_zugehörigkeitskalibrier.md",
+          "index": 15,
+          "title": "Abschnitt 15: Die Zugehörigkeitskalibrierung",
+          "article": "art_15",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "47.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1537",
+          "manual_ending_code": "U-15-15",
+          "backend": "openrouter",
+          "genre": "Solarpunk",
+          "leak_free": "true",
+          "words": 443,
+          "reading_minutes": 2
         }
       ]
     },
