@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 29,
+  "count": 30,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -7491,6 +7491,46 @@
           "genre": "Courtroom_Drama",
           "leak_free": "true",
           "words": 569,
+          "reading_minutes": 3
+        }
+      ]
+    },
+    {
+      "book_id": "buch_030_die_wolkenschule_über_dem_marktplatz",
+      "title": "Die Wolkenschule über dem Marktplatz",
+      "language": "DE",
+      "style": "Kinderbuch",
+      "pov": "third_person",
+      "setting_summary": "In einer engen Dachkammer über dem geschäftigen Marktplatz leben die Kinder Mira und Lotta mit dem Kater Korbinian und der Taube Tilda. Ein alter Hausmeister, Herr Wiesel, verteilt knapp bemessene Wasserrationen und bestimmt, wer wann aufs Dach darf. Die kleine Gemeinschaft muss lernen, füreinander einzustehen, als Herr Wiesel beginnt, Regeln zu erfinden, die ihre Freiheit immer weiter einschränken.",
+      "characters": [
+        "Mira",
+        "Kater Korbinian",
+        "Taube Tilda",
+        "Herr Wiesel",
+        "Lotta"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 609,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "10.1",
+          "jaccard_max": "",
+          "tokens_generated": "1130",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Kinderbuch",
+          "leak_free": "",
+          "words": 609,
           "reading_minutes": 3
         }
       ]

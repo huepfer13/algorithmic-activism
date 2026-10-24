@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_030_die_wolkenschule_über_dem_marktplatz",
+  "title": "Die Wolkenschule über dem Marktplatz",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Kinderbuch",
+  "setting_summary": "In einer engen Dachkammer über dem geschäftigen Marktplatz leben die Kinder Mira und Lotta mit dem Kater Korbinian und der Taube Tilda. Ein alter Hausmeister, Herr Wiesel, verteilt knapp bemessene Wasserrationen und bestimmt, wer wann aufs Dach darf. Die kleine Gemeinschaft muss lernen, füreinander einzustehen, als Herr Wiesel beginnt, Regeln zu erfinden, die ihre Freiheit immer weiter einschränken.",
+  "characters": [
+    "Mira",
+    "Kater Korbinian",
+    "Taube Tilda",
+    "Herr Wiesel",
+    "Lotta"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-10-24T22:05:29.728999+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
