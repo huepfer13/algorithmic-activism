@@ -6680,17 +6680,18 @@
         "Tobias Renn",
         "The Harbourmaster"
       ],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
         "art_05",
         "art_09",
-        "art_12"
+        "art_12",
+        "art_14"
       ],
-      "words": 3396,
-      "reading_minutes": 17,
+      "words": 3689,
+      "reading_minutes": 18,
       "cover": null,
       "chapters": [
         {
@@ -6817,6 +6818,24 @@
           "genre": "Historical_Chronicle",
           "leak_free": "true",
           "words": 292,
+          "reading_minutes": 1
+        },
+        {
+          "file": "07_art_14_abschnitt_7_the_asylum_parameter.md",
+          "index": 7,
+          "title": "Abschnitt 7: The Asylum Parameter",
+          "article": "art_14",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "24.9",
+          "jaccard_max": "0.0",
+          "tokens_generated": "975",
+          "manual_ending_code": "I-14-07",
+          "backend": "openrouter",
+          "genre": "Historical_Chronicle",
+          "leak_free": "true",
+          "words": 293,
           "reading_minutes": 1
         }
       ]
