@@ -399,7 +399,9 @@
     "r6:deepseek-chat:buch_020_die_quote_der_stille",
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
     "r4:deepseek-chat:buch_004_neon_exil",
-    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_027_das_haus_das_die_namen_fraß"
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_027_das_haus_das_die_namen_fraß",
+    "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_008_flechtwerk_arkadien",
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_010_amtsblatt_fuer_unzumutbarkeit"
   ],
   "runden": {
     "1": [
@@ -4910,6 +4912,16 @@
         "tokens": "819",
         "versuche": "1",
         "woerter": 386
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_008_flechtwerk_arkadien",
+        "datei": null,
+        "dauer_s": 0.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 4
       }
     ],
     "5": [
@@ -5397,6 +5409,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 5
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_010_amtsblatt_fuer_unzumutbarkeit",
+        "code": "G-15-15",
+        "datei": "15_art_15_abschnitt_15_die_entstaatlichung_als_sch.md",
+        "dauer_s": "67.5",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 5,
+        "tokens": "1481",
+        "versuche": "1",
+        "woerter": 332
       }
     ],
     "6": [
