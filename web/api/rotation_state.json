@@ -419,7 +419,8 @@
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_004_neon_exil",
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_026_the_ledger_of_ash_harbour",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_026_the_ledger_of_ash_harbour",
-    "r6:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren"
+    "r6:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_003_der_rat_der_tiere"
   ],
   "runden": {
     "1": [
@@ -5020,6 +5021,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 4
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_003_der_rat_der_tiere",
+        "code": "K-13-13",
+        "datei": "13_art_13_abschnitt_13_der_rote_rand.md",
+        "dauer_s": "24.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 4,
+        "tokens": "773",
+        "versuche": "1",
+        "woerter": 241
       }
     ],
     "5": [
