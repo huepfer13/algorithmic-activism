@@ -7104,16 +7104,17 @@
         "Mira Sandoval",
         "Herr Zwirbel"
       ],
-      "chapter_count": 5,
+      "chapter_count": 6,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_06"
       ],
-      "words": 2852,
-      "reading_minutes": 14,
+      "words": 3446,
+      "reading_minutes": 17,
       "cover": null,
       "chapters": [
         {
@@ -7223,6 +7224,24 @@
           "leak_free": "true",
           "words": 401,
           "reading_minutes": 2
+        },
+        {
+          "file": "06_art_06_abschnitt_6_die_reihenfolge_der_artikel.md",
+          "index": 6,
+          "title": "Abschnitt 6: Die Reihenfolge der Artikel",
+          "article": "art_06",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "10.7",
+          "jaccard_max": "0.024",
+          "tokens_generated": "1253",
+          "manual_ending_code": "G-06-06",
+          "backend": "deepseek",
+          "genre": "Satire",
+          "leak_free": "true",
+          "words": 594,
+          "reading_minutes": 3
         }
       ]
     },
