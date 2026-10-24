@@ -409,7 +409,10 @@
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_022_the_ledger_of_vanishing_rain",
     "r5:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit",
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_025_the_hold",
-    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_008_flechtwerk_arkadien"
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_008_flechtwerk_arkadien",
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_029_the_glass_tribunal",
+    "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+    "r6:deepseek-chat:buch_013_aufzeichnungen_eines_archivars"
   ],
   "runden": {
     "1": [
@@ -1627,6 +1630,16 @@
         "tokens": "939",
         "versuche": "1",
         "woerter": 326
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_029_the_glass_tribunal",
+        "datei": null,
+        "dauer_s": 0.5,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 1
       }
     ],
     "10": [
@@ -5542,6 +5555,16 @@
         "tokens": "661",
         "versuche": "1",
         "woerter": 302
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 5
       }
     ],
     "6": [
@@ -5754,6 +5777,21 @@
         "tokens": "1275",
         "versuche": "1",
         "woerter": 588
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_013_aufzeichnungen_eines_archivars",
+        "code": "T-14-14",
+        "datei": "14_art_14_abschnitt_14_die_asylklausel.md",
+        "dauer_s": "9.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 6,
+        "tokens": "982",
+        "versuche": "1",
+        "woerter": 478
       }
     ],
     "7": [
