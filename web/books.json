@@ -7509,10 +7509,12 @@
         "Herr Wiesel",
         "Lotta"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 609,
-      "reading_minutes": 3,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 1270,
+      "reading_minutes": 6,
       "cover": null,
       "chapters": [
         {
@@ -7531,6 +7533,24 @@
           "genre": "Kinderbuch",
           "leak_free": "",
           "words": 609,
+          "reading_minutes": 3
+        },
+        {
+          "file": "01_art_01_abschnitt_1_der_staub_in_der_röhre.md",
+          "index": 1,
+          "title": "Abschnitt 1: Der Staub in der Röhre",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "62.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1711",
+          "manual_ending_code": "K-01-01",
+          "backend": "openrouter",
+          "genre": "Kinderbuch",
+          "leak_free": "true",
+          "words": 661,
           "reading_minutes": 3
         }
       ]
