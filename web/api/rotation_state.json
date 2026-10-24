@@ -407,7 +407,8 @@
     "r5:deepseek-chat:buch_029_the_glass_tribunal",
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_026_the_ledger_of_ash_harbour",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_022_the_ledger_of_vanishing_rain",
-    "r5:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit"
+    "r5:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit",
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_025_the_hold"
   ],
   "runden": {
     "1": [
@@ -4948,6 +4949,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 4
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_025_the_hold",
+        "code": "J-19-08",
+        "datei": "08_art_19_abschnitt_8_signal_integrity.md",
+        "dauer_s": "18.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 4,
+        "tokens": "802",
+        "versuche": "1",
+        "woerter": 259
       }
     ],
     "5": [
