@@ -403,7 +403,8 @@
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_008_flechtwerk_arkadien",
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_010_amtsblatt_fuer_unzumutbarkeit",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_029_the_glass_tribunal",
-    "r5:deepseek-chat:buch_016_faden_der_gelassenheit"
+    "r5:deepseek-chat:buch_016_faden_der_gelassenheit",
+    "r5:deepseek-chat:buch_029_the_glass_tribunal"
   ],
   "runden": {
     "1": [
@@ -5451,6 +5452,21 @@
         "tokens": "787",
         "versuche": "3",
         "woerter": 418
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_029_the_glass_tribunal",
+        "code": "H-01-01",
+        "datei": "01_art_01_abschnitt_1_the_calibration_of_dust.md",
+        "dauer_s": "6.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 5,
+        "tokens": "678",
+        "versuche": "1",
+        "woerter": 513
       }
     ],
     "6": [

@@ -7107,10 +7107,12 @@
         "Sister Adaeze",
         "Piotr Halvorsen"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 535,
-      "reading_minutes": 3,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 1048,
+      "reading_minutes": 5,
       "cover": null,
       "chapters": [
         {
@@ -7129,6 +7131,24 @@
           "genre": "Courtroom_Drama",
           "leak_free": "",
           "words": 535,
+          "reading_minutes": 3
+        },
+        {
+          "file": "01_art_01_abschnitt_1_the_calibration_of_dust.md",
+          "index": 1,
+          "title": "Abschnitt 1: The Calibration of Dust",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.4",
+          "jaccard_max": "0.028",
+          "tokens_generated": "678",
+          "manual_ending_code": "H-01-01",
+          "backend": "deepseek",
+          "genre": "Courtroom_Drama",
+          "leak_free": "true",
+          "words": 513,
           "reading_minutes": 3
         }
       ]
