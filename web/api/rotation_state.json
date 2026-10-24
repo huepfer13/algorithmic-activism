@@ -429,7 +429,9 @@
     "r5:deepseek-chat:buch_001_das_büro_der_unendlichkeit",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_025_the_hold",
     "r6:deepseek-chat:buch_022_the_ledger_of_vanishing_rain",
-    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_014_der_unberechenbare_humor"
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_014_der_unberechenbare_humor",
+    "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_010_amtsblatt_fuer_unzumutbarkeit",
+    "r6:deepseek-chat:buch_024_die_kammer_der_stimmen"
   ],
   "runden": {
     "1": [
@@ -5080,6 +5082,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 4
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_010_amtsblatt_fuer_unzumutbarkeit",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 4
       }
     ],
     "5": [
@@ -6024,6 +6036,21 @@
         "tokens": "1217",
         "versuche": "1",
         "woerter": 268
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_024_die_kammer_der_stimmen",
+        "code": "P-09-09",
+        "datei": "09_art_09_abschnitt_9_die_kalibrierung_der_haftfäh.md",
+        "dauer_s": "10.5",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 6,
+        "tokens": "1228",
+        "versuche": "1",
+        "woerter": 622
       }
     ],
     "7": [
