@@ -434,7 +434,8 @@
     "r6:deepseek-chat:buch_024_die_kammer_der_stimmen",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_019_the_salt_diaries",
     "r6:deepseek-chat:buch_016_faden_der_gelassenheit",
-    "r3:deepseek-chat:buch_029_the_glass_tribunal"
+    "r3:deepseek-chat:buch_029_the_glass_tribunal",
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren"
   ],
   "runden": {
     "1": [
@@ -1687,6 +1688,21 @@
         "tokens": "602",
         "versuche": "1",
         "woerter": 434
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+        "code": "G-07-07",
+        "datei": "07_art_07_abschnitt_7_die_gleichheit_der_wartemark.md",
+        "dauer_s": "54.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 1,
+        "tokens": "1562",
+        "versuche": "1",
+        "woerter": 524
       }
     ],
     "10": [

@@ -7237,17 +7237,18 @@
         "Mira Sandoval",
         "Herr Zwirbel"
       ],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
         "art_05",
-        "art_06"
+        "art_06",
+        "art_07"
       ],
-      "words": 3446,
-      "reading_minutes": 17,
+      "words": 3970,
+      "reading_minutes": 20,
       "cover": null,
       "chapters": [
         {
@@ -7374,6 +7375,24 @@
           "genre": "Satire",
           "leak_free": "true",
           "words": 594,
+          "reading_minutes": 3
+        },
+        {
+          "file": "07_art_07_abschnitt_7_die_gleichheit_der_wartemark.md",
+          "index": 7,
+          "title": "Abschnitt 7: Die Gleichheit der Wartemarken",
+          "article": "art_07",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "54.4",
+          "jaccard_max": "0.027",
+          "tokens_generated": "1562",
+          "manual_ending_code": "G-07-07",
+          "backend": "openrouter",
+          "genre": "Satire",
+          "leak_free": "true",
+          "words": 524,
           "reading_minutes": 3
         }
       ]
