@@ -398,7 +398,8 @@
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_011_das_haus_ohne_widerhall",
     "r6:deepseek-chat:buch_020_die_quote_der_stille",
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
-    "r4:deepseek-chat:buch_004_neon_exil"
+    "r4:deepseek-chat:buch_004_neon_exil",
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_027_das_haus_das_die_namen_fraß"
   ],
   "runden": {
     "1": [
@@ -4057,6 +4058,21 @@
         "tokens": "1997",
         "versuche": "1",
         "woerter": 290
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_027_das_haus_das_die_namen_fraß",
+        "code": "W-05-05",
+        "datei": "05_art_05_abschnitt_5_die_kalibrierung_der_schmerz.md",
+        "dauer_s": "65.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 3,
+        "tokens": "1102",
+        "versuche": "1",
+        "woerter": 327
       }
     ],
     "4": [
