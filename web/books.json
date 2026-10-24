@@ -2527,7 +2527,7 @@
         "Kalle Ohm",
         "Frau Säckel"
       ],
-      "chapter_count": 15,
+      "chapter_count": 16,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -2543,10 +2543,11 @@
         "art_12",
         "art_13",
         "art_14",
-        "art_15"
+        "art_15",
+        "art_16"
       ],
-      "words": 6625,
-      "reading_minutes": 33,
+      "words": 6927,
+      "reading_minutes": 35,
       "cover": null,
       "chapters": [
         {
@@ -2835,6 +2836,24 @@
           "genre": "Satire",
           "leak_free": "true",
           "words": 332,
+          "reading_minutes": 2
+        },
+        {
+          "file": "16_art_16_abschnitt_16_die_kalibrierung_der_willen.md",
+          "index": 16,
+          "title": "Abschnitt 16: Die Kalibrierung der Willenseinigung",
+          "article": "art_16",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "661",
+          "manual_ending_code": "G-16-16",
+          "backend": "deepseek",
+          "genre": "Satire",
+          "leak_free": "true",
+          "words": 302,
           "reading_minutes": 2
         }
       ]
