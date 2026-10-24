@@ -3819,7 +3819,7 @@
       "pov": "third_person",
       "setting_summary": "Kurzgeschichten und Szenen, in denen Humor den Ernstfall entlarvt.",
       "characters": [],
-      "chapter_count": 12,
+      "chapter_count": 13,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -3832,10 +3832,11 @@
         "art_09",
         "art_10",
         "art_11",
-        "art_12"
+        "art_12",
+        "art_13"
       ],
-      "words": 4299,
-      "reading_minutes": 21,
+      "words": 4567,
+      "reading_minutes": 23,
       "cover": null,
       "chapters": [
         {
@@ -4070,6 +4071,24 @@
           "genre": "Witzebuch",
           "leak_free": "true",
           "words": 240,
+          "reading_minutes": 1
+        },
+        {
+          "file": "13_art_13_abschnitt_13_die_bewegungsfreiheit_als_l.md",
+          "index": 13,
+          "title": "Abschnitt 13: Die Bewegungsfreiheit als Latenzfehler",
+          "article": "art_13",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "53.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1217",
+          "manual_ending_code": "J-13-13",
+          "backend": "openrouter",
+          "genre": "Witzebuch",
+          "leak_free": "true",
+          "words": 268,
           "reading_minutes": 1
         }
       ]
