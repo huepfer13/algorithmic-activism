@@ -433,7 +433,8 @@
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_010_amtsblatt_fuer_unzumutbarkeit",
     "r6:deepseek-chat:buch_024_die_kammer_der_stimmen",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_019_the_salt_diaries",
-    "r6:deepseek-chat:buch_016_faden_der_gelassenheit"
+    "r6:deepseek-chat:buch_016_faden_der_gelassenheit",
+    "r3:deepseek-chat:buch_029_the_glass_tribunal"
   ],
   "runden": {
     "1": [
@@ -4152,6 +4153,21 @@
         "tokens": "1102",
         "versuche": "1",
         "woerter": 327
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_029_the_glass_tribunal",
+        "code": "H-04-03",
+        "datei": "03_art_04_abschnitt_3_the_precedence_clause.md",
+        "dauer_s": "6.9",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 3,
+        "tokens": "736",
+        "versuche": "1",
+        "woerter": 569
       }
     ],
     "4": [

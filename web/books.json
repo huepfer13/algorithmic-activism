@@ -7392,13 +7392,14 @@
         "Sister Adaeze",
         "Piotr Halvorsen"
       ],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 1482,
-      "reading_minutes": 7,
+      "words": 2051,
+      "reading_minutes": 10,
       "cover": null,
       "chapters": [
         {
@@ -7454,6 +7455,24 @@
           "leak_free": "true",
           "words": 434,
           "reading_minutes": 2
+        },
+        {
+          "file": "03_art_04_abschnitt_3_the_precedence_clause.md",
+          "index": 3,
+          "title": "Abschnitt 3: The Precedence Clause",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.9",
+          "jaccard_max": "0.0",
+          "tokens_generated": "736",
+          "manual_ending_code": "H-04-03",
+          "backend": "deepseek",
+          "genre": "Courtroom_Drama",
+          "leak_free": "true",
+          "words": 569,
+          "reading_minutes": 3
         }
       ]
     }
