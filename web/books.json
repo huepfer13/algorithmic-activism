@@ -1644,7 +1644,7 @@
         "Angeklagter Tomas Reiter",
         "Zeugin Elif Sarikaya"
       ],
-      "chapter_count": 12,
+      "chapter_count": 13,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1657,10 +1657,11 @@
         "art_09",
         "art_10",
         "art_11",
-        "art_12"
+        "art_12",
+        "art_13"
       ],
-      "words": 5858,
-      "reading_minutes": 29,
+      "words": 6309,
+      "reading_minutes": 32,
       "cover": null,
       "chapters": [
         {
@@ -1895,6 +1896,24 @@
           "genre": "Gerichtsdrama",
           "leak_free": "true",
           "words": 379,
+          "reading_minutes": 2
+        },
+        {
+          "file": "13_art_13_abschnitt_13_die_freigabekette.md",
+          "index": 13,
+          "title": "Abschnitt 13: Die Freigabekette",
+          "article": "art_13",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.1",
+          "jaccard_max": "0.091",
+          "tokens_generated": "860",
+          "manual_ending_code": "H-13-13",
+          "backend": "deepseek",
+          "genre": "Gerichtsdrama",
+          "leak_free": "true",
+          "words": 451,
           "reading_minutes": 2
         }
       ]

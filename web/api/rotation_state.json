@@ -412,7 +412,10 @@
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_008_flechtwerk_arkadien",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_029_the_glass_tribunal",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
-    "r6:deepseek-chat:buch_013_aufzeichnungen_eines_archivars"
+    "r6:deepseek-chat:buch_013_aufzeichnungen_eines_archivars",
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_027_das_haus_das_die_namen_fraß",
+    "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_001_das_büro_der_unendlichkeit",
+    "r5:deepseek-chat:buch_007_die_kammer_der_zeugen"
   ],
   "runden": {
     "1": [
@@ -1636,6 +1639,16 @@
         "buch": "buch_029_the_glass_tribunal",
         "datei": null,
         "dauer_s": 0.5,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 1
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_027_das_haus_das_die_namen_fraß",
+        "datei": null,
+        "dauer_s": 0.3,
         "exit": 1,
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
@@ -4993,6 +5006,16 @@
         "tokens": "1537",
         "versuche": "1",
         "woerter": 443
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_001_das_büro_der_unendlichkeit",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 4
       }
     ],
     "5": [
@@ -5565,6 +5588,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 5
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_007_die_kammer_der_zeugen",
+        "code": "H-13-13",
+        "datei": "13_art_13_abschnitt_13_die_freigabekette.md",
+        "dauer_s": "8.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 5,
+        "tokens": "860",
+        "versuche": "1",
+        "woerter": 451
       }
     ],
     "6": [
