@@ -4250,7 +4250,7 @@
       "pov": "third_person",
       "setting_summary": "Kontemplative Einsichten fuer unruhige Zeiten.",
       "characters": [],
-      "chapter_count": 16,
+      "chapter_count": 17,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -4267,10 +4267,11 @@
         "art_13",
         "art_14",
         "art_15",
-        "art_16"
+        "art_16",
+        "art_17"
       ],
-      "words": 4970,
-      "reading_minutes": 25,
+      "words": 5388,
+      "reading_minutes": 27,
       "cover": null,
       "chapters": [
         {
@@ -4577,6 +4578,24 @@
           "genre": "Lebensweisheiten",
           "leak_free": "true",
           "words": 364,
+          "reading_minutes": 2
+        },
+        {
+          "file": "17_art_17_abschnitt_17_die_kalibrierte_ferne.md",
+          "index": 17,
+          "title": "Abschnitt 17: Die kalibrierte Ferne",
+          "article": "art_17",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "21.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "787",
+          "manual_ending_code": "L-17-17",
+          "backend": "deepseek",
+          "genre": "Lebensweisheiten",
+          "leak_free": "",
+          "words": 418,
           "reading_minutes": 2
         }
       ]
