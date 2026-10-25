@@ -1432,7 +1432,7 @@
         "Vera",
         "Juno"
       ],
-      "chapter_count": 13,
+      "chapter_count": 14,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1446,10 +1446,11 @@
         "art_10",
         "art_11",
         "art_12",
-        "art_13"
+        "art_13",
+        "art_14"
       ],
-      "words": 5708,
-      "reading_minutes": 29,
+      "words": 6038,
+      "reading_minutes": 30,
       "cover": null,
       "chapters": [
         {
@@ -1702,6 +1703,24 @@
           "genre": "Parabel",
           "leak_free": "true",
           "words": 326,
+          "reading_minutes": 2
+        },
+        {
+          "file": "14_art_14_abschnitt_14_die_dichtung_der_fugen.md",
+          "index": 14,
+          "title": "Abschnitt 14: Die Dichtung der Fugen",
+          "article": "art_14",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "29.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "896",
+          "manual_ending_code": "D-14-14",
+          "backend": "openrouter",
+          "genre": "Parabel",
+          "leak_free": "true",
+          "words": 330,
           "reading_minutes": 2
         }
       ]
