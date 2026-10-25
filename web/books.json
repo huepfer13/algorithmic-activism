@@ -7566,15 +7566,16 @@
         "Herr Wiesel",
         "Lotta"
       ],
-      "chapter_count": 4,
+      "chapter_count": 5,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
-        "art_04"
+        "art_04",
+        "art_05"
       ],
-      "words": 2963,
-      "reading_minutes": 15,
+      "words": 3448,
+      "reading_minutes": 17,
       "cover": null,
       "chapters": [
         {
@@ -7666,6 +7667,24 @@
           "leak_free": "true",
           "words": 578,
           "reading_minutes": 3
+        },
+        {
+          "file": "05_art_05_abschnitt_5_der_pfeifton_in_der_leitung.md",
+          "index": 5,
+          "title": "Abschnitt 5: Der Pfeifton in der Leitung",
+          "article": "art_05",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "22.5",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1169",
+          "manual_ending_code": "K-05-05",
+          "backend": "openrouter",
+          "genre": "Kinderbuch",
+          "leak_free": "true",
+          "words": 485,
+          "reading_minutes": 2
         }
       ]
     }
