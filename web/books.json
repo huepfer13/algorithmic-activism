@@ -7544,15 +7544,16 @@
         "Sister Adaeze",
         "Piotr Halvorsen"
       ],
-      "chapter_count": 4,
+      "chapter_count": 5,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_09"
       ],
-      "words": 2572,
-      "reading_minutes": 13,
+      "words": 2971,
+      "reading_minutes": 15,
       "cover": null,
       "chapters": [
         {
@@ -7644,6 +7645,24 @@
           "leak_free": "true",
           "words": 521,
           "reading_minutes": 3
+        },
+        {
+          "file": "05_art_09_abschnitt_5_the_interference_threshold.md",
+          "index": 5,
+          "title": "Abschnitt 5: The Interference Threshold",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "35.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1061",
+          "manual_ending_code": "H-09-05",
+          "backend": "openrouter",
+          "genre": "Courtroom_Drama",
+          "leak_free": "true",
+          "words": 399,
+          "reading_minutes": 2
         }
       ]
     },
