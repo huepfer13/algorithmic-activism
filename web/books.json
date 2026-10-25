@@ -7601,16 +7601,17 @@
         "Sister Adaeze",
         "Piotr Halvorsen"
       ],
-      "chapter_count": 5,
+      "chapter_count": 6,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
         "art_05",
-        "art_09"
+        "art_09",
+        "art_12"
       ],
-      "words": 2971,
-      "reading_minutes": 15,
+      "words": 3506,
+      "reading_minutes": 18,
       "cover": null,
       "chapters": [
         {
@@ -7720,6 +7721,24 @@
           "leak_free": "true",
           "words": 399,
           "reading_minutes": 2
+        },
+        {
+          "file": "06_art_12_abschnitt_6_the_calibration_defect.md",
+          "index": 6,
+          "title": "Abschnitt 6: The Calibration Defect",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "727",
+          "manual_ending_code": "H-12-06",
+          "backend": "deepseek",
+          "genre": "Courtroom_Drama",
+          "leak_free": "true",
+          "words": 535,
+          "reading_minutes": 3
         }
       ]
     },
