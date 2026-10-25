@@ -374,7 +374,7 @@
       "pov": "third_person",
       "setting_summary": "Sieben Quellen, sieben Pruefungen: eine Wanderung durch die Landschaften der Rechte.",
       "characters": [],
-      "chapter_count": 12,
+      "chapter_count": 13,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -387,10 +387,11 @@
         "art_09",
         "art_10",
         "art_11",
-        "art_12"
+        "art_12",
+        "art_13"
       ],
-      "words": 6338,
-      "reading_minutes": 32,
+      "words": 6717,
+      "reading_minutes": 34,
       "cover": null,
       "chapters": [
         {
@@ -625,6 +626,24 @@
           "genre": "Märchen",
           "leak_free": "true",
           "words": 482,
+          "reading_minutes": 2
+        },
+        {
+          "file": "13_art_13_abschnitt_13_die_prüfung_des_freien_gang.md",
+          "index": 13,
+          "title": "Abschnitt 13: Die Prüfung des freien Ganges",
+          "article": "art_13",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "77.2",
+          "jaccard_max": "0.019",
+          "tokens_generated": "2047",
+          "manual_ending_code": "M-13-13",
+          "backend": "openrouter",
+          "genre": "Märchen",
+          "leak_free": "true",
+          "words": 379,
           "reading_minutes": 2
         }
       ]
