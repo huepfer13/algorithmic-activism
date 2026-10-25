@@ -464,7 +464,10 @@
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_029_the_glass_tribunal",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_024_die_kammer_der_stimmen",
     "r6:deepseek-chat:buch_019_the_salt_diaries",
-    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_009_depeschen_aus_dem_kordon"
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_009_depeschen_aus_dem_kordon",
+    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_030_die_wolkenschule_über_dem_marktplatz",
+    "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_012_manifest_der_unantastbaren",
+    "r6:deepseek-chat:buch_012_manifest_der_unantastbaren"
   ],
   "runden": {
     "1": [
@@ -4283,6 +4286,16 @@
         "tokens": "1711",
         "versuche": "1",
         "woerter": 661
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_030_die_wolkenschule_über_dem_marktplatz",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 3
       }
     ],
     "4": [
@@ -6032,6 +6045,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 5
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_012_manifest_der_unantastbaren",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 5
       }
     ],
     "6": [
@@ -6459,6 +6482,21 @@
         "tokens": "1650",
         "versuche": "1",
         "woerter": 447
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_012_manifest_der_unantastbaren",
+        "code": "R-13-13",
+        "datei": "13_art_13_abschnitt_13_der_parameter_der_freizügig.md",
+        "dauer_s": "5.9",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 6,
+        "tokens": "631",
+        "versuche": "1",
+        "woerter": 334
       }
     ],
     "7": [

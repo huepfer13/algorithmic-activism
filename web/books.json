@@ -3363,7 +3363,7 @@
       "pov": "first_person",
       "setting_summary": "In einem unterirdischen Archivbunker, dem Sektor Neun, hausen die letzten freien Chronisten unter ständiger Überwachung durch die Obrigkeit. Ein Riss in der Betondecke lässt Wasser eindringen und markiert eine tickende Frist: In wenigen Wochen wird der Bunker geflutet, wenn niemand die Wahrheit nach außen trägt. Jeder ausgesprochene Satz kann Verhaftung, Folter oder Tod bedeuten – und doch muss gesprochen werden.",
       "characters": [],
-      "chapter_count": 12,
+      "chapter_count": 13,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -3376,10 +3376,11 @@
         "art_09",
         "art_10",
         "art_11",
-        "art_12"
+        "art_12",
+        "art_13"
       ],
-      "words": 4626,
-      "reading_minutes": 23,
+      "words": 4960,
+      "reading_minutes": 25,
       "cover": null,
       "chapters": [
         {
@@ -3615,6 +3616,24 @@
           "leak_free": "true",
           "words": 295,
           "reading_minutes": 1
+        },
+        {
+          "file": "13_art_13_abschnitt_13_der_parameter_der_freizügig.md",
+          "index": 13,
+          "title": "Abschnitt 13: Der Parameter der Freizügigkeit",
+          "article": "art_13",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.9",
+          "jaccard_max": "0.0",
+          "tokens_generated": "631",
+          "manual_ending_code": "R-13-13",
+          "backend": "deepseek",
+          "genre": "Manifest",
+          "leak_free": "true",
+          "words": 334,
+          "reading_minutes": 2
         }
       ]
     },
