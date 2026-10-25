@@ -374,7 +374,7 @@
       "pov": "third_person",
       "setting_summary": "Sieben Quellen, sieben Pruefungen: eine Wanderung durch die Landschaften der Rechte.",
       "characters": [],
-      "chapter_count": 13,
+      "chapter_count": 14,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -388,10 +388,11 @@
         "art_10",
         "art_11",
         "art_12",
-        "art_13"
+        "art_13",
+        "art_14"
       ],
-      "words": 6717,
-      "reading_minutes": 34,
+      "words": 7234,
+      "reading_minutes": 36,
       "cover": null,
       "chapters": [
         {
@@ -645,6 +646,24 @@
           "leak_free": "true",
           "words": 379,
           "reading_minutes": 2
+        },
+        {
+          "file": "14_art_14_abschnitt_14_die_prüfung_der_zuflucht.md",
+          "index": 14,
+          "title": "Abschnitt 14: Die Prüfung der Zuflucht",
+          "article": "art_14",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "955",
+          "manual_ending_code": "M-14-14",
+          "backend": "deepseek",
+          "genre": "Märchen",
+          "leak_free": "true",
+          "words": 517,
+          "reading_minutes": 3
         }
       ]
     },

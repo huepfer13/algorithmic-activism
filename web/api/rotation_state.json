@@ -455,7 +455,9 @@
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_004_neon_exil",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_009_depeschen_aus_dem_kordon",
     "r6:deepseek-chat:buch_026_the_ledger_of_ash_harbour",
-    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_006_das_gericht_vor_der_mauer"
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_006_das_gericht_vor_der_mauer",
+    "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_027_das_haus_das_die_namen_fraß",
+    "r6:deepseek-chat:buch_002_die_sieben_quellen"
   ],
   "runden": {
     "1": [
@@ -5963,6 +5965,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 5
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_027_das_haus_das_die_namen_fraß",
+        "datei": null,
+        "dauer_s": 0.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 5
       }
     ],
     "6": [
@@ -6335,6 +6347,21 @@
         "tokens": "896",
         "versuche": "1",
         "woerter": 330
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_002_die_sieben_quellen",
+        "code": "M-14-14",
+        "datei": "14_art_14_abschnitt_14_die_prüfung_der_zuflucht.md",
+        "dauer_s": "9.7",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 6,
+        "tokens": "955",
+        "versuche": "1",
+        "woerter": 517
       }
     ],
     "7": [
