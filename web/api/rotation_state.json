@@ -467,7 +467,8 @@
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_009_depeschen_aus_dem_kordon",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_030_die_wolkenschule_über_dem_marktplatz",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_012_manifest_der_unantastbaren",
-    "r6:deepseek-chat:buch_012_manifest_der_unantastbaren"
+    "r6:deepseek-chat:buch_012_manifest_der_unantastbaren",
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_001_das_büro_der_unendlichkeit"
   ],
   "runden": {
     "1": [
@@ -5298,6 +5299,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 4
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_001_das_büro_der_unendlichkeit",
+        "code": "E-16-18",
+        "datei": "18_art_16_abschnitt_18_kalibrierung_der_ehefähigke.md",
+        "dauer_s": "220.2",
+        "ending_ok": "false",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 4,
+        "tokens": "2895",
+        "versuche": "3",
+        "woerter": 324
       }
     ],
     "5": [

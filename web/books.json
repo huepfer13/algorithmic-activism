@@ -16,7 +16,7 @@
         "Nova",
         "Omicron"
       ],
-      "chapter_count": 17,
+      "chapter_count": 18,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -33,11 +33,12 @@
         "art_13",
         "art_14",
         "art_15",
+        "art_16",
         "art_19",
         "art_26"
       ],
-      "words": 8353,
-      "reading_minutes": 42,
+      "words": 8677,
+      "reading_minutes": 43,
       "cover": null,
       "chapters": [
         {
@@ -362,6 +363,24 @@
           "genre": "Gerätehandbuch",
           "leak_free": "",
           "words": 359,
+          "reading_minutes": 2
+        },
+        {
+          "file": "18_art_16_abschnitt_18_kalibrierung_der_ehefähigke.md",
+          "index": 18,
+          "title": "Abschnitt 18: Kalibrierung der Ehefähigkeits- und Familiengründungs-Parameter im Sektor-24 unter Berücksichtigung der Zero-Home-Storage-Erweiterung",
+          "article": "art_16",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "220.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "2895",
+          "manual_ending_code": "E-16-18",
+          "backend": "openrouter",
+          "genre": "Gerätehandbuch",
+          "leak_free": "",
+          "words": 324,
           "reading_minutes": 2
         }
       ]
