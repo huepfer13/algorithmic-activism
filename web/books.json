@@ -7528,12 +7528,13 @@
         "Herr Wiesel",
         "Lotta"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 1270,
-      "reading_minutes": 6,
+      "words": 1785,
+      "reading_minutes": 9,
       "cover": null,
       "chapters": [
         {
@@ -7570,6 +7571,24 @@
           "genre": "Kinderbuch",
           "leak_free": "true",
           "words": 661,
+          "reading_minutes": 3
+        },
+        {
+          "file": "02_art_02_abschnitt_2_der_prüfer_und_der_graue_sta.md",
+          "index": 2,
+          "title": "Abschnitt 2: Der Prüfer und der graue Staub",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "44.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1589",
+          "manual_ending_code": "K-02-02",
+          "backend": "openrouter",
+          "genre": "Kinderbuch",
+          "leak_free": "true",
+          "words": 515,
           "reading_minutes": 3
         }
       ]
