@@ -441,7 +441,8 @@
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_020_die_quote_der_stille",
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_004_neon_exil",
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_030_die_wolkenschule_über_dem_marktplatz",
-    "r1:deepseek-chat:buch_030_die_wolkenschule_über_dem_marktplatz"
+    "r1:deepseek-chat:buch_030_die_wolkenschule_über_dem_marktplatz",
+    "r4:deepseek-chat:buch_026_the_ledger_of_ash_harbour"
   ],
   "runden": {
     "1": [
@@ -5182,6 +5183,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 4
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_026_the_ledger_of_ash_harbour",
+        "code": "I-26-09",
+        "datei": "09_art_26_abschnitt_9_the_calibration_of_empty_roo.md",
+        "dauer_s": "6.8",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 4,
+        "tokens": "688",
+        "versuche": "1",
+        "woerter": 487
       }
     ],
     "5": [
