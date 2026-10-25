@@ -457,7 +457,9 @@
     "r6:deepseek-chat:buch_026_the_ledger_of_ash_harbour",
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_006_das_gericht_vor_der_mauer",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_027_das_haus_das_die_namen_fraß",
-    "r6:deepseek-chat:buch_002_die_sieben_quellen"
+    "r6:deepseek-chat:buch_002_die_sieben_quellen",
+    "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_011_das_haus_ohne_widerhall",
+    "r5:deepseek-chat:buch_009_depeschen_aus_dem_kordon"
   ],
   "runden": {
     "1": [
@@ -5253,6 +5255,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 4
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_011_das_haus_ohne_widerhall",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 4
       }
     ],
     "5": [
@@ -5975,6 +5987,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 5
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_009_depeschen_aus_dem_kordon",
+        "code": "B-15-15",
+        "datei": "15_art_15_abschnitt_15_die_fünfzehnte_kalibrierung.md",
+        "dauer_s": "8.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 5,
+        "tokens": "957",
+        "versuche": "1",
+        "woerter": 466
       }
     ],
     "6": [

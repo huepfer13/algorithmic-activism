@@ -2372,7 +2372,7 @@
         "Nadia",
         "Kroll"
       ],
-      "chapter_count": 14,
+      "chapter_count": 15,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -2387,10 +2387,11 @@
         "art_11",
         "art_12",
         "art_13",
-        "art_14"
+        "art_14",
+        "art_15"
       ],
-      "words": 6828,
-      "reading_minutes": 34,
+      "words": 7294,
+      "reading_minutes": 36,
       "cover": null,
       "chapters": [
         {
@@ -2661,6 +2662,24 @@
           "genre": "Briefroman",
           "leak_free": "true",
           "words": 443,
+          "reading_minutes": 2
+        },
+        {
+          "file": "15_art_15_abschnitt_15_die_fünfzehnte_kalibrierung.md",
+          "index": 15,
+          "title": "Abschnitt 15: Die fünfzehnte Kalibrierung",
+          "article": "art_15",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "957",
+          "manual_ending_code": "B-15-15",
+          "backend": "deepseek",
+          "genre": "Briefroman",
+          "leak_free": "true",
+          "words": 466,
           "reading_minutes": 2
         }
       ]
