@@ -472,7 +472,8 @@
     "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_016_faden_der_gelassenheit",
     "r7:deepseek-chat:buch_029_the_glass_tribunal",
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_017_des_volkes_mund",
-    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_020_die_quote_der_stille"
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_020_die_quote_der_stille",
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren"
   ],
   "runden": {
     "1": [
@@ -6105,6 +6106,21 @@
         "tokens": "1168",
         "versuche": "1",
         "woerter": 334
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+        "code": "G-08-08",
+        "datei": "08_art_08_abschnitt_8_die_kalibrierung_des_rechtsb.md",
+        "dauer_s": "36.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 5,
+        "tokens": "1836",
+        "versuche": "1",
+        "woerter": 422
       }
     ],
     "6": [

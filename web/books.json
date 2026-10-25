@@ -7465,7 +7465,7 @@
         "Mira Sandoval",
         "Herr Zwirbel"
       ],
-      "chapter_count": 7,
+      "chapter_count": 8,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -7473,10 +7473,11 @@
         "art_04",
         "art_05",
         "art_06",
-        "art_07"
+        "art_07",
+        "art_08"
       ],
-      "words": 3970,
-      "reading_minutes": 20,
+      "words": 4392,
+      "reading_minutes": 22,
       "cover": null,
       "chapters": [
         {
@@ -7622,6 +7623,24 @@
           "leak_free": "true",
           "words": 524,
           "reading_minutes": 3
+        },
+        {
+          "file": "08_art_08_abschnitt_8_die_kalibrierung_des_rechtsb.md",
+          "index": 8,
+          "title": "Abschnitt 8: Die Kalibrierung des Rechtsbehelfs",
+          "article": "art_08",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "36.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1836",
+          "manual_ending_code": "G-08-08",
+          "backend": "openrouter",
+          "genre": "Satire",
+          "leak_free": "true",
+          "words": 422,
+          "reading_minutes": 2
         }
       ]
     },
