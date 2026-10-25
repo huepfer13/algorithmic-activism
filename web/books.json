@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 30,
+  "count": 31,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -7989,6 +7989,46 @@
           "leak_free": "true",
           "words": 485,
           "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_031_die_kammer_der_sieben_stimmen",
+      "title": "Die Kammer der sieben Stimmen",
+      "language": "DE",
+      "style": "Gerichtsdrama",
+      "pov": "third_person",
+      "setting_summary": "Eine provisorische Schiedskammer tagt in einem fensterlosen Untergeschoss eines stillgelegten Hafenspeichers, während draußen eine Stadt unter Ausnahmezustand steht. Die Kammer hat nur sieben Tage Zeit, über die Rechtmäßigkeit von Internierungen zu entscheiden, bevor ihre Vollmacht erlischt. Jede Sitzung wird aufgezeichnet, die Zeugen sind beschränkt, und Strom wie Aktenzugang sind rationiert.",
+      "characters": [
+        "Mara Vondracek",
+        "Elias Brandt",
+        "Richterin Kessler",
+        "Tomás Ferreira",
+        "Hanna Ostrowski"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 543,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.9",
+          "jaccard_max": "",
+          "tokens_generated": "1121",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Gerichtsdrama",
+          "leak_free": "",
+          "words": 543,
+          "reading_minutes": 3
         }
       ]
     }

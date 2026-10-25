@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_031_die_kammer_der_sieben_stimmen",
+  "title": "Die Kammer der sieben Stimmen",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Gerichtsdrama",
+  "setting_summary": "Eine provisorische Schiedskammer tagt in einem fensterlosen Untergeschoss eines stillgelegten Hafenspeichers, während draußen eine Stadt unter Ausnahmezustand steht. Die Kammer hat nur sieben Tage Zeit, über die Rechtmäßigkeit von Internierungen zu entscheiden, bevor ihre Vollmacht erlischt. Jede Sitzung wird aufgezeichnet, die Zeugen sind beschränkt, und Strom wie Aktenzugang sind rationiert.",
+  "characters": [
+    "Mara Vondracek",
+    "Elias Brandt",
+    "Richterin Kessler",
+    "Tomás Ferreira",
+    "Hanna Ostrowski"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-10-25T23:05:29.534618+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
