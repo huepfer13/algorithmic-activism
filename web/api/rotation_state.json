@@ -459,7 +459,8 @@
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_027_das_haus_das_die_namen_fraß",
     "r6:deepseek-chat:buch_002_die_sieben_quellen",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_011_das_haus_ohne_widerhall",
-    "r5:deepseek-chat:buch_009_depeschen_aus_dem_kordon"
+    "r5:deepseek-chat:buch_009_depeschen_aus_dem_kordon",
+    "r6:deepseek-chat:buch_029_the_glass_tribunal"
   ],
   "runden": {
     "1": [
@@ -6389,6 +6390,21 @@
         "tokens": "955",
         "versuche": "1",
         "woerter": 517
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_029_the_glass_tribunal",
+        "code": "H-05-04",
+        "datei": "04_art_05_abschnitt_4_the_calibration_protocol.md",
+        "dauer_s": "7.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 6,
+        "tokens": "691",
+        "versuche": "1",
+        "woerter": 521
       }
     ],
     "7": [

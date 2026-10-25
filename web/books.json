@@ -7544,14 +7544,15 @@
         "Sister Adaeze",
         "Piotr Halvorsen"
       ],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_03",
-        "art_04"
+        "art_04",
+        "art_05"
       ],
-      "words": 2051,
-      "reading_minutes": 10,
+      "words": 2572,
+      "reading_minutes": 13,
       "cover": null,
       "chapters": [
         {
@@ -7624,6 +7625,24 @@
           "genre": "Courtroom_Drama",
           "leak_free": "true",
           "words": 569,
+          "reading_minutes": 3
+        },
+        {
+          "file": "04_art_05_abschnitt_4_the_calibration_protocol.md",
+          "index": 4,
+          "title": "Abschnitt 4: The Calibration Protocol",
+          "article": "art_05",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "691",
+          "manual_ending_code": "H-05-04",
+          "backend": "deepseek",
+          "genre": "Courtroom_Drama",
+          "leak_free": "true",
+          "words": 521,
           "reading_minutes": 3
         }
       ]
