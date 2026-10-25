@@ -470,7 +470,8 @@
     "r6:deepseek-chat:buch_012_manifest_der_unantastbaren",
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_001_das_büro_der_unendlichkeit",
     "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_016_faden_der_gelassenheit",
-    "r7:deepseek-chat:buch_029_the_glass_tribunal"
+    "r7:deepseek-chat:buch_029_the_glass_tribunal",
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_017_des_volkes_mund"
   ],
   "runden": {
     "1": [
@@ -6073,6 +6074,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 5
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_017_des_volkes_mund",
+        "code": "V-20-20",
+        "datei": "20_art_20_abschnitt_20_der_tragende_kreis.md",
+        "dauer_s": "40.5",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 5,
+        "tokens": "1630",
+        "versuche": "1",
+        "woerter": 237
       }
     ],
     "6": [

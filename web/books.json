@@ -4950,7 +4950,7 @@
       "pov": "third_person",
       "setting_summary": "Etymologische Miniaturen zu gefluegelten Worten.",
       "characters": [],
-      "chapter_count": 19,
+      "chapter_count": 20,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -4970,10 +4970,11 @@
         "art_16",
         "art_17",
         "art_18",
-        "art_19"
+        "art_19",
+        "art_20"
       ],
-      "words": 6972,
-      "reading_minutes": 35,
+      "words": 7209,
+      "reading_minutes": 36,
       "cover": null,
       "chapters": [
         {
@@ -5334,6 +5335,24 @@
           "genre": "Sprichwoerter",
           "leak_free": "true",
           "words": 290,
+          "reading_minutes": 1
+        },
+        {
+          "file": "20_art_20_abschnitt_20_der_tragende_kreis.md",
+          "index": 20,
+          "title": "Abschnitt 20: Der tragende Kreis",
+          "article": "art_20",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "40.5",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1630",
+          "manual_ending_code": "V-20-20",
+          "backend": "openrouter",
+          "genre": "Sprichwoerter",
+          "leak_free": "true",
+          "words": 237,
           "reading_minutes": 1
         }
       ]
