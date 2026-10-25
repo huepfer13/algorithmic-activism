@@ -440,7 +440,8 @@
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_026_the_ledger_of_ash_harbour",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_020_die_quote_der_stille",
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_004_neon_exil",
-    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_030_die_wolkenschule_über_dem_marktplatz"
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_030_die_wolkenschule_über_dem_marktplatz",
+    "r1:deepseek-chat:buch_030_die_wolkenschule_über_dem_marktplatz"
   ],
   "runden": {
     "1": [
@@ -1708,6 +1709,21 @@
         "tokens": "1562",
         "versuche": "1",
         "woerter": 524
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_030_die_wolkenschule_über_dem_marktplatz",
+        "code": "K-03-03",
+        "datei": "03_art_03_abschnitt_3_der_hammer_im_regal.md",
+        "dauer_s": "11.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 1,
+        "tokens": "1193",
+        "versuche": "1",
+        "woerter": 600
       }
     ],
     "10": [

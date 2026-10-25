@@ -7528,13 +7528,14 @@
         "Herr Wiesel",
         "Lotta"
       ],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_02"
+        "art_02",
+        "art_03"
       ],
-      "words": 1785,
-      "reading_minutes": 9,
+      "words": 2385,
+      "reading_minutes": 12,
       "cover": null,
       "chapters": [
         {
@@ -7589,6 +7590,24 @@
           "genre": "Kinderbuch",
           "leak_free": "true",
           "words": 515,
+          "reading_minutes": 3
+        },
+        {
+          "file": "03_art_03_abschnitt_3_der_hammer_im_regal.md",
+          "index": 3,
+          "title": "Abschnitt 3: Der Hammer im Regal",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "11.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1193",
+          "manual_ending_code": "K-03-03",
+          "backend": "deepseek",
+          "genre": "Kinderbuch",
+          "leak_free": "true",
+          "words": 600,
           "reading_minutes": 3
         }
       ]
