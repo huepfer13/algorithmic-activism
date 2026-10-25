@@ -5789,7 +5789,7 @@
         "Dorn",
         "Elia"
       ],
-      "chapter_count": 11,
+      "chapter_count": 12,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -5801,10 +5801,11 @@
         "art_08",
         "art_09",
         "art_10",
-        "art_11"
+        "art_11",
+        "art_12"
       ],
-      "words": 5510,
-      "reading_minutes": 28,
+      "words": 5844,
+      "reading_minutes": 29,
       "cover": null,
       "chapters": [
         {
@@ -6022,6 +6023,24 @@
           "leak_free": "true",
           "words": 588,
           "reading_minutes": 3
+        },
+        {
+          "file": "12_art_12_abschnitt_12_privatheit_als_parameter.md",
+          "index": 12,
+          "title": "Abschnitt 12: Privatheit als Parameter",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "40.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1168",
+          "manual_ending_code": "S-12-12",
+          "backend": "openrouter",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "true",
+          "words": 334,
+          "reading_minutes": 2
         }
       ]
     },
