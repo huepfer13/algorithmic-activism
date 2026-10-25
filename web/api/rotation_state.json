@@ -445,7 +445,13 @@
     "r4:deepseek-chat:buch_026_the_ledger_of_ash_harbour",
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_030_die_wolkenschule_über_dem_marktplatz",
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_002_die_sieben_quellen",
-    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_030_die_wolkenschule_über_dem_marktplatz"
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_030_die_wolkenschule_über_dem_marktplatz",
+    "r6:deepseek-chat:buch_018_rhymes_of_the_commons",
+    "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_015_das_kochbuch_der_allmende",
+    "r7:deepseek-chat:buch_023_the_gravity_room",
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_023_the_gravity_room",
+    "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_025_the_hold",
+    "r8:deepseek-chat:buch_011_das_haus_ohne_widerhall"
   ],
   "runden": {
     "1": [
@@ -6260,6 +6266,26 @@
         "tokens": "2047",
         "versuche": "1",
         "woerter": 379
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_018_rhymes_of_the_commons",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 6
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_015_das_kochbuch_der_allmende",
+        "datei": null,
+        "dauer_s": 0.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 6
       }
     ],
     "7": [
@@ -6377,6 +6403,36 @@
         "tokens": "11685",
         "versuche": "0",
         "woerter": 321
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_023_the_gravity_room",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 7
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_023_the_gravity_room",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 7
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_025_the_hold",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 7
       }
     ],
     "8": [
@@ -6499,6 +6555,21 @@
         "tokens": "10039",
         "versuche": "0",
         "woerter": 306
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_011_das_haus_ohne_widerhall",
+        "code": "W-14-14",
+        "datei": "14_art_14_abschnitt_14_die_asyllinie.md",
+        "dauer_s": "10.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 8,
+        "tokens": "1061",
+        "versuche": "1",
+        "woerter": 581
       }
     ],
     "9": [
