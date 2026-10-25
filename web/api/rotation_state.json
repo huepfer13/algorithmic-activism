@@ -483,7 +483,8 @@
     "r6:deepseek-chat:buch_025_the_hold",
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_018_rhymes_of_the_commons",
     "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_019_the_salt_diaries",
-    "r7:deepseek-chat:buch_014_der_unberechenbare_humor"
+    "r7:deepseek-chat:buch_014_der_unberechenbare_humor",
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_024_die_kammer_der_stimmen"
   ],
   "runden": {
     "1": [
@@ -6171,6 +6172,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 5
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_024_die_kammer_der_stimmen",
+        "code": "P-10-10",
+        "datei": "10_art_10_abschnitt_10_die_unparteilichkeits_kalib.md",
+        "dauer_s": "21.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 5,
+        "tokens": "1307",
+        "versuche": "1",
+        "woerter": 370
       }
     ],
     "6": [
