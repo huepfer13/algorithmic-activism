@@ -5102,7 +5102,7 @@
       "pov": "third_person",
       "setting_summary": "Etymologische Miniaturen zu gefluegelten Worten.",
       "characters": [],
-      "chapter_count": 20,
+      "chapter_count": 21,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -5123,10 +5123,11 @@
         "art_17",
         "art_18",
         "art_19",
-        "art_20"
+        "art_20",
+        "art_21"
       ],
-      "words": 7209,
-      "reading_minutes": 36,
+      "words": 7435,
+      "reading_minutes": 37,
       "cover": null,
       "chapters": [
         {
@@ -5505,6 +5506,24 @@
           "genre": "Sprichwoerter",
           "leak_free": "true",
           "words": 237,
+          "reading_minutes": 1
+        },
+        {
+          "file": "21_art_21_abschnitt_21_der_stille_zähler.md",
+          "index": 21,
+          "title": "Abschnitt 21: Der stille Zähler",
+          "article": "art_21",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "33.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "927",
+          "manual_ending_code": "V-21-21",
+          "backend": "openrouter",
+          "genre": "Sprichwoerter",
+          "leak_free": "true",
+          "words": 226,
           "reading_minutes": 1
         }
       ]

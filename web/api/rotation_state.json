@@ -505,7 +505,8 @@
     "r6:deepseek-chat:buch_009_depeschen_aus_dem_kordon",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_020_die_quote_der_stille",
-    "r6:deepseek-chat:buch_008_flechtwerk_arkadien"
+    "r6:deepseek-chat:buch_008_flechtwerk_arkadien",
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_017_des_volkes_mund"
   ],
   "runden": {
     "1": [
@@ -5481,6 +5482,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 4
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_017_des_volkes_mund",
+        "code": "V-21-21",
+        "datei": "21_art_21_abschnitt_21_der_stille_zähler.md",
+        "dauer_s": "33.7",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 4,
+        "tokens": "927",
+        "versuche": "1",
+        "woerter": 226
       }
     ],
     "5": [
