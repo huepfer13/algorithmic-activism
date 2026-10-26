@@ -508,7 +508,10 @@
     "r6:deepseek-chat:buch_008_flechtwerk_arkadien",
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_017_des_volkes_mund",
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_031_die_kammer_der_sieben_stimmen",
-    "r3:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren"
+    "r3:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+    "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_030_die_wolkenschule_über_dem_marktplatz",
+    "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_013_aufzeichnungen_eines_archivars",
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren"
   ],
   "runden": {
     "1": [
@@ -5529,6 +5532,16 @@
         "tokens": "1315",
         "versuche": "1",
         "woerter": 383
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_030_die_wolkenschule_über_dem_marktplatz",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 4
       }
     ],
     "5": [
@@ -6416,6 +6429,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 5
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_013_aufzeichnungen_eines_archivars",
+        "datei": null,
+        "dauer_s": 0.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 5
       }
     ],
     "6": [
@@ -7023,6 +7046,21 @@
         "tokens": "779",
         "versuche": "1",
         "woerter": 398
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+        "code": "G-10-10",
+        "datei": "10_art_10_abschnitt_10_die_verfahrensdämpfung.md",
+        "dauer_s": "38.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 6,
+        "tokens": "1320",
+        "versuche": "1",
+        "woerter": 357
       }
     ],
     "7": [
