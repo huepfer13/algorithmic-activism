@@ -486,7 +486,8 @@
     "r7:deepseek-chat:buch_014_der_unberechenbare_humor",
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_024_die_kammer_der_stimmen",
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_029_the_glass_tribunal",
-    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_031_die_kammer_der_sieben_stimmen"
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_031_die_kammer_der_sieben_stimmen",
+    "r6:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit"
   ],
   "runden": {
     "1": [
@@ -6711,6 +6712,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 6
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_010_amtsblatt_fuer_unzumutbarkeit",
+        "code": "G-17-17",
+        "datei": "17_art_17_abschnitt_17_die_verwahrung_der_habselig.md",
+        "dauer_s": "10.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 6,
+        "tokens": "977",
+        "versuche": "1",
+        "woerter": 456
       }
     ],
     "7": [

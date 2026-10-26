@@ -2755,7 +2755,7 @@
         "Kalle Ohm",
         "Frau Säckel"
       ],
-      "chapter_count": 16,
+      "chapter_count": 17,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -2772,10 +2772,11 @@
         "art_13",
         "art_14",
         "art_15",
-        "art_16"
+        "art_16",
+        "art_17"
       ],
-      "words": 6927,
-      "reading_minutes": 35,
+      "words": 7383,
+      "reading_minutes": 37,
       "cover": null,
       "chapters": [
         {
@@ -3082,6 +3083,24 @@
           "genre": "Satire",
           "leak_free": "true",
           "words": 302,
+          "reading_minutes": 2
+        },
+        {
+          "file": "17_art_17_abschnitt_17_die_verwahrung_der_habselig.md",
+          "index": 17,
+          "title": "Abschnitt 17: Die Verwahrung der Habseligkeiten",
+          "article": "art_17",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "10.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "977",
+          "manual_ending_code": "G-17-17",
+          "backend": "deepseek",
+          "genre": "Satire",
+          "leak_free": "true",
+          "words": 456,
           "reading_minutes": 2
         }
       ]
