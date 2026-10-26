@@ -513,7 +513,8 @@
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_013_aufzeichnungen_eines_archivars",
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
     "r2:deepseek-chat:buch_031_die_kammer_der_sieben_stimmen",
-    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_010_amtsblatt_fuer_unzumutbarkeit"
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_010_amtsblatt_fuer_unzumutbarkeit",
+    "r1:deepseek-chat:buch_031_die_kammer_der_sieben_stimmen"
   ],
   "runden": {
     "1": [
@@ -1821,6 +1822,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 1
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_031_die_kammer_der_sieben_stimmen",
+        "code": "H-05-05",
+        "datei": "05_art_05_abschnitt_5_die_kalibrierungsvorgabe_05.md",
+        "dauer_s": "8.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 1,
+        "tokens": "937",
+        "versuche": "1",
+        "woerter": 447
       }
     ],
     "10": [
