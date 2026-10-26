@@ -517,7 +517,11 @@
     "r1:deepseek-chat:buch_031_die_kammer_der_sieben_stimmen",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_029_the_glass_tribunal",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_022_the_ledger_of_vanishing_rain",
-    "r6:deepseek-chat:buch_017_des_volkes_mund"
+    "r6:deepseek-chat:buch_017_des_volkes_mund",
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_019_the_salt_diaries",
+    "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_025_the_hold",
+    "r7:deepseek-chat:buch_026_the_ledger_of_ash_harbour",
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_014_der_unberechenbare_humor"
   ],
   "runden": {
     "1": [
@@ -7147,6 +7151,26 @@
         "tokens": "826",
         "versuche": "1",
         "woerter": 390
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_019_the_salt_diaries",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 6
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_025_the_hold",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 6
       }
     ],
     "7": [
@@ -7339,6 +7363,31 @@
         "tokens": "973",
         "versuche": "1",
         "woerter": 419
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_026_the_ledger_of_ash_harbour",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 7
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_014_der_unberechenbare_humor",
+        "code": "J-15-15",
+        "datei": "15_art_15_abschnitt_15_die_passkontrolle.md",
+        "dauer_s": "30.9",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 7,
+        "tokens": "1634",
+        "versuche": "1",
+        "woerter": 371
       }
     ],
     "8": [

@@ -4123,7 +4123,7 @@
       "pov": "third_person",
       "setting_summary": "Kurzgeschichten und Szenen, in denen Humor den Ernstfall entlarvt.",
       "characters": [],
-      "chapter_count": 14,
+      "chapter_count": 15,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -4138,10 +4138,11 @@
         "art_11",
         "art_12",
         "art_13",
-        "art_14"
+        "art_14",
+        "art_15"
       ],
-      "words": 4986,
-      "reading_minutes": 25,
+      "words": 5357,
+      "reading_minutes": 27,
       "cover": null,
       "chapters": [
         {
@@ -4412,6 +4413,24 @@
           "genre": "Witzebuch",
           "leak_free": "true",
           "words": 419,
+          "reading_minutes": 2
+        },
+        {
+          "file": "15_art_15_abschnitt_15_die_passkontrolle.md",
+          "index": 15,
+          "title": "Abschnitt 15: Die Passkontrolle",
+          "article": "art_15",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "30.9",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1634",
+          "manual_ending_code": "J-15-15",
+          "backend": "openrouter",
+          "genre": "Witzebuch",
+          "leak_free": "true",
+          "words": 371,
           "reading_minutes": 2
         }
       ]
