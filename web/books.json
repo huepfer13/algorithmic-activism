@@ -6807,7 +6807,7 @@
         "Vera",
         "Der Chronist"
       ],
-      "chapter_count": 11,
+      "chapter_count": 12,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -6819,10 +6819,11 @@
         "art_08",
         "art_09",
         "art_10",
-        "art_11"
+        "art_11",
+        "art_12"
       ],
-      "words": 5066,
-      "reading_minutes": 25,
+      "words": 5363,
+      "reading_minutes": 27,
       "cover": null,
       "chapters": [
         {
@@ -7040,6 +7041,24 @@
           "leak_free": "true",
           "words": 436,
           "reading_minutes": 2
+        },
+        {
+          "file": "12_art_12_abschnitt_12_korrespondenzintegrität.md",
+          "index": 12,
+          "title": "Abschnitt 12: Korrespondenzintegrität",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "48.0",
+          "jaccard_max": "0.022",
+          "tokens_generated": "1569",
+          "manual_ending_code": "P-12-12",
+          "backend": "openrouter",
+          "genre": "Philosophischer_Essay",
+          "leak_free": "true",
+          "words": 297,
+          "reading_minutes": 1
         }
       ]
     },

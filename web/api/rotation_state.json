@@ -496,7 +496,11 @@
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_015_das_kochbuch_der_allmende",
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_029_the_glass_tribunal",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_031_die_kammer_der_sieben_stimmen",
-    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_001_das_büro_der_unendlichkeit"
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_001_das_büro_der_unendlichkeit",
+    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_031_die_kammer_der_sieben_stimmen",
+    "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_012_manifest_der_unantastbaren",
+    "r6:deepseek-chat:buch_021_the_bell_of_the_ninth_gate",
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_024_die_kammer_der_stimmen"
   ],
   "runden": {
     "1": [
@@ -4375,6 +4379,16 @@
         "tokens": "1362",
         "versuche": "2",
         "woerter": 370
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_031_die_kammer_der_sieben_stimmen",
+        "datei": null,
+        "dauer_s": 1.5,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 3
       }
     ],
     "4": [
@@ -5423,6 +5437,16 @@
         "buch": "buch_031_die_kammer_der_sieben_stimmen",
         "datei": null,
         "dauer_s": 0.4,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 4
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_012_manifest_der_unantastbaren",
+        "datei": null,
+        "dauer_s": 0.3,
         "exit": 1,
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
@@ -6856,6 +6880,31 @@
         "tokens": "891",
         "versuche": "1",
         "woerter": 282
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_021_the_bell_of_the_ninth_gate",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 6
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_024_die_kammer_der_stimmen",
+        "code": "P-12-12",
+        "datei": "12_art_12_abschnitt_12_korrespondenzintegrität.md",
+        "dauer_s": "48.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 6,
+        "tokens": "1569",
+        "versuche": "1",
+        "woerter": 297
       }
     ],
     "7": [
