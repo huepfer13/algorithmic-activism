@@ -512,7 +512,8 @@
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_030_die_wolkenschule_über_dem_marktplatz",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_013_aufzeichnungen_eines_archivars",
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
-    "r2:deepseek-chat:buch_031_die_kammer_der_sieben_stimmen"
+    "r2:deepseek-chat:buch_031_die_kammer_der_sieben_stimmen",
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_010_amtsblatt_fuer_unzumutbarkeit"
   ],
   "runden": {
     "1": [
@@ -7077,6 +7078,21 @@
         "tokens": "1320",
         "versuche": "1",
         "woerter": 357
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_010_amtsblatt_fuer_unzumutbarkeit",
+        "code": "G-18-18",
+        "datei": "18_art_18_abschnitt_18_die_kalibrierung_des_gewiss.md",
+        "dauer_s": "34.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 6,
+        "tokens": "1323",
+        "versuche": "1",
+        "woerter": 346
       }
     ],
     "7": [
