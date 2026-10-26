@@ -4348,7 +4348,7 @@
       "pov": "third_person",
       "setting_summary": "Rezepte als Beweis, dass Fuersorge messbar ist.",
       "characters": [],
-      "chapter_count": 14,
+      "chapter_count": 15,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -4363,10 +4363,11 @@
         "art_11",
         "art_12",
         "art_13",
-        "art_14"
+        "art_14",
+        "art_15"
       ],
-      "words": 6218,
-      "reading_minutes": 31,
+      "words": 6640,
+      "reading_minutes": 33,
       "cover": null,
       "chapters": [
         {
@@ -4637,6 +4638,24 @@
           "genre": "Kochbuch",
           "leak_free": "true",
           "words": 407,
+          "reading_minutes": 2
+        },
+        {
+          "file": "15_art_15_abschnitt_15_der_herkunftsvektor.md",
+          "index": 15,
+          "title": "Abschnitt 15: Der Herkunftsvektor",
+          "article": "art_15",
+          "ending_ok": "true",
+          "attempts": "2",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "112.8",
+          "jaccard_max": "0.065",
+          "tokens_generated": "1811",
+          "manual_ending_code": "C-15-15",
+          "backend": "openrouter",
+          "genre": "Kochbuch",
+          "leak_free": "true",
+          "words": 422,
           "reading_minutes": 2
         }
       ]
