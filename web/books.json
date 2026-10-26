@@ -5121,7 +5121,7 @@
       "pov": "third_person",
       "setting_summary": "Etymologische Miniaturen zu gefluegelten Worten.",
       "characters": [],
-      "chapter_count": 21,
+      "chapter_count": 22,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -5143,10 +5143,11 @@
         "art_18",
         "art_19",
         "art_20",
-        "art_21"
+        "art_21",
+        "art_22"
       ],
-      "words": 7435,
-      "reading_minutes": 37,
+      "words": 7825,
+      "reading_minutes": 39,
       "cover": null,
       "chapters": [
         {
@@ -5544,6 +5545,24 @@
           "leak_free": "true",
           "words": 226,
           "reading_minutes": 1
+        },
+        {
+          "file": "22_art_22_abschnitt_22_die_registratur_der_gefahre.md",
+          "index": 22,
+          "title": "Abschnitt 22: Die Registratur der Gefahren",
+          "article": "art_22",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.6",
+          "jaccard_max": "0.071",
+          "tokens_generated": "826",
+          "manual_ending_code": "V-22-22",
+          "backend": "deepseek",
+          "genre": "Sprichwoerter",
+          "leak_free": "true",
+          "words": 390,
+          "reading_minutes": 2
         }
       ]
     },

@@ -514,7 +514,10 @@
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
     "r2:deepseek-chat:buch_031_die_kammer_der_sieben_stimmen",
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_010_amtsblatt_fuer_unzumutbarkeit",
-    "r1:deepseek-chat:buch_031_die_kammer_der_sieben_stimmen"
+    "r1:deepseek-chat:buch_031_die_kammer_der_sieben_stimmen",
+    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_029_the_glass_tribunal",
+    "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_022_the_ledger_of_vanishing_rain",
+    "r6:deepseek-chat:buch_017_des_volkes_mund"
   ],
   "runden": {
     "1": [
@@ -4473,6 +4476,16 @@
         "tokens": "1083",
         "versuche": "1",
         "woerter": 496
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_029_the_glass_tribunal",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 3
       }
     ],
     "4": [
@@ -6472,6 +6485,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 5
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_022_the_ledger_of_vanishing_rain",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 5
       }
     ],
     "6": [
@@ -7109,6 +7132,21 @@
         "tokens": "1323",
         "versuche": "1",
         "woerter": 346
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_017_des_volkes_mund",
+        "code": "V-22-22",
+        "datei": "22_art_22_abschnitt_22_die_registratur_der_gefahre.md",
+        "dauer_s": "8.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 6,
+        "tokens": "826",
+        "versuche": "1",
+        "woerter": 390
       }
     ],
     "7": [
