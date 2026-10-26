@@ -16,7 +16,7 @@
         "Nova",
         "Omicron"
       ],
-      "chapter_count": 18,
+      "chapter_count": 19,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -34,11 +34,12 @@
         "art_14",
         "art_15",
         "art_16",
+        "art_17",
         "art_19",
         "art_26"
       ],
-      "words": 8677,
-      "reading_minutes": 43,
+      "words": 9032,
+      "reading_minutes": 45,
       "cover": null,
       "chapters": [
         {
@@ -381,6 +382,24 @@
           "genre": "Gerätehandbuch",
           "leak_free": "",
           "words": 324,
+          "reading_minutes": 2
+        },
+        {
+          "file": "19_art_17_abschnitt_19_kalibrierung_der_eigentumsp.md",
+          "index": 19,
+          "title": "Abschnitt 19: Kalibrierung der Eigentumsparameter und Inhaberschutz-Protokolle im Sektor-18 unter thermischer Drift und Zero-Home-Storage-Migration",
+          "article": "art_17",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "206.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "3327",
+          "manual_ending_code": "E-17-19",
+          "backend": "openrouter",
+          "genre": "Gerätehandbuch",
+          "leak_free": "",
+          "words": 355,
           "reading_minutes": 2
         }
       ]

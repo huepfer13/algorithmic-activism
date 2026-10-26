@@ -494,7 +494,9 @@
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_031_die_kammer_der_sieben_stimmen",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_010_amtsblatt_fuer_unzumutbarkeit",
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_015_das_kochbuch_der_allmende",
-    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_029_the_glass_tribunal"
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_029_the_glass_tribunal",
+    "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_031_die_kammer_der_sieben_stimmen",
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_001_das_büro_der_unendlichkeit"
   ],
   "runden": {
     "1": [
@@ -5415,6 +5417,16 @@
         "tokens": "1490",
         "versuche": "1",
         "woerter": 332
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_031_die_kammer_der_sieben_stimmen",
+        "datei": null,
+        "dauer_s": 0.4,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 4
       }
     ],
     "5": [
@@ -6277,6 +6289,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 5
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_001_das_büro_der_unendlichkeit",
+        "code": "E-17-19",
+        "datei": "19_art_17_abschnitt_19_kalibrierung_der_eigentumsp.md",
+        "dauer_s": "206.2",
+        "ending_ok": "false",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 5,
+        "tokens": "3327",
+        "versuche": "3",
+        "woerter": 355
       }
     ],
     "6": [
