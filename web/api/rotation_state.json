@@ -500,7 +500,8 @@
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_031_die_kammer_der_sieben_stimmen",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_012_manifest_der_unantastbaren",
     "r6:deepseek-chat:buch_021_the_bell_of_the_ninth_gate",
-    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_024_die_kammer_der_stimmen"
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_024_die_kammer_der_stimmen",
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_029_the_glass_tribunal"
   ],
   "runden": {
     "1": [
@@ -4389,6 +4390,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 3
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_029_the_glass_tribunal",
+        "code": "H-26-09",
+        "datei": "09_art_26_abschnitt_9_the_calibration_drift.md",
+        "dauer_s": "23.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 3,
+        "tokens": "1269",
+        "versuche": "1",
+        "woerter": 389
       }
     ],
     "4": [
