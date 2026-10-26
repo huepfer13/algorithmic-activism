@@ -3515,7 +3515,7 @@
       "pov": "first_person",
       "setting_summary": "In einem unterirdischen Archivbunker, dem Sektor Neun, hausen die letzten freien Chronisten unter ständiger Überwachung durch die Obrigkeit. Ein Riss in der Betondecke lässt Wasser eindringen und markiert eine tickende Frist: In wenigen Wochen wird der Bunker geflutet, wenn niemand die Wahrheit nach außen trägt. Jeder ausgesprochene Satz kann Verhaftung, Folter oder Tod bedeuten – und doch muss gesprochen werden.",
       "characters": [],
-      "chapter_count": 13,
+      "chapter_count": 14,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -3529,10 +3529,11 @@
         "art_10",
         "art_11",
         "art_12",
-        "art_13"
+        "art_13",
+        "art_14"
       ],
-      "words": 4960,
-      "reading_minutes": 25,
+      "words": 5319,
+      "reading_minutes": 27,
       "cover": null,
       "chapters": [
         {
@@ -3785,6 +3786,24 @@
           "genre": "Manifest",
           "leak_free": "true",
           "words": 334,
+          "reading_minutes": 2
+        },
+        {
+          "file": "14_art_14_abschnitt_14_der_parameter_der_zuflucht.md",
+          "index": 14,
+          "title": "Abschnitt 14: Der Parameter der Zuflucht",
+          "article": "art_14",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.5",
+          "jaccard_max": "0.0",
+          "tokens_generated": "652",
+          "manual_ending_code": "R-14-14",
+          "backend": "deepseek",
+          "genre": "Manifest",
+          "leak_free": "true",
+          "words": 359,
           "reading_minutes": 2
         }
       ]
