@@ -487,7 +487,8 @@
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_024_die_kammer_der_stimmen",
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_029_the_glass_tribunal",
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_031_die_kammer_der_sieben_stimmen",
-    "r6:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit"
+    "r6:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit",
+    "r5:deepseek-chat:buch_024_die_kammer_der_stimmen"
   ],
   "runden": {
     "1": [
@@ -6220,6 +6221,21 @@
         "tokens": "1307",
         "versuche": "1",
         "woerter": 370
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_024_die_kammer_der_stimmen",
+        "code": "P-11-11",
+        "datei": "11_art_11_abschnitt_11_die_unschulds_kalibrierung.md",
+        "dauer_s": "8.5",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 5,
+        "tokens": "898",
+        "versuche": "1",
+        "woerter": 436
       }
     ],
     "6": [
