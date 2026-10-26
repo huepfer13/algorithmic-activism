@@ -502,7 +502,10 @@
     "r6:deepseek-chat:buch_021_the_bell_of_the_ninth_gate",
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_024_die_kammer_der_stimmen",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_029_the_glass_tribunal",
-    "r6:deepseek-chat:buch_009_depeschen_aus_dem_kordon"
+    "r6:deepseek-chat:buch_009_depeschen_aus_dem_kordon",
+    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+    "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_020_die_quote_der_stille",
+    "r6:deepseek-chat:buch_008_flechtwerk_arkadien"
   ],
   "runden": {
     "1": [
@@ -4406,6 +4409,16 @@
         "tokens": "1269",
         "versuche": "1",
         "woerter": 389
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+        "datei": null,
+        "dauer_s": 0.5,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 3
       }
     ],
     "4": [
@@ -6345,6 +6358,16 @@
         "tokens": "3327",
         "versuche": "3",
         "woerter": 355
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_020_die_quote_der_stille",
+        "datei": null,
+        "dauer_s": 0.4,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 5
       }
     ],
     "6": [
@@ -6937,6 +6960,21 @@
         "tokens": "1063",
         "versuche": "1",
         "woerter": 547
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_008_flechtwerk_arkadien",
+        "code": "U-16-16",
+        "datei": "16_art_16_abschnitt_16_die_willenseinigung.md",
+        "dauer_s": "8.7",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 6,
+        "tokens": "779",
+        "versuche": "1",
+        "woerter": 398
       }
     ],
     "7": [
