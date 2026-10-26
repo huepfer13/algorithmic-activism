@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_032_the_glass_tribunal",
+  "title": "The Glass Tribunal",
+  "pov": "third_person",
+  "language": "EN",
+  "style": "Courtroom_Drama",
+  "setting_summary": "A sealed floating arbitration court anchored in international waters, where a tribunal convened to rule on a disputed refugee detention case must deliver a verdict within seventy-two hours before the platform's life-support contract expires. Every session is broadcast, every corridor is monitored, and the judges, advocates, and witnesses are confined together with no shore leave, turning legal argument into a pressure chamber of alliances and betrayals. The case itself will force the tribunal to weigh dignity, free expression, the right to life, and equality as each witness's testimony opens new ethical fractures.",
+  "characters": [
+    "Mara Voss",
+    "Judge Aldric Kaine",
+    "Ilya Petrov",
+    "Sister Odile",
+    "Dane Mercer"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-10-26T23:05:28.192899+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

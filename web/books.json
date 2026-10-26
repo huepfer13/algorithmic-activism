@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 31,
+  "count": 32,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -8486,6 +8486,46 @@
           "leak_free": "true",
           "words": 447,
           "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_032_the_glass_tribunal",
+      "title": "The Glass Tribunal",
+      "language": "EN",
+      "style": "Courtroom_Drama",
+      "pov": "third_person",
+      "setting_summary": "A sealed floating arbitration court anchored in international waters, where a tribunal convened to rule on a disputed refugee detention case must deliver a verdict within seventy-two hours before the platform's life-support contract expires. Every session is broadcast, every corridor is monitored, and the judges, advocates, and witnesses are confined together with no shore leave, turning legal argument into a pressure chamber of alliances and betrayals. The case itself will force the tribunal to weigh dignity, free expression, the right to life, and equality as each witness's testimony opens new ethical fractures.",
+      "characters": [
+        "Mara Voss",
+        "Judge Aldric Kaine",
+        "Ilya Petrov",
+        "Sister Odile",
+        "Dane Mercer"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 603,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.0",
+          "jaccard_max": "",
+          "tokens_generated": "822",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Courtroom_Drama",
+          "leak_free": "",
+          "words": 603,
+          "reading_minutes": 3
         }
       ]
     }
