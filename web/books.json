@@ -8234,13 +8234,14 @@
         "Tomás Ferreira",
         "Hanna Ostrowski"
       ],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_02"
+        "art_02",
+        "art_03"
       ],
-      "words": 1474,
-      "reading_minutes": 7,
+      "words": 1857,
+      "reading_minutes": 9,
       "cover": null,
       "chapters": [
         {
@@ -8295,6 +8296,24 @@
           "genre": "Gerichtsdrama",
           "leak_free": "true",
           "words": 370,
+          "reading_minutes": 2
+        },
+        {
+          "file": "03_art_03_abschnitt_3_kalibrierung_der_leere.md",
+          "index": 3,
+          "title": "Abschnitt 3: Kalibrierung der Leere",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "106.0",
+          "jaccard_max": "0.028",
+          "tokens_generated": "1315",
+          "manual_ending_code": "H-03-03",
+          "backend": "openrouter",
+          "genre": "Gerichtsdrama",
+          "leak_free": "true",
+          "words": 383,
           "reading_minutes": 2
         }
       ]
