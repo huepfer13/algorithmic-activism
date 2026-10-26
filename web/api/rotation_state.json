@@ -488,7 +488,9 @@
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_029_the_glass_tribunal",
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_031_die_kammer_der_sieben_stimmen",
     "r6:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit",
-    "r5:deepseek-chat:buch_024_die_kammer_der_stimmen"
+    "r5:deepseek-chat:buch_024_die_kammer_der_stimmen",
+    "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_029_the_glass_tribunal",
+    "r6:deepseek-chat:buch_011_das_haus_ohne_widerhall"
   ],
   "runden": {
     "1": [
@@ -6236,6 +6238,16 @@
         "tokens": "898",
         "versuche": "1",
         "woerter": 436
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_029_the_glass_tribunal",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 5
       }
     ],
     "6": [
@@ -6743,6 +6755,21 @@
         "tokens": "977",
         "versuche": "1",
         "woerter": 456
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_011_das_haus_ohne_widerhall",
+        "code": "W-15-15",
+        "datei": "15_art_15_abschnitt_15_die_entkernung.md",
+        "dauer_s": "9.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 6,
+        "tokens": "987",
+        "versuche": "1",
+        "woerter": 540
       }
     ],
     "7": [
