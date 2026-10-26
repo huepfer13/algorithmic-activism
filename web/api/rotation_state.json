@@ -490,7 +490,8 @@
     "r6:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit",
     "r5:deepseek-chat:buch_024_die_kammer_der_stimmen",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_029_the_glass_tribunal",
-    "r6:deepseek-chat:buch_011_das_haus_ohne_widerhall"
+    "r6:deepseek-chat:buch_011_das_haus_ohne_widerhall",
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_031_die_kammer_der_sieben_stimmen"
   ],
   "runden": {
     "1": [
@@ -4354,6 +4355,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 3
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_031_die_kammer_der_sieben_stimmen",
+        "code": "H-02-02",
+        "datei": "02_art_02_abschnitt_2_parameterprüfung.md",
+        "dauer_s": "63.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 3,
+        "tokens": "1362",
+        "versuche": "2",
+        "woerter": 370
       }
     ],
     "4": [

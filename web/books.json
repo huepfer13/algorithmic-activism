@@ -8082,12 +8082,13 @@
         "Tomás Ferreira",
         "Hanna Ostrowski"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 1104,
-      "reading_minutes": 6,
+      "words": 1474,
+      "reading_minutes": 7,
       "cover": null,
       "chapters": [
         {
@@ -8125,6 +8126,24 @@
           "leak_free": "true",
           "words": 561,
           "reading_minutes": 3
+        },
+        {
+          "file": "02_art_02_abschnitt_2_parameterprüfung.md",
+          "index": 2,
+          "title": "Abschnitt 2: Parameterprüfung",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "2",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "63.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1362",
+          "manual_ending_code": "H-02-02",
+          "backend": "openrouter",
+          "genre": "Gerichtsdrama",
+          "leak_free": "true",
+          "words": 370,
+          "reading_minutes": 2
         }
       ]
     }
