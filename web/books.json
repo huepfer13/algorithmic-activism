@@ -8212,16 +8212,17 @@
         "Herr Wiesel",
         "Lotta"
       ],
-      "chapter_count": 5,
+      "chapter_count": 6,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_06"
       ],
-      "words": 3448,
-      "reading_minutes": 17,
+      "words": 3886,
+      "reading_minutes": 19,
       "cover": null,
       "chapters": [
         {
@@ -8330,6 +8331,24 @@
           "genre": "Kinderbuch",
           "leak_free": "true",
           "words": 485,
+          "reading_minutes": 2
+        },
+        {
+          "file": "06_art_06_abschnitt_6_der_papierschliff_im_relais.md",
+          "index": 6,
+          "title": "Abschnitt 6: Der Papierschliff im Relais",
+          "article": "art_06",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "855",
+          "manual_ending_code": "K-06-06",
+          "backend": "deepseek",
+          "genre": "Kinderbuch",
+          "leak_free": "true",
+          "words": 438,
           "reading_minutes": 2
         }
       ]

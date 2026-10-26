@@ -523,7 +523,8 @@
     "r7:deepseek-chat:buch_026_the_ledger_of_ash_harbour",
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_014_der_unberechenbare_humor",
     "r5:deepseek-chat:buch_026_the_ledger_of_ash_harbour",
-    "r7:deepseek-chat:buch_012_manifest_der_unantastbaren"
+    "r7:deepseek-chat:buch_012_manifest_der_unantastbaren",
+    "r3:deepseek-chat:buch_030_die_wolkenschule_über_dem_marktplatz"
   ],
   "runden": {
     "1": [
@@ -4492,6 +4493,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 3
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_030_die_wolkenschule_über_dem_marktplatz",
+        "code": "K-06-06",
+        "datei": "06_art_06_abschnitt_6_der_papierschliff_im_relais.md",
+        "dauer_s": "8.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 3,
+        "tokens": "855",
+        "versuche": "1",
+        "woerter": 438
       }
     ],
     "4": [
