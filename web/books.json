@@ -7715,17 +7715,18 @@
         "Sister Adaeze",
         "Piotr Halvorsen"
       ],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
         "art_05",
         "art_09",
-        "art_12"
+        "art_12",
+        "art_14"
       ],
-      "words": 3506,
-      "reading_minutes": 18,
+      "words": 3838,
+      "reading_minutes": 19,
       "cover": null,
       "chapters": [
         {
@@ -7853,6 +7854,24 @@
           "leak_free": "true",
           "words": 535,
           "reading_minutes": 3
+        },
+        {
+          "file": "07_art_14_abschnitt_7_the_asylum_parameter.md",
+          "index": 7,
+          "title": "Abschnitt 7: The Asylum Parameter",
+          "article": "art_14",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "17.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1490",
+          "manual_ending_code": "H-14-07",
+          "backend": "openrouter",
+          "genre": "Courtroom_Drama",
+          "leak_free": "true",
+          "words": 332,
+          "reading_minutes": 2
         }
       ]
     },

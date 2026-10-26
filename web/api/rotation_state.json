@@ -484,7 +484,8 @@
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_018_rhymes_of_the_commons",
     "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_019_the_salt_diaries",
     "r7:deepseek-chat:buch_014_der_unberechenbare_humor",
-    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_024_die_kammer_der_stimmen"
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_024_die_kammer_der_stimmen",
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_029_the_glass_tribunal"
   ],
   "runden": {
     "1": [
@@ -5360,6 +5361,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
         "runde": 4
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_029_the_glass_tribunal",
+        "code": "H-14-07",
+        "datei": "07_art_14_abschnitt_7_the_asylum_parameter.md",
+        "dauer_s": "17.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 4,
+        "tokens": "1490",
+        "versuche": "1",
+        "woerter": 332
       }
     ],
     "5": [
