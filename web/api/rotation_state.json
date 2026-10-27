@@ -559,7 +559,9 @@
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_003_der_rat_der_tiere",
     "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_003_der_rat_der_tiere",
     "r7:deepseek-chat:buch_020_die_quote_der_stille",
-    "r3:deepseek-chat:buch_031_die_kammer_der_sieben_stimmen"
+    "r3:deepseek-chat:buch_031_die_kammer_der_sieben_stimmen",
+    "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_016_faden_der_gelassenheit",
+    "r6:deepseek-chat:buch_006_das_gericht_vor_der_mauer"
   ],
   "runden": {
     "1": [
@@ -6767,6 +6769,16 @@
         "tokens": "913",
         "versuche": "1",
         "woerter": 279
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_016_faden_der_gelassenheit",
+        "datei": null,
+        "dauer_s": 0.6,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 5
       }
     ],
     "6": [
@@ -7554,6 +7566,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 6
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_006_das_gericht_vor_der_mauer",
+        "code": "D-15-15",
+        "datei": "15_art_15_abschnitt_15_die_fuge_im_faden.md",
+        "dauer_s": "12.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 6,
+        "tokens": "1388",
+        "versuche": "1",
+        "woerter": 738
       }
     ],
     "7": [
