@@ -1315,7 +1315,7 @@
       "pov": "third_person",
       "setting_summary": "Ein diskursives Nachdenken darueber, was Menschenrechte praktisch bedeuten.",
       "characters": [],
-      "chapter_count": 10,
+      "chapter_count": 11,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1326,10 +1326,11 @@
         "art_07",
         "art_08",
         "art_09",
-        "art_10"
+        "art_10",
+        "art_11"
       ],
-      "words": 5093,
-      "reading_minutes": 25,
+      "words": 5423,
+      "reading_minutes": 27,
       "cover": null,
       "chapters": [
         {
@@ -1528,6 +1529,24 @@
           "genre": "Philosophischer_Essay",
           "leak_free": "true",
           "words": 377,
+          "reading_minutes": 2
+        },
+        {
+          "file": "11_art_11_abschnitt_11_die_latenz_der_unschuld.md",
+          "index": 11,
+          "title": "Abschnitt 11: Die Latenz der Unschuld",
+          "article": "art_11",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "32.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1000",
+          "manual_ending_code": "P-11-11",
+          "backend": "openrouter",
+          "genre": "Philosophischer_Essay",
+          "leak_free": "true",
+          "words": 330,
           "reading_minutes": 2
         }
       ]

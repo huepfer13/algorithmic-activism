@@ -545,7 +545,10 @@
     "r7:deepseek-chat:buch_022_the_ledger_of_vanishing_rain",
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_025_the_hold",
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_024_die_kammer_der_stimmen",
-    "r8:deepseek-chat:buch_004_neon_exil"
+    "r8:deepseek-chat:buch_004_neon_exil",
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_032_the_glass_tribunal",
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_005_fragment_der_vernunft"
   ],
   "runden": {
     "1": [
@@ -1883,6 +1886,16 @@
         "tokens": "1173",
         "versuche": "1",
         "woerter": 359
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 1
       }
     ],
     "10": [
@@ -4554,6 +4567,16 @@
         "tokens": "855",
         "versuche": "1",
         "woerter": 438
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_032_the_glass_tribunal",
+        "datei": null,
+        "dauer_s": 0.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 3
       }
     ],
     "4": [
@@ -6643,6 +6666,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 5
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_005_fragment_der_vernunft",
+        "code": "P-11-11",
+        "datei": "11_art_11_abschnitt_11_die_latenz_der_unschuld.md",
+        "dauer_s": "32.8",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 5,
+        "tokens": "1000",
+        "versuche": "1",
+        "woerter": 330
       }
     ],
     "6": [
