@@ -8560,12 +8560,13 @@
         "Sister Odile",
         "Dane Mercer"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_03"
       ],
-      "words": 1135,
-      "reading_minutes": 6,
+      "words": 1567,
+      "reading_minutes": 8,
       "cover": null,
       "chapters": [
         {
@@ -8603,6 +8604,24 @@
           "leak_free": "true",
           "words": 532,
           "reading_minutes": 3
+        },
+        {
+          "file": "02_art_03_abschnitt_2_the_threshold_calibration.md",
+          "index": 2,
+          "title": "Abschnitt 2: The Threshold Calibration",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "23.2",
+          "jaccard_max": "0.04",
+          "tokens_generated": "1002",
+          "manual_ending_code": "H-03-02",
+          "backend": "openrouter",
+          "genre": "Courtroom_Drama",
+          "leak_free": "true",
+          "words": 432,
+          "reading_minutes": 2
         }
       ]
     }
