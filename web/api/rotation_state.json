@@ -552,7 +552,9 @@
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_032_the_glass_tribunal",
     "r5:deepseek-chat:buch_032_the_glass_tribunal",
     "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_005_fragment_der_vernunft",
-    "r7:deepseek-chat:buch_009_depeschen_aus_dem_kordon"
+    "r7:deepseek-chat:buch_009_depeschen_aus_dem_kordon",
+    "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_005_fragment_der_vernunft",
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_031_die_kammer_der_sieben_stimmen"
   ],
   "runden": {
     "1": [
@@ -6710,6 +6712,16 @@
         "tokens": "658",
         "versuche": "1",
         "woerter": 477
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_005_fragment_der_vernunft",
+        "datei": null,
+        "dauer_s": 0.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 5
       }
     ],
     "6": [
@@ -7472,6 +7484,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 6
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_031_die_kammer_der_sieben_stimmen",
+        "code": "H-07-07",
+        "datei": "07_art_07_abschnitt_7_die_gleichheitskalibrierung.md",
+        "dauer_s": "56.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 6,
+        "tokens": "1200",
+        "versuche": "1",
+        "woerter": 303
       }
     ],
     "7": [
