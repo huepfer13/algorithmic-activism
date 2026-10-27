@@ -1014,7 +1014,7 @@
       "pov": "third_person",
       "setting_summary": "Im Schattennetz dokumentieren Ausgeschlossene, wie Rechte Stueck fuer Stueck verschwinden.",
       "characters": [],
-      "chapter_count": 12,
+      "chapter_count": 13,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1027,10 +1027,11 @@
         "art_09",
         "art_10",
         "art_11",
-        "art_12"
+        "art_12",
+        "art_13"
       ],
-      "words": 5051,
-      "reading_minutes": 25,
+      "words": 5527,
+      "reading_minutes": 28,
       "cover": null,
       "chapters": [
         {
@@ -1266,6 +1267,24 @@
           "leak_free": "true",
           "words": 283,
           "reading_minutes": 1
+        },
+        {
+          "file": "13_art_13_abschnitt_13_die_kalibrierung_der_bewegu.md",
+          "index": 13,
+          "title": "Abschnitt 13: Die Kalibrierung der Bewegungsfreiheit",
+          "article": "art_13",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.2",
+          "jaccard_max": "0.042",
+          "tokens_generated": "1001",
+          "manual_ending_code": "S-13-13",
+          "backend": "deepseek",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "true",
+          "words": 476,
+          "reading_minutes": 2
         }
       ]
     },
