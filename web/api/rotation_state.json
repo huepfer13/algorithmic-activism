@@ -564,7 +564,10 @@
     "r6:deepseek-chat:buch_006_das_gericht_vor_der_mauer",
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_030_die_wolkenschule_über_dem_marktplatz",
     "r2:deepseek-chat:buch_030_die_wolkenschule_über_dem_marktplatz",
-    "r5:deepseek-chat:buch_031_die_kammer_der_sieben_stimmen"
+    "r5:deepseek-chat:buch_031_die_kammer_der_sieben_stimmen",
+    "r4:deepseek-chat:buch_029_the_glass_tribunal",
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_021_the_bell_of_the_ninth_gate",
+    "r7:deepseek-chat:buch_005_fragment_der_vernunft"
   ],
   "runden": {
     "1": [
@@ -5775,6 +5778,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
         "runde": 4
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_029_the_glass_tribunal",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 4
       }
     ],
     "5": [
@@ -7629,6 +7642,16 @@
         "tokens": "1388",
         "versuche": "1",
         "woerter": 738
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_021_the_bell_of_the_ninth_gate",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 6
       }
     ],
     "7": [
@@ -7951,6 +7974,21 @@
         "tokens": "922",
         "versuche": "1",
         "woerter": 466
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_005_fragment_der_vernunft",
+        "code": "P-12-12",
+        "datei": "12_art_12_abschnitt_12_die_kalibrierung_der_nähe.md",
+        "dauer_s": "25.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 7,
+        "tokens": "976",
+        "versuche": "3",
+        "woerter": 498
       }
     ],
     "8": [

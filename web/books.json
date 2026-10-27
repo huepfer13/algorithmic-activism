@@ -1334,7 +1334,7 @@
       "pov": "third_person",
       "setting_summary": "Ein diskursives Nachdenken darueber, was Menschenrechte praktisch bedeuten.",
       "characters": [],
-      "chapter_count": 11,
+      "chapter_count": 12,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1346,10 +1346,11 @@
         "art_08",
         "art_09",
         "art_10",
-        "art_11"
+        "art_11",
+        "art_12"
       ],
-      "words": 5423,
-      "reading_minutes": 27,
+      "words": 5921,
+      "reading_minutes": 30,
       "cover": null,
       "chapters": [
         {
@@ -1566,6 +1567,24 @@
           "genre": "Philosophischer_Essay",
           "leak_free": "true",
           "words": 330,
+          "reading_minutes": 2
+        },
+        {
+          "file": "12_art_12_abschnitt_12_die_kalibrierung_der_nähe.md",
+          "index": 12,
+          "title": "Abschnitt 12: Die Kalibrierung der Nähe",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "25.0",
+          "jaccard_max": "0.025",
+          "tokens_generated": "976",
+          "manual_ending_code": "P-12-12",
+          "backend": "deepseek",
+          "genre": "Philosophischer_Essay",
+          "leak_free": "true",
+          "words": 498,
           "reading_minutes": 2
         }
       ]
