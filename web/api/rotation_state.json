@@ -550,7 +550,9 @@
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_032_the_glass_tribunal",
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_005_fragment_der_vernunft",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_032_the_glass_tribunal",
-    "r5:deepseek-chat:buch_032_the_glass_tribunal"
+    "r5:deepseek-chat:buch_032_the_glass_tribunal",
+    "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_005_fragment_der_vernunft",
+    "r7:deepseek-chat:buch_009_depeschen_aus_dem_kordon"
   ],
   "runden": {
     "1": [
@@ -7460,6 +7462,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 6
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_005_fragment_der_vernunft",
+        "datei": null,
+        "dauer_s": 0.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 6
       }
     ],
     "7": [
@@ -7752,6 +7764,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 7
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_009_depeschen_aus_dem_kordon",
+        "code": "B-18-18",
+        "datei": "18_art_18_abschnitt_18_die_achtzehnte_kalibrierung.md",
+        "dauer_s": "8.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 7,
+        "tokens": "1075",
+        "versuche": "1",
+        "woerter": 568
       }
     ],
     "8": [
