@@ -1014,7 +1014,7 @@
       "pov": "third_person",
       "setting_summary": "Im Schattennetz dokumentieren Ausgeschlossene, wie Rechte Stueck fuer Stueck verschwinden.",
       "characters": [],
-      "chapter_count": 13,
+      "chapter_count": 14,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1028,10 +1028,11 @@
         "art_10",
         "art_11",
         "art_12",
-        "art_13"
+        "art_13",
+        "art_14"
       ],
-      "words": 5527,
-      "reading_minutes": 28,
+      "words": 5976,
+      "reading_minutes": 30,
       "cover": null,
       "chapters": [
         {
@@ -1284,6 +1285,24 @@
           "genre": "SciFi_Dystopie",
           "leak_free": "true",
           "words": 476,
+          "reading_minutes": 2
+        },
+        {
+          "file": "14_art_14_abschnitt_14_die_asyl_kalibrierung.md",
+          "index": 14,
+          "title": "Abschnitt 14: Die Asyl-Kalibrierung",
+          "article": "art_14",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.3",
+          "jaccard_max": "0.043",
+          "tokens_generated": "906",
+          "manual_ending_code": "S-14-14",
+          "backend": "deepseek",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "true",
+          "words": 449,
           "reading_minutes": 2
         }
       ]

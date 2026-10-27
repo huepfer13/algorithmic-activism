@@ -539,7 +539,13 @@
     "r2:deepseek-chat:buch_029_the_glass_tribunal",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_003_der_rat_der_tiere",
     "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_026_the_ledger_of_ash_harbour",
-    "r7:deepseek-chat:buch_004_neon_exil"
+    "r7:deepseek-chat:buch_004_neon_exil",
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_023_the_gravity_room",
+    "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_007_die_kammer_der_zeugen",
+    "r7:deepseek-chat:buch_022_the_ledger_of_vanishing_rain",
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_025_the_hold",
+    "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_024_die_kammer_der_stimmen",
+    "r8:deepseek-chat:buch_004_neon_exil"
   ],
   "runden": {
     "1": [
@@ -7369,6 +7375,26 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 6
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_023_the_gravity_room",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 6
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_007_die_kammer_der_zeugen",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 6
       }
     ],
     "7": [
@@ -7631,6 +7657,36 @@
         "tokens": "1001",
         "versuche": "1",
         "woerter": 476
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_022_the_ledger_of_vanishing_rain",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 7
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_025_the_hold",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 7
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_024_die_kammer_der_stimmen",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 7
       }
     ],
     "8": [
@@ -7768,6 +7824,21 @@
         "tokens": "1061",
         "versuche": "1",
         "woerter": 581
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_004_neon_exil",
+        "code": "S-14-14",
+        "datei": "14_art_14_abschnitt_14_die_asyl_kalibrierung.md",
+        "dauer_s": "8.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 8,
+        "tokens": "906",
+        "versuche": "1",
+        "woerter": 449
       }
     ],
     "9": [
