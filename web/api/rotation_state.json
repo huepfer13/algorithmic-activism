@@ -569,7 +569,8 @@
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_021_the_bell_of_the_ninth_gate",
     "r7:deepseek-chat:buch_005_fragment_der_vernunft",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_031_die_kammer_der_sieben_stimmen",
-    "r6:deepseek-chat:buch_014_der_unberechenbare_humor"
+    "r6:deepseek-chat:buch_014_der_unberechenbare_humor",
+    "r5:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren"
   ],
   "runden": {
     "1": [
@@ -6852,6 +6853,21 @@
         "tokens": "913",
         "versuche": "1",
         "woerter": 473
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+        "code": "G-11-11",
+        "datei": "11_art_11_abschnitt_11_die_unschuldsvermutung_als_.md",
+        "dauer_s": "6.5",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 5,
+        "tokens": "786",
+        "versuche": "1",
+        "woerter": 372
       }
     ],
     "6": [
