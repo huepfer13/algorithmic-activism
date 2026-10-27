@@ -530,7 +530,8 @@
     "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_029_the_glass_tribunal",
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_001_das_büro_der_unendlichkeit",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_001_das_büro_der_unendlichkeit",
-    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_030_die_wolkenschule_über_dem_marktplatz"
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_030_die_wolkenschule_über_dem_marktplatz",
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_031_die_kammer_der_sieben_stimmen"
   ],
   "runden": {
     "1": [
@@ -1853,6 +1854,21 @@
         "tokens": "937",
         "versuche": "1",
         "woerter": 447
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_031_die_kammer_der_sieben_stimmen",
+        "code": "H-06-06",
+        "datei": "06_art_06_abschnitt_6_die_rechtsfähigkeitsprüfung.md",
+        "dauer_s": "30.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 1,
+        "tokens": "1173",
+        "versuche": "1",
+        "woerter": 359
       }
     ],
     "10": [

@@ -8405,16 +8405,17 @@
         "Tomás Ferreira",
         "Hanna Ostrowski"
       ],
-      "chapter_count": 5,
+      "chapter_count": 6,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_06"
       ],
-      "words": 2754,
-      "reading_minutes": 14,
+      "words": 3113,
+      "reading_minutes": 16,
       "cover": null,
       "chapters": [
         {
@@ -8523,6 +8524,24 @@
           "genre": "Gerichtsdrama",
           "leak_free": "true",
           "words": 447,
+          "reading_minutes": 2
+        },
+        {
+          "file": "06_art_06_abschnitt_6_die_rechtsfähigkeitsprüfung.md",
+          "index": 6,
+          "title": "Abschnitt 6: Die Rechtsfähigkeitsprüfung",
+          "article": "art_06",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "30.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1173",
+          "manual_ending_code": "H-06-06",
+          "backend": "openrouter",
+          "genre": "Gerichtsdrama",
+          "leak_free": "true",
+          "words": 359,
           "reading_minutes": 2
         }
       ]
