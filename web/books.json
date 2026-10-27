@@ -16,7 +16,7 @@
         "Nova",
         "Omicron"
       ],
-      "chapter_count": 19,
+      "chapter_count": 20,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -35,11 +35,12 @@
         "art_15",
         "art_16",
         "art_17",
+        "art_18",
         "art_19",
         "art_26"
       ],
-      "words": 9032,
-      "reading_minutes": 45,
+      "words": 9294,
+      "reading_minutes": 46,
       "cover": null,
       "chapters": [
         {
@@ -401,6 +402,24 @@
           "leak_free": "",
           "words": 355,
           "reading_minutes": 2
+        },
+        {
+          "file": "20_art_18_abschnitt_20_kalibrierung_der_gewissenss.md",
+          "index": 20,
+          "title": "Abschnitt 20: Kalibrierung der Gewissenssync-Parameter und Weltanschauungs-Freiheitsgrade unter Hochfrequenz-Interferenz im Sektor-11",
+          "article": "art_18",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "122.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1618",
+          "manual_ending_code": "E-18-20",
+          "backend": "openrouter",
+          "genre": "Gerätehandbuch",
+          "leak_free": "",
+          "words": 262,
+          "reading_minutes": 1
         }
       ]
     },
