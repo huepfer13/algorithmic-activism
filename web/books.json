@@ -8231,17 +8231,18 @@
         "Herr Wiesel",
         "Lotta"
       ],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
         "art_05",
-        "art_06"
+        "art_06",
+        "art_07"
       ],
-      "words": 3886,
-      "reading_minutes": 19,
+      "words": 4264,
+      "reading_minutes": 21,
       "cover": null,
       "chapters": [
         {
@@ -8368,6 +8369,24 @@
           "genre": "Kinderbuch",
           "leak_free": "true",
           "words": 438,
+          "reading_minutes": 2
+        },
+        {
+          "file": "07_art_07_abschnitt_7_der_siebte_parameter.md",
+          "index": 7,
+          "title": "Abschnitt 7: Der siebte Parameter",
+          "article": "art_07",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "64.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1343",
+          "manual_ending_code": "K-07-07",
+          "backend": "openrouter",
+          "genre": "Kinderbuch",
+          "leak_free": "true",
+          "words": 378,
           "reading_minutes": 2
         }
       ]
