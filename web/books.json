@@ -6150,7 +6150,7 @@
         "Dorn",
         "Elia"
       ],
-      "chapter_count": 12,
+      "chapter_count": 13,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -6163,10 +6163,11 @@
         "art_09",
         "art_10",
         "art_11",
-        "art_12"
+        "art_12",
+        "art_13"
       ],
-      "words": 5844,
-      "reading_minutes": 29,
+      "words": 6310,
+      "reading_minutes": 32,
       "cover": null,
       "chapters": [
         {
@@ -6401,6 +6402,24 @@
           "genre": "SciFi_Dystopie",
           "leak_free": "true",
           "words": 334,
+          "reading_minutes": 2
+        },
+        {
+          "file": "13_art_13_abschnitt_13_die_kalibrierte_fluchtlinie.md",
+          "index": 13,
+          "title": "Abschnitt 13: Die kalibrierte Fluchtlinie",
+          "article": "art_13",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "922",
+          "manual_ending_code": "S-13-13",
+          "backend": "deepseek",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "true",
+          "words": 466,
           "reading_minutes": 2
         }
       ]
