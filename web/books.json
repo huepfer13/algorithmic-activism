@@ -8595,7 +8595,7 @@
         "Tomás Ferreira",
         "Hanna Ostrowski"
       ],
-      "chapter_count": 8,
+      "chapter_count": 9,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -8604,10 +8604,11 @@
         "art_05",
         "art_06",
         "art_07",
-        "art_08"
+        "art_08",
+        "art_09"
       ],
-      "words": 3893,
-      "reading_minutes": 19,
+      "words": 4366,
+      "reading_minutes": 22,
       "cover": null,
       "chapters": [
         {
@@ -8770,6 +8771,24 @@
           "genre": "Gerichtsdrama",
           "leak_free": "true",
           "words": 477,
+          "reading_minutes": 2
+        },
+        {
+          "file": "09_art_09_abschnitt_9_die_kalibrierung_der_unverle.md",
+          "index": 9,
+          "title": "Abschnitt 9: Die Kalibrierung der Unverletzlichkeit",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.4",
+          "jaccard_max": "0.029",
+          "tokens_generated": "913",
+          "manual_ending_code": "H-09-09",
+          "backend": "deepseek",
+          "genre": "Gerichtsdrama",
+          "leak_free": "true",
+          "words": 473,
           "reading_minutes": 2
         }
       ]
