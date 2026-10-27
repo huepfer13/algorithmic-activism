@@ -554,7 +554,9 @@
     "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_005_fragment_der_vernunft",
     "r7:deepseek-chat:buch_009_depeschen_aus_dem_kordon",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_005_fragment_der_vernunft",
-    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_031_die_kammer_der_sieben_stimmen"
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_031_die_kammer_der_sieben_stimmen",
+    "r5:deepseek-chat:buch_025_the_hold",
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_003_der_rat_der_tiere"
   ],
   "runden": {
     "1": [
@@ -6722,6 +6724,31 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 5
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_025_the_hold",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 5
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_003_der_rat_der_tiere",
+        "code": "K-14-14",
+        "datei": "14_art_14_abschnitt_14_der_nasse_parameter.md",
+        "dauer_s": "39.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 5,
+        "tokens": "913",
+        "versuche": "1",
+        "woerter": 279
       }
     ],
     "6": [
