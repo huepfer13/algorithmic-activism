@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 32,
+  "count": 33,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -8982,6 +8982,46 @@
           "genre": "Courtroom_Drama",
           "leak_free": "true",
           "words": 343,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_033_the_ledger_of_quiet_rooms",
+      "title": "The Ledger of Quiet Rooms",
+      "language": "EN",
+      "style": "Epistolary_Novel",
+      "pov": "first_person",
+      "setting_summary": "Ein abgelegenes Sanatorium auf einer Nordseeinsel, in dem Insassen als 'Gäste' geführt und ihre Briefe zensiert werden, während ein Sturm die letzte Fähre für sechs Wochen aussetzt. Knappe Vorräte, ein wachsames Personal und die ständige Buchführung über jedes gesprochene Wort erzeugen den Druck, unter dem die fünf Figuren um Würde, Wahrheit und Leben verhandeln.",
+      "characters": [
+        "Maren Voss",
+        "Ilya Brandt",
+        "Sister Odile",
+        "Tobias Renn",
+        "The Warden"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 456,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.4",
+          "jaccard_max": "",
+          "tokens_generated": "555",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Epistolary_Novel",
+          "leak_free": "",
+          "words": 456,
           "reading_minutes": 2
         }
       ]
