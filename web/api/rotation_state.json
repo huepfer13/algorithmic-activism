@@ -562,7 +562,8 @@
     "r3:deepseek-chat:buch_031_die_kammer_der_sieben_stimmen",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_016_faden_der_gelassenheit",
     "r6:deepseek-chat:buch_006_das_gericht_vor_der_mauer",
-    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_030_die_wolkenschule_über_dem_marktplatz"
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_030_die_wolkenschule_über_dem_marktplatz",
+    "r2:deepseek-chat:buch_030_die_wolkenschule_über_dem_marktplatz"
   ],
   "runden": {
     "1": [
@@ -3319,6 +3320,21 @@
         "tokens": "977",
         "versuche": "1",
         "woerter": 384
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_030_die_wolkenschule_über_dem_marktplatz",
+        "code": "K-09-09",
+        "datei": "09_art_09_abschnitt_9_der_neunte_parameter.md",
+        "dauer_s": "7.5",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 2,
+        "tokens": "873",
+        "versuche": "1",
+        "woerter": 444
       }
     ],
     "3": [
