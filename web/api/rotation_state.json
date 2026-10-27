@@ -561,7 +561,8 @@
     "r7:deepseek-chat:buch_020_die_quote_der_stille",
     "r3:deepseek-chat:buch_031_die_kammer_der_sieben_stimmen",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_016_faden_der_gelassenheit",
-    "r6:deepseek-chat:buch_006_das_gericht_vor_der_mauer"
+    "r6:deepseek-chat:buch_006_das_gericht_vor_der_mauer",
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_030_die_wolkenschule_über_dem_marktplatz"
   ],
   "runden": {
     "1": [
@@ -3303,6 +3304,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "deepseek-chat",
         "runde": 2
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_030_die_wolkenschule_über_dem_marktplatz",
+        "code": "K-08-08",
+        "datei": "08_art_08_abschnitt_8_der_achte_parameter.md",
+        "dauer_s": "39.7",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 2,
+        "tokens": "977",
+        "versuche": "1",
+        "woerter": 384
       }
     ],
     "3": [

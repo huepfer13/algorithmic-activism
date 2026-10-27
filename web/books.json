@@ -8383,7 +8383,7 @@
         "Herr Wiesel",
         "Lotta"
       ],
-      "chapter_count": 7,
+      "chapter_count": 8,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -8391,10 +8391,11 @@
         "art_04",
         "art_05",
         "art_06",
-        "art_07"
+        "art_07",
+        "art_08"
       ],
-      "words": 4264,
-      "reading_minutes": 21,
+      "words": 4648,
+      "reading_minutes": 23,
       "cover": null,
       "chapters": [
         {
@@ -8539,6 +8540,24 @@
           "genre": "Kinderbuch",
           "leak_free": "true",
           "words": 378,
+          "reading_minutes": 2
+        },
+        {
+          "file": "08_art_08_abschnitt_8_der_achte_parameter.md",
+          "index": 8,
+          "title": "Abschnitt 8: Der achte Parameter",
+          "article": "art_08",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "39.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "977",
+          "manual_ending_code": "K-08-08",
+          "backend": "openrouter",
+          "genre": "Kinderbuch",
+          "leak_free": "true",
+          "words": 384,
           "reading_minutes": 2
         }
       ]
