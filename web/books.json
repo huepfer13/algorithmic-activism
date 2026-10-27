@@ -8636,13 +8636,14 @@
         "Sister Odile",
         "Dane Mercer"
       ],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 1567,
-      "reading_minutes": 8,
+      "words": 2044,
+      "reading_minutes": 10,
       "cover": null,
       "chapters": [
         {
@@ -8697,6 +8698,24 @@
           "genre": "Courtroom_Drama",
           "leak_free": "true",
           "words": 432,
+          "reading_minutes": 2
+        },
+        {
+          "file": "03_art_04_abschnitt_3_the_servitude_calibration.md",
+          "index": 3,
+          "title": "Abschnitt 3: The Servitude Calibration",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "658",
+          "manual_ending_code": "H-04-03",
+          "backend": "deepseek",
+          "genre": "Courtroom_Drama",
+          "leak_free": "true",
+          "words": 477,
           "reading_minutes": 2
         }
       ]
