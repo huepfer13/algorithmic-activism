@@ -570,7 +570,8 @@
     "r7:deepseek-chat:buch_005_fragment_der_vernunft",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_031_die_kammer_der_sieben_stimmen",
     "r6:deepseek-chat:buch_014_der_unberechenbare_humor",
-    "r5:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren"
+    "r5:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_032_the_glass_tribunal"
   ],
   "runden": {
     "1": [
@@ -5801,6 +5802,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "deepseek-chat",
         "runde": 4
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_032_the_glass_tribunal",
+        "code": "H-05-04",
+        "datei": "04_art_05_abschnitt_4_the_degradation_threshold.md",
+        "dauer_s": "27.5",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 4,
+        "tokens": "923",
+        "versuche": "1",
+        "woerter": 343
       }
     ],
     "5": [
