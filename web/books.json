@@ -8503,10 +8503,12 @@
         "Sister Odile",
         "Dane Mercer"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 603,
-      "reading_minutes": 3,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 1135,
+      "reading_minutes": 6,
       "cover": null,
       "chapters": [
         {
@@ -8525,6 +8527,24 @@
           "genre": "Courtroom_Drama",
           "leak_free": "",
           "words": 603,
+          "reading_minutes": 3
+        },
+        {
+          "file": "01_art_01_abschnitt_1_the_calibration_of_dignity.md",
+          "index": 1,
+          "title": "Abschnitt 1: The Calibration of Dignity",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "717",
+          "manual_ending_code": "H-01-01",
+          "backend": "deepseek",
+          "genre": "Courtroom_Drama",
+          "leak_free": "true",
+          "words": 532,
           "reading_minutes": 3
         }
       ]
