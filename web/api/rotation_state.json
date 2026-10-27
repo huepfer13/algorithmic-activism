@@ -532,7 +532,10 @@
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_001_das_büro_der_unendlichkeit",
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_030_die_wolkenschule_über_dem_marktplatz",
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_031_die_kammer_der_sieben_stimmen",
-    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_032_the_glass_tribunal"
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_032_the_glass_tribunal",
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_026_the_ledger_of_ash_harbour",
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_029_the_glass_tribunal",
+    "r6:deepseek-chat:buch_027_das_haus_das_die_namen_fraß"
   ],
   "runden": {
     "1": [
@@ -5648,6 +5651,16 @@
         "tokens": "717",
         "versuche": "1",
         "woerter": 532
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_026_the_ledger_of_ash_harbour",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 4
       }
     ],
     "5": [
@@ -6590,6 +6603,16 @@
         "tokens": "1002",
         "versuche": "1",
         "woerter": 432
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_029_the_glass_tribunal",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 5
       }
     ],
     "6": [
@@ -7297,6 +7320,21 @@
         "tokens": "1343",
         "versuche": "1",
         "woerter": 378
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_027_das_haus_das_die_namen_fraß",
+        "code": "W-06-06",
+        "datei": "06_art_06_abschnitt_6_die_anerkennung_der_schwelle.md",
+        "dauer_s": "7.5",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 6,
+        "tokens": "794",
+        "versuche": "1",
+        "woerter": 419
       }
     ],
     "7": [
