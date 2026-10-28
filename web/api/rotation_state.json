@@ -587,7 +587,8 @@
     "r7:deepseek-chat:buch_030_die_wolkenschule_über_dem_marktplatz",
     "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_031_die_kammer_der_sieben_stimmen",
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_020_die_quote_der_stille",
-    "r4:deepseek-chat:buch_031_die_kammer_der_sieben_stimmen"
+    "r4:deepseek-chat:buch_031_die_kammer_der_sieben_stimmen",
+    "r2:deepseek-chat:buch_032_the_glass_tribunal"
   ],
   "runden": {
     "1": [
@@ -3389,6 +3390,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 2
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_032_the_glass_tribunal",
+        "code": "H-09-05",
+        "datei": "05_art_09_abschnitt_5_the_arbitrary_threshold.md",
+        "dauer_s": "5.9",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 2,
+        "tokens": "574",
+        "versuche": "1",
+        "woerter": 419
       }
     ],
     "3": [
