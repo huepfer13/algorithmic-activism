@@ -591,7 +591,8 @@
     "r2:deepseek-chat:buch_032_the_glass_tribunal",
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_033_the_ledger_of_quiet_rooms",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_032_the_glass_tribunal",
-    "r7:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren"
+    "r7:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_012_manifest_der_unantastbaren"
   ],
   "runden": {
     "1": [
@@ -8328,6 +8329,21 @@
         "tokens": "1049",
         "versuche": "1",
         "woerter": 473
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_012_manifest_der_unantastbaren",
+        "code": "R-15-15",
+        "datei": "15_art_15_abschnitt_15_der_parameter_der_zugehörig.md",
+        "dauer_s": "45.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 7,
+        "tokens": "990",
+        "versuche": "1",
+        "woerter": 291
       }
     ],
     "8": [

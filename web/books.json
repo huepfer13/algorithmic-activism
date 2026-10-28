@@ -3762,7 +3762,7 @@
       "pov": "first_person",
       "setting_summary": "In einem unterirdischen Archivbunker, dem Sektor Neun, hausen die letzten freien Chronisten unter ständiger Überwachung durch die Obrigkeit. Ein Riss in der Betondecke lässt Wasser eindringen und markiert eine tickende Frist: In wenigen Wochen wird der Bunker geflutet, wenn niemand die Wahrheit nach außen trägt. Jeder ausgesprochene Satz kann Verhaftung, Folter oder Tod bedeuten – und doch muss gesprochen werden.",
       "characters": [],
-      "chapter_count": 14,
+      "chapter_count": 15,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -3777,10 +3777,11 @@
         "art_11",
         "art_12",
         "art_13",
-        "art_14"
+        "art_14",
+        "art_15"
       ],
-      "words": 5319,
-      "reading_minutes": 27,
+      "words": 5610,
+      "reading_minutes": 28,
       "cover": null,
       "chapters": [
         {
@@ -4052,6 +4053,24 @@
           "leak_free": "true",
           "words": 359,
           "reading_minutes": 2
+        },
+        {
+          "file": "15_art_15_abschnitt_15_der_parameter_der_zugehörig.md",
+          "index": 15,
+          "title": "Abschnitt 15: Der Parameter der Zugehörigkeit",
+          "article": "art_15",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "45.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "990",
+          "manual_ending_code": "R-15-15",
+          "backend": "openrouter",
+          "genre": "Manifest",
+          "leak_free": "true",
+          "words": 291,
+          "reading_minutes": 1
         }
       ]
     },
