@@ -9209,14 +9209,15 @@
         "Tobias Renn",
         "The Warden"
       ],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_03",
-        "art_04"
+        "art_04",
+        "art_05"
       ],
-      "words": 2060,
-      "reading_minutes": 10,
+      "words": 2505,
+      "reading_minutes": 13,
       "cover": null,
       "chapters": [
         {
@@ -9290,6 +9291,24 @@
           "leak_free": "true",
           "words": 545,
           "reading_minutes": 3
+        },
+        {
+          "file": "04_art_05_abschnitt_4_the_calibration_of_cold.md",
+          "index": 4,
+          "title": "Abschnitt 4: The Calibration of Cold",
+          "article": "art_05",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "132.0",
+          "jaccard_max": "0.037",
+          "tokens_generated": "2442",
+          "manual_ending_code": "B-05-04",
+          "backend": "openrouter",
+          "genre": "Epistolary_Novel",
+          "leak_free": "true",
+          "words": 445,
+          "reading_minutes": 2
         }
       ]
     }
