@@ -9209,13 +9209,14 @@
         "Tobias Renn",
         "The Warden"
       ],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 1515,
-      "reading_minutes": 8,
+      "words": 2060,
+      "reading_minutes": 10,
       "cover": null,
       "chapters": [
         {
@@ -9270,6 +9271,24 @@
           "genre": "Epistolary_Novel",
           "leak_free": "true",
           "words": 531,
+          "reading_minutes": 3
+        },
+        {
+          "file": "03_art_04_abschnitt_3_the_resistance_in_the_wire.md",
+          "index": 3,
+          "title": "Abschnitt 3: The Resistance in the Wire",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "49.9",
+          "jaccard_max": "0.036",
+          "tokens_generated": "1232",
+          "manual_ending_code": "B-04-03",
+          "backend": "openrouter",
+          "genre": "Epistolary_Novel",
+          "leak_free": "true",
+          "words": 545,
           "reading_minutes": 3
         }
       ]
