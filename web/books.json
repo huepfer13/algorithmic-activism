@@ -8092,7 +8092,7 @@
         "Mira Sandoval",
         "Herr Zwirbel"
       ],
-      "chapter_count": 11,
+      "chapter_count": 12,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -8104,10 +8104,11 @@
         "art_08",
         "art_09",
         "art_10",
-        "art_11"
+        "art_11",
+        "art_12"
       ],
-      "words": 5617,
-      "reading_minutes": 28,
+      "words": 6090,
+      "reading_minutes": 30,
       "cover": null,
       "chapters": [
         {
@@ -8324,6 +8325,24 @@
           "genre": "Satire",
           "leak_free": "true",
           "words": 372,
+          "reading_minutes": 2
+        },
+        {
+          "file": "12_art_12_abschnitt_12_die_wohnung_als_gefahrenque.md",
+          "index": 12,
+          "title": "Abschnitt 12: Die Wohnung als Gefahrenquelle",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.9",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1049",
+          "manual_ending_code": "G-12-12",
+          "backend": "deepseek",
+          "genre": "Satire",
+          "leak_free": "true",
+          "words": 473,
           "reading_minutes": 2
         }
       ]
