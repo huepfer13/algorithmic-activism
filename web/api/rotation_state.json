@@ -581,7 +581,10 @@
     "r5:deepseek-chat:buch_033_the_ledger_of_quiet_rooms",
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_004_neon_exil",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_033_the_ledger_of_quiet_rooms",
-    "r5:deepseek-chat:buch_004_neon_exil"
+    "r5:deepseek-chat:buch_004_neon_exil",
+    "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_031_die_kammer_der_sieben_stimmen",
+    "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_004_neon_exil",
+    "r7:deepseek-chat:buch_030_die_wolkenschule_über_dem_marktplatz"
   ],
   "runden": {
     "1": [
@@ -6954,6 +6957,16 @@
         "tokens": "950",
         "versuche": "1",
         "woerter": 426
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_031_die_kammer_der_sieben_stimmen",
+        "datei": null,
+        "dauer_s": 0.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 5
       }
     ],
     "6": [
@@ -7836,6 +7849,16 @@
         "tokens": "1172",
         "versuche": "1",
         "woerter": 302
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_004_neon_exil",
+        "datei": null,
+        "dauer_s": 0.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 6
       }
     ],
     "7": [
@@ -8188,6 +8211,21 @@
         "tokens": "878",
         "versuche": "1",
         "woerter": 457
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_030_die_wolkenschule_über_dem_marktplatz",
+        "code": "K-10-10",
+        "datei": "10_art_10_abschnitt_10_der_zehnte_parameter.md",
+        "dauer_s": "7.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 7,
+        "tokens": "1041",
+        "versuche": "1",
+        "woerter": 548
       }
     ],
     "8": [

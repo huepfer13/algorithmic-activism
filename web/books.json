@@ -8535,7 +8535,7 @@
         "Herr Wiesel",
         "Lotta"
       ],
-      "chapter_count": 9,
+      "chapter_count": 10,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -8545,10 +8545,11 @@
         "art_06",
         "art_07",
         "art_08",
-        "art_09"
+        "art_09",
+        "art_10"
       ],
-      "words": 5092,
-      "reading_minutes": 25,
+      "words": 5640,
+      "reading_minutes": 28,
       "cover": null,
       "chapters": [
         {
@@ -8730,6 +8731,24 @@
           "leak_free": "true",
           "words": 444,
           "reading_minutes": 2
+        },
+        {
+          "file": "10_art_10_abschnitt_10_der_zehnte_parameter.md",
+          "index": 10,
+          "title": "Abschnitt 10: Der zehnte Parameter",
+          "article": "art_10",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1041",
+          "manual_ending_code": "K-10-10",
+          "backend": "deepseek",
+          "genre": "Kinderbuch",
+          "leak_free": "true",
+          "words": 548,
+          "reading_minutes": 3
         }
       ]
     },
