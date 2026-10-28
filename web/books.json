@@ -9342,16 +9342,17 @@
         "Tobias Renn",
         "The Warden"
       ],
-      "chapter_count": 5,
+      "chapter_count": 6,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
         "art_05",
-        "art_09"
+        "art_09",
+        "art_12"
       ],
-      "words": 2987,
-      "reading_minutes": 15,
+      "words": 3381,
+      "reading_minutes": 17,
       "cover": null,
       "chapters": [
         {
@@ -9460,6 +9461,24 @@
           "genre": "Epistolary_Novel",
           "leak_free": "true",
           "words": 482,
+          "reading_minutes": 2
+        },
+        {
+          "file": "06_art_12_abschnitt_6_the_third_column.md",
+          "index": 6,
+          "title": "Abschnitt 6: The Third Column",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "91.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "2588",
+          "manual_ending_code": "B-12-06",
+          "backend": "openrouter",
+          "genre": "Epistolary_Novel",
+          "leak_free": "true",
+          "words": 394,
           "reading_minutes": 2
         }
       ]
