@@ -9038,10 +9038,12 @@
         "Tobias Renn",
         "The Warden"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 456,
-      "reading_minutes": 2,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 984,
+      "reading_minutes": 5,
       "cover": null,
       "chapters": [
         {
@@ -9061,6 +9063,24 @@
           "leak_free": "",
           "words": 456,
           "reading_minutes": 2
+        },
+        {
+          "file": "01_art_01_abschnitt_1_the_weight_of_flour.md",
+          "index": 1,
+          "title": "Abschnitt 1: The Weight of Flour",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.2",
+          "jaccard_max": "0.024",
+          "tokens_generated": "662",
+          "manual_ending_code": "B-01-01",
+          "backend": "deepseek",
+          "genre": "Epistolary_Novel",
+          "leak_free": "true",
+          "words": 528,
+          "reading_minutes": 3
         }
       ]
     }

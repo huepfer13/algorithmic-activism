@@ -577,7 +577,8 @@
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_001_das_büro_der_unendlichkeit",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_032_the_glass_tribunal",
     "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_033_the_ledger_of_quiet_rooms",
-    "r7:deepseek-chat:buch_003_der_rat_der_tiere"
+    "r7:deepseek-chat:buch_003_der_rat_der_tiere",
+    "r5:deepseek-chat:buch_033_the_ledger_of_quiet_rooms"
   ],
   "runden": {
     "1": [
@@ -6910,6 +6911,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 5
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_033_the_ledger_of_quiet_rooms",
+        "code": "B-01-01",
+        "datei": "01_art_01_abschnitt_1_the_weight_of_flour.md",
+        "dauer_s": "7.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 5,
+        "tokens": "662",
+        "versuche": "1",
+        "woerter": 528
       }
     ],
     "6": [
