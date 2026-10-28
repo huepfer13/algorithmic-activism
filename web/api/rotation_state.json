@@ -584,7 +584,9 @@
     "r5:deepseek-chat:buch_004_neon_exil",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_031_die_kammer_der_sieben_stimmen",
     "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_004_neon_exil",
-    "r7:deepseek-chat:buch_030_die_wolkenschule_über_dem_marktplatz"
+    "r7:deepseek-chat:buch_030_die_wolkenschule_über_dem_marktplatz",
+    "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_031_die_kammer_der_sieben_stimmen",
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_020_die_quote_der_stille"
   ],
   "runden": {
     "1": [
@@ -7859,6 +7861,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 6
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_031_die_kammer_der_sieben_stimmen",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 6
       }
     ],
     "7": [
@@ -8226,6 +8238,21 @@
         "tokens": "1041",
         "versuche": "1",
         "woerter": 548
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_020_die_quote_der_stille",
+        "code": "S-14-14",
+        "datei": "14_art_14_abschnitt_14_der_asyl_vektor.md",
+        "dauer_s": "80.8",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 7,
+        "tokens": "1238",
+        "versuche": "1",
+        "woerter": 374
       }
     ],
     "8": [

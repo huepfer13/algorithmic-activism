@@ -6302,7 +6302,7 @@
         "Dorn",
         "Elia"
       ],
-      "chapter_count": 13,
+      "chapter_count": 14,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -6316,10 +6316,11 @@
         "art_10",
         "art_11",
         "art_12",
-        "art_13"
+        "art_13",
+        "art_14"
       ],
-      "words": 6310,
-      "reading_minutes": 32,
+      "words": 6684,
+      "reading_minutes": 33,
       "cover": null,
       "chapters": [
         {
@@ -6572,6 +6573,24 @@
           "genre": "SciFi_Dystopie",
           "leak_free": "true",
           "words": 466,
+          "reading_minutes": 2
+        },
+        {
+          "file": "14_art_14_abschnitt_14_der_asyl_vektor.md",
+          "index": 14,
+          "title": "Abschnitt 14: Der Asyl-Vektor",
+          "article": "art_14",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "80.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1238",
+          "manual_ending_code": "S-14-14",
+          "backend": "openrouter",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "true",
+          "words": 374,
           "reading_minutes": 2
         }
       ]
