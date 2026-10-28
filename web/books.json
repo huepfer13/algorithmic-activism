@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 33,
+  "count": 34,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -9479,6 +9479,46 @@
           "genre": "Epistolary_Novel",
           "leak_free": "true",
           "words": 394,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_034_the_weight_of_water",
+      "title": "The Weight of Water",
+      "language": "EN",
+      "style": "Parable",
+      "pov": "third_person",
+      "setting_summary": "In a cliffside settlement called the Cistern, a community survives by rationing water drawn from a single deep well, and every drop is measured by a rotating council that watches all. When a drought threatens the well and a stranger arrives claiming the right to drink without being counted, the settlement must decide what a person is worth when survival itself is rationed.",
+      "characters": [
+        "Mara",
+        "Teo",
+        "Old Sable",
+        "Juniper",
+        "The Counter"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 421,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.7",
+          "jaccard_max": "",
+          "tokens_generated": "515",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Parable",
+          "leak_free": "",
+          "words": 421,
           "reading_minutes": 2
         }
       ]

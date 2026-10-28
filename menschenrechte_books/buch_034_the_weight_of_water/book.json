@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_034_the_weight_of_water",
+  "title": "The Weight of Water",
+  "pov": "third_person",
+  "language": "EN",
+  "style": "Parable",
+  "setting_summary": "In a cliffside settlement called the Cistern, a community survives by rationing water drawn from a single deep well, and every drop is measured by a rotating council that watches all. When a drought threatens the well and a stranger arrives claiming the right to drink without being counted, the settlement must decide what a person is worth when survival itself is rationed.",
+  "characters": [
+    "Mara",
+    "Teo",
+    "Old Sable",
+    "Juniper",
+    "The Counter"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-10-28T23:05:25.212178+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
