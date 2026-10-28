@@ -751,7 +751,7 @@
       "pov": "third_person",
       "setting_summary": "Die Tiere des Schattenwaldes halten Rat und finden fuer jeden Streit eine gute Loesung.",
       "characters": [],
-      "chapter_count": 14,
+      "chapter_count": 15,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -766,10 +766,11 @@
         "art_11",
         "art_12",
         "art_13",
-        "art_14"
+        "art_14",
+        "art_15"
       ],
-      "words": 5616,
-      "reading_minutes": 28,
+      "words": 6073,
+      "reading_minutes": 30,
       "cover": null,
       "chapters": [
         {
@@ -1041,6 +1042,24 @@
           "leak_free": "true",
           "words": 279,
           "reading_minutes": 1
+        },
+        {
+          "file": "15_art_15_abschnitt_15_die_schleuse_der_zwei_türen.md",
+          "index": 15,
+          "title": "Abschnitt 15: Die Schleuse der zwei Türen",
+          "article": "art_15",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "878",
+          "manual_ending_code": "K-15-15",
+          "backend": "deepseek",
+          "genre": "Kinderbuch",
+          "leak_free": "true",
+          "words": 457,
+          "reading_minutes": 2
         }
       ]
     },
