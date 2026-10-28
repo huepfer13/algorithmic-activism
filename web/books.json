@@ -9209,15 +9209,16 @@
         "Tobias Renn",
         "The Warden"
       ],
-      "chapter_count": 4,
+      "chapter_count": 5,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_09"
       ],
-      "words": 2505,
-      "reading_minutes": 13,
+      "words": 2987,
+      "reading_minutes": 15,
       "cover": null,
       "chapters": [
         {
@@ -9308,6 +9309,24 @@
           "genre": "Epistolary_Novel",
           "leak_free": "true",
           "words": 445,
+          "reading_minutes": 2
+        },
+        {
+          "file": "05_art_09_abschnitt_5_the_second_ledger.md",
+          "index": 5,
+          "title": "Abschnitt 5: The Second Ledger",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "679",
+          "manual_ending_code": "B-09-05",
+          "backend": "deepseek",
+          "genre": "Epistolary_Novel",
+          "leak_free": "true",
+          "words": 482,
           "reading_minutes": 2
         }
       ]
