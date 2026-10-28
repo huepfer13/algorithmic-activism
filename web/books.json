@@ -9092,16 +9092,17 @@
         "Sister Odile",
         "Dane Mercer"
       ],
-      "chapter_count": 5,
+      "chapter_count": 6,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
         "art_05",
-        "art_09"
+        "art_09",
+        "art_12"
       ],
-      "words": 2806,
-      "reading_minutes": 14,
+      "words": 3160,
+      "reading_minutes": 16,
       "cover": null,
       "chapters": [
         {
@@ -9210,6 +9211,24 @@
           "genre": "Courtroom_Drama",
           "leak_free": "true",
           "words": 419,
+          "reading_minutes": 2
+        },
+        {
+          "file": "06_art_12_abschnitt_6_the_correspondence_drift.md",
+          "index": 6,
+          "title": "Abschnitt 6: The Correspondence Drift",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "90.9",
+          "jaccard_max": "0.0",
+          "tokens_generated": "964",
+          "manual_ending_code": "H-12-06",
+          "backend": "openrouter",
+          "genre": "Courtroom_Drama",
+          "leak_free": "true",
+          "words": 354,
           "reading_minutes": 2
         }
       ]
