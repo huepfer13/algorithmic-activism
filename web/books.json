@@ -16,7 +16,7 @@
         "Nova",
         "Omicron"
       ],
-      "chapter_count": 20,
+      "chapter_count": 21,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -37,10 +37,11 @@
         "art_17",
         "art_18",
         "art_19",
+        "art_20",
         "art_26"
       ],
-      "words": 9294,
-      "reading_minutes": 46,
+      "words": 9581,
+      "reading_minutes": 48,
       "cover": null,
       "chapters": [
         {
@@ -419,6 +420,24 @@
           "genre": "Gerätehandbuch",
           "leak_free": "",
           "words": 262,
+          "reading_minutes": 1
+        },
+        {
+          "file": "21_art_20_abschnitt_21_synchronisation_der_versamm.md",
+          "index": 21,
+          "title": "Abschnitt 21: Synchronisation der Versammlungs-Cluster-Topologie und Vereinigungs-Handshake-Protokolle unter Pneumatischer Leitungsbeeinträchtigung",
+          "article": "art_20",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "130.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1622",
+          "manual_ending_code": "E-20-21",
+          "backend": "openrouter",
+          "genre": "Gerätehandbuch",
+          "leak_free": "",
+          "words": 287,
           "reading_minutes": 1
         }
       ]
