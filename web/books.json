@@ -16,7 +16,7 @@
         "Nova",
         "Omicron"
       ],
-      "chapter_count": 21,
+      "chapter_count": 22,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -38,10 +38,11 @@
         "art_18",
         "art_19",
         "art_20",
+        "art_21",
         "art_26"
       ],
-      "words": 9581,
-      "reading_minutes": 48,
+      "words": 9963,
+      "reading_minutes": 50,
       "cover": null,
       "chapters": [
         {
@@ -439,6 +440,24 @@
           "leak_free": "",
           "words": 287,
           "reading_minutes": 1
+        },
+        {
+          "file": "22_art_21_abschnitt_22_kalibrierungsprozedur_für_p.md",
+          "index": 22,
+          "title": "Abschnitt 22: Kalibrierungsprozedur für Partizipations-Parameter Art-21 und Wiederherstellung der Wählerwillens-Erfassungseinheit nach Leitungsdrift",
+          "article": "art_21",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "25.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1071",
+          "manual_ending_code": "E-21-22",
+          "backend": "deepseek",
+          "genre": "Gerätehandbuch",
+          "leak_free": "",
+          "words": 382,
+          "reading_minutes": 2
         }
       ]
     },
