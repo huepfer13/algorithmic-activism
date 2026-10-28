@@ -1071,7 +1071,7 @@
       "pov": "third_person",
       "setting_summary": "Im Schattennetz dokumentieren Ausgeschlossene, wie Rechte Stueck fuer Stueck verschwinden.",
       "characters": [],
-      "chapter_count": 15,
+      "chapter_count": 16,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1087,10 +1087,11 @@
         "art_12",
         "art_13",
         "art_14",
-        "art_15"
+        "art_15",
+        "art_16"
       ],
-      "words": 6278,
-      "reading_minutes": 31,
+      "words": 6704,
+      "reading_minutes": 34,
       "cover": null,
       "chapters": [
         {
@@ -1379,6 +1380,24 @@
           "genre": "SciFi_Dystopie",
           "leak_free": "true",
           "words": 302,
+          "reading_minutes": 2
+        },
+        {
+          "file": "16_art_16_abschnitt_16_die_kalibrierung_der_bindun.md",
+          "index": 16,
+          "title": "Abschnitt 16: Die Kalibrierung der Bindung",
+          "article": "art_16",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.9",
+          "jaccard_max": "0.043",
+          "tokens_generated": "950",
+          "manual_ending_code": "S-16-16",
+          "backend": "deepseek",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "true",
+          "words": 426,
           "reading_minutes": 2
         }
       ]

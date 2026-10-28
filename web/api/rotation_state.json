@@ -579,7 +579,9 @@
     "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_033_the_ledger_of_quiet_rooms",
     "r7:deepseek-chat:buch_003_der_rat_der_tiere",
     "r5:deepseek-chat:buch_033_the_ledger_of_quiet_rooms",
-    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_004_neon_exil"
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_004_neon_exil",
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_033_the_ledger_of_quiet_rooms",
+    "r5:deepseek-chat:buch_004_neon_exil"
   ],
   "runden": {
     "1": [
@@ -1941,6 +1943,16 @@
       {
         "backend": "openrouter",
         "buch": "buch_031_die_kammer_der_sieben_stimmen",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 1
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_033_the_ledger_of_quiet_rooms",
         "datei": null,
         "dauer_s": 0.1,
         "exit": 1,
@@ -6927,6 +6939,21 @@
         "tokens": "662",
         "versuche": "1",
         "woerter": 528
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_004_neon_exil",
+        "code": "S-16-16",
+        "datei": "16_art_16_abschnitt_16_die_kalibrierung_der_bindun.md",
+        "dauer_s": "6.9",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 5,
+        "tokens": "950",
+        "versuche": "1",
+        "woerter": 426
       }
     ],
     "6": [
