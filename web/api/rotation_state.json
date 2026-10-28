@@ -599,7 +599,11 @@
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_033_the_ledger_of_quiet_rooms",
     "r4:deepseek-chat:buch_033_the_ledger_of_quiet_rooms",
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_017_des_volkes_mund",
-    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_032_the_glass_tribunal"
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_032_the_glass_tribunal",
+    "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_032_the_glass_tribunal",
+    "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_014_der_unberechenbare_humor",
+    "r8:deepseek-chat:buch_026_the_ledger_of_ash_harbour",
+    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_007_die_kammer_der_zeugen"
   ],
   "runden": {
     "1": [
@@ -8009,6 +8013,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
         "runde": 6
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_032_the_glass_tribunal",
+        "datei": null,
+        "dauer_s": 0.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 6
       }
     ],
     "7": [
@@ -8451,6 +8465,16 @@
         "tokens": "1800",
         "versuche": "1",
         "woerter": 214
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_014_der_unberechenbare_humor",
+        "datei": null,
+        "dauer_s": 0.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 7
       }
     ],
     "8": [
@@ -8603,6 +8627,31 @@
         "tokens": "906",
         "versuche": "1",
         "woerter": 449
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_026_the_ledger_of_ash_harbour",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 8
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_007_die_kammer_der_zeugen",
+        "code": "H-16-16",
+        "datei": "16_art_16_abschnitt_16_der_ehefähigkeits_parameter.md",
+        "dauer_s": "64.5",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 8,
+        "tokens": "1557",
+        "versuche": "1",
+        "woerter": 383
       }
     ],
     "9": [
