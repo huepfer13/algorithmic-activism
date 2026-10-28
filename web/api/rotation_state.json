@@ -605,7 +605,8 @@
     "r8:deepseek-chat:buch_026_the_ledger_of_ash_harbour",
     "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_007_die_kammer_der_zeugen",
     "r1:deepseek-chat:buch_032_the_glass_tribunal",
-    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_005_fragment_der_vernunft"
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_005_fragment_der_vernunft",
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_015_das_kochbuch_der_allmende"
   ],
   "runden": {
     "1": [
@@ -8507,6 +8508,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 7
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_015_das_kochbuch_der_allmende",
+        "code": "C-16-16",
+        "datei": "16_art_16_abschnitt_16_der_bindungsparameter.md",
+        "dauer_s": "43.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 7,
+        "tokens": "2083",
+        "versuche": "1",
+        "woerter": 426
       }
     ],
     "8": [

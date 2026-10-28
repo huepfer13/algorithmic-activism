@@ -4804,7 +4804,7 @@
       "pov": "third_person",
       "setting_summary": "Rezepte als Beweis, dass Fuersorge messbar ist.",
       "characters": [],
-      "chapter_count": 15,
+      "chapter_count": 16,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -4820,10 +4820,11 @@
         "art_12",
         "art_13",
         "art_14",
-        "art_15"
+        "art_15",
+        "art_16"
       ],
-      "words": 6640,
-      "reading_minutes": 33,
+      "words": 7066,
+      "reading_minutes": 35,
       "cover": null,
       "chapters": [
         {
@@ -5112,6 +5113,24 @@
           "genre": "Kochbuch",
           "leak_free": "true",
           "words": 422,
+          "reading_minutes": 2
+        },
+        {
+          "file": "16_art_16_abschnitt_16_der_bindungsparameter.md",
+          "index": 16,
+          "title": "Abschnitt 16: Der Bindungsparameter",
+          "article": "art_16",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "43.1",
+          "jaccard_max": "0.111",
+          "tokens_generated": "2083",
+          "manual_ending_code": "C-16-16",
+          "backend": "openrouter",
+          "genre": "Kochbuch",
+          "leak_free": "true",
+          "words": 426,
           "reading_minutes": 2
         }
       ]
