@@ -5463,7 +5463,7 @@
       "pov": "third_person",
       "setting_summary": "Etymologische Miniaturen zu gefluegelten Worten.",
       "characters": [],
-      "chapter_count": 22,
+      "chapter_count": 23,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -5486,10 +5486,11 @@
         "art_19",
         "art_20",
         "art_21",
-        "art_22"
+        "art_22",
+        "art_23"
       ],
-      "words": 7825,
-      "reading_minutes": 39,
+      "words": 8039,
+      "reading_minutes": 40,
       "cover": null,
       "chapters": [
         {
@@ -5905,6 +5906,24 @@
           "leak_free": "true",
           "words": 390,
           "reading_minutes": 2
+        },
+        {
+          "file": "23_art_23_abschnitt_23_wer_das_gift_bändigt.md",
+          "index": 23,
+          "title": "Abschnitt 23: Wer das Gift bändigt",
+          "article": "art_23",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "100.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1800",
+          "manual_ending_code": "V-23-23",
+          "backend": "openrouter",
+          "genre": "Sprichwoerter",
+          "leak_free": "true",
+          "words": 214,
+          "reading_minutes": 1
         }
       ]
     },

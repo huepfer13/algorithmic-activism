@@ -597,7 +597,8 @@
     "r7:deepseek-chat:buch_001_das_büro_der_unendlichkeit",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_033_the_ledger_of_quiet_rooms",
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_033_the_ledger_of_quiet_rooms",
-    "r4:deepseek-chat:buch_033_the_ledger_of_quiet_rooms"
+    "r4:deepseek-chat:buch_033_the_ledger_of_quiet_rooms",
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_017_des_volkes_mund"
   ],
   "runden": {
     "1": [
@@ -8419,6 +8420,21 @@
         "tokens": "1071",
         "versuche": "3",
         "woerter": 382
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_017_des_volkes_mund",
+        "code": "V-23-23",
+        "datei": "23_art_23_abschnitt_23_wer_das_gift_bändigt.md",
+        "dauer_s": "100.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 7,
+        "tokens": "1800",
+        "versuche": "1",
+        "woerter": 214
       }
     ],
     "8": [
