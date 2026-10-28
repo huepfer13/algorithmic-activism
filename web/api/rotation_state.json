@@ -578,7 +578,8 @@
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_032_the_glass_tribunal",
     "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_033_the_ledger_of_quiet_rooms",
     "r7:deepseek-chat:buch_003_der_rat_der_tiere",
-    "r5:deepseek-chat:buch_033_the_ledger_of_quiet_rooms"
+    "r5:deepseek-chat:buch_033_the_ledger_of_quiet_rooms",
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_004_neon_exil"
   ],
   "runden": {
     "1": [
@@ -7793,6 +7794,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 6
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_004_neon_exil",
+        "code": "S-15-15",
+        "datei": "15_art_15_abschnitt_15_die_staatenlosigkeits_route.md",
+        "dauer_s": "26.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 6,
+        "tokens": "1172",
+        "versuche": "1",
+        "woerter": 302
       }
     ],
     "7": [

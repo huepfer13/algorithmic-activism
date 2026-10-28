@@ -1071,7 +1071,7 @@
       "pov": "third_person",
       "setting_summary": "Im Schattennetz dokumentieren Ausgeschlossene, wie Rechte Stueck fuer Stueck verschwinden.",
       "characters": [],
-      "chapter_count": 14,
+      "chapter_count": 15,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1086,10 +1086,11 @@
         "art_11",
         "art_12",
         "art_13",
-        "art_14"
+        "art_14",
+        "art_15"
       ],
-      "words": 5976,
-      "reading_minutes": 30,
+      "words": 6278,
+      "reading_minutes": 31,
       "cover": null,
       "chapters": [
         {
@@ -1360,6 +1361,24 @@
           "genre": "SciFi_Dystopie",
           "leak_free": "true",
           "words": 449,
+          "reading_minutes": 2
+        },
+        {
+          "file": "15_art_15_abschnitt_15_die_staatenlosigkeits_route.md",
+          "index": 15,
+          "title": "Abschnitt 15: Die Staatenlosigkeits-Route",
+          "article": "art_15",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "26.0",
+          "jaccard_max": "0.05",
+          "tokens_generated": "1172",
+          "manual_ending_code": "S-15-15",
+          "backend": "openrouter",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "true",
+          "words": 302,
           "reading_minutes": 2
         }
       ]
