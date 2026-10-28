@@ -604,7 +604,8 @@
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_014_der_unberechenbare_humor",
     "r8:deepseek-chat:buch_026_the_ledger_of_ash_harbour",
     "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_007_die_kammer_der_zeugen",
-    "r1:deepseek-chat:buch_032_the_glass_tribunal"
+    "r1:deepseek-chat:buch_032_the_glass_tribunal",
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_005_fragment_der_vernunft"
   ],
   "runden": {
     "1": [
@@ -8039,6 +8040,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 6
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_005_fragment_der_vernunft",
+        "code": "P-13-13",
+        "datei": "13_art_13_abschnitt_13_die_geometrie_des_ausgangs.md",
+        "dauer_s": "68.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 6,
+        "tokens": "972",
+        "versuche": "1",
+        "woerter": 334
       }
     ],
     "7": [
