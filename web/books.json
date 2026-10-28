@@ -9111,17 +9111,18 @@
         "Sister Odile",
         "Dane Mercer"
       ],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
         "art_05",
         "art_09",
-        "art_12"
+        "art_12",
+        "art_14"
       ],
-      "words": 3160,
-      "reading_minutes": 16,
+      "words": 3694,
+      "reading_minutes": 18,
       "cover": null,
       "chapters": [
         {
@@ -9249,6 +9250,24 @@
           "leak_free": "true",
           "words": 354,
           "reading_minutes": 2
+        },
+        {
+          "file": "07_art_14_abschnitt_7_the_asylum_parameter.md",
+          "index": 7,
+          "title": "Abschnitt 7: The Asylum Parameter",
+          "article": "art_14",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "784",
+          "manual_ending_code": "H-14-07",
+          "backend": "deepseek",
+          "genre": "Courtroom_Drama",
+          "leak_free": "true",
+          "words": 534,
+          "reading_minutes": 3
         }
       ]
     },
