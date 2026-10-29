@@ -1429,7 +1429,7 @@
       "pov": "third_person",
       "setting_summary": "Ein diskursives Nachdenken darueber, was Menschenrechte praktisch bedeuten.",
       "characters": [],
-      "chapter_count": 14,
+      "chapter_count": 15,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1444,10 +1444,11 @@
         "art_11",
         "art_12",
         "art_13",
-        "art_14"
+        "art_14",
+        "art_15"
       ],
-      "words": 6607,
-      "reading_minutes": 33,
+      "words": 6959,
+      "reading_minutes": 35,
       "cover": null,
       "chapters": [
         {
@@ -1715,6 +1716,24 @@
           "tokens_generated": "1346",
           "manual_ending_code": "P-14-14",
           "backend": "openrouter",
+          "genre": "Philosophischer_Essay",
+          "leak_free": "true",
+          "words": 352,
+          "reading_minutes": 2
+        },
+        {
+          "file": "15_art_15_abschnitt_15_die_kalibrierung_der_zugehö.md",
+          "index": 15,
+          "title": "Abschnitt 15: Die Kalibrierung der Zugehörigkeit",
+          "article": "art_15",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.4",
+          "jaccard_max": "0.105",
+          "tokens_generated": "745",
+          "manual_ending_code": "P-15-15",
+          "backend": "deepseek",
           "genre": "Philosophischer_Essay",
           "leak_free": "true",
           "words": 352,
