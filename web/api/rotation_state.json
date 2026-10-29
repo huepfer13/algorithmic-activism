@@ -648,7 +648,8 @@
     "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_001_das_büro_der_unendlichkeit",
     "r7:deepseek-chat:buch_025_the_hold",
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_005_fragment_der_vernunft",
-    "r2:deepseek-chat:buch_034_the_weight_of_water"
+    "r2:deepseek-chat:buch_034_the_weight_of_water",
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_020_die_quote_der_stille"
   ],
   "runden": {
     "1": [
@@ -8443,6 +8444,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 6
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_020_die_quote_der_stille",
+        "code": "S-15-15",
+        "datei": "15_art_15_abschnitt_15_der_identitäts_offset.md",
+        "dauer_s": "71.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 6,
+        "tokens": "1268",
+        "versuche": "1",
+        "woerter": 330
       }
     ],
     "7": [

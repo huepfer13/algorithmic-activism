@@ -6492,7 +6492,7 @@
         "Dorn",
         "Elia"
       ],
-      "chapter_count": 14,
+      "chapter_count": 15,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -6507,10 +6507,11 @@
         "art_11",
         "art_12",
         "art_13",
-        "art_14"
+        "art_14",
+        "art_15"
       ],
-      "words": 6684,
-      "reading_minutes": 33,
+      "words": 7014,
+      "reading_minutes": 35,
       "cover": null,
       "chapters": [
         {
@@ -6781,6 +6782,24 @@
           "genre": "SciFi_Dystopie",
           "leak_free": "true",
           "words": 374,
+          "reading_minutes": 2
+        },
+        {
+          "file": "15_art_15_abschnitt_15_der_identitäts_offset.md",
+          "index": 15,
+          "title": "Abschnitt 15: Der Identitäts-Offset",
+          "article": "art_15",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "71.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1268",
+          "manual_ending_code": "S-15-15",
+          "backend": "openrouter",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "true",
+          "words": 330,
           "reading_minutes": 2
         }
       ]
