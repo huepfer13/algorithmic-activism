@@ -7453,7 +7453,7 @@
         "Vera",
         "Der Chronist"
       ],
-      "chapter_count": 12,
+      "chapter_count": 13,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -7466,10 +7466,11 @@
         "art_09",
         "art_10",
         "art_11",
-        "art_12"
+        "art_12",
+        "art_13"
       ],
-      "words": 5363,
-      "reading_minutes": 27,
+      "words": 5856,
+      "reading_minutes": 29,
       "cover": null,
       "chapters": [
         {
@@ -7705,6 +7706,24 @@
           "leak_free": "true",
           "words": 297,
           "reading_minutes": 1
+        },
+        {
+          "file": "13_art_13_abschnitt_13_die_kalibrierung_der_reichw.md",
+          "index": 13,
+          "title": "Abschnitt 13: Die Kalibrierung der Reichweite",
+          "article": "art_13",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.9",
+          "jaccard_max": "0.025",
+          "tokens_generated": "1002",
+          "manual_ending_code": "P-13-13",
+          "backend": "deepseek",
+          "genre": "Philosophischer_Essay",
+          "leak_free": "true",
+          "words": 493,
+          "reading_minutes": 2
         }
       ]
     },
