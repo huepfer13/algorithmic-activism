@@ -1429,7 +1429,7 @@
       "pov": "third_person",
       "setting_summary": "Ein diskursives Nachdenken darueber, was Menschenrechte praktisch bedeuten.",
       "characters": [],
-      "chapter_count": 13,
+      "chapter_count": 14,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1443,10 +1443,11 @@
         "art_10",
         "art_11",
         "art_12",
-        "art_13"
+        "art_13",
+        "art_14"
       ],
-      "words": 6255,
-      "reading_minutes": 31,
+      "words": 6607,
+      "reading_minutes": 33,
       "cover": null,
       "chapters": [
         {
@@ -1699,6 +1700,24 @@
           "genre": "Philosophischer_Essay",
           "leak_free": "true",
           "words": 334,
+          "reading_minutes": 2
+        },
+        {
+          "file": "14_art_14_abschnitt_14_die_topologie_der_zuflucht.md",
+          "index": 14,
+          "title": "Abschnitt 14: Die Topologie der Zuflucht",
+          "article": "art_14",
+          "ending_ok": "true",
+          "attempts": "2",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "209.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1346",
+          "manual_ending_code": "P-14-14",
+          "backend": "openrouter",
+          "genre": "Philosophischer_Essay",
+          "leak_free": "true",
+          "words": 352,
           "reading_minutes": 2
         }
       ]
