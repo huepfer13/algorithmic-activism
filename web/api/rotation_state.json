@@ -641,7 +641,8 @@
     "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_023_the_gravity_room",
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_010_amtsblatt_fuer_unzumutbarkeit",
     "r6:deepseek-chat:buch_031_die_kammer_der_sieben_stimmen",
-    "r7:deepseek-chat:buch_034_the_weight_of_water"
+    "r7:deepseek-chat:buch_034_the_weight_of_water",
+    "r6:deepseek-chat:buch_030_die_wolkenschule_über_dem_marktplatz"
   ],
   "runden": {
     "1": [
@@ -8376,6 +8377,21 @@
         "tokens": "945",
         "versuche": "1",
         "woerter": 495
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_030_die_wolkenschule_über_dem_marktplatz",
+        "code": "K-12-12",
+        "datei": "12_art_12_abschnitt_12_der_zwölfte_prüfpunkt.md",
+        "dauer_s": "8.8",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 6,
+        "tokens": "1045",
+        "versuche": "1",
+        "woerter": 550
       }
     ],
     "7": [

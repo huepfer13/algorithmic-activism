@@ -8782,7 +8782,7 @@
         "Herr Wiesel",
         "Lotta"
       ],
-      "chapter_count": 11,
+      "chapter_count": 12,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -8794,10 +8794,11 @@
         "art_08",
         "art_09",
         "art_10",
-        "art_11"
+        "art_11",
+        "art_12"
       ],
-      "words": 6323,
-      "reading_minutes": 32,
+      "words": 6873,
+      "reading_minutes": 34,
       "cover": null,
       "chapters": [
         {
@@ -9014,6 +9015,24 @@
           "genre": "Kinderbuch",
           "leak_free": "true",
           "words": 683,
+          "reading_minutes": 3
+        },
+        {
+          "file": "12_art_12_abschnitt_12_der_zwölfte_prüfpunkt.md",
+          "index": 12,
+          "title": "Abschnitt 12: Der zwölfte Prüfpunkt",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1045",
+          "manual_ending_code": "K-12-12",
+          "backend": "deepseek",
+          "genre": "Kinderbuch",
+          "leak_free": "true",
+          "words": 550,
           "reading_minutes": 3
         }
       ]
