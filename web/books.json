@@ -8244,7 +8244,7 @@
         "Mira Sandoval",
         "Herr Zwirbel"
       ],
-      "chapter_count": 12,
+      "chapter_count": 13,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -8257,10 +8257,11 @@
         "art_09",
         "art_10",
         "art_11",
-        "art_12"
+        "art_12",
+        "art_13"
       ],
-      "words": 6090,
-      "reading_minutes": 30,
+      "words": 6805,
+      "reading_minutes": 34,
       "cover": null,
       "chapters": [
         {
@@ -8496,6 +8497,24 @@
           "leak_free": "true",
           "words": 473,
           "reading_minutes": 2
+        },
+        {
+          "file": "13_art_13_abschnitt_13_die_reihenfolge_als_endloss.md",
+          "index": 13,
+          "title": "Abschnitt 13: Die Reihenfolge als Endlosschleife",
+          "article": "art_13",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "18.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1462",
+          "manual_ending_code": "G-13-13",
+          "backend": "deepseek",
+          "genre": "Satire",
+          "leak_free": "true",
+          "words": 715,
+          "reading_minutes": 4
         }
       ]
     },

@@ -624,7 +624,8 @@
     "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_024_die_kammer_der_stimmen",
     "r9:nvidia/nemotron-3-ultra-550b-a55b:free:buch_013_aufzeichnungen_eines_archivars",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_034_the_weight_of_water",
-    "r6:deepseek-chat:buch_033_the_ledger_of_quiet_rooms"
+    "r6:deepseek-chat:buch_033_the_ledger_of_quiet_rooms",
+    "r4:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren"
   ],
   "runden": {
     "1": [
@@ -6065,6 +6066,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 4
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+        "code": "G-13-13",
+        "datei": "13_art_13_abschnitt_13_die_reihenfolge_als_endloss.md",
+        "dauer_s": "18.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 4,
+        "tokens": "1462",
+        "versuche": "1",
+        "woerter": 715
       }
     ],
     "5": [
