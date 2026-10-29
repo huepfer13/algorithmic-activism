@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 34,
+  "count": 35,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -9977,6 +9977,46 @@
           "leak_free": "true",
           "words": 342,
           "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_035_die_versteinerungsbehörde",
+      "title": "Die Versteinerungsbehörde",
+      "language": "DE",
+      "style": "Magischer_Realismus",
+      "pov": "third_person",
+      "setting_summary": "In der turmhohen Behörde für Versteinerung in der Stadt Grauberg wird täglich protokolliert, welche Bürger langsam zu Stein erstarren – ein Vorgang, der so normal ist wie Regen und doch jede Familie trifft. Die Behörde verwaltet die Versteinerten in engen Wartesälen, vergibt Resttage nach Hierarchie und kontrolliert, wer noch sprechen darf. Als eine junge Antragstellerin beweist, dass Versteinerte weiter hören und fühlen, gerät das gesamte Ordnungssystem ins Wanken.",
+      "characters": [
+        "Ilse Wanko",
+        "Tobias Kranz",
+        "Mira Ott",
+        "Herr Pfeil",
+        "Frau Sander"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 560,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "10.8",
+          "jaccard_max": "",
+          "tokens_generated": "1098",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Magischer_Realismus",
+          "leak_free": "",
+          "words": 560,
+          "reading_minutes": 3
         }
       ]
     }

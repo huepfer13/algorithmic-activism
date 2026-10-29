@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_035_die_versteinerungsbehörde",
+  "title": "Die Versteinerungsbehörde",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Magischer_Realismus",
+  "setting_summary": "In der turmhohen Behörde für Versteinerung in der Stadt Grauberg wird täglich protokolliert, welche Bürger langsam zu Stein erstarren – ein Vorgang, der so normal ist wie Regen und doch jede Familie trifft. Die Behörde verwaltet die Versteinerten in engen Wartesälen, vergibt Resttage nach Hierarchie und kontrolliert, wer noch sprechen darf. Als eine junge Antragstellerin beweist, dass Versteinerte weiter hören und fühlen, gerät das gesamte Ordnungssystem ins Wanken.",
+  "characters": [
+    "Ilse Wanko",
+    "Tobias Kranz",
+    "Mira Ott",
+    "Herr Pfeil",
+    "Frau Sander"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-10-29T23:05:13.996499+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
