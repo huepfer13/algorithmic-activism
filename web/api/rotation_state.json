@@ -626,7 +626,12 @@
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_034_the_weight_of_water",
     "r6:deepseek-chat:buch_033_the_ledger_of_quiet_rooms",
     "r4:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
-    "r5:deepseek-chat:buch_027_das_haus_das_die_namen_fraß"
+    "r5:deepseek-chat:buch_027_das_haus_das_die_namen_fraß",
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_029_the_glass_tribunal",
+    "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_002_die_sieben_quellen",
+    "r7:deepseek-chat:buch_019_the_salt_diaries",
+    "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_001_das_büro_der_unendlichkeit",
+    "r8:deepseek-chat:buch_032_the_glass_tribunal"
   ],
   "runden": {
     "1": [
@@ -2058,6 +2063,16 @@
         "exit": 1,
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 1
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_029_the_glass_tribunal",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
         "runde": 1
       }
     ],
@@ -8241,6 +8256,16 @@
         "tokens": "529",
         "versuche": "1",
         "woerter": 390
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_002_die_sieben_quellen",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 6
       }
     ],
     "7": [
@@ -8743,6 +8768,26 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 7
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_019_the_salt_diaries",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 7
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_001_das_büro_der_unendlichkeit",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 7
       }
     ],
     "8": [
@@ -8950,6 +8995,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 8
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_032_the_glass_tribunal",
+        "code": "H-26-09",
+        "datei": "09_art_26_abschnitt_9_the_education_parameter.md",
+        "dauer_s": "7.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 8,
+        "tokens": "771",
+        "versuche": "1",
+        "woerter": 521
       }
     ],
     "9": [
