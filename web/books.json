@@ -9399,7 +9399,7 @@
         "Tobias Renn",
         "The Warden"
       ],
-      "chapter_count": 7,
+      "chapter_count": 8,
       "covered_articles": [
         "art_01",
         "art_03",
@@ -9407,10 +9407,11 @@
         "art_05",
         "art_09",
         "art_12",
-        "art_14"
+        "art_14",
+        "art_19"
       ],
-      "words": 3901,
-      "reading_minutes": 20,
+      "words": 4291,
+      "reading_minutes": 21,
       "cover": null,
       "chapters": [
         {
@@ -9556,6 +9557,24 @@
           "leak_free": "true",
           "words": 520,
           "reading_minutes": 3
+        },
+        {
+          "file": "08_art_19_abschnitt_8_the_carrier_wave.md",
+          "index": 8,
+          "title": "Abschnitt 8: The Carrier Wave",
+          "article": "art_19",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.5",
+          "jaccard_max": "0.0",
+          "tokens_generated": "529",
+          "manual_ending_code": "B-19-08",
+          "backend": "deepseek",
+          "genre": "Epistolary_Novel",
+          "leak_free": "true",
+          "words": 390,
+          "reading_minutes": 2
         }
       ]
     },
