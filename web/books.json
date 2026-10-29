@@ -9706,13 +9706,14 @@
         "Juniper",
         "The Counter"
       ],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 1054,
-      "reading_minutes": 5,
+      "words": 1565,
+      "reading_minutes": 8,
       "cover": null,
       "chapters": [
         {
@@ -9768,6 +9769,24 @@
           "leak_free": "true",
           "words": 297,
           "reading_minutes": 1
+        },
+        {
+          "file": "03_art_04_abschnitt_3_the_parameter_of_servitude.md",
+          "index": 3,
+          "title": "Abschnitt 3: The Parameter of Servitude",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "683",
+          "manual_ending_code": "D-04-03",
+          "backend": "deepseek",
+          "genre": "Parable",
+          "leak_free": "true",
+          "words": 511,
+          "reading_minutes": 3
         }
       ]
     }

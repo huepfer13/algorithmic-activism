@@ -640,7 +640,8 @@
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_033_the_ledger_of_quiet_rooms",
     "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_023_the_gravity_room",
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_010_amtsblatt_fuer_unzumutbarkeit",
-    "r6:deepseek-chat:buch_031_die_kammer_der_sieben_stimmen"
+    "r6:deepseek-chat:buch_031_die_kammer_der_sieben_stimmen",
+    "r7:deepseek-chat:buch_034_the_weight_of_water"
   ],
   "runden": {
     "1": [
@@ -8912,6 +8913,21 @@
         "tokens": "1311",
         "versuche": "1",
         "woerter": 299
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_034_the_weight_of_water",
+        "code": "D-04-03",
+        "datei": "03_art_04_abschnitt_3_the_parameter_of_servitude.md",
+        "dauer_s": "7.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 7,
+        "tokens": "683",
+        "versuche": "1",
+        "woerter": 511
       }
     ],
     "8": [
