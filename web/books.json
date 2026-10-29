@@ -8089,17 +8089,18 @@
         "Tobias",
         "Die Stimme im Gebälk"
       ],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
         "art_05",
-        "art_06"
+        "art_06",
+        "art_07"
       ],
-      "words": 2870,
-      "reading_minutes": 14,
+      "words": 3404,
+      "reading_minutes": 17,
       "cover": null,
       "chapters": [
         {
@@ -8227,6 +8228,24 @@
           "leak_free": "true",
           "words": 419,
           "reading_minutes": 2
+        },
+        {
+          "file": "07_art_07_abschnitt_7_die_revision_der_gleichheit.md",
+          "index": 7,
+          "title": "Abschnitt 7: Die Revision der Gleichheit",
+          "article": "art_07",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "983",
+          "manual_ending_code": "W-07-07",
+          "backend": "deepseek",
+          "genre": "Gothic",
+          "leak_free": "true",
+          "words": 534,
+          "reading_minutes": 3
         }
       ]
     },

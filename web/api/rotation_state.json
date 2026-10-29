@@ -625,7 +625,8 @@
     "r9:nvidia/nemotron-3-ultra-550b-a55b:free:buch_013_aufzeichnungen_eines_archivars",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_034_the_weight_of_water",
     "r6:deepseek-chat:buch_033_the_ledger_of_quiet_rooms",
-    "r4:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren"
+    "r4:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+    "r5:deepseek-chat:buch_027_das_haus_das_die_namen_fraß"
   ],
   "runden": {
     "1": [
@@ -7248,6 +7249,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 5
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_027_das_haus_das_die_namen_fraß",
+        "code": "W-07-07",
+        "datei": "07_art_07_abschnitt_7_die_revision_der_gleichheit.md",
+        "dauer_s": "9.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 5,
+        "tokens": "983",
+        "versuche": "1",
+        "woerter": 534
       }
     ],
     "6": [
