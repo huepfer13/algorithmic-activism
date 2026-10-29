@@ -614,7 +614,15 @@
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_033_the_ledger_of_quiet_rooms",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_033_the_ledger_of_quiet_rooms",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_033_the_ledger_of_quiet_rooms",
-    "r7:deepseek-chat:buch_032_the_glass_tribunal"
+    "r7:deepseek-chat:buch_032_the_glass_tribunal",
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_034_the_weight_of_water",
+    "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_014_der_unberechenbare_humor",
+    "r7:deepseek-chat:buch_018_rhymes_of_the_commons",
+    "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_021_the_bell_of_the_ninth_gate",
+    "r8:deepseek-chat:buch_029_the_glass_tribunal",
+    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_023_the_gravity_room",
+    "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_024_die_kammer_der_stimmen",
+    "r9:nvidia/nemotron-3-ultra-550b-a55b:free:buch_013_aufzeichnungen_eines_archivars"
   ],
   "runden": {
     "1": [
@@ -2037,6 +2045,16 @@
         "tokens": "784",
         "versuche": "1",
         "woerter": 534
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_034_the_weight_of_water",
+        "datei": null,
+        "dauer_s": 0.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 1
       }
     ],
     "10": [
@@ -8154,6 +8172,16 @@
         "tokens": "1033",
         "versuche": "1",
         "woerter": 340
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_014_der_unberechenbare_humor",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 6
       }
     ],
     "7": [
@@ -8636,6 +8664,26 @@
         "tokens": "704",
         "versuche": "1",
         "woerter": 489
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_018_rhymes_of_the_commons",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 7
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_021_the_bell_of_the_ninth_gate",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 7
       }
     ],
     "8": [
@@ -8813,6 +8861,36 @@
         "tokens": "1557",
         "versuche": "1",
         "woerter": 383
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_029_the_glass_tribunal",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 8
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_023_the_gravity_room",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 8
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_024_die_kammer_der_stimmen",
+        "datei": null,
+        "dauer_s": 0.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 8
       }
     ],
     "9": [
@@ -8935,6 +9013,21 @@
         "tokens": "9873",
         "versuche": "0",
         "woerter": 209
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_013_aufzeichnungen_eines_archivars",
+        "code": "T-16-16",
+        "datei": "16_art_16_abschnitt_16_die_bindungskonstante.md",
+        "dauer_s": "146.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 9,
+        "tokens": "2339",
+        "versuche": "1",
+        "woerter": 303
       }
     ]
   }
