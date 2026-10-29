@@ -9668,12 +9668,13 @@
         "Juniper",
         "The Counter"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_03"
       ],
-      "words": 757,
-      "reading_minutes": 4,
+      "words": 1054,
+      "reading_minutes": 5,
       "cover": null,
       "chapters": [
         {
@@ -9711,6 +9712,24 @@
           "leak_free": "true",
           "words": 336,
           "reading_minutes": 2
+        },
+        {
+          "file": "02_art_03_abschnitt_2_the_verification_of_breath.md",
+          "index": 2,
+          "title": "Abschnitt 2: The Verification of Breath",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "70.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1081",
+          "manual_ending_code": "D-03-02",
+          "backend": "openrouter",
+          "genre": "Parable",
+          "leak_free": "true",
+          "words": 297,
+          "reading_minutes": 1
         }
       ]
     }

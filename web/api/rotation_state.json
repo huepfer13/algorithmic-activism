@@ -633,7 +633,10 @@
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_001_das_büro_der_unendlichkeit",
     "r8:deepseek-chat:buch_032_the_glass_tribunal",
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_034_the_weight_of_water",
-    "r3:deepseek-chat:buch_033_the_ledger_of_quiet_rooms"
+    "r3:deepseek-chat:buch_033_the_ledger_of_quiet_rooms",
+    "r1:deepseek-chat:buch_033_the_ledger_of_quiet_rooms",
+    "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_029_the_glass_tribunal",
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_034_the_weight_of_water"
   ],
   "runden": {
     "1": [
@@ -2075,6 +2078,16 @@
         "exit": 1,
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 1
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_033_the_ledger_of_quiet_rooms",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
         "runde": 1
       }
     ],
@@ -6129,6 +6142,16 @@
         "tokens": "1573",
         "versuche": "1",
         "woerter": 336
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_029_the_glass_tribunal",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 4
       }
     ],
     "5": [
@@ -8298,6 +8321,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 6
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_034_the_weight_of_water",
+        "code": "D-03-02",
+        "datei": "02_art_03_abschnitt_2_the_verification_of_breath.md",
+        "dauer_s": "70.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 6,
+        "tokens": "1081",
+        "versuche": "1",
+        "woerter": 297
       }
     ],
     "7": [
