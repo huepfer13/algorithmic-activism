@@ -610,7 +610,8 @@
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_011_das_haus_ohne_widerhall",
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_033_the_ledger_of_quiet_rooms",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_025_the_hold",
-    "r5:deepseek-chat:buch_030_die_wolkenschule_über_dem_marktplatz"
+    "r5:deepseek-chat:buch_030_die_wolkenschule_über_dem_marktplatz",
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_033_the_ledger_of_quiet_rooms"
   ],
   "runden": {
     "1": [
@@ -3472,6 +3473,21 @@
         "tokens": "574",
         "versuche": "1",
         "woerter": 419
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_033_the_ledger_of_quiet_rooms",
+        "code": "B-14-07",
+        "datei": "07_art_14_abschnitt_7_the_calibration_drift.md",
+        "dauer_s": "93.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 2,
+        "tokens": "1409",
+        "versuche": "1",
+        "woerter": 520
       }
     ],
     "3": [
