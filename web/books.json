@@ -9187,7 +9187,7 @@
         "Sister Odile",
         "Dane Mercer"
       ],
-      "chapter_count": 7,
+      "chapter_count": 8,
       "covered_articles": [
         "art_01",
         "art_03",
@@ -9195,10 +9195,11 @@
         "art_05",
         "art_09",
         "art_12",
-        "art_14"
+        "art_14",
+        "art_19"
       ],
-      "words": 3694,
-      "reading_minutes": 18,
+      "words": 4183,
+      "reading_minutes": 21,
       "cover": null,
       "chapters": [
         {
@@ -9344,6 +9345,24 @@
           "leak_free": "true",
           "words": 534,
           "reading_minutes": 3
+        },
+        {
+          "file": "08_art_19_abschnitt_8_the_expression_parameter.md",
+          "index": 8,
+          "title": "Abschnitt 8: The Expression Parameter",
+          "article": "art_19",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "704",
+          "manual_ending_code": "H-19-08",
+          "backend": "deepseek",
+          "genre": "Courtroom_Drama",
+          "leak_free": "true",
+          "words": 489,
+          "reading_minutes": 2
         }
       ]
     },
