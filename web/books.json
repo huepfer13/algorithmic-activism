@@ -9456,7 +9456,7 @@
         "Tobias Renn",
         "The Warden"
       ],
-      "chapter_count": 8,
+      "chapter_count": 9,
       "covered_articles": [
         "art_01",
         "art_03",
@@ -9465,10 +9465,11 @@
         "art_09",
         "art_12",
         "art_14",
-        "art_19"
+        "art_19",
+        "art_26"
       ],
-      "words": 4291,
-      "reading_minutes": 21,
+      "words": 4875,
+      "reading_minutes": 24,
       "cover": null,
       "chapters": [
         {
@@ -9632,6 +9633,24 @@
           "leak_free": "true",
           "words": 390,
           "reading_minutes": 2
+        },
+        {
+          "file": "09_art_26_abschnitt_9_the_wet_column.md",
+          "index": 9,
+          "title": "Abschnitt 9: The Wet Column",
+          "article": "art_26",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "759",
+          "manual_ending_code": "B-26-09",
+          "backend": "deepseek",
+          "genre": "Epistolary_Novel",
+          "leak_free": "true",
+          "words": 584,
+          "reading_minutes": 3
         }
       ]
     },

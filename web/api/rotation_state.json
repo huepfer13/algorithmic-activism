@@ -632,7 +632,8 @@
     "r7:deepseek-chat:buch_019_the_salt_diaries",
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_001_das_büro_der_unendlichkeit",
     "r8:deepseek-chat:buch_032_the_glass_tribunal",
-    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_034_the_weight_of_water"
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_034_the_weight_of_water",
+    "r3:deepseek-chat:buch_033_the_ledger_of_quiet_rooms"
   ],
   "runden": {
     "1": [
@@ -4866,6 +4867,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 3
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_033_the_ledger_of_quiet_rooms",
+        "code": "B-26-09",
+        "datei": "09_art_26_abschnitt_9_the_wet_column.md",
+        "dauer_s": "7.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 3,
+        "tokens": "759",
+        "versuche": "1",
+        "woerter": 584
       }
     ],
     "4": [
