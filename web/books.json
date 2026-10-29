@@ -3116,7 +3116,7 @@
         "Kalle Ohm",
         "Frau Säckel"
       ],
-      "chapter_count": 18,
+      "chapter_count": 19,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -3135,10 +3135,11 @@
         "art_15",
         "art_16",
         "art_17",
-        "art_18"
+        "art_18",
+        "art_19"
       ],
-      "words": 7729,
-      "reading_minutes": 39,
+      "words": 8028,
+      "reading_minutes": 40,
       "cover": null,
       "chapters": [
         {
@@ -3482,6 +3483,24 @@
           "leak_free": "true",
           "words": 346,
           "reading_minutes": 2
+        },
+        {
+          "file": "19_art_19_abschnitt_19_die_dämpfung_der_schallausb.md",
+          "index": 19,
+          "title": "Abschnitt 19: Die Dämpfung der Schallausbreitung",
+          "article": "art_19",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "70.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1311",
+          "manual_ending_code": "G-19-19",
+          "backend": "openrouter",
+          "genre": "Satire",
+          "leak_free": "true",
+          "words": 299,
+          "reading_minutes": 1
         }
       ]
     },

@@ -636,7 +636,10 @@
     "r3:deepseek-chat:buch_033_the_ledger_of_quiet_rooms",
     "r1:deepseek-chat:buch_033_the_ledger_of_quiet_rooms",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_029_the_glass_tribunal",
-    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_034_the_weight_of_water"
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_034_the_weight_of_water",
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_033_the_ledger_of_quiet_rooms",
+    "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_023_the_gravity_room",
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_010_amtsblatt_fuer_unzumutbarkeit"
   ],
   "runden": {
     "1": [
@@ -8336,6 +8339,26 @@
         "tokens": "1081",
         "versuche": "1",
         "woerter": 297
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_033_the_ledger_of_quiet_rooms",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 6
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_023_the_gravity_room",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 6
       }
     ],
     "7": [
@@ -8858,6 +8881,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 7
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_010_amtsblatt_fuer_unzumutbarkeit",
+        "code": "G-19-19",
+        "datei": "19_art_19_abschnitt_19_die_dämpfung_der_schallausb.md",
+        "dauer_s": "70.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 7,
+        "tokens": "1311",
+        "versuche": "1",
+        "woerter": 299
       }
     ],
     "8": [
