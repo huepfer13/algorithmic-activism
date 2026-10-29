@@ -9649,10 +9649,12 @@
         "Juniper",
         "The Counter"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 421,
-      "reading_minutes": 2,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 757,
+      "reading_minutes": 4,
       "cover": null,
       "chapters": [
         {
@@ -9671,6 +9673,24 @@
           "genre": "Parable",
           "leak_free": "",
           "words": 421,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_01_abschnitt_1_the_calibration_of_thirst.md",
+          "index": 1,
+          "title": "Abschnitt 1: The Calibration of Thirst",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "90.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1573",
+          "manual_ending_code": "D-01-01",
+          "backend": "openrouter",
+          "genre": "Parable",
+          "leak_free": "true",
+          "words": 336,
           "reading_minutes": 2
         }
       ]
