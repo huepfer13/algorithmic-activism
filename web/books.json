@@ -9744,14 +9744,15 @@
         "Juniper",
         "The Counter"
       ],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_03",
-        "art_04"
+        "art_04",
+        "art_05"
       ],
-      "words": 1565,
-      "reading_minutes": 8,
+      "words": 2139,
+      "reading_minutes": 11,
       "cover": null,
       "chapters": [
         {
@@ -9824,6 +9825,24 @@
           "genre": "Parable",
           "leak_free": "true",
           "words": 511,
+          "reading_minutes": 3
+        },
+        {
+          "file": "04_art_05_abschnitt_4_the_calibration_of_cruelty.md",
+          "index": 4,
+          "title": "Abschnitt 4: The Calibration of Cruelty",
+          "article": "art_05",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "761",
+          "manual_ending_code": "D-05-04",
+          "backend": "deepseek",
+          "genre": "Parable",
+          "leak_free": "true",
+          "words": 574,
           "reading_minutes": 3
         }
       ]
