@@ -649,7 +649,8 @@
     "r7:deepseek-chat:buch_025_the_hold",
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_005_fragment_der_vernunft",
     "r2:deepseek-chat:buch_034_the_weight_of_water",
-    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_020_die_quote_der_stille"
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_020_die_quote_der_stille",
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_034_the_weight_of_water"
   ],
   "runden": {
     "1": [
@@ -2102,6 +2103,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "deepseek-chat",
         "runde": 1
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_034_the_weight_of_water",
+        "code": "D-09-05",
+        "datei": "05_art_09_abschnitt_5_the_parameter_of_absence.md",
+        "dauer_s": "61.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 1,
+        "tokens": "956",
+        "versuche": "1",
+        "woerter": 360
       }
     ],
     "10": [

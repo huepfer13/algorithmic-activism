@@ -9763,15 +9763,16 @@
         "Juniper",
         "The Counter"
       ],
-      "chapter_count": 4,
+      "chapter_count": 5,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_09"
       ],
-      "words": 2139,
-      "reading_minutes": 11,
+      "words": 2499,
+      "reading_minutes": 12,
       "cover": null,
       "chapters": [
         {
@@ -9863,6 +9864,24 @@
           "leak_free": "true",
           "words": 574,
           "reading_minutes": 3
+        },
+        {
+          "file": "05_art_09_abschnitt_5_the_parameter_of_absence.md",
+          "index": 5,
+          "title": "Abschnitt 5: The Parameter of Absence",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "61.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "956",
+          "manual_ending_code": "D-09-05",
+          "backend": "openrouter",
+          "genre": "Parable",
+          "leak_free": "true",
+          "words": 360,
+          "reading_minutes": 2
         }
       ]
     }
