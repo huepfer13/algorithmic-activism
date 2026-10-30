@@ -9858,17 +9858,18 @@
         "Juniper",
         "The Counter"
       ],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
         "art_05",
         "art_09",
-        "art_12"
+        "art_12",
+        "art_14"
       ],
-      "words": 2841,
-      "reading_minutes": 14,
+      "words": 3310,
+      "reading_minutes": 17,
       "cover": null,
       "chapters": [
         {
@@ -9995,6 +9996,24 @@
           "genre": "Parable",
           "leak_free": "true",
           "words": 342,
+          "reading_minutes": 2
+        },
+        {
+          "file": "07_art_14_abschnitt_7_the_calibration_of_strangers.md",
+          "index": 7,
+          "title": "Abschnitt 7: The Calibration of Strangers",
+          "article": "art_14",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.9",
+          "jaccard_max": "0.053",
+          "tokens_generated": "639",
+          "manual_ending_code": "D-14-07",
+          "backend": "deepseek",
+          "genre": "Parable",
+          "leak_free": "true",
+          "words": 469,
           "reading_minutes": 2
         }
       ]

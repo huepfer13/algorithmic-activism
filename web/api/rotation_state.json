@@ -667,7 +667,17 @@
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_029_the_glass_tribunal",
     "r8:deepseek-chat:buch_021_the_bell_of_the_ninth_gate",
     "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_034_the_weight_of_water",
-    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_012_manifest_der_unantastbaren"
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_012_manifest_der_unantastbaren",
+    "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_012_manifest_der_unantastbaren",
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_019_the_salt_diaries",
+    "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_022_the_ledger_of_vanishing_rain",
+    "r8:deepseek-chat:buch_018_rhymes_of_the_commons",
+    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+    "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_006_das_gericht_vor_der_mauer",
+    "r9:deepseek-chat:buch_026_the_ledger_of_ash_harbour",
+    "r9:nvidia/nemotron-3-ultra-550b-a55b:free:buch_005_fragment_der_vernunft",
+    "r9:nvidia/nemotron-3-super-120b-a12b:free:buch_029_the_glass_tribunal",
+    "r10:deepseek-chat:buch_034_the_weight_of_water"
   ],
   "runden": {
     "1": [
@@ -2257,6 +2267,21 @@
         "tokens": "11085",
         "versuche": "0",
         "woerter": 340
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_034_the_weight_of_water",
+        "code": "D-14-07",
+        "datei": "07_art_14_abschnitt_7_the_calibration_of_strangers.md",
+        "dauer_s": "6.9",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 10,
+        "tokens": "639",
+        "versuche": "1",
+        "woerter": 469
       }
     ],
     "2": [
@@ -8567,6 +8592,16 @@
         "tokens": "1258",
         "versuche": "1",
         "woerter": 313
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_012_manifest_der_unantastbaren",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 6
       }
     ],
     "7": [
@@ -9214,6 +9249,26 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 7
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_019_the_salt_diaries",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 7
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_022_the_ledger_of_vanishing_rain",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 7
       }
     ],
     "8": [
@@ -9491,6 +9546,36 @@
         "tokens": "1042",
         "versuche": "1",
         "woerter": 342
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_018_rhymes_of_the_commons",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 8
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+        "datei": null,
+        "dauer_s": 0.6,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 8
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_006_das_gericht_vor_der_mauer",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 8
       }
     ],
     "9": [
@@ -9628,6 +9713,36 @@
         "tokens": "2339",
         "versuche": "1",
         "woerter": 303
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_026_the_ledger_of_ash_harbour",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 9
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_005_fragment_der_vernunft",
+        "datei": null,
+        "dauer_s": 0.6,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 9
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_029_the_glass_tribunal",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 9
       }
     ]
   }
