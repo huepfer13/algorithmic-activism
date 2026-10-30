@@ -4009,7 +4009,7 @@
       "pov": "first_person",
       "setting_summary": "In einem unterirdischen Archivbunker, dem Sektor Neun, hausen die letzten freien Chronisten unter ständiger Überwachung durch die Obrigkeit. Ein Riss in der Betondecke lässt Wasser eindringen und markiert eine tickende Frist: In wenigen Wochen wird der Bunker geflutet, wenn niemand die Wahrheit nach außen trägt. Jeder ausgesprochene Satz kann Verhaftung, Folter oder Tod bedeuten – und doch muss gesprochen werden.",
       "characters": [],
-      "chapter_count": 16,
+      "chapter_count": 17,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -4026,10 +4026,11 @@
         "art_13",
         "art_14",
         "art_15",
-        "art_16"
+        "art_16",
+        "art_17"
       ],
-      "words": 5923,
-      "reading_minutes": 30,
+      "words": 6256,
+      "reading_minutes": 31,
       "cover": null,
       "chapters": [
         {
@@ -4336,6 +4337,24 @@
           "genre": "Manifest",
           "leak_free": "true",
           "words": 313,
+          "reading_minutes": 2
+        },
+        {
+          "file": "17_art_17_abschnitt_17_die_frequenz_der_habseligke.md",
+          "index": 17,
+          "title": "Abschnitt 17: Die Frequenz der Habseligkeiten",
+          "article": "art_17",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "606",
+          "manual_ending_code": "R-17-17",
+          "backend": "deepseek",
+          "genre": "Manifest",
+          "leak_free": "true",
+          "words": 333,
           "reading_minutes": 2
         }
       ]

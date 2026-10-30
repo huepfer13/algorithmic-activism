@@ -704,7 +704,8 @@
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_016_faden_der_gelassenheit",
     "r8:deepseek-chat:buch_031_die_kammer_der_sieben_stimmen",
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_035_die_versteinerungsbehörde",
-    "r4:deepseek-chat:buch_035_die_versteinerungsbehörde"
+    "r4:deepseek-chat:buch_035_die_versteinerungsbehörde",
+    "r8:deepseek-chat:buch_012_manifest_der_unantastbaren"
   ],
   "runden": {
     "1": [
@@ -9938,6 +9939,21 @@
         "tokens": "1105",
         "versuche": "1",
         "woerter": 588
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_012_manifest_der_unantastbaren",
+        "code": "R-17-17",
+        "datei": "17_art_17_abschnitt_17_die_frequenz_der_habseligke.md",
+        "dauer_s": "6.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 8,
+        "tokens": "606",
+        "versuche": "1",
+        "woerter": 333
       }
     ],
     "9": [
