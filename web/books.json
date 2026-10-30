@@ -1755,7 +1755,7 @@
         "Vera",
         "Juno"
       ],
-      "chapter_count": 15,
+      "chapter_count": 16,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1771,10 +1771,11 @@
         "art_12",
         "art_13",
         "art_14",
-        "art_15"
+        "art_15",
+        "art_16"
       ],
-      "words": 6776,
-      "reading_minutes": 34,
+      "words": 7334,
+      "reading_minutes": 37,
       "cover": null,
       "chapters": [
         {
@@ -2064,6 +2065,24 @@
           "leak_free": "true",
           "words": 738,
           "reading_minutes": 4
+        },
+        {
+          "file": "16_art_16_abschnitt_16_die_fuge_im_faden.md",
+          "index": 16,
+          "title": "Abschnitt 16: Die Fuge im Faden",
+          "article": "art_16",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1073",
+          "manual_ending_code": "D-16-16",
+          "backend": "deepseek",
+          "genre": "Parabel",
+          "leak_free": "true",
+          "words": 558,
+          "reading_minutes": 3
         }
       ]
     },
