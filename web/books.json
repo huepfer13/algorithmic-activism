@@ -3933,7 +3933,7 @@
       "pov": "first_person",
       "setting_summary": "In einem unterirdischen Archivbunker, dem Sektor Neun, hausen die letzten freien Chronisten unter ständiger Überwachung durch die Obrigkeit. Ein Riss in der Betondecke lässt Wasser eindringen und markiert eine tickende Frist: In wenigen Wochen wird der Bunker geflutet, wenn niemand die Wahrheit nach außen trägt. Jeder ausgesprochene Satz kann Verhaftung, Folter oder Tod bedeuten – und doch muss gesprochen werden.",
       "characters": [],
-      "chapter_count": 15,
+      "chapter_count": 16,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -3949,10 +3949,11 @@
         "art_12",
         "art_13",
         "art_14",
-        "art_15"
+        "art_15",
+        "art_16"
       ],
-      "words": 5610,
-      "reading_minutes": 28,
+      "words": 5923,
+      "reading_minutes": 30,
       "cover": null,
       "chapters": [
         {
@@ -4242,6 +4243,24 @@
           "leak_free": "true",
           "words": 291,
           "reading_minutes": 1
+        },
+        {
+          "file": "16_art_16_abschnitt_16_der_parameter_der_verbindun.md",
+          "index": 16,
+          "title": "Abschnitt 16: Der Parameter der Verbindung",
+          "article": "art_16",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "37.5",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1258",
+          "manual_ending_code": "R-16-16",
+          "backend": "openrouter",
+          "genre": "Manifest",
+          "leak_free": "true",
+          "words": 313,
+          "reading_minutes": 2
         }
       ]
     },
