@@ -10222,15 +10222,16 @@
         "Herr Pfeil",
         "Frau Sander"
       ],
-      "chapter_count": 4,
+      "chapter_count": 5,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
-        "art_04"
+        "art_04",
+        "art_05"
       ],
-      "words": 2364,
-      "reading_minutes": 12,
+      "words": 2660,
+      "reading_minutes": 13,
       "cover": null,
       "chapters": [
         {
@@ -10322,6 +10323,24 @@
           "leak_free": "true",
           "words": 347,
           "reading_minutes": 2
+        },
+        {
+          "file": "05_art_05_abschnitt_5_kalibrierungsabweichung_art_.md",
+          "index": 5,
+          "title": "Abschnitt 5: Kalibrierungsabweichung Art-05",
+          "article": "art_05",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "73.2",
+          "jaccard_max": "0.026",
+          "tokens_generated": "1055",
+          "manual_ending_code": "Z-05-05",
+          "backend": "openrouter",
+          "genre": "Magischer_Realismus",
+          "leak_free": "true",
+          "words": 296,
+          "reading_minutes": 1
         }
       ]
     }
