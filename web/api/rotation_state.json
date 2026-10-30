@@ -686,7 +686,8 @@
     "r7:deepseek-chat:buch_016_faden_der_gelassenheit",
     "r4:deepseek-chat:buch_006_das_gericht_vor_der_mauer",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_035_die_versteinerungsbehörde",
-    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_003_der_rat_der_tiere"
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_003_der_rat_der_tiere",
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_035_die_versteinerungsbehörde"
   ],
   "runden": {
     "1": [
@@ -3673,6 +3674,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 2
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_035_die_versteinerungsbehörde",
+        "code": "Z-03-03",
+        "datei": "03_art_03_abschnitt_3_null_lager_vorschrift_art_03.md",
+        "dauer_s": "48.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 2,
+        "tokens": "1460",
+        "versuche": "1",
+        "woerter": 372
       }
     ],
     "3": [

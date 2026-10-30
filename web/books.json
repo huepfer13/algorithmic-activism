@@ -10108,13 +10108,14 @@
         "Herr Pfeil",
         "Frau Sander"
       ],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_02"
+        "art_02",
+        "art_03"
       ],
-      "words": 1645,
-      "reading_minutes": 8,
+      "words": 2017,
+      "reading_minutes": 10,
       "cover": null,
       "chapters": [
         {
@@ -10170,6 +10171,24 @@
           "leak_free": "true",
           "words": 519,
           "reading_minutes": 3
+        },
+        {
+          "file": "03_art_03_abschnitt_3_null_lager_vorschrift_art_03.md",
+          "index": 3,
+          "title": "Abschnitt 3: Null-Lager-Vorschrift Art-03",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "48.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1460",
+          "manual_ending_code": "Z-03-03",
+          "backend": "openrouter",
+          "genre": "Magischer_Realismus",
+          "leak_free": "true",
+          "words": 372,
+          "reading_minutes": 2
         }
       ]
     }
