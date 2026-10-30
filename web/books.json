@@ -10165,14 +10165,15 @@
         "Herr Pfeil",
         "Frau Sander"
       ],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_02",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 2017,
-      "reading_minutes": 10,
+      "words": 2364,
+      "reading_minutes": 12,
       "cover": null,
       "chapters": [
         {
@@ -10245,6 +10246,24 @@
           "genre": "Magischer_Realismus",
           "leak_free": "true",
           "words": 372,
+          "reading_minutes": 2
+        },
+        {
+          "file": "04_art_04_abschnitt_4_kondensat_protokoll_art_04.md",
+          "index": 4,
+          "title": "Abschnitt 4: Kondensat-Protokoll Art-04",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "47.7",
+          "jaccard_max": "0.023",
+          "tokens_generated": "1068",
+          "manual_ending_code": "Z-04-04",
+          "backend": "openrouter",
+          "genre": "Magischer_Realismus",
+          "leak_free": "true",
+          "words": 347,
           "reading_minutes": 2
         }
       ]
