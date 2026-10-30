@@ -677,7 +677,8 @@
     "r9:deepseek-chat:buch_026_the_ledger_of_ash_harbour",
     "r9:nvidia/nemotron-3-ultra-550b-a55b:free:buch_005_fragment_der_vernunft",
     "r9:nvidia/nemotron-3-super-120b-a12b:free:buch_029_the_glass_tribunal",
-    "r10:deepseek-chat:buch_034_the_weight_of_water"
+    "r10:deepseek-chat:buch_034_the_weight_of_water",
+    "r7:deepseek-chat:buch_007_die_kammer_der_zeugen"
   ],
   "runden": {
     "1": [
@@ -9269,6 +9270,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 7
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_007_die_kammer_der_zeugen",
+        "code": "H-17-17",
+        "datei": "17_art_17_abschnitt_17_die_eigentumsmaske.md",
+        "dauer_s": "9.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 7,
+        "tokens": "985",
+        "versuche": "1",
+        "woerter": 476
       }
     ],
     "8": [
