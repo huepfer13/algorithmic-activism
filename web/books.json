@@ -9355,7 +9355,7 @@
         "Tomás Ferreira",
         "Hanna Ostrowski"
       ],
-      "chapter_count": 12,
+      "chapter_count": 13,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -9368,10 +9368,11 @@
         "art_09",
         "art_10",
         "art_11",
-        "art_12"
+        "art_12",
+        "art_13"
       ],
-      "words": 5877,
-      "reading_minutes": 29,
+      "words": 6354,
+      "reading_minutes": 32,
       "cover": null,
       "chapters": [
         {
@@ -9607,6 +9608,24 @@
           "leak_free": "true",
           "words": 588,
           "reading_minutes": 3
+        },
+        {
+          "file": "13_art_13_abschnitt_13_der_korridor_als_parameter.md",
+          "index": 13,
+          "title": "Abschnitt 13: Der Korridor als Parameter",
+          "article": "art_13",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "55.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1400",
+          "manual_ending_code": "H-13-13",
+          "backend": "openrouter",
+          "genre": "Gerichtsdrama",
+          "leak_free": "true",
+          "words": 477,
+          "reading_minutes": 2
         }
       ]
     },

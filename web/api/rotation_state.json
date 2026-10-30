@@ -707,7 +707,8 @@
     "r4:deepseek-chat:buch_035_die_versteinerungsbehörde",
     "r8:deepseek-chat:buch_012_manifest_der_unantastbaren",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_034_the_weight_of_water",
-    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_035_die_versteinerungsbehörde"
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_035_die_versteinerungsbehörde",
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_031_die_kammer_der_sieben_stimmen"
   ],
   "runden": {
     "1": [
@@ -7620,6 +7621,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 5
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_031_die_kammer_der_sieben_stimmen",
+        "code": "H-13-13",
+        "datei": "13_art_13_abschnitt_13_der_korridor_als_parameter.md",
+        "dauer_s": "55.8",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 5,
+        "tokens": "1400",
+        "versuche": "1",
+        "woerter": 477
       }
     ],
     "6": [
