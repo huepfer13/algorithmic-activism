@@ -10260,17 +10260,18 @@
         "Herr Pfeil",
         "Frau Sander"
       ],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
         "art_05",
-        "art_06"
+        "art_06",
+        "art_07"
       ],
-      "words": 3177,
-      "reading_minutes": 16,
+      "words": 3562,
+      "reading_minutes": 18,
       "cover": null,
       "chapters": [
         {
@@ -10398,6 +10399,24 @@
           "leak_free": "true",
           "words": 517,
           "reading_minutes": 3
+        },
+        {
+          "file": "07_art_07_abschnitt_7_die_gleichheit_der_schwerkra.md",
+          "index": 7,
+          "title": "Abschnitt 7: Die Gleichheit der Schwerkraft",
+          "article": "art_07",
+          "ending_ok": "true",
+          "attempts": "2",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "111.2",
+          "jaccard_max": "0.029",
+          "tokens_generated": "1146",
+          "manual_ending_code": "Z-07-07",
+          "backend": "openrouter",
+          "genre": "Magischer_Realismus",
+          "leak_free": "true",
+          "words": 385,
+          "reading_minutes": 2
         }
       ]
     }
