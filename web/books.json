@@ -9336,7 +9336,7 @@
         "Tomás Ferreira",
         "Hanna Ostrowski"
       ],
-      "chapter_count": 11,
+      "chapter_count": 12,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -9348,10 +9348,11 @@
         "art_08",
         "art_09",
         "art_10",
-        "art_11"
+        "art_11",
+        "art_12"
       ],
-      "words": 5289,
-      "reading_minutes": 26,
+      "words": 5877,
+      "reading_minutes": 29,
       "cover": null,
       "chapters": [
         {
@@ -9569,6 +9570,24 @@
           "leak_free": "true",
           "words": 495,
           "reading_minutes": 2
+        },
+        {
+          "file": "12_art_12_abschnitt_12_die_wohnung_als_beweismitte.md",
+          "index": 12,
+          "title": "Abschnitt 12: Die Wohnung als Beweismittel",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.5",
+          "jaccard_max": "0.03",
+          "tokens_generated": "1105",
+          "manual_ending_code": "H-12-12",
+          "backend": "deepseek",
+          "genre": "Gerichtsdrama",
+          "leak_free": "true",
+          "words": 588,
+          "reading_minutes": 3
         }
       ]
     },
