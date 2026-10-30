@@ -679,7 +679,9 @@
     "r9:nvidia/nemotron-3-super-120b-a12b:free:buch_029_the_glass_tribunal",
     "r10:deepseek-chat:buch_034_the_weight_of_water",
     "r7:deepseek-chat:buch_007_die_kammer_der_zeugen",
-    "r1:deepseek-chat:buch_035_die_versteinerungsbehörde"
+    "r1:deepseek-chat:buch_035_die_versteinerungsbehörde",
+    "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_009_depeschen_aus_dem_kordon",
+    "r6:deepseek-chat:buch_035_die_versteinerungsbehörde"
   ],
   "runden": {
     "1": [
@@ -6285,6 +6287,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 4
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_009_depeschen_aus_dem_kordon",
+        "datei": null,
+        "dauer_s": 0.4,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 4
       }
     ],
     "5": [
@@ -8619,6 +8631,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 6
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_035_die_versteinerungsbehörde",
+        "code": "Z-02-02",
+        "datei": "02_art_02_abschnitt_2_kalibrierungsvorgabe_b_3.md",
+        "dauer_s": "8.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 6,
+        "tokens": "967",
+        "versuche": "1",
+        "woerter": 519
       }
     ],
     "7": [

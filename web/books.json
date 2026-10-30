@@ -10051,12 +10051,13 @@
         "Herr Pfeil",
         "Frau Sander"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 1126,
-      "reading_minutes": 6,
+      "words": 1645,
+      "reading_minutes": 8,
       "cover": null,
       "chapters": [
         {
@@ -10093,6 +10094,24 @@
           "genre": "Magischer_Realismus",
           "leak_free": "true",
           "words": 566,
+          "reading_minutes": 3
+        },
+        {
+          "file": "02_art_02_abschnitt_2_kalibrierungsvorgabe_b_3.md",
+          "index": 2,
+          "title": "Abschnitt 2: Kalibrierungsvorgabe B-3",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "967",
+          "manual_ending_code": "Z-02-02",
+          "backend": "deepseek",
+          "genre": "Magischer_Realismus",
+          "leak_free": "true",
+          "words": 519,
           "reading_minutes": 3
         }
       ]
