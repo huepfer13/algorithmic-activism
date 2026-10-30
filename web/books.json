@@ -10279,7 +10279,7 @@
         "Herr Pfeil",
         "Frau Sander"
       ],
-      "chapter_count": 7,
+      "chapter_count": 8,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -10287,10 +10287,11 @@
         "art_04",
         "art_05",
         "art_06",
-        "art_07"
+        "art_07",
+        "art_08"
       ],
-      "words": 3562,
-      "reading_minutes": 18,
+      "words": 3901,
+      "reading_minutes": 20,
       "cover": null,
       "chapters": [
         {
@@ -10435,6 +10436,24 @@
           "genre": "Magischer_Realismus",
           "leak_free": "true",
           "words": 385,
+          "reading_minutes": 2
+        },
+        {
+          "file": "08_art_08_abschnitt_8_die_kalibrierung_des_einspru.md",
+          "index": 8,
+          "title": "Abschnitt 8: Die Kalibrierung des Einspruchs",
+          "article": "art_08",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "35.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1146",
+          "manual_ending_code": "Z-08-08",
+          "backend": "openrouter",
+          "genre": "Magischer_Realismus",
+          "leak_free": "true",
+          "words": 339,
           "reading_minutes": 2
         }
       ]

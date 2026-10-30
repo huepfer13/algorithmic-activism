@@ -708,7 +708,8 @@
     "r8:deepseek-chat:buch_012_manifest_der_unantastbaren",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_034_the_weight_of_water",
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_035_die_versteinerungsbehörde",
-    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_031_die_kammer_der_sieben_stimmen"
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_031_die_kammer_der_sieben_stimmen",
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_035_die_versteinerungsbehörde"
   ],
   "runden": {
     "1": [
@@ -7636,6 +7637,21 @@
         "tokens": "1400",
         "versuche": "1",
         "woerter": 477
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_035_die_versteinerungsbehörde",
+        "code": "Z-08-08",
+        "datei": "08_art_08_abschnitt_8_die_kalibrierung_des_einspru.md",
+        "dauer_s": "35.7",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 5,
+        "tokens": "1146",
+        "versuche": "1",
+        "woerter": 339
       }
     ],
     "6": [
