@@ -10051,10 +10051,12 @@
         "Herr Pfeil",
         "Frau Sander"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 560,
-      "reading_minutes": 3,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 1126,
+      "reading_minutes": 6,
       "cover": null,
       "chapters": [
         {
@@ -10073,6 +10075,24 @@
           "genre": "Magischer_Realismus",
           "leak_free": "",
           "words": 560,
+          "reading_minutes": 3
+        },
+        {
+          "file": "01_art_01_abschnitt_1_resttage_nach_hierarchie.md",
+          "index": 1,
+          "title": "Abschnitt 1: Resttage nach Hierarchie",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "10.2",
+          "jaccard_max": "0.026",
+          "tokens_generated": "1055",
+          "manual_ending_code": "Z-01-01",
+          "backend": "deepseek",
+          "genre": "Magischer_Realismus",
+          "leak_free": "true",
+          "words": 566,
           "reading_minutes": 3
         }
       ]
