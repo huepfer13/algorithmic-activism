@@ -709,7 +709,14 @@
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_034_the_weight_of_water",
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_035_die_versteinerungsbehörde",
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_031_die_kammer_der_sieben_stimmen",
-    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_035_die_versteinerungsbehörde"
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_035_die_versteinerungsbehörde",
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_034_the_weight_of_water",
+    "r5:deepseek-chat:buch_023_the_gravity_room",
+    "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_020_die_quote_der_stille",
+    "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_004_neon_exil",
+    "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_033_the_ledger_of_quiet_rooms",
+    "r9:deepseek-chat:buch_019_the_salt_diaries",
+    "r9:nvidia/nemotron-3-ultra-550b-a55b:free:buch_003_der_rat_der_tiere"
   ],
   "runden": {
     "1": [
@@ -3720,6 +3727,16 @@
         "exit": 1,
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 2
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_034_the_weight_of_water",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
         "runde": 2
       }
     ],
@@ -7652,6 +7669,16 @@
         "tokens": "1146",
         "versuche": "1",
         "woerter": 339
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_023_the_gravity_room",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 5
       }
     ],
     "6": [
@@ -8864,6 +8891,16 @@
         "tokens": "1055",
         "versuche": "1",
         "woerter": 296
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_020_die_quote_der_stille",
+        "datei": null,
+        "dauer_s": 0.4,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 6
       }
     ],
     "7": [
@@ -9621,6 +9658,16 @@
         "tokens": "1146",
         "versuche": "2",
         "woerter": 385
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_004_neon_exil",
+        "datei": null,
+        "dauer_s": 0.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 7
       }
     ],
     "8": [
@@ -10018,6 +10065,16 @@
         "tokens": "606",
         "versuche": "1",
         "woerter": 333
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_033_the_ledger_of_quiet_rooms",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 8
       }
     ],
     "9": [
@@ -10200,6 +10257,31 @@
         "tokens": "1189",
         "versuche": "1",
         "woerter": 574
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_019_the_salt_diaries",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 9
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_003_der_rat_der_tiere",
+        "code": "K-17-17",
+        "datei": "17_art_17_abschnitt_17_das_protokoll_der_sicheren_.md",
+        "dauer_s": "19.7",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 9,
+        "tokens": "1180",
+        "versuche": "1",
+        "woerter": 312
       }
     ]
   }
