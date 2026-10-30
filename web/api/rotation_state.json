@@ -693,7 +693,12 @@
     "r8:deepseek-chat:buch_030_die_wolkenschule_über_dem_marktplatz",
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_033_the_ledger_of_quiet_rooms",
     "r8:deepseek-chat:buch_013_aufzeichnungen_eines_archivars",
-    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_035_die_versteinerungsbehörde"
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_035_die_versteinerungsbehörde",
+    "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_019_the_salt_diaries",
+    "r8:deepseek-chat:buch_019_the_salt_diaries",
+    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_021_the_bell_of_the_ninth_gate",
+    "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_003_der_rat_der_tiere",
+    "r9:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren"
   ],
   "runden": {
     "1": [
@@ -9470,6 +9475,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 7
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_019_the_salt_diaries",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 7
       }
     ],
     "8": [
@@ -9807,6 +9822,36 @@
         "tokens": "828",
         "versuche": "1",
         "woerter": 344
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_019_the_salt_diaries",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 8
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_021_the_bell_of_the_ninth_gate",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 8
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_003_der_rat_der_tiere",
+        "datei": null,
+        "dauer_s": 0.4,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 8
       }
     ],
     "9": [
@@ -9974,6 +10019,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 9
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+        "code": "G-14-14",
+        "datei": "14_art_14_abschnitt_14_die_asylzone_als_kalibrieru.md",
+        "dauer_s": "9.7",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 9,
+        "tokens": "1189",
+        "versuche": "1",
+        "woerter": 574
       }
     ]
   }
