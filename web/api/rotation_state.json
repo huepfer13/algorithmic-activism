@@ -698,7 +698,8 @@
     "r8:deepseek-chat:buch_019_the_salt_diaries",
     "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_021_the_bell_of_the_ninth_gate",
     "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_003_der_rat_der_tiere",
-    "r9:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren"
+    "r9:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+    "r6:deepseek-chat:buch_034_the_weight_of_water"
   ],
   "runden": {
     "1": [
@@ -8753,6 +8754,21 @@
         "tokens": "1075",
         "versuche": "1",
         "woerter": 396
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_034_the_weight_of_water",
+        "code": "D-19-08",
+        "datei": "08_art_19_abschnitt_8_the_parameter_of_open_channe.md",
+        "dauer_s": "7.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 6,
+        "tokens": "742",
+        "versuche": "1",
+        "woerter": 552
       }
     ],
     "7": [

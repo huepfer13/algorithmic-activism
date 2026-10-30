@@ -10010,7 +10010,7 @@
         "Juniper",
         "The Counter"
       ],
-      "chapter_count": 7,
+      "chapter_count": 8,
       "covered_articles": [
         "art_01",
         "art_03",
@@ -10018,10 +10018,11 @@
         "art_05",
         "art_09",
         "art_12",
-        "art_14"
+        "art_14",
+        "art_19"
       ],
-      "words": 3310,
-      "reading_minutes": 17,
+      "words": 3862,
+      "reading_minutes": 19,
       "cover": null,
       "chapters": [
         {
@@ -10167,6 +10168,24 @@
           "leak_free": "true",
           "words": 469,
           "reading_minutes": 2
+        },
+        {
+          "file": "08_art_19_abschnitt_8_the_parameter_of_open_channe.md",
+          "index": 8,
+          "title": "Abschnitt 8: The Parameter of Open Channels",
+          "article": "art_19",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.0",
+          "jaccard_max": "0.05",
+          "tokens_generated": "742",
+          "manual_ending_code": "D-19-08",
+          "backend": "deepseek",
+          "genre": "Parable",
+          "leak_free": "true",
+          "words": 552,
+          "reading_minutes": 3
         }
       ]
     },
