@@ -469,7 +469,7 @@
       "pov": "third_person",
       "setting_summary": "Sieben Quellen, sieben Pruefungen: eine Wanderung durch die Landschaften der Rechte.",
       "characters": [],
-      "chapter_count": 14,
+      "chapter_count": 15,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -484,10 +484,11 @@
         "art_11",
         "art_12",
         "art_13",
-        "art_14"
+        "art_14",
+        "art_15"
       ],
-      "words": 7234,
-      "reading_minutes": 36,
+      "words": 7781,
+      "reading_minutes": 39,
       "cover": null,
       "chapters": [
         {
@@ -758,6 +759,24 @@
           "genre": "Märchen",
           "leak_free": "true",
           "words": 517,
+          "reading_minutes": 3
+        },
+        {
+          "file": "15_art_15_abschnitt_15_die_prüfung_des_heimatrecht.md",
+          "index": 15,
+          "title": "Abschnitt 15: Die Prüfung des Heimatrechts",
+          "article": "art_15",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.9",
+          "jaccard_max": "0.024",
+          "tokens_generated": "947",
+          "manual_ending_code": "M-15-15",
+          "backend": "deepseek",
+          "genre": "Märchen",
+          "leak_free": "true",
+          "words": 547,
           "reading_minutes": 3
         }
       ]
