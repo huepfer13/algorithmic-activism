@@ -681,7 +681,9 @@
     "r7:deepseek-chat:buch_007_die_kammer_der_zeugen",
     "r1:deepseek-chat:buch_035_die_versteinerungsbehörde",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_009_depeschen_aus_dem_kordon",
-    "r6:deepseek-chat:buch_035_die_versteinerungsbehörde"
+    "r6:deepseek-chat:buch_035_die_versteinerungsbehörde",
+    "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_027_das_haus_das_die_namen_fraß",
+    "r7:deepseek-chat:buch_016_faden_der_gelassenheit"
   ],
   "runden": {
     "1": [
@@ -8646,6 +8648,16 @@
         "tokens": "967",
         "versuche": "1",
         "woerter": 519
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_027_das_haus_das_die_namen_fraß",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 6
       }
     ],
     "7": [
@@ -9328,6 +9340,21 @@
         "tokens": "985",
         "versuche": "1",
         "woerter": 476
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_016_faden_der_gelassenheit",
+        "code": "L-19-19",
+        "datei": "19_art_19_abschnitt_19_die_durchlässige_wand.md",
+        "dauer_s": "18.5",
+        "ending_ok": "false",
+        "exit": 2,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 7,
+        "tokens": "718",
+        "versuche": "3",
+        "woerter": 376
       }
     ],
     "8": [

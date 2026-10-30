@@ -5314,7 +5314,7 @@
       "pov": "third_person",
       "setting_summary": "Kontemplative Einsichten fuer unruhige Zeiten.",
       "characters": [],
-      "chapter_count": 18,
+      "chapter_count": 19,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -5333,10 +5333,11 @@
         "art_15",
         "art_16",
         "art_17",
-        "art_18"
+        "art_18",
+        "art_19"
       ],
-      "words": 5774,
-      "reading_minutes": 29,
+      "words": 6150,
+      "reading_minutes": 31,
       "cover": null,
       "chapters": [
         {
@@ -5679,6 +5680,24 @@
           "genre": "Lebensweisheiten",
           "leak_free": "",
           "words": 386,
+          "reading_minutes": 2
+        },
+        {
+          "file": "19_art_19_abschnitt_19_die_durchlässige_wand.md",
+          "index": 19,
+          "title": "Abschnitt 19: Die durchlässige Wand",
+          "article": "art_19",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "18.5",
+          "jaccard_max": "0.0",
+          "tokens_generated": "718",
+          "manual_ending_code": "L-19-19",
+          "backend": "deepseek",
+          "genre": "Lebensweisheiten",
+          "leak_free": "",
+          "words": 376,
           "reading_minutes": 2
         }
       ]
