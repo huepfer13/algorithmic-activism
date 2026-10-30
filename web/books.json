@@ -4354,7 +4354,7 @@
         "Herr Brenner",
         "Frau Ostrow"
       ],
-      "chapter_count": 16,
+      "chapter_count": 17,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -4371,10 +4371,11 @@
         "art_13",
         "art_14",
         "art_15",
-        "art_16"
+        "art_16",
+        "art_17"
       ],
-      "words": 7570,
-      "reading_minutes": 38,
+      "words": 7914,
+      "reading_minutes": 40,
       "cover": null,
       "chapters": [
         {
@@ -4681,6 +4682,24 @@
           "genre": "Tagebuch",
           "leak_free": "true",
           "words": 303,
+          "reading_minutes": 2
+        },
+        {
+          "file": "17_art_17_abschnitt_17_der_eigentumsvektor.md",
+          "index": 17,
+          "title": "Abschnitt 17: Der Eigentumsvektor",
+          "article": "art_17",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "828",
+          "manual_ending_code": "T-17-17",
+          "backend": "deepseek",
+          "genre": "Tagebuch",
+          "leak_free": "true",
+          "words": 344,
           "reading_minutes": 2
         }
       ]

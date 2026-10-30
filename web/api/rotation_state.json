@@ -690,7 +690,9 @@
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_035_die_versteinerungsbehörde",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_034_the_weight_of_water",
     "r7:deepseek-chat:buch_002_die_sieben_quellen",
-    "r8:deepseek-chat:buch_030_die_wolkenschule_über_dem_marktplatz"
+    "r8:deepseek-chat:buch_030_die_wolkenschule_über_dem_marktplatz",
+    "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_033_the_ledger_of_quiet_rooms",
+    "r8:deepseek-chat:buch_013_aufzeichnungen_eines_archivars"
   ],
   "runden": {
     "1": [
@@ -9442,6 +9444,16 @@
         "tokens": "947",
         "versuche": "1",
         "woerter": 547
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_033_the_ledger_of_quiet_rooms",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 7
       }
     ],
     "8": [
@@ -9764,6 +9776,21 @@
         "tokens": "1049",
         "versuche": "1",
         "woerter": 545
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_013_aufzeichnungen_eines_archivars",
+        "code": "T-17-17",
+        "datei": "17_art_17_abschnitt_17_der_eigentumsvektor.md",
+        "dauer_s": "7.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 8,
+        "tokens": "828",
+        "versuche": "1",
+        "woerter": 344
       }
     ],
     "9": [
