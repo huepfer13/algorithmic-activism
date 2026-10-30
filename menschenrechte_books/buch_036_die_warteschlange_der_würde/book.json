@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_036_die_warteschlange_der_würde",
+  "title": "Die Warteschlange der Würde",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Witzebuch",
+  "setting_summary": "Ein überfülltes Amt für menschliche Angelegenheiten, in dem eine nummerierte Warteschlange über Leben und Papiere entscheidet. Ein defekter Lautsprecher, ein einziger Stempel und ein Schalter, der nur dienstags öffnet, erzeugen Dauerstress bei knapper Zeit und noch knapperem Platz. Jeder Antrag wird als Gnadenakt verhandelt, sodass Würde, Gleichheit, Meinungsfreiheit und Leben zu Verhandlungsmasse im Wartesaal werden.",
+  "characters": [
+    "Herr Knie",
+    "Frau Zettel",
+    "Bodo",
+    "Die Stimme aus dem Lautsprecher",
+    "Oma Pflaume"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-10-30T23:05:12.893114+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

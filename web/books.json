@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 35,
+  "count": 36,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -10474,6 +10474,46 @@
           "leak_free": "true",
           "words": 339,
           "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_036_die_warteschlange_der_würde",
+      "title": "Die Warteschlange der Würde",
+      "language": "DE",
+      "style": "Witzebuch",
+      "pov": "third_person",
+      "setting_summary": "Ein überfülltes Amt für menschliche Angelegenheiten, in dem eine nummerierte Warteschlange über Leben und Papiere entscheidet. Ein defekter Lautsprecher, ein einziger Stempel und ein Schalter, der nur dienstags öffnet, erzeugen Dauerstress bei knapper Zeit und noch knapperem Platz. Jeder Antrag wird als Gnadenakt verhandelt, sodass Würde, Gleichheit, Meinungsfreiheit und Leben zu Verhandlungsmasse im Wartesaal werden.",
+      "characters": [
+        "Herr Knie",
+        "Frau Zettel",
+        "Bodo",
+        "Die Stimme aus dem Lautsprecher",
+        "Oma Pflaume"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 585,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "10.2",
+          "jaccard_max": "",
+          "tokens_generated": "1137",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Witzebuch",
+          "leak_free": "",
+          "words": 585,
+          "reading_minutes": 3
         }
       ]
     }
