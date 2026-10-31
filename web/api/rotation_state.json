@@ -717,7 +717,8 @@
     "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_033_the_ledger_of_quiet_rooms",
     "r9:deepseek-chat:buch_019_the_salt_diaries",
     "r9:nvidia/nemotron-3-ultra-550b-a55b:free:buch_003_der_rat_der_tiere",
-    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren"
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_036_die_warteschlange_der_würde"
   ],
   "runden": {
     "1": [
@@ -3739,6 +3740,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
         "runde": 2
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_036_die_warteschlange_der_würde",
+        "code": "J-01-01",
+        "datei": "01_art_01_abschnitt_1_die_kalibrierung_der_gleichh.md",
+        "dauer_s": "19.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 2,
+        "tokens": "1286",
+        "versuche": "1",
+        "woerter": 436
       }
     ],
     "3": [

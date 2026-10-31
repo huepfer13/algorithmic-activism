@@ -10510,10 +10510,12 @@
         "Die Stimme aus dem Lautsprecher",
         "Oma Pflaume"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 585,
-      "reading_minutes": 3,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 1021,
+      "reading_minutes": 5,
       "cover": null,
       "chapters": [
         {
@@ -10533,6 +10535,24 @@
           "leak_free": "",
           "words": 585,
           "reading_minutes": 3
+        },
+        {
+          "file": "01_art_01_abschnitt_1_die_kalibrierung_der_gleichh.md",
+          "index": 1,
+          "title": "Abschnitt 1: Die Kalibrierung der Gleichheit",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "19.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1286",
+          "manual_ending_code": "J-01-01",
+          "backend": "openrouter",
+          "genre": "Witzebuch",
+          "leak_free": "true",
+          "words": 436,
+          "reading_minutes": 2
         }
       ]
     }
