@@ -10510,12 +10510,13 @@
         "Die Stimme aus dem Lautsprecher",
         "Oma Pflaume"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 1021,
-      "reading_minutes": 5,
+      "words": 1508,
+      "reading_minutes": 8,
       "cover": null,
       "chapters": [
         {
@@ -10552,6 +10553,24 @@
           "genre": "Witzebuch",
           "leak_free": "true",
           "words": 436,
+          "reading_minutes": 2
+        },
+        {
+          "file": "02_art_02_abschnitt_2_die_zentrale_registratur_prü.md",
+          "index": 2,
+          "title": "Abschnitt 2: Die Zentrale Registratur prüft die Sauberkeit der Unterschiede",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.5",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1095",
+          "manual_ending_code": "J-02-02",
+          "backend": "deepseek",
+          "genre": "Witzebuch",
+          "leak_free": "true",
+          "words": 487,
           "reading_minutes": 2
         }
       ]
