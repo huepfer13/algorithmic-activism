@@ -5843,7 +5843,7 @@
       "pov": "third_person",
       "setting_summary": "Etymologische Miniaturen zu gefluegelten Worten.",
       "characters": [],
-      "chapter_count": 23,
+      "chapter_count": 24,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -5867,10 +5867,11 @@
         "art_20",
         "art_21",
         "art_22",
-        "art_23"
+        "art_23",
+        "art_24"
       ],
-      "words": 8039,
-      "reading_minutes": 40,
+      "words": 8337,
+      "reading_minutes": 42,
       "cover": null,
       "chapters": [
         {
@@ -6303,6 +6304,24 @@
           "genre": "Sprichwoerter",
           "leak_free": "true",
           "words": 214,
+          "reading_minutes": 1
+        },
+        {
+          "file": "24_art_24_abschnitt_24_wer_die_zeit_atmet.md",
+          "index": 24,
+          "title": "Abschnitt 24: Wer die Zeit atmet",
+          "article": "art_24",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "35.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1115",
+          "manual_ending_code": "V-24-24",
+          "backend": "openrouter",
+          "genre": "Sprichwoerter",
+          "leak_free": "true",
+          "words": 298,
           "reading_minutes": 1
         }
       ]

@@ -727,7 +727,9 @@
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_036_die_warteschlange_der_würde",
     "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_019_the_salt_diaries",
     "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_029_the_glass_tribunal",
-    "r9:deepseek-chat:buch_020_die_quote_der_stille"
+    "r9:deepseek-chat:buch_020_die_quote_der_stille",
+    "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_020_die_quote_der_stille",
+    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_017_des_volkes_mund"
   ],
   "runden": {
     "1": [
@@ -9784,6 +9786,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 7
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_020_die_quote_der_stille",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 7
       }
     ],
     "8": [
@@ -10211,6 +10223,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 8
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_017_des_volkes_mund",
+        "code": "V-24-24",
+        "datei": "24_art_24_abschnitt_24_wer_die_zeit_atmet.md",
+        "dauer_s": "35.8",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 8,
+        "tokens": "1115",
+        "versuche": "1",
+        "woerter": 298
       }
     ],
     "9": [
