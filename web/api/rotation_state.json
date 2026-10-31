@@ -764,7 +764,9 @@
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_035_die_versteinerungsbehörde",
     "r8:deepseek-chat:buch_007_die_kammer_der_zeugen",
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_027_das_haus_das_die_namen_fraß",
-    "r4:deepseek-chat:buch_030_die_wolkenschule_über_dem_marktplatz"
+    "r4:deepseek-chat:buch_030_die_wolkenschule_über_dem_marktplatz",
+    "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_021_the_bell_of_the_ninth_gate",
+    "r7:deepseek-chat:buch_031_die_kammer_der_sieben_stimmen"
   ],
   "runden": {
     "1": [
@@ -9159,6 +9161,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 6
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_021_the_bell_of_the_ninth_gate",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 6
       }
     ],
     "7": [
@@ -10101,6 +10113,21 @@
         "tokens": "1181",
         "versuche": "1",
         "woerter": 321
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_031_die_kammer_der_sieben_stimmen",
+        "code": "H-15-15",
+        "datei": "15_art_15_abschnitt_15_der_parameter_der_zugehörig.md",
+        "dauer_s": "7.5",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 7,
+        "tokens": "952",
+        "versuche": "1",
+        "woerter": 433
       }
     ],
     "8": [
