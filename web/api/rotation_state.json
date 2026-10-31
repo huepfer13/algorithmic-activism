@@ -730,7 +730,10 @@
     "r9:deepseek-chat:buch_020_die_quote_der_stille",
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_020_die_quote_der_stille",
     "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_017_des_volkes_mund",
-    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_036_die_warteschlange_der_würde"
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_036_die_warteschlange_der_würde",
+    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_022_the_ledger_of_vanishing_rain",
+    "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_031_die_kammer_der_sieben_stimmen",
+    "r9:deepseek-chat:buch_016_faden_der_gelassenheit"
   ],
   "runden": {
     "1": [
@@ -10254,6 +10257,26 @@
         "tokens": "1115",
         "versuche": "1",
         "woerter": 298
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_022_the_ledger_of_vanishing_rain",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 8
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_031_die_kammer_der_sieben_stimmen",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 8
       }
     ],
     "9": [
@@ -10476,6 +10499,21 @@
         "tokens": "834",
         "versuche": "1",
         "woerter": 405
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_016_faden_der_gelassenheit",
+        "code": "L-20-20",
+        "datei": "20_art_20_abschnitt_20_die_offene_schale.md",
+        "dauer_s": "8.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 9,
+        "tokens": "894",
+        "versuche": "1",
+        "woerter": 475
       }
     ]
   }

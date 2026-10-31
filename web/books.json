@@ -5447,7 +5447,7 @@
       "pov": "third_person",
       "setting_summary": "Kontemplative Einsichten fuer unruhige Zeiten.",
       "characters": [],
-      "chapter_count": 19,
+      "chapter_count": 20,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -5467,10 +5467,11 @@
         "art_16",
         "art_17",
         "art_18",
-        "art_19"
+        "art_19",
+        "art_20"
       ],
-      "words": 6150,
-      "reading_minutes": 31,
+      "words": 6625,
+      "reading_minutes": 33,
       "cover": null,
       "chapters": [
         {
@@ -5831,6 +5832,24 @@
           "genre": "Lebensweisheiten",
           "leak_free": "",
           "words": 376,
+          "reading_minutes": 2
+        },
+        {
+          "file": "20_art_20_abschnitt_20_die_offene_schale.md",
+          "index": 20,
+          "title": "Abschnitt 20: Die offene Schale",
+          "article": "art_20",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "894",
+          "manual_ending_code": "L-20-20",
+          "backend": "deepseek",
+          "genre": "Lebensweisheiten",
+          "leak_free": "true",
+          "words": 475,
           "reading_minutes": 2
         }
       ]
