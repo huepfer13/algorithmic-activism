@@ -762,7 +762,8 @@
     "r9:deepseek-chat:buch_017_des_volkes_mund",
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_029_the_glass_tribunal",
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_035_die_versteinerungsbehörde",
-    "r8:deepseek-chat:buch_007_die_kammer_der_zeugen"
+    "r8:deepseek-chat:buch_007_die_kammer_der_zeugen",
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_027_das_haus_das_die_namen_fraß"
   ],
   "runden": {
     "1": [
@@ -10069,6 +10070,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 7
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_027_das_haus_das_die_namen_fraß",
+        "code": "W-08-08",
+        "datei": "08_art_08_abschnitt_8_die_kalibrierung_des_rechtsw.md",
+        "dauer_s": "44.5",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 7,
+        "tokens": "1181",
+        "versuche": "1",
+        "woerter": 321
       }
     ],
     "8": [

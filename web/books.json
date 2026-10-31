@@ -8621,7 +8621,7 @@
         "Tobias",
         "Die Stimme im Gebälk"
       ],
-      "chapter_count": 7,
+      "chapter_count": 8,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -8629,10 +8629,11 @@
         "art_04",
         "art_05",
         "art_06",
-        "art_07"
+        "art_07",
+        "art_08"
       ],
-      "words": 3404,
-      "reading_minutes": 17,
+      "words": 3725,
+      "reading_minutes": 19,
       "cover": null,
       "chapters": [
         {
@@ -8778,6 +8779,24 @@
           "leak_free": "true",
           "words": 534,
           "reading_minutes": 3
+        },
+        {
+          "file": "08_art_08_abschnitt_8_die_kalibrierung_des_rechtsw.md",
+          "index": 8,
+          "title": "Abschnitt 8: Die Kalibrierung des Rechtswegs",
+          "article": "art_08",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "44.5",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1181",
+          "manual_ending_code": "W-08-08",
+          "backend": "openrouter",
+          "genre": "Gothic",
+          "leak_free": "true",
+          "words": 321,
+          "reading_minutes": 2
         }
       ]
     },
