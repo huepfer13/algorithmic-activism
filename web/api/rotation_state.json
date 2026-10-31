@@ -759,7 +759,10 @@
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_018_rhymes_of_the_commons",
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_026_the_ledger_of_ash_harbour",
     "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_014_der_unberechenbare_humor",
-    "r9:deepseek-chat:buch_017_des_volkes_mund"
+    "r9:deepseek-chat:buch_017_des_volkes_mund",
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_029_the_glass_tribunal",
+    "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_035_die_versteinerungsbehörde",
+    "r8:deepseek-chat:buch_007_die_kammer_der_zeugen"
   ],
   "runden": {
     "1": [
@@ -10046,6 +10049,26 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 7
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_029_the_glass_tribunal",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 7
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_035_die_versteinerungsbehörde",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 7
       }
     ],
     "8": [
@@ -10578,6 +10601,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 8
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_007_die_kammer_der_zeugen",
+        "code": "H-18-18",
+        "datei": "18_art_18_abschnitt_18_die_gewissensmaske.md",
+        "dauer_s": "8.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 8,
+        "tokens": "1004",
+        "versuche": "1",
+        "woerter": 489
       }
     ],
     "9": [
