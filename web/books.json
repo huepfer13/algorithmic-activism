@@ -3268,7 +3268,7 @@
         "Kalle Ohm",
         "Frau Säckel"
       ],
-      "chapter_count": 19,
+      "chapter_count": 20,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -3288,10 +3288,11 @@
         "art_16",
         "art_17",
         "art_18",
-        "art_19"
+        "art_19",
+        "art_20"
       ],
-      "words": 8028,
-      "reading_minutes": 40,
+      "words": 8440,
+      "reading_minutes": 42,
       "cover": null,
       "chapters": [
         {
@@ -3653,6 +3654,24 @@
           "leak_free": "true",
           "words": 299,
           "reading_minutes": 1
+        },
+        {
+          "file": "20_art_20_abschnitt_20_die_kalibrierung_der_zusamm.md",
+          "index": 20,
+          "title": "Abschnitt 20: Die Kalibrierung der Zusammenkunft",
+          "article": "art_20",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "971",
+          "manual_ending_code": "G-20-20",
+          "backend": "deepseek",
+          "genre": "Satire",
+          "leak_free": "true",
+          "words": 412,
+          "reading_minutes": 2
         }
       ]
     },

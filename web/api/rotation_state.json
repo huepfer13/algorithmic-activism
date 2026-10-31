@@ -720,7 +720,8 @@
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_036_die_warteschlange_der_würde",
     "r3:deepseek-chat:buch_036_die_warteschlange_der_würde",
-    "r2:deepseek-chat:buch_036_die_warteschlange_der_würde"
+    "r2:deepseek-chat:buch_036_die_warteschlange_der_würde",
+    "r7:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit"
   ],
   "runden": {
     "1": [
@@ -9732,6 +9733,21 @@
         "tokens": "1341",
         "versuche": "1",
         "woerter": 417
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_010_amtsblatt_fuer_unzumutbarkeit",
+        "code": "G-20-20",
+        "datei": "20_art_20_abschnitt_20_die_kalibrierung_der_zusamm.md",
+        "dauer_s": "9.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 7,
+        "tokens": "971",
+        "versuche": "1",
+        "woerter": 412
       }
     ],
     "8": [
