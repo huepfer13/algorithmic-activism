@@ -10719,15 +10719,16 @@
         "Die Stimme aus dem Lautsprecher",
         "Oma Pflaume"
       ],
-      "chapter_count": 4,
+      "chapter_count": 5,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
-        "art_04"
+        "art_04",
+        "art_05"
       ],
-      "words": 2392,
-      "reading_minutes": 12,
+      "words": 2680,
+      "reading_minutes": 13,
       "cover": null,
       "chapters": [
         {
@@ -10819,6 +10820,24 @@
           "leak_free": "true",
           "words": 330,
           "reading_minutes": 2
+        },
+        {
+          "file": "05_art_05_abschnitt_5_der_parameter_der_sich_nicht.md",
+          "index": 5,
+          "title": "Abschnitt 5: Der Parameter, der sich nicht dämpfen ließ",
+          "article": "art_05",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "66.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "995",
+          "manual_ending_code": "J-05-05",
+          "backend": "openrouter",
+          "genre": "Witzebuch",
+          "leak_free": "true",
+          "words": 288,
+          "reading_minutes": 1
         }
       ]
     }

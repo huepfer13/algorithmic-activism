@@ -753,7 +753,9 @@
     "r7:deepseek-chat:buch_006_das_gericht_vor_der_mauer",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_006_das_gericht_vor_der_mauer",
     "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_011_das_haus_ohne_widerhall",
-    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_031_die_kammer_der_sieben_stimmen"
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_031_die_kammer_der_sieben_stimmen",
+    "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_007_die_kammer_der_zeugen",
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_036_die_warteschlange_der_würde"
   ],
   "runden": {
     "1": [
@@ -7861,6 +7863,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 5
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_007_die_kammer_der_zeugen",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 5
       }
     ],
     "6": [
@@ -9995,6 +10007,21 @@
         "tokens": "1284",
         "versuche": "1",
         "woerter": 371
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_036_die_warteschlange_der_würde",
+        "code": "J-05-05",
+        "datei": "05_art_05_abschnitt_5_der_parameter_der_sich_nicht.md",
+        "dauer_s": "66.7",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 7,
+        "tokens": "995",
+        "versuche": "1",
+        "woerter": 288
       }
     ],
     "8": [
