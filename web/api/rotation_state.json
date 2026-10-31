@@ -716,7 +716,8 @@
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_004_neon_exil",
     "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_033_the_ledger_of_quiet_rooms",
     "r9:deepseek-chat:buch_019_the_salt_diaries",
-    "r9:nvidia/nemotron-3-ultra-550b-a55b:free:buch_003_der_rat_der_tiere"
+    "r9:nvidia/nemotron-3-ultra-550b-a55b:free:buch_003_der_rat_der_tiere",
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren"
   ],
   "runden": {
     "1": [
@@ -9668,6 +9669,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 7
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+        "code": "G-15-15",
+        "datei": "15_art_15_abschnitt_15_die_staatsangehörigkeit_als.md",
+        "dauer_s": "25.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 7,
+        "tokens": "1341",
+        "versuche": "1",
+        "woerter": 417
       }
     ],
     "8": [

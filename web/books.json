@@ -8567,7 +8567,7 @@
         "Mira Sandoval",
         "Herr Zwirbel"
       ],
-      "chapter_count": 14,
+      "chapter_count": 15,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -8582,10 +8582,11 @@
         "art_11",
         "art_12",
         "art_13",
-        "art_14"
+        "art_14",
+        "art_15"
       ],
-      "words": 7379,
-      "reading_minutes": 37,
+      "words": 7796,
+      "reading_minutes": 39,
       "cover": null,
       "chapters": [
         {
@@ -8857,6 +8858,24 @@
           "leak_free": "true",
           "words": 574,
           "reading_minutes": 3
+        },
+        {
+          "file": "15_art_15_abschnitt_15_die_staatsangehörigkeit_als.md",
+          "index": 15,
+          "title": "Abschnitt 15: Die Staatsangehörigkeit als Frequenzversatz",
+          "article": "art_15",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "25.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1341",
+          "manual_ending_code": "G-15-15",
+          "backend": "openrouter",
+          "genre": "Satire",
+          "leak_free": "true",
+          "words": 417,
+          "reading_minutes": 2
         }
       ]
     },
