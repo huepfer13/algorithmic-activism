@@ -9352,7 +9352,7 @@
         "Herr Wiesel",
         "Lotta"
       ],
-      "chapter_count": 13,
+      "chapter_count": 14,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -9366,10 +9366,11 @@
         "art_10",
         "art_11",
         "art_12",
-        "art_13"
+        "art_13",
+        "art_14"
       ],
-      "words": 7418,
-      "reading_minutes": 37,
+      "words": 8090,
+      "reading_minutes": 40,
       "cover": null,
       "chapters": [
         {
@@ -9622,6 +9623,24 @@
           "genre": "Kinderbuch",
           "leak_free": "true",
           "words": 545,
+          "reading_minutes": 3
+        },
+        {
+          "file": "14_art_14_abschnitt_14_der_vierzehnte_prüfpunkt.md",
+          "index": 14,
+          "title": "Abschnitt 14: Der vierzehnte Prüfpunkt",
+          "article": "art_14",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "10.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1282",
+          "manual_ending_code": "K-14-14",
+          "backend": "deepseek",
+          "genre": "Kinderbuch",
+          "leak_free": "true",
+          "words": 672,
           "reading_minutes": 3
         }
       ]
