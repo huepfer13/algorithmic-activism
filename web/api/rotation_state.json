@@ -745,7 +745,9 @@
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_002_die_sieben_quellen",
     "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_035_die_versteinerungsbehörde",
     "r8:deepseek-chat:buch_025_the_hold",
-    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_013_aufzeichnungen_eines_archivars"
+    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_013_aufzeichnungen_eines_archivars",
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_034_the_weight_of_water",
+    "r7:deepseek-chat:buch_011_das_haus_ohne_widerhall"
   ],
   "runden": {
     "1": [
@@ -7833,6 +7835,16 @@
         "tokens": "1161",
         "versuche": "1",
         "woerter": 398
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_034_the_weight_of_water",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 5
       }
     ],
     "6": [
@@ -9902,6 +9914,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 7
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_011_das_haus_ohne_widerhall",
+        "code": "W-18-18",
+        "datei": "18_art_18_abschnitt_18_die_kalibrierung_der_stille.md",
+        "dauer_s": "9.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 7,
+        "tokens": "1008",
+        "versuche": "1",
+        "woerter": 545
       }
     ],
     "8": [

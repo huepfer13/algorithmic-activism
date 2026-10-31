@@ -3708,7 +3708,7 @@
         "Timo",
         "Der Verwalter"
       ],
-      "chapter_count": 17,
+      "chapter_count": 18,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -3726,10 +3726,11 @@
         "art_14",
         "art_15",
         "art_16",
-        "art_17"
+        "art_17",
+        "art_18"
       ],
-      "words": 7885,
-      "reading_minutes": 39,
+      "words": 8430,
+      "reading_minutes": 42,
       "cover": null,
       "chapters": [
         {
@@ -4055,6 +4056,24 @@
           "leak_free": "true",
           "words": 248,
           "reading_minutes": 1
+        },
+        {
+          "file": "18_art_18_abschnitt_18_die_kalibrierung_der_stille.md",
+          "index": 18,
+          "title": "Abschnitt 18: Die Kalibrierung der Stille",
+          "article": "art_18",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1008",
+          "manual_ending_code": "W-18-18",
+          "backend": "deepseek",
+          "genre": "Gothic",
+          "leak_free": "true",
+          "words": 545,
+          "reading_minutes": 3
         }
       ]
     },
