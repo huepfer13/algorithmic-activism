@@ -4430,7 +4430,7 @@
         "Herr Brenner",
         "Frau Ostrow"
       ],
-      "chapter_count": 18,
+      "chapter_count": 19,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -4449,10 +4449,11 @@
         "art_15",
         "art_16",
         "art_17",
-        "art_18"
+        "art_18",
+        "art_19"
       ],
-      "words": 8350,
-      "reading_minutes": 42,
+      "words": 8694,
+      "reading_minutes": 43,
       "cover": null,
       "chapters": [
         {
@@ -4795,6 +4796,24 @@
           "genre": "Tagebuch",
           "leak_free": "true",
           "words": 436,
+          "reading_minutes": 2
+        },
+        {
+          "file": "19_art_19_abschnitt_19_der_versammlungsvektor.md",
+          "index": 19,
+          "title": "Abschnitt 19: Der Versammlungsvektor",
+          "article": "art_19",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "48.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1381",
+          "manual_ending_code": "T-19-19",
+          "backend": "openrouter",
+          "genre": "Tagebuch",
+          "leak_free": "true",
+          "words": 344,
           "reading_minutes": 2
         }
       ]

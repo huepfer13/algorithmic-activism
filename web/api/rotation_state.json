@@ -742,7 +742,10 @@
     "r9:deepseek-chat:buch_013_aufzeichnungen_eines_archivars",
     "r3:deepseek-chat:buch_032_the_glass_tribunal",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_036_die_warteschlange_der_würde",
-    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_002_die_sieben_quellen"
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_002_die_sieben_quellen",
+    "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_035_die_versteinerungsbehörde",
+    "r8:deepseek-chat:buch_025_the_hold",
+    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_013_aufzeichnungen_eines_archivars"
   ],
   "runden": {
     "1": [
@@ -9062,6 +9065,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 6
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_035_die_versteinerungsbehörde",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 6
       }
     ],
     "7": [
@@ -10371,6 +10384,31 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 8
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_025_the_hold",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 8
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_013_aufzeichnungen_eines_archivars",
+        "code": "T-19-19",
+        "datei": "19_art_19_abschnitt_19_der_versammlungsvektor.md",
+        "dauer_s": "48.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 8,
+        "tokens": "1381",
+        "versuche": "1",
+        "woerter": 344
       }
     ],
     "9": [
