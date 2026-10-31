@@ -719,7 +719,8 @@
     "r9:nvidia/nemotron-3-ultra-550b-a55b:free:buch_003_der_rat_der_tiere",
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_036_die_warteschlange_der_würde",
-    "r3:deepseek-chat:buch_036_die_warteschlange_der_würde"
+    "r3:deepseek-chat:buch_036_die_warteschlange_der_würde",
+    "r2:deepseek-chat:buch_036_die_warteschlange_der_würde"
   ],
   "runden": {
     "1": [
@@ -3756,6 +3757,21 @@
         "tokens": "1286",
         "versuche": "1",
         "woerter": 436
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_036_die_warteschlange_der_würde",
+        "code": "J-03-03",
+        "datei": "03_art_03_abschnitt_3_die_hülse_die_niemand_stempe.md",
+        "dauer_s": "8.9",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 2,
+        "tokens": "1216",
+        "versuche": "1",
+        "woerter": 554
       }
     ],
     "3": [
