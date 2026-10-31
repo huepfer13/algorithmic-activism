@@ -739,7 +739,10 @@
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_007_die_kammer_der_zeugen",
     "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_032_the_glass_tribunal",
     "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_020_die_quote_der_stille",
-    "r9:deepseek-chat:buch_013_aufzeichnungen_eines_archivars"
+    "r9:deepseek-chat:buch_013_aufzeichnungen_eines_archivars",
+    "r3:deepseek-chat:buch_032_the_glass_tribunal",
+    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_036_die_warteschlange_der_würde",
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_002_die_sieben_quellen"
   ],
   "runden": {
     "1": [
@@ -5228,6 +5231,26 @@
         "tokens": "1095",
         "versuche": "1",
         "woerter": 487
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_032_the_glass_tribunal",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 3
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_036_die_warteschlange_der_würde",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 3
       }
     ],
     "4": [
@@ -7792,6 +7815,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "deepseek-chat",
         "runde": 5
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_002_die_sieben_quellen",
+        "code": "M-16-16",
+        "datei": "16_art_16_abschnitt_16_die_prüfung_des_bundes.md",
+        "dauer_s": "33.5",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 5,
+        "tokens": "1161",
+        "versuche": "1",
+        "woerter": 398
       }
     ],
     "6": [
