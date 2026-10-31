@@ -1831,7 +1831,7 @@
         "Vera",
         "Juno"
       ],
-      "chapter_count": 16,
+      "chapter_count": 17,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1848,10 +1848,11 @@
         "art_13",
         "art_14",
         "art_15",
-        "art_16"
+        "art_16",
+        "art_17"
       ],
-      "words": 7334,
-      "reading_minutes": 37,
+      "words": 7846,
+      "reading_minutes": 39,
       "cover": null,
       "chapters": [
         {
@@ -2158,6 +2159,24 @@
           "genre": "Parabel",
           "leak_free": "true",
           "words": 558,
+          "reading_minutes": 3
+        },
+        {
+          "file": "17_art_17_abschnitt_17_die_fuge_im_eigentum.md",
+          "index": 17,
+          "title": "Abschnitt 17: Die Fuge im Eigentum",
+          "article": "art_17",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1029",
+          "manual_ending_code": "D-17-17",
+          "backend": "deepseek",
+          "genre": "Parabel",
+          "leak_free": "true",
+          "words": 512,
           "reading_minutes": 3
         }
       ]
