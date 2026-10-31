@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 36,
+  "count": 37,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -10971,6 +10971,46 @@
           "leak_free": "true",
           "words": 288,
           "reading_minutes": 1
+        }
+      ]
+    },
+    {
+      "book_id": "buch_037_the_ledger_of_hollow_creek",
+      "title": "The Ledger of Hollow Creek",
+      "language": "EN",
+      "style": "Fable",
+      "pov": "third_person",
+      "setting_summary": "A drought-stricken river valley where beavers, otters, herons, and field mice share a single dwindling reservoir behind an aging dam. The Warden, an ancient heron, controls the water gauge and rations each species' share by a ledger only he can read, while the dry season tightens every day. Scarcity and surveillance turn neighbor against neighbor as whispers of a fairer accounting spread through the reeds.",
+      "characters": [
+        "Bramble",
+        "Old Fenwick",
+        "Sable",
+        "Pip",
+        "The Warden"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 474,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.2",
+          "jaccard_max": "",
+          "tokens_generated": "606",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Fable",
+          "leak_free": "",
+          "words": 474,
+          "reading_minutes": 2
         }
       ]
     }
