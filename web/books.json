@@ -5957,7 +5957,7 @@
       "pov": "third_person",
       "setting_summary": "Etymologische Miniaturen zu gefluegelten Worten.",
       "characters": [],
-      "chapter_count": 24,
+      "chapter_count": 25,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -5982,10 +5982,11 @@
         "art_21",
         "art_22",
         "art_23",
-        "art_24"
+        "art_24",
+        "art_25"
       ],
-      "words": 8337,
-      "reading_minutes": 42,
+      "words": 8839,
+      "reading_minutes": 44,
       "cover": null,
       "chapters": [
         {
@@ -6437,6 +6438,24 @@
           "leak_free": "true",
           "words": 298,
           "reading_minutes": 1
+        },
+        {
+          "file": "25_art_25_abschnitt_25_das_trockene_brot.md",
+          "index": 25,
+          "title": "Abschnitt 25: Das trockene Brot",
+          "article": "art_25",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1086",
+          "manual_ending_code": "V-25-25",
+          "backend": "deepseek",
+          "genre": "Sprichwoerter",
+          "leak_free": "true",
+          "words": 502,
+          "reading_minutes": 3
         }
       ]
     },
