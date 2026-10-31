@@ -9583,7 +9583,7 @@
         "Tomás Ferreira",
         "Hanna Ostrowski"
       ],
-      "chapter_count": 13,
+      "chapter_count": 14,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -9597,10 +9597,11 @@
         "art_10",
         "art_11",
         "art_12",
-        "art_13"
+        "art_13",
+        "art_14"
       ],
-      "words": 6354,
-      "reading_minutes": 32,
+      "words": 6725,
+      "reading_minutes": 34,
       "cover": null,
       "chapters": [
         {
@@ -9853,6 +9854,24 @@
           "genre": "Gerichtsdrama",
           "leak_free": "true",
           "words": 477,
+          "reading_minutes": 2
+        },
+        {
+          "file": "14_art_14_abschnitt_14_der_proxy_als_parameter.md",
+          "index": 14,
+          "title": "Abschnitt 14: Der Proxy als Parameter",
+          "article": "art_14",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "64.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1284",
+          "manual_ending_code": "H-14-14",
+          "backend": "openrouter",
+          "genre": "Gerichtsdrama",
+          "leak_free": "true",
+          "words": 371,
           "reading_minutes": 2
         }
       ]

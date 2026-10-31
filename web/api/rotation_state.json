@@ -750,7 +750,10 @@
     "r7:deepseek-chat:buch_011_das_haus_ohne_widerhall",
     "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_024_die_kammer_der_stimmen",
     "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_036_die_warteschlange_der_würde",
-    "r7:deepseek-chat:buch_006_das_gericht_vor_der_mauer"
+    "r7:deepseek-chat:buch_006_das_gericht_vor_der_mauer",
+    "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_006_das_gericht_vor_der_mauer",
+    "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_011_das_haus_ohne_widerhall",
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_031_die_kammer_der_sieben_stimmen"
   ],
   "runden": {
     "1": [
@@ -7848,6 +7851,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
         "runde": 5
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_006_das_gericht_vor_der_mauer",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 5
       }
     ],
     "6": [
@@ -9100,6 +9113,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 6
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_011_das_haus_ohne_widerhall",
+        "datei": null,
+        "dauer_s": 0.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 6
       }
     ],
     "7": [
@@ -9957,6 +9980,21 @@
         "tokens": "1029",
         "versuche": "1",
         "woerter": 512
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_031_die_kammer_der_sieben_stimmen",
+        "code": "H-14-14",
+        "datei": "14_art_14_abschnitt_14_der_proxy_als_parameter.md",
+        "dauer_s": "64.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 7,
+        "tokens": "1284",
+        "versuche": "1",
+        "woerter": 371
       }
     ],
     "8": [
