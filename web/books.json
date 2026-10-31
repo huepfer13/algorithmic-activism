@@ -10640,7 +10640,7 @@
         "Herr Pfeil",
         "Frau Sander"
       ],
-      "chapter_count": 8,
+      "chapter_count": 9,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -10649,10 +10649,11 @@
         "art_05",
         "art_06",
         "art_07",
-        "art_08"
+        "art_08",
+        "art_09"
       ],
-      "words": 3901,
-      "reading_minutes": 20,
+      "words": 4189,
+      "reading_minutes": 21,
       "cover": null,
       "chapters": [
         {
@@ -10816,6 +10817,24 @@
           "leak_free": "true",
           "words": 339,
           "reading_minutes": 2
+        },
+        {
+          "file": "09_art_09_abschnitt_9_die_depotverlagerung.md",
+          "index": 9,
+          "title": "Abschnitt 9: Die Depotverlagerung",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "15.0",
+          "jaccard_max": "0.03",
+          "tokens_generated": "1015",
+          "manual_ending_code": "Z-09-09",
+          "backend": "openrouter",
+          "genre": "Magischer_Realismus",
+          "leak_free": "true",
+          "words": 288,
+          "reading_minutes": 1
         }
       ]
     },

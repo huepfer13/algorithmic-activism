@@ -770,7 +770,8 @@
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_013_aufzeichnungen_eines_archivars",
     "r8:deepseek-chat:buch_033_the_ledger_of_quiet_rooms",
     "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_029_the_glass_tribunal",
-    "r9:deepseek-chat:buch_007_die_kammer_der_zeugen"
+    "r9:deepseek-chat:buch_007_die_kammer_der_zeugen",
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_035_die_versteinerungsbehörde"
   ],
   "runden": {
     "1": [
@@ -5279,6 +5280,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 3
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_035_die_versteinerungsbehörde",
+        "code": "Z-09-09",
+        "datei": "09_art_09_abschnitt_9_die_depotverlagerung.md",
+        "dauer_s": "15.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 3,
+        "tokens": "1015",
+        "versuche": "1",
+        "woerter": 288
       }
     ],
     "4": [
