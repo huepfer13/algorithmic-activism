@@ -16,7 +16,7 @@
         "Nova",
         "Omicron"
       ],
-      "chapter_count": 22,
+      "chapter_count": 23,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -39,10 +39,11 @@
         "art_19",
         "art_20",
         "art_21",
+        "art_22",
         "art_26"
       ],
-      "words": 9963,
-      "reading_minutes": 50,
+      "words": 10339,
+      "reading_minutes": 52,
       "cover": null,
       "chapters": [
         {
@@ -457,6 +458,24 @@
           "genre": "Gerätehandbuch",
           "leak_free": "",
           "words": 382,
+          "reading_minutes": 2
+        },
+        {
+          "file": "23_art_22_abschnitt_23_inbetriebnahme_der_sozialab.md",
+          "index": 23,
+          "title": "Abschnitt 23: Inbetriebnahme der Sozialabsicherungs-Schnittstelle Art-22 und Wartungsprotokoll der zentralen Gefahrenquellen-Magazinierung",
+          "article": "art_22",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "21.9",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1038",
+          "manual_ending_code": "E-22-23",
+          "backend": "deepseek",
+          "genre": "Gerätehandbuch",
+          "leak_free": "",
+          "words": 376,
           "reading_minutes": 2
         }
       ]
