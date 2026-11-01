@@ -1543,7 +1543,7 @@
       "pov": "third_person",
       "setting_summary": "Ein diskursives Nachdenken darueber, was Menschenrechte praktisch bedeuten.",
       "characters": [],
-      "chapter_count": 15,
+      "chapter_count": 16,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1559,10 +1559,11 @@
         "art_12",
         "art_13",
         "art_14",
-        "art_15"
+        "art_15",
+        "art_16"
       ],
-      "words": 6959,
-      "reading_minutes": 35,
+      "words": 7346,
+      "reading_minutes": 37,
       "cover": null,
       "chapters": [
         {
@@ -1851,6 +1852,24 @@
           "genre": "Philosophischer_Essay",
           "leak_free": "true",
           "words": 352,
+          "reading_minutes": 2
+        },
+        {
+          "file": "16_art_16_abschnitt_16_die_austrittsadresse.md",
+          "index": 16,
+          "title": "Abschnitt 16: Die Austrittsadresse",
+          "article": "art_16",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.2",
+          "jaccard_max": "0.105",
+          "tokens_generated": "812",
+          "manual_ending_code": "P-16-16",
+          "backend": "deepseek",
+          "genre": "Philosophischer_Essay",
+          "leak_free": "true",
+          "words": 387,
           "reading_minutes": 2
         }
       ]
