@@ -11064,13 +11064,14 @@
         "Pip",
         "The Warden"
       ],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 1120,
-      "reading_minutes": 6,
+      "words": 1679,
+      "reading_minutes": 8,
       "cover": null,
       "chapters": [
         {
@@ -11126,6 +11127,24 @@
           "leak_free": "true",
           "words": 291,
           "reading_minutes": 1
+        },
+        {
+          "file": "03_art_04_abschnitt_3_the_calibration_of_servitude.md",
+          "index": 3,
+          "title": "Abschnitt 3: The Calibration of Servitude",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.9",
+          "jaccard_max": "0.032",
+          "tokens_generated": "791",
+          "manual_ending_code": "F-04-03",
+          "backend": "deepseek",
+          "genre": "Fable",
+          "leak_free": "true",
+          "words": 559,
+          "reading_minutes": 3
         }
       ]
     }
