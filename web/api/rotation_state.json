@@ -786,7 +786,9 @@
     "r8:deepseek-chat:buch_024_die_kammer_der_stimmen",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_036_die_warteschlange_der_würde",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_036_die_warteschlange_der_würde",
-    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_036_die_warteschlange_der_würde"
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_036_die_warteschlange_der_würde",
+    "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_012_manifest_der_unantastbaren",
+    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_036_die_warteschlange_der_würde"
   ],
   "runden": {
     "1": [
@@ -10303,6 +10305,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 7
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_012_manifest_der_unantastbaren",
+        "datei": null,
+        "dauer_s": 0.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 7
       }
     ],
     "8": [
@@ -10920,6 +10932,21 @@
         "tokens": "1090",
         "versuche": "1",
         "woerter": 555
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_036_die_warteschlange_der_würde",
+        "code": "J-08-08",
+        "datei": "08_art_08_abschnitt_8_der_rechtsbehelf_als_lageror.md",
+        "dauer_s": "133.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 8,
+        "tokens": "1749",
+        "versuche": "1",
+        "woerter": 318
       }
     ],
     "9": [

@@ -10928,7 +10928,7 @@
         "Die Stimme aus dem Lautsprecher",
         "Oma Pflaume"
       ],
-      "chapter_count": 7,
+      "chapter_count": 8,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -10936,10 +10936,11 @@
         "art_04",
         "art_05",
         "art_06",
-        "art_07"
+        "art_07",
+        "art_08"
       ],
-      "words": 3521,
-      "reading_minutes": 18,
+      "words": 3839,
+      "reading_minutes": 19,
       "cover": null,
       "chapters": [
         {
@@ -11084,6 +11085,24 @@
           "genre": "Witzebuch",
           "leak_free": "true",
           "words": 315,
+          "reading_minutes": 2
+        },
+        {
+          "file": "08_art_08_abschnitt_8_der_rechtsbehelf_als_lageror.md",
+          "index": 8,
+          "title": "Abschnitt 8: Der Rechtsbehelf als Lagerort",
+          "article": "art_08",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "133.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1749",
+          "manual_ending_code": "J-08-08",
+          "backend": "openrouter",
+          "genre": "Witzebuch",
+          "leak_free": "true",
+          "words": 318,
           "reading_minutes": 2
         }
       ]
