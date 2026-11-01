@@ -811,7 +811,9 @@
     "r9:nvidia/nemotron-3-ultra-550b-a55b:free:buch_009_depeschen_aus_dem_kordon",
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_002_die_sieben_quellen",
     "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_036_die_warteschlange_der_würde",
-    "r9:deepseek-chat:buch_031_die_kammer_der_sieben_stimmen"
+    "r9:deepseek-chat:buch_031_die_kammer_der_sieben_stimmen",
+    "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_037_the_ledger_of_hollow_creek",
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_024_die_kammer_der_stimmen"
   ],
   "runden": {
     "1": [
@@ -6797,6 +6799,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 4
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_037_the_ledger_of_hollow_creek",
+        "datei": null,
+        "dauer_s": 1.4,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 4
       }
     ],
     "5": [
@@ -10493,6 +10505,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 7
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_024_die_kammer_der_stimmen",
+        "code": "P-16-16",
+        "datei": "16_art_16_abschnitt_16_die_kalibrierung_der_verbin.md",
+        "dauer_s": "35.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 7,
+        "tokens": "1340",
+        "versuche": "1",
+        "woerter": 436
       }
     ],
     "8": [
