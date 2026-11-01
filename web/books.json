@@ -3420,7 +3420,7 @@
         "Kalle Ohm",
         "Frau Säckel"
       ],
-      "chapter_count": 20,
+      "chapter_count": 21,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -3441,10 +3441,11 @@
         "art_17",
         "art_18",
         "art_19",
-        "art_20"
+        "art_20",
+        "art_21"
       ],
-      "words": 8440,
-      "reading_minutes": 42,
+      "words": 8930,
+      "reading_minutes": 45,
       "cover": null,
       "chapters": [
         {
@@ -3823,6 +3824,24 @@
           "genre": "Satire",
           "leak_free": "true",
           "words": 412,
+          "reading_minutes": 2
+        },
+        {
+          "file": "21_art_21_abschnitt_21_die_wählerstimmen_kompressi.md",
+          "index": 21,
+          "title": "Abschnitt 21: Die Wählerstimmen-Kompression",
+          "article": "art_21",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.6",
+          "jaccard_max": "0.045",
+          "tokens_generated": "1084",
+          "manual_ending_code": "G-21-21",
+          "backend": "deepseek",
+          "genre": "Satire",
+          "leak_free": "true",
+          "words": 490,
           "reading_minutes": 2
         }
       ]

@@ -796,7 +796,9 @@
     "r5:deepseek-chat:buch_036_die_warteschlange_der_würde",
     "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_035_die_versteinerungsbehörde",
     "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_027_das_haus_das_die_namen_fraß",
-    "r9:deepseek-chat:buch_005_fragment_der_vernunft"
+    "r9:deepseek-chat:buch_005_fragment_der_vernunft",
+    "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_034_the_weight_of_water",
+    "r8:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit"
   ],
   "runden": {
     "1": [
@@ -10373,6 +10375,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 7
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_034_the_weight_of_water",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 7
       }
     ],
     "8": [
@@ -11040,6 +11052,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 8
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_010_amtsblatt_fuer_unzumutbarkeit",
+        "code": "G-21-21",
+        "datei": "21_art_21_abschnitt_21_die_wählerstimmen_kompressi.md",
+        "dauer_s": "9.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 8,
+        "tokens": "1084",
+        "versuche": "1",
+        "woerter": 490
       }
     ],
     "9": [
