@@ -798,7 +798,8 @@
     "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_027_das_haus_das_die_namen_fraß",
     "r9:deepseek-chat:buch_005_fragment_der_vernunft",
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_034_the_weight_of_water",
-    "r8:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit"
+    "r8:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit",
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_002_die_sieben_quellen"
   ],
   "runden": {
     "1": [
@@ -10385,6 +10386,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 7
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_002_die_sieben_quellen",
+        "code": "M-18-18",
+        "datei": "18_art_18_abschnitt_18_die_prüfung_des_gewissens.md",
+        "dauer_s": "57.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 7,
+        "tokens": "1451",
+        "versuche": "1",
+        "woerter": 364
       }
     ],
     "8": [

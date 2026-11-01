@@ -469,7 +469,7 @@
       "pov": "third_person",
       "setting_summary": "Sieben Quellen, sieben Pruefungen: eine Wanderung durch die Landschaften der Rechte.",
       "characters": [],
-      "chapter_count": 17,
+      "chapter_count": 18,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -487,10 +487,11 @@
         "art_14",
         "art_15",
         "art_16",
-        "art_17"
+        "art_17",
+        "art_18"
       ],
-      "words": 8626,
-      "reading_minutes": 43,
+      "words": 8990,
+      "reading_minutes": 45,
       "cover": null,
       "chapters": [
         {
@@ -815,6 +816,24 @@
           "genre": "Märchen",
           "leak_free": "true",
           "words": 447,
+          "reading_minutes": 2
+        },
+        {
+          "file": "18_art_18_abschnitt_18_die_prüfung_des_gewissens.md",
+          "index": 18,
+          "title": "Abschnitt 18: Die Prüfung des Gewissens",
+          "article": "art_18",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "57.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1451",
+          "manual_ending_code": "M-18-18",
+          "backend": "openrouter",
+          "genre": "Märchen",
+          "leak_free": "true",
+          "words": 364,
           "reading_minutes": 2
         }
       ]
