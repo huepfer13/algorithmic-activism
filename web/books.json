@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 37,
+  "count": 38,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -11467,6 +11467,46 @@
           "genre": "Fable",
           "leak_free": "true",
           "words": 633,
+          "reading_minutes": 3
+        }
+      ]
+    },
+    {
+      "book_id": "buch_038_the_weight_of_unspoken_rain",
+      "title": "The Weight of Unspoken Rain",
+      "language": "EN",
+      "style": "Magical_Realism",
+      "pov": "third_person",
+      "setting_summary": "In the cliffside city of Verdal, a permanent fog called the Hush descends each dusk and erases any spoken word not recorded in the state's official Ledger, while a silent drought parches the lower districts. Water, memory, and speech are rationed by the Ministry of Quiet, and those who whisper without permission find their shadows confiscated by the fog.",
+      "characters": [
+        "Mira Solano",
+        "Tomas Vey",
+        "Old Cass",
+        "Ines Rook",
+        "The Listener"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 550,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.1",
+          "jaccard_max": "",
+          "tokens_generated": "675",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Magical_Realism",
+          "leak_free": "",
+          "words": 550,
           "reading_minutes": 3
         }
       ]

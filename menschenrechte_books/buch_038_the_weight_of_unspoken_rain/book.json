@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_038_the_weight_of_unspoken_rain",
+  "title": "The Weight of Unspoken Rain",
+  "pov": "third_person",
+  "language": "EN",
+  "style": "Magical_Realism",
+  "setting_summary": "In the cliffside city of Verdal, a permanent fog called the Hush descends each dusk and erases any spoken word not recorded in the state's official Ledger, while a silent drought parches the lower districts. Water, memory, and speech are rationed by the Ministry of Quiet, and those who whisper without permission find their shadows confiscated by the fog.",
+  "characters": [
+    "Mira Solano",
+    "Tomas Vey",
+    "Old Cass",
+    "Ines Rook",
+    "The Listener"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-01T23:05:14.826725+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
