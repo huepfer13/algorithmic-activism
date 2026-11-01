@@ -7966,7 +7966,7 @@
         "Vera",
         "Der Chronist"
       ],
-      "chapter_count": 14,
+      "chapter_count": 15,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -7981,10 +7981,11 @@
         "art_11",
         "art_12",
         "art_13",
-        "art_14"
+        "art_14",
+        "art_15"
       ],
-      "words": 6211,
-      "reading_minutes": 31,
+      "words": 6766,
+      "reading_minutes": 34,
       "cover": null,
       "chapters": [
         {
@@ -8256,6 +8257,24 @@
           "leak_free": "true",
           "words": 355,
           "reading_minutes": 2
+        },
+        {
+          "file": "15_art_15_abschnitt_15_die_kalibrierung_der_zugehö.md",
+          "index": 15,
+          "title": "Abschnitt 15: Die Kalibrierung der Zugehörigkeit",
+          "article": "art_15",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.7",
+          "jaccard_max": "0.011",
+          "tokens_generated": "1090",
+          "manual_ending_code": "P-15-15",
+          "backend": "deepseek",
+          "genre": "Philosophischer_Essay",
+          "leak_free": "true",
+          "words": 555,
+          "reading_minutes": 3
         }
       ]
     },

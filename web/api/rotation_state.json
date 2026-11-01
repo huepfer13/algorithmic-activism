@@ -781,7 +781,9 @@
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_037_the_ledger_of_hollow_creek",
     "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_002_die_sieben_quellen",
     "r9:deepseek-chat:buch_002_die_sieben_quellen",
-    "r1:deepseek-chat:buch_037_the_ledger_of_hollow_creek"
+    "r1:deepseek-chat:buch_037_the_ledger_of_hollow_creek",
+    "r1:deepseek-chat:buch_034_the_weight_of_water",
+    "r8:deepseek-chat:buch_024_die_kammer_der_stimmen"
   ],
   "runden": {
     "1": [
@@ -2294,6 +2296,16 @@
         "tokens": "791",
         "versuche": "1",
         "woerter": 559
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_034_the_weight_of_water",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 1
       }
     ],
     "10": [
@@ -10855,6 +10867,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 8
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_024_die_kammer_der_stimmen",
+        "code": "P-15-15",
+        "datei": "15_art_15_abschnitt_15_die_kalibrierung_der_zugehö.md",
+        "dauer_s": "9.7",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 8,
+        "tokens": "1090",
+        "versuche": "1",
+        "woerter": 555
       }
     ],
     "9": [
