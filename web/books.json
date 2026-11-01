@@ -11045,10 +11045,12 @@
         "Pip",
         "The Warden"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 474,
-      "reading_minutes": 2,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 829,
+      "reading_minutes": 4,
       "cover": null,
       "chapters": [
         {
@@ -11067,6 +11069,24 @@
           "genre": "Fable",
           "leak_free": "",
           "words": 474,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_01_section_1_the_calibration_of_dust.md",
+          "index": 1,
+          "title": "Section 1: The Calibration of Dust",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "44.9",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1057",
+          "manual_ending_code": "F-01-01",
+          "backend": "openrouter",
+          "genre": "Fable",
+          "leak_free": "true",
+          "words": 355,
           "reading_minutes": 2
         }
       ]
