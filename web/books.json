@@ -10871,16 +10871,17 @@
         "Die Stimme aus dem Lautsprecher",
         "Oma Pflaume"
       ],
-      "chapter_count": 5,
+      "chapter_count": 6,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_06"
       ],
-      "words": 2680,
-      "reading_minutes": 13,
+      "words": 3206,
+      "reading_minutes": 16,
       "cover": null,
       "chapters": [
         {
@@ -10990,6 +10991,24 @@
           "leak_free": "true",
           "words": 288,
           "reading_minutes": 1
+        },
+        {
+          "file": "06_art_06_abschnitt_6_der_stempel_der_nur_dienstag.md",
+          "index": 6,
+          "title": "Abschnitt 6: Der Stempel, der nur dienstags rechtsfähig ist",
+          "article": "art_06",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "10.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1233",
+          "manual_ending_code": "J-06-06",
+          "backend": "deepseek",
+          "genre": "Witzebuch",
+          "leak_free": "true",
+          "words": 526,
+          "reading_minutes": 3
         }
       ]
     },
