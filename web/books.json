@@ -10735,7 +10735,7 @@
         "Herr Pfeil",
         "Frau Sander"
       ],
-      "chapter_count": 9,
+      "chapter_count": 10,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -10745,10 +10745,11 @@
         "art_06",
         "art_07",
         "art_08",
-        "art_09"
+        "art_09",
+        "art_10"
       ],
-      "words": 4189,
-      "reading_minutes": 21,
+      "words": 4541,
+      "reading_minutes": 23,
       "cover": null,
       "chapters": [
         {
@@ -10930,6 +10931,24 @@
           "leak_free": "true",
           "words": 288,
           "reading_minutes": 1
+        },
+        {
+          "file": "10_art_10_abschnitt_10_die_anhörungsschleife.md",
+          "index": 10,
+          "title": "Abschnitt 10: Die Anhörungsschleife",
+          "article": "art_10",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "688",
+          "manual_ending_code": "Z-10-10",
+          "backend": "deepseek",
+          "genre": "Magischer_Realismus",
+          "leak_free": "true",
+          "words": 352,
+          "reading_minutes": 2
         }
       ]
     },
