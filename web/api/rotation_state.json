@@ -813,7 +813,13 @@
     "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_036_die_warteschlange_der_würde",
     "r9:deepseek-chat:buch_031_die_kammer_der_sieben_stimmen",
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_037_the_ledger_of_hollow_creek",
-    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_024_die_kammer_der_stimmen"
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_024_die_kammer_der_stimmen",
+    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_018_rhymes_of_the_commons",
+    "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_030_die_wolkenschule_über_dem_marktplatz",
+    "r9:deepseek-chat:buch_021_the_bell_of_the_ninth_gate",
+    "r9:nvidia/nemotron-3-ultra-550b-a55b:free:buch_037_the_ledger_of_hollow_creek",
+    "r9:nvidia/nemotron-3-super-120b-a12b:free:buch_013_aufzeichnungen_eines_archivars",
+    "r10:deepseek-chat:buch_001_das_büro_der_unendlichkeit"
   ],
   "runden": {
     "1": [
@@ -2493,6 +2499,21 @@
         "tokens": "639",
         "versuche": "1",
         "woerter": 469
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_001_das_büro_der_unendlichkeit",
+        "code": "E-23-24",
+        "datei": "24_art_23_abschnitt_24_kalibrierung_des_arbeitslei.md",
+        "dauer_s": "21.9",
+        "ending_ok": "false",
+        "exit": 2,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 10,
+        "tokens": "988",
+        "versuche": "3",
+        "woerter": 368
       }
     ],
     "2": [
@@ -11242,6 +11263,26 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 8
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_018_rhymes_of_the_commons",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 8
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_030_die_wolkenschule_über_dem_marktplatz",
+        "datei": null,
+        "dauer_s": 0.6,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 8
       }
     ],
     "9": [
@@ -11584,6 +11625,36 @@
         "tokens": "963",
         "versuche": "1",
         "woerter": 447
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_021_the_bell_of_the_ninth_gate",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 9
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_037_the_ledger_of_hollow_creek",
+        "datei": null,
+        "dauer_s": 121.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 9
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_013_aufzeichnungen_eines_archivars",
+        "datei": null,
+        "dauer_s": 1.7,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 9
       }
     ]
   }

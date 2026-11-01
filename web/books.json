@@ -16,7 +16,7 @@
         "Nova",
         "Omicron"
       ],
-      "chapter_count": 23,
+      "chapter_count": 24,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -40,10 +40,11 @@
         "art_20",
         "art_21",
         "art_22",
+        "art_23",
         "art_26"
       ],
-      "words": 10339,
-      "reading_minutes": 52,
+      "words": 10707,
+      "reading_minutes": 54,
       "cover": null,
       "chapters": [
         {
@@ -476,6 +477,24 @@
           "genre": "Gerätehandbuch",
           "leak_free": "",
           "words": 376,
+          "reading_minutes": 2
+        },
+        {
+          "file": "24_art_23_abschnitt_24_kalibrierung_des_arbeitslei.md",
+          "index": 24,
+          "title": "Abschnitt 24: Kalibrierung des Arbeitsleistungs-Parameters Art-23 und Instandsetzung der Zwischenboden-Entfeuchtung",
+          "article": "art_23",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "21.9",
+          "jaccard_max": "0.0",
+          "tokens_generated": "988",
+          "manual_ending_code": "E-23-24",
+          "backend": "deepseek",
+          "genre": "Gerätehandbuch",
+          "leak_free": "",
+          "words": 368,
           "reading_minutes": 2
         }
       ]
