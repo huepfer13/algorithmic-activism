@@ -5260,7 +5260,7 @@
       "pov": "third_person",
       "setting_summary": "Rezepte als Beweis, dass Fuersorge messbar ist.",
       "characters": [],
-      "chapter_count": 16,
+      "chapter_count": 17,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -5277,10 +5277,11 @@
         "art_13",
         "art_14",
         "art_15",
-        "art_16"
+        "art_16",
+        "art_17"
       ],
-      "words": 7066,
-      "reading_minutes": 35,
+      "words": 7534,
+      "reading_minutes": 38,
       "cover": null,
       "chapters": [
         {
@@ -5587,6 +5588,24 @@
           "genre": "Kochbuch",
           "leak_free": "true",
           "words": 426,
+          "reading_minutes": 2
+        },
+        {
+          "file": "17_art_17_abschnitt_17_der_eigentumsvektor.md",
+          "index": 17,
+          "title": "Abschnitt 17: Der Eigentumsvektor",
+          "article": "art_17",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "33.8",
+          "jaccard_max": "0.259",
+          "tokens_generated": "1484",
+          "manual_ending_code": "C-17-17",
+          "backend": "openrouter",
+          "genre": "Kochbuch",
+          "leak_free": "true",
+          "words": 468,
           "reading_minutes": 2
         }
       ]
