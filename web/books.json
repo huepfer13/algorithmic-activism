@@ -827,7 +827,7 @@
       "pov": "third_person",
       "setting_summary": "Die Tiere des Schattenwaldes halten Rat und finden fuer jeden Streit eine gute Loesung.",
       "characters": [],
-      "chapter_count": 17,
+      "chapter_count": 18,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -845,10 +845,11 @@
         "art_14",
         "art_15",
         "art_16",
-        "art_17"
+        "art_17",
+        "art_18"
       ],
-      "words": 6781,
-      "reading_minutes": 34,
+      "words": 7204,
+      "reading_minutes": 36,
       "cover": null,
       "chapters": [
         {
@@ -1173,6 +1174,24 @@
           "genre": "Kinderbuch",
           "leak_free": "true",
           "words": 312,
+          "reading_minutes": 2
+        },
+        {
+          "file": "18_art_18_abschnitt_18_das_modul_des_stillen_raums.md",
+          "index": 18,
+          "title": "Abschnitt 18: Das Modul des stillen Raums",
+          "article": "art_18",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "45.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1622",
+          "manual_ending_code": "K-18-18",
+          "backend": "openrouter",
+          "genre": "Kinderbuch",
+          "leak_free": "true",
+          "words": 423,
           "reading_minutes": 2
         }
       ]

@@ -788,7 +788,9 @@
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_036_die_warteschlange_der_würde",
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_036_die_warteschlange_der_würde",
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_012_manifest_der_unantastbaren",
-    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_036_die_warteschlange_der_würde"
+    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_036_die_warteschlange_der_würde",
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_037_the_ledger_of_hollow_creek",
+    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_003_der_rat_der_tiere"
   ],
   "runden": {
     "1": [
@@ -2315,6 +2317,16 @@
       {
         "backend": "openrouter",
         "buch": "buch_036_die_warteschlange_der_würde",
+        "datei": null,
+        "dauer_s": 0.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 1
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_037_the_ledger_of_hollow_creek",
         "datei": null,
         "dauer_s": 0.2,
         "exit": 1,
@@ -10947,6 +10959,21 @@
         "tokens": "1749",
         "versuche": "1",
         "woerter": 318
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_003_der_rat_der_tiere",
+        "code": "K-18-18",
+        "datei": "18_art_18_abschnitt_18_das_modul_des_stillen_raums.md",
+        "dauer_s": "45.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 8,
+        "tokens": "1622",
+        "versuche": "1",
+        "woerter": 423
       }
     ],
     "9": [
