@@ -777,7 +777,8 @@
     "r4:deepseek-chat:buch_036_die_warteschlange_der_würde",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_031_die_kammer_der_sieben_stimmen",
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_015_das_kochbuch_der_allmende",
-    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_037_the_ledger_of_hollow_creek"
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_037_the_ledger_of_hollow_creek",
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_037_the_ledger_of_hollow_creek"
   ],
   "runden": {
     "1": [
@@ -9252,6 +9253,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 6
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_037_the_ledger_of_hollow_creek",
+        "code": "F-03-02",
+        "datei": "02_art_03_section_2_the_calibration_of_breath.md",
+        "dauer_s": "43.7",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 6,
+        "tokens": "1717",
+        "versuche": "1",
+        "woerter": 291
       }
     ],
     "7": [

@@ -11045,12 +11045,13 @@
         "Pip",
         "The Warden"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_03"
       ],
-      "words": 829,
-      "reading_minutes": 4,
+      "words": 1120,
+      "reading_minutes": 6,
       "cover": null,
       "chapters": [
         {
@@ -11088,6 +11089,24 @@
           "leak_free": "true",
           "words": 355,
           "reading_minutes": 2
+        },
+        {
+          "file": "02_art_03_section_2_the_calibration_of_breath.md",
+          "index": 2,
+          "title": "Section 2: The Calibration of Breath",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "43.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1717",
+          "manual_ending_code": "F-03-02",
+          "backend": "openrouter",
+          "genre": "Fable",
+          "leak_free": "true",
+          "words": 291,
+          "reading_minutes": 1
         }
       ]
     }
