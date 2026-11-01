@@ -1831,7 +1831,7 @@
         "Vera",
         "Juno"
       ],
-      "chapter_count": 17,
+      "chapter_count": 18,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1849,10 +1849,11 @@
         "art_14",
         "art_15",
         "art_16",
-        "art_17"
+        "art_17",
+        "art_18"
       ],
-      "words": 7846,
-      "reading_minutes": 39,
+      "words": 8143,
+      "reading_minutes": 41,
       "cover": null,
       "chapters": [
         {
@@ -2178,6 +2179,24 @@
           "leak_free": "true",
           "words": 512,
           "reading_minutes": 3
+        },
+        {
+          "file": "18_art_18_abschnitt_18_der_parameter_des_gewissens.md",
+          "index": 18,
+          "title": "Abschnitt 18: Der Parameter des Gewissens",
+          "article": "art_18",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "39.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1674",
+          "manual_ending_code": "D-18-18",
+          "backend": "openrouter",
+          "genre": "Parabel",
+          "leak_free": "true",
+          "words": 297,
+          "reading_minutes": 1
         }
       ]
     },
