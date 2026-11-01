@@ -805,7 +805,9 @@
     "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_035_die_versteinerungsbehörde",
     "r7:deepseek-chat:buch_017_des_volkes_mund",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_023_the_gravity_room",
-    "r8:deepseek-chat:buch_001_das_büro_der_unendlichkeit"
+    "r8:deepseek-chat:buch_001_das_büro_der_unendlichkeit",
+    "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_009_depeschen_aus_dem_kordon",
+    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_030_die_wolkenschule_über_dem_marktplatz"
   ],
   "runden": {
     "1": [
@@ -10467,6 +10469,16 @@
         "tokens": "1031",
         "versuche": "1",
         "woerter": 442
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_009_depeschen_aus_dem_kordon",
+        "datei": null,
+        "dauer_s": 0.8,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 7
       }
     ],
     "8": [
@@ -11164,6 +11176,21 @@
         "tokens": "1038",
         "versuche": "3",
         "woerter": 376
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_030_die_wolkenschule_über_dem_marktplatz",
+        "code": "K-15-15",
+        "datei": "15_art_15_abschnitt_15_der_fünfzehnte_parameter.md",
+        "dauer_s": "104.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 8,
+        "tokens": "1386",
+        "versuche": "1",
+        "woerter": 425
       }
     ],
     "9": [
