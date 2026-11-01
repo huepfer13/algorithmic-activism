@@ -801,7 +801,9 @@
     "r8:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit",
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_002_die_sieben_quellen",
     "r4:deepseek-chat:buch_034_the_weight_of_water",
-    "r5:deepseek-chat:buch_037_the_ledger_of_hollow_creek"
+    "r5:deepseek-chat:buch_037_the_ledger_of_hollow_creek",
+    "r4:nvidia/nemotron-3-super-120b-a12b:free:buch_035_die_versteinerungsbehörde",
+    "r7:deepseek-chat:buch_017_des_volkes_mund"
   ],
   "runden": {
     "1": [
@@ -6777,6 +6779,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "deepseek-chat",
         "runde": 4
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_035_die_versteinerungsbehörde",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 4
       }
     ],
     "5": [
@@ -10428,6 +10440,21 @@
         "tokens": "1451",
         "versuche": "1",
         "woerter": 364
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_017_des_volkes_mund",
+        "code": "V-26-26",
+        "datei": "26_art_26_abschnitt_26_die_unentgeltliche_werkbank.md",
+        "dauer_s": "7.9",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 7,
+        "tokens": "1031",
+        "versuche": "1",
+        "woerter": 442
       }
     ],
     "8": [

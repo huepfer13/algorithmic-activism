@@ -6128,7 +6128,7 @@
       "pov": "third_person",
       "setting_summary": "Etymologische Miniaturen zu gefluegelten Worten.",
       "characters": [],
-      "chapter_count": 25,
+      "chapter_count": 26,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -6154,10 +6154,11 @@
         "art_22",
         "art_23",
         "art_24",
-        "art_25"
+        "art_25",
+        "art_26"
       ],
-      "words": 8839,
-      "reading_minutes": 44,
+      "words": 9281,
+      "reading_minutes": 46,
       "cover": null,
       "chapters": [
         {
@@ -6627,6 +6628,24 @@
           "leak_free": "true",
           "words": 502,
           "reading_minutes": 3
+        },
+        {
+          "file": "26_art_26_abschnitt_26_die_unentgeltliche_werkbank.md",
+          "index": 26,
+          "title": "Abschnitt 26: Die unentgeltliche Werkbank",
+          "article": "art_26",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.9",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1031",
+          "manual_ending_code": "V-26-26",
+          "backend": "deepseek",
+          "genre": "Sprichwoerter",
+          "leak_free": "true",
+          "words": 442,
+          "reading_minutes": 2
         }
       ]
     },
