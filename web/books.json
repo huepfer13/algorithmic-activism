@@ -10966,7 +10966,7 @@
         "Die Stimme aus dem Lautsprecher",
         "Oma Pflaume"
       ],
-      "chapter_count": 8,
+      "chapter_count": 9,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -10975,10 +10975,11 @@
         "art_05",
         "art_06",
         "art_07",
-        "art_08"
+        "art_08",
+        "art_09"
       ],
-      "words": 3839,
-      "reading_minutes": 19,
+      "words": 4367,
+      "reading_minutes": 22,
       "cover": null,
       "chapters": [
         {
@@ -11142,6 +11143,24 @@
           "leak_free": "true",
           "words": 318,
           "reading_minutes": 2
+        },
+        {
+          "file": "09_art_09_abschnitt_9_die_kammer_der_kalten_klinge.md",
+          "index": 9,
+          "title": "Abschnitt 9: Die Kammer der kalten Klinge",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "10.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1215",
+          "manual_ending_code": "J-09-09",
+          "backend": "deepseek",
+          "genre": "Witzebuch",
+          "leak_free": "true",
+          "words": 528,
+          "reading_minutes": 3
         }
       ]
     },
