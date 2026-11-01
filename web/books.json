@@ -3075,7 +3075,7 @@
         "Nadia",
         "Kroll"
       ],
-      "chapter_count": 18,
+      "chapter_count": 19,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -3094,10 +3094,11 @@
         "art_15",
         "art_16",
         "art_17",
-        "art_18"
+        "art_18",
+        "art_19"
       ],
-      "words": 8856,
-      "reading_minutes": 44,
+      "words": 9205,
+      "reading_minutes": 46,
       "cover": null,
       "chapters": [
         {
@@ -3441,6 +3442,24 @@
           "leak_free": "true",
           "words": 568,
           "reading_minutes": 3
+        },
+        {
+          "file": "19_art_19_abschnitt_19_die_neunzehnte_frequenz.md",
+          "index": 19,
+          "title": "Abschnitt 19: Die neunzehnte Frequenz",
+          "article": "art_19",
+          "ending_ok": "true",
+          "attempts": "2",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "142.0",
+          "jaccard_max": "0.05",
+          "tokens_generated": "1314",
+          "manual_ending_code": "B-19-19",
+          "backend": "openrouter",
+          "genre": "Briefroman",
+          "leak_free": "true",
+          "words": 349,
+          "reading_minutes": 2
         }
       ]
     },
