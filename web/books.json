@@ -11520,16 +11520,17 @@
         "Pip",
         "The Warden"
       ],
-      "chapter_count": 5,
+      "chapter_count": 6,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
         "art_05",
-        "art_09"
+        "art_09",
+        "art_12"
       ],
-      "words": 2895,
-      "reading_minutes": 14,
+      "words": 3225,
+      "reading_minutes": 16,
       "cover": null,
       "chapters": [
         {
@@ -11639,6 +11640,24 @@
           "leak_free": "true",
           "words": 583,
           "reading_minutes": 3
+        },
+        {
+          "file": "06_art_12_abschnitt_6_the_gauge_without_a_hand.md",
+          "index": 6,
+          "title": "Abschnitt 6: The Gauge Without a Hand",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "46.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1174",
+          "manual_ending_code": "F-12-06",
+          "backend": "openrouter",
+          "genre": "Fable",
+          "leak_free": "true",
+          "words": 330,
+          "reading_minutes": 2
         }
       ]
     },
