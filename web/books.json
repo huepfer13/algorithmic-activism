@@ -11020,7 +11020,7 @@
         "Herr Pfeil",
         "Frau Sander"
       ],
-      "chapter_count": 13,
+      "chapter_count": 14,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -11034,10 +11034,11 @@
         "art_10",
         "art_11",
         "art_12",
-        "art_13"
+        "art_13",
+        "art_14"
       ],
-      "words": 5967,
-      "reading_minutes": 30,
+      "words": 6314,
+      "reading_minutes": 32,
       "cover": null,
       "chapters": [
         {
@@ -11290,6 +11291,24 @@
           "genre": "Magischer_Realismus",
           "leak_free": "true",
           "words": 470,
+          "reading_minutes": 2
+        },
+        {
+          "file": "14_art_14_abschnitt_14_die_kalibrierung_der_grenzü.md",
+          "index": 14,
+          "title": "Abschnitt 14: Die Kalibrierung der Grenzüberschreitung",
+          "article": "art_14",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "38.9",
+          "jaccard_max": "0.0",
+          "tokens_generated": "983",
+          "manual_ending_code": "Z-14-14",
+          "backend": "openrouter",
+          "genre": "Magischer_Realismus",
+          "leak_free": "true",
+          "words": 347,
           "reading_minutes": 2
         }
       ]
