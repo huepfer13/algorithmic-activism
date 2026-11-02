@@ -9001,7 +9001,7 @@
         "Tobias",
         "Die Stimme im Gebälk"
       ],
-      "chapter_count": 8,
+      "chapter_count": 9,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -9010,10 +9010,11 @@
         "art_05",
         "art_06",
         "art_07",
-        "art_08"
+        "art_08",
+        "art_09"
       ],
-      "words": 3725,
-      "reading_minutes": 19,
+      "words": 4074,
+      "reading_minutes": 20,
       "cover": null,
       "chapters": [
         {
@@ -9176,6 +9177,24 @@
           "genre": "Gothic",
           "leak_free": "true",
           "words": 321,
+          "reading_minutes": 2
+        },
+        {
+          "file": "09_art_09_abschnitt_9_die_kalibrierung_des_freihei.md",
+          "index": 9,
+          "title": "Abschnitt 9: Die Kalibrierung des Freiheitsgrades",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "80.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1106",
+          "manual_ending_code": "W-09-09",
+          "backend": "openrouter",
+          "genre": "Gothic",
+          "leak_free": "true",
+          "words": 349,
           "reading_minutes": 2
         }
       ]
