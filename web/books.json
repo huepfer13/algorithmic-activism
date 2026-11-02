@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 38,
+  "count": 39,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -11965,6 +11965,46 @@
           "leak_free": "true",
           "words": 497,
           "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_039_die_depeschen_aus_block_sieben",
+      "title": "Die Depeschen aus Block Sieben",
+      "language": "DE",
+      "style": "Briefroman",
+      "pov": "first_person",
+      "setting_summary": "Eine abgelegene Forschungsstation unter einem versiegelten Gletscher, in der fünf Menschen nach einem Signalausfall festsitzen und ihre einzige Verbindung zur Außenwelt ein streng rationierter Kurzwellenkanal ist, der von einer anonymen Kontrollinstanz überwacht wird. Zwischen Enge, schwindenden Ressourcen und wachsender Paranoia schreiben sich die Eingeschlossenen nummerierte Depeschen, in denen sie Nähe, Verdacht und Widerstand aushandeln.",
+      "characters": [
+        "Mara Voss",
+        "Ilyas Demir",
+        "Hanna Kestrel",
+        "Tomás Ried",
+        "Lotte Brandt"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 1184,
+      "reading_minutes": 6,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "17.6",
+          "jaccard_max": "",
+          "tokens_generated": "2032",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Briefroman",
+          "leak_free": "",
+          "words": 1184,
+          "reading_minutes": 6
         }
       ]
     }
