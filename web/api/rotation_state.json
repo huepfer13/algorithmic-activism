@@ -848,7 +848,8 @@
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_037_the_ledger_of_hollow_creek",
     "r1:deepseek-chat:buch_038_the_weight_of_unspoken_rain",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_035_die_versteinerungsbehörde",
-    "r3:deepseek-chat:buch_037_the_ledger_of_hollow_creek"
+    "r3:deepseek-chat:buch_037_the_ledger_of_hollow_creek",
+    "r4:deepseek-chat:buch_038_the_weight_of_unspoken_rain"
   ],
   "runden": {
     "1": [
@@ -6989,6 +6990,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 4
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_038_the_weight_of_unspoken_rain",
+        "code": "Z-09-05",
+        "datei": "05_art_09_abschnitt_5_the_frequency_of_absence.md",
+        "dauer_s": "7.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 4,
+        "tokens": "721",
+        "versuche": "1",
+        "woerter": 528
       }
     ],
     "5": [
