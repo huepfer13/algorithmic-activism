@@ -507,7 +507,7 @@
       "pov": "third_person",
       "setting_summary": "Sieben Quellen, sieben Pruefungen: eine Wanderung durch die Landschaften der Rechte.",
       "characters": [],
-      "chapter_count": 18,
+      "chapter_count": 19,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -526,10 +526,11 @@
         "art_15",
         "art_16",
         "art_17",
-        "art_18"
+        "art_18",
+        "art_19"
       ],
-      "words": 8990,
-      "reading_minutes": 45,
+      "words": 9497,
+      "reading_minutes": 47,
       "cover": null,
       "chapters": [
         {
@@ -873,6 +874,24 @@
           "leak_free": "true",
           "words": 364,
           "reading_minutes": 2
+        },
+        {
+          "file": "19_art_19_abschnitt_19_die_prüfung_der_stimme.md",
+          "index": 19,
+          "title": "Abschnitt 19: Die Prüfung der Stimme",
+          "article": "art_19",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.6",
+          "jaccard_max": "0.02",
+          "tokens_generated": "924",
+          "manual_ending_code": "M-19-19",
+          "backend": "deepseek",
+          "genre": "Märchen",
+          "leak_free": "true",
+          "words": 507,
+          "reading_minutes": 3
         }
       ]
     },
