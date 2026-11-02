@@ -11732,14 +11732,15 @@
         "Ines Rook",
         "The Listener"
       ],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_03",
-        "art_04"
+        "art_04",
+        "art_05"
       ],
-      "words": 1856,
-      "reading_minutes": 9,
+      "words": 2432,
+      "reading_minutes": 12,
       "cover": null,
       "chapters": [
         {
@@ -11813,6 +11814,24 @@
           "leak_free": "true",
           "words": 463,
           "reading_minutes": 2
+        },
+        {
+          "file": "04_art_05_abschnitt_4_the_calibration_of_pain.md",
+          "index": 4,
+          "title": "Abschnitt 4: The Calibration of Pain",
+          "article": "art_05",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.5",
+          "jaccard_max": "0.045",
+          "tokens_generated": "792",
+          "manual_ending_code": "Z-05-04",
+          "backend": "deepseek",
+          "genre": "Magical_Realism",
+          "leak_free": "true",
+          "words": 576,
+          "reading_minutes": 3
         }
       ]
     }
