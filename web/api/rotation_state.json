@@ -835,7 +835,8 @@
     "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_008_flechtwerk_arkadien",
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_038_the_weight_of_unspoken_rain",
     "r5:nvidia/nemotron-3-super-120b-a12b:free:buch_038_the_weight_of_unspoken_rain",
-    "r6:deepseek-chat:buch_037_the_ledger_of_hollow_creek"
+    "r6:deepseek-chat:buch_037_the_ledger_of_hollow_creek",
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_013_aufzeichnungen_eines_archivars"
   ],
   "runden": {
     "1": [
@@ -10692,6 +10693,21 @@
         "tokens": "965",
         "versuche": "1",
         "woerter": 484
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_013_aufzeichnungen_eines_archivars",
+        "code": "T-21-21",
+        "datei": "21_art_21_abschnitt_21_die_stimmabgabekalibrierung.md",
+        "dauer_s": "46.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 7,
+        "tokens": "1158",
+        "versuche": "1",
+        "woerter": 463
       }
     ],
     "8": [

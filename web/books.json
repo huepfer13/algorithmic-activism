@@ -4696,7 +4696,7 @@
         "Herr Brenner",
         "Frau Ostrow"
       ],
-      "chapter_count": 20,
+      "chapter_count": 21,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -4717,10 +4717,11 @@
         "art_17",
         "art_18",
         "art_19",
-        "art_20"
+        "art_20",
+        "art_21"
       ],
-      "words": 9178,
-      "reading_minutes": 46,
+      "words": 9641,
+      "reading_minutes": 48,
       "cover": null,
       "chapters": [
         {
@@ -5099,6 +5100,24 @@
           "genre": "Tagebuch",
           "leak_free": "true",
           "words": 484,
+          "reading_minutes": 2
+        },
+        {
+          "file": "21_art_21_abschnitt_21_die_stimmabgabekalibrierung.md",
+          "index": 21,
+          "title": "Abschnitt 21: Die Stimmabgabekalibrierung",
+          "article": "art_21",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "46.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1158",
+          "manual_ending_code": "T-21-21",
+          "backend": "openrouter",
+          "genre": "Tagebuch",
+          "leak_free": "true",
+          "words": 463,
           "reading_minutes": 2
         }
       ]
