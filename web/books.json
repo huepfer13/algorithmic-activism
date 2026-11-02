@@ -11327,7 +11327,7 @@
         "Die Stimme aus dem Lautsprecher",
         "Oma Pflaume"
       ],
-      "chapter_count": 9,
+      "chapter_count": 10,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -11337,10 +11337,11 @@
         "art_06",
         "art_07",
         "art_08",
-        "art_09"
+        "art_09",
+        "art_10"
       ],
-      "words": 4367,
-      "reading_minutes": 22,
+      "words": 4724,
+      "reading_minutes": 24,
       "cover": null,
       "chapters": [
         {
@@ -11522,6 +11523,24 @@
           "leak_free": "true",
           "words": 528,
           "reading_minutes": 3
+        },
+        {
+          "file": "10_art_10_abschnitt_10_die_kalibrierung_der_unpart.md",
+          "index": 10,
+          "title": "Abschnitt 10: Die Kalibrierung der Unparteilichkeit",
+          "article": "art_10",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "94.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "2231",
+          "manual_ending_code": "J-10-10",
+          "backend": "openrouter",
+          "genre": "Witzebuch",
+          "leak_free": "true",
+          "words": 357,
+          "reading_minutes": 2
         }
       ]
     },

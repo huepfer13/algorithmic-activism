@@ -843,7 +843,8 @@
     "r8:deepseek-chat:buch_002_die_sieben_quellen",
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_037_the_ledger_of_hollow_creek",
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_035_die_versteinerungsbehörde",
-    "r2:deepseek-chat:buch_038_the_weight_of_unspoken_rain"
+    "r2:deepseek-chat:buch_038_the_weight_of_unspoken_rain",
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_036_die_warteschlange_der_würde"
   ],
   "runden": {
     "1": [
@@ -5522,6 +5523,21 @@
         "tokens": "925",
         "versuche": "1",
         "woerter": 470
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_036_die_warteschlange_der_würde",
+        "code": "J-10-10",
+        "datei": "10_art_10_abschnitt_10_die_kalibrierung_der_unpart.md",
+        "dauer_s": "94.7",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 3,
+        "tokens": "2231",
+        "versuche": "1",
+        "woerter": 357
       }
     ],
     "4": [
