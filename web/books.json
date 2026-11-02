@@ -11558,17 +11558,18 @@
         "Pip",
         "The Warden"
       ],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
         "art_05",
         "art_09",
-        "art_12"
+        "art_12",
+        "art_14"
       ],
-      "words": 3225,
-      "reading_minutes": 16,
+      "words": 3525,
+      "reading_minutes": 18,
       "cover": null,
       "chapters": [
         {
@@ -11695,6 +11696,24 @@
           "genre": "Fable",
           "leak_free": "true",
           "words": 330,
+          "reading_minutes": 2
+        },
+        {
+          "file": "07_art_14_abschnitt_7_the_calibration_of_refuge.md",
+          "index": 7,
+          "title": "Abschnitt 7: The Calibration of Refuge",
+          "article": "art_14",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "761.5",
+          "jaccard_max": "0.053",
+          "tokens_generated": "1993",
+          "manual_ending_code": "F-14-07",
+          "backend": "openrouter",
+          "genre": "Fable",
+          "leak_free": "true",
+          "words": 300,
           "reading_minutes": 2
         }
       ]
