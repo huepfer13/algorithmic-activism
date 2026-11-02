@@ -11751,16 +11751,17 @@
         "Ines Rook",
         "The Listener"
       ],
-      "chapter_count": 5,
+      "chapter_count": 6,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
         "art_05",
-        "art_09"
+        "art_09",
+        "art_12"
       ],
-      "words": 2960,
-      "reading_minutes": 15,
+      "words": 3339,
+      "reading_minutes": 17,
       "cover": null,
       "chapters": [
         {
@@ -11870,6 +11871,24 @@
           "leak_free": "true",
           "words": 528,
           "reading_minutes": 3
+        },
+        {
+          "file": "06_art_12_abschnitt_6_the_calibration_of_walls.md",
+          "index": 6,
+          "title": "Abschnitt 6: The Calibration of Walls",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "29.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1071",
+          "manual_ending_code": "Z-12-06",
+          "backend": "openrouter",
+          "genre": "Magical_Realism",
+          "leak_free": "true",
+          "words": 379,
+          "reading_minutes": 2
         }
       ]
     }
