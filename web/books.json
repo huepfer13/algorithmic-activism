@@ -11637,12 +11637,13 @@
         "Ines Rook",
         "The Listener"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_03"
       ],
-      "words": 905,
-      "reading_minutes": 5,
+      "words": 1393,
+      "reading_minutes": 7,
       "cover": null,
       "chapters": [
         {
@@ -11679,6 +11680,24 @@
           "genre": "Magical_Realism",
           "leak_free": "true",
           "words": 355,
+          "reading_minutes": 2
+        },
+        {
+          "file": "02_art_03_abschnitt_2_the_ledger_of_breath.md",
+          "index": 2,
+          "title": "Abschnitt 2: The Ledger of Breath",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "667",
+          "manual_ending_code": "Z-03-02",
+          "backend": "deepseek",
+          "genre": "Magical_Realism",
+          "leak_free": "true",
+          "words": 488,
           "reading_minutes": 2
         }
       ]
