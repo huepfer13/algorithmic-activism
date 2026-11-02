@@ -11789,17 +11789,18 @@
         "Ines Rook",
         "The Listener"
       ],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
         "art_05",
         "art_09",
-        "art_12"
+        "art_12",
+        "art_14"
       ],
-      "words": 3339,
-      "reading_minutes": 17,
+      "words": 3836,
+      "reading_minutes": 19,
       "cover": null,
       "chapters": [
         {
@@ -11926,6 +11927,24 @@
           "genre": "Magical_Realism",
           "leak_free": "true",
           "words": 379,
+          "reading_minutes": 2
+        },
+        {
+          "file": "07_art_14_abschnitt_7_the_asylum_parameter.md",
+          "index": 7,
+          "title": "Abschnitt 7: The Asylum Parameter",
+          "article": "art_14",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "684",
+          "manual_ending_code": "Z-14-07",
+          "backend": "deepseek",
+          "genre": "Magical_Realism",
+          "leak_free": "true",
+          "words": 497,
           "reading_minutes": 2
         }
       ]

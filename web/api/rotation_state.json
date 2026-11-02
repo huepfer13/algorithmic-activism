@@ -852,7 +852,8 @@
     "r4:deepseek-chat:buch_038_the_weight_of_unspoken_rain",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_038_the_weight_of_unspoken_rain",
     "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_037_the_ledger_of_hollow_creek",
-    "r5:deepseek-chat:buch_005_fragment_der_vernunft"
+    "r5:deepseek-chat:buch_005_fragment_der_vernunft",
+    "r6:deepseek-chat:buch_038_the_weight_of_unspoken_rain"
   ],
   "runden": {
     "1": [
@@ -9802,6 +9803,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 6
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_038_the_weight_of_unspoken_rain",
+        "code": "Z-14-07",
+        "datei": "07_art_14_abschnitt_7_the_asylum_parameter.md",
+        "dauer_s": "8.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 6,
+        "tokens": "684",
+        "versuche": "1",
+        "woerter": 497
       }
     ],
     "7": [
