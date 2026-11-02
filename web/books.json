@@ -11558,7 +11558,7 @@
         "Pip",
         "The Warden"
       ],
-      "chapter_count": 8,
+      "chapter_count": 9,
       "covered_articles": [
         "art_01",
         "art_03",
@@ -11567,10 +11567,11 @@
         "art_09",
         "art_12",
         "art_14",
-        "art_19"
+        "art_19",
+        "art_26"
       ],
-      "words": 4036,
-      "reading_minutes": 20,
+      "words": 4402,
+      "reading_minutes": 22,
       "cover": null,
       "chapters": [
         {
@@ -11734,6 +11735,24 @@
           "leak_free": "true",
           "words": 511,
           "reading_minutes": 3
+        },
+        {
+          "file": "09_art_26_abschnitt_9_the_calibration_of_need.md",
+          "index": 9,
+          "title": "Abschnitt 9: The Calibration of Need",
+          "article": "art_26",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "42.6",
+          "jaccard_max": "0.061",
+          "tokens_generated": "1233",
+          "manual_ending_code": "F-26-09",
+          "backend": "openrouter",
+          "genre": "Fable",
+          "leak_free": "true",
+          "words": 366,
+          "reading_minutes": 2
         }
       ]
     },

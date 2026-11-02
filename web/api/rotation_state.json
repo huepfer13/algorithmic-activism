@@ -850,7 +850,8 @@
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_035_die_versteinerungsbehörde",
     "r3:deepseek-chat:buch_037_the_ledger_of_hollow_creek",
     "r4:deepseek-chat:buch_038_the_weight_of_unspoken_rain",
-    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_038_the_weight_of_unspoken_rain"
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_038_the_weight_of_unspoken_rain",
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_037_the_ledger_of_hollow_creek"
   ],
   "runden": {
     "1": [
@@ -7021,6 +7022,21 @@
         "tokens": "721",
         "versuche": "1",
         "woerter": 528
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_037_the_ledger_of_hollow_creek",
+        "code": "F-26-09",
+        "datei": "09_art_26_abschnitt_9_the_calibration_of_need.md",
+        "dauer_s": "42.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 4,
+        "tokens": "1233",
+        "versuche": "1",
+        "woerter": 366
       }
     ],
     "5": [
