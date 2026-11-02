@@ -10925,7 +10925,7 @@
         "Herr Pfeil",
         "Frau Sander"
       ],
-      "chapter_count": 12,
+      "chapter_count": 13,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -10938,10 +10938,11 @@
         "art_09",
         "art_10",
         "art_11",
-        "art_12"
+        "art_12",
+        "art_13"
       ],
-      "words": 5497,
-      "reading_minutes": 27,
+      "words": 5967,
+      "reading_minutes": 30,
       "cover": null,
       "chapters": [
         {
@@ -11176,6 +11177,24 @@
           "genre": "Magischer_Realismus",
           "leak_free": "true",
           "words": 486,
+          "reading_minutes": 2
+        },
+        {
+          "file": "13_art_13_abschnitt_13_die_kalibrierung_der_freien.md",
+          "index": 13,
+          "title": "Abschnitt 13: Die Kalibrierung der freien Bewegung",
+          "article": "art_13",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.7",
+          "jaccard_max": "0.05",
+          "tokens_generated": "925",
+          "manual_ending_code": "Z-13-13",
+          "backend": "deepseek",
+          "genre": "Magischer_Realismus",
+          "leak_free": "true",
+          "words": 470,
           "reading_minutes": 2
         }
       ]
