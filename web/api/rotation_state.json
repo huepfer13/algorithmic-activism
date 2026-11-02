@@ -842,7 +842,8 @@
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_031_die_kammer_der_sieben_stimmen",
     "r8:deepseek-chat:buch_002_die_sieben_quellen",
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_037_the_ledger_of_hollow_creek",
-    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_035_die_versteinerungsbehörde"
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_035_die_versteinerungsbehörde",
+    "r2:deepseek-chat:buch_038_the_weight_of_unspoken_rain"
   ],
   "runden": {
     "1": [
@@ -4044,6 +4045,21 @@
         "tokens": "925",
         "versuche": "1",
         "woerter": 470
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_038_the_weight_of_unspoken_rain",
+        "code": "Z-04-03",
+        "datei": "03_art_04_abschnitt_3_the_calibration_of_chains.md",
+        "dauer_s": "6.8",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 2,
+        "tokens": "647",
+        "versuche": "1",
+        "woerter": 463
       }
     ],
     "3": [

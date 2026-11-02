@@ -11694,13 +11694,14 @@
         "Ines Rook",
         "The Listener"
       ],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 1393,
-      "reading_minutes": 7,
+      "words": 1856,
+      "reading_minutes": 9,
       "cover": null,
       "chapters": [
         {
@@ -11755,6 +11756,24 @@
           "genre": "Magical_Realism",
           "leak_free": "true",
           "words": 488,
+          "reading_minutes": 2
+        },
+        {
+          "file": "03_art_04_abschnitt_3_the_calibration_of_chains.md",
+          "index": 3,
+          "title": "Abschnitt 3: The Calibration of Chains",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "647",
+          "manual_ending_code": "Z-04-03",
+          "backend": "deepseek",
+          "genre": "Magical_Realism",
+          "leak_free": "true",
+          "words": 463,
           "reading_minutes": 2
         }
       ]
