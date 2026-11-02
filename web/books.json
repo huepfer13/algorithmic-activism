@@ -11482,15 +11482,16 @@
         "Pip",
         "The Warden"
       ],
-      "chapter_count": 4,
+      "chapter_count": 5,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_09"
       ],
-      "words": 2312,
-      "reading_minutes": 12,
+      "words": 2895,
+      "reading_minutes": 14,
       "cover": null,
       "chapters": [
         {
@@ -11581,6 +11582,24 @@
           "genre": "Fable",
           "leak_free": "true",
           "words": 633,
+          "reading_minutes": 3
+        },
+        {
+          "file": "05_art_09_abschnitt_5_the_weight_of_the_ledger.md",
+          "index": 5,
+          "title": "Abschnitt 5: The Weight of the Ledger",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "845",
+          "manual_ending_code": "F-09-05",
+          "backend": "deepseek",
+          "genre": "Fable",
+          "leak_free": "true",
+          "words": 583,
           "reading_minutes": 3
         }
       ]
