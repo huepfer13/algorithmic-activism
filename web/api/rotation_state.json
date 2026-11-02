@@ -846,7 +846,9 @@
     "r2:deepseek-chat:buch_038_the_weight_of_unspoken_rain",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_036_die_warteschlange_der_würde",
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_037_the_ledger_of_hollow_creek",
-    "r1:deepseek-chat:buch_038_the_weight_of_unspoken_rain"
+    "r1:deepseek-chat:buch_038_the_weight_of_unspoken_rain",
+    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_035_die_versteinerungsbehörde",
+    "r3:deepseek-chat:buch_037_the_ledger_of_hollow_creek"
   ],
   "runden": {
     "1": [
@@ -4078,6 +4080,16 @@
         "tokens": "647",
         "versuche": "1",
         "woerter": 463
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_035_die_versteinerungsbehörde",
+        "datei": null,
+        "dauer_s": 0.4,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 2
       }
     ],
     "3": [
@@ -5555,6 +5567,21 @@
         "tokens": "2231",
         "versuche": "1",
         "woerter": 357
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_037_the_ledger_of_hollow_creek",
+        "code": "F-19-08",
+        "datei": "08_art_19_abschnitt_8_the_frequency_of_whispers.md",
+        "dauer_s": "7.7",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 3,
+        "tokens": "713",
+        "versuche": "1",
+        "woerter": 511
       }
     ],
     "4": [
