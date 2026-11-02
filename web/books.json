@@ -1619,7 +1619,7 @@
       "pov": "third_person",
       "setting_summary": "Ein diskursives Nachdenken darueber, was Menschenrechte praktisch bedeuten.",
       "characters": [],
-      "chapter_count": 16,
+      "chapter_count": 17,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1636,10 +1636,11 @@
         "art_13",
         "art_14",
         "art_15",
-        "art_16"
+        "art_16",
+        "art_17"
       ],
-      "words": 7346,
-      "reading_minutes": 37,
+      "words": 7731,
+      "reading_minutes": 39,
       "cover": null,
       "chapters": [
         {
@@ -1946,6 +1947,24 @@
           "genre": "Philosophischer_Essay",
           "leak_free": "true",
           "words": 387,
+          "reading_minutes": 2
+        },
+        {
+          "file": "17_art_17_abschnitt_17_die_eigentumskalibrierung.md",
+          "index": 17,
+          "title": "Abschnitt 17: Die Eigentumskalibrierung",
+          "article": "art_17",
+          "ending_ok": "true",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "22.4",
+          "jaccard_max": "0.051",
+          "tokens_generated": "827",
+          "manual_ending_code": "P-17-17",
+          "backend": "deepseek",
+          "genre": "Philosophischer_Essay",
+          "leak_free": "true",
+          "words": 385,
           "reading_minutes": 2
         }
       ]

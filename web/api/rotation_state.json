@@ -851,7 +851,8 @@
     "r3:deepseek-chat:buch_037_the_ledger_of_hollow_creek",
     "r4:deepseek-chat:buch_038_the_weight_of_unspoken_rain",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_038_the_weight_of_unspoken_rain",
-    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_037_the_ledger_of_hollow_creek"
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_037_the_ledger_of_hollow_creek",
+    "r5:deepseek-chat:buch_005_fragment_der_vernunft"
   ],
   "runden": {
     "1": [
@@ -8404,6 +8405,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 5
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_005_fragment_der_vernunft",
+        "code": "P-17-17",
+        "datei": "17_art_17_abschnitt_17_die_eigentumskalibrierung.md",
+        "dauer_s": "22.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 5,
+        "tokens": "827",
+        "versuche": "3",
+        "woerter": 385
       }
     ],
     "6": [
