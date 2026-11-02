@@ -819,7 +819,8 @@
     "r9:deepseek-chat:buch_021_the_bell_of_the_ninth_gate",
     "r9:nvidia/nemotron-3-ultra-550b-a55b:free:buch_037_the_ledger_of_hollow_creek",
     "r9:nvidia/nemotron-3-super-120b-a12b:free:buch_013_aufzeichnungen_eines_archivars",
-    "r10:deepseek-chat:buch_001_das_büro_der_unendlichkeit"
+    "r10:deepseek-chat:buch_001_das_büro_der_unendlichkeit",
+    "r3:deepseek-chat:buch_035_die_versteinerungsbehörde"
   ],
   "runden": {
     "1": [
@@ -5423,6 +5424,21 @@
         "tokens": "1015",
         "versuche": "1",
         "woerter": 288
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_035_die_versteinerungsbehörde",
+        "code": "Z-11-11",
+        "datei": "11_art_11_abschnitt_11_die_kalibrierung_der_unschu.md",
+        "dauer_s": "8.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 3,
+        "tokens": "925",
+        "versuche": "1",
+        "woerter": 470
       }
     ],
     "4": [
