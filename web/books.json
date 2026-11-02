@@ -10925,7 +10925,7 @@
         "Herr Pfeil",
         "Frau Sander"
       ],
-      "chapter_count": 11,
+      "chapter_count": 12,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -10937,10 +10937,11 @@
         "art_08",
         "art_09",
         "art_10",
-        "art_11"
+        "art_11",
+        "art_12"
       ],
-      "words": 5011,
-      "reading_minutes": 25,
+      "words": 5497,
+      "reading_minutes": 27,
       "cover": null,
       "chapters": [
         {
@@ -11157,6 +11158,24 @@
           "genre": "Magischer_Realismus",
           "leak_free": "true",
           "words": 470,
+          "reading_minutes": 2
+        },
+        {
+          "file": "12_art_12_abschnitt_12_die_zentrale_registratur.md",
+          "index": 12,
+          "title": "Abschnitt 12: Die Zentrale Registratur",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "964",
+          "manual_ending_code": "Z-12-12",
+          "backend": "deepseek",
+          "genre": "Magischer_Realismus",
+          "leak_free": "true",
+          "words": 486,
           "reading_minutes": 2
         }
       ]
