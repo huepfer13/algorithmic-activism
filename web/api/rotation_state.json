@@ -832,7 +832,8 @@
     "r6:deepseek-chat:buch_032_the_glass_tribunal",
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_025_the_hold",
     "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_022_the_ledger_of_vanishing_rain",
-    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_008_flechtwerk_arkadien"
+    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_008_flechtwerk_arkadien",
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_038_the_weight_of_unspoken_rain"
   ],
   "runden": {
     "1": [
@@ -9572,6 +9573,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 6
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_038_the_weight_of_unspoken_rain",
+        "code": "Z-01-01",
+        "datei": "01_art_01_section_1_the_calibration_of_shadows.md",
+        "dauer_s": "580.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 6,
+        "tokens": "1980",
+        "versuche": "1",
+        "woerter": 355
       }
     ],
     "7": [

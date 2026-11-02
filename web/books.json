@@ -11599,10 +11599,12 @@
         "Ines Rook",
         "The Listener"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 550,
-      "reading_minutes": 3,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 905,
+      "reading_minutes": 5,
       "cover": null,
       "chapters": [
         {
@@ -11622,6 +11624,24 @@
           "leak_free": "",
           "words": 550,
           "reading_minutes": 3
+        },
+        {
+          "file": "01_art_01_section_1_the_calibration_of_shadows.md",
+          "index": 1,
+          "title": "Section 1: The Calibration of Shadows",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "580.1",
+          "jaccard_max": "0.156",
+          "tokens_generated": "1980",
+          "manual_ending_code": "Z-01-01",
+          "backend": "openrouter",
+          "genre": "Magical_Realism",
+          "leak_free": "true",
+          "words": 355,
+          "reading_minutes": 2
         }
       ]
     }
