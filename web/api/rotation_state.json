@@ -823,7 +823,9 @@
     "r3:deepseek-chat:buch_035_die_versteinerungsbehörde",
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_008_flechtwerk_arkadien",
     "r8:deepseek-chat:buch_035_die_versteinerungsbehörde",
-    "r2:deepseek-chat:buch_035_die_versteinerungsbehörde"
+    "r2:deepseek-chat:buch_035_die_versteinerungsbehörde",
+    "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_038_the_weight_of_unspoken_rain",
+    "r7:deepseek-chat:buch_013_aufzeichnungen_eines_archivars"
   ],
   "runden": {
     "1": [
@@ -9523,6 +9525,16 @@
         "tokens": "1179",
         "versuche": "1",
         "woerter": 315
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_038_the_weight_of_unspoken_rain",
+        "datei": null,
+        "dauer_s": 0.4,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 6
       }
     ],
     "7": [
@@ -10585,6 +10597,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 7
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_013_aufzeichnungen_eines_archivars",
+        "code": "T-20-20",
+        "datei": "20_art_20_abschnitt_20_die_dichtemessung.md",
+        "dauer_s": "9.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 7,
+        "tokens": "965",
+        "versuche": "1",
+        "woerter": 484
       }
     ],
     "8": [

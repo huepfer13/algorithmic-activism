@@ -4677,7 +4677,7 @@
         "Herr Brenner",
         "Frau Ostrow"
       ],
-      "chapter_count": 19,
+      "chapter_count": 20,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -4697,10 +4697,11 @@
         "art_16",
         "art_17",
         "art_18",
-        "art_19"
+        "art_19",
+        "art_20"
       ],
-      "words": 8694,
-      "reading_minutes": 43,
+      "words": 9178,
+      "reading_minutes": 46,
       "cover": null,
       "chapters": [
         {
@@ -5061,6 +5062,24 @@
           "genre": "Tagebuch",
           "leak_free": "true",
           "words": 344,
+          "reading_minutes": 2
+        },
+        {
+          "file": "20_art_20_abschnitt_20_die_dichtemessung.md",
+          "index": 20,
+          "title": "Abschnitt 20: Die Dichtemessung",
+          "article": "art_20",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "965",
+          "manual_ending_code": "T-20-20",
+          "backend": "deepseek",
+          "genre": "Tagebuch",
+          "leak_free": "true",
+          "words": 484,
           "reading_minutes": 2
         }
       ]
