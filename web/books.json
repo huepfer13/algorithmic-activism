@@ -5998,7 +5998,7 @@
       "pov": "third_person",
       "setting_summary": "Kontemplative Einsichten fuer unruhige Zeiten.",
       "characters": [],
-      "chapter_count": 20,
+      "chapter_count": 21,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -6019,10 +6019,11 @@
         "art_17",
         "art_18",
         "art_19",
-        "art_20"
+        "art_20",
+        "art_21"
       ],
-      "words": 6625,
-      "reading_minutes": 33,
+      "words": 7097,
+      "reading_minutes": 35,
       "cover": null,
       "chapters": [
         {
@@ -6401,6 +6402,24 @@
           "genre": "Lebensweisheiten",
           "leak_free": "true",
           "words": 475,
+          "reading_minutes": 2
+        },
+        {
+          "file": "21_art_21_abschnitt_21_die_stille_teilhabe.md",
+          "index": 21,
+          "title": "Abschnitt 21: Die stille Teilhabe",
+          "article": "art_21",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "890",
+          "manual_ending_code": "L-21-21",
+          "backend": "deepseek",
+          "genre": "Lebensweisheiten",
+          "leak_free": "true",
+          "words": 472,
           "reading_minutes": 2
         }
       ]

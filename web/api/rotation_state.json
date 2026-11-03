@@ -899,7 +899,9 @@
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_003_der_rat_der_tiere",
     "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_013_aufzeichnungen_eines_archivars",
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_038_the_weight_of_unspoken_rain",
-    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_004_neon_exil"
+    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_004_neon_exil",
+    "r9:nvidia/nemotron-3-super-120b-a12b:free:buch_014_der_unberechenbare_humor",
+    "r10:deepseek-chat:buch_016_faden_der_gelassenheit"
   ],
   "runden": {
     "1": [
@@ -2714,6 +2716,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 10
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_016_faden_der_gelassenheit",
+        "code": "L-21-21",
+        "datei": "21_art_21_abschnitt_21_die_stille_teilhabe.md",
+        "dauer_s": "7.8",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 10,
+        "tokens": "890",
+        "versuche": "1",
+        "woerter": 472
       }
     ],
     "2": [
@@ -12765,6 +12782,16 @@
         "tokens": "1440",
         "versuche": "1",
         "woerter": 297
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_014_der_unberechenbare_humor",
+        "datei": null,
+        "dauer_s": 0.4,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 9
       }
     ]
   }
