@@ -1299,7 +1299,7 @@
       "pov": "third_person",
       "setting_summary": "Im Schattennetz dokumentieren Ausgeschlossene, wie Rechte Stueck fuer Stueck verschwinden.",
       "characters": [],
-      "chapter_count": 16,
+      "chapter_count": 17,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1316,10 +1316,11 @@
         "art_13",
         "art_14",
         "art_15",
-        "art_16"
+        "art_16",
+        "art_17"
       ],
-      "words": 6704,
-      "reading_minutes": 34,
+      "words": 7036,
+      "reading_minutes": 35,
       "cover": null,
       "chapters": [
         {
@@ -1626,6 +1627,24 @@
           "genre": "SciFi_Dystopie",
           "leak_free": "true",
           "words": 426,
+          "reading_minutes": 2
+        },
+        {
+          "file": "17_art_17_abschnitt_17_die_enteignungsschwelle.md",
+          "index": 17,
+          "title": "Abschnitt 17: Die Enteignungsschwelle",
+          "article": "art_17",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "44.1",
+          "jaccard_max": "0.037",
+          "tokens_generated": "1233",
+          "manual_ending_code": "S-17-17",
+          "backend": "openrouter",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "true",
+          "words": 332,
           "reading_minutes": 2
         }
       ]
