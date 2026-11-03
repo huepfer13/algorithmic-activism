@@ -2021,7 +2021,7 @@
         "Vera",
         "Juno"
       ],
-      "chapter_count": 18,
+      "chapter_count": 19,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -2040,10 +2040,11 @@
         "art_15",
         "art_16",
         "art_17",
-        "art_18"
+        "art_18",
+        "art_19"
       ],
-      "words": 8143,
-      "reading_minutes": 41,
+      "words": 8440,
+      "reading_minutes": 42,
       "cover": null,
       "chapters": [
         {
@@ -2382,6 +2383,24 @@
           "jaccard_max": "0.0",
           "tokens_generated": "1674",
           "manual_ending_code": "D-18-18",
+          "backend": "openrouter",
+          "genre": "Parabel",
+          "leak_free": "true",
+          "words": 297,
+          "reading_minutes": 1
+        },
+        {
+          "file": "19_art_19_abschnitt_19_der_parameter_der_reichweit.md",
+          "index": 19,
+          "title": "Abschnitt 19: Der Parameter der Reichweite",
+          "article": "art_19",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "43.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1440",
+          "manual_ending_code": "D-19-19",
           "backend": "openrouter",
           "genre": "Parabel",
           "leak_free": "true",
