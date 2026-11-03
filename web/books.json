@@ -11982,12 +11982,13 @@
         "Tomás Ried",
         "Lotte Brandt"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 1660,
-      "reading_minutes": 8,
+      "words": 2163,
+      "reading_minutes": 11,
       "cover": null,
       "chapters": [
         {
@@ -12025,6 +12026,24 @@
           "leak_free": "true",
           "words": 476,
           "reading_minutes": 2
+        },
+        {
+          "file": "02_art_02_abschnitt_2_die_kalibrierung_der_schleus.md",
+          "index": 2,
+          "title": "Abschnitt 2: Die Kalibrierung der Schleuse",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "910",
+          "manual_ending_code": "B-02-02",
+          "backend": "deepseek",
+          "genre": "Briefroman",
+          "leak_free": "true",
+          "words": 503,
+          "reading_minutes": 3
         }
       ]
     }

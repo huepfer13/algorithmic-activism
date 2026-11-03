@@ -857,7 +857,8 @@
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_037_the_ledger_of_hollow_creek",
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_032_the_glass_tribunal",
     "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_027_das_haus_das_die_namen_fraß",
-    "r2:deepseek-chat:buch_039_die_depeschen_aus_block_sieben"
+    "r2:deepseek-chat:buch_039_die_depeschen_aus_block_sieben",
+    "r1:deepseek-chat:buch_039_die_depeschen_aus_block_sieben"
   ],
   "runden": {
     "1": [
@@ -2445,6 +2446,21 @@
         "tokens": "792",
         "versuche": "1",
         "woerter": 576
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_039_die_depeschen_aus_block_sieben",
+        "code": "B-02-02",
+        "datei": "02_art_02_abschnitt_2_die_kalibrierung_der_schleus.md",
+        "dauer_s": "7.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 1,
+        "tokens": "910",
+        "versuche": "1",
+        "woerter": 503
       }
     ],
     "10": [
