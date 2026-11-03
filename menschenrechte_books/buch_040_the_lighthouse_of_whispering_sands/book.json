@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_040_the_lighthouse_of_whispering_sands",
+  "title": "The Lighthouse of Whispering Sands",
+  "pov": "third_person",
+  "language": "EN",
+  "style": "Childrens_Book",
+  "setting_summary": "A small lighthouse village on a shrinking island where the tide rises a little higher every year, so space and fresh water grow scarce and everyone must share tightly. A strict keeper's ledger decides who gets water, food, and a place to sleep, and the lighthouse bell watches over every rule. The children discover that the island's old stories and the rights of every villager can help them find a fairer way to live before the sea takes the last dry ground.",
+  "characters": [
+    "Mira",
+    "Tobin",
+    "Old Sela",
+    "Pip",
+    "Captain Brann"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-03T23:05:07.282193+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

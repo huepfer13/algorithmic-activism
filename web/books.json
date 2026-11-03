@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 39,
+  "count": 40,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -12442,6 +12442,46 @@
           "genre": "Briefroman",
           "leak_free": "true",
           "words": 300,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_040_the_lighthouse_of_whispering_sands",
+      "title": "The Lighthouse of Whispering Sands",
+      "language": "EN",
+      "style": "Childrens_Book",
+      "pov": "third_person",
+      "setting_summary": "A small lighthouse village on a shrinking island where the tide rises a little higher every year, so space and fresh water grow scarce and everyone must share tightly. A strict keeper's ledger decides who gets water, food, and a place to sleep, and the lighthouse bell watches over every rule. The children discover that the island's old stories and the rights of every villager can help them find a fairer way to live before the sea takes the last dry ground.",
+      "characters": [
+        "Mira",
+        "Tobin",
+        "Old Sela",
+        "Pip",
+        "Captain Brann"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 407,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "4.9",
+          "jaccard_max": "",
+          "tokens_generated": "523",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Childrens_Book",
+          "leak_free": "",
+          "words": 407,
           "reading_minutes": 2
         }
       ]
