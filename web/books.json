@@ -903,7 +903,7 @@
       "pov": "third_person",
       "setting_summary": "Die Tiere des Schattenwaldes halten Rat und finden fuer jeden Streit eine gute Loesung.",
       "characters": [],
-      "chapter_count": 18,
+      "chapter_count": 19,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -922,10 +922,11 @@
         "art_15",
         "art_16",
         "art_17",
-        "art_18"
+        "art_18",
+        "art_19"
       ],
-      "words": 7204,
-      "reading_minutes": 36,
+      "words": 7559,
+      "reading_minutes": 38,
       "cover": null,
       "chapters": [
         {
@@ -1268,6 +1269,24 @@
           "genre": "Kinderbuch",
           "leak_free": "true",
           "words": 423,
+          "reading_minutes": 2
+        },
+        {
+          "file": "19_art_19_abschnitt_19_das_modul_der_freien_stimme.md",
+          "index": 19,
+          "title": "Abschnitt 19: Das Modul der freien Stimmen",
+          "article": "art_19",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.9",
+          "jaccard_max": "0.0",
+          "tokens_generated": "805",
+          "manual_ending_code": "K-19-19",
+          "backend": "deepseek",
+          "genre": "Kinderbuch",
+          "leak_free": "true",
+          "words": 355,
           "reading_minutes": 2
         }
       ]

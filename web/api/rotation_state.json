@@ -859,7 +859,8 @@
     "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_027_das_haus_das_die_namen_fraß",
     "r2:deepseek-chat:buch_039_die_depeschen_aus_block_sieben",
     "r1:deepseek-chat:buch_039_die_depeschen_aus_block_sieben",
-    "r7:deepseek-chat:buch_036_die_warteschlange_der_würde"
+    "r7:deepseek-chat:buch_036_die_warteschlange_der_würde",
+    "r8:deepseek-chat:buch_003_der_rat_der_tiere"
   ],
   "runden": {
     "1": [
@@ -11843,6 +11844,21 @@
         "tokens": "1106",
         "versuche": "1",
         "woerter": 349
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_003_der_rat_der_tiere",
+        "code": "K-19-19",
+        "datei": "19_art_19_abschnitt_19_das_modul_der_freien_stimme.md",
+        "dauer_s": "6.9",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 8,
+        "tokens": "805",
+        "versuche": "1",
+        "woerter": 355
       }
     ],
     "9": [
