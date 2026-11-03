@@ -4012,7 +4012,7 @@
         "Timo",
         "Der Verwalter"
       ],
-      "chapter_count": 18,
+      "chapter_count": 19,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -4031,10 +4031,11 @@
         "art_15",
         "art_16",
         "art_17",
-        "art_18"
+        "art_18",
+        "art_19"
       ],
-      "words": 8430,
-      "reading_minutes": 42,
+      "words": 8962,
+      "reading_minutes": 45,
       "cover": null,
       "chapters": [
         {
@@ -4377,6 +4378,24 @@
           "genre": "Gothic",
           "leak_free": "true",
           "words": 545,
+          "reading_minutes": 3
+        },
+        {
+          "file": "19_art_19_abschnitt_19_die_glaubensnische.md",
+          "index": 19,
+          "title": "Abschnitt 19: Die Glaubensnische",
+          "article": "art_19",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.0",
+          "jaccard_max": "0.05",
+          "tokens_generated": "978",
+          "manual_ending_code": "W-19-19",
+          "backend": "deepseek",
+          "genre": "Gothic",
+          "leak_free": "true",
+          "words": 532,
           "reading_minutes": 3
         }
       ]
