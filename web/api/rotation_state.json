@@ -863,7 +863,8 @@
     "r8:deepseek-chat:buch_003_der_rat_der_tiere",
     "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_037_the_ledger_of_hollow_creek",
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_026_the_ledger_of_ash_harbour",
-    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_031_die_kammer_der_sieben_stimmen"
+    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_031_die_kammer_der_sieben_stimmen",
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_038_the_weight_of_unspoken_rain"
   ],
   "runden": {
     "1": [
@@ -8481,6 +8482,21 @@
         "tokens": "827",
         "versuche": "3",
         "woerter": 385
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_038_the_weight_of_unspoken_rain",
+        "code": "Z-19-08",
+        "datei": "08_art_19_abschnitt_8_the_expression_parameter.md",
+        "dauer_s": "26.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 5,
+        "tokens": "1043",
+        "versuche": "1",
+        "woerter": 384
       }
     ],
     "6": [
