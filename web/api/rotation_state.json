@@ -876,7 +876,9 @@
     "r2:deepseek-chat:buch_037_the_ledger_of_hollow_creek",
     "r3:deepseek-chat:buch_038_the_weight_of_unspoken_rain",
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_004_neon_exil",
-    "r1:deepseek-chat:buch_036_die_warteschlange_der_würde"
+    "r1:deepseek-chat:buch_036_die_warteschlange_der_würde",
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_019_the_salt_diaries",
+    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_039_die_depeschen_aus_block_sieben"
   ],
   "runden": {
     "1": [
@@ -8594,6 +8596,16 @@
         "tokens": "2375",
         "versuche": "1",
         "woerter": 374
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_019_the_salt_diaries",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 5
       }
     ],
     "6": [
@@ -12050,6 +12062,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 8
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_039_die_depeschen_aus_block_sieben",
+        "code": "B-07-07",
+        "datei": "07_art_07_abschnitt_7_die_gleichheit_der_schadensf.md",
+        "dauer_s": "47.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 8,
+        "tokens": "1221",
+        "versuche": "1",
+        "woerter": 337
       }
     ],
     "9": [
