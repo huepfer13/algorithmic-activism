@@ -11903,7 +11903,7 @@
         "Ines Rook",
         "The Listener"
       ],
-      "chapter_count": 8,
+      "chapter_count": 9,
       "covered_articles": [
         "art_01",
         "art_03",
@@ -11912,10 +11912,11 @@
         "art_09",
         "art_12",
         "art_14",
-        "art_19"
+        "art_19",
+        "art_26"
       ],
-      "words": 4220,
-      "reading_minutes": 21,
+      "words": 4685,
+      "reading_minutes": 23,
       "cover": null,
       "chapters": [
         {
@@ -12078,6 +12079,24 @@
           "genre": "Magical_Realism",
           "leak_free": "true",
           "words": 384,
+          "reading_minutes": 2
+        },
+        {
+          "file": "09_art_26_abschnitt_9_the_calibration_curriculum.md",
+          "index": 9,
+          "title": "Abschnitt 9: The Calibration Curriculum",
+          "article": "art_26",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "638",
+          "manual_ending_code": "Z-26-09",
+          "backend": "deepseek",
+          "genre": "Magical_Realism",
+          "leak_free": "true",
+          "words": 465,
           "reading_minutes": 2
         }
       ]
