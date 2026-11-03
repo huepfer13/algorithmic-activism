@@ -1318,7 +1318,7 @@
       "pov": "third_person",
       "setting_summary": "Im Schattennetz dokumentieren Ausgeschlossene, wie Rechte Stueck fuer Stueck verschwinden.",
       "characters": [],
-      "chapter_count": 17,
+      "chapter_count": 18,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1336,10 +1336,11 @@
         "art_14",
         "art_15",
         "art_16",
-        "art_17"
+        "art_17",
+        "art_18"
       ],
-      "words": 7036,
-      "reading_minutes": 35,
+      "words": 7316,
+      "reading_minutes": 37,
       "cover": null,
       "chapters": [
         {
@@ -1665,6 +1666,24 @@
           "leak_free": "true",
           "words": 332,
           "reading_minutes": 2
+        },
+        {
+          "file": "18_art_18_abschnitt_18_die_glaubensvariable.md",
+          "index": 18,
+          "title": "Abschnitt 18: Die Glaubensvariable",
+          "article": "art_18",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "39.5",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1117",
+          "manual_ending_code": "S-18-18",
+          "backend": "openrouter",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "true",
+          "words": 280,
+          "reading_minutes": 1
         }
       ]
     },
