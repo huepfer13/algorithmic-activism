@@ -12077,15 +12077,16 @@
         "Tomás Ried",
         "Lotte Brandt"
       ],
-      "chapter_count": 4,
+      "chapter_count": 5,
       "covered_articles": [
         "art_01",
         "art_02",
         "art_03",
-        "art_04"
+        "art_04",
+        "art_05"
       ],
-      "words": 2827,
-      "reading_minutes": 14,
+      "words": 3201,
+      "reading_minutes": 16,
       "cover": null,
       "chapters": [
         {
@@ -12176,6 +12177,24 @@
           "genre": "Briefroman",
           "leak_free": "true",
           "words": 334,
+          "reading_minutes": 2
+        },
+        {
+          "file": "05_art_05_abschnitt_5_die_frequenz_der_grundwerte.md",
+          "index": 5,
+          "title": "Abschnitt 5: Die Frequenz der Grundwerte",
+          "article": "art_05",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "94.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "2375",
+          "manual_ending_code": "B-05-05",
+          "backend": "openrouter",
+          "genre": "Briefroman",
+          "leak_free": "true",
+          "words": 374,
           "reading_minutes": 2
         }
       ]

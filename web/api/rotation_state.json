@@ -868,7 +868,8 @@
     "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_038_the_weight_of_unspoken_rain",
     "r9:deepseek-chat:buch_011_das_haus_ohne_widerhall",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_039_die_depeschen_aus_block_sieben",
-    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_039_die_depeschen_aus_block_sieben"
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_039_die_depeschen_aus_block_sieben",
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_039_die_depeschen_aus_block_sieben"
   ],
   "runden": {
     "1": [
@@ -8531,6 +8532,21 @@
         "tokens": "1043",
         "versuche": "1",
         "woerter": 384
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_039_die_depeschen_aus_block_sieben",
+        "code": "B-05-05",
+        "datei": "05_art_05_abschnitt_5_die_frequenz_der_grundwerte.md",
+        "dauer_s": "94.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 5,
+        "tokens": "2375",
+        "versuche": "1",
+        "woerter": 374
       }
     ],
     "6": [
