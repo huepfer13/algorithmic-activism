@@ -878,7 +878,13 @@
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_004_neon_exil",
     "r1:deepseek-chat:buch_036_die_warteschlange_der_würde",
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_019_the_salt_diaries",
-    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_039_die_depeschen_aus_block_sieben"
+    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_039_die_depeschen_aus_block_sieben",
+    "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_037_the_ledger_of_hollow_creek",
+    "r8:deepseek-chat:buch_037_the_ledger_of_hollow_creek",
+    "r9:deepseek-chat:buch_018_rhymes_of_the_commons",
+    "r9:nvidia/nemotron-3-ultra-550b-a55b:free:buch_025_the_hold",
+    "r9:nvidia/nemotron-3-super-120b-a12b:free:buch_039_die_depeschen_aus_block_sieben",
+    "r10:deepseek-chat:buch_017_des_volkes_mund"
   ],
   "runden": {
     "1": [
@@ -2648,6 +2654,21 @@
         "tokens": "988",
         "versuche": "3",
         "woerter": 368
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_017_des_volkes_mund",
+        "code": "V-27-27",
+        "datei": "27_art_27_abschnitt_27_die_geteilte_hand.md",
+        "dauer_s": "9.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 10,
+        "tokens": "1117",
+        "versuche": "1",
+        "woerter": 537
       }
     ],
     "2": [
@@ -10003,6 +10024,16 @@
         "tokens": "684",
         "versuche": "1",
         "woerter": 497
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_037_the_ledger_of_hollow_creek",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 6
       }
     ],
     "7": [
@@ -12077,6 +12108,16 @@
         "tokens": "1221",
         "versuche": "1",
         "woerter": 337
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_037_the_ledger_of_hollow_creek",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 8
       }
     ],
     "9": [
@@ -12504,6 +12545,36 @@
         "tokens": "1072",
         "versuche": "1",
         "woerter": 301
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_018_rhymes_of_the_commons",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 9
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_025_the_hold",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 9
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_039_die_depeschen_aus_block_sieben",
+        "datei": null,
+        "dauer_s": 0.6,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 9
       }
     ]
   }

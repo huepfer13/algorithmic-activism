@@ -6356,7 +6356,7 @@
       "pov": "third_person",
       "setting_summary": "Etymologische Miniaturen zu gefluegelten Worten.",
       "characters": [],
-      "chapter_count": 26,
+      "chapter_count": 27,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -6383,10 +6383,11 @@
         "art_23",
         "art_24",
         "art_25",
-        "art_26"
+        "art_26",
+        "art_27"
       ],
-      "words": 9281,
-      "reading_minutes": 46,
+      "words": 9818,
+      "reading_minutes": 49,
       "cover": null,
       "chapters": [
         {
@@ -6874,6 +6875,24 @@
           "leak_free": "true",
           "words": 442,
           "reading_minutes": 2
+        },
+        {
+          "file": "27_art_27_abschnitt_27_die_geteilte_hand.md",
+          "index": 27,
+          "title": "Abschnitt 27: Die geteilte Hand",
+          "article": "art_27",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1117",
+          "manual_ending_code": "V-27-27",
+          "backend": "deepseek",
+          "genre": "Sprichwoerter",
+          "leak_free": "true",
+          "words": 537,
+          "reading_minutes": 3
         }
       ]
     },
