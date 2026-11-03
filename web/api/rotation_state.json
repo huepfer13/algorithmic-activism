@@ -869,7 +869,8 @@
     "r9:deepseek-chat:buch_011_das_haus_ohne_widerhall",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_039_die_depeschen_aus_block_sieben",
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_039_die_depeschen_aus_block_sieben",
-    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_039_die_depeschen_aus_block_sieben"
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_039_die_depeschen_aus_block_sieben",
+    "r7:deepseek-chat:buch_039_die_depeschen_aus_block_sieben"
   ],
   "runden": {
     "1": [
@@ -11096,6 +11097,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
         "runde": 7
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_039_die_depeschen_aus_block_sieben",
+        "code": "B-06-06",
+        "datei": "06_art_06_abschnitt_6_die_kalibrierung_der_rechtsf.md",
+        "dauer_s": "15.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 7,
+        "tokens": "997",
+        "versuche": "1",
+        "woerter": 534
       }
     ],
     "8": [
