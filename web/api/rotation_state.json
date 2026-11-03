@@ -867,7 +867,8 @@
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_038_the_weight_of_unspoken_rain",
     "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_038_the_weight_of_unspoken_rain",
     "r9:deepseek-chat:buch_011_das_haus_ohne_widerhall",
-    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_039_die_depeschen_aus_block_sieben"
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_039_die_depeschen_aus_block_sieben",
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_039_die_depeschen_aus_block_sieben"
   ],
   "runden": {
     "1": [
@@ -4149,6 +4150,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 2
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_039_die_depeschen_aus_block_sieben",
+        "code": "B-04-04",
+        "datei": "04_art_04_abschnitt_4_die_kalibrierung_der_leere.md",
+        "dauer_s": "106.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 2,
+        "tokens": "2591",
+        "versuche": "1",
+        "woerter": 334
       }
     ],
     "3": [
