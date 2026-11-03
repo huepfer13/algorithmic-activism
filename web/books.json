@@ -903,7 +903,7 @@
       "pov": "third_person",
       "setting_summary": "Die Tiere des Schattenwaldes halten Rat und finden fuer jeden Streit eine gute Loesung.",
       "characters": [],
-      "chapter_count": 19,
+      "chapter_count": 20,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -923,10 +923,11 @@
         "art_16",
         "art_17",
         "art_18",
-        "art_19"
+        "art_19",
+        "art_20"
       ],
-      "words": 7559,
-      "reading_minutes": 38,
+      "words": 7962,
+      "reading_minutes": 40,
       "cover": null,
       "chapters": [
         {
@@ -1287,6 +1288,24 @@
           "genre": "Kinderbuch",
           "leak_free": "true",
           "words": 355,
+          "reading_minutes": 2
+        },
+        {
+          "file": "20_art_20_abschnitt_20_das_modul_der_offenen_kreis.md",
+          "index": 20,
+          "title": "Abschnitt 20: Das Modul der offenen Kreise",
+          "article": "art_20",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "45.5",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1506",
+          "manual_ending_code": "K-20-20",
+          "backend": "openrouter",
+          "genre": "Kinderbuch",
+          "leak_free": "true",
+          "words": 403,
           "reading_minutes": 2
         }
       ]
