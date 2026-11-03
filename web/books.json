@@ -10096,7 +10096,7 @@
         "Tomás Ferreira",
         "Hanna Ostrowski"
       ],
-      "chapter_count": 16,
+      "chapter_count": 17,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -10113,10 +10113,11 @@
         "art_13",
         "art_14",
         "art_15",
-        "art_16"
+        "art_16",
+        "art_17"
       ],
-      "words": 7605,
-      "reading_minutes": 38,
+      "words": 8005,
+      "reading_minutes": 40,
       "cover": null,
       "chapters": [
         {
@@ -10423,6 +10424,24 @@
           "genre": "Gerichtsdrama",
           "leak_free": "true",
           "words": 447,
+          "reading_minutes": 2
+        },
+        {
+          "file": "17_art_17_abschnitt_17_der_parameter_der_eigentums.md",
+          "index": 17,
+          "title": "Abschnitt 17: Der Parameter der Eigentumskalibrierung",
+          "article": "art_17",
+          "ending_ok": "true",
+          "attempts": "2",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "66.3",
+          "jaccard_max": "0.031",
+          "tokens_generated": "1406",
+          "manual_ending_code": "H-17-17",
+          "backend": "openrouter",
+          "genre": "Gerichtsdrama",
+          "leak_free": "true",
+          "words": 400,
           "reading_minutes": 2
         }
       ]

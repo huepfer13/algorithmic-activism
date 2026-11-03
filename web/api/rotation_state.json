@@ -860,7 +860,10 @@
     "r2:deepseek-chat:buch_039_die_depeschen_aus_block_sieben",
     "r1:deepseek-chat:buch_039_die_depeschen_aus_block_sieben",
     "r7:deepseek-chat:buch_036_die_warteschlange_der_würde",
-    "r8:deepseek-chat:buch_003_der_rat_der_tiere"
+    "r8:deepseek-chat:buch_003_der_rat_der_tiere",
+    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_037_the_ledger_of_hollow_creek",
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_026_the_ledger_of_ash_harbour",
+    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_031_die_kammer_der_sieben_stimmen"
   ],
   "runden": {
     "1": [
@@ -4132,6 +4135,16 @@
         "tokens": "822",
         "versuche": "1",
         "woerter": 476
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_037_the_ledger_of_hollow_creek",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 2
       }
     ],
     "3": [
@@ -11007,6 +11020,16 @@
         "tokens": "1067",
         "versuche": "1",
         "woerter": 428
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_026_the_ledger_of_ash_harbour",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 7
       }
     ],
     "8": [
@@ -11859,6 +11882,21 @@
         "tokens": "805",
         "versuche": "1",
         "woerter": 355
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_031_die_kammer_der_sieben_stimmen",
+        "code": "H-17-17",
+        "datei": "17_art_17_abschnitt_17_der_parameter_der_eigentums.md",
+        "dauer_s": "66.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 8,
+        "tokens": "1406",
+        "versuche": "2",
+        "woerter": 400
       }
     ],
     "9": [
