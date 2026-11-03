@@ -1,0 +1,45 @@
+---
+book_id: "buch_039_die_depeschen_aus_block_sieben"
+chapter_index: 1
+chapter_title: "Abschnitt 1: Die Quittung im Papierschliff"
+article: "art_01"
+language: "DE"
+style: "Briefroman"
+pov: "first_person"
+previous_chapter_file: "00_prolog.md"
+manual_ending_ok: true
+manual_ending_attempts: 1
+manual_ending_code: "B-01-01"
+scene_condition: "SENSORIK_DRIFT"
+archive_note: ""
+model: "deepseek-chat"
+genre: "Briefroman"
+backend: "deepseek"
+duration_seconds: 8.0
+jaccard_max: 0.0
+tokens_generated: 822
+leak_free: true
+manual_ending_note: "Passed (Pflichtblock B-01-01)"
+---
+
+# Abschnitt 1: Die Quittung im Papierschliff
+
+Lotte,
+
+ich schreibe dir, obwohl du zwei Türen weiter sitzt und ich deine Schritte durch die Wand hören kann. Das ist der Punkt, an dem wir angekommen sind: Wir tippen einander Nachrichten, während unsere Knie sich unter demselben Tisch berühren könnten.
+
+Die Rohrpost ist verstopft. Ich habe es heute Morgen gemerkt, als ich die Wasserliste zur Messkammer schicken wollte und der Behälter nach zwanzig Sekunden zurückkam, ungeöffnet, mit einem Geräusch wie ein Husten. Ich habe die Relaiskontakte aufgeschraubt. Feiner Papierschliff liegt darin, grau und trocken wie Asche, als hätte jemand eine ganze Depesche durch die Leitung gemahlen. Ich habe den Schliff zwischen den Fingern zerrieben und gedacht: Das ist es. Das ist der Staub, aus dem unsere ganze Kommunikation besteht. Papier, das niemand mehr liest, weil es unterwegs zerfällt.
+
+Ilyas hat den Kaffee gebracht, wie ich es verlangt habe. Er hat die Tassen so hingestellt, dass zwischen ihm und Hanna zwei leere Plätze lagen, und Hanna hat die Tasse genommen und sich neben mich gesetzt, was eine kleine, stille Kriegserklärung war, die niemand kommentiert hat. Tomás hat die ganze Zeit auf seine Hände geschaut. Du hast die Frequenzanalyse auf den Tisch gelegt und gesagt: „Es ist eine Quittung. Und sie ist adressiert.“
+
+Das ist der Punkt, an dem ich nicht mehr weiterweiß, Lotte. Nicht die Tür. Nicht das Wasser. Die Adresse. Die Kontrollinstanz hat nach der Personenzahl gefragt und nach der Schleuse. Nicht nach unserer Lage. Nicht nach dem Träger. Nach der Schleuse. Als wäre das Einzige, was sie interessiert, ob wir noch eingesperrt sind oder schon draußen.
+
+Ich habe heute Nacht die Kalibrierung der Schleuse überprüft. Die Vorgabe ist alt, aus der Einrichtung, ein technischer Parameter, den niemand mehr hinterfragt: Jede Person, die die Schleuse passiert, wird auf ihre Grundwerte geprüft — Puls, Atmung, Gleichgewicht. Der Sensor hat gestern um 03:07 Uhr eine Passage registriert. Eine Person. Aber die Werte waren nicht die von dir, nicht die von Tomás, nicht die von Hanna, nicht die von Ilyas, und nicht meine. Die Werte waren niedriger. Kälter. Als wäre jemand durch die Schleuse gegangen, der nicht zu uns gehört.
+
+Ich habe die Pistolen im Zeitschloss gelassen. Die Lösungsmittel stehen jetzt in der Schleuse, hinter zwei Codes, und ich schlafe besser, seit ich weiß, dass das Einzige, was uns hier unten wirklich töten könnte, nicht mehr in Reichweite eines schlechten Abends liegt. Das ist keine Regel. Das ist nur Physik: Gefahren, die niemanden brauchen, gehören nicht dorthin, wo Menschen wohnen.
+
+Aber die Passage um 03:07 Uhr war keine Physik. Sie war eine Person.
+
+Antworte mir nicht mit einer Depesche. Antworte mir mit deinen Augen, wenn wir uns morgen in der Messkammer treffen. Und Lotte — bring die Kopfhörer mit. Ich will die Frequenz selbst hören, bevor ich glaube, dass da draußen jemand auf unsere Schleuse wartet.
+
+**[DEPESCHE: GELESEN | SIEGEL: B-01-01]**
