@@ -11476,7 +11476,7 @@
         "Herr Pfeil",
         "Frau Sander"
       ],
-      "chapter_count": 14,
+      "chapter_count": 15,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -11491,10 +11491,11 @@
         "art_11",
         "art_12",
         "art_13",
-        "art_14"
+        "art_14",
+        "art_15"
       ],
-      "words": 6314,
-      "reading_minutes": 32,
+      "words": 6772,
+      "reading_minutes": 34,
       "cover": null,
       "chapters": [
         {
@@ -11765,6 +11766,24 @@
           "genre": "Magischer_Realismus",
           "leak_free": "true",
           "words": 347,
+          "reading_minutes": 2
+        },
+        {
+          "file": "15_art_15_abschnitt_15_die_zentralisierung_der_gef.md",
+          "index": 15,
+          "title": "Abschnitt 15: Die Zentralisierung der Gefahrenquellen",
+          "article": "art_15",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "915",
+          "manual_ending_code": "Z-15-15",
+          "backend": "deepseek",
+          "genre": "Magischer_Realismus",
+          "leak_free": "true",
+          "words": 458,
           "reading_minutes": 2
         }
       ]
