@@ -937,7 +937,10 @@
     "r9:deepseek-chat:buch_004_neon_exil",
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_022_the_ledger_of_vanishing_rain",
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_040_the_lighthouse_of_whispering_sands",
-    "r8:deepseek-chat:buch_039_die_depeschen_aus_block_sieben"
+    "r8:deepseek-chat:buch_039_die_depeschen_aus_block_sieben",
+    "r3:deepseek-chat:buch_034_the_weight_of_water",
+    "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_039_die_depeschen_aus_block_sieben",
+    "r8:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren"
   ],
   "runden": {
     "1": [
@@ -5950,6 +5953,16 @@
         "exit": 1,
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 3
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_034_the_weight_of_water",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
         "runde": 3
       }
     ],
@@ -11649,6 +11662,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 7
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_039_die_depeschen_aus_block_sieben",
+        "datei": null,
+        "dauer_s": 0.3,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 7
       }
     ],
     "8": [
@@ -12676,6 +12699,21 @@
         "tokens": "859",
         "versuche": "1",
         "woerter": 456
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+        "code": "G-16-16",
+        "datei": "16_art_16_abschnitt_16_die_ehe_als_kollisionsprüfu.md",
+        "dauer_s": "9.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 8,
+        "tokens": "1130",
+        "versuche": "1",
+        "woerter": 517
       }
     ],
     "9": [

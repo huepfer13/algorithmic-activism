@@ -9536,7 +9536,7 @@
         "Mira Sandoval",
         "Herr Zwirbel"
       ],
-      "chapter_count": 15,
+      "chapter_count": 16,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -9552,10 +9552,11 @@
         "art_12",
         "art_13",
         "art_14",
-        "art_15"
+        "art_15",
+        "art_16"
       ],
-      "words": 7796,
-      "reading_minutes": 39,
+      "words": 8313,
+      "reading_minutes": 42,
       "cover": null,
       "chapters": [
         {
@@ -9845,6 +9846,24 @@
           "leak_free": "true",
           "words": 417,
           "reading_minutes": 2
+        },
+        {
+          "file": "16_art_16_abschnitt_16_die_ehe_als_kollisionsprüfu.md",
+          "index": 16,
+          "title": "Abschnitt 16: Die Ehe als Kollisionsprüfung",
+          "article": "art_16",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1130",
+          "manual_ending_code": "G-16-16",
+          "backend": "deepseek",
+          "genre": "Satire",
+          "leak_free": "true",
+          "words": 517,
+          "reading_minutes": 3
         }
       ]
     },
