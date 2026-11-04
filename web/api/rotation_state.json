@@ -940,7 +940,8 @@
     "r8:deepseek-chat:buch_039_die_depeschen_aus_block_sieben",
     "r3:deepseek-chat:buch_034_the_weight_of_water",
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_039_die_depeschen_aus_block_sieben",
-    "r8:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren"
+    "r8:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_027_das_haus_das_die_namen_fraß"
   ],
   "runden": {
     "1": [
@@ -10405,6 +10406,21 @@
         "tokens": "1123",
         "versuche": "1",
         "woerter": 342
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_027_das_haus_das_die_namen_fraß",
+        "code": "W-10-10",
+        "datei": "10_art_10_abschnitt_10_die_verfahrensanweisung.md",
+        "dauer_s": "55.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 6,
+        "tokens": "988",
+        "versuche": "1",
+        "woerter": 290
       }
     ],
     "7": [

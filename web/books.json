@@ -9324,7 +9324,7 @@
         "Tobias",
         "Die Stimme im Gebälk"
       ],
-      "chapter_count": 9,
+      "chapter_count": 10,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -9334,10 +9334,11 @@
         "art_06",
         "art_07",
         "art_08",
-        "art_09"
+        "art_09",
+        "art_10"
       ],
-      "words": 4074,
-      "reading_minutes": 20,
+      "words": 4364,
+      "reading_minutes": 22,
       "cover": null,
       "chapters": [
         {
@@ -9519,6 +9520,24 @@
           "leak_free": "true",
           "words": 349,
           "reading_minutes": 2
+        },
+        {
+          "file": "10_art_10_abschnitt_10_die_verfahrensanweisung.md",
+          "index": 10,
+          "title": "Abschnitt 10: Die Verfahrensanweisung",
+          "article": "art_10",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "55.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "988",
+          "manual_ending_code": "W-10-10",
+          "backend": "openrouter",
+          "genre": "Gothic",
+          "leak_free": "true",
+          "words": 290,
+          "reading_minutes": 1
         }
       ]
     },
