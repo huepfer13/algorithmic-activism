@@ -12381,7 +12381,7 @@
         "Tomás Ried",
         "Lotte Brandt"
       ],
-      "chapter_count": 9,
+      "chapter_count": 10,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -12391,10 +12391,11 @@
         "art_06",
         "art_07",
         "art_08",
-        "art_09"
+        "art_09",
+        "art_10"
       ],
-      "words": 4723,
-      "reading_minutes": 24,
+      "words": 5065,
+      "reading_minutes": 25,
       "cover": null,
       "chapters": [
         {
@@ -12575,6 +12576,24 @@
           "genre": "Briefroman",
           "leak_free": "true",
           "words": 351,
+          "reading_minutes": 2
+        },
+        {
+          "file": "10_art_10_abschnitt_10_die_verfahrensanweisung.md",
+          "index": 10,
+          "title": "Abschnitt 10: Die Verfahrensanweisung",
+          "article": "art_10",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "98.0",
+          "jaccard_max": "0.028",
+          "tokens_generated": "1123",
+          "manual_ending_code": "B-10-10",
+          "backend": "openrouter",
+          "genre": "Briefroman",
+          "leak_free": "true",
+          "words": 342,
           "reading_minutes": 2
         }
       ]
