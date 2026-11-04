@@ -911,7 +911,11 @@
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_037_the_ledger_of_hollow_creek",
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_032_the_glass_tribunal",
     "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_037_the_ledger_of_hollow_creek",
-    "r9:deepseek-chat:buch_014_der_unberechenbare_humor"
+    "r9:deepseek-chat:buch_014_der_unberechenbare_humor",
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_035_die_versteinerungsbehörde",
+    "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_038_the_weight_of_unspoken_rain",
+    "r4:deepseek-chat:buch_037_the_ledger_of_hollow_creek",
+    "r9:deepseek-chat:buch_009_depeschen_aus_dem_kordon"
   ],
   "runden": {
     "1": [
@@ -2538,6 +2542,16 @@
         "exit": 1,
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 1
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_035_die_versteinerungsbehörde",
+        "datei": null,
+        "dauer_s": 0.4,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 1
       }
     ],
@@ -5885,6 +5899,16 @@
         "tokens": "638",
         "versuche": "1",
         "woerter": 465
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_038_the_weight_of_unspoken_rain",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 3
       }
     ],
     "4": [
@@ -7362,6 +7386,16 @@
         "tokens": "640",
         "versuche": "1",
         "woerter": 468
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_037_the_ledger_of_hollow_creek",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 4
       }
     ],
     "5": [
@@ -12927,6 +12961,21 @@
         "tokens": "898",
         "versuche": "1",
         "woerter": 397
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_009_depeschen_aus_dem_kordon",
+        "code": "B-20-20",
+        "datei": "20_art_20_abschnitt_20_die_zwanzigste_frequenz.md",
+        "dauer_s": "7.9",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 9,
+        "tokens": "954",
+        "versuche": "1",
+        "woerter": 497
       }
     ]
   }

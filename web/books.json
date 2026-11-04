@@ -3246,7 +3246,7 @@
         "Nadia",
         "Kroll"
       ],
-      "chapter_count": 19,
+      "chapter_count": 20,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -3266,10 +3266,11 @@
         "art_16",
         "art_17",
         "art_18",
-        "art_19"
+        "art_19",
+        "art_20"
       ],
-      "words": 9205,
-      "reading_minutes": 46,
+      "words": 9702,
+      "reading_minutes": 49,
       "cover": null,
       "chapters": [
         {
@@ -3630,6 +3631,24 @@
           "genre": "Briefroman",
           "leak_free": "true",
           "words": 349,
+          "reading_minutes": 2
+        },
+        {
+          "file": "20_art_20_abschnitt_20_die_zwanzigste_frequenz.md",
+          "index": 20,
+          "title": "Abschnitt 20: Die zwanzigste Frequenz",
+          "article": "art_20",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.9",
+          "jaccard_max": "0.023",
+          "tokens_generated": "954",
+          "manual_ending_code": "B-20-20",
+          "backend": "deepseek",
+          "genre": "Briefroman",
+          "leak_free": "true",
+          "words": 497,
           "reading_minutes": 2
         }
       ]
