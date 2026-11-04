@@ -12536,13 +12536,14 @@
         "Pip",
         "Captain Brann"
       ],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 1243,
-      "reading_minutes": 6,
+      "words": 1558,
+      "reading_minutes": 8,
       "cover": null,
       "chapters": [
         {
@@ -12597,6 +12598,24 @@
           "genre": "Childrens_Book",
           "leak_free": "true",
           "words": 468,
+          "reading_minutes": 2
+        },
+        {
+          "file": "03_art_04_abschnitt_3_the_counting_light.md",
+          "index": 3,
+          "title": "Abschnitt 3: The Counting Light",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "28.8",
+          "jaccard_max": "0.154",
+          "tokens_generated": "978",
+          "manual_ending_code": "K-04-03",
+          "backend": "openrouter",
+          "genre": "Childrens_Book",
+          "leak_free": "true",
+          "words": 315,
           "reading_minutes": 2
         }
       ]

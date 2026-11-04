@@ -915,7 +915,8 @@
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_035_die_versteinerungsbehörde",
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_038_the_weight_of_unspoken_rain",
     "r4:deepseek-chat:buch_037_the_ledger_of_hollow_creek",
-    "r9:deepseek-chat:buch_009_depeschen_aus_dem_kordon"
+    "r9:deepseek-chat:buch_009_depeschen_aus_dem_kordon",
+    "r4:nvidia/nemotron-3-ultra-550b-a55b:free:buch_040_the_lighthouse_of_whispering_sands"
   ],
   "runden": {
     "1": [
@@ -7396,6 +7397,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "deepseek-chat",
         "runde": 4
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_040_the_lighthouse_of_whispering_sands",
+        "code": "K-04-03",
+        "datei": "03_art_04_abschnitt_3_the_counting_light.md",
+        "dauer_s": "28.8",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 4,
+        "tokens": "978",
+        "versuche": "1",
+        "woerter": 315
       }
     ],
     "5": [
