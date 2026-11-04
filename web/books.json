@@ -6432,7 +6432,7 @@
       "pov": "third_person",
       "setting_summary": "Etymologische Miniaturen zu gefluegelten Worten.",
       "characters": [],
-      "chapter_count": 27,
+      "chapter_count": 28,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -6460,10 +6460,11 @@
         "art_24",
         "art_25",
         "art_26",
-        "art_27"
+        "art_27",
+        "art_28"
       ],
-      "words": 9818,
-      "reading_minutes": 49,
+      "words": 10287,
+      "reading_minutes": 51,
       "cover": null,
       "chapters": [
         {
@@ -6969,6 +6970,24 @@
           "leak_free": "true",
           "words": 537,
           "reading_minutes": 3
+        },
+        {
+          "file": "28_art_28_abschnitt_28_die_geteilte_ordnung.md",
+          "index": 28,
+          "title": "Abschnitt 28: Die geteilte Ordnung",
+          "article": "art_28",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1038",
+          "manual_ending_code": "V-28-28",
+          "backend": "deepseek",
+          "genre": "Sprichwoerter",
+          "leak_free": "true",
+          "words": 469,
+          "reading_minutes": 2
         }
       ]
     },
