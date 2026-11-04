@@ -921,7 +921,8 @@
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_003_der_rat_der_tiere",
     "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_026_the_ledger_of_ash_harbour",
     "r9:deepseek-chat:buch_012_manifest_der_unantastbaren",
-    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_040_the_lighthouse_of_whispering_sands"
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_040_the_lighthouse_of_whispering_sands",
+    "r9:deepseek-chat:buch_030_die_wolkenschule_über_dem_marktplatz"
   ],
   "runden": {
     "1": [
@@ -13062,6 +13063,21 @@
         "tokens": "678",
         "versuche": "1",
         "woerter": 370
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_030_die_wolkenschule_über_dem_marktplatz",
+        "code": "K-16-16",
+        "datei": "16_art_16_abschnitt_16_der_sechzehnte_parameter.md",
+        "dauer_s": "8.7",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 9,
+        "tokens": "1046",
+        "versuche": "1",
+        "woerter": 514
       }
     ]
   }
