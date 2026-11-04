@@ -16,7 +16,7 @@
         "Nova",
         "Omicron"
       ],
-      "chapter_count": 24,
+      "chapter_count": 25,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -41,10 +41,11 @@
         "art_21",
         "art_22",
         "art_23",
+        "art_24",
         "art_26"
       ],
-      "words": 10707,
-      "reading_minutes": 54,
+      "words": 11054,
+      "reading_minutes": 55,
       "cover": null,
       "chapters": [
         {
@@ -495,6 +496,24 @@
           "genre": "Gerätehandbuch",
           "leak_free": "",
           "words": 368,
+          "reading_minutes": 2
+        },
+        {
+          "file": "25_art_24_abschnitt_25_kalibrierung_des_erholungs_.md",
+          "index": 25,
+          "title": "Abschnitt 25: Kalibrierung des Erholungs- und Freizeitparameters Art-24 sowie Instandsetzung der akustischen Dämpfungsfelder",
+          "article": "art_24",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "19.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "913",
+          "manual_ending_code": "E-24-25",
+          "backend": "deepseek",
+          "genre": "Gerätehandbuch",
+          "leak_free": "",
+          "words": 347,
           "reading_minutes": 2
         }
       ]
