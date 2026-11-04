@@ -941,7 +941,8 @@
     "r3:deepseek-chat:buch_034_the_weight_of_water",
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_039_die_depeschen_aus_block_sieben",
     "r8:deepseek-chat:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
-    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_027_das_haus_das_die_namen_fraß"
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_027_das_haus_das_die_namen_fraß",
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_040_the_lighthouse_of_whispering_sands"
   ],
   "runden": {
     "1": [
@@ -4388,6 +4389,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
         "runde": 2
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_040_the_lighthouse_of_whispering_sands",
+        "code": "K-12-06",
+        "datei": "06_art_12_abschnitt_6_the_dust_in_the_dial.md",
+        "dauer_s": "23.7",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 2,
+        "tokens": "887",
+        "versuche": "1",
+        "woerter": 299
       }
     ],
     "3": [
