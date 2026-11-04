@@ -12555,15 +12555,16 @@
         "Pip",
         "Captain Brann"
       ],
-      "chapter_count": 4,
+      "chapter_count": 5,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
-        "art_05"
+        "art_05",
+        "art_09"
       ],
-      "words": 1940,
-      "reading_minutes": 10,
+      "words": 2310,
+      "reading_minutes": 12,
       "cover": null,
       "chapters": [
         {
@@ -12654,6 +12655,24 @@
           "genre": "Childrens_Book",
           "leak_free": "true",
           "words": 382,
+          "reading_minutes": 2
+        },
+        {
+          "file": "05_art_09_abschnitt_5_the_whine_in_the_wire.md",
+          "index": 5,
+          "title": "Abschnitt 5: The Whine in the Wire",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "88.2",
+          "jaccard_max": "0.05",
+          "tokens_generated": "999",
+          "manual_ending_code": "K-09-05",
+          "backend": "openrouter",
+          "genre": "Childrens_Book",
+          "leak_free": "true",
+          "words": 370,
           "reading_minutes": 2
         }
       ]

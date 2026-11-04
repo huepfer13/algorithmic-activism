@@ -920,7 +920,8 @@
     "r6:deepseek-chat:buch_040_the_lighthouse_of_whispering_sands",
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_003_der_rat_der_tiere",
     "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_026_the_ledger_of_ash_harbour",
-    "r9:deepseek-chat:buch_012_manifest_der_unantastbaren"
+    "r9:deepseek-chat:buch_012_manifest_der_unantastbaren",
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_040_the_lighthouse_of_whispering_sands"
   ],
   "runden": {
     "1": [
@@ -8848,6 +8849,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 5
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_040_the_lighthouse_of_whispering_sands",
+        "code": "K-09-05",
+        "datei": "05_art_09_abschnitt_5_the_whine_in_the_wire.md",
+        "dauer_s": "88.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 5,
+        "tokens": "999",
+        "versuche": "1",
+        "woerter": 370
       }
     ],
     "6": [
