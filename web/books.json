@@ -12536,14 +12536,15 @@
         "Pip",
         "Captain Brann"
       ],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_03",
-        "art_04"
+        "art_04",
+        "art_05"
       ],
-      "words": 1558,
-      "reading_minutes": 8,
+      "words": 1940,
+      "reading_minutes": 10,
       "cover": null,
       "chapters": [
         {
@@ -12616,6 +12617,24 @@
           "genre": "Childrens_Book",
           "leak_free": "true",
           "words": 315,
+          "reading_minutes": 2
+        },
+        {
+          "file": "04_art_05_abschnitt_4_the_dripping_cold.md",
+          "index": 4,
+          "title": "Abschnitt 4: The Dripping Cold",
+          "article": "art_05",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.5",
+          "jaccard_max": "0.067",
+          "tokens_generated": "528",
+          "manual_ending_code": "K-05-04",
+          "backend": "deepseek",
+          "genre": "Childrens_Book",
+          "leak_free": "true",
+          "words": 382,
           "reading_minutes": 2
         }
       ]
