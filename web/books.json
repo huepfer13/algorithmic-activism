@@ -4503,7 +4503,7 @@
       "pov": "first_person",
       "setting_summary": "In einem unterirdischen Archivbunker, dem Sektor Neun, hausen die letzten freien Chronisten unter ständiger Überwachung durch die Obrigkeit. Ein Riss in der Betondecke lässt Wasser eindringen und markiert eine tickende Frist: In wenigen Wochen wird der Bunker geflutet, wenn niemand die Wahrheit nach außen trägt. Jeder ausgesprochene Satz kann Verhaftung, Folter oder Tod bedeuten – und doch muss gesprochen werden.",
       "characters": [],
-      "chapter_count": 18,
+      "chapter_count": 19,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -4522,10 +4522,11 @@
         "art_15",
         "art_16",
         "art_17",
-        "art_18"
+        "art_18",
+        "art_19"
       ],
-      "words": 6557,
-      "reading_minutes": 33,
+      "words": 6927,
+      "reading_minutes": 35,
       "cover": null,
       "chapters": [
         {
@@ -4868,6 +4869,24 @@
           "genre": "Manifest",
           "leak_free": "true",
           "words": 301,
+          "reading_minutes": 2
+        },
+        {
+          "file": "19_art_19_abschnitt_19_die_kalibrierung_der_offene.md",
+          "index": 19,
+          "title": "Abschnitt 19: Die Kalibrierung der offenen Frequenz",
+          "article": "art_19",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "678",
+          "manual_ending_code": "R-19-19",
+          "backend": "deepseek",
+          "genre": "Manifest",
+          "leak_free": "true",
+          "words": 370,
           "reading_minutes": 2
         }
       ]
