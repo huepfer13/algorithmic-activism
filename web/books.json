@@ -5301,7 +5301,7 @@
       "pov": "third_person",
       "setting_summary": "Kurzgeschichten und Szenen, in denen Humor den Ernstfall entlarvt.",
       "characters": [],
-      "chapter_count": 16,
+      "chapter_count": 17,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -5318,10 +5318,11 @@
         "art_13",
         "art_14",
         "art_15",
-        "art_16"
+        "art_16",
+        "art_17"
       ],
-      "words": 5796,
-      "reading_minutes": 29,
+      "words": 6193,
+      "reading_minutes": 31,
       "cover": null,
       "chapters": [
         {
@@ -5628,6 +5629,24 @@
           "genre": "Witzebuch",
           "leak_free": "true",
           "words": 439,
+          "reading_minutes": 2
+        },
+        {
+          "file": "17_art_17_abschnitt_17_die_sache_mit_dem_eigentum.md",
+          "index": 17,
+          "title": "Abschnitt 17: Die Sache mit dem Eigentum",
+          "article": "art_17",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.5",
+          "jaccard_max": "0.0",
+          "tokens_generated": "898",
+          "manual_ending_code": "J-17-17",
+          "backend": "deepseek",
+          "genre": "Witzebuch",
+          "leak_free": "true",
+          "words": 397,
           "reading_minutes": 2
         }
       ]
