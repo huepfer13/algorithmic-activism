@@ -12286,7 +12286,7 @@
         "Tomás Ried",
         "Lotte Brandt"
       ],
-      "chapter_count": 8,
+      "chapter_count": 9,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -12295,10 +12295,11 @@
         "art_05",
         "art_06",
         "art_07",
-        "art_08"
+        "art_08",
+        "art_09"
       ],
-      "words": 4372,
-      "reading_minutes": 22,
+      "words": 4723,
+      "reading_minutes": 24,
       "cover": null,
       "chapters": [
         {
@@ -12461,6 +12462,24 @@
           "genre": "Briefroman",
           "leak_free": "true",
           "words": 300,
+          "reading_minutes": 2
+        },
+        {
+          "file": "09_art_09_abschnitt_9_die_kalibrierung_des_gewahrs.md",
+          "index": 9,
+          "title": "Abschnitt 9: Die Kalibrierung des Gewahrsams",
+          "article": "art_09",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "693",
+          "manual_ending_code": "B-09-09",
+          "backend": "deepseek",
+          "genre": "Briefroman",
+          "leak_free": "true",
+          "words": 351,
           "reading_minutes": 2
         }
       ]
