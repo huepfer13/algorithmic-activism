@@ -1337,7 +1337,7 @@
       "pov": "third_person",
       "setting_summary": "Im Schattennetz dokumentieren Ausgeschlossene, wie Rechte Stueck fuer Stueck verschwinden.",
       "characters": [],
-      "chapter_count": 18,
+      "chapter_count": 19,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -1356,10 +1356,11 @@
         "art_15",
         "art_16",
         "art_17",
-        "art_18"
+        "art_18",
+        "art_19"
       ],
-      "words": 7316,
-      "reading_minutes": 37,
+      "words": 7783,
+      "reading_minutes": 39,
       "cover": null,
       "chapters": [
         {
@@ -1703,6 +1704,24 @@
           "leak_free": "true",
           "words": 280,
           "reading_minutes": 1
+        },
+        {
+          "file": "19_art_19_abschnitt_19_die_artikulationsschleuse.md",
+          "index": 19,
+          "title": "Abschnitt 19: Die Artikulationsschleuse",
+          "article": "art_19",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1018",
+          "manual_ending_code": "S-19-19",
+          "backend": "deepseek",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "true",
+          "words": 467,
+          "reading_minutes": 2
         }
       ]
     },

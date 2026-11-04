@@ -932,7 +932,9 @@
     "r4:deepseek-chat:buch_039_die_depeschen_aus_block_sieben",
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_036_die_warteschlange_der_würde",
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_021_the_bell_of_the_ninth_gate",
-    "r9:nvidia/nemotron-3-ultra-550b-a55b:free:buch_030_die_wolkenschule_über_dem_marktplatz"
+    "r9:nvidia/nemotron-3-ultra-550b-a55b:free:buch_030_die_wolkenschule_über_dem_marktplatz",
+    "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_023_the_gravity_room",
+    "r9:deepseek-chat:buch_004_neon_exil"
   ],
   "runden": {
     "1": [
@@ -12626,6 +12628,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 8
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_023_the_gravity_room",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 8
       }
     ],
     "9": [
@@ -13218,6 +13230,21 @@
         "tokens": "1294",
         "versuche": "1",
         "woerter": 368
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_004_neon_exil",
+        "code": "S-19-19",
+        "datei": "19_art_19_abschnitt_19_die_artikulationsschleuse.md",
+        "dauer_s": "9.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 9,
+        "tokens": "1018",
+        "versuche": "1",
+        "woerter": 467
       }
     ]
   }
