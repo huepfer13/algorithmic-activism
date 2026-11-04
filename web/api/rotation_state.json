@@ -945,7 +945,13 @@
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_040_the_lighthouse_of_whispering_sands",
     "r9:deepseek-chat:buch_037_the_ledger_of_hollow_creek",
     "r9:nvidia/nemotron-3-ultra-550b-a55b:free:buch_034_the_weight_of_water",
-    "r10:deepseek-chat:buch_035_die_versteinerungsbehörde"
+    "r10:deepseek-chat:buch_035_die_versteinerungsbehörde",
+    "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_039_die_depeschen_aus_block_sieben",
+    "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+    "r9:nvidia/nemotron-3-super-120b-a12b:free:buch_036_die_warteschlange_der_würde",
+    "r10:deepseek-chat:buch_022_the_ledger_of_vanishing_rain",
+    "r10:nvidia/nemotron-3-ultra-550b-a55b:free:buch_018_rhymes_of_the_commons",
+    "r10:nvidia/nemotron-3-super-120b-a12b:free:buch_006_das_gericht_vor_der_mauer"
   ],
   "runden": {
     "1": [
@@ -2820,6 +2826,36 @@
         "tokens": "915",
         "versuche": "1",
         "woerter": 458
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_022_the_ledger_of_vanishing_rain",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 10
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_018_rhymes_of_the_commons",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 10
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_006_das_gericht_vor_der_mauer",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 10
       }
     ],
     "2": [
@@ -10455,6 +10491,16 @@
         "tokens": "988",
         "versuche": "1",
         "woerter": 290
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_039_die_depeschen_aus_block_sieben",
+        "datei": null,
+        "dauer_s": 0.5,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 6
       }
     ],
     "7": [
@@ -12764,6 +12810,16 @@
         "tokens": "1130",
         "versuche": "1",
         "woerter": 517
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_028_das_amt_für_grundrechtsvollzugsverfahren",
+        "datei": null,
+        "dauer_s": 0.9,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 8
       }
     ],
     "9": [
@@ -13390,6 +13446,16 @@
         "exit": 1,
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 9
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_036_die_warteschlange_der_würde",
+        "datei": null,
+        "dauer_s": 0.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 9
       }
     ]

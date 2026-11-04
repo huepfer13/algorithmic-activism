@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 40,
+  "count": 41,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -12921,6 +12921,46 @@
           "leak_free": "true",
           "words": 299,
           "reading_minutes": 1
+        }
+      ]
+    },
+    {
+      "book_id": "buch_041_die_wasserwaage_von_ahrenfeld",
+      "title": "Die Wasserwaage von Ahrenfeld",
+      "language": "DE",
+      "style": "Solarpunk",
+      "pov": "third_person",
+      "setting_summary": "Ahrenfeld ist ein dezentrales Uferviertel auf einem alten Deichrücken, das sein Trinkwasser aus gemeinsam betriebenen Nebelkollektoren und Grauwasser-Kreisläufen gewinnt; ein trockener Sommer und ein sinkender Grundwasserspiegel setzen das Viertel unter Zeitdruck. Ein neu errichteter Speicherrat der Nachbarregion will Wasser gegen die Aufgabe der offenen Ratsversammlung tauschen und schickt eine Aufsicht, die jede Entnahme protokolliert. Zwischen Reparatur, Verhandlung und Misstrauen müssen die Bewohner entscheiden, wessen Stimme zählt, wenn das Wasser knapp wird.",
+      "characters": [
+        "Mira Solveig",
+        "Tomás Brandt",
+        "Juna Ekelöf",
+        "Kai Ostrom",
+        "Hedda Roth"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 506,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.8",
+          "jaccard_max": "",
+          "tokens_generated": "940",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Solarpunk",
+          "leak_free": "",
+          "words": 506,
+          "reading_minutes": 3
         }
       ]
     }

@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_041_die_wasserwaage_von_ahrenfeld",
+  "title": "Die Wasserwaage von Ahrenfeld",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Solarpunk",
+  "setting_summary": "Ahrenfeld ist ein dezentrales Uferviertel auf einem alten Deichrücken, das sein Trinkwasser aus gemeinsam betriebenen Nebelkollektoren und Grauwasser-Kreisläufen gewinnt; ein trockener Sommer und ein sinkender Grundwasserspiegel setzen das Viertel unter Zeitdruck. Ein neu errichteter Speicherrat der Nachbarregion will Wasser gegen die Aufgabe der offenen Ratsversammlung tauschen und schickt eine Aufsicht, die jede Entnahme protokolliert. Zwischen Reparatur, Verhandlung und Misstrauen müssen die Bewohner entscheiden, wessen Stimme zählt, wenn das Wasser knapp wird.",
+  "characters": [
+    "Mira Solveig",
+    "Tomás Brandt",
+    "Juna Ekelöf",
+    "Kai Ostrom",
+    "Hedda Roth"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-04T23:05:18.391205+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
