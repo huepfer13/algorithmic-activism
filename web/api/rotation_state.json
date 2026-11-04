@@ -929,7 +929,8 @@
     "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_039_die_depeschen_aus_block_sieben",
     "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_004_neon_exil",
     "r9:deepseek-chat:buch_001_das_büro_der_unendlichkeit",
-    "r4:deepseek-chat:buch_039_die_depeschen_aus_block_sieben"
+    "r4:deepseek-chat:buch_039_die_depeschen_aus_block_sieben",
+    "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_036_die_warteschlange_der_würde"
   ],
   "runden": {
     "1": [
@@ -8907,6 +8908,21 @@
         "tokens": "999",
         "versuche": "1",
         "woerter": 370
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_036_die_warteschlange_der_würde",
+        "code": "J-13-13",
+        "datei": "13_art_13_abschnitt_13_die_bewegung_als_kalibrierf.md",
+        "dauer_s": "63.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 5,
+        "tokens": "1473",
+        "versuche": "1",
+        "woerter": 376
       }
     ],
     "6": [
