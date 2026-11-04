@@ -12460,12 +12460,13 @@
         "Pip",
         "Captain Brann"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_03"
       ],
-      "words": 775,
-      "reading_minutes": 4,
+      "words": 1243,
+      "reading_minutes": 6,
       "cover": null,
       "chapters": [
         {
@@ -12502,6 +12503,24 @@
           "genre": "Childrens_Book",
           "leak_free": "true",
           "words": 368,
+          "reading_minutes": 2
+        },
+        {
+          "file": "02_art_03_abschnitt_2_the_registry_boat.md",
+          "index": 2,
+          "title": "Abschnitt 2: The Registry Boat",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.0",
+          "jaccard_max": "0.062",
+          "tokens_generated": "640",
+          "manual_ending_code": "K-03-02",
+          "backend": "deepseek",
+          "genre": "Childrens_Book",
+          "leak_free": "true",
+          "words": 468,
           "reading_minutes": 2
         }
       ]
