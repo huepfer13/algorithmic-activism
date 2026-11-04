@@ -12457,7 +12457,7 @@
         "Tomás Ried",
         "Lotte Brandt"
       ],
-      "chapter_count": 11,
+      "chapter_count": 12,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -12469,10 +12469,11 @@
         "art_08",
         "art_09",
         "art_10",
-        "art_11"
+        "art_11",
+        "art_12"
       ],
-      "words": 5504,
-      "reading_minutes": 28,
+      "words": 5960,
+      "reading_minutes": 30,
       "cover": null,
       "chapters": [
         {
@@ -12689,6 +12690,24 @@
           "genre": "Briefroman",
           "leak_free": "true",
           "words": 439,
+          "reading_minutes": 2
+        },
+        {
+          "file": "12_art_12_abschnitt_12_die_rückseite_der_verfahren.md",
+          "index": 12,
+          "title": "Abschnitt 12: Die Rückseite der Verfahrensanweisung",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "859",
+          "manual_ending_code": "B-12-12",
+          "backend": "deepseek",
+          "genre": "Briefroman",
+          "leak_free": "true",
+          "words": 456,
           "reading_minutes": 2
         }
       ]

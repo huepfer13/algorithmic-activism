@@ -934,7 +934,10 @@
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_021_the_bell_of_the_ninth_gate",
     "r9:nvidia/nemotron-3-ultra-550b-a55b:free:buch_030_die_wolkenschule_über_dem_marktplatz",
     "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_023_the_gravity_room",
-    "r9:deepseek-chat:buch_004_neon_exil"
+    "r9:deepseek-chat:buch_004_neon_exil",
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_022_the_ledger_of_vanishing_rain",
+    "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_040_the_lighthouse_of_whispering_sands",
+    "r8:deepseek-chat:buch_039_die_depeschen_aus_block_sieben"
   ],
   "runden": {
     "1": [
@@ -11626,6 +11629,26 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
         "runde": 7
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_022_the_ledger_of_vanishing_rain",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 7
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_040_the_lighthouse_of_whispering_sands",
+        "datei": null,
+        "dauer_s": 0.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 7
       }
     ],
     "8": [
@@ -12638,6 +12661,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 8
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_039_die_depeschen_aus_block_sieben",
+        "code": "B-12-12",
+        "datei": "12_art_12_abschnitt_12_die_rückseite_der_verfahren.md",
+        "dauer_s": "7.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 8,
+        "tokens": "859",
+        "versuche": "1",
+        "woerter": 456
       }
     ],
     "9": [
