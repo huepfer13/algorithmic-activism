@@ -12460,10 +12460,12 @@
         "Pip",
         "Captain Brann"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 407,
-      "reading_minutes": 2,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 775,
+      "reading_minutes": 4,
       "cover": null,
       "chapters": [
         {
@@ -12482,6 +12484,24 @@
           "genre": "Childrens_Book",
           "leak_free": "",
           "words": 407,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_01_abschnitt_1_the_bell_and_the_dust.md",
+          "index": 1,
+          "title": "Abschnitt 1: The Bell and the Dust",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.0",
+          "jaccard_max": "0.267",
+          "tokens_generated": "481",
+          "manual_ending_code": "K-01-01",
+          "backend": "deepseek",
+          "genre": "Childrens_Book",
+          "leak_free": "true",
+          "words": 368,
           "reading_minutes": 2
         }
       ]

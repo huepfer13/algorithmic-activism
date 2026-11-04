@@ -901,7 +901,8 @@
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_038_the_weight_of_unspoken_rain",
     "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_004_neon_exil",
     "r9:nvidia/nemotron-3-super-120b-a12b:free:buch_014_der_unberechenbare_humor",
-    "r10:deepseek-chat:buch_016_faden_der_gelassenheit"
+    "r10:deepseek-chat:buch_016_faden_der_gelassenheit",
+    "r2:deepseek-chat:buch_040_the_lighthouse_of_whispering_sands"
   ],
   "runden": {
     "1": [
@@ -4283,6 +4284,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "deepseek-chat",
         "runde": 2
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_040_the_lighthouse_of_whispering_sands",
+        "code": "K-01-01",
+        "datei": "01_art_01_abschnitt_1_the_bell_and_the_dust.md",
+        "dauer_s": "5.0",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 2,
+        "tokens": "481",
+        "versuche": "1",
+        "woerter": 368
       }
     ],
     "3": [
