@@ -6055,7 +6055,7 @@
       "pov": "third_person",
       "setting_summary": "Kontemplative Einsichten fuer unruhige Zeiten.",
       "characters": [],
-      "chapter_count": 21,
+      "chapter_count": 22,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -6077,10 +6077,11 @@
         "art_18",
         "art_19",
         "art_20",
-        "art_21"
+        "art_21",
+        "art_22"
       ],
-      "words": 7097,
-      "reading_minutes": 35,
+      "words": 7477,
+      "reading_minutes": 37,
       "cover": null,
       "chapters": [
         {
@@ -6477,6 +6478,24 @@
           "genre": "Lebensweisheiten",
           "leak_free": "true",
           "words": 472,
+          "reading_minutes": 2
+        },
+        {
+          "file": "22_art_22_abschnitt_22_die_zentrale_sicherung.md",
+          "index": 22,
+          "title": "Abschnitt 22: Die zentrale Sicherung",
+          "article": "art_22",
+          "ending_ok": "true",
+          "attempts": "2",
+          "model": "deepseek-chat",
+          "duration_seconds": "14.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "759",
+          "manual_ending_code": "L-22-22",
+          "backend": "deepseek",
+          "genre": "Lebensweisheiten",
+          "leak_free": "true",
+          "words": 380,
           "reading_minutes": 2
         }
       ]

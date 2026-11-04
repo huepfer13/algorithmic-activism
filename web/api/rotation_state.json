@@ -922,7 +922,9 @@
     "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_026_the_ledger_of_ash_harbour",
     "r9:deepseek-chat:buch_012_manifest_der_unantastbaren",
     "r5:nvidia/nemotron-3-ultra-550b-a55b:free:buch_040_the_lighthouse_of_whispering_sands",
-    "r9:deepseek-chat:buch_030_die_wolkenschule_über_dem_marktplatz"
+    "r9:deepseek-chat:buch_030_die_wolkenschule_über_dem_marktplatz",
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_040_the_lighthouse_of_whispering_sands",
+    "r8:deepseek-chat:buch_016_faden_der_gelassenheit"
   ],
   "runden": {
     "1": [
@@ -2556,6 +2558,16 @@
         "buch": "buch_035_die_versteinerungsbehörde",
         "datei": null,
         "dauer_s": 0.4,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 1
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_040_the_lighthouse_of_whispering_sands",
+        "datei": null,
+        "dauer_s": 0.1,
         "exit": 1,
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
@@ -12516,6 +12528,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 8
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_016_faden_der_gelassenheit",
+        "code": "L-22-22",
+        "datei": "22_art_22_abschnitt_22_die_zentrale_sicherung.md",
+        "dauer_s": "14.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 8,
+        "tokens": "759",
+        "versuche": "2",
+        "woerter": 380
       }
     ],
     "9": [
