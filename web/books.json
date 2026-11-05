@@ -5453,7 +5453,7 @@
       "pov": "third_person",
       "setting_summary": "Kurzgeschichten und Szenen, in denen Humor den Ernstfall entlarvt.",
       "characters": [],
-      "chapter_count": 17,
+      "chapter_count": 18,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -5471,10 +5471,11 @@
         "art_14",
         "art_15",
         "art_16",
-        "art_17"
+        "art_17",
+        "art_18"
       ],
-      "words": 6193,
-      "reading_minutes": 31,
+      "words": 6527,
+      "reading_minutes": 33,
       "cover": null,
       "chapters": [
         {
@@ -5799,6 +5800,24 @@
           "genre": "Witzebuch",
           "leak_free": "true",
           "words": 397,
+          "reading_minutes": 2
+        },
+        {
+          "file": "18_art_18_abschnitt_18_die_sache_mit_dem_gewissen.md",
+          "index": 18,
+          "title": "Abschnitt 18: Die Sache mit dem Gewissen",
+          "article": "art_18",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "58.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1259",
+          "manual_ending_code": "J-18-18",
+          "backend": "openrouter",
+          "genre": "Witzebuch",
+          "leak_free": "true",
+          "words": 334,
           "reading_minutes": 2
         }
       ]

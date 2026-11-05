@@ -991,7 +991,10 @@
     "r3:nvidia/nemotron-3-super-120b-a12b:free:buch_039_die_depeschen_aus_block_sieben",
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_041_die_wasserwaage_von_ahrenfeld",
     "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_012_manifest_der_unantastbaren",
-    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_041_die_wasserwaage_von_ahrenfeld"
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_041_die_wasserwaage_von_ahrenfeld",
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_040_the_lighthouse_of_whispering_sands",
+    "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_027_das_haus_das_die_namen_fraß",
+    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_014_der_unberechenbare_humor"
   ],
   "runden": {
     "1": [
@@ -12098,6 +12101,26 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 7
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_040_the_lighthouse_of_whispering_sands",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 7
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_027_das_haus_das_die_namen_fraß",
+        "datei": null,
+        "dauer_s": 0.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 7
       }
     ],
     "8": [
@@ -13235,6 +13258,21 @@
         "tokens": "852",
         "versuche": "1",
         "woerter": 250
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_014_der_unberechenbare_humor",
+        "code": "J-18-18",
+        "datei": "18_art_18_abschnitt_18_die_sache_mit_dem_gewissen.md",
+        "dauer_s": "58.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 8,
+        "tokens": "1259",
+        "versuche": "1",
+        "woerter": 334
       }
     ],
     "9": [
