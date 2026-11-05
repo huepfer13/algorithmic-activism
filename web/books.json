@@ -12840,7 +12840,7 @@
         "Pip",
         "Captain Brann"
       ],
-      "chapter_count": 7,
+      "chapter_count": 8,
       "covered_articles": [
         "art_01",
         "art_03",
@@ -12848,10 +12848,11 @@
         "art_05",
         "art_09",
         "art_12",
-        "art_14"
+        "art_14",
+        "art_19"
       ],
-      "words": 2970,
-      "reading_minutes": 15,
+      "words": 3271,
+      "reading_minutes": 16,
       "cover": null,
       "chapters": [
         {
@@ -12996,6 +12997,24 @@
           "genre": "Childrens_Book",
           "leak_free": "true",
           "words": 361,
+          "reading_minutes": 2
+        },
+        {
+          "file": "08_art_19_abschnitt_8_the_frequency_of_voice.md",
+          "index": 8,
+          "title": "Abschnitt 8: The Frequency of Voice",
+          "article": "art_19",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "50.5",
+          "jaccard_max": "0.071",
+          "tokens_generated": "1700",
+          "manual_ending_code": "K-19-08",
+          "backend": "openrouter",
+          "genre": "Childrens_Book",
+          "leak_free": "true",
+          "words": 301,
           "reading_minutes": 2
         }
       ]

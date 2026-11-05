@@ -967,7 +967,10 @@
     "r3:deepseek-chat:buch_041_die_wasserwaage_von_ahrenfeld",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_040_the_lighthouse_of_whispering_sands",
     "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_011_das_haus_ohne_widerhall",
-    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_041_die_wasserwaage_von_ahrenfeld"
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_041_die_wasserwaage_von_ahrenfeld",
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_041_die_wasserwaage_von_ahrenfeld",
+    "r5:deepseek-chat:buch_038_the_weight_of_unspoken_rain",
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_040_the_lighthouse_of_whispering_sands"
   ],
   "runden": {
     "1": [
@@ -2611,6 +2614,16 @@
         "buch": "buch_040_the_lighthouse_of_whispering_sands",
         "datei": null,
         "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 1
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_041_die_wasserwaage_von_ahrenfeld",
+        "datei": null,
+        "dauer_s": 0.3,
         "exit": 1,
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
@@ -9120,6 +9133,16 @@
         "tokens": "1473",
         "versuche": "1",
         "woerter": 376
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_038_the_weight_of_unspoken_rain",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 5
       }
     ],
     "6": [
@@ -10607,6 +10630,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 6
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_040_the_lighthouse_of_whispering_sands",
+        "code": "K-19-08",
+        "datei": "08_art_19_abschnitt_8_the_frequency_of_voice.md",
+        "dauer_s": "50.5",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 6,
+        "tokens": "1700",
+        "versuche": "1",
+        "woerter": 301
       }
     ],
     "7": [
