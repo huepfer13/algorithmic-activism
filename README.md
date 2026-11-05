@@ -1,86 +1,88 @@
 # Algorithmic Activism
 
-> **Live-Reader:** https://huepfer13.github.io/algorithmic-activism/  ·  **Dataset:** https://huggingface.co/datasets/hardtoneselector/algorithmic-activism-corpus
+> **Live reader:** https://huepfer13.github.io/algorithmic-activism/  ·  **Dataset:** https://huggingface.co/datasets/hardtoneselector/algorithmic-activism-corpus
 >
 > [![Deploy Reader](https://github.com/huepfer13/algorithmic-activism/actions/workflows/pages.yml/badge.svg)](https://github.com/huepfer13/algorithmic-activism/actions/workflows/pages.yml) ![Code: MIT](https://img.shields.io/badge/code-MIT-blue.svg) ![Data: CC-BY 4.0](https://img.shields.io/badge/data-CC--BY%204.0-lightgrey.svg) ![HF Dataset](https://img.shields.io/badge/HuggingFace-dataset-yellow.svg)
+>
+> **Languages:** English (this file) · [Deutsch](README.de.md)
 
+A modular, autonomous, self-verifying system for the continuous synthesis of ethical narratives grounded in the Universal Declaration of Human Rights (UDHR).
 
-Ein modulares, autonomes und sich selbst verifizierendes System zur kontinuierlichen Synthese ethischer Narrative auf Basis der Allgemeinen Erklärung der Menschenrechte (UDHR).
+## Core principles
 
-## Kernprinzipien
-
-- **Zero-Dependency Core:** Ausführbar mit reinem Python 3.10+ ohne zwingende Drittbibliotheken.
-- **Kanonischer Korpus (`articles/`):** Vollständige Entkopplung der UN-Originaltexte mit Provenienz-Metadaten und Revisionssicherheit (`sync_udhr.py`).
-- **Harm Reduction Guardrail:** Organische Verankerung des Schutzes vor tödlichen Gefahrenquellen (Zero-Home-Storage) ohne wörtliche Floskeln oder aufgesetzte Moralschlüsse.
-- **Autonomer Daemon:** Kontinuierliche Synthese mit dynamischer CPU-Lastüberwachung (`check_system_load`) und Cooldown-Schutz.
-- **MCP-Orchestrierung:** Integrierter Zero-Dependency JSON-RPC MCP Server (`mcp_server.py`) zur Prozesssteuerung und Korpusanalyse durch autonome Agenten.
+- **Zero-dependency core:** runs on plain Python 3.10+ with no mandatory third-party packages.
+- **Canonical corpus (`articles/`):** UN source texts fully decoupled from generation, with provenance metadata and revision safety (`sync_udhr.py`).
+- **Harm-reduction guardrail:** protection against lethal hazards is embedded organically (zero home storage) — no boilerplate phrases, no appended moral conclusions.
+- **Autonomous daemon:** continuous synthesis with live CPU load monitoring (`check_system_load`) and cooldown protection.
+- **MCP orchestration:** a built-in zero-dependency JSON-RPC MCP server (`mcp_server.py`) for process control and corpus analysis by autonomous agents.
 
 ---
 
-## Für AI-Forscher, Entwickler & Compute-Sponsoren
+## For AI researchers, developers and compute sponsors
 
-Dieses Repository generiert einen **qualitativ kuratierten, synthetischen Datensatz** für Alignment, Constitutional AI und Fine-Tuning:
+This repository generates a **curated synthetic dataset** for alignment, constitutional AI and fine-tuning:
 
-- **Ethisches Grounding:** Jedes Narrativ ist strikt an einen kanonischen UN-Artikel gekoppelt und durchläuft ein harm-reduction Audit.
-- **Provenienz je Dokument:** striktes YAML-Frontmatter mit `article`, `style`, `language`, `model`, `created_at`, `approx_words` und `guardrail_audit` (passed/status) — maschinell filterbar.
-- **DPO / RLHF:** abgelehnte Texte wandern nach `quarantine/` statt in den Korpus (chosen = `guardrail_audit.passed: true`, rejected = Quarantäne-Eintrag). **Ehrlich dazu:** der Rejected-Ast ist implementiert, aber derzeit **leer** (0 verworfene Texte) — es werden hier keine Präferenzpaare behauptet, die es noch nicht gibt. Mit dem Harm-Reduction-Audit als heuristischem Filter ist das ein wachsender, kein fertiger Bestand.
-- **Dataset Export:** Export in standardisiertes JSONL (Alpaca / Hugging-Face-Format) ohne Abhängigkeiten:
+- **Ethical grounding:** every narrative is strictly bound to one canonical UN article and passes a harm-reduction audit.
+- **Per-document provenance:** strict YAML front matter with `article`, `style`, `language`, `model`, `created_at`, `approx_words` and `guardrail_audit` (passed/status) — machine filterable.
+- **DPO / RLHF:** rejected texts go to `quarantine/` instead of the corpus (chosen = `guardrail_audit.passed: true`, rejected = quarantine entry). **Stated honestly:** the rejected branch is implemented but currently **empty** (0 rejected texts) — no preference pairs are claimed that do not exist yet. With the harm-reduction audit as a heuristic filter this is a growing, not a finished, asset.
+- **Dataset export:** export to standardised JSONL (Alpaca / Hugging Face format) without dependencies:
 
   ```bash
-  python3 export_dataset.py        # schreibt dataset.jsonl (ein JSON-Objekt pro Zeile)
+  python3 export_dataset.py        # writes dataset.jsonl (one JSON object per line)
   ```
 
-  Felder je Zeile: `instruction`, `input` (Artikel-ID), `output` (Erzähltext), `meta` (vollständiges Frontmatter).
-- **Snapshot im Repo:** `datasets/` enthält datierte Exporte (z. B. `datasets/corpus-2026-10-09.jsonl`) für alle, die keinen laufenden Daemon haben.
-- **Lizenzierung:** Code unter **MIT** (siehe `LICENSE`), die generierten Texte und der Korpus unter **CC-BY 4.0** (siehe `datasets/LICENSE`) - Namensnennung genuegt, kommerzielle Nutzung (auch Modelltraining/Fine-Tuning) ausdruecklich erlaubt.
+  Fields per line: `instruction`, `input` (article ID), `output` (narrative text), `meta` (full front matter).
+- **Snapshots in the repo:** `datasets/` holds dated exports (e.g. `datasets/corpus-2026-10-09.jsonl`) for anyone without a running daemon.
+- **Licensing:** code under **MIT** (see `LICENSE`), generated texts and the corpus under **CC-BY 4.0** (see `datasets/LICENSE`) — attribution is sufficient, commercial use (including model training and fine-tuning) is explicitly permitted.
 
-### 🤝 Call for Compute & Sponsorship
+### 🤝 Call for compute & sponsorship
 
-Um den Korpus über alle 30 UN-Artikel, mehrere Sprachräume und Erzählstile hinweg im größeren Maßstab zu synthetisieren, sind Rechenzeit- und API-Beiträge willkommen:
+Synthesising the corpus across all 30 UN articles, several language spaces and narrative styles at scale requires compute and API contributions:
 
-- **Lokale / dezentrale Nodes:** Betreiber von vLLM- oder Ollama-Endpunkten.
-- **Cloud Grants / Tokens:** Inferenz-Kapazitäten (Gemini, Claude, OpenAI oder Open-Weight-Inferenz).
-- **Kontakt:** Issues oder PRs im Repository.
+- **Local / decentralised nodes:** operators of vLLM or Ollama endpoints.
+- **Cloud grants / tokens:** inference capacity (Gemini, Claude, OpenAI or open-weight inference).
+- **Contact:** issues or pull requests in this repository.
 
 ---
 
-## Architektur
+## Architecture
 
 ```text
-├── articles/             # Kanonischer Korpus nach UN OHCHR (DE / EN)
-├── backends/             # Plugin-System (offline, ollama, gemini)
-├── locales/              # Sprach- & Stil-Definitionen (DE, EN)
-├── menschenrechte_tales/ # Validierte Narrative mit YAML-Frontmatter
-├── menschenrechte_books/ # Fortlaufende Bände (book.json + Kapitel)
-├── quarantine/           # Durch Audit abgelehnte Texte (DPO-Basis)
-├── datasets/             # Datierte dataset.jsonl-Snapshots
-├── config.py             # Zero-Dependency .env Loader & Setter
-├── generate_pipeline.py  # Haupt-Pipeline mit Daemon, Lastwächter & Audit
-├── export_dataset.py     # JSONL-Dataset Exporter
-├── scripts/              # sync_corpus.sh (kontrollierter Batch-Push), build_books_index.py (Index/API)
-├── mcp_server.py         # Zero-Dependency MCP Server für Agenten
-└── sync_udhr.py          # Validierungs- & Verifikationstool
+├── articles/             # Canonical corpus per UN OHCHR (de 30 · fr 30 · sw 30 · en 9)
+├── backends/             # Plugin system (offline, ollama, gemini, deepseek, openai-compatible)
+├── locales/              # Language & style definitions (13 locales)
+├── menschenrechte_tales/ # Validated narratives with YAML front matter
+├── menschenrechte_books/ # Serial volumes (book.json + chapters)
+├── quarantine/           # Texts rejected by the audit (DPO base)
+├── datasets/             # Dated dataset.jsonl snapshots
+├── config.py             # Zero-dependency .env loader & setter
+├── generate_pipeline.py  # Main pipeline with daemon, load watchdog & audit
+├── export_dataset.py     # JSONL dataset exporter
+├── scripts/              # run_model_rotation.py (hourly rotation), seed_matrix.py (language×genre seeds),
+│                         # build_books_index.py (index/API), sync_corpus.sh (controlled batch push)
+├── mcp_server.py         # Zero-dependency MCP server for agents
+└── sync_udhr.py          # Validation & verification tool
 ```
 
-## Nutzung (CLI)
+## Usage (CLI)
 
-1. Kanonischen Korpus prüfen
+1. Verify the canonical corpus
 
    ```bash
    python3 sync_udhr.py
    ```
 
-2. Gezielte oder zufällige Generierung
+2. Targeted or random generation
 
    ```bash
-   # Zufällige Kombination aus Artikel und Stil
+   # Random article/style combination
    python3 generate_pipeline.py --backend ollama --random --limit 1 --lang DE
 
-   # Spezifischer Artikel und Stil
+   # Specific article and style
    python3 generate_pipeline.py --backend ollama --article art_12 --style Cyberpunk_Noir --lang DE
    ```
 
-3. Autonomer Daemon (Hintergrunddienst mit Lastwächter)
+3. Autonomous daemon (background service with load watchdog)
 
    ```bash
    nohup python3 -u generate_pipeline.py \
@@ -91,50 +93,71 @@ Um den Korpus über alle 30 UN-Artikel, mehrere Sprachräume und Erzählstile hi
      --lang DE > daemon.log 2>&1 &
    ```
 
-## Bücher & Bände (serielle Pipeline)
+## Books & volumes (serial pipeline)
 
-Neben den Einzelgeschichten erzeugt die Pipeline **fortlaufende Bände**: ein Prolog friert Setting,
-Figuren und Perspektive in `book.json` ein, jedes weitere Kapitel verhandelt einen noch unbehandelten
-Artikel der UDHR im selben Rahmen — angeschlossen an das Vorgängerkapitel (Markov-Kette über Volltexte,
-kein Summarizing-Zwischenschritt).
+Alongside single stories the pipeline produces **serial volumes**: a prologue freezes setting,
+characters and point of view in `book.json`; each further chapter negotiates a not-yet-covered UDHR
+article within the same frame, chained to the previous chapter (Markov chain over full texts — no
+summarising step in between).
 
 ```bash
-# Band anlegen (Prolog + book.json)
+# Create a volume (prologue + book.json)
 python3 generate_pipeline.py --mode new-book --lang DE --book-style Gerätehandbuch
 
-# Nächstes Kapitel anhängen (ohne --book-id: jüngstes Buch nach mtime)
+# Append the next chapter (without --book-id: youngest book by mtime)
 python3 generate_pipeline.py --mode append-chapter --lang DE
 python3 generate_pipeline.py --mode append-chapter --lang DE --book-id buch_001_das_büro_der_unendlichkeit
 ```
 
-**Mechanische Endschranke (`audit_manual_ending`):** Der Schlussabsatz muss einen harten Marker
-(`Fehlercode`, `Wartung`, `Intervall`, `Diagnose`, `Prüfung`, `Protokoll`, `Abschnitt`) oder einen
-Sicherheitsblock (`[GEFAHR]` / `[WARNUNG]` / `[HINWEIS]`) tragen; wörtliche Rede und Emotionsverben
-sind ausgeschlossen. Es gibt bis zu drei Versuche, danach wird das Kapitel **mit Vermerk** geschrieben
-(kein stiller Durchlauf, kein Totalverlust). Jedes Kapitel trägt im Frontmatter `manual_ending_ok`,
-`manual_ending_attempts` und `manual_ending_note`; die CLI beendet einen Fallback mit **Exit-Code 2**
-(Exit 1 = Abbruch ohne Datei).
+**A volume is bounded by its language corpus, not by a fixed 30.** `naechster_artikel()` takes the
+unused articles from `articles/<lang>/`, so a volume is complete when its corpus is exhausted
+(currently 9 chapters for English, 30 for German/French/Swahili).
 
-**Index & Entwickler-Endpunkte** (deterministisch, atomar geschrieben):
+**Mechanical closing guard (`audit_manual_ending`):** the closing paragraph must carry a hard marker
+(`Fehlercode`, `Wartung`, `Intervall`, `Diagnose`, `Prüfung`, `Protokoll`, `Abschnitt`) or a safety
+block (`[GEFAHR]` / `[WARNUNG]` / `[HINWEIS]`); direct speech and emotion verbs are excluded. Up to
+three attempts are made; afterwards the chapter is written **with a note** (no silent pass, no total
+loss). Each chapter records `manual_ending_ok`, `manual_ending_attempts` and `manual_ending_note` in
+its front matter; the CLI exits with **code 2** on a fallback (exit 1 = abort without a file).
+
+**Rotation runner (`scripts/run_model_rotation.py`):** the hourly service walks the volume pool with
+a model pool and writes one chapter per slot. Volumes whose corpus is fully negotiated are removed
+from the pool *before* a slot is spent, so a round is never consumed by a volume that cannot accept
+another chapter.
+
+**Index & developer endpoints** (written deterministically and atomically):
 
 ```bash
 python3 scripts/build_books_index.py
 ```
 
-| Datei | Inhalt |
+| File | Content |
 |---|---|
-| `web/books.json` | Katalog aller Bände: Metadaten, Kapitel-Inhaltsverzeichnis, Wortzahlen, verhandelte Artikel, Audit-Flags |
-| `web/api/random.json` | Beispielkapitel im Volltext — **statisch**: GitHub Pages würfelt nicht pro Anfrage |
-| `web/api/ipsum.json` | Platzhaltertext aus dem Korpus für Layout-/Testzwecke |
+| `web/books.json` | Catalogue of all volumes: metadata, chapter table of contents, word counts, covered articles, audit flags |
+| `web/api/random.json` | Sample chapter in full text — **static**: GitHub Pages does not shuffle per request |
+| `web/api/ipsum.json` | Placeholder text from the corpus for layout and testing |
 
-Der Reader (`web/index.html`) hat dafür den Tab **[ Geschichten ] | [ Bücher & Bände ]** mit Kachel-Ansicht
-(Genre-Badge, Fortschritt „*n* von 30 Artikeln verhandelt"), Inhaltsverzeichnis, Kapitel-Navigation und
-Feedback-Leiste am Kapitelende: ▲/▼ werden **nur lokal** im Browser gespeichert, 🚩 *Melden* öffnet ein
-vorausgefülltes GitHub-Issue mit Buch, Kapitelpfad und Audit-Status.
+The reader (`web/index.html`) exposes the tabs **[ Stories ] | [ Books & Volumes ]** with a tile view
+(genre badge, progress "*n* of 30 articles negotiated"), table of contents, chapter navigation and a
+feedback bar at the end of each chapter: ▲/▼ are stored **locally in the browser only**, 🚩 *Report*
+opens a pre-filled GitHub issue with volume, chapter path and audit status.
 
-## MCP-Integration (Agenten)
+## Language matrix (seeds)
 
-Der Server implementiert die JSON-RPC 2.0 MCP-Spezifikation rein über die Standardbibliothek (kein pip, kein venv erforderlich) mit den Werkzeugen `daemon_status`, `daemon_start`, `daemon_stop`, `get_corpus_stats`, `read_latest_tale`, `get_config_overview`, `set_config_value`.
+`scripts/seed_matrix.py` enforces **≥ 3 volumes per (language × genre)** across 10 languages and
+6 genres (target: 180 seeds), and goes through the real pipeline path (`prologue generation`), not
+stub files:
+
+```bash
+python3 scripts/seed_matrix.py --dry-run          # report the gap per combination
+python3 scripts/seed_matrix.py --langs FR --genres legal_thriller --limit 1
+```
+
+## MCP integration (agents)
+
+The server implements the JSON-RPC 2.0 MCP specification using only the standard library (no pip, no
+venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `get_corpus_stats`,
+`read_latest_tale`, `get_config_overview`, `set_config_value`.
 
 ```json
 {
