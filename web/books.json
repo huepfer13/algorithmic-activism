@@ -4145,7 +4145,7 @@
         "Timo",
         "Der Verwalter"
       ],
-      "chapter_count": 19,
+      "chapter_count": 20,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -4165,10 +4165,11 @@
         "art_16",
         "art_17",
         "art_18",
-        "art_19"
+        "art_19",
+        "art_20"
       ],
-      "words": 8962,
-      "reading_minutes": 45,
+      "words": 9322,
+      "reading_minutes": 47,
       "cover": null,
       "chapters": [
         {
@@ -4530,6 +4531,24 @@
           "leak_free": "true",
           "words": 532,
           "reading_minutes": 3
+        },
+        {
+          "file": "20_art_20_abschnitt_20_die_versammlungsfuge.md",
+          "index": 20,
+          "title": "Abschnitt 20: Die Versammlungsfuge",
+          "article": "art_20",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "44.4",
+          "jaccard_max": "0.053",
+          "tokens_generated": "1196",
+          "manual_ending_code": "W-20-20",
+          "backend": "openrouter",
+          "genre": "Gothic",
+          "leak_free": "true",
+          "words": 360,
+          "reading_minutes": 2
         }
       ]
     },

@@ -965,7 +965,8 @@
     "r10:nvidia/nemotron-3-ultra-550b-a55b:free:buch_005_fragment_der_vernunft",
     "r4:deepseek-chat:buch_041_die_wasserwaage_von_ahrenfeld",
     "r3:deepseek-chat:buch_041_die_wasserwaage_von_ahrenfeld",
-    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_040_the_lighthouse_of_whispering_sands"
+    "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_040_the_lighthouse_of_whispering_sands",
+    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_011_das_haus_ohne_widerhall"
   ],
   "runden": {
     "1": [
@@ -12959,6 +12960,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 8
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_011_das_haus_ohne_widerhall",
+        "code": "W-20-20",
+        "datei": "20_art_20_abschnitt_20_die_versammlungsfuge.md",
+        "dauer_s": "44.4",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 8,
+        "tokens": "1196",
+        "versuche": "1",
+        "woerter": 360
       }
     ],
     "9": [
