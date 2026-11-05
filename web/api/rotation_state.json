@@ -983,7 +983,8 @@
     "r7:nvidia/nemotron-3-super-120b-a12b:free:buch_038_the_weight_of_unspoken_rain",
     "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_005_fragment_der_vernunft",
     "r9:nvidia/nemotron-3-super-120b-a12b:free:buch_032_the_glass_tribunal",
-    "r10:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit"
+    "r10:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit",
+    "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_041_die_wasserwaage_von_ahrenfeld"
   ],
   "runden": {
     "1": [
@@ -4560,6 +4561,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 2
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_041_die_wasserwaage_von_ahrenfeld",
+        "code": "U-05-05",
+        "datei": "05_art_05_abschnitt_5_die_spannungsgrenze.md",
+        "dauer_s": "92.9",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 2,
+        "tokens": "1121",
+        "versuche": "1",
+        "woerter": 361
       }
     ],
     "3": [
