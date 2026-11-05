@@ -3724,7 +3724,7 @@
         "Kalle Ohm",
         "Frau Säckel"
       ],
-      "chapter_count": 21,
+      "chapter_count": 22,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -3746,10 +3746,11 @@
         "art_18",
         "art_19",
         "art_20",
-        "art_21"
+        "art_21",
+        "art_22"
       ],
-      "words": 8930,
-      "reading_minutes": 45,
+      "words": 9329,
+      "reading_minutes": 47,
       "cover": null,
       "chapters": [
         {
@@ -4146,6 +4147,24 @@
           "genre": "Satire",
           "leak_free": "true",
           "words": 490,
+          "reading_minutes": 2
+        },
+        {
+          "file": "22_art_22_abschnitt_22_die_sicherheitsäquivalenz.md",
+          "index": 22,
+          "title": "Abschnitt 22: Die Sicherheitsäquivalenz",
+          "article": "art_22",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "883",
+          "manual_ending_code": "G-22-22",
+          "backend": "deepseek",
+          "genre": "Satire",
+          "leak_free": "true",
+          "words": 399,
           "reading_minutes": 2
         }
       ]
