@@ -114,6 +114,51 @@ def buecher() -> list:
     return treffer
 
 
+def artikel_korpus(lang: str) -> int:
+    """Anzahl Artikel im Korpus der Sprache (articles/<lang>/).
+
+    Die Obergrenze eines Bandes ist NICHT 30, sondern die Groesse seines Sprachkorpus:
+    EN hat aktuell 9 Artikel, DE/FR/SW 30. Ein EN-Band ist bei 9/9 verhandelt.
+    Rueckgabe 0 = Korpus unbekannt (dann wird kein Band verworfen, s. offene_buecher).
+    """
+    lang = (lang or "").strip()
+    if not lang:
+        return 0                          # ohne Sprachangabe kein Korpus (nicht articles/ selbst zaehlen)
+    ordner = os.path.join(REPO, "articles", lang.lower())
+    if not os.path.isdir(ordner):
+        return 0
+    return len([f for f in os.listdir(ordner) if not f.startswith(".")])
+
+
+def offene_buecher(alle: list) -> list:
+    """Nur Baende mit mindestens einem offenen Artikel — sprachabhaengig.
+
+    Belegt 2026-11-05: 14 EN-Baende sind bei 9/9 vollstaendig verhandelt (EN-Korpus = 9
+    Artikel), wurden aber weiter gewaehlt. Der Kapitelversuch endete mit "Alle Artikel ...
+    verhandelt" und verbrannte eine Runde — bei 41 Baenden und 6 offenen endete der Lauf
+    am Runden-Deckel, ohne ein offenes Buch zu erreichen (00:00 und 03:00 ohne Kapitel).
+    Der Filter greift VOR dem Rundenverbrauch, nicht im Kapitelversuch.
+    """
+    offen, voll = [], []
+    for buch in alle:
+        pfad = os.path.join(REPO, "menschenrechte_books", buch, "book.json")
+        try:
+            meta = json.load(open(pfad, encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue                      # unlesbar -> nicht anfassen
+        sprache = (meta.get("language") or "").strip()
+        grenze = artikel_korpus(sprache)
+        verhandelt = len(meta.get("covered_articles") or [])
+        if grenze and verhandelt >= grenze:
+            voll.append(buch)
+        else:
+            offen.append(buch)
+    if voll:
+        print(f"[Runner] {len(voll)} Baende vollstaendig verhandelt — aus dem Pool genommen: "
+              f"{[b[:22] for b in voll[:5]]}{' …' if len(voll) > 5 else ''}", flush=True)
+    return offen
+
+
 def zustand_laden() -> dict:
     if os.path.isfile(ZUSTAND):
         try:
@@ -276,6 +321,13 @@ def main() -> int:
     if len(alle) < 1:
         print(f"[Runner] kein Buch mit book.json gefunden: {alle}", flush=True)
         return 1
+
+    # Vollstaendig verhandelte Baende VOR dem Rundenverbrauch aussortieren (2026-11-05).
+    alle_offen = offene_buecher(alle)
+    if not alle_offen:
+        print("[Runner] alle Baende vollstaendig verhandelt — sauberer Stopp, nichts zu schreiben.", flush=True)
+        return 0
+    alle = alle_offen
     if len(alle) == 1:
         # Ein-Band-Lauf ist zulaessig (gezielter Neuaufbau, z.B. der englische Limericks-Band).
         print(f"[Runner] Ein-Band-Lauf: {alle[0][:44]} — jedes Modell schreibt in dasselbe Buch.",
@@ -340,17 +392,24 @@ def main() -> int:
             with open(PROTOKOLL, "a", encoding="utf-8") as f:
                 f.write(json.dumps(eintrag, ensure_ascii=False, sort_keys=True) + "\n")
             print(f"  -> exit={r.returncode} dauer={dauer}s {stat}", flush=True)
-            if r.returncode not in (0, 2):   # 2 = Fallback geschrieben (dokumentiert), alles andere = Fehler
+            ok = r.returncode in (0, 2)   # 2 = Fallback geschrieben (dokumentiert), alles andere = Fehler
+            if not ok:
+                # Fehlversuch zaehlt NICHT gegen den Kapitel-Deckel: sonst verbrennt ein einzelner
+                # Provider-Fehler (z. B. Nvidia-HTTP-404) den ganzen Stundenslot, obwohl ein gesundes
+                # Modell im Pool wartet. Belegt 2026-10-20: 15/17/18/19 Uhr je ein 404 auf
+                # nemotron-super, waehrend deepseek-chat lief.
                 fehler.append((marke, r.returncode))
+                print("  [Runner] Fehlversuch — naechstes Modell, Deckel unveraendert", flush=True)
             z["erledigt"].append(marke)
             z["runden"].setdefault(str(runde), []).append(eintrag)
             zustand_speichern(z)
-            meldung = git_schritt(buch, runde, modell)
-            print(f"  git: {meldung}", flush=True)
-            geschrieben += 1
-            if args.push:
-                subprocess.run(["git", "push", "origin", "main"], cwd=REPO,
-                               capture_output=True, timeout=30)
+            if ok:
+                meldung = git_schritt(buch, runde, modell)
+                print(f"  git: {meldung}", flush=True)
+                geschrieben += 1
+                if args.push:
+                    subprocess.run(["git", "push", "origin", "main"], cwd=REPO,
+                                   capture_output=True, timeout=30)
         if args.dry_run:
             print(f"[Runde {runde}] Plan ausgegeben", flush=True)
         if deckel_erreicht:
