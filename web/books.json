@@ -12976,12 +12976,13 @@
         "Kai Ostrom",
         "Hedda Roth"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 975,
-      "reading_minutes": 5,
+      "words": 1500,
+      "reading_minutes": 8,
       "cover": null,
       "chapters": [
         {
@@ -13019,6 +13020,24 @@
           "leak_free": "true",
           "words": 469,
           "reading_minutes": 2
+        },
+        {
+          "file": "02_art_02_abschnitt_2_die_dritte_hand.md",
+          "index": 2,
+          "title": "Abschnitt 2: Die dritte Hand",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.9",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1003",
+          "manual_ending_code": "U-02-02",
+          "backend": "deepseek",
+          "genre": "Solarpunk",
+          "leak_free": "true",
+          "words": 525,
+          "reading_minutes": 3
         }
       ]
     }
