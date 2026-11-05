@@ -966,7 +966,8 @@
     "r4:deepseek-chat:buch_041_die_wasserwaage_von_ahrenfeld",
     "r3:deepseek-chat:buch_041_die_wasserwaage_von_ahrenfeld",
     "r3:nvidia/nemotron-3-ultra-550b-a55b:free:buch_040_the_lighthouse_of_whispering_sands",
-    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_011_das_haus_ohne_widerhall"
+    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_011_das_haus_ohne_widerhall",
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_041_die_wasserwaage_von_ahrenfeld"
   ],
   "runden": {
     "1": [
@@ -11873,6 +11874,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 7
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_041_die_wasserwaage_von_ahrenfeld",
+        "code": "U-03-03",
+        "datei": "03_art_03_abschnitt_3_die_kalibrierte_stille.md",
+        "dauer_s": "65.6",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 7,
+        "tokens": "1315",
+        "versuche": "1",
+        "woerter": 341
       }
     ],
     "8": [
