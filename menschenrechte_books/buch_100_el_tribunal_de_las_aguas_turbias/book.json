@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_100_el_tribunal_de_las_aguas_turbias",
+  "title": "El Tribunal de las Aguas Turbias",
+  "pov": "third_person",
+  "language": "ES",
+  "style": "Drama_Judicial",
+  "setting_summary": "Una cámara arbitral improvisada en la sala de bombas de una planta potabilizadora sitiada por la sequía, donde el agua se raciona y cada gota es prueba. La encierro, la vigilancia de los guardias de la concesionaria y el reloj de la reserva crean una presión que convierte cada testimonio en una apuesta por la vida. Se juzga un motín por el reparto del agua, y en el proceso deberán aflorar la dignidad, la igualdad y la libertad de expresión de quienes reclaman.",
+  "characters": [
+    "Lucía Ferrán",
+    "Mateo Quintana",
+    "Aurelio Vasquez",
+    "Sor Inés",
+    "Elías Roldán"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:23:24.553748+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

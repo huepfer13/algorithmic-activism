@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_065_the_ministry_of_adequate_happiness",
+  "title": "The Ministry of Adequate Happiness",
+  "pov": "third_person",
+  "language": "EN",
+  "style": "Satire",
+  "setting_summary": "In the vertical bureaucracy of the Central Bureau of Emotional Compliance, citizens must file daily happiness declarations in triplicate before their allotted two minutes of sunlight. A budget shortfall forces the Bureau to ration joy itself, and every article of the Universal Declaration becomes a form to be stamped, denied, or appealed within a nine-floor stairwell where the lift has been condemned as a security risk.",
+  "characters": [
+    "Ondine Vex",
+    "Bartholomew Quill",
+    "Sister Perpetua Grange",
+    "Tobias Mudd",
+    "The Form 7-B"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:13:49.592172+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

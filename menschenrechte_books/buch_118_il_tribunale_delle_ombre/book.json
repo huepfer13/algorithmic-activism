@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_118_il_tribunale_delle_ombre",
+  "title": "Il Tribunale delle Ombre",
+  "pov": "third_person",
+  "language": "IT",
+  "style": "Dramma_Giudiziario",
+  "setting_summary": "Un'aula sotterranea di una camera arbitrale d'emergenza, allestita in un ex rifugio antiaereo sotto un palazzo ministeriale di Roma, dove la luce è artificiale e le udienze sono cronometrate da un timer proiettato sulla parete. Le risorse sono scarse, i fascicoli arrivano parzialmente censurati e ogni testimone è sorvegliato da telecamere che trasmettono a un'autorità invisibile. Il tempo stringe: ogni caso deve chiudersi entro quarantotto ore, pena la decadenza automatica delle istanze.",
+  "characters": [
+    "Anselmo Ricci",
+    "Vera Sorrentino",
+    "Michele Fanelli",
+    "Suor Agnese",
+    "Il Presidente"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:26:44.886782+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

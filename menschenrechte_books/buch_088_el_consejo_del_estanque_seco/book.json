@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_088_el_consejo_del_estanque_seco",
+  "title": "El Consejo del Estanque Seco",
+  "pov": "third_person",
+  "language": "ES",
+  "style": "Fábula",
+  "setting_summary": "Un estanque que se seca lentamente bajo un sol implacable, donde las criaturas que lo habitan dependen de un reparto de agua administrado por una jerarquía antigua. La escasez, la vigilancia de los guardianes del borde y el miedo a la sed extrema presionan cada decisión. Cuando el nivel baja, las viejas reglas sobre quién merece beber y quién debe callar empiezan a resquebrajarse.",
+  "characters": [
+    "Tejón",
+    "Garza",
+    "Topo",
+    "Urraca",
+    "Caracol"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:21:19.043821+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

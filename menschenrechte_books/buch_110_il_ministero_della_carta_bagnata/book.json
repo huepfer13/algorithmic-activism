@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_110_il_ministero_della_carta_bagnata",
+  "title": "Il Ministero della Carta Bagnata",
+  "pov": "third_person",
+  "language": "IT",
+  "style": "Satira",
+  "setting_summary": "Nella Repubblica di Vallescura ogni diritto fondamentale esiste solo come modulo da compilare in un labirinto burocratico di sportelli, timbri e attese infinite. Il Ministero della Carta Bagnata, un edificio-caserma sovraffollato e sorvegliato da uscieri zelanti, trasforma ogni richiesta semplice in un calvario a tempo: chi non completa la pratica entro il turno perde la posizione in coda. Il romanzo segue un gruppo di cittadini che tenta di far valere dignità, parola e uguaglianza contro un apparato che produce scartoffie più in fretta di quanto il mondo produca torti.",
+  "characters": [
+    "Orazio Puntiglio",
+    "Suor Immacolata Ferri",
+    "Lallo il Postino",
+    "Avvocato Brusco",
+    "Nilde Sottovoce"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:25:14.933156+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

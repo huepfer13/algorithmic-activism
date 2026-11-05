@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_114_gli_annali_del_sale",
+  "title": "Gli Annali del Sale",
+  "pov": "third_person",
+  "language": "IT",
+  "style": "Cronaca_Storica",
+  "setting_summary": "La salina fortificata di Vado Salso, città di sale e di carte, è retta da un Provveditore che controlla ogni misura del raccolto e ogni parola scritta. L'aria salmastra corrode i metalli e i privilegi, mentre la scarsità d'acqua dolce e le mura anguste tengono la popolazione sotto stretta sorveglianza. Una nuova tassa sul sale e un registro segreto dei debiti innescano una lunga vertenza giuridica che toccherà la dignità, la parola e la vita dei suoi abitanti.",
+  "characters": [
+    "Mastro Lando",
+    "Suor Perpetua",
+    "Nerio il Copista",
+    "Isotta",
+    "Il Provveditore"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:26:02.587733+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

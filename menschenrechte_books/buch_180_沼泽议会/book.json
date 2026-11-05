@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_180_沼泽议会",
+  "title": "沼泽议会",
+  "pov": "third_person",
+  "language": "ZH",
+  "style": "动物寓言",
+  "setting_summary": "一片被堤坝围死的沼泽，水位由上游水闸的看守者随意调控，旱季时泥滩缩小到只剩中央一汪浅水。所有动物挤在逐渐干涸的洼地里，彼此监视谁多喝了一口水、谁私藏了泥洞。谁若公开抱怨水位，第二天就会被记上堤坝的\"观察名单\"。",
+  "characters": [
+    "老蛙格罗姆",
+    "鹭鸶白翎",
+    "水蛇墨环",
+    "田鼠灰背",
+    "萤火虫点点"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:39:39.397252+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

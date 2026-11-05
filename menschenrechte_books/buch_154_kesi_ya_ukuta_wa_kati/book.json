@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_154_kesi_ya_ukuta_wa_kati",
+  "title": "Kesi ya Ukuta wa Kati",
+  "pov": "third_person",
+  "language": "SW",
+  "style": "Tamthilia_ya_Mahakama",
+  "setting_summary": "Baraza la usuluhishi lililowekwa ndani ya kituo cha wakimbizi kilichozungukwa na ukuta mrefu, lenye msongamano mkubwa wa watu na ukaguzi wa kila hatua. Kila kikao kina muda maalum wa saa mbili tu kabla ya lango kufungwa, hivyo mashahidi hulazimika kusema haraka na kwa uangalifu. Baraza hilo linapaswa kuamua migogoro inayohusu haki za msingi za wakazi wa kituo hicho.",
+  "characters": [
+    "Nuru Mwangaza",
+    "Bwana Kipara",
+    "Mama Zawadi",
+    "Jaji Mkuu Hamisi",
+    "Kijana Baraka"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:34:30.682538+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_093_el_expediente_de_la_dignidad_perpetua",
+  "title": "El Expediente de la Dignidad Perpetua",
+  "pov": "third_person",
+  "language": "ES",
+  "style": "Sátira",
+  "setting_summary": "En la Ciudad de San Pereque, un laberíntico Edificio de Derechos Fundamentales procesa solicitudes ciudadanas mediante un aparato de ventanillas, sellos y formularios que vuelve inejecutable cualquier derecho simple. El edificio está acosado por la escasez de tinta oficial, plazos que caducan al nacer y una jerarquía de pasillos donde cada planta vigila a la de abajo. Cada capítulo permite someter a juicio burocrático un artículo distinto de la Declaración Universal, desde la dignidad hasta la libertad de expresión.",
+  "characters": [
+    "Doña Prudencia Válvula",
+    "Tobías Membrillo",
+    "La Inspectora Cárdenas",
+    "Fermín el Ventanillero",
+    "Chucho el Archivero"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:22:12.358850+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

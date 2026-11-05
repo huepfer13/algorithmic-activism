@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_128_o_departamento_de_direitos_inalienáveis_",
+  "title": "O Departamento de Direitos Inalienáveis e a Máquina de Requerimentos",
+  "pov": "third_person",
+  "language": "PT",
+  "style": "Sátira",
+  "setting_summary": "Na Repartição Central dos Direitos Elementares, um edifício de vinte andares onde cada andar emite um selo que o andar seguinte exige, cidadãos tentam exercer direitos simples através de um labirinto de formulários e filas cronometradas. O prédio é vigiado por alto-falantes que anunciam prazos que ninguém compreende, e a escassez de selos, senhas e tinteiros transforma cada pedido num teste de paciência e obediência. Uma nova diretriz promete agilizar tudo, mas só acrescenta um andar, um carimbo e uma taxa.",
+  "characters": [
+    "Dona Firmina Bento",
+    "Valdomiro Peixoto",
+    "Iracema Sales",
+    "Beto Cachola",
+    "Dr. Alarico Formiga"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:28:29.387728+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

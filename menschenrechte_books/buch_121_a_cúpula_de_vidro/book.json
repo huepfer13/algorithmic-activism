@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_121_a_cúpula_de_vidro",
+  "title": "A Cúpula de Vidro",
+  "pov": "third_person",
+  "language": "PT",
+  "style": "SciFi_Distopia",
+  "setting_summary": "Numa metrópole subterrânea chamada Cúpula, a população vive sob racionamento de ar e vigilância total exercida pelo Conselho de Pureza. Quem acumula pontos de obediência sobe de nível; quem os perde é rebaixado às galerias profundas, onde o oxigênio escasseia. O tempo de permanência em cada nível é contado por um implante que todos carregam no pulso.",
+  "characters": [
+    "Iara",
+    "Tomé",
+    "Vespa",
+    "Doutor Sombra",
+    "Rui"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:27:21.132238+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

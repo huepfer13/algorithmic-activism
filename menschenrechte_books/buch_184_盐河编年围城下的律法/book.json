@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_184_盐河编年围城下的律法",
+  "title": "盐河编年：围城下的律法",
+  "pov": "third_person_manual",
+  "language": "ZH",
+  "style": "历史编年",
+  "setting_summary": "盐河城被围困三年，城内按配给等级划分：盐工、守军、文书、流民。城墙内每日以号角计时，夜间宵禁，粮盐按日发放，私藏者连坐。守城议会以“战时条例”为名不断扩张权力，任何质疑配给或议会的言论都会被记录进“黑册”，而城外的敌军每日用投石机抛入劝降书，城内在恐惧与饥饿中被迫辩论：人的尊严、言论、生命与平等，究竟能否在围城中被法律承认。",
+  "characters": [
+    "林砚",
+    "老柯",
+    "阿依",
+    "宋铁",
+    "白先生"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:40:25.829876+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

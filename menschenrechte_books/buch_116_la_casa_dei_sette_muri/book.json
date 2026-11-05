@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_116_la_casa_dei_sette_muri",
+  "title": "La Casa dei Sette Muri",
+  "pov": "third_person",
+  "language": "IT",
+  "style": "Parabola",
+  "setting_summary": "Un'antica casa-colonia ai margini di una città senza nome, dove cento persone vivono sotto un tetto comune e condividono ogni cosa secondo un regolamento inciso sul muro del cortile. L'acqua arriva solo tre ore al giorno e il Custode decide chi può parlare durante l'assemblea serale, mentre fuori le mura il mondo tace da anni.",
+  "characters": [
+    "Nerina",
+    "Tobias",
+    "Il Custode",
+    "Vera",
+    "Settimo"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:26:22.730103+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

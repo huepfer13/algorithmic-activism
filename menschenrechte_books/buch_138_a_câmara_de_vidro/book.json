@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_138_a_câmara_de_vidro",
+  "title": "A Câmara de Vidro",
+  "pov": "third_person",
+  "language": "PT",
+  "style": "Drama_Judicial",
+  "setting_summary": "Uma câmara arbitral instalada no décimo andar de um edifício envidraçado em Brasília, onde a luz e a vigilância constante comprimem todos os presentes. O julgamento tem prazo regimental de trinta dias e orçamento de provas limitado, sob a presidência austera de Selma Quirino. Cada sessão é gravada e transcrita em tempo real, transformando cada palavra em registro permanente.",
+  "characters": [
+    "Helena Vaz",
+    "Tomás Rangel",
+    "Iracema Duarte",
+    "Breno Alcântara",
+    "Juíza Selma Quirino"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:30:19.339508+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

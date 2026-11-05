@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_153_kituo_cha_mchanga",
+  "title": "Kituo cha Mchanga",
+  "pov": "third_person",
+  "language": "SW",
+  "style": "Mfano",
+  "setting_summary": "Kituo cha uokoaji kilichojengwa juu ya mchanga unaozidi kumezwa na bahari kwenye kisiwa kidogo kilichozungukwa na ukuta wa saruji na kambi ya jeshi. Kila siku maji hupanda, chakula hupimwa kwa kijiko, na kila neno linalotamkwa husikilizwa na spika zilizofichwa. Wakati kikundi cha wakimbizi kinapogundua kuwa orodha ya waliokwenda kwa meli usiku mmoja haiko sawa na waliobaki, ukimya unaovunjika huanza kuwagawanya wale waliobaki.",
+  "characters": [
+    "Mama Zawadi",
+    "Kiboko",
+    "Neema",
+    "Mzee Rangi",
+    "Tumbili"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:34:16.541885+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

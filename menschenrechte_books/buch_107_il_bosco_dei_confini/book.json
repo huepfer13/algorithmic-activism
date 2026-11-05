@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_107_il_bosco_dei_confini",
+  "title": "Il Bosco dei Confini",
+  "pov": "third_person",
+  "language": "IT",
+  "style": "Favola",
+  "setting_summary": "Una valle boscosa chiusa da un alto muro di pietra, dove gli animali vivono secondo un ordine antico che assegna a ogni specie un ruolo e un tempo preciso per attingere all'unica fonte d'acqua. Il pozzo centrale si prosciuga di giorno in giorno e la gerarchia imposta dai guardiani del muro decide chi beve e chi resta a secco, mentre voci di una via d'uscita si sussurrano solo di notte.",
+  "characters": [
+    "Nerina",
+    "Tacchino",
+    "Fiamma",
+    "Ghiro",
+    "Sasso"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:24:40.747832+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

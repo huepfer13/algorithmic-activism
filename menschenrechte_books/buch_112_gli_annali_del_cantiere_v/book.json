@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_112_gli_annali_del_cantiere_v",
+  "title": "Gli Annali del Cantiere V",
+  "pov": "third_person",
+  "language": "IT",
+  "style": "Cronaca_Storica",
+  "setting_summary": "Nel 1978 il cantiere navale di Porto Vella, isola chiusa tra scogli e maree, è requisito da una commissione militare che impone turni, permessi e censura sui registri operai. Le maestranze vivono in un'isola-arsenale dove ogni parola scritta è sorvegliata e ogni deroga ai regolamenti viene annotata negli annali del cantiere. La tensione cresce quando un infortunio mortale viene archiviato come fatalità, e i registri diventano il campo di battaglia per stabilire chi ha diritto a parlare, a essere protetto e a contare.",
+  "characters": [
+    "Mara Bellandi",
+    "Don Ivo Sartori",
+    "Nadir Belkacem",
+    "Suor Celestina",
+    "Tullio Ferri"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:25:40.476432+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

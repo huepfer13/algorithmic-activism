@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_111_il_ministero_della_verifica_preventiva",
+  "title": "Il Ministero della Verifica Preventiva",
+  "pov": "third_person",
+  "language": "IT",
+  "style": "Satira",
+  "setting_summary": "Nel Palazzo del Diritto Differito, un ministero sovrabbondante con centoventimila dipendenti e nessuno sportello funzionante, ogni cittadino deve ottenere un timbro per esercitare un diritto che la Costituzione già garantisce. L'edificio è un labirinto di corridoi senza uscita, ascensori che salgono solo, e un regolamento interno di quattromila pagine che cambia ogni martedì; la pressione nasce dall'attesa infinita, dalla sorveglianza dei corridoi e dalla gerarchia dei timbri, dove chi ha il timbro giusto non ha mai la penna.",
+  "characters": [
+    "Aurelio Sfascio",
+    "Suor Prassede",
+    "Il Maresciallo Bottino",
+    "Nives Coriandolo",
+    "L'Archivista Cieco"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:25:27.677863+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

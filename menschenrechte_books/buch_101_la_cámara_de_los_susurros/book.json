@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_101_la_cámara_de_los_susurros",
+  "title": "La Cámara de los Susurros",
+  "pov": "third_person",
+  "language": "ES",
+  "style": "Drama_Judicial",
+  "setting_summary": "En una sala arbitral de techos bajos y ventilación defectuosa, cinco personas permanecen encerradas durante sesiones maratónicas bajo vigilancia continua de cámaras y micrófonos. El reloj avanza hacia un plazo legal improrrogable para emitir un laudo que podría reabrir un caso de desaparición vinculado a un poderoso consorcio. La presión del encierro, la escasez de pruebas y la jerarquía interna convierten cada testimonio en un arma de doble filo.",
+  "characters": [
+    "Elena Vargas",
+    "Tomás Herrera",
+    "Rocío Salazar",
+    "Julián Prado",
+    "Marta Quintero"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:23:34.724729+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

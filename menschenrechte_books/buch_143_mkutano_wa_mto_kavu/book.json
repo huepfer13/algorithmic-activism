@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_143_mkutano_wa_mto_kavu",
+  "title": "Mkutano wa Mto Kavu",
+  "pov": "third_person",
+  "language": "SW",
+  "style": "Hadithi_ya_Wanyama",
+  "setting_summary": "Katika bonde la Mto Kavu, wanyama wanakaa pamoja chini ya mti mmoja mkubwa unaotoa kivuli na maji kidogo. Wakati wa kiangazi kirefu, maji yanapungua kila siku na kila mnyama anahofia kuwa wa kwanza kupoteza nafasi yake kwenye kisima kidogo. Utawala wa Simba Mfalme unadhibiti nani anywe lini, huku wanyama wakilazimika kusikiliza na kutii bila kupinga.",
+  "characters": [
+    "Tumbili Mzee Kobe",
+    "Sungura Mwepesi",
+    "Simba Mfalme",
+    "Tembo Nzito",
+    "Chui Mwembamba"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:31:36.205400+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

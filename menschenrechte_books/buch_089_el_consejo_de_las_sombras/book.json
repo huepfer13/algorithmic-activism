@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_089_el_consejo_de_las_sombras",
+  "title": "El Consejo de las Sombras",
+  "pov": "third_person",
+  "language": "ES",
+  "style": "Fábula",
+  "setting_summary": "Bajo un gran roble hueco vive una comunidad de animales que comparte un único depósito de bellotas racionado por un consejo de ancianos que vigila cada movimiento desde las ramas. El invierno se acerca y las reservas disminuyen, mientras las reglas del Consejo prohíben hablar de reparto, salir de noche y cuestionar a los vigilantes. La tensión crece entre quienes obedecen por miedo y quienes empiezan a susurrar que la dignidad no debería depender de una bellota.",
+  "characters": [
+    "Tejón",
+    "Corneja",
+    "Lirón",
+    "Zorra",
+    "Búho"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:21:27.542663+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

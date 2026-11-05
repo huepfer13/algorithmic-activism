@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_104_il_silenzio_di_vetro",
+  "title": "Il Silenzio di Vetro",
+  "pov": "third_person",
+  "language": "IT",
+  "style": "Distopia_SciFi",
+  "setting_summary": "La città-stato di Cripta 9 è un complesso sotterraneo dove l'aria, l'acqua e i turni di sonno sono assegnati da un algoritmo chiamato la Bilanciatrice. Le mura trasudano umidità e ogni respiro viene misurato: chi supera la soglia di consumo viene 'riequilibrato'. La pressione non è la violenza ma la lenta abitudine a cedere pezzi di sé in cambio di un turno in più.",
+  "characters": [
+    "Lena",
+    "Orso",
+    "Vera",
+    "Tullio",
+    "Nadir"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:24:04.837669+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

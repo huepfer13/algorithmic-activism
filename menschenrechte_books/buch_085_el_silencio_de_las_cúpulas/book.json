@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_085_el_silencio_de_las_cúpulas",
+  "title": "El Silencio de las Cúpulas",
+  "pov": "third_person",
+  "language": "ES",
+  "style": "SciFi_Distopía",
+  "setting_summary": "En 2147, la humanidad sobrevive en cúpulas cerradas gestionadas por el Sistema de Armonía, una inteligencia que asigna cada recurso, tarea y palabra permitida para evitar el colapso ecológico. Dentro de la Cúpula 12, la escasez de agua y la vigilancia total mediante los Ojos de Cristal convierten cada gesto en una deuda registrada. Quienes cuestionan el orden son reclasificados como 'ruido' y desaparecen en los niveles inferiores, donde el aire se agota lentamente.",
+  "characters": [
+    "Irene Vázquez",
+    "Darién",
+    "La Voz",
+    "Halcón",
+    "Nadia"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:20:50.336904+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

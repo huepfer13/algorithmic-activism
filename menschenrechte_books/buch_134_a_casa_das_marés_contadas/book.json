@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_134_a_casa_das_marés_contadas",
+  "title": "A Casa das Marés Contadas",
+  "pov": "third_person",
+  "language": "PT",
+  "style": "Parábola",
+  "setting_summary": "Numa vila de pescadores isolada sobre palafitas, cercada por um mar que sobe segundo um calendário secreto, a comunidade vive de rações contadas e de um sino que marca as horas de fala permitida. O Vigia controla o único rádio e o registro dos nomes, enquanto a maré avança um dedo por noite sobre as casas.",
+  "characters": [
+    "Iracema",
+    "Tomé",
+    "Dália",
+    "O Vigia",
+    "Bento"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:29:34.863767+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

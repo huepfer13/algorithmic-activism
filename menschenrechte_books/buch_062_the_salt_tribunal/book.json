@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_062_the_salt_tribunal",
+  "title": "The Salt Tribunal",
+  "pov": "third_person",
+  "language": "EN",
+  "style": "Courtroom_Drama",
+  "setting_summary": "A floating arbitration court anchored in the North Sea, convened aboard a decommissioned oil platform converted into a tribunal, where a catastrophic desalination-plant collapse has left a coastal city without water and thousands displaced. The platform is cramped, storm-lashed, and under constant broadcast surveillance, with a hard deadline: the tribunal must deliver its verdict before the next supply ship arrives in fourteen days or the ruling is void. Every session is streamed live to a desperate public, and the judges' food, fuel, and communications are rationed by the very corporation standing trial.",
+  "characters": [
+    "Maren Voss",
+    "Ilyas Demir",
+    "Judge Okonkwo",
+    "Petra Halvorsen",
+    "Tomas Reiter"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:13:20.136176+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_063_the_ledger_of_ash_and_salt",
+  "title": "The Ledger of Ash and Salt",
+  "pov": "first_person",
+  "language": "EN",
+  "style": "Historical_Chronicle",
+  "setting_summary": "In the walled river-city of Drosselberg during the third year of the Quota Regime, a rationing bureaucracy governs every loaf, candle, and breath, and a sealed quarter known as the Ashworks holds those condemned to labor until their names are struck from the rolls. Ilse Varnholt, a junior ledger-keeper in the Provisions Office, begins secretly recording the discrepancies between what the Regime decrees and what its people actually endure, a diary that could hang her and everyone she loves.",
+  "characters": [
+    "Ilse Varnholt",
+    "Brother Anselm",
+    "Marek Toth",
+    "Sister Ottilie",
+    "Corin"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:13:30.725204+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

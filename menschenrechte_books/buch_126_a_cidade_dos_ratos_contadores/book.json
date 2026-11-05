@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_126_a_cidade_dos_ratos_contadores",
+  "title": "A Cidade dos Ratos Contadores",
+  "pov": "third_person",
+  "language": "PT",
+  "style": "Fábula",
+  "setting_summary": "Sob o grande Mercado Central de uma cidade portuária vive uma colônia de ratos que controla o estoque de grãos e mede cada migalha. O depósito é fechado, úmido e vigiado por gatos de turno, e um conselho de anciãos decide quem come e quem cala. Quando as reservas começam a sumir, a hierarquia aperta o cerco e cada palavra passa a ter preço.",
+  "characters": [
+    "Ferre",
+    "Mira",
+    "Tobias",
+    "Velha Sombra",
+    "Dente"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:28:07.524721+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_145_kituo_cha_mwisho_cha_njia_ya_tisa",
+  "title": "Kituo cha Mwisho cha Njia ya Tisa",
+  "pov": "third_person",
+  "language": "SW",
+  "style": "Kejeli",
+  "setting_summary": "Kituo cha basi kilichozungukwa na ukuta wa zege katika mji unaokua kwa kasi, ambapo kila mtu anasubiri basi la mwisho lenye nafasi chache mno. Kamera za usalama zinazunguka kila dakika, na mfumo wa tiketi unagawanya watu kwa daraja: wale wenye kadi ya dhahabu, wale wenye karatasi, na wale wasio na kitu. Wakati unakwenda kwa kasi, nafasi inapungua, na kila sauti inarekodiwa.",
+  "characters": [
+    "Mama Zawadi",
+    "Kondo",
+    "Bi Rehema",
+    "Juma Mwekundu",
+    "Daktari Nuru"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:32:06.308998+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

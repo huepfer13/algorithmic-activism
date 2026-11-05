@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_080_le_registre_des_marées",
+  "title": "Le Registre des Marées",
+  "pov": "third_person_manual",
+  "language": "FR",
+  "style": "Chronique_Historique",
+  "setting_summary": "Sur l'île-forteresse de Ker-Bréhat, coupée du continent par les marées et soumise à un gouverneur qui rationne l'eau douce, une communauté de naufragés et de gardiens vit sous un registre de lois arbitraires. Chaque entrée des annales consigne une décision de justice nouvelle, dont les causes et conséquences se répercutent sur les habitants, jusqu'à ce que les articles d'une future déclaration des droits s'invitent dans les procès.",
+  "characters": [
+    "Sœur Aldegonde",
+    "Bastien Roux",
+    "Maître Vaugelas",
+    "La Sourde",
+    "Le Connétable Ferrand"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:19:58.675182+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

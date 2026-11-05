@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_178_石缝里的回声",
+  "title": "石缝里的回声",
+  "pov": "third_person",
+  "language": "ZH",
+  "style": "动物寓言",
+  "setting_summary": "一座被高墙围死的旧砖窑，窑洞里住着几代被驯养的动物，食物与饮水由墙外的“送食口”定时投放，数量永远比嘴少一口。窑顶的裂缝是唯一能看见天空的地方，谁若爬上裂缝边沿张望，就会被墙上的铁哨声记名，第二天那份口粮便消失。动物们逐渐发现，送食口的铁闸可以由内部的转盘控制，但转盘只认一个约定：每天必须有一只动物自愿走进“清点室”，否则全体断粮。",
+  "characters": [
+    "灰耳",
+    "铁喙",
+    "长尾",
+    "独眼",
+    "小满"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:39:19.249336+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

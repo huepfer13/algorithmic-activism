@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_115_il_turno_della_parola",
+  "title": "Il Turno della Parola",
+  "pov": "first_person",
+  "language": "IT",
+  "style": "Parabola",
+  "setting_summary": "Una torre-cisterna in disuso, trasformata in rifugio coatto per chi ha perso il diritto di circolare: l'acqua si conta in mestoli, l'aria filtra da una grata e ogni sera un altoparlante gracchiante legge i nomi di chi può salire in superficie. La gerarchia nasce da chi parla e chi tace, perché la parola data a uno toglie fiato all'altro, e il regolamento interno viene riscritto ogni volta che qualcuno reclama un diritto che nessuno gli ha mai concesso.",
+  "characters": [
+    "Nadir",
+    "Suor Elvezia",
+    "Tomas",
+    "Bilal",
+    "La Rossa"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:26:11.911976+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

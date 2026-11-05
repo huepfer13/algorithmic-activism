@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_072_les_voix_de_la_basse_cour",
+  "title": "Les Voix de la Basse-Cour",
+  "pov": "third_person",
+  "language": "FR",
+  "style": "Fable",
+  "setting_summary": "Une basse-cour close, entourée d'un haut grillage, où les bêtes doivent produire un quota d'œufs et de plumes chaque lune sous l'œil d'un chien de garde qui note tout. La nourriture est comptée, l'espace mesuré, et le moindre écart est consigné dans un grand cahier. Quand un décret interdit aux poules de parler avant l'aube, la communauté doit décider qui a le droit de lever la voix.",
+  "characters": [
+    "Plume",
+    "Grise",
+    "Bastien",
+    "Noiraud",
+    "Vieille Caille"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:18:25.199178+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

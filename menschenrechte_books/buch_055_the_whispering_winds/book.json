@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_055_the_whispering_winds",
+  "title": "The Whispering Winds",
+  "pov": "third_person",
+  "language": "EN",
+  "style": "Parable",
+  "setting_summary": "In the heart of a forgotten forest, encircled by an ancient stone wall, lies the village of Eldoria. Here, the villagers are bound by both tradition and fear, living under the ever-watchful eye of the Council, which controls every aspect of their lives.",
+  "characters": [
+    "Aelinor",
+    "Darian",
+    "Thoras",
+    "Mira",
+    "Vaelin"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:07:15.255306+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

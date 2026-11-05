@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_212_the_whispering_woods",
+  "title": "The Whispering Woods",
+  "pov": "third_person",
+  "language": "EN",
+  "style": "Fable",
+  "setting_summary": "In the heart of the Whispering Woods, where ancient trees speak in hushed tones and rivers flow with secrets, a fierce competition for survival is played out. Here, the balance between light and shadow, truth and deception, is ever-changing.",
+  "characters": [
+    "Hawkwing",
+    "Frostbark",
+    "Riverstone",
+    "Sunfeather",
+    "Moonshadow"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:16:09.934375+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

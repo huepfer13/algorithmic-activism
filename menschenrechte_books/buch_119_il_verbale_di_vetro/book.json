@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_119_il_verbale_di_vetro",
+  "title": "Il Verbale di Vetro",
+  "pov": "third_person",
+  "language": "IT",
+  "style": "Dramma_Giudiziario",
+  "setting_summary": "Una camera arbitrale ricavata in un'ex raffineria di zucchero sul delta del Po, dove il sale corrode le pareti e il fiume minaccia di esondare entro trenta giorni. Le udienze si tengono in una sala circolare con vetri smerigliati, sotto la sorveglianza continua di telecamere e con un unico generatore che concede quattro ore di corrente al giorno. Le parti in causa sono un consorzio agricolo, una comunità di sfollati climatici e un ente religioso che rivendica la proprietà del terreno conteso.",
+  "characters": [
+    "Marta Bellandi",
+    "Ettore Salvemini",
+    "Padre Anselmo Riva",
+    "Iris Kovač",
+    "Dottor Neri"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:26:58.509907+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

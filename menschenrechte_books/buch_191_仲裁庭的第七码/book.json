@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_191_仲裁庭的第七码",
+  "title": "仲裁庭的第七码",
+  "pov": "third_person",
+  "language": "ZH",
+  "style": "法庭剧",
+  "setting_summary": "故事发生在近未来一座被海潮与高墙围困的司法浮动城「衡岛」，岛上唯一的仲裁庭以「七日结案」制度审理所有案件，逾期未决者将被永久移出城籍。庭内资源匮乏、全程监控、层级森严，每一句证言都被记录并可能成为呈堂证据，而庭外潮汐每日逼近，压缩着所有人的生存空间与时间。",
+  "characters": [
+    "林砚",
+    "苏黎",
+    "陈默",
+    "阿依古丽",
+    "老周"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:41:43.749329+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

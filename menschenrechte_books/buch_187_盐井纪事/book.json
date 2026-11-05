@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_187_盐井纪事",
+  "title": "盐井纪事",
+  "pov": "third_person",
+  "language": "ZH",
+  "style": "寓言",
+  "setting_summary": "一座被高墙围住的盐井城，井水日渐枯竭，城中按配给簿分盐度日，墙外是无边的碱地。每旬由守井人开闸一次，配给簿上的名字决定谁能活到下一旬；墙头昼夜有人点数，谁多舀一勺，次日名字便会从簿上消失。",
+  "characters": [
+    "阿禾",
+    "穆萨",
+    "老秤",
+    "白鸦",
+    "小满"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:41:02.485174+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

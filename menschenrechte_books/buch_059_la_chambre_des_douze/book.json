@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_059_la_chambre_des_douze",
+  "title": "La Chambre des Douze",
+  "pov": "third_person",
+  "language": "FR",
+  "style": "Drame_Judiciaire",
+  "setting_summary": "Une chambre arbitrale d'exception siège dans l'ancien réfectoire d'un monastère reconverti, à huis clos, sous surveillance constante et avec un calendrier de douze séances seulement pour statuer sur le sort d'un centre de rétention contesté. La salle est étroite, les bancs inconfortables, et chaque témoignage est enregistré puis versé à un dossier que les parties consultent sous contrôle, créant une pression d'urgence et de promiscuité où chaque mot peut faire basculer le verdict.",
+  "characters": [
+    "Maître Élise Vaugirard",
+    "Juge-Arbitre Bertrand Kessler",
+    "Docteur Amara Sow",
+    "Inspecteur Lucien Braque",
+    "Sœur Clémence Ravier"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:12:44.383100+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_069_les_jardins_de_verre",
+  "title": "Les Jardins de Verre",
+  "pov": "third_person",
+  "language": "FR",
+  "style": "Dystopie_SciFi",
+  "setting_summary": "Dans la cité-serre de Verdance, entièrement close sous un dôme où l'air, l'eau et la lumière sont rationnés par un algorithme central appelé le Tuteur, chaque habitant reçoit un score de conformité qui détermine son accès aux ressources et son droit de parole publique. La hiérarchie est invisible mais totale : les capteurs mesurent le ton de voix, la fréquence des sourires et les gestes, et toute baisse de score se paie en rations, en espace et en silence. Une pénurie d'eau annoncée par le Tuteur déclenche une réorganisation des quartiers qui pourrait servir à faire taire les voix critiques.",
+  "characters": [
+    "Iris Vahl",
+    "Tomas Beck",
+    "Nour El-Amri",
+    "Le Contrôleur",
+    "Petit-Jules"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:17:53.666255+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

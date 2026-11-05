@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_067_the_tale_of_the_forest_and_the_field",
+  "title": "The Tale of the Forest and the Field",
+  "pov": "third_person",
+  "language": "EN",
+  "style": "Fable",
+  "setting_summary": "In a vast, ancient forest known as Oakwood, where wisdom and strength are revered, there exists an encroaching field called Thistlefield. The field, driven by the desire for expansion and control, seeks to take over the sacred forest. Birchbrook, a young sapling from Oakwood, learns of this threat and must rally her allies to protect their home and uphold the values of freedom and equality.",
+  "characters": [
+    "Oakwood",
+    "Thistlefield",
+    "Birchbrook",
+    "Willowbank",
+    "Maplewood"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:14:13.610212+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

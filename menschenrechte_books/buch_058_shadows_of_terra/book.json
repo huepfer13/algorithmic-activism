@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_058_shadows_of_terra",
+  "title": "Shadows of Terra",
+  "pov": "third_person",
+  "language": "EN",
+  "style": "SciFi_Dystopia",
+  "setting_summary": "The sprawling city of Vespera, encased in a perpetual twilight, is a testament to human ingenuity and despair. Its inhabitants live under the constant surveillance of the Elysian Collective, which promises order at the cost of their freedoms.",
+  "characters": [
+    "Elden",
+    "Aria",
+    "Kael",
+    "Lysandra",
+    "Thorn"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:12:00.821602+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

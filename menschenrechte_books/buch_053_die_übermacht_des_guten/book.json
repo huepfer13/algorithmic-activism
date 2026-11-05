@@ -1,0 +1,18 @@
+{
+  "book_id": "buch_053_die_übermacht_des_guten",
+  "title": "Die Übermacht des Guten",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Satire",
+  "setting_summary": "Das Gemeindeamt von Guteshausen, ein Ort, der von einer übermächtigen Bürokratie beherrscht wird. Die Ressourcen sind knapp, und die hierarchische Struktur erlaubt keinen Widerspruch.",
+  "characters": [
+    "Herr Wohlwollen",
+    "Frau Gutgläubig",
+    "Schnellzähler",
+    "Zusammenfassender"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:03:08.723455+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

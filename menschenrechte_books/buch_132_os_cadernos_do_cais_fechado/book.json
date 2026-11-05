@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_132_os_cadernos_do_cais_fechado",
+  "title": "Os Cadernos do Cais Fechado",
+  "pov": "third_person_manual",
+  "language": "PT",
+  "style": "Crónica_Histórica",
+  "setting_summary": "Na cidade portuária de São Brás do Estreito, um antigo cais foi murado após um surto de febre e transformado em zona de quarentena permanente, onde os moradores vivem sob racionamento e vigilância da Guarda do Sal. As anais datadas registam como cada decreto, revolta e julgamento altera lentamente os direitos dos encurralados entre os muros e o mar.",
+  "characters": [
+    "Inês Valcárcel",
+    "Tomás Ferrão",
+    "Dona Rosalina",
+    "Padre Bento",
+    "O Escrivão"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:29:14.082110+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

@@ -1,0 +1,17 @@
+{
+  "book_id": "buch_052_die_chroniken_von_ravensholt",
+  "title": "Die Chroniken von Ravensholt",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Historische_Chronik",
+  "setting_summary": "Ravensholt, ein felsiges Burgenreich an den Küsten Norddeutschlands, ist seit Generationen unter dem Einfluss der Familie von Ravensholt. Die Region ist durch strenges Gesetz und enge Beobachtung geprägt, während die Bewohner ihre Würde und Freiheit kämpfen.",
+  "characters": [
+    "Eadin",
+    "Aelis",
+    "Cael"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:00:40.426845+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_087_el_silencio_de_los_turnos",
+  "title": "El Silencio de los Turnos",
+  "pov": "third_person",
+  "language": "ES",
+  "style": "SciFi_Distopía",
+  "setting_summary": "En la colonia subterránea de Nivel Cero, miles de personas viven asignadas a turnos de trabajo y descanso dictados por el Algoritmo, que mide cada gesto y palabra mediante sensores ambientales. La escasez de agua y aire filtrado mantiene a la población en una obediencia silenciosa, mientras los rumores sobre 'desviaciones' se castigan con la reasignación a los túneles profundos. Cuando una falla en el sistema de registro permite a unos pocos recordar lo que otros han olvidado, la frágil armonía del Nivel Cero comienza a resquebrajarse.",
+  "characters": [
+    "Vera",
+    "Tobías",
+    "Lía",
+    "Oren",
+    "Sombra"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:21:09.410166+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

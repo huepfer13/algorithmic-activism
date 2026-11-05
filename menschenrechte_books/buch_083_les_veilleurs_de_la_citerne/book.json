@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_083_les_veilleurs_de_la_citerne",
+  "title": "Les Veilleurs de la Citerne",
+  "pov": "third_person",
+  "language": "FR",
+  "style": "Parabole",
+  "setting_summary": "Dans une cité souterraine bâtie autour d'une citerne unique, la population survit sous un rationnement strict imposé par un Conseil des Heures qui mesure chaque goutte et chaque souffle. L'eau, distribuée selon un classement des dignités, devient l'instrument d'une hiérarchie invisible où les noms s'effacent peu à peu des registres. Chaque nuit, un veilleur différent doit consigner les niveaux d'eau et les paroles entendues dans les couloirs, nourrissant un conflit entre mémoire et obéissance.",
+  "characters": [
+    "Amina",
+    "Vidal",
+    "Sœur Clémence",
+    "Le Cadet",
+    "Tomas"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:20:28.307326+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

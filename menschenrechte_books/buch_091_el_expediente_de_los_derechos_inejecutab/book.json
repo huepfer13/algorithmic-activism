@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_091_el_expediente_de_los_derechos_inejecutab",
+  "title": "El Expediente de los Derechos Inejecutables",
+  "pov": "third_person",
+  "language": "ES",
+  "style": "Sátira",
+  "setting_summary": "En la Oficina de Validación de Derechos Humanos de la ciudad de San Pereque, un laberinto burocrático de pasillos infinitos, ventanillas numeradas y formularios triplicados regula cada derecho fundamental mediante sellos, turnos y tasas. El edificio está sitiado por una cola eterna, cámaras que graban cada gesto y una jerarquía donde un sello mal puesto puede costar la vida o la libertad. La presión del tiempo, la escasez de tinta oficial y la vigilancia omnipresente convierten cualquier derecho sencillo en una odisea imposible.",
+  "characters": [
+    "Doña Remedios",
+    "El Comisario Buitre",
+    "Fermín",
+    "La Señorita Trámite",
+    "Chucho"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:21:50.530199+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

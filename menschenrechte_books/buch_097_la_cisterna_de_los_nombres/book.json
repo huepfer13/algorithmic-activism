@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_097_la_cisterna_de_los_nombres",
+  "title": "La cisterna de los nombres",
+  "pov": "third_person",
+  "language": "ES",
+  "style": "Parábola",
+  "setting_summary": "En una ciudad costera asediada por la marea creciente, la comunidad sobrevive dentro de una vieja cisterna de agua dulce convertida en refugio, donde cada gota se raciona y cada voz se mide. Un consejo de ancianos administra el turno del agua y decide quién merece hablar en la asamblea. La escasez y el encierro convierten la supervivencia en una negociación diaria sobre quién cuenta y quién calla.",
+  "characters": [
+    "Amara",
+    "Teo",
+    "La Vieja Sela",
+    "Bastian",
+    "Nieve"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:22:52.739225+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

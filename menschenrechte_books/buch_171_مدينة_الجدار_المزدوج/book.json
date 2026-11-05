@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_171_مدينة_الجدار_المزدوج",
+  "title": "مدينة الجدار المزدوج",
+  "pov": "third_person",
+  "language": "AR",
+  "style": "الحكاية_الرمزية",
+  "setting_summary": "مدينة محصورة بين جدارين عاليين، يُعاد فيها توزيع الهواء والماء كل فجر وفق سجلٍ لا يراه أحد. يعيش السكان تحت مراقبة الأصوات التي تسمع كل همس، ويقاس فيها كل فرد بمقدار نفعه المسجّل في الدفتر الكبير.",
+  "characters": [
+    "نور",
+    "سليم",
+    "حكيم",
+    "ليلى",
+    "الوالي"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:37:56.380293+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

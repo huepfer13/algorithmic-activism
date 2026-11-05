@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_147_kituo_cha_mwisho",
+  "title": "Kituo cha Mwisho",
+  "pov": "third_person",
+  "language": "SW",
+  "style": "Kejeli",
+  "setting_summary": "Kituo cha mabasi kilichogeuzwa kuwa kambi ya usajili wa kijiji kimoja, chenye foleni isiyoisha na kamera zinazofuatilia kila hatua. Kila mtu anapaswa kuwa na kadi ya utambulisho ili kupata maji, chakula na ruhusa ya kuondoka, lakini mfumo unabadilika kila siku bila tangazo. Ukuta mmoja unaoratibiwa na Bwana Mraba unatawaliwa na kanuni zisizoandikwa zinazozidi haki rahisi za kila mtu.",
+  "characters": [
+    "Mama Zawadi",
+    "Kipara",
+    "Nuru",
+    "Bwana Mraba",
+    "Dogo"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:32:37.222275+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

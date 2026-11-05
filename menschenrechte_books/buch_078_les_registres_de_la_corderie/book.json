@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_078_les_registres_de_la_corderie",
+  "title": "Les Registres de la Corderie",
+  "pov": "third_person_manual",
+  "language": "FR",
+  "style": "Chronique_Historique",
+  "setting_summary": "En 1538, la ville close de Saint-Aubert-sur-Lys vit sous la tutelle d'un bailli royal qui contrôle les métiers, les écrits et les grains. La Corderie, atelier-hôpital saturé de cordiers, de malades et de scribes, étouffe sous l'impôt, l'encre rationnée et la surveillance des registres. Chaque nouvelle ordonnance du bailli fissure l'équilibre entre dignité des corps, parole libre et survie de la communauté.",
+  "characters": [
+    "Maître Aubertin",
+    "Sœur Léonie",
+    "Jehan le Copiste",
+    "Dame Isabeau",
+    "Le Bailli Ferrand"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:19:33.695168+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_179_石缝议会",
+  "title": "石缝议会",
+  "pov": "third_person",
+  "language": "ZH",
+  "style": "动物寓言",
+  "setting_summary": "一座被人类废弃的采石场，四壁陡峭如井，唯一的水源是每日从裂隙渗下的细流，按古老石堆上的刻痕分配。动物们世代住在碎石堆间，靠拾荒与渗水为生，而头顶那道铁栅栏偶尔会落下新的囚徒，也落下关于外面世界的流言。当渗水量开始逐日减少，石堆刻痕的权威与沉默的旧规矩第一次被公开质疑。",
+  "characters": [
+    "灰耳",
+    "独眼公羊",
+    "小凿",
+    "苔背",
+    "断尾"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:39:30.374439+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

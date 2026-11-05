@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_094_anales_del_baluarte_crónica_jurídica_de_",
+  "title": "Anales del Baluarte: Crónica jurídica de la Encomienda de Sal",
+  "pov": "third_person_manual",
+  "language": "ES",
+  "style": "Crónica_Histórica",
+  "setting_summary": "La Encomienda de Sal es una fortaleza amurallada sobre un acantilado, donde una comunidad de salineros, escribanos y clérigos vive bajo racionamiento de agua y sal, vigilada por campanas y registros de entrada. El Corregidor impone un código de ordenanzas que clasifica a los vecinos según su linaje y oficio, mientras el archivo de la Encomienda custodia pleitos y privilegios que todos invocan. La tensión entre el derecho escrito y la costumbre oral permite que, capítulo a capítulo, se debatan la dignidad, la libertad de expresión, el derecho a la vida y la igualdad ante la ley.",
+  "characters": [
+    "Doña Elvira Cárdenas",
+    "Fray Matías Olmedo",
+    "Tomás el Escribano",
+    "Amaranta Quispe",
+    "El Corregidor Bracamonte"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:22:21.584730+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

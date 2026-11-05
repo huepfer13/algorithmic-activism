@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_057_the_shattered_veil",
+  "title": "The Shattered Veil",
+  "pov": "third_person",
+  "language": "EN",
+  "style": "SciFi_Dystopia",
+  "setting_summary": "In the sprawling metropolis of Aethoria, where towering skyscrapers touch the smog-laden sky and every citizen is monitored by the all-seeing EyeNet, a group of rebels fights against an oppressive regime that has stripped them of their rights and freedoms. The city's rigid hierarchy and scarcity of resources create a tense environment ripe for rebellion.",
+  "characters": [
+    "Aria",
+    "Kael",
+    "Elian",
+    "Nyx",
+    "Vex"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:10:49.266583+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_133_a_casa_dos_relógios_afinados",
+  "title": "A Casa dos Relógios Afinados",
+  "pov": "third_person",
+  "language": "PT",
+  "style": "Parábola",
+  "setting_summary": "Numa vila encravada entre salinas e um poço de água doce, todos os moradores vivem sob um regulamento que mede cada gesto pelo relógio da torre, e quem se atrasa perde rações. A vila é cercada por muros de sal e vigiada por alto-falantes que anunciam as horas e as faltas de cada um, enquanto o poço, único bem comum, seca lentamente.",
+  "characters": [
+    "Doralice",
+    "Tomé",
+    "Iracema",
+    "Bento",
+    "A Menina do Poço"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:29:25.163902+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

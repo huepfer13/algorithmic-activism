@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_096_anales_del_baluarte_de_sal",
+  "title": "Anales del Baluarte de Sal",
+  "pov": "third_person_manual",
+  "language": "ES",
+  "style": "Crónica_Histórica",
+  "setting_summary": "El Baluarte de Sal es una fortaleza-isla penitenciaria donde el agua dulce, el pan y el permiso de palabra se racionan por decreto del Gobernador. La crónica registra, entrada por entrada, cómo cada ordenanza jurídica nueva estrecha la vida de los reclusos y de los guardianes que los vigilan. El encierro, la vigilancia de los muros y la escasez de recursos convierten cada artículo de la declaración de derechos en materia de disputa cotidiana.",
+  "characters": [
+    "Isabel Ferrán",
+    "Mateo Cárdenas",
+    "Sor Amparo",
+    "El Escribano",
+    "Nicolás Bruma"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:22:42.627885+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

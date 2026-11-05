@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_081_le_bassin_des_murmures",
+  "title": "Le Bassin des Murmures",
+  "pov": "third_person",
+  "language": "FR",
+  "style": "Parabole",
+  "setting_summary": "Dans une cité souterraine bâtie autour d'un unique bassin d'eau potable, la communauté survit sous un compte à rebours : chaque goutte est mesurée et chaque voix est consignée par les gardiens du Registre. La hiérarchie repose sur la proximité du bassin, et ceux qui murmurent contre les règles voient leur ration réduite. Une fissure nouvelle dans la voûte menace d'assécher la réserve, forçant chacun à choisir entre silence et vérité.",
+  "characters": [
+    "Mira",
+    "Tobias",
+    "la Vielleuse",
+    "Sacha",
+    "Neuf"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:20:08.848545+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_127_o_arquivo_das_almas_em_dia",
+  "title": "O Arquivo das Almas em Dia",
+  "pov": "third_person",
+  "language": "PT",
+  "style": "Sátira",
+  "setting_summary": "Numa repartição colossal chamada Centro de Validação da Existência Humana, cada cidadão precisa de sete carimbos, três pareceres e uma senha renovada a cada quinze minutos para provar que está vivo e tem direitos. As filas são eternas, os corredores labirínticos e a vigilância total, enquanto os funcionários inventam formulários novos sempre que alguém tenta reivindicar algo simples como falar, viver ou ser igual. O conflito cresce quando um menino sem senha válida descobre que pode existir sem autorização.",
+  "characters": [
+    "Dona Efigénia Burocrata-Mor",
+    "Tico Sete-Vias",
+    "Irmã Clotilde do Carimbo",
+    "Dr. Valério Parecer-Sempre",
+    "O Menino da Senha 404"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:28:18.028365+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

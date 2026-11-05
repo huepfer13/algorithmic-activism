@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_095_anales_del_baluarte_de_sal",
+  "title": "Anales del Baluarte de Sal",
+  "pov": "third_person_manual",
+  "language": "ES",
+  "style": "Crónica_Histórica",
+  "setting_summary": "El Baluarte de Sal es una fortaleza-isla penitenciaria donde el agua potable se raciona por decreto y cada voz se registra en libros de causa y consecuencia. La Custodia administra la escasez mediante jerarquías de acceso al pozo, mientras los reclusos letrados redactan alegatos que se archivan o se borran según el humor del gobernador. Cada capítulo data una evolución jurídica: una petición, una sentencia, un motín sofocado o una cláusula nueva, siempre medida por el reloj de la marea y la vigilancia de los pasillos.",
+  "characters": [
+    "Sereno Vela",
+    "Isaura Cienfuegos",
+    "Bartolomé Riel",
+    "La Custodia",
+    "Nieves Alcázar"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:22:32.024091+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_106_il_bosco_dei_diritti",
+  "title": "Il Bosco dei Diritti",
+  "pov": "third_person",
+  "language": "IT",
+  "style": "Favola",
+  "setting_summary": "Un bosco chiuso tra due pareti di roccia, dove l'acqua scorre solo attraverso un canale controllato dagli anziani e ogni animale deve annunciarsi al Coro dell'Alba per ricevere la sua razione. La scarsità d'acqua e lo sguardo vigile delle gazze sentinelle trasformano ogni parola in un rischio e ogni silenzio in una colpa.",
+  "characters": [
+    "Lilla",
+    "Tobbo",
+    "Gazza",
+    "Nonna Ruga",
+    "Fumo"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:24:29.298442+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

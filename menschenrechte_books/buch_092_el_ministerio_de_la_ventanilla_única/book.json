@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_092_el_ministerio_de_la_ventanilla_única",
+  "title": "El Ministerio de la Ventanilla Única",
+  "pov": "third_person",
+  "language": "ES",
+  "style": "Sátira",
+  "setting_summary": "En la ficticia República de Valdementa, toda gestión ciudadana debe pasar por la Ventanilla Única, un edificio laberíntico donde cada trámite genera tres trámites nuevos. El país sufre escasez de tinta oficial y un reglamento de 40.000 páginas que hace inejecutables derechos elementales como nacer, opinar o morir; el tiempo de espera se mide en generaciones y la jerarquía decide quién tiene derecho a una silla.",
+  "characters": [
+    "Doña Práxedes",
+    "Fermín",
+    "La Jueza Cárdenas",
+    "Bermúdez",
+    "El Niño de los Formularios"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:22:01.628664+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

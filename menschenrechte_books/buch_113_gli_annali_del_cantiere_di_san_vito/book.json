@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_113_gli_annali_del_cantiere_di_san_vito",
+  "title": "Gli Annali del Cantiere di San Vito",
+  "pov": "third_person",
+  "language": "IT",
+  "style": "Cronaca_Storica",
+  "setting_summary": "Nel 1543 il cantiere della nuova cattedrale di San Vito, sull'isola di Morbida, è un cantiere-prigione: gli operai vivono sotto sorveglianza continua, con razioni contate e un solo ponte verso la terraferma. La Repubblica Serenissima vi ha insediato un Commissario che amministra giustizia sommaria, e ogni morte sul lavoro viene registrata come volontà divina. Quando un muratore cade dalle impalcature, la sua caduta diventa il primo articolo di un lungo contenzioso sulla dignità e sul diritto alla voce.",
+  "characters": [
+    "Donna Isotta Ferrante",
+    "Mastro Beppe",
+    "Suor Colomba",
+    "Nino il Muratore",
+    "Il Commissario Vanni"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:25:51.844291+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

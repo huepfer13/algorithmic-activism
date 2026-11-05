@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_103_il_silenzio_dei_numeri",
+  "title": "Il Silenzio dei Numeri",
+  "pov": "third_person",
+  "language": "IT",
+  "style": "Distopia_SciFi",
+  "setting_summary": "Nella citta-stato di Cuneo Sette, ogni cittadino vive in moduli abitativi assegnati e viene valutato in tempo reale da un sistema di merito chiamato la Bilancia, che regola accesso a cibo, cure e movimento. Le risorse sono scarse e la densita abitativa estrema: chi scende sotto una soglia di punteggio viene trasferito nei Livelli Bassi, dove l'aria e filtrata e la sorveglianza non si interrompe mai. La Bilancia promette equita, ma i suoi criteri sono opachi e modificabili dall'alto.",
+  "characters": [
+    "Elia",
+    "Mara",
+    "Voss",
+    "Nadir",
+    "Sibilla"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:23:54.647962+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

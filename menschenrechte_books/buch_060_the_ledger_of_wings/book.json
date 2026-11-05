@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_060_the_ledger_of_wings",
+  "title": "The Ledger of Wings",
+  "pov": "third_person",
+  "language": "EN",
+  "style": "Fable",
+  "setting_summary": "In a walled cliffside aviary called the Roost, a colony of birds lives under a strict rationing order enforced by the Keeper's ledger, where every seed, feather, and word is counted and any dissent is marked as debt. Space is scarce, the cliff face is crumbling, and the only water comes through a single regulated channel, so the colony must choose daily between obedience and survival. The Roost's hierarchy of Watchers and Debtors keeps each bird aware that a single unrecorded song can cost a life.",
+  "characters": [
+    "Corvus",
+    "Lumen",
+    "Old Marta",
+    "Pip",
+    "Silas"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:13:01.698304+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_131_anais_do_bairro_da_cerca",
+  "title": "Anais do Bairro da Cerca",
+  "pov": "third_person_manual",
+  "language": "PT",
+  "style": "Crónica_Histórica",
+  "setting_summary": "O Bairro da Cerca é um antigo bairro operário cercado por um muro administrativo, onde cada família recebe uma cota semanal de água e de passagens para sair. Um regulamento municipal datado transforma a vida quotidiana em matéria de registo: cada pedido, cada ausência e cada opinião deve ser anotada. A pressão nasce da escassez, da hierarquia e da vigilância mútua, enquanto os moradores aprendem a negociar dignidade, palavra e sobrevivência artigo por artigo.",
+  "characters": [
+    "Dona Iracema",
+    "Padre Bento",
+    "Zulmira",
+    "Cabo Nunes",
+    "Tomé"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:29:03.578529+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

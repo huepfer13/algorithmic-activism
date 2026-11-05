@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_142_mto_wa_maneno",
+  "title": "Mto wa Maneno",
+  "pov": "third_person",
+  "language": "SW",
+  "style": "Hadithi_ya_Wanyama",
+  "setting_summary": "Katika bonde dogo la Mto wa Maneno, wanyama wanakaa katika eneo lenye ukame unaokaribia na sheria kali za uwindaji zilizowekwa na Chui Kali. Kila siku maji yanapungua, na kila mnyama anapaswa kuomba ruhusa ya kunywa kwa utaratibu mkali unaodhibitiwa na wale wenye nguvu. Ukosefu wa maji na hofu ya adhabu huweka shinikizo la kila siku kwa wote wanaokaa bondeni.",
+  "characters": [
+    "Kaka Simba",
+    "Bibi Tembo",
+    "Ndovu Mzee",
+    "Chui Kali",
+    "Kiboko Mdogo"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:31:20.660477+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

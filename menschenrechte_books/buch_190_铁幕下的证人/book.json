@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_190_铁幕下的证人",
+  "title": "铁幕下的证人",
+  "pov": "third_person",
+  "language": "ZH",
+  "style": "法庭剧",
+  "setting_summary": "2031年，一座由旧海上钻井平台改建的国际仲裁庭悬浮于争议海域，四周被自动巡逻艇封锁，任何人员出入须经三重授权。庭内资源极度匮乏，电力与饮用水按小时配额，监控无死角，所有人都在镜头下作证与密谋。一桩涉及跨国数据封锁与难民遣返的诉讼将各方拖入长达数月的审理，而庭外风暴正逼近平台的承重极限。",
+  "characters": [
+    "林昭",
+    "陈默",
+    "苏珊",
+    "老周",
+    "阿列克谢"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:41:33.457598+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

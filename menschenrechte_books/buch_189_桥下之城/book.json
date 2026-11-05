@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_189_桥下之城",
+  "title": "桥下之城",
+  "pov": "third_person",
+  "language": "ZH",
+  "style": "寓言",
+  "setting_summary": "一座建在废弃高架桥阴影下的棚户城，居民靠桥面滴落的雨水和拾荒为生，出入须经唯一的铁梯，由守桥人登记姓名。桥面每日有巡查的脚步声，谁被记入黑册，谁的门前就会被画上白圈。",
+  "characters": [
+    "阿禾",
+    "老秤",
+    "小满",
+    "断指陈",
+    "哑姑"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:41:22.344523+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

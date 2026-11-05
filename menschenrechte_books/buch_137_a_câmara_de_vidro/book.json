@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_137_a_câmara_de_vidro",
+  "title": "A Câmara de Vidro",
+  "pov": "third_person",
+  "language": "PT",
+  "style": "Drama_Judicial",
+  "setting_summary": "Uma câmara arbitral improvisada no antigo refeitório de uma fábrica têxtil ocupada, em São Bento do Norte, onde o teto de vidro trincado e o relógio de ponto ainda funcional impõem a todos os presentes a consciência de que cada minuto é escrutinado. O espaço é exíguo, vigiado por câmeras comunitárias e por um regulamento interno de silêncio que transforma cada gesto em prova. A fábrica está em greve há quarenta e um dias, e a câmara tem apenas três sessões para decidir se a ocupação é legítima — enquanto os artigos da Declaração Universal são invocados como armas por ambos os lados.",
+  "characters": [
+    "Helena Vasconcelos",
+    "Tomás Rebelo",
+    "Iracema Duarte",
+    "Bento Alencar",
+    "Dália Ferraz"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:30:08.113201+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

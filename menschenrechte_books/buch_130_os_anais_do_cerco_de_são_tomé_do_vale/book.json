@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_130_os_anais_do_cerco_de_são_tomé_do_vale",
+  "title": "Os Anais do Cerco de São Tomé do Vale",
+  "pov": "third_person",
+  "language": "PT",
+  "style": "Crónica_Histórica",
+  "setting_summary": "Uma vila-fortaleza encravada entre a serra e o rio, governada por um conselho de notáveis que controla o único poço e os celeiros, sob um cerco que já dura sete anos. A cada ano o Tabelião registra em anais as leis e sentenças da vila, transformando a sobrevivência numa contabilidade de culpas e privilégios. O tempo aperta, os recursos escasseiam e cada artigo de dignidade passa a ser negociado como ração.",
+  "characters": [
+    "Irmã Bernarda",
+    "Tomás Cardoso",
+    "Damião",
+    "Letícia Braga",
+    "O Tabelião"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:28:52.466304+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

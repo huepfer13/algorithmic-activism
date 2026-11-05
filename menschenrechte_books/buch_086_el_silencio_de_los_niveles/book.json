@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_086_el_silencio_de_los_niveles",
+  "title": "El Silencio de los Niveles",
+  "pov": "third_person",
+  "language": "ES",
+  "style": "SciFi_Distopía",
+  "setting_summary": "En la torre-ciudad de Ardea, una megaciudad vertical dividida en niveles donde el aire, el agua y el permiso de hablar se racionan por méritos, cada residente lleva un implante que mide su 'coherencia social' y silencia a quien baja del umbral. La supervivencia depende de denunciar a otros antes de ser denunciado, mientras el Consejo de Niveles reescribe a diario qué palabras siguen siendo legales pronunciar.",
+  "characters": [
+    "Vera",
+    "Tobías",
+    "Nadia",
+    "Kessel",
+    "Oria"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:21:00.177429+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

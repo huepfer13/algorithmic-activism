@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_185_铁幕下的编年史北纬三十八度的回声",
+  "title": "铁幕下的编年史：北纬三十八度的回声",
+  "pov": "third_person",
+  "language": "ZH",
+  "style": "历史编年",
+  "setting_summary": "故事发生在虚构的边境工业城市铁原市，一座被军事管制与资源短缺双重挤压的封闭城市。市民生活在严密的户籍监控与配给制度下，任何言论与集会都需经过审查。一条新颁布的《社会秩序维护特别条例》成为导火索，迫使不同身份的人在生存、尊严与自由之间做出抉择。",
+  "characters": [
+    "林昭华",
+    "崔明宇",
+    "赵德柱",
+    "金顺姬",
+    "朴英哲"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:40:36.064054+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

@@ -390,6 +390,10 @@ STILVORGABE {style_name}: {style_desc}
 
 Erfinde Setting, Besatzung und eine Konflikt-Praemisse, die sich ueber viele Kapitel tragen kann.
 
+SPRACHE — verbindlich: ALLE Textfelder (title, setting_summary) werden ausschliesslich auf
+{lang_name} formuliert. Die Anweisungen hier sind nur auf Deutsch, damit du sie sicher verstehst;
+die Ausgabe ist {lang_name}. Titel und Figurennamen ebenfalls in dieser Sprache, nicht uebersetzen.
+
 Anforderungen:
 - 3 bis 5 Hauptfiguren mit Namen (Eigennamen oder kurze Bezeichner).
 - Ein Schauplatz mit eigenem Druckmittel (Zeit, Enge, Ueberwachung, Ressourcen, Hierarchie).
@@ -401,7 +405,7 @@ Anforderungen:
 Fuer 'characters' gilt STRIKT: ausschliesslich Namen bzw. kurze Bezeichner. KEINE Rollenbezeichnung,
 KEIN Doppelpunkt, KEINE Beschreibung, KEINE Nummern-Codes, keine Strings wie "Rolle: Beschreibung".
 
-Antworte AUSSCHLIESSLICH mit JSON in genau dieser Form:
+Antworte AUSSCHLIESSLICH mit JSON in genau dieser Form (Texte auf {lang_name}):
 {{"title": "...", "pov": "first_person", "characters": ["Name1", "Name2", "Name3"], "setting_summary": "zwei bis drei Saetze"}}"""
 
 
@@ -1462,6 +1466,25 @@ def _append_chapter_gesperrt(book_id: str | None = None, lang: str | None = None
     return pfad
 
 
+FEHLER_SCHRANKE = 3       # 3 Fehlschlaege in Folge -> Circuit-Breaker
+CIRCUIT_PAUSE_S = 900     # 15 Minuten Pause
+NTFY_URL = os.getenv("NTFY_URL", "http://192.168.2.111/hermes-waechter")
+
+
+def ntfy_alarm(titel: str, text: str) -> None:
+    """Push an die unabhaengige Senke (ntfy). Ein Fehler hier darf den Daemon nicht toeten."""
+    try:
+        import urllib.request
+        kopf = {"Title": titel.encode("ascii", "ignore").decode(), "Priority": "high",
+                "Tags": "warning"}
+        req = urllib.request.Request(NTFY_URL, data=text.encode("utf-8"), headers=kopf)
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            resp.read(1)
+        print(f"  -> ntfy-Alarm gesendet ({titel}).", flush=True)
+    except Exception as e:  # noqa: BLE001
+        print(f"  -> ntfy-Alarm FEHLGESCHLAGEN: {type(e).__name__}: {e}", flush=True)
+
+
 def synthesize_one(article_id: str, style: str, lang: str, model: str, host: str):
     art = load_article(article_id, lang)
     loc = load_locale(lang)
@@ -1471,11 +1494,12 @@ def synthesize_one(article_id: str, style: str, lang: str, model: str, host: str
     output = run_ollama_stream(prompt, model=model, host=host)
     if not output:
         print("  -> Leere Antwort vom Modell erhalten.", flush=True)
-        return
+        return False
 
     path, passed = save_tale(output, article_id, style, lang, model)
     state_str = "GESPEICHERT" if passed else "QUARANTÄNE"
     print(f"  -> [{state_str}] {os.path.basename(path)}", flush=True)
+    return True
 
 
 def main():
@@ -1558,6 +1582,7 @@ def main():
             f.write(str(os.getpid()))
         print(f"Daemon aktiv (PID: {os.getpid()}). Last-Monitor scharfgeschaltet.")
 
+        fehler_in_folge = 0
         try:
             while True:
                 if not check_system_load():
@@ -1567,7 +1592,24 @@ def main():
 
                 sel_art = random.choice(available_articles)
                 sel_style = random.choice(available_styles)
-                synthesize_one(sel_art, sel_style, args.lang, args.model, host)
+                try:
+                    ok = synthesize_one(sel_art, sel_style, args.lang, args.model, host)
+                except Exception as e:  # noqa: BLE001
+                    ok = False
+                    print(f"  -> FEHLER ({type(e).__name__}): {e}", flush=True)
+
+                fehler_in_folge = 0 if ok else fehler_in_folge + 1
+                if fehler_in_folge >= FEHLER_SCHRANKE:
+                    print(f"Circuit-Breaker: {fehler_in_folge} Fehlschlaege in Folge "
+                          f"-> Pause {CIRCUIT_PAUSE_S} s.", flush=True)
+                    ntfy_alarm("Circuit-Breaker",
+                               f"{fehler_in_folge} Fehlschlaege in Folge "
+                               f"(Modell {args.model}, Host {host}); "
+                               f"Daemon pausiert {CIRCUIT_PAUSE_S} s.")
+                    time.sleep(CIRCUIT_PAUSE_S)
+                    fehler_in_folge = 0
+                    continue
+
                 time.sleep(args.cooldown)
         finally:
             if os.path.exists(PID_FILE):

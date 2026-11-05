@@ -1,0 +1,17 @@
+{
+  "book_id": "buch_054_the_whispering_vine",
+  "title": "The Whispering Vine",
+  "pov": "third_person",
+  "language": "EN",
+  "style": "Parable",
+  "setting_summary": "Set in the dense, ancient forest of Eldoria, where time seems to move in slow, deliberate steps. The forest is a place of both beauty and danger, with a network of hidden paths and mysterious whispers that guide those who listen carefully.",
+  "characters": [
+    "Elian",
+    "Aria",
+    "Kael"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:05:11.251668+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

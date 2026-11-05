@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_122_a_cidade_que_sonha",
+  "title": "A Cidade que Sonha",
+  "pov": "third_person",
+  "language": "PT",
+  "style": "SciFi_Distopia",
+  "setting_summary": "Numa metrópole subterrânea chamada Abrigo-9, a população vive sob um sistema de racionamento de sono: cada cidadão recebe apenas quatro horas diárias de descanso profundo, monitorizadas por implantes neurais que classificam sonhos como 'ruído' ou 'ameaça'. Quem acumula sonhos proibidos é reclassificado como 'excedente' e enviado às galerias de reciclagem, onde o tempo e o ar são contados. A hierarquia dos Arquivos do Sono controla a memória coletiva, e um apagão de doze horas no sistema de vigilância abre uma janela para que verdades suprimidas despertem.",
+  "characters": [
+    "Vera",
+    "Tomás",
+    "Íris",
+    "Cardoso",
+    "Lume"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:27:29.977188+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

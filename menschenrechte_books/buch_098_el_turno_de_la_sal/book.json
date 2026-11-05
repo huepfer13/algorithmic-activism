@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_098_el_turno_de_la_sal",
+  "title": "El Turno de la Sal",
+  "pov": "third_person",
+  "language": "ES",
+  "style": "Parábola",
+  "setting_summary": "Una mina de sal abandonada convertida en refugio vertical, donde cien personas viven en pisos excavados y comparten un único pozo de agua que se agota. Cada turno de extracción se sortea semanalmente bajo la mirada de un capataz hereditario que controla las cuerdas, los baldes y la lista de nombres.",
+  "characters": [
+    "Nadia",
+    "Tomás",
+    "La Vieja Brígida",
+    "El Chino",
+    "Amara"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:23:03.210930+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

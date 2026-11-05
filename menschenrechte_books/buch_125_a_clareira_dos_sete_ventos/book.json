@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_125_a_clareira_dos_sete_ventos",
+  "title": "A Clareira dos Sete Ventos",
+  "pov": "third_person",
+  "language": "PT",
+  "style": "Fábula",
+  "setting_summary": "Uma clareira suspensa numa árvore colossal, cercada por um abismo de névoa, abriga uma comunidade de animais que fala. A clareira é pequena e os recursos são contados: cada folha colhida é registrada e cada palavra pública precisa do aval do Conselho. A névoa sobe um palmo por dia, apertando o espaço e transformando cada discussão sobre direitos numa questão de sobrevivência.",
+  "characters": [
+    "Dona Fia",
+    "Tobias",
+    "Riso",
+    "Madame Bruma",
+    "O Velho Cônego"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:27:58.671132+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

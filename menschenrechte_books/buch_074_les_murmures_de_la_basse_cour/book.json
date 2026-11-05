@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_074_les_murmures_de_la_basse_cour",
+  "title": "Les Murmures de la Basse-Cour",
+  "pov": "third_person",
+  "language": "FR",
+  "style": "Fable",
+  "setting_summary": "Dans une basse-cour close de hautes palissades, une communauté d'animaux vit sous l'autorité d'un règlement de fer dicté par le Vieux Chien de garde, tandis que les réserves de grain diminuent chaque jour. L'espace est compté, chaque geste est observé depuis la tour du poulailler, et la peur du renard rôdeur sert à justifier toutes les restrictions. La survie du groupe dépend d'un équilibre fragile entre obéissance, rumeurs et petites révoltes murmurées.",
+  "characters": [
+    "Plume",
+    "Grison",
+    "Museau",
+    "Ombre",
+    "Blette"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:18:46.909823+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

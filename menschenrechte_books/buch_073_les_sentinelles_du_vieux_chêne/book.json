@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_073_les_sentinelles_du_vieux_chêne",
+  "title": "Les Sentinelles du Vieux Chêne",
+  "pov": "third_person",
+  "language": "FR",
+  "style": "Fable",
+  "setting_summary": "Dans une forêt française menacée par une sécheresse implacable, une communauté animale survit autour d'un unique point d'eau qui s'amenuise chaque jour sous la surveillance des corbeaux de la canopée. Le Vieux Chêne, arbre-décret où sont gravées les règles du clan, impose une hiérarchie stricte et une ration de gouttes comptées. La peur du manque attise les tensions, et chaque décision sur qui boit, qui parle et qui compte devient une épreuve de dignité.",
+  "characters": [
+    "Bruna",
+    "Sifflet",
+    "Mireille",
+    "Gaspard",
+    "Nyx"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:18:35.522959+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

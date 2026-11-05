@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_108_la_gabbia_di_rame",
+  "title": "La Gabbia di Rame",
+  "pov": "third_person",
+  "language": "IT",
+  "style": "Favola",
+  "setting_summary": "In una valle chiusa da mura di rame vive una colonia di animali parlanti guidata da un consiglio che misura ogni parola e ogni chicco di grano. Le risorse sono contate e la torre dell'eco sorveglia i discorsi, punendo chi alza troppo la voce. Quando una siccità prosciuga il fiume, la gerarchia vacilla e ogni gesto diventa una scelta tra obbedienza e dignità.",
+  "characters": [
+    "Rina",
+    "Tobbo",
+    "Sora",
+    "il Vecchio Menno",
+    "Lisca"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:24:51.111978+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

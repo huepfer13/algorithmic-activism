@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_077_le_guichet_des_droits_inapplicables",
+  "title": "Le Guichet des Droits Inapplicables",
+  "pov": "first_person",
+  "language": "FR",
+  "style": "Satire",
+  "setting_summary": "Dans un bâtiment administratif tentaculaire appelé le Guichet Unique des Droits, chaque citoyen doit obtenir une autorisation pour exercer le moindre droit élémentaire, mais chaque guichet renvoie vers un autre service introuvable. La pression naît de l'attente interminable, des files qui se referment la nuit, et d'une hiérarchie de tampons où le moindre document manquant condamne le requérant à recommencer depuis le début.",
+  "characters": [
+    "Odile Vantard",
+    "Monsieur Bref",
+    "Le Contrôleur Suprême",
+    "Juliette Sanspapier",
+    "Bastien Trois-Tampons"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:19:21.805222+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

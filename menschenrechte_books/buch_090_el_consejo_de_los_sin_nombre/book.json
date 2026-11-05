@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_090_el_consejo_de_los_sin_nombre",
+  "title": "El Consejo de los Sin Nombre",
+  "pov": "third_person",
+  "language": "ES",
+  "style": "Fábula",
+  "setting_summary": "En una madriguera-colmena subterránea llamada La Cisterna, cientos de animales viven apiñados bajo un techo de raíces que gotea y un racionamiento de agua contado gota a gota. El Consejo de los Ancianos controla quién bebe, quién habla en la Asamblea y qué se recuerda del pasado, mientras el aire viciado y las galerías derrumbadas hacen que cada día sea una cuenta atrás. La escasez y la vigilancia constante convierten cualquier disidencia en una amenaza para la supervivencia de todos.",
+  "characters": [
+    "Tejón",
+    "Urraca",
+    "Lirón",
+    "Comadreja",
+    "Búho"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:21:38.831397+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

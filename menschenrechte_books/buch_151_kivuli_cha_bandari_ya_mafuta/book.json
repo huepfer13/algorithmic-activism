@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_151_kivuli_cha_bandari_ya_mafuta",
+  "title": "Kivuli cha Bandari ya Mafuta",
+  "pov": "third_person",
+  "language": "SW",
+  "style": "Mfano",
+  "setting_summary": "Kisiwa cha bandari ya mafuta kinachozungukwa na bahari yenye dhoruba za mara kwa mara, kikikosa ardhi ya kilimo na kutegemea meli za mafuta zinazopita. Uongozi wa kambi unadhibiti maji, chakula na vibali vya kutoka, huku kamera na walinzi wakifuatilia kila hatua ya wakazi. Mvutano unakua kati ya wafanyakazi wa kambi na wale wanaodai haki zao za msingi kabla ya meli ya msaada kuondoka.",
+  "characters": [
+    "Zainabu",
+    "Mussa",
+    "Fatuma",
+    "Kiongozi Juma",
+    "Bakari Mdogo"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:33:44.797176+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_152_kivuli_cha_bandari",
+  "title": "Kivuli cha Bandari",
+  "pov": "third_person",
+  "language": "SW",
+  "style": "Mfano",
+  "setting_summary": "Bandari ya kale ya Mtwara imezungukwa na ukuta wa forodha unaodhibiti kila mtu anayeingia na kutoka; nje ya ukuta kuna kambi ya wafanyakazi wa muda inayokaa kwenye vibanda vilivyobanana. Mamlaka ya bandari inadai kila mtu awe na kibali cha siku kimoja, na ukosefu wa kibali humaanisha kufukuzwa au kuzuiwa. Mvua za masika zinakaribia, na meli moja iliyokwama nje ya matumbwi inaweza kuwa njia pekee ya kuondoka au sababu ya kugandamizwa zaidi.",
+  "characters": [
+    "Zuhura",
+    "Makame",
+    "Bi Rehema",
+    "Konde",
+    "Hamisi"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:34:00.723607+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_148_kumbukumbu_za_korongo_hati_za_bandari_ya",
+  "title": "Kumbukumbu za Korongo: Hati za Bandari ya Chuma",
+  "pov": "third_person_manual",
+  "language": "SW",
+  "style": "Kumbukumbu_za_Historia",
+  "setting_summary": "Bandari ya Chuma ni kisiwa cha bandari kilichofungwa na ukuta wa jeshi, ambapo nafasi, maji safi na muda wa kufanya kazi vinadhibitiwa kwa ratiba kali ya kamati ya wakoloni. Kila hatua ya wakazi imeandikwa katika daftari la tarehe, sababu na matokeo, hivyo maamuzi madogo huamua nani atapata chakula, kibali au sauti. Mgogoro unazuka pale daftari la kumbukumbu linapogunduliwa kuwa silaha: nani ana haki ya kuandika historia ya kisiwa?",
+  "characters": [
+    "Mama Nuru",
+    "Kapteni Juma",
+    "Binti Zawadi",
+    "Mzee Kipara",
+    "Askari Rehema"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:32:54.855497+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

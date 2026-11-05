@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_084_la_chambre_du_silence",
+  "title": "La Chambre du Silence",
+  "pov": "third_person",
+  "language": "FR",
+  "style": "Drame_Judiciaire",
+  "setting_summary": "Une chambre arbitrale d'exception, installée dans l'ancien palais de justice d'une ville portuaire sous couvre-feu sanitaire, où chaque séance est chronométrée par un huis clos de quatre-vingt-dix minutes et surveillée par des caméras. Les parties y débattent du sort d'un lanceur d'alerte hospitalier, sous la pression d'une hiérarchie judiciaire qui exige un verdict avant l'aube, tandis que les ressources — dossiers scellés, témoins rares, temps compté — s'amenuisent à chaque chapitre.",
+  "characters": [
+    "Maître Aurélie Vasseur",
+    "Juge-arbitre Bertrand Kessler",
+    "Ibrahim Toure",
+    "Claire Fontanel",
+    "Docteur Émile Roussel"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:20:40.710887+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

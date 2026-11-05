@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_129_o_departamento_de_direitos_inexecutáveis",
+  "title": "O Departamento de Direitos Inexecutáveis",
+  "pov": "third_person",
+  "language": "PT",
+  "style": "Sátira",
+  "setting_summary": "O Edifício da Conformidade, uma torre labiríntica onde cada direito só existe após preencher o formulário correto, em filas que nunca terminam e corredores vigiados por alto-falantes que anunciam senhas. A escassez é o oxigênio: há apenas um carimbo válido e ele está sempre noutro andar, sob a custódia de alguém que exige outro documento para o libertar.",
+  "characters": [
+    "Amável Torres",
+    "Dona Pureza",
+    "Fiscal Bento",
+    "A Menina do Protocolo",
+    "Dr. Cânfora"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:28:40.654404+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

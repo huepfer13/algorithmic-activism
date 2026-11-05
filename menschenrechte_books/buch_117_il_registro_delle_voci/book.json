@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_117_il_registro_delle_voci",
+  "title": "Il Registro delle Voci",
+  "pov": "third_person",
+  "language": "IT",
+  "style": "Parabola",
+  "setting_summary": "Un archivio sotterraneo chiamato il Registro custodisce le voci di tutti gli abitanti di una città-stato, e ogni voce deve essere depositata e approvata per esistere pubblicamente. Le risorse d'aria, luce e carta sono razionate, e un custode sorveglia ogni deposito, così che parlare diventa un atto misurato e revocabile.",
+  "characters": [
+    "Nadia",
+    "Elia",
+    "Sora",
+    "Vero",
+    "Il Custode"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:26:33.614217+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

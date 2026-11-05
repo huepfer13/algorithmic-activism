@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_082_les_veilleurs_du_réservoir",
+  "title": "Les Veilleurs du Réservoir",
+  "pov": "first_person",
+  "language": "FR",
+  "style": "Parabole",
+  "setting_summary": "Un réservoir d'eau souterrain désaffecté abrite une communauté de naufragés qui ne peut sortir qu'à la nuit tombée, sous la surveillance des gardes de surface. Chaque goutte est comptée, chaque parole murmurée, et la hiérarchie se mesure à la proximité des filtres. La peur du dehors et la rareté de l'eau font de chaque jour une négociation entre dignité et survie.",
+  "characters": [
+    "Naïma",
+    "Le Vieux Tarek",
+    "Sabine",
+    "Hakim",
+    "La Petite Rime"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:20:18.551611+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

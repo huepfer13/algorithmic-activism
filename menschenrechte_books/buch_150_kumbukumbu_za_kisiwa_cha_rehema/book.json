@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_150_kumbukumbu_za_kisiwa_cha_rehema",
+  "title": "Kumbukumbu za Kisiwa cha Rehema",
+  "pov": "third_person_manual",
+  "language": "SW",
+  "style": "Kumbukumbu_za_Historia",
+  "setting_summary": "Kisiwa cha Rehema ni kituo cha kambi kilichozungukwa na bahari na ukuta wa zege, chenye msongamano mkubwa na mgao mdogo wa chakula na maji. Kamati ya Usalama inaandika kila tukio katika daftari la tarehe, sababu na matokeo, hivyo maisha ya wakazi yanatawaliwa na kumbukumbu rasmi. Mgogoro wa umiliki wa ardhi na haki za kusema unaanza kuchipua kati ya watawala na wakazi.",
+  "characters": [
+    "Malkia Nuru",
+    "Kiongozi Baraka",
+    "Mwandishi Zuhura",
+    "Mzee Kito",
+    "Askari Furaha"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:33:25.430116+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

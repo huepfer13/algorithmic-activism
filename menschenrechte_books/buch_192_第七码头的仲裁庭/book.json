@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_192_第七码头的仲裁庭",
+  "title": "第七码头的仲裁庭",
+  "pov": "third_person",
+  "language": "ZH",
+  "style": "法庭剧",
+  "setting_summary": "一座被海水包围的废弃集装箱码头，临时改造成常设仲裁庭，审判一起因封港引发的集体绝食与罢工案。庭内空间狭窄、旁听席与被告席仅一栏之隔，所有证词经码头广播实时外放，全港工人都在监听；而潮水每天两次淹没底层档案室，任何证据若不在退潮窗口内呈堂便永久灭失。",
+  "characters": [
+    "林砚秋",
+    "陈默",
+    "苏晚",
+    "老K",
+    "何丽娜"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:41:55.117149+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

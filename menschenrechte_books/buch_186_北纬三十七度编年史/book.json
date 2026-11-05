@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_186_北纬三十七度编年史",
+  "title": "北纬三十七度编年史",
+  "pov": "third_person",
+  "language": "ZH",
+  "style": "历史编年",
+  "setting_summary": "边疆城市临河堡被外部势力长期围困，城内实行配给制与宵禁，粮食、饮水与通行资格由军事管制委员会按等级分配。围困造成的资源稀缺与无所不在的户籍审查让邻里互相监视，任何公开异议都可能被记为'扰乱秩序'。编年体逐条记录管制法令的颁布与后果，为日后逐条讨论人的尊严、言论、生命与平等埋下伏笔。",
+  "characters": [
+    "沈砚秋",
+    "阿依古丽",
+    "老赵",
+    "林之遥",
+    "白狼"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:40:48.923654+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

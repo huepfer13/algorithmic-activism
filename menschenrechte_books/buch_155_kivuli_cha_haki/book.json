@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_155_kivuli_cha_haki",
+  "title": "Kivuli cha Haki",
+  "pov": "third_person",
+  "language": "SW",
+  "style": "Tamthilia_ya_Mahakama",
+  "setting_summary": "Kesi inafanyika katika ukumbi mdogo wa baraza la usuluhishi kwenye kisiwa cha Kilwa, ambako kamati ya wazee huketi chini ya saa moja tu kila siku kabla jua kuchomoza. Kila mtu anajua kwamba muda ni mchache, nafasi ni nyembamba, na kila neno linaweza kugeuza hukumu. Usuluhishi unahusu mgogoro wa ardhi na heshima kati ya wakazi wa kisiwa na mamlaka ya kiongozi wa eneo.",
+  "characters": [
+    "Mama Zawadi",
+    "Kiongozi Mwiba",
+    "Bwana Heri",
+    "Neema",
+    "Mzee Kifaru"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:34:47.688874+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
