@@ -985,7 +985,9 @@
     "r9:nvidia/nemotron-3-super-120b-a12b:free:buch_032_the_glass_tribunal",
     "r10:deepseek-chat:buch_010_amtsblatt_fuer_unzumutbarkeit",
     "r2:nvidia/nemotron-3-ultra-550b-a55b:free:buch_041_die_wasserwaage_von_ahrenfeld",
-    "r6:deepseek-chat:buch_041_die_wasserwaage_von_ahrenfeld"
+    "r6:deepseek-chat:buch_041_die_wasserwaage_von_ahrenfeld",
+    "r7:deepseek-chat:buch_021_the_bell_of_the_ninth_gate",
+    "r9:deepseek-chat:buch_027_das_haus_das_die_namen_fraß"
   ],
   "runden": {
     "1": [
@@ -12047,6 +12049,16 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 7
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_021_the_bell_of_the_ninth_gate",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 7
       }
     ],
     "8": [
@@ -13901,6 +13913,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 9
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_027_das_haus_das_die_namen_fraß",
+        "code": "W-12-12",
+        "datei": "12_art_12_abschnitt_12_die_kalibrierung_der_ehre.md",
+        "dauer_s": "8.7",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 9,
+        "tokens": "941",
+        "versuche": "1",
+        "woerter": 528
       }
     ]
   }

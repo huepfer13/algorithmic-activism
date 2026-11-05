@@ -9381,7 +9381,7 @@
         "Tobias",
         "Die Stimme im Gebälk"
       ],
-      "chapter_count": 11,
+      "chapter_count": 12,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -9393,10 +9393,11 @@
         "art_08",
         "art_09",
         "art_10",
-        "art_11"
+        "art_11",
+        "art_12"
       ],
-      "words": 4864,
-      "reading_minutes": 24,
+      "words": 5392,
+      "reading_minutes": 27,
       "cover": null,
       "chapters": [
         {
@@ -9614,6 +9615,24 @@
           "leak_free": "true",
           "words": 500,
           "reading_minutes": 2
+        },
+        {
+          "file": "12_art_12_abschnitt_12_die_kalibrierung_der_ehre.md",
+          "index": 12,
+          "title": "Abschnitt 12: Die Kalibrierung der Ehre",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.7",
+          "jaccard_max": "0.048",
+          "tokens_generated": "941",
+          "manual_ending_code": "W-12-12",
+          "backend": "deepseek",
+          "genre": "Gothic",
+          "leak_free": "true",
+          "words": 528,
+          "reading_minutes": 3
         }
       ]
     },
