@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 41,
+  "count": 51,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -13342,6 +13342,412 @@
           "leak_free": "true",
           "words": 525,
           "reading_minutes": 3
+        }
+      ]
+    },
+    {
+      "book_id": "buch_042_le_verdict",
+      "title": "Le Verdict",
+      "language": "FR",
+      "style": "Drame_Judiciaire",
+      "pov": "third_person",
+      "setting_summary": "La chambre arbitrale est installée dans un ancien couvent abandonné, transformé en lieu de réunion secret. La tension monte alors que les quatre protagonistes, Alexandre, Sophie, Julien et Lucas, se retrouvent piégés par la surveillance constante des caméras de sécurité.",
+      "characters": [
+        "Alexandre",
+        "Sophie",
+        "Julien",
+        "Lucas"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 495,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "qwen2.5:7b",
+          "duration_seconds": "74.1",
+          "jaccard_max": "",
+          "tokens_generated": "881",
+          "manual_ending_code": "",
+          "backend": "ollama",
+          "genre": "Drame_Judiciaire",
+          "leak_free": "",
+          "words": 495,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_043_die_geheimnisse_der_wolkentürme",
+      "title": "Die Geheimnisse der Wolkentürme",
+      "language": "DE",
+      "style": "Parabel",
+      "pov": "third_person",
+      "setting_summary": "In den Wolken von Neuberg, wo die Wolkentürme zur Heimat des verlorenen Glücks werden. Hier regieren die Schwestern Eva und Luna über eine Gesellschaft, die ihre Freiheit in der Illusion eines sicheren Himmels preisgibt.",
+      "characters": [
+        "Eva",
+        "Kai",
+        "Luna"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 460,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "qwen2.5:7b",
+          "duration_seconds": "74.6",
+          "jaccard_max": "",
+          "tokens_generated": "853",
+          "manual_ending_code": "",
+          "backend": "ollama",
+          "genre": "Parabel",
+          "leak_free": "",
+          "words": 460,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_044_die_waldgeselle",
+      "title": "Die Waldgeselle",
+      "language": "DE",
+      "style": "Parabel",
+      "pov": "third_person",
+      "setting_summary": "Ein kleines Dorf im Herzen eines alten Wälders, wo die Bäume in engem Spalt wachsen und das Licht durch feine Tücher von Ästen hindurchscheint. Hier lebt eine Gemeinschaft von Waldgesellen, die ihre Fähigkeiten zur Pflege und Wahrung des Waldes ausbilden.",
+      "characters": [
+        "Elm",
+        "Oak",
+        "Birch"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 858,
+      "reading_minutes": 4,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "qwen2.5:7b",
+          "duration_seconds": "76.9",
+          "jaccard_max": "",
+          "tokens_generated": "822",
+          "manual_ending_code": "",
+          "backend": "ollama",
+          "genre": "Parabel",
+          "leak_free": "",
+          "words": 450,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_01_abschnitt_1_die_kalte_kammer.md",
+          "index": 1,
+          "title": "Abschnitt 1: Die kalte Kammer",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.4",
+          "jaccard_max": "0.034",
+          "tokens_generated": "781",
+          "manual_ending_code": "D-01-01",
+          "backend": "deepseek",
+          "genre": "Parabel",
+          "leak_free": "true",
+          "words": 408,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_045_die_schatten_von_new_eden",
+      "title": "Die Schatten von New Eden",
+      "language": "DE",
+      "style": "SciFi_Dystopie",
+      "pov": "third_person",
+      "setting_summary": "New Eden ist eine überwachungsfeste Stadt, in der die Gesellschaft durch ein strenges Gesetzessystem und technologische Kontrolle zerstört wird. Hier leben Aria, Kael und Xen, deren Leben von der ständigen Überwachung und den Ressourcenknappheit geprägt ist.",
+      "characters": [
+        "Aria",
+        "Kael",
+        "Xen"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 368,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "qwen2.5:7b",
+          "duration_seconds": "61.5",
+          "jaccard_max": "",
+          "tokens_generated": "663",
+          "manual_ending_code": "",
+          "backend": "ollama",
+          "genre": "SciFi_Dystopie",
+          "leak_free": "",
+          "words": 368,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_046_der_wald_der_weisheit",
+      "title": "Der Wald der Weisheit",
+      "language": "DE",
+      "style": "Fabel",
+      "pov": "third_person",
+      "setting_summary": "In einem dichten, magischen Walde leben die Tiere in Harmonie. Der Wald ist durch seine unzugänglichen Wälder und geheimnisvollen Spuren stets unter Beobachtung.",
+      "characters": [
+        "Elyon",
+        "Ruhm",
+        "Wille"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 448,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "qwen2.5:7b",
+          "duration_seconds": "133.2",
+          "jaccard_max": "",
+          "tokens_generated": "852",
+          "manual_ending_code": "",
+          "backend": "ollama",
+          "genre": "Fabel",
+          "leak_free": "",
+          "words": 448,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_047_die_fabel_der_weidenvögel",
+      "title": "Die Fabel der Weidenvögel",
+      "language": "DE",
+      "style": "Fabel",
+      "pov": "third_person",
+      "setting_summary": "Ein weites, friedliches Weideland mit zahlreichen Bäumen und grünen Hügeln dient als Schauplatz. Hier lebt eine Gemeinschaft von Vögeln, die sich um das Überleben in einer immer überwachteren Welt bemühen müssen.",
+      "characters": [
+        "Lederflügel",
+        "Graswangenschwanz",
+        "Wolkenfeder",
+        "Schneekrone"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 424,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "qwen2.5:7b",
+          "duration_seconds": "127.1",
+          "jaccard_max": "",
+          "tokens_generated": "886",
+          "manual_ending_code": "",
+          "backend": "ollama",
+          "genre": "Fabel",
+          "leak_free": "",
+          "words": 424,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_048_der_wald_der_weisen",
+      "title": "Der Wald der Weisen",
+      "language": "DE",
+      "style": "Fabel",
+      "pov": "third_person",
+      "setting_summary": "In einem dicht bewaldeten Land lebt eine Gemeinschaft von Tieren, die lernfähig sind und ein strenges Gesetzessystem haben. Das Herz des Waldes ist eine große, von den anderen Gebieten isolierte Wiese mit einem wertvollen Schatz verborgen.",
+      "characters": [
+        "Birke",
+        "Eiche",
+        "Fuchs",
+        "Löwe"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 342,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "qwen2.5:7b",
+          "duration_seconds": "62.2",
+          "jaccard_max": "",
+          "tokens_generated": "650",
+          "manual_ending_code": "",
+          "backend": "ollama",
+          "genre": "Fabel",
+          "leak_free": "",
+          "words": 342,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_049_die_schiedskammer_von_bösenhagen",
+      "title": "Die Schiedskammer von Bösenhagen",
+      "language": "DE",
+      "style": "Gerichtsdrama",
+      "pov": "third_person",
+      "setting_summary": "Das kleine Dorf Bösenhagen umgibt eine verfallene Kapelle, in deren Innern die Schiedskammer eingerichtet wurde. Hier treffen sich die Bewohner für private Verhandlungen und diskreten Gerichtsverfahren, die oft mit dem Überleben der beteiligten Personen verwoben sind.",
+      "characters": [
+        "Viktor",
+        "Elisabeth",
+        "Friedrich",
+        "Anna"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 489,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "qwen2.5:7b",
+          "duration_seconds": "87.0",
+          "jaccard_max": "",
+          "tokens_generated": "939",
+          "manual_ending_code": "",
+          "backend": "ollama",
+          "genre": "Gerichtsdrama",
+          "leak_free": "",
+          "words": 489,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_050_die_chroniken_von_waldenburg",
+      "title": "Die Chroniken von Waldenburg",
+      "language": "DE",
+      "style": "Historische_Chronik",
+      "pov": "third_person",
+      "setting_summary": "Das kleine Städtchen Waldenburg im Herzogtum Bayern, dessen Einwohner sich in einer enge Gemeinschaft zusammenfinden. Die Stadt ist unter dem strengen Auge des Bürgermeisters Erwin geordnet und überwacht.",
+      "characters": [
+        "Erwin",
+        "Gretel",
+        "Walther",
+        "Lena",
+        "Erich"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 379,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "qwen2.5:7b",
+          "duration_seconds": "68.7",
+          "jaccard_max": "",
+          "tokens_generated": "735",
+          "manual_ending_code": "",
+          "backend": "ollama",
+          "genre": "Historische_Chronik",
+          "leak_free": "",
+          "words": 379,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_051_die_chronik_von_vindobona",
+      "title": "Die Chronik von Vindobona",
+      "language": "DE",
+      "style": "Historische_Chronik",
+      "pov": "third_person",
+      "setting_summary": "Vindobona, eine prächtige römische Kolonie in Mähren, steht im Zentrum des Konflikts. Die Stadt ist von strengen Gesetzen und der ständigen Überwachung durch den Prätor regiert, während die Bürgerschaft unter Druck steht.",
+      "characters": [
+        "Konstantin",
+        "Flavia",
+        "Valerius"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 299,
+      "reading_minutes": 1,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "qwen2.5:7b",
+          "duration_seconds": "55.7",
+          "jaccard_max": "",
+          "tokens_generated": "588",
+          "manual_ending_code": "",
+          "backend": "ollama",
+          "genre": "Historische_Chronik",
+          "leak_free": "",
+          "words": 299,
+          "reading_minutes": 1
         }
       ]
     }

@@ -1,0 +1,18 @@
+{
+  "book_id": "buch_042_le_verdict",
+  "title": "Le Verdict",
+  "pov": "third_person",
+  "language": "FR",
+  "style": "Drame_Judiciaire",
+  "setting_summary": "La chambre arbitrale est installée dans un ancien couvent abandonné, transformé en lieu de réunion secret. La tension monte alors que les quatre protagonistes, Alexandre, Sophie, Julien et Lucas, se retrouvent piégés par la surveillance constante des caméras de sécurité.",
+  "characters": [
+    "Alexandre",
+    "Sophie",
+    "Julien",
+    "Lucas"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T20:36:19.295447+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

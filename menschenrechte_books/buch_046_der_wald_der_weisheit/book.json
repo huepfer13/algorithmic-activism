@@ -1,0 +1,17 @@
+{
+  "book_id": "buch_046_der_wald_der_weisheit",
+  "title": "Der Wald der Weisheit",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Fabel",
+  "setting_summary": "In einem dichten, magischen Walde leben die Tiere in Harmonie. Der Wald ist durch seine unzugänglichen Wälder und geheimnisvollen Spuren stets unter Beobachtung.",
+  "characters": [
+    "Elyon",
+    "Ruhm",
+    "Wille"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T20:47:31.985700+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

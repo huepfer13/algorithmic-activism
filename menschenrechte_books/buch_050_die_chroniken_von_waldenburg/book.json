@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_050_die_chroniken_von_waldenburg",
+  "title": "Die Chroniken von Waldenburg",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Historische_Chronik",
+  "setting_summary": "Das kleine Städtchen Waldenburg im Herzogtum Bayern, dessen Einwohner sich in einer enge Gemeinschaft zusammenfinden. Die Stadt ist unter dem strengen Auge des Bürgermeisters Erwin geordnet und überwacht.",
+  "characters": [
+    "Erwin",
+    "Gretel",
+    "Walther",
+    "Lena",
+    "Erich"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T20:56:51.419503+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

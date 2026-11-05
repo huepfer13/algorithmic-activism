@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_044_die_waldgeselle",
+  "title": "Die Waldgeselle",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Parabel",
+  "setting_summary": "Ein kleines Dorf im Herzen eines alten Wälders, wo die Bäume in engem Spalt wachsen und das Licht durch feine Tücher von Ästen hindurchscheint. Hier lebt eine Gemeinschaft von Waldgesellen, die ihre Fähigkeiten zur Pflege und Wahrung des Waldes ausbilden.",
+  "characters": [
+    "Elm",
+    "Oak",
+    "Birch"
+  ],
+  "covered_articles": [
+    "art_01"
+  ],
+  "current_chapter": 1,
+  "created_at": "2026-11-05T20:43:01.010881+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

@@ -1,0 +1,18 @@
+{
+  "book_id": "buch_048_der_wald_der_weisen",
+  "title": "Der Wald der Weisen",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Fabel",
+  "setting_summary": "In einem dicht bewaldeten Land lebt eine Gemeinschaft von Tieren, die lernfähig sind und ein strenges Gesetzessystem haben. Das Herz des Waldes ist eine große, von den anderen Gebieten isolierte Wiese mit einem wertvollen Schatz verborgen.",
+  "characters": [
+    "Birke",
+    "Eiche",
+    "Fuchs",
+    "Löwe"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T20:52:16.856966+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

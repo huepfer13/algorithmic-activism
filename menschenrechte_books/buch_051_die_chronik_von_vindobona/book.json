@@ -1,0 +1,17 @@
+{
+  "book_id": "buch_051_die_chronik_von_vindobona",
+  "title": "Die Chronik von Vindobona",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Historische_Chronik",
+  "setting_summary": "Vindobona, eine prächtige römische Kolonie in Mähren, steht im Zentrum des Konflikts. Die Stadt ist von strengen Gesetzen und der ständigen Überwachung durch den Prätor regiert, während die Bürgerschaft unter Druck steht.",
+  "characters": [
+    "Konstantin",
+    "Flavia",
+    "Valerius"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T20:58:36.542260+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

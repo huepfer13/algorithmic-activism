@@ -1,0 +1,18 @@
+{
+  "book_id": "buch_049_die_schiedskammer_von_bösenhagen",
+  "title": "Die Schiedskammer von Bösenhagen",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Gerichtsdrama",
+  "setting_summary": "Das kleine Dorf Bösenhagen umgibt eine verfallene Kapelle, in deren Innern die Schiedskammer eingerichtet wurde. Hier treffen sich die Bewohner für private Verhandlungen und diskreten Gerichtsverfahren, die oft mit dem Überleben der beteiligten Personen verwoben sind.",
+  "characters": [
+    "Viktor",
+    "Elisabeth",
+    "Friedrich",
+    "Anna"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T20:54:39.864296+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

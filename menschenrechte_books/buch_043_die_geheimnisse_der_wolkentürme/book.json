@@ -1,0 +1,17 @@
+{
+  "book_id": "buch_043_die_geheimnisse_der_wolkentürme",
+  "title": "Die Geheimnisse der Wolkentürme",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Parabel",
+  "setting_summary": "In den Wolken von Neuberg, wo die Wolkentürme zur Heimat des verlorenen Glücks werden. Hier regieren die Schwestern Eva und Luna über eine Gesellschaft, die ihre Freiheit in der Illusion eines sicheren Himmels preisgibt.",
+  "characters": [
+    "Eva",
+    "Kai",
+    "Luna"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T20:38:37.664422+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

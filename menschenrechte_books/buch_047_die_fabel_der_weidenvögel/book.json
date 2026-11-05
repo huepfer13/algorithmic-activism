@@ -1,0 +1,18 @@
+{
+  "book_id": "buch_047_die_fabel_der_weidenvögel",
+  "title": "Die Fabel der Weidenvögel",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Fabel",
+  "setting_summary": "Ein weites, friedliches Weideland mit zahlreichen Bäumen und grünen Hügeln dient als Schauplatz. Hier lebt eine Gemeinschaft von Vögeln, die sich um das Überleben in einer immer überwachteren Welt bemühen müssen.",
+  "characters": [
+    "Lederflügel",
+    "Graswangenschwanz",
+    "Wolkenfeder",
+    "Schneekrone"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T20:49:55.778968+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
