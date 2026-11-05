@@ -4598,7 +4598,7 @@
       "pov": "first_person",
       "setting_summary": "In einem unterirdischen Archivbunker, dem Sektor Neun, hausen die letzten freien Chronisten unter ständiger Überwachung durch die Obrigkeit. Ein Riss in der Betondecke lässt Wasser eindringen und markiert eine tickende Frist: In wenigen Wochen wird der Bunker geflutet, wenn niemand die Wahrheit nach außen trägt. Jeder ausgesprochene Satz kann Verhaftung, Folter oder Tod bedeuten – und doch muss gesprochen werden.",
       "characters": [],
-      "chapter_count": 19,
+      "chapter_count": 20,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -4618,10 +4618,11 @@
         "art_16",
         "art_17",
         "art_18",
-        "art_19"
+        "art_19",
+        "art_20"
       ],
-      "words": 6927,
-      "reading_minutes": 35,
+      "words": 7177,
+      "reading_minutes": 36,
       "cover": null,
       "chapters": [
         {
@@ -4983,6 +4984,24 @@
           "leak_free": "true",
           "words": 370,
           "reading_minutes": 2
+        },
+        {
+          "file": "20_art_20_abschnitt_20_die_synchronisation_der_fre.md",
+          "index": 20,
+          "title": "Abschnitt 20: Die Synchronisation der freien Knoten",
+          "article": "art_20",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "26.5",
+          "jaccard_max": "0.0",
+          "tokens_generated": "852",
+          "manual_ending_code": "R-20-20",
+          "backend": "openrouter",
+          "genre": "Manifest",
+          "leak_free": "true",
+          "words": 250,
+          "reading_minutes": 1
         }
       ]
     },
