@@ -1,0 +1,20 @@
+{
+  "book_id": "buch_120_il_verbale_di_vetro_ii",
+  "title": "Il Verbale di Vetro II",
+  "pov": "third_person",
+  "language": "IT",
+  "style": "Dramma_Giudiziario",
+  "setting_summary": "Una camera arbitrale ricavata in un ex convento di clausura a Trieste, dove le udienze si svolgono in aule anguste con finestre opache e microfoni sempre accesi. Un'agenzia di sorveglianza privata, la Sentinella, fornisce le registrazioni e il personale di sicurezza, creando una gerarchia occulta tra chi parla e chi ascolta. Il tempo è scandito da un contatore che riduce i minuti di testimonianza concessi a ogni parte, trasformando ogni deposizione in una risorsa contesa.",
+  "characters": [
+    "Elena Marchetti",
+    "Corrado Fabbri",
+    "Suor Immacolata",
+    "Tobias Renner",
+    "Il Presidente Valli"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:27:10.938883+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner.",
+  "_titel_hinweis": "Suffix gesetzt: Altbestand hatte denselben Titel wie ein anderer Band"
+}

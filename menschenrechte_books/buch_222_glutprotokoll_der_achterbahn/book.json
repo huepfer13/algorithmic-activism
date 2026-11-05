@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_222_glutprotokoll_der_achterbahn",
+  "title": "Glutprotokoll der Achterbahn",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Songtext_Matrix",
+  "setting_summary": "In der Tiefstation Arkadenhall, einem unterirdischen Vergnügungspark, der zugleich als Haftanstalt dient, regieren minutengenaue Zeitfenster, enge Waggons und allgegenwärtige Lautsprecherdurchsagen. Wer die zugewiesene Fahrt verpasst, verliert seinen Platz in der Schlange und damit seine Stimme im Rat der Fahrgäste. Mira und Jonas entdecken, dass die Achterbahn nicht nur Loopings fährt, sondern Erinnerungen sortiert — und dass jede Fahrt ein Menschenrecht auf den Prüfstand stellt.",
+  "characters": [
+    "Mira Kaltbrunn",
+    "Jonas Fenn",
+    "Oberaufseherin Sorge",
+    "Timo Reiss",
+    "Die Stimme aus dem Lautsprecher"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T22:52:03.172171+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}

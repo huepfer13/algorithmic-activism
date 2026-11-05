@@ -1,0 +1,20 @@
+{
+  "book_id": "buch_141_kivuli_cha_kumbukumbu_iii",
+  "title": "Kivuli cha Kumbukumbu III",
+  "pov": "third_person",
+  "language": "SW",
+  "style": "Sayansi_Dystopia",
+  "setting_summary": "Jiji la Kizazi, jiji lililofungwa lenye mnara mmoja unaodhibiti hewa, chakula na kumbukumbu za wakazi wake kupitia mfumo wa Kumbukumbu Kuu. Wakazi wanapangiwa makazi na kazi kwa alama za ufanisi, na kila mtu ana kikomo cha maneno kwa siku kinachopimwa na walinzi wa mnara. Ukosefu wa rasilimali na ufuatiliaji wa kila hatua huunda shinikizo la kudumu la muda, nafasi na utii.",
+  "characters": [
+    "Neema",
+    "Baraka",
+    "Zawadi",
+    "Kito",
+    "Mama Siri"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:31:06.215511+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner.",
+  "_titel_hinweis": "Suffix gesetzt: Altbestand hatte denselben Titel wie ein anderer Band"
+}

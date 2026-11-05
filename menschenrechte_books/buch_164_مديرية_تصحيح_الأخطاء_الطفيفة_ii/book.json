@@ -1,0 +1,20 @@
+{
+  "book_id": "buch_164_مديرية_تصحيح_الأخطاء_الطفيفة_ii",
+  "title": "مديرية تصحيح الأخطاء الطفيفة II",
+  "pov": "third_person",
+  "language": "AR",
+  "style": "السخرية",
+  "setting_summary": "مبنى حكومي من سبعة طوابق لا يعرف أحد ما يفعله الطابق السادس، يُجبَر كل مواطن يريد إصلاح خطأ بسيط في وثائقه على المرور بكل الطوابق من الأسفل إلى الأعلى ثم العودة إلى الأسفل لأن الختم النهائي يُمنح في الطابق الأول بعد موافقة الطابق السابع. الوقت يمضي ببطء قاتل، والطوابق مزدحمة بأشخاص ينتظرون، وكاميرات صغيرة تعلّق فوق كل نافذة وتعدّ كم مرة يتنهد الزائر.",
+  "characters": [
+    "سعيد",
+    "الأستاذة نوال",
+    "حاجب النافذة ٤",
+    "المفتش بهلول",
+    "أمينة"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:36:29.995812+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner.",
+  "_titel_hinweis": "Suffix gesetzt: Altbestand hatte denselben Titel wie ein anderer Band"
+}

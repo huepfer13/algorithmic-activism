@@ -1003,7 +1003,11 @@
     "r10:nvidia/nemotron-3-ultra-550b-a55b:free:buch_007_die_kammer_der_zeugen",
     "r6:deepseek-chat:buch_004_neon_exil",
     "r2:deepseek-chat:buch_044_die_waldgeselle",
-    "r1:deepseek-chat:buch_148_kumbukumbu_za_korongo_hati_za_bandari_ya"
+    "r1:deepseek-chat:buch_148_kumbukumbu_za_korongo_hati_za_bandari_ya",
+    "r1:deepseek-chat:buch_206_місто_що_рахує_кроки",
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_161_سجل_الحظيرة",
+    "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_196_право_на_голос_у_глиняному_дворі",
+    "r2:deepseek-chat:buch_145_kituo_cha_mwisho_cha_njia_ya_tisa"
   ],
   "runden": {
     "1": [
@@ -2686,6 +2690,36 @@
         "tokens": "1390",
         "versuche": "1",
         "woerter": 503
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_206_місто_що_рахує_кроки",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "deepseek-chat",
+        "runde": 1
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_161_سجل_الحظيرة",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 1
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_196_право_на_голос_у_глиняному_дворі",
+        "datei": null,
+        "dauer_s": 0.0,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 1
       }
     ],
     "10": [
@@ -4660,6 +4694,21 @@
         "tokens": "781",
         "versuche": "1",
         "woerter": 408
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_145_kituo_cha_mwisho_cha_njia_ya_tisa",
+        "code": "G-01-01",
+        "datei": "01_art_01_abschnitt_1_kadi_iliyokataliwa.md",
+        "dauer_s": "13.9",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 2,
+        "tokens": "1393",
+        "versuche": "1",
+        "woerter": 504
       }
     ],
     "3": [

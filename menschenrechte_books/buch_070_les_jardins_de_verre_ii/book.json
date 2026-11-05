@@ -1,0 +1,20 @@
+{
+  "book_id": "buch_070_les_jardins_de_verre_ii",
+  "title": "Les Jardins de Verre II",
+  "pov": "third_person",
+  "language": "FR",
+  "style": "Dystopie_SciFi",
+  "setting_summary": "Dans la Cité-Dôme de Verneuil, une mégapole sous cloche où l'air, l'eau et la lumière sont rationnés par le Consulat de l'Équilibre, chaque citoyen porte un bracelet qui mesure son 'indice de contribution'. Les quartiers sont étagés selon cet indice, et tout écart de conduite fait descendre d'un niveau, jusqu'aux Jardins de Verre du sous-sol où l'on recycle les 'inadaptés'. La pression naît de la promesse d'une Ascension annuelle : ceux qui atteignent le sommet quittent le dôme, mais personne ne sait ce qu'il y a dehors.",
+  "characters": [
+    "Maëlle",
+    "Ivan",
+    "Sœur Céleste",
+    "Tarek",
+    "Nino"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:18:04.494779+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner.",
+  "_titel_hinweis": "Suffix gesetzt: Altbestand hatte denselben Titel wie ein anderer Band"
+}

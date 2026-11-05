@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 211,
+  "count": 219,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -11017,8 +11017,8 @@
       ]
     },
     {
-      "book_id": "buch_032_the_glass_tribunal",
-      "title": "The Glass Tribunal",
+      "book_id": "buch_032_the_glass_tribunal_ii",
+      "title": "The Glass Tribunal II",
       "language": "EN",
       "style": "Courtroom_Drama",
       "pov": "third_person",
@@ -14227,8 +14227,8 @@
       ]
     },
     {
-      "book_id": "buch_064_the_ledger_of_ash_harbour",
-      "title": "The Ledger of Ash Harbour",
+      "book_id": "buch_064_the_ledger_of_ash_harbour_ii",
+      "title": "The Ledger of Ash Harbour II",
       "language": "EN",
       "style": "Historical_Chronicle",
       "pov": "first_person",
@@ -14307,8 +14307,8 @@
       ]
     },
     {
-      "book_id": "buch_066_the_ministry_of_adequate_happiness",
-      "title": "The Ministry of Adequate Happiness",
+      "book_id": "buch_066_the_ministry_of_adequate_happiness_ii",
+      "title": "The Ministry of Adequate Happiness II",
       "language": "EN",
       "style": "Satire",
       "pov": "third_person",
@@ -14467,8 +14467,8 @@
       ]
     },
     {
-      "book_id": "buch_070_les_jardins_de_verre",
-      "title": "Les Jardins de Verre",
+      "book_id": "buch_070_les_jardins_de_verre_ii",
+      "title": "Les Jardins de Verre II",
       "language": "FR",
       "style": "Dystopie_SciFi",
       "pov": "third_person",
@@ -14507,8 +14507,8 @@
       ]
     },
     {
-      "book_id": "buch_071_les_jardins_de_verre",
-      "title": "Les Jardins de Verre",
+      "book_id": "buch_071_les_jardins_de_verre_iii",
+      "title": "Les Jardins de Verre III",
       "language": "FR",
       "style": "Dystopie_SciFi",
       "pov": "third_person",
@@ -14707,8 +14707,8 @@
       ]
     },
     {
-      "book_id": "buch_076_le_bureau_des_droits_inapplicables",
-      "title": "Le Bureau des Droits Inapplicables",
+      "book_id": "buch_076_le_bureau_des_droits_inapplicables_ii",
+      "title": "Le Bureau des Droits Inapplicables II",
       "language": "FR",
       "style": "Satire",
       "pov": "third_person",
@@ -14827,8 +14827,8 @@
       ]
     },
     {
-      "book_id": "buch_079_les_registres_de_la_corderie",
-      "title": "Les Registres de la Corderie",
+      "book_id": "buch_079_les_registres_de_la_corderie_ii",
+      "title": "Les Registres de la Corderie II",
       "language": "FR",
       "style": "Chronique_Historique",
       "pov": "third_person_manual",
@@ -15507,8 +15507,8 @@
       ]
     },
     {
-      "book_id": "buch_096_anales_del_baluarte_de_sal",
-      "title": "Anales del Baluarte de Sal",
+      "book_id": "buch_096_anales_del_baluarte_de_sal_ii",
+      "title": "Anales del Baluarte de Sal II",
       "language": "ES",
       "style": "Crónica_Histórica",
       "pov": "third_person_manual",
@@ -15747,8 +15747,8 @@
       ]
     },
     {
-      "book_id": "buch_102_la_cámara_de_los_susurros",
-      "title": "La Cámara de los Susurros",
+      "book_id": "buch_102_la_cámara_de_los_susurros_ii",
+      "title": "La Cámara de los Susurros II",
       "language": "ES",
       "style": "Drama_Judicial",
       "pov": "third_person",
@@ -15867,8 +15867,8 @@
       ]
     },
     {
-      "book_id": "buch_105_il_silenzio_dei_numeri",
-      "title": "Il Silenzio dei Numeri",
+      "book_id": "buch_105_il_silenzio_dei_numeri_ii",
+      "title": "Il Silenzio dei Numeri II",
       "language": "IT",
       "style": "Distopia_SciFi",
       "pov": "third_person",
@@ -16467,8 +16467,8 @@
       ]
     },
     {
-      "book_id": "buch_120_il_verbale_di_vetro",
-      "title": "Il Verbale di Vetro",
+      "book_id": "buch_120_il_verbale_di_vetro_ii",
+      "title": "Il Verbale di Vetro II",
       "language": "IT",
       "style": "Dramma_Giudiziario",
       "pov": "third_person",
@@ -17147,8 +17147,8 @@
       ]
     },
     {
-      "book_id": "buch_137_a_câmara_de_vidro",
-      "title": "A Câmara de Vidro",
+      "book_id": "buch_137_a_câmara_de_vidro_ii",
+      "title": "A Câmara de Vidro II",
       "language": "PT",
       "style": "Drama_Judicial",
       "pov": "third_person",
@@ -17187,8 +17187,8 @@
       ]
     },
     {
-      "book_id": "buch_138_a_câmara_de_vidro",
-      "title": "A Câmara de Vidro",
+      "book_id": "buch_138_a_câmara_de_vidro_iii",
+      "title": "A Câmara de Vidro III",
       "language": "PT",
       "style": "Drama_Judicial",
       "pov": "third_person",
@@ -17267,8 +17267,8 @@
       ]
     },
     {
-      "book_id": "buch_140_kivuli_cha_kumbukumbu",
-      "title": "Kivuli cha Kumbukumbu",
+      "book_id": "buch_140_kivuli_cha_kumbukumbu_ii",
+      "title": "Kivuli cha Kumbukumbu II",
       "language": "SW",
       "style": "Sayansi_Dystopia",
       "pov": "third_person",
@@ -17307,8 +17307,8 @@
       ]
     },
     {
-      "book_id": "buch_141_kivuli_cha_kumbukumbu",
-      "title": "Kivuli cha Kumbukumbu",
+      "book_id": "buch_141_kivuli_cha_kumbukumbu_iii",
+      "title": "Kivuli cha Kumbukumbu III",
       "language": "SW",
       "style": "Sayansi_Dystopia",
       "pov": "third_person",
@@ -17427,8 +17427,8 @@
       ]
     },
     {
-      "book_id": "buch_144_mkutano_wa_mto_kavu",
-      "title": "Mkutano wa Mto Kavu",
+      "book_id": "buch_144_mkutano_wa_mto_kavu_ii",
+      "title": "Mkutano wa Mto Kavu II",
       "language": "SW",
       "style": "Hadithi_ya_Wanyama",
       "pov": "third_person",
@@ -17480,10 +17480,12 @@
         "Juma Mwekundu",
         "Daktari Nuru"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 418,
-      "reading_minutes": 2,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 922,
+      "reading_minutes": 5,
       "cover": null,
       "chapters": [
         {
@@ -17503,6 +17505,24 @@
           "leak_free": "",
           "words": 418,
           "reading_minutes": 2
+        },
+        {
+          "file": "01_art_01_abschnitt_1_kadi_iliyokataliwa.md",
+          "index": 1,
+          "title": "Abschnitt 1: Kadi Iliyokataliwa",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "13.9",
+          "jaccard_max": "0.091",
+          "tokens_generated": "1393",
+          "manual_ending_code": "G-01-01",
+          "backend": "deepseek",
+          "genre": "Kejeli",
+          "leak_free": "true",
+          "words": 504,
+          "reading_minutes": 3
         }
       ]
     },
@@ -18047,8 +18067,8 @@
       ]
     },
     {
-      "book_id": "buch_159_أرشيف_الصمت",
-      "title": "أرشيف الصمت",
+      "book_id": "buch_159_أرشيف_الصمت_ii",
+      "title": "أرشيف الصمت II",
       "language": "AR",
       "style": "ديستوبيا_الخيال_العلمي",
       "pov": "first_person",
@@ -18247,8 +18267,8 @@
       ]
     },
     {
-      "book_id": "buch_164_مديرية_تصحيح_الأخطاء_الطفيفة",
-      "title": "مديرية تصحيح الأخطاء الطفيفة",
+      "book_id": "buch_164_مديرية_تصحيح_الأخطاء_الطفيفة_ii",
+      "title": "مديرية تصحيح الأخطاء الطفيفة II",
       "language": "AR",
       "style": "السخرية",
       "pov": "third_person",
@@ -18727,8 +18747,8 @@
       ]
     },
     {
-      "book_id": "buch_176_静默配额",
-      "title": "静默配额",
+      "book_id": "buch_176_静默配额_ii",
+      "title": "静默配额 II",
       "language": "ZH",
       "style": "科幻反乌托邦",
       "pov": "third_person",
@@ -18767,8 +18787,8 @@
       ]
     },
     {
-      "book_id": "buch_177_静默配额",
-      "title": "静默配额",
+      "book_id": "buch_177_静默配额_iii",
+      "title": "静默配额 III",
       "language": "ZH",
       "style": "科幻反乌托邦",
       "pov": "third_person",
@@ -19687,8 +19707,8 @@
       ]
     },
     {
-      "book_id": "buch_201_паперова_облога",
-      "title": "Паперова облога",
+      "book_id": "buch_201_паперова_облога_ii",
+      "title": "Паперова облога II",
       "language": "UK",
       "style": "Satyra",
       "pov": "third_person",
@@ -20163,6 +20183,524 @@
           "leak_free": "",
           "words": 16,
           "reading_minutes": 1
+        }
+      ]
+    },
+    {
+      "book_id": "buch_217_die_stimmen_von_sektor_neun",
+      "title": "Die Stimmen von Sektor Neun",
+      "language": "DE",
+      "style": "Songtext_Matrix",
+      "pov": "first_person",
+      "setting_summary": "In einem unterirdischen Wohnblock namens Sektor Neun leben tausende Menschen unter ständiger Lautsprecherüberwachung und knapper Luftzuteilung, während die Obrigkeit jeden öffentlichen Gesang als Aufruhr wertet. Die Bewohner dürfen nur flüstern, doch eine verbotene Liedersammlung wandert von Hand zu Hand und wird zum einzigen Mittel, Würde und Zusammenhalt zu bewahren.",
+      "characters": [
+        "Mira",
+        "Tobias",
+        "Leyla",
+        "Kai",
+        "Herr Brandt"
+      ],
+      "chapter_count": 3,
+      "covered_articles": [
+        "art_01",
+        "art_02",
+        "art_03"
+      ],
+      "words": 1619,
+      "reading_minutes": 8,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.0",
+          "jaccard_max": "",
+          "tokens_generated": "647",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 330,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_01_abschnitt_1_die_blockade.md",
+          "index": 1,
+          "title": "Abschnitt 1: Die Blockade",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "23.1",
+          "jaccard_max": "0.053",
+          "tokens_generated": "740",
+          "manual_ending_code": "Q-01-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 368,
+          "reading_minutes": 2
+        },
+        {
+          "file": "02_art_02_abschnitt_2_die_revision.md",
+          "index": 2,
+          "title": "Abschnitt 2: Die Revision",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.4",
+          "jaccard_max": "0.05",
+          "tokens_generated": "863",
+          "manual_ending_code": "Q-02-02",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 438,
+          "reading_minutes": 2
+        },
+        {
+          "file": "03_art_03_abschnitt_3_die_kalibrierung.md",
+          "index": 3,
+          "title": "Abschnitt 3: Die Kalibrierung",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.7",
+          "jaccard_max": "0.037",
+          "tokens_generated": "963",
+          "manual_ending_code": "Q-03-03",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 483,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_219_les_voix_sous_la_coupole",
+      "title": "Les Voix sous la Coupole",
+      "language": "FR",
+      "style": "Songtext_Matrix",
+      "pov": "first_person",
+      "setting_summary": "Dans un dôme-forteresse saturé où l'air, l'eau et le droit de parole sont comptés au litre et à la seconde, une équipe de maintenance découvre que les registres de consommation peuvent être réécrits. Chaque chapitre est une chanson : la pression monte, les quotas se resserrent, et quelqu'un commence à chuchoter ce que le Règlement interdit de nommer.",
+      "characters": [
+        "Nour",
+        "Basile",
+        "Sylvie",
+        "Le Contremaître",
+        "Adama"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 782,
+      "reading_minutes": 4,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.8",
+          "jaccard_max": "",
+          "tokens_generated": "709",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 391,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_01_abschnitt_1_le_grincement_des_relais.md",
+          "index": 1,
+          "title": "Abschnitt 1: Le Grincement des Relais",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "725",
+          "manual_ending_code": "Q-01-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 391,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_221_zaehlbretter_aus_rost",
+      "title": "Zählbretter aus Rost",
+      "language": "DE",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "In der versunkenen Werkshalle „Kesselgrund“ leben die Bewohner nach einer strengen Lärmordnung: Jede Stimme muss täglich gezählt werden, und wer zu laut singt, verliert sein Bleiberecht. Mira Kaltbrunn entdeckt, dass die alte Rohrleitung des Kessels Töne über die Mauer trägt — ein verbotenes Lied, das die Zählung stört und die Hierarchie ins Wanken bringt.",
+      "characters": [
+        "Mira Kaltbrunn",
+        "Ove Sanftmuth",
+        "Tessa Bleibtreu",
+        "Halm",
+        "Der Stimmenzähler"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 663,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.8",
+          "jaccard_max": "",
+          "tokens_generated": "610",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 276,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_01_abschnitt_1_die_kalibrierung_der_stille.md",
+          "index": 1,
+          "title": "Abschnitt 1: Die Kalibrierung der Stille",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "2",
+          "model": "deepseek-chat",
+          "duration_seconds": "13.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "823",
+          "manual_ending_code": "Q-01-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 387,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_222_glutprotokoll_der_achterbahn",
+      "title": "Glutprotokoll der Achterbahn",
+      "language": "DE",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "In der Tiefstation Arkadenhall, einem unterirdischen Vergnügungspark, der zugleich als Haftanstalt dient, regieren minutengenaue Zeitfenster, enge Waggons und allgegenwärtige Lautsprecherdurchsagen. Wer die zugewiesene Fahrt verpasst, verliert seinen Platz in der Schlange und damit seine Stimme im Rat der Fahrgäste. Mira und Jonas entdecken, dass die Achterbahn nicht nur Loopings fährt, sondern Erinnerungen sortiert — und dass jede Fahrt ein Menschenrecht auf den Prüfstand stellt.",
+      "characters": [
+        "Mira Kaltbrunn",
+        "Jonas Fenn",
+        "Oberaufseherin Sorge",
+        "Timo Reiss",
+        "Die Stimme aus dem Lautsprecher"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 207,
+      "reading_minutes": 1,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "4.3",
+          "jaccard_max": "",
+          "tokens_generated": "455",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 207,
+          "reading_minutes": 1
+        }
+      ]
+    },
+    {
+      "book_id": "buch_223_lanterns_of_the_ledger_line",
+      "title": "Lanterns of the Ledger Line",
+      "language": "EN",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "A vertical arcology called the Ledger Line runs on rationed daylight and a strict merit-point economy, where every resident's worth is recalculated each dawn by an unseen auditing authority. When a clerical error erases an entire floor's points, a small crew of auditors and couriers must decide whether to correct the math or expose the system that made them complicit. Each chapter hears a different resident's case, turning the arcology into a courtroom of songs where dignity, voice, and survival are weighed against the ledger.",
+      "characters": [
+        "Mara Voss",
+        "Ilyan Brecht",
+        "Sable Odum",
+        "Tobin Reyes",
+        "The Adjuster"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 943,
+      "reading_minutes": 5,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.6",
+          "jaccard_max": "",
+          "tokens_generated": "805",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 525,
+          "reading_minutes": 3
+        },
+        {
+          "file": "01_art_01_abschnitt_1_the_paper_grit_protocol.md",
+          "index": 1,
+          "title": "Abschnitt 1: The Paper Grit Protocol",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.8",
+          "jaccard_max": "0.09",
+          "tokens_generated": "714",
+          "manual_ending_code": "Q-01-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 418,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_224_nyimbo_za_kivuli_cha_mto",
+      "title": "Nyimbo za Kivuli cha Mto",
+      "language": "SW",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "Katika mji wa pwani unaoitwa Kilwa Mpya, jamii ndogo imefungwa ndani ya ukuta wa kambi ya uhamisho inayodhibitiwa na wakala wa serikali anayeitwa Mlinzi. Muda, chakula na sauti vinahesabiwa kwa kanuni kali, na kila mtu lazima arekodi maneno yake kila jioni kwenye daftari la sauti. Zawadi, kijana anayejua kuimba, anagundua kuwa nyimbo zinaweza kubeba ujumbe usioonekana, na hivyo kuanzisha mgogoro kuhusu haki ya kusema, utu na usawa ndani ya kambi.",
+      "characters": [
+        "Zawadi",
+        "Mhenga Kito",
+        "Asha Mwanga",
+        "Babuu Rashidi",
+        "Nuru"
+      ],
+      "chapter_count": 2,
+      "covered_articles": [
+        "art_01",
+        "art_02"
+      ],
+      "words": 1307,
+      "reading_minutes": 7,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.3",
+          "jaccard_max": "",
+          "tokens_generated": "847",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 329,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_01_abschnitt_1_kipimo_cha_kwanza.md",
+          "index": 1,
+          "title": "Abschnitt 1: Kipimo cha Kwanza",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "10.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1226",
+          "manual_ending_code": "Q-01-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 490,
+          "reading_minutes": 2
+        },
+        {
+          "file": "02_art_02_abschnitt_2_kipimo_cha_pili.md",
+          "index": 2,
+          "title": "Abschnitt 2: Kipimo cha Pili",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1257",
+          "manual_ending_code": "Q-02-02",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 488,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_225_玻璃城的回声账本",
+      "title": "玻璃城的回声账本",
+      "language": "ZH",
+      "style": "Songtext_Matrix",
+      "pov": "first_person",
+      "setting_summary": "一座被高墙围住的玻璃城，每句话都被记录进回声账本，居民必须用“配额”换取发言与申诉的机会。城中水库日渐干涸，配给按等级发放，底层人被迫在沉默与揭发之间选择。主角在账本里发现自己的名字被提前写上了罪名，必须在一次公开听证前找到真相。",
+      "characters": [
+        "林昭",
+        "阿岚",
+        "老秤",
+        "小满",
+        "铁面"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 411,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.7",
+          "jaccard_max": "",
+          "tokens_generated": "690",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 88,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_01_abschnitt_1_纸屑与提前写好的名字.md",
+          "index": 1,
+          "title": "Abschnitt 1: 纸屑与提前写好的名字",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.6",
+          "jaccard_max": "0.04",
+          "tokens_generated": "1251",
+          "manual_ending_code": "Q-01-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 323,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_226_хроника_дома_счёта",
+      "title": "Хроника Дома Счёта",
+      "language": "RU",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "В тесном северном городе действует Учётный Дом — учреждение, где каждому жителю ежедневно начисляют и списывают «единицы достоинства» за слова, поступки и молчание. Очередь у окошка, счётчики на стенах и вечное нехватка талонов держат людей в напряжении: похвала повышает счёт, жалоба его сжигает, а несогласие может обнулить человека за одну ночь. Вера, Марк и Тимур пытаются вести дневник прав, который сам по себе становится нарушением.",
+      "characters": [
+        "Вера Соловьёва",
+        "Марк Ковач",
+        "Старуха Зоя",
+        "Тимур Ахметов",
+        "Лена Дубова"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01",
+        "art_02"
+      ],
+      "words": 692,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.0",
+          "jaccard_max": "",
+          "tokens_generated": "574",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 255,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_02_abschnitt_1_die_relais_schweigen_nicht.md",
+          "index": 1,
+          "title": "Abschnitt 1: Die Relais schweigen nicht",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.8",
+          "jaccard_max": "0.029",
+          "tokens_generated": "1060",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 437,
+          "reading_minutes": 2
         }
       ]
     }

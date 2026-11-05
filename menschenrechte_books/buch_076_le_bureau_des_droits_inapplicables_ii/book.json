@@ -1,0 +1,20 @@
+{
+  "book_id": "buch_076_le_bureau_des_droits_inapplicables_ii",
+  "title": "Le Bureau des Droits Inapplicables II",
+  "pov": "third_person",
+  "language": "FR",
+  "style": "Satire",
+  "setting_summary": "Dans la mégalopole de Valmure, un Bureau tentaculaire administre les droits fondamentaux avec une rigueur si bureaucratique qu'aucun citoyen ne parvient jamais à les exercer. Le bâtiment, un labyrinthe de guichets et de couloirs sans fin, impose des files d'attente de plusieurs années et une hiérarchie kafkaïenne où chaque formulaire engendre trois nouveaux formulaires. Une pénurie permanente de tampons officiels et un système de surveillance par badges rendent toute revendication aussi urgente qu'absurde.",
+  "characters": [
+    "Odile Farcin",
+    "Barnabé Klutz",
+    "Madame Veuve",
+    "Le Petit Fonctionnaire",
+    "Inspecteur Péril"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:19:09.807197+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner.",
+  "_titel_hinweis": "Suffix gesetzt: Altbestand hatte denselben Titel wie ein anderer Band"
+}

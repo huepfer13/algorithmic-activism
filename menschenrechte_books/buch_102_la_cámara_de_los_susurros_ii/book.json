@@ -1,0 +1,20 @@
+{
+  "book_id": "buch_102_la_cámara_de_los_susurros_ii",
+  "title": "La Cámara de los Susurros II",
+  "pov": "third_person",
+  "language": "ES",
+  "style": "Drama_Judicial",
+  "setting_summary": "Una cámara arbitral improvisada en el ala cerrada de un antiguo palacio de justicia, donde el aire viciado y los relojes detenidos marcan cada intervención. Las audiencias se suceden bajo vigilancia constante y con recursos limitados: un solo expediente, testigos que no pueden salir del edificio y una jerarquía que decide quién habla y cuándo. El caso inicial —una denuncia por despido tras una denuncia interna— irá destapando tensiones sobre dignidad, libertad de expresión, vida y igualdad.",
+  "characters": [
+    "Elena Vargas",
+    "Tomás Iriarte",
+    "Jueza Serrano",
+    "Ramiro Cifuentes",
+    "Lucía Ferrer"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:23:44.394450+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner.",
+  "_titel_hinweis": "Suffix gesetzt: Altbestand hatte denselben Titel wie ein anderer Band"
+}

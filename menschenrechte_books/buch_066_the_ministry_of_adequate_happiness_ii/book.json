@@ -1,0 +1,20 @@
+{
+  "book_id": "buch_066_the_ministry_of_adequate_happiness_ii",
+  "title": "The Ministry of Adequate Happiness II",
+  "pov": "third_person",
+  "language": "EN",
+  "style": "Satire",
+  "setting_summary": "In der überfüllten, unterirdischen Zentrale des Ministeriums für Bürgerzufriedenheit werden Glückspunkte verwaltet, Beschwerden über Beschwerden archiviert und jede Handlung dreifach beglaubigt. Auf engstem Raum, unter Dauerbeobachtung durch sprechende Akten, konkurrieren fünf Beamte um die knappste Ressource von allen: einen funktionierenden Stempel. Ein Antrag auf ein Lächeln löst eine Kette bürokratischer Eskalationen aus, die das gesamte Ministerium zu verschlingen droht.",
+  "characters": [
+    "Ilse Brandt",
+    "Otto Pfister",
+    "Mara Voss",
+    "Herr Kleinschmidt",
+    "Juno"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T21:14:00.718090+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner.",
+  "_titel_hinweis": "Suffix gesetzt: Altbestand hatte denselben Titel wie ein anderer Band"
+}
