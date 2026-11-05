@@ -1,0 +1,43 @@
+---
+book_id: "buch_041_die_wasserwaage_von_ahrenfeld"
+chapter_index: 4
+chapter_title: "Abschnitt 4: Die Null-Lager-Kalibrierung"
+article: "art_04"
+language: "DE"
+style: "Solarpunk"
+pov: "third_person"
+previous_chapter_file: "03_art_03_abschnitt_3_die_kalibrierte_stille.md"
+manual_ending_ok: true
+manual_ending_attempts: 1
+manual_ending_code: "U-04-04"
+scene_condition: "KLIMATISIERUNG"
+archive_note: "KAPITEL 02"
+model: "nvidia/nemotron-3-ultra-550b-a55b:free"
+genre: "Solarpunk"
+backend: "openrouter"
+duration_seconds: 77.0
+jaccard_max: 0.0
+tokens_generated: 1255
+leak_free: true
+manual_ending_note: "Passed (Pflichtblock U-04-04)"
+---
+
+# Abschnitt 4: Die Null-Lager-Kalibrierung
+
+Das rhythmische Tropfen aus dem Zwischenboden hatte sich in den letzten Stunden eingeschliffen – thermische Drift, hatte Kai genannt, als er die Kabelschächte mit Silikonschlauch und Watte abgedichtet hatte. *Plock. Plock.* Ein Metronom für die Geduld, die Mira nicht mehr hatte. Sie drehte das Justierrad ein drittes Mal. Klick. Die Libelle zögerte, schwamm zurück zur Mitte.
+
+„Null-Lager-Prinzip“, sagte Tomás, der sich über die Verteilerbrücke beugte, um die Dichtungen der Entnahmeventile zu prüfen. „Kein Gift, kein Druck, keine Waffe schläft unterm Dach. Wer was braucht, holt es am Speicher. Unterschreibt. Bringt zurück, was übrig bleibt.“ Er zog einen Splint, wischte ihn ab, steckte ihn neu. „Die Gasflaschen am Nordsteg waren nur der Anfang. Die Chlortabletten für die Notdesinfektion wandern morgen in den verschlossenen Schrank an der Pumpenstation. Schlüssel liegt bei Hedda. Zweitschlüssel bei Juna.“
+
+Mira spürte den Papierschliff unter dem Fingernagel – der feine Film vom Morgen, als sie die Kapsel aus der Rohrpost gezogen hatte, mit der Hand, wie angekündigt, nachdem Tomás den Verteiler am Deichfuß geöffnet und die blockierte Kapsel mit dem selbstgebauten Federhaken herausgeangelt hatte. Der Staub haftete an der Haut wie ein Versprechen, das sie nicht eingelöst hatte.
+
+Juna tippte auf das Tablet. Die Kurve glättete sich. „Entnahmeprotokoll 04. Parameter: Kein Haushalt überzieht sein Kontingent um mehr als zwölf Prozent. Wer überzieht, bekommt keine Mahnung – bekommt ein Gespräch. Und einen Techniker, der prüft, ob die Leitung leckt.“ Sie sah zu Voss hinüber. Die Aufsicht hatte den Kohlestift endlich fallen lassen. „Das ist eure Kalibrierung für Artikel Vier. Niemand gehört dem Wasser. Das Wasser gehört niemandem. Wer das System zwingt, Schulden in Zwang zu übersetzen, baut Sklaverei in die Rohre.“
+
+Hedda klappte das blaue Heft auf. „Dreiundzwanzig Flickstellen. Alle dicht. Aber der Speicherrat will die Unterschrift unter dem Tauschvertrag bis Mitternacht. Oder sie drehen den Hahn zu.“
+
+Das Tropfen im Zwischenboden beschleunigte sich. *Plock-plock. Plock-plock.*
+
+Kai erschien in der Luke, Gesicht grau vom Kältekeller. „Die Nebelkollektoren liefern noch. Aber die Pufferbatterien im Sektor 7 zeigen Spannungsabfall. Wenn die Pumpen ausfallen, haben wir vier Stunden, bis die Leitungen leerlaufen.“
+
+Mira legte die Hand auf die Wasserwaage. Das Messing war kalt.
+
+**[COMMUNE-GRID: GETEILT | STATUS: U-04-04]**

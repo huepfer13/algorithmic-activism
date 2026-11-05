@@ -13052,14 +13052,15 @@
         "Kai Ostrom",
         "Hedda Roth"
       ],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_02",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 1841,
-      "reading_minutes": 9,
+      "words": 2203,
+      "reading_minutes": 11,
       "cover": null,
       "chapters": [
         {
@@ -13132,6 +13133,24 @@
           "genre": "Solarpunk",
           "leak_free": "true",
           "words": 341,
+          "reading_minutes": 2
+        },
+        {
+          "file": "04_art_04_abschnitt_4_die_null_lager_kalibrierung.md",
+          "index": 4,
+          "title": "Abschnitt 4: Die Null-Lager-Kalibrierung",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "77.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1255",
+          "manual_ending_code": "U-04-04",
+          "backend": "openrouter",
+          "genre": "Solarpunk",
+          "leak_free": "true",
+          "words": 362,
           "reading_minutes": 2
         }
       ]
