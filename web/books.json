@@ -9324,7 +9324,7 @@
         "Tobias",
         "Die Stimme im Gebälk"
       ],
-      "chapter_count": 10,
+      "chapter_count": 11,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -9335,10 +9335,11 @@
         "art_07",
         "art_08",
         "art_09",
-        "art_10"
+        "art_10",
+        "art_11"
       ],
-      "words": 4364,
-      "reading_minutes": 22,
+      "words": 4864,
+      "reading_minutes": 24,
       "cover": null,
       "chapters": [
         {
@@ -9538,6 +9539,24 @@
           "leak_free": "true",
           "words": 290,
           "reading_minutes": 1
+        },
+        {
+          "file": "11_art_11_abschnitt_11_die_unschuldsvermutung.md",
+          "index": 11,
+          "title": "Abschnitt 11: Die Unschuldsvermutung",
+          "article": "art_11",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "928",
+          "manual_ending_code": "W-11-11",
+          "backend": "deepseek",
+          "genre": "Gothic",
+          "leak_free": "true",
+          "words": 500,
+          "reading_minutes": 2
         }
       ]
     },

@@ -951,7 +951,8 @@
     "r9:nvidia/nemotron-3-super-120b-a12b:free:buch_036_die_warteschlange_der_würde",
     "r10:deepseek-chat:buch_022_the_ledger_of_vanishing_rain",
     "r10:nvidia/nemotron-3-ultra-550b-a55b:free:buch_018_rhymes_of_the_commons",
-    "r10:nvidia/nemotron-3-super-120b-a12b:free:buch_006_das_gericht_vor_der_mauer"
+    "r10:nvidia/nemotron-3-super-120b-a12b:free:buch_006_das_gericht_vor_der_mauer",
+    "r8:deepseek-chat:buch_027_das_haus_das_die_namen_fraß"
   ],
   "runden": {
     "1": [
@@ -12820,6 +12821,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 8
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_027_das_haus_das_die_namen_fraß",
+        "code": "W-11-11",
+        "datei": "11_art_11_abschnitt_11_die_unschuldsvermutung.md",
+        "dauer_s": "9.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 8,
+        "tokens": "928",
+        "versuche": "1",
+        "woerter": 500
       }
     ],
     "9": [
