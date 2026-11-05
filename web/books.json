@@ -12821,17 +12821,18 @@
         "Pip",
         "Captain Brann"
       ],
-      "chapter_count": 6,
+      "chapter_count": 7,
       "covered_articles": [
         "art_01",
         "art_03",
         "art_04",
         "art_05",
         "art_09",
-        "art_12"
+        "art_12",
+        "art_14"
       ],
-      "words": 2609,
-      "reading_minutes": 13,
+      "words": 2970,
+      "reading_minutes": 15,
       "cover": null,
       "chapters": [
         {
@@ -12959,6 +12960,24 @@
           "leak_free": "true",
           "words": 299,
           "reading_minutes": 1
+        },
+        {
+          "file": "07_art_14_abschnitt_7_the_calibration_of_shelter.md",
+          "index": 7,
+          "title": "Abschnitt 7: The Calibration of Shelter",
+          "article": "art_14",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "29.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1043",
+          "manual_ending_code": "K-14-07",
+          "backend": "openrouter",
+          "genre": "Childrens_Book",
+          "leak_free": "true",
+          "words": 361,
+          "reading_minutes": 2
         }
       ]
     },
