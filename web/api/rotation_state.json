@@ -952,7 +952,12 @@
     "r10:deepseek-chat:buch_022_the_ledger_of_vanishing_rain",
     "r10:nvidia/nemotron-3-ultra-550b-a55b:free:buch_018_rhymes_of_the_commons",
     "r10:nvidia/nemotron-3-super-120b-a12b:free:buch_006_das_gericht_vor_der_mauer",
-    "r8:deepseek-chat:buch_027_das_haus_das_die_namen_fraß"
+    "r8:deepseek-chat:buch_027_das_haus_das_die_namen_fraß",
+    "r2:nvidia/nemotron-3-super-120b-a12b:free:buch_041_die_wasserwaage_von_ahrenfeld",
+    "r8:nvidia/nemotron-3-ultra-550b-a55b:free:buch_005_fragment_der_vernunft",
+    "r8:nvidia/nemotron-3-super-120b-a12b:free:buch_009_depeschen_aus_dem_kordon",
+    "r9:nvidia/nemotron-3-super-120b-a12b:free:buch_015_das_kochbuch_der_allmende",
+    "r10:deepseek-chat:buch_030_die_wolkenschule_über_dem_marktplatz"
   ],
   "runden": {
     "1": [
@@ -2857,6 +2862,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 10
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_030_die_wolkenschule_über_dem_marktplatz",
+        "code": "K-18-18",
+        "datei": "18_art_18_abschnitt_18_der_achtzehnte_parameter.md",
+        "dauer_s": "8.3",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 10,
+        "tokens": "968",
+        "versuche": "1",
+        "woerter": 456
       }
     ],
     "2": [
@@ -4459,6 +4479,16 @@
         "tokens": "887",
         "versuche": "1",
         "woerter": 299
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_041_die_wasserwaage_von_ahrenfeld",
+        "datei": null,
+        "dauer_s": 0.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 2
       }
     ],
     "3": [
@@ -12836,6 +12866,26 @@
         "tokens": "928",
         "versuche": "1",
         "woerter": 500
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_005_fragment_der_vernunft",
+        "datei": null,
+        "dauer_s": 301.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 8
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_009_depeschen_aus_dem_kordon",
+        "datei": null,
+        "dauer_s": 0.4,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 8
       }
     ],
     "9": [
@@ -13469,6 +13519,16 @@
         "buch": "buch_036_die_warteschlange_der_würde",
         "datei": null,
         "dauer_s": 0.2,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-super-120b-a12b:free",
+        "runde": 9
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_015_das_kochbuch_der_allmende",
+        "datei": null,
+        "dauer_s": 0.1,
         "exit": 1,
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
