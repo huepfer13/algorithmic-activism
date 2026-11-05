@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 219,
+  "count": 220,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -20599,9 +20599,10 @@
       ],
       "chapter_count": 1,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 411,
+      "words": 301,
       "reading_minutes": 2,
       "cover": null,
       "chapters": [
@@ -20624,22 +20625,22 @@
           "reading_minutes": 1
         },
         {
-          "file": "01_art_01_abschnitt_1_纸屑与提前写好的名字.md",
+          "file": "01_art_02_abschnitt_1_第三册的墨迹.md",
           "index": 1,
-          "title": "Abschnitt 1: 纸屑与提前写好的名字",
-          "article": "art_01",
+          "title": "Abschnitt 1: 第三册的墨迹",
+          "article": "art_02",
           "ending_ok": "true",
           "attempts": "1",
           "model": "deepseek-chat",
-          "duration_seconds": "9.6",
-          "jaccard_max": "0.04",
-          "tokens_generated": "1251",
-          "manual_ending_code": "Q-01-01",
+          "duration_seconds": "5.8",
+          "jaccard_max": "0.077",
+          "tokens_generated": "814",
+          "manual_ending_code": "Q-02-01",
           "backend": "deepseek",
           "genre": "Songtext_Matrix",
           "leak_free": "true",
-          "words": 323,
-          "reading_minutes": 2
+          "words": 213,
+          "reading_minutes": 1
         }
       ]
     },
@@ -20660,9 +20661,10 @@
       "chapter_count": 1,
       "covered_articles": [
         "art_01",
-        "art_02"
+        "art_02",
+        "art_03"
       ],
-      "words": 692,
+      "words": 590,
       "reading_minutes": 3,
       "cover": null,
       "chapters": [
@@ -20685,22 +20687,62 @@
           "reading_minutes": 1
         },
         {
-          "file": "01_art_02_abschnitt_1_die_relais_schweigen_nicht.md",
+          "file": "01_art_03_abschnitt_1_папиросная_пыль.md",
           "index": 1,
-          "title": "Abschnitt 1: Die Relais schweigen nicht",
-          "article": "art_02",
+          "title": "Abschnitt 1: Папиросная пыль",
+          "article": "art_03",
           "ending_ok": "true",
           "attempts": "1",
           "model": "deepseek-chat",
-          "duration_seconds": "6.8",
-          "jaccard_max": "0.029",
-          "tokens_generated": "1060",
-          "manual_ending_code": "Q-02-01",
+          "duration_seconds": "6.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "773",
+          "manual_ending_code": "Q-03-01",
           "backend": "deepseek",
           "genre": "Songtext_Matrix",
           "leak_free": "true",
-          "words": 437,
+          "words": 335,
           "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_227_the_debtors_anatomical_hall",
+      "title": "The Debtor's Anatomical Hall",
+      "language": "EN",
+      "style": "Gothic",
+      "pov": "third_person",
+      "setting_summary": "A converted customs warehouse called the Anatomical Hall stands over a tidal river, where every citizen's body is legally collateral for debts owed to the Hall; clerks measure breath, blood, and memory against ledgers that never close. Its inhabitants live under the Doctrine of Reclamation, by which limbs, voices, and names can be seized and reassigned to strangers, and the river's twice-daily flood seals the lower vaults where the confiscated are kept. A new registrar begins to suspect the ledgers record debts that were never owed, and that the Hall itself is the only creditor.",
+      "characters": [
+        "Ilsa Vane",
+        "Corvin Ashe",
+        "Sister Meret",
+        "The Registrar",
+        "Bram Kettle"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 607,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.5",
+          "jaccard_max": "",
+          "tokens_generated": "711",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Gothic",
+          "leak_free": "",
+          "words": 607,
+          "reading_minutes": 3
         }
       ]
     }

@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_227_the_debtors_anatomical_hall",
+  "title": "The Debtor's Anatomical Hall",
+  "pov": "third_person",
+  "language": "EN",
+  "style": "Gothic",
+  "setting_summary": "A converted customs warehouse called the Anatomical Hall stands over a tidal river, where every citizen's body is legally collateral for debts owed to the Hall; clerks measure breath, blood, and memory against ledgers that never close. Its inhabitants live under the Doctrine of Reclamation, by which limbs, voices, and names can be seized and reassigned to strangers, and the river's twice-daily flood seals the lower vaults where the confiscated are kept. A new registrar begins to suspect the ledgers record debts that were never owed, and that the Hall itself is the only creditor.",
+  "characters": [
+    "Ilsa Vane",
+    "Corvin Ashe",
+    "Sister Meret",
+    "The Registrar",
+    "Bram Kettle"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-05T23:05:19.796310+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
