@@ -2901,7 +2901,7 @@
         "Kell",
         "Nuri"
       ],
-      "chapter_count": 18,
+      "chapter_count": 19,
       "covered_articles": [
         "art_01",
         "art_02",
@@ -2920,10 +2920,11 @@
         "art_15",
         "art_16",
         "art_17",
-        "art_18"
+        "art_18",
+        "art_19"
       ],
-      "words": 8257,
-      "reading_minutes": 41,
+      "words": 8697,
+      "reading_minutes": 43,
       "cover": null,
       "chapters": [
         {
@@ -3266,6 +3267,24 @@
           "genre": "Solarpunk",
           "leak_free": "true",
           "words": 366,
+          "reading_minutes": 2
+        },
+        {
+          "file": "19_art_19_abschnitt_19_die_membran_der_stimmen.md",
+          "index": 19,
+          "title": "Abschnitt 19: Die Membran der Stimmen",
+          "article": "art_19",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "891",
+          "manual_ending_code": "U-19-19",
+          "backend": "deepseek",
+          "genre": "Solarpunk",
+          "leak_free": "true",
+          "words": 440,
           "reading_minutes": 2
         }
       ]

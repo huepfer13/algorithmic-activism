@@ -970,7 +970,9 @@
     "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_041_die_wasserwaage_von_ahrenfeld",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_041_die_wasserwaage_von_ahrenfeld",
     "r5:deepseek-chat:buch_038_the_weight_of_unspoken_rain",
-    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_040_the_lighthouse_of_whispering_sands"
+    "r6:nvidia/nemotron-3-ultra-550b-a55b:free:buch_040_the_lighthouse_of_whispering_sands",
+    "r7:nvidia/nemotron-3-ultra-550b-a55b:free:buch_034_the_weight_of_water",
+    "r9:deepseek-chat:buch_008_flechtwerk_arkadien"
   ],
   "runden": {
     "1": [
@@ -11927,6 +11929,16 @@
         "tokens": "1315",
         "versuche": "1",
         "woerter": 341
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_034_the_weight_of_water",
+        "datei": null,
+        "dauer_s": 0.1,
+        "exit": 1,
+        "hinweis": "kein Kapitel geschrieben",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 7
       }
     ],
     "8": [
@@ -13706,6 +13718,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 9
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_008_flechtwerk_arkadien",
+        "code": "U-19-19",
+        "datei": "19_art_19_abschnitt_19_die_membran_der_stimmen.md",
+        "dauer_s": "8.7",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 9,
+        "tokens": "891",
+        "versuche": "1",
+        "woerter": 440
       }
     ]
   }
