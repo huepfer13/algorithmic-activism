@@ -1000,7 +1000,8 @@
     "r6:nvidia/nemotron-3-super-120b-a12b:free:buch_040_the_lighthouse_of_whispering_sands",
     "r9:nvidia/nemotron-3-super-120b-a12b:free:buch_041_die_wasserwaage_von_ahrenfeld",
     "r10:deepseek-chat:buch_040_the_lighthouse_of_whispering_sands",
-    "r10:nvidia/nemotron-3-ultra-550b-a55b:free:buch_007_die_kammer_der_zeugen"
+    "r10:nvidia/nemotron-3-ultra-550b-a55b:free:buch_007_die_kammer_der_zeugen",
+    "r6:deepseek-chat:buch_004_neon_exil"
   ],
   "runden": {
     "1": [
@@ -10820,6 +10821,21 @@
         "hinweis": "kein Kapitel geschrieben",
         "modell": "nvidia/nemotron-3-super-120b-a12b:free",
         "runde": 6
+      },
+      {
+        "backend": "deepseek",
+        "buch": "buch_004_neon_exil",
+        "code": "S-20-20",
+        "datei": "20_art_20_abschnitt_20_die_versammlungsschwelle.md",
+        "dauer_s": "11.1",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "deepseek-chat",
+        "modell": "deepseek-chat",
+        "runde": 6,
+        "tokens": "1200",
+        "versuche": "1",
+        "woerter": 607
       }
     ],
     "7": [
