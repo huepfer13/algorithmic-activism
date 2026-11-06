@@ -177,11 +177,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 
 | Kennzahl | Wert |
 |---|---:|
-| Bände | 306 |
-| Kapitel | 732 |
-| Artikel-Abdeckung (Summe über Sprachen) | 80 / 570 |
+| Bände | 307 |
+| Kapitel | 733 |
+| Artikel-Abdeckung (Summe über Sprachen) | 81 / 570 |
 | Sprachen | 19 |
-| Zeichen im Korpus | 2.463.901 |
+| Zeichen im Korpus | 2.466.389 |
 
 **Abdeckung je Sprache** (Kapitel / Artikel von 30)
 
@@ -199,7 +199,7 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | IT | 24 | 7 | 2 / 30 |
 | JA | 8 | 8 | 2 / 30 |
 | KO | 4 | 4 | 2 / 30 |
-| NL | 3 | 3 | 1 / 30 |
+| NL | 4 | 4 | 2 / 30 |
 | PT | 24 | 8 | 5 / 30 |
 | RU | 3 | 4 | 4 / 30 |
 | SV | 3 | 3 | 1 / 30 |
@@ -216,13 +216,13 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | B | 25 | 8% |
 | C | 25 | 8% |
 | C2 | 3 | 1% |
-| C3 | 8 | 3% |
+| C3 | 9 | 3% |
 
 **Stil-Verteilung** (Stil ist je Band fest; innerhalb eines Bandes wechselt er nicht)
 
 | Stil | Bände |
 |---|---:|
-| Songtext_Matrix | 87 |
+| Songtext_Matrix | 88 |
 | Satire | 9 |
 | Fable | 8 |
 | Parabel | 6 |
@@ -238,11 +238,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 **Ketten-Tiefe** (jedes Kapitel liest genau das VORHERIGE Kapitel, nicht die ganze Historie)
 
 * Kapitel je Band: Median 0 · Maximum 28
-* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3366 Zeichen (~841 Tokens)
+* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3365 Zeichen (~841 Tokens)
 
 **Diversität** (je niedriger der erste Wert, desto weniger Schablone)
 
 * Häufigste Stil-Phrase: `rhodes in the mids` in 14% der Zuordnungen
-* Bände mit genau 5 Figuren: 280 von 296 (95%)
+* Bände mit genau 5 Figuren: 281 von 297 (95%)
 
 <!-- END_DYNAMIC_STATS -->
