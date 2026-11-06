@@ -77,6 +77,8 @@ def block(z: dict) -> str:
     zonen_gesamt = sum(z["zonen"].values()) or 1
 
     gesamt_baende = sum(v["baende"] for v in z["sprachen"].values())
+    n_figur = len(z["figuren"])
+    schnitt = z["zeichen"] / max(gesamt_kap, 1)      # Zeichen je Kapitel = Kontextgroesse
     zeichen = f"{z['zeichen']:,}".replace(",", ".")
     zonen_zeile = (f"* Häufigste Stil-Phrase: `{zonen_top[0][0]}` in "
                    f"{zonen_top[0][1] / zonen_gesamt:.0%} der Zuordnungen"
@@ -124,13 +126,13 @@ def block(z: dict) -> str:
                "",
                f"* Kapitel je Band: Median {statistics.median(ketten):.0f} · Maximum {max(ketten)}",
                f"* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel "
-               f"{(z['zeichen'] / max(gesamt_kap, 1)):.0f} Zeichen (~{(z['zeichen'] / max(gesamt_kap, 1)) / 4:.0f} Tokens)",
+               f"{schnitt:.0f} Zeichen (~{schnitt / 4:.0f} Tokens)",
                "",
                "**Diversität** (je niedriger der erste Wert, desto weniger Schablone)",
                "",
                zonen_zeile,
-               f"* Bände mit genau 5 Figuren: {fig5} von {len(z['figuren'])} "
-               f"({fig5 / max(len(z['figuren']), 1):.0%})",
+               f"* Bände mit genau 5 Figuren: {fig5} von {n_figur} "
+               f"({fig5 / max(n_figur, 1):.0%})",
                "", ENDE]
     return "\n".join(zeilen)
 
