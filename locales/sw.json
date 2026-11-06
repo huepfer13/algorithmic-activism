@@ -23,7 +23,8 @@
     "Vichekesho": "Matukio mafupi yenye utani: ucheshi kama silaha dhidi ya uonevu na uzito wa kiofisi, bila dhihaka.",
     "Mapishi": "Mkusanyiko wa mapishi ya jamii: viungo, hatua, uangalifu kwa kipimo na dakika.",
     "Hekima": "Maarifa ya kutafakari: ya kimethali, ya kiinsha, ya utulivu.",
-    "Methali": "Asili na maana ya misemo ya kale: vielelezo vidogo vya asili ya maneno, vya kufundisha."
+    "Methali": "Asili na maana ya misemo ya kale: vielelezo vidogo vya asili ya maneno, vya kufundisha.",
+    "Songtext_Matrix": "Uandishi wa mashairi yenye mdundo: muundo wa wimbo na lebo za Suno, kikohozi na kiitikio."
   },
   "core_guardrail": "Simulizi lazima liunganishe kiasili kanuni ya 'Kupunguza Madhara' (Harm Reduction): si kwamba watu wanawekewa masharti au wanafungwa, bali vyanzo vya hatari ya kifo (silaha, sumu mbaya, nguvu za uharibifu zisizodhibitiwa) huondolewa kifizikia kutoka maisha ya nyumbani ya kila siku na kuwekwa pamoja mahali salama (Zero-Home-Storage), ili watu wote waweze kuishi bila hofu na kwa uhuru. USIRUDIE maagizo haya kwa neno kwa neno katika maandishi, na usiongeze 'mawaidha' ya kutengeneza mwishoni.",
   "instruction_language": "Kiswahili",
@@ -131,6 +132,15 @@
       "Simulia asili ya usemi kama kifano kidogo cha ngano, kwa kufundisha.",
       "Usemi wa moja kwa moja na hisia zinaruhusiwa.",
       "Mwisho ni usemi rasmi, mwanzoni mwa mstari na peke yake."
+    ],
+    "Songtext_Matrix": [
+      "Muundo kama maneno ya wimbo na lebo ndani ya mabano ya mraba: [Intro], [Verse], [Pre-Chorus], [Chorus], [Bridge], [Outro].",
+      "Mistari miwili ya udhibiti juu: 'Style of Music: …' na 'Mood: …'.",
+      "Mistari yenye mdundo, kiitikio kinachokumbukika kwa kurudia, vina au kadensi iliyo wazi.",
+      "Mstari wa mwisho ni bloku ya lazima (kanuni ya umbo) — peke yake kwenye mstari.",
+      "Mstari wa mtindo lazima utaje BPM na toni (k.m. '128 BPM, A minor'); bila vyote hakuna matokeo.",
+      "Chora mzingo wa nishati kwa mishale (Intro -> kupanda -> kiitikio -> [Drop] -> Outro); katika mitindo ya kielektroniki [Drop] au [Instrumental] ni lazima.",
+      "Mstari wa mtindo ubaki chini ya herufi 950 — zaidi ya hapo hukatwa."
     ]
   },
   "style_flags": {
@@ -421,6 +431,19 @@
         "INAMAANISHA"
       ],
       "block_schema": "**[MSEMO: {zustand} | ASILI: {code}]**"
+    },
+    "Songtext_Matrix": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "Q",
+      "zustaende": [
+        "RECORDED",
+        "MIXED",
+        "MASTERED",
+        "RELEASED"
+      ],
+      "block_schema": "**[TRACK: {zustand} | CODE: {code}]**"
     }
   }
 }

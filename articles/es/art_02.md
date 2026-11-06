@@ -1,0 +1,7 @@
+---
+article: 2
+article_id: "art_02"
+title: "Toda persona tiene todos los derechos y libertades proclamad"
+source: "UN — Naciones Unidas (DUDH, spanische Fassung)"
+---
+Toda persona tiene todos los derechos y libertades proclamados en esta Declaración, sin distinción alguna de raza, color, sexo, idioma, religión, opinión política o de cualquier otra índole, origen nacional o social, posición económica, nacimiento o cualquier otra condición. Además, no se hará distinción alguna fundada en la condición política, jurídica o internacional del país o territorio de cuya jurisdicción dependa una persona, tanto si se trata de un país independiente, como de un territorio bajo administración fiduciaria, no autónomo o sometido a cualquier otra limitación de soberanía

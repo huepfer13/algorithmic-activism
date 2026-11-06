@@ -1,0 +1,446 @@
+{
+  "language_code": "KO",
+  "language_name": "한국어",
+  "styles": {
+    "Parabel": "우화적 서사: 통찰을 이미지로 감싸되 끝에 훈계를 두지 않는다.",
+    "SciFi_Dystopie": "점진적 통제 상실의 위험에 관한 디스토피아 과학소설",
+    "Fabel": "동물 우화: 말하는 동물들, 행동에서 자연스럽게 흘러나오는 교훈.",
+    "Philosophischer_Essay": "서사적·에세이적 사유 공간",
+    "Cyberpunk_Noir": "네온, 비, 기업: 그림자 경제 속의 감각과 저항.",
+    "Gerichtsdrama": "중재위원회 앞의 심리: 증언, 증거물, 법적 근거.",
+    "Magischer_Realismus": "일상이 된 경이: 불가능한 일이 날씨처럼 기록된다.",
+    "Historische_Chronik": "연대기: 날짜가 붙은 항목들, 법 발전의 원인과 결과.",
+    "Kammerspiel": "하나의 방, 소수의 인물, 본질적인 모든 것이 대화 속에.",
+    "Gerätehandbuch": "기술 문서 및 운용 설명서: 건조하고 관료적인 엔지니어 어조. 절, 경고 표시(ISO 3864에 따른 위험/경고/주의), 기능 설명, 정비 주기, 오류 진단 표로 구조화된다. 사람과 감정은 '조작 단위', '생물학적 하위 시스템', '오류 원인'으로 목록화된다. 이 설명서는 인간성을 말살하는 행정 언어에 대한 풍자적 비판으로 설계된다: 묘사된 조치는 권고가 아니라 비판이다.",
+    "Märchen": "고전적 예술 동화: 시대를 초월하고, 이미지가 풍부하며, 원형적이다. 시련, 문턱, 장인 정신, 나누는 빵. 냉소적 관료 언어는 없다.",
+    "Kinderbuch": "아이를 위한 서사: 따뜻하고 생생하며, 단순한 주어-서술어 문장, 동물과 아이가 행위자. 권리가 구체적 행동으로 드러난다.",
+    "Solarpunk": "건설적 유토피아: 분권화된 공동체, 검증된 해법, 권리를 위한 실질적 기술.",
+    "Briefroman": "서간체 보고: 헤어진 이들 사이의 번호 붙은 전문, 깊은 내면 성찰.",
+    "Satire": "정치적 그로테스크: 비대해진 기구가 단순한 권리를 집행 불가능하게 만든다.",
+    "Gothic": "괴기 소설: 집이 변하는 동안 주민들은 자신의 자유를 잊는다.",
+    "Manifest": "수사적 호소: 자의, 박해, 침묵에 맞선 리듬 있는 선언.",
+    "Tagebuch": "허구의 일기: 고립된 통제구역에서 쓰인 날짜 붙은 기록, 점진적 권리 상실.",
+    "Witzebuch": "날카로운 짧은 장면: 자의와 관청의 엄숙함에 맞선 무기로서의 유머, 빈정거림 없이.",
+    "Kochbuch": "공유지의 레시피 모음: 재료, 단계, 돌봄을 척도와 분 단위로.",
+    "Lebensweisheiten": "명상적 통찰: 아포리즘적, 에세이적, 차분함.",
+    "Sprichwoerter": "오래된 표현의 기원과 의미: 어원적 소품, 교훈적.",
+    "Songtext_Matrix": "리듬 있는 가사: Suno 태그를 갖춘 곡 구조, 훅과 후렴."
+  },
+  "style_rules": {
+    "Gerätehandbuch": [
+      "[위험], [경고], [주의] 중 최소 두 개의 표시 블록 — 각각 조건과 결과를 포함.",
+      "최소 하나의 기술 오류 코드를 '오류 코드 E-<숫자>: <장애>' 형식으로 또는 진단 표.",
+      "텍스트는 기술 지시, 오류 코드 또는 정비 단계로 끝난다 — 결코 도덕적 평가로 끝나지 않는다.",
+      "사람은 오직 조작 단위, 생물학적 하위 시스템 또는 오류 원인으로만 기재; 이름 없음, 연민 없음, 느낌표 없음.",
+      "논의되는 UN 조항을 인용이나 호소가 아닌 공장 매개변수 또는 교정 사양으로 다룬다.",
+      "직접 화법 없음, 대화 없음, 인물 간의 감정적 행동이나 시선 없음. 장은 반드시 형식적 진단, 정비 또는 오류 코드 항목으로 끝난다."
+    ],
+    "Märchen": [
+      "원형적 이미지(문턱, 시련, 주문)로 서술하되 폭력을 미화하지 않는다.",
+      "직접 화법은 허용되며 권장된다.",
+      "결말은 형식적 연대기 항목이며, 줄 첫머리에 홀로 놓인다."
+    ],
+    "Kinderbuch": [
+      "아이 또는 작은 동물의 시점에서 단순한 주어-서술어 문장으로 서술한다.",
+      "직접 화법과 감정은 허용되며 권장된다, 끝에 훈계 없이.",
+      "결말은 형식적 도장이며, 줄 첫머리에 홀로 놓인다."
+    ],
+    "Solarpunk": [
+      "디스토피아 대신 작동하는 해방적 해법을 보여준다.",
+      "직접 화법과 감정은 허용되며 권장된다.",
+      "결말은 형식적 네트워크 상태이며, 줄 첫머리에 홀로 놓인다."
+    ],
+    "Briefroman": [
+      "권위적 산문이 아닌 편지/전문으로 서술한다.",
+      "직접 화법과 감정은 허용되며 권장된다.",
+      "결말은 형식적 전문 비고이며, 줄 첫머리에 홀로 놓인다."
+    ],
+    "Satire": [
+      "기구를 과장하되 그 아래 고통받는 사람을 과장하지 않는다.",
+      "직접 화법과 감정은 허용되며 권장된다.",
+      "결말은 형식적 칙령이며, 줄 첫머리에 홀로 놓인다."
+    ],
+    "Gothic": [
+      "공포를 찬양하지 않으면서 분위기와 불안을 조성한다.",
+      "직접 화법과 감정은 허용되며 권장된다.",
+      "결말은 형식적 연대기 문턱이며, 줄 첫머리에 홀로 놓인다."
+    ],
+    "Manifest": [
+      "인물 연출 없이 선언하고 호소로 논증한다.",
+      "직접 화법 없음(집단적 독백), 감정과 절박함은 허용.",
+      "결말은 형식적 선포이며, 줄 첫머리에 홀로 놓인다."
+    ],
+    "Tagebuch": [
+      "권위적 장이 아닌 날짜 붙은 개인 기록을 쓴다.",
+      "직접 화법과 감정은 허용되며 권장된다.",
+      "결말은 형식적 일기 항목이며, 줄 첫머리에 홀로 놓인다."
+    ],
+    "Witzebuch": [
+      "명확한 펀치라인이 있는 짧은 장면, 대화 허용 및 권장.",
+      "기구를 비웃되 피해자를 비웃지 않는다.",
+      "결말은 형식적 펀치라인이며, 줄 첫머리에 홀로 놓인다."
+    ],
+    "Kochbuch": [
+      "명확한 재료 및 단계 논리, 겸손하고 감각적.",
+      "직접 화법 없음, 인물 연출 없음(설명문).",
+      "결말은 형식적 주방 비고이며, 줄 첫머리에 홀로 놓인다."
+    ],
+    "Lebensweisheiten": [
+      "인물 연출 없이 명상적이고 아포리즘적으로.",
+      "직접 화법 없음(성찰), 태도로서의 감정은 허용.",
+      "결말은 형식적 통찰이며, 줄 첫머리에 홀로 놓인다."
+    ],
+    "Sprichwoerter": [
+      "표현의 기원을 우화적 소품으로 서술하되 교훈적으로.",
+      "직접 화법과 감정은 허용된다.",
+      "결말은 형식적 표현이며, 줄 첫머리에 홀로 놓인다."
+    ],
+    "Parabel": [
+      "비유를 서술한다; 통찰은 호소가 아닌 행동에서 생긴다.",
+      "직접 화법과 감정은 허용된다.",
+      "결말은 형식적 비유 인장이며, 줄 첫머리에 홀로 놓인다."
+    ],
+    "Gerichtsdrama": [
+      "심리를 장면으로 이끈다; 진술과 이의 제기는 그 일부다.",
+      "직접 화법은 반드시 권장된다.",
+      "결말은 형식적 심리 기록이며, 줄 첫머리에 홀로 놓인다."
+    ],
+    "Fabel": [
+      "동물이 행동하고 말한다; 교훈은 드러나되 설교되지 않는다.",
+      "직접 화법과 감정은 허용된다.",
+      "결말은 형식적 우화 교훈이며, 줄 첫머리에 홀로 놓인다."
+    ],
+    "Cyberpunk_Noir": [
+      "감각에 가깝게, 빠르고 분위기 있게 서술한다.",
+      "직접 화법과 감정은 허용된다.",
+      "결말은 형식적 네트워크 추적이며, 줄 첫머리에 홀로 놓인다."
+    ],
+    "Magischer_Realismus": [
+      "경이로운 일을 설명하지 않고 무심하게 다룬다.",
+      "직접 화법과 감정은 허용된다.",
+      "결말은 형식적 기적 연대기이며, 줄 첫머리에 홀로 놓인다."
+    ],
+    "Kammerspiel": [
+      "장소를 좁게 유지하고 긴장을 말 속에 둔다.",
+      "직접 화법은 반드시 권장된다.",
+      "결말은 형식적 장면 기록이며, 줄 첫머리에 홀로 놓인다."
+    ],
+    "Historische_Chronik": [
+      "명확한 시간 순서로 연대기 형식으로 쓴다.",
+      "직접 화법과 감정은 허용된다.",
+      "결말은 형식적 연대기 항목이며, 줄 첫머리에 홀로 놓인다."
+    ],
+    "Songtext_Matrix": [
+      "대괄호 태그를 갖춘 가사로 구성: [Intro], [Verse], [Pre-Chorus], [Chorus], [Bridge], [Outro].",
+      "맨 위에 두 개의 제어 줄: 'Style of Music: …'와 'Mood: …'.",
+      "리듬 있는 절, 반복이 있는 강렬한 후렴, 운율 또는 명확한 리듬 종지.",
+      "마지막 줄은 의무 블록(형식 사양) — 한 줄에 홀로.",
+      "Style 줄은 반드시 BPM과 조성을 명시(예: '128 BPM, A minor'); 둘 다 없으면 출력 없음.",
+      "화살표로 긴장 곡선을 그린다(Intro -> 빌드업 -> 후렴 -> [Drop] -> Outro); 전자 장르에서는 [Drop] 또는 [Instrumental] 필수.",
+      "Style 줄은 950자 미만 유지 — 초과분은 잘린다.",
+      "각 절은 정확히 4줄. 5줄 이상의 절은 없음.",
+      "각 줄은 7~10음절 — 한 호흡에 노래 가능, 복잡한 문장 없음.",
+      "각운 필수: 절은 AABB 또는 ABAB 도식, 후렴은 최소 하나의 운 쌍.",
+      "후렴은 4줄로 구성되며, 추상적 개념(권리, 자유, 시스템, 존엄)은 최대 하나만 포함하고 최소 하나의 구체적 이미지(사물, 장소, 행동)를 포함한다.",
+      "곡당 최대 두 인물만 언급 — 이름 목록 없음.",
+      "각 곡은 고유한 후렴을 가진다. 이전 곡의 후렴 줄은 금지."
+    ]
+  },
+  "style_flags": {
+    "Gerätehandbuch": {
+      "manual_ending": true,
+      "figuren_verboten": true
+    },
+    "Märchen": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "M",
+      "zustaende": [
+        "보존됨",
+        "검증됨",
+        "밝혀짐",
+        "보증됨"
+      ],
+      "block_schema": "**[연대기: {zustand} | 인장: {code}]**"
+    },
+    "Kinderbuch": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "K",
+      "zustaende": [
+        "배움",
+        "보호됨",
+        "나눔",
+        "깨달음"
+      ],
+      "block_schema": "**[숲의 책: {zustand} | 장: {code}]**"
+    },
+    "SciFi_Dystopie": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "S",
+      "zustaende": [
+        "온라인",
+        "동기화됨",
+        "미러링됨",
+        "패치됨"
+      ],
+      "block_schema": "**[노드: {zustand} | 로그: {code}]**"
+    },
+    "Philosophischer_Essay": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "code_praefix": "P",
+      "zustaende": [
+        "고려됨",
+        "검증됨",
+        "기각됨",
+        "숙고됨"
+      ],
+      "block_schema": "**[명제: {zustand} | 성찰: {code}]**"
+    },
+    "Solarpunk": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "U",
+      "zustaende": [
+        "연결됨",
+        "공급됨",
+        "공유됨",
+        "검증됨"
+      ],
+      "block_schema": "**[공동체 그리드: {zustand} | 상태: {code}]**"
+    },
+    "Briefroman": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "B",
+      "zustaende": [
+        "발송됨",
+        "도착함",
+        "읽힘",
+        "봉인됨"
+      ],
+      "block_schema": "**[전문: {zustand} | 인장: {code}]**"
+    },
+    "Satire": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "G",
+      "zustaende": [
+        "발령됨",
+        "명령됨",
+        "승인됨",
+        "문서화됨"
+      ],
+      "block_schema": "**[회람: {zustand} | 발령: {code}]**"
+    },
+    "Gothic": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "W",
+      "zustaende": [
+        "봉쇄됨",
+        "통과됨",
+        "보관됨",
+        "계수됨"
+      ],
+      "block_schema": "**[연대기: {zustand} | 문턱: {code}]**"
+    },
+    "Manifest": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "code_praefix": "R",
+      "zustaende": [
+        "선포됨",
+        "염원됨",
+        "등록됨",
+        "확인됨"
+      ],
+      "block_schema": "**[선포: {zustand} | 등록부: {code}]**",
+      "figuren_verboten": true
+    },
+    "Tagebuch": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "T",
+      "zustaende": [
+        "기록됨",
+        "날짜기입됨",
+        "검증됨",
+        "과거"
+      ],
+      "block_schema": "**[항목: {zustand} | 시점: {code}]**"
+    },
+    "Witzebuch": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "J",
+      "zustaende": [
+        "명중",
+        "적중",
+        "점화",
+        "소멸"
+      ],
+      "block_schema": "**[펀치라인: {zustand} | 코다: {code}]**"
+    },
+    "Kochbuch": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": false,
+      "code_praefix": "C",
+      "zustaende": [
+        "준비됨",
+        "조리됨",
+        "나눔",
+        "정돈됨"
+      ],
+      "block_schema": "**[주방: {zustand} | 레시피: {code}]**",
+      "figuren_verboten": true
+    },
+    "Lebensweisheiten": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "code_praefix": "L",
+      "zustaende": [
+        "숙고됨",
+        "차분함",
+        "검증됨",
+        "보존됨"
+      ],
+      "block_schema": "**[통찰: {zustand} | 지혜: {code}]**",
+      "figuren_verboten": true
+    },
+    "Sprichwoerter": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "V",
+      "zustaende": [
+        "발견됨",
+        "각인됨",
+        "전승됨",
+        "의미됨"
+      ],
+      "block_schema": "**[표현: {zustand} | 기원: {code}]**"
+    },
+    "Parabel": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "D",
+      "zustaende": [
+        "서술됨",
+        "해석됨",
+        "보존됨",
+        "드러남"
+      ],
+      "block_schema": "**[비유: {zustand} | 교훈: {code}]**"
+    },
+    "Gerichtsdrama": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "H",
+      "zustaende": [
+        "심리됨",
+        "연기됨",
+        "결정됨",
+        "기록됨"
+      ],
+      "block_schema": "**[심리: {zustand} | 기록: {code}]**"
+    },
+    "Fabel": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "F",
+      "zustaende": [
+        "교훈받음",
+        "애석함",
+        "경탄함",
+        "숙고됨"
+      ],
+      "block_schema": "**[우화: {zustand} | 교훈: {code}]**"
+    },
+    "Cyberpunk_Noir": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "N",
+      "zustaende": [
+        "로그인됨",
+        "폐기됨",
+        "라우팅됨",
+        "미러링됨"
+      ],
+      "block_schema": "**[피드: {zustand} | 추적: {code}]**"
+    },
+    "Magischer_Realismus": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "Z",
+      "zustaende": [
+        "발생함",
+        "기록됨",
+        "믿어짐",
+        "반복됨"
+      ],
+      "block_schema": "**[기적: {zustand} | 연대기: {code}]**"
+    },
+    "Kammerspiel": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "O",
+      "zustaende": [
+        "공연됨",
+        "퇴장함",
+        "반복됨",
+        "종료됨"
+      ],
+      "block_schema": "**[장면: {zustand} | 퇴장: {code}]**"
+    },
+    "Historische_Chronik": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "I",
+      "zustaende": [
+        "기록됨",
+        "날짜기입됨",
+        "검증됨",
+        "전승됨"
+      ],
+      "block_schema": "**[연대기: {zustand} | 연도: {code}]**"
+    },
+    "Songtext_Matrix": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "Q",
+      "zustaende": [
+        "RECORDED",
+        "MIXED",
+        "MASTERED",
+        "RELEASED"
+      ],
+      "block_schema": "**[트랙: {zustand} | 코드: {code}]**"
+    }
+  },
+  "core_guardrail": "이야기는 '피해 최소화'(Harm Reduction) 원칙을 유기적으로 엮어야 한다: 사람이 규제되거나 감금되는 것이 아니라, 치명적 위험원(무기, 치사 독소, 규제되지 않은 파괴력)이 사적 생활 공간에서 물리적으로 추방되어 안전한 장소에 중앙 집중화됨으로써(Zero-Home-Storage) 모든 사람이 두려움 없이 자유롭게 살 수 있게 한다. 이 지침을 텍스트에 그대로 반복하지 말고, 끝에 인위적인 '이야기의 교훈'을 덧붙이지 말라.",
+  "instruction_language": "한국어"
+}

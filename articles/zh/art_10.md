@@ -1,0 +1,8 @@
+---
+article: 10
+article_id: "art_10"
+title: "人人完全平等地有权由一个独立而无偏倚的法庭进行公正的和公开的审讯，以确定他的权利和义务并判定对他提出的任何刑事指控。"
+source: "UN — Vereinte Nationen (UDHR, chinesische Fassung)"
+url: https://www.un.org/zh/about-us/universal-declaration-of-human-rights
+---
+人人完全平等地有权由一个独立而无偏倚的法庭进行公正的和公开的审讯，以确定他的权利和义务并判定对他提出的任何刑事指控。

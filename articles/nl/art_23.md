@@ -1,0 +1,7 @@
+---
+article: 23
+article_id: "art_23"
+title: "Een ieder heeft recht op arbeid, op vrije keuze van beroep, "
+source: "Wikisource nl.wikisource.org"
+---
+Een ieder heeft recht op arbeid, op vrije keuze van beroep, op rechtmatige en gunstige arbeidsvoorwaarden en op bescherming tegen werkloosheid. Een ieder, zonder enige achterstelling, heeft recht op gelijk loon voor gelijke arbeid. Een ieder, die arbeid verricht, heeft recht op een rechtvaardige en gunstige beloning, welke hem en zijn gezin een menswaardig bestaan verzekert, welke beloning zo nodig met andere middelen van sociale bescherming zal worden aangevuld. Een ieder heeft het recht om vakverenigingen op te richten en zich daarbij aan te sluiten ter bescherming van zijn belangen

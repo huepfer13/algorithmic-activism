@@ -23,7 +23,8 @@
     "Livro_de_Piadas": "Cenas breves e incisivas: o humor como arma contra a arbitrariedade e a solenidade oficial, sem desprezo pelas pessoas afetadas.",
     "Livro_de_Receitas": "Coleção de receitas dos comuns: ingredientes, passos, cuidado em medida e minuto.",
     "Aforismos": "Intuições contemplativas: aforísticas, ensaísticas, serenas.",
-    "Provérbios": "Origem e sentido de antigas expressões: miniaturas etimológicas, instrutivas."
+    "Provérbios": "Origem e sentido de antigas expressões: miniaturas etimológicas, instrutivas.",
+    "Songtext_Matrix": "Escrita de letras rítmicas: estrutura de canção com tags Suno, refrão e hook."
   },
   "style_rules": {
     "Manual_Técnico": [
@@ -128,6 +129,15 @@
       "Escreve em forma de anais com uma sequência temporal clara.",
       "O discurso direto e os sentimentos são permitidos.",
       "O final é um registo formal de anais, no início da linha e isolado."
+    ],
+    "Songtext_Matrix": [
+      "Estrutura como letra com tags entre colchetes: [Intro], [Verse], [Pre-Chorus], [Chorus], [Bridge], [Outro].",
+      "Duas linhas de controle no topo: 'Style of Music: …' e 'Mood: …'.",
+      "Estrofes rítmicas, refrão marcante com repetição, rima ou cadência clara.",
+      "A última linha é o bloco obrigatório (regra de forma) — sozinha na linha.",
+      "A linha de estilo deve indicar BPM e tonalidade (ex.: '128 BPM, A minor'); sem ambos, não há saída.",
+      "Desenhe a curva de energia com setas (intro -> subida -> refrão -> [Drop] -> outro); [Drop] ou [Instrumental] obrigatório em gêneros eletrônicos.",
+      "A linha de estilo fica abaixo de 950 caracteres — o excedente é cortado."
     ]
   },
   "style_flags": {
@@ -418,6 +428,19 @@
         "TRANSMITIDO"
       ],
       "block_schema": "**[ANAIS: {zustand} | ANO: {code}]**"
+    },
+    "Songtext_Matrix": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "Q",
+      "zustaende": [
+        "RECORDED",
+        "MIXED",
+        "MASTERED",
+        "RELEASED"
+      ],
+      "block_schema": "**[TRACK: {zustand} | CODE: {code}]**"
     }
   },
   "core_guardrail": "A história deve entrelaçar organicamente o princípio da 'Redução de Danos': não são os cidadãos que são regulamentados ou encerrados, mas sim as fontes de perigo letal (armas, toxinas mortais, força destrutiva não regulada) que são fisicamente removidas da vida doméstica privada e centralizadas em locais seguros (Zero-Home-Storage), para que todas as pessoas possam viver sem medo e em liberdade. NÃO repitas esta instrução literalmente no texto e não acrescentes nenhuma 'moral da história' artificial ao final.",

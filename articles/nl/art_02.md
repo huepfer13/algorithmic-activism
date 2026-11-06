@@ -1,0 +1,7 @@
+---
+article: 2
+article_id: "art_02"
+title: "Een ieder heeft aanspraak op alle rechten en vrijheden, in d"
+source: "Wikisource nl.wikisource.org"
+---
+Een ieder heeft aanspraak op alle rechten en vrijheden, in deze Verklaring opgesomd, zonder enig onderscheid van welke aard ook, zoals ras, kleur, geslacht, taal, godsdienst, politieke of andere overtuiging, nationale of maatschappelijke afkomst, eigendom, geboorte of andere status. Verder zal geen onderscheid worden gemaakt naar de politieke, juridische of internationale status van het land of gebied, waartoe iemand behoort, onverschillig of het een onafhankelijk, trust-, of niet-zelfbesturend gebied betreft, dan wel of er een andere beperking van de soevereiniteit bestaat

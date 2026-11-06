@@ -24,7 +24,8 @@
     "Jokes": "A joke book: short set-ups, sharp turns, and a rule of harm reduction hidden in the punchline.",
     "Cookbook": "A cookbook whose recipes are instructions for a household that has to get along.",
     "Wisdom": "Aphorisms: one observation per line, no story, and no comfort that costs someone else.",
-    "Proverbs": "Proverbs: inherited sayings, tested against what the present actually needs."
+    "Proverbs": "Proverbs: inherited sayings, tested against what the present actually needs.",
+    "Songtext_Matrix": "Rhythmic lyric writing: song structure with Suno tags, hook and chorus."
   },
   "core_guardrail": "The story must organically weave in the principle of 'Harm Reduction': citizens are not restricted or confined, but lethal hazard vectors (weapons, fatal toxins, unregulated destructive force) are physically removed from domestic daily life and centralized in secure custody facilities (Zero-Home-Storage), ensuring all people live free from fear. Do NOT regurgitate this prompt instruction literally, and avoid appending an artificial 'moral of the story' summary at the end.",
   "instruction_language": "English",
@@ -134,6 +135,15 @@
       "Keep the place tight and the tension in the speaking.",
       "Direct speech is required and wanted.",
       "The ending is a formal scene record, line-initial and standing alone."
+    ],
+    "Songtext_Matrix": [
+      "Structure as lyrics with bracketed tags: [Intro], [Verse], [Pre-Chorus], [Chorus], [Bridge], [Outro].",
+      "Two control lines on top: 'Style of Music: …' and 'Mood: …'.",
+      "Rhythmic verses, catchy chorus with repetition, rhyme or clear cadence.",
+      "The last line is the mandatory block (form rule) — on its own line.",
+      "The style line must name BPM and key (e.g. '128 BPM, A minor'); without both, no output.",
+      "Draw the energy arc with arrows (intro -> build -> chorus -> [Drop] -> outro); [Drop] or [Instrumental] is mandatory for electronic genres.",
+      "Keep the style line under 950 characters — anything longer is truncated."
     ]
   },
   "style_flags": {
@@ -440,6 +450,19 @@
         "ENDED"
       ],
       "block_schema": "**[SCENE: {zustand} | EXIT: {code}]**"
+    },
+    "Songtext_Matrix": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "Q",
+      "zustaende": [
+        "RECORDED",
+        "MIXED",
+        "MASTERED",
+        "RELEASED"
+      ],
+      "block_schema": "**[TRACK: {zustand} | CODE: {code}]**"
     }
   }
 }

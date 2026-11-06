@@ -1,0 +1,7 @@
+---
+article: 7
+article_id: "art_07"
+title: "Todos são iguais perante a lei e, sem distinção, têm direito"
+source: "UNRIC — Centro Regional de Informação (DUDH, portugiesische Fassung)"
+---
+Todos são iguais perante a lei e, sem distinção, têm direito a igual protecção da lei. Todos têm direito a protecção igual contra qualquer discriminação que viole a presente Declaração e contra qualquer incitamento a tal discriminação

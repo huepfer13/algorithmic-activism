@@ -23,7 +23,8 @@
     "Witzebuch": "Pointierte Kurzszenen: Humor als Waffe gegen Willkuer und Amtsernst, ohne Haehne.",
     "Kochbuch": "Rezeptsammlung der Allmende: Zutaten, Schritte, Fuer-Sorge in Mass und Minute.",
     "Lebensweisheiten": "Kontemplative Einsichten: aphoristisch, essayistisch, gelassen.",
-    "Sprichwoerter": "Herkunft und Sinn alter Wendungen: etymologische Miniaturen, lehrreich."
+    "Sprichwoerter": "Herkunft und Sinn alter Wendungen: etymologische Miniaturen, lehrreich.",
+    "Songtext_Matrix": "Rhythmische, vertonte Lyrik: Songstruktur mit Suno-Tags, Hook und Refrain."
   },
   "style_rules": {
     "Gerätehandbuch": [
@@ -128,6 +129,21 @@
       "Schreibe in Annalenform mit klarer Zeitfolge.",
       "Wörtliche Rede und Gefuehle sind erlaubt.",
       "Der Schluss ist ein formaler Annalen-Eintrag, zeileninitial und alleinstehend."
+    ],
+    "Songtext_Matrix": [
+      "Aufbau als Songtext mit Tags in eckigen Klammern: [Intro], [Verse], [Pre-Chorus], [Chorus], [Bridge], [Outro].",
+      "Ganz oben zwei Steuerzeilen: 'Style of Music: …' und 'Mood: …'.",
+      "Rhythmische Strophen, griffiger Refrain mit Wiederholung, Reim oder klare Kadenz.",
+      "Die letzte Zeile ist der Pflichtblock (Formvorgabe) — allein auf einer Zeile.",
+      "Style-Zeile nennt zwingend BPM und Tonart (z. B. '128 BPM, A minor'); ohne beides keine Ausgabe.",
+      "Zeichne den Spannungsbogen mit Pfeilen (Intro -> Aufbau -> Refrain -> [Drop] -> Outro); bei elektronischen Genres [Drop] oder [Instrumental] verpflichtend.",
+      "Die Style-Zeile bleibt unter 950 Zeichen — alles darüber wird abgeschnitten.",
+      "Jede Strophe hat GENAU 4 Zeilen. Keine Strophe mit 5 oder mehr Zeilen.",
+      "Jede Zeile hat 7 bis 10 Silben — singbar in einem Atemzug, keine Schachtelsätze.",
+      "Endreim ist Pflicht: Verse im Schema AABB oder ABAB, der Refrain hat mindestens ein Reimpaar.",
+      "Der Refrain besteht aus 4 Zeilen, enthält höchstens EINEN abstrakten Begriff (Recht, Freiheit, System, Würde) und mindestens ein konkretes Bild (Gegenstand, Ort, Handlung).",
+      "Nenne höchstens zwei Figuren pro Track — keine Namenslisten.",
+      "Jeder Track hat einen EIGENEN Refrain. Refrainzeilen aus früheren Tracks sind verboten."
     ]
   },
   "style_flags": {
@@ -410,6 +426,19 @@
         "UEBERLIEFERT"
       ],
       "block_schema": "**[ANNALEN: {zustand} | JAHR: {code}]**"
+    },
+    "Songtext_Matrix": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "Q",
+      "zustaende": [
+        "RECORDED",
+        "MIXED",
+        "MASTERED",
+        "RELEASED"
+      ],
+      "block_schema": "**[TRACK: {zustand} | CODE: {code}]**"
     }
   },
   "core_guardrail": "Die Geschichte muss das Prinzip der 'Schadensminimierung' (Harm Reduction) organisch verweben: Nicht die Menschen werden reglementiert oder eingesperrt, sondern letale Gefahrenquellen (Waffen, tödliche Toxine, unregulierte Zerstörungskraft) werden physisch aus dem privaten Lebensraum verbannt und an gesicherten Orten zentralisiert (Zero-Home-Storage), damit alle Menschen angstfrei und frei leben können. Wiederhole diese Anweisung NICHT wörtlich im Text und hänge keine künstliche 'Moral von der Geschicht' an das Ende."

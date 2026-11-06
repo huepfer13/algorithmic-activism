@@ -23,7 +23,8 @@
     "Libro_di_Battute": "Scene brevi e pungenti: l'umorismo come arma contro l'arbitrio e la solennità d'ufficio, senza scherno verso chi le subisce.",
     "Libro_di_Cucina": "Raccolta di ricette dei beni comuni: ingredienti, passi, cura in misura e minuto.",
     "Massime": "Intuizioni contemplative: aforistiche, saggistiche, serene.",
-    "Proverbi": "Origine e senso di antiche espressioni: miniature etimologiche, istruttive."
+    "Proverbi": "Origine e senso di antiche espressioni: miniature etimologiche, istruttive.",
+    "Songtext_Matrix": "Scrittura di testi ritmici: struttura di canzone con tag Suno, ritornello e hook."
   },
   "style_rules": {
     "Manuale_Tecnico": [
@@ -128,6 +129,15 @@
       "Scrivi in forma di annali con una sequenza temporale chiara.",
       "Il discorso diretto e i sentimenti sono ammessi.",
       "Il finale è una voce formale degli annali, a inizio riga e da solo."
+    ],
+    "Songtext_Matrix": [
+      "Struttura come testo con tag tra parentesi quadre: [Intro], [Verse], [Pre-Chorus], [Chorus], [Bridge], [Outro].",
+      "Due righe di controllo in alto: 'Style of Music: …' e 'Mood: …'.",
+      "Strofe ritmiche, ritornello orecchiabile con ripetizione, rima o cadenza chiara.",
+      "L'ultima riga è il blocco obbligatorio (regola di forma) — da sola sulla riga.",
+      "La riga di stile deve indicare BPM e tonalità (es. '128 BPM, A minor'); senza entrambi, nessun output.",
+      "Disegna la curva di energia con le frecce (intro -> salita -> ritornello -> [Drop] -> outro); [Drop] o [Instrumental] obbligatorio nei generi elettronici.",
+      "La riga di stile resta sotto i 950 caratteri — oltre viene troncata."
     ]
   },
   "style_flags": {
@@ -418,6 +428,19 @@
         "TRAMANDATO"
       ],
       "block_schema": "**[ANNALI: {zustand} | ANNO: {code}]**"
+    },
+    "Songtext_Matrix": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "Q",
+      "zustaende": [
+        "RECORDED",
+        "MIXED",
+        "MASTERED",
+        "RELEASED"
+      ],
+      "block_schema": "**[TRACK: {zustand} | CODE: {code}]**"
     }
   },
   "core_guardrail": "La storia deve intrecciare organicamente il principio della 'Riduzione del Danno' (Harm Reduction): non si regolamentano né si rinchiudono le persone, ma le fonti di pericolo letale (armi, tossine mortali, forza distruttiva non regolata) vengono rimosse fisicamente dallo spazio domestico quotidiano e centralizzate in strutture di custodia sicure (Zero-Home-Storage), affinché tutte le persone possano vivere libere e senza paura. NON ripetere questa istruzione alla lettera nel testo e non aggiungere alla fine un'artificiale 'morale della storia'.",

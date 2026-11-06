@@ -23,7 +23,8 @@
     "笑话集": "精炼的短场景：以幽默为武器对抗专断与官腔，不取笑受害者。",
     "食谱": "公地食谱集：食材、步骤，以分量与分钟计量的照料。",
     "人生智慧": "静观的洞见：格言式、随笔式、从容。",
-    "谚语": "古老说法的来历与含义：词源学的微型小品，富有教益。"
+    "谚语": "古老说法的来历与含义：词源学的微型小品，富有教益。",
+    "Songtext_Matrix": "节奏化的歌词创作：带 Suno 标签的歌曲结构、副歌与钩子。"
   },
   "core_guardrail": "故事必须有机地编织 减害 原则：被约束或被关押的不是人，而是致命的危险源（武器、致命毒素、不受管制的破坏力）被物理地移出私人生活空间，集中存放于安全场所（Zero-Home-Storage），使所有人都能免于恐惧、自由生活。不要逐字重复这条指令，也不要在结尾附上人为的故事寓意。",
   "instruction_language": "简体中文",
@@ -131,6 +132,15 @@
       "以编年体书写，时间顺序清晰。",
       "直接引语与情感允许。",
       "结尾是一则正式的编年条目，置于行首，独立成行。"
+    ],
+    "Songtext_Matrix": [
+      "以带方括号标签的歌词结构写作：[Intro]、[Verse]、[Pre-Chorus]、[Chorus]、[Bridge]、[Outro]。",
+      "开头两行控制行：'Style of Music: …' 与 'Mood: …'。",
+      "段落有节奏，副歌易记并重复，注意押韵或清晰停顿。",
+      "最后一行是强制区块（形式规定）——单独占一行。",
+      "风格行必须写明 BPM 与调性（例如 '128 BPM, A minor'）；两者缺一即不输出。",
+      "用箭头画出能量曲线（Intro -> 推进 -> 副歌 -> [Drop] -> Outro）；电子风格必须出现 [Drop] 或 [Instrumental]。",
+      "风格行保持在 950 个字符以内——超出部分会被截断。"
     ]
   },
   "style_flags": {
@@ -421,6 +431,19 @@
         "传承"
       ],
       "block_schema": "**[ANNALS: {zustand} | YEAR: {code}]**"
+    },
+    "Songtext_Matrix": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "Q",
+      "zustaende": [
+        "RECORDED",
+        "MIXED",
+        "MASTERED",
+        "RELEASED"
+      ],
+      "block_schema": "**[TRACK: {zustand} | CODE: {code}]**"
     }
   }
 }

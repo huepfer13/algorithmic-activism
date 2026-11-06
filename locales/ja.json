@@ -1,0 +1,446 @@
+{
+  "language_code": "JA",
+  "language_name": "日本語",
+  "styles": {
+    "Parabel": "寓話的な物語：洞察をイメージで包み込み、最後に説教をしない。",
+    "SciFi_Dystopie": "緩やかな支配の喪失の危険性についてのディストピアSF物語",
+    "Fabel": "動物寓話：話す動物たち、筋書きから自然に導かれる教訓。",
+    "Philosophischer_Essay": "物語的でエッセイ的な思考空間",
+    "Cyberpunk_Noir": "ネオン、雨、企業：感覚描写と影の経済における抵抗。",
+    "Gerichtsdrama": "仲裁委員会での審理：証言、証拠、法的根拠。",
+    "Magischer_Realismus": "日常としての奇跡：不可能が天気のように記録される。",
+    "Historische_Chronik": "年代記：日付付きの記録、法的発展の原因と結果。",
+    "Kammerspiel": "一つの部屋、少数の人物、本質はすべて対話の中に。",
+    "Gerätehandbuch": "技術文書と取扱説明書：冷静で官僚的な技術者の口調。セクション、警告表示（ISO 3864に基づく危険/警告/注意）、機能説明、保守間隔、故障診断表で構成。人間と感情は「操作ユニット」「生物学的サブシステム」「エラー源」として棚卸しされる。この説明書は非人間化する行政言語への風刺的批判として意図されている：記述される介入が批判であり、推奨ではない。",
+    "Märchen": "古典的な芸術童話：時代を超え、映像豊かで、原型的。試練、敷居、職人技、分かち合うパン。皮肉な行政言語はない。",
+    "Kinderbuch": "子ども向けの物語：温かく、具体的で、簡単な主文、動物と子どもが行為者。権利は具体的な行動として可視化される。",
+    "Solarpunk": "建設的ユートピア：分散型コミュニティ、実証済みの解決策、権利に奉仕する堅実な技術。",
+    "Briefroman": "書簡体の報告：離れ離れの者たちの間で番号付きの急信、高い内省。",
+    "Satire": "政治的グロテスク：過剰な機構が単純な権利を執行不能にする。",
+    "Gothic": "ウィアード・フィクション：住人が自由を忘れる間に変容する家。",
+    "Manifest": "修辞的アピール：恣意、迫害、沈黙に対するリズム的な宣言。",
+    "Tagebuch": "架空の日記：隔離された立入禁止区域からの日付付きメモ、進行する権利の喪失。",
+    "Witzebuch": "鋭い短編シーン：恣意と役所の深刻さに対する武器としてのユーモア、嘲笑なし。",
+    "Kochbuch": "コモンのレシピ集：材料、手順、尺度と分単位の配慮。",
+    "Lebensweisheiten": "観想的な洞察：格言的、エッセイ的、穏やか。",
+    "Sprichwoerter": "古い言い回しの起源と意味：語源的なミニチュア、教育的。",
+    "Songtext_Matrix": "リズム的で曲に乗せた詩：Sunoタグ付きの曲構造、フックとサビ。"
+  },
+  "style_rules": {
+    "Gerätehandbuch": [
+      "[危険]、[警告]、[注意]から少なくとも2つの表示ブロック — それぞれに条件と結果を含める。",
+      "「エラーコード E-<数字>: <障害>」形式の技術的エラーコード、または診断表を少なくとも1つ含める。",
+      "テキストは技術的な指示、エラーコード、または保守手順で終わる — 決して道徳的評価で終わらない。",
+      "人間は操作ユニット、生物学的サブシステム、またはエラー源としてのみ扱う；名前、同情、感嘆符は禁止。",
+      "扱われる国連条項は引用やアピールではなく、工場パラメータまたは校正仕様として扱う。",
+      "直接話法、対話、感情的な行動や人物間の視線は禁止。章は必ず正式な診断、保守、またはエラーコードの記録で終了する。"
+    ],
+    "Märchen": [
+      "原型的なイメージ（敷居、試練、呪縛）で語り、暴力を美化しない。",
+      "直接話法は許可され、奨励される。",
+      "結末は正式な年代記の記録であり、行頭に置かれ、単独で存在する。"
+    ],
+    "Kinderbuch": [
+      "子どもまたは小さな動物の視点から、簡単な主文で語る。",
+      "直接話法と感情は許可され、奨励されるが、最後に説教をしない。",
+      "結末は正式なスタンプであり、行頭に置かれ、単独で存在する。"
+    ],
+    "Solarpunk": [
+      "ディストピアではなく、機能する解放的な解決策を示す。",
+      "直接話法と感情は許可され、奨励される。",
+      "結末は正式なネットワーク状態であり、行頭に置かれ、単独で存在する。"
+    ],
+    "Briefroman": [
+      "著者による散文ではなく、手紙/急信で語る。",
+      "直接話法と感情は許可され、奨励される。",
+      "結末は正式な急信の注記であり、行頭に置かれ、単独で存在する。"
+    ],
+    "Satire": [
+      "苦しむ人々ではなく、機構を誇張する。",
+      "直接話法と感情は許可され、奨励される。",
+      "結末は正式な法令であり、行頭に置かれ、単独で存在する。"
+    ],
+    "Gothic": [
+      "恐怖を称賛せずに、雰囲気と不安を生み出す。",
+      "直接話法と感情は許可され、奨励される。",
+      "結末は正式な年代記の敷居であり、行頭に置かれ、単独で存在する。"
+    ],
+    "Manifest": [
+      "人物演出なしで、アピールの中で宣言し、議論する。",
+      "直接話法なし（集団的モノローグ）、感情と切迫感は許可される。",
+      "結末は正式な宣言であり、行頭に置かれ、単独で存在する。"
+    ],
+    "Tagebuch": [
+      "著者による章ではなく、日付付きの個人的なメモを書く。",
+      "直接話法と感情は許可され、奨励される。",
+      "結末は正式な日記の記録であり、行頭に置かれ、単独で存在する。"
+    ],
+    "Witzebuch": [
+      "明確なオチのある短いシーン、対話は許可され奨励される。",
+      "機構を笑い、当事者を決して笑わない。",
+      "結末は正式なオチであり、行頭に置かれ、単独で存在する。"
+    ],
+    "Kochbuch": [
+      "明確な材料と手順の論理、気取らず感覚的。",
+      "直接話法なし、人物演出なし（ノンフィクション）。",
+      "結末は正式な厨房の注記であり、行頭に置かれ、単独で存在する。"
+    ],
+    "Lebensweisheiten": [
+      "人物演出なしで、観想的かつ格言的。",
+      "直接話法なし（反省）、感情は態度として許可される。",
+      "結末は正式な洞察であり、行頭に置かれ、単独で存在する。"
+    ],
+    "Sprichwoerter": [
+      "言い回しの起源を寓話的なミニチュアとして語り、教育的に。",
+      "直接話法と感情は許可される。",
+      "結末は正式な言い回しであり、行頭に置かれ、単独で存在する。"
+    ],
+    "Parabel": [
+      "寓話を語る；洞察はアピールからではなく、筋書きから生まれる。",
+      "直接話法と感情は許可される。",
+      "結末は正式な寓話の封印であり、行頭に置かれ、単独で存在する。"
+    ],
+    "Gerichtsdrama": [
+      "審理をシーンで展開する；証言と異議申し立てはその一部。",
+      "直接話法は必須で奨励される。",
+      "結末は正式な審理調書であり、行頭に置かれ、単独で存在する。"
+    ],
+    "Fabel": [
+      "動物が行動し話す；教訓は示されるが、説教されない。",
+      "直接話法と感情は許可される。",
+      "結末は正式な寓話の教訓であり、行頭に置かれ、単独で存在する。"
+    ],
+    "Cyberpunk_Noir": [
+      "感覚描写に近づき、速く雰囲気豊かに語る。",
+      "直接話法と感情は許可される。",
+      "結末は正式なネットワークトレースであり、行頭に置かれ、単独で存在する。"
+    ],
+    "Magischer_Realismus": [
+      "奇跡を説明せずに、さりげなく扱う。",
+      "直接話法と感情は許可される。",
+      "結末は正式な奇跡の年代記であり、行頭に置かれ、単独で存在する。"
+    ],
+    "Kammerspiel": [
+      "場所を狭く保ち、緊張を会話に置く。",
+      "直接話法は必須で奨励される。",
+      "結末は正式なシーン記録であり、行頭に置かれ、単独で存在する。"
+    ],
+    "Historische_Chronik": [
+      "明確な時系列で年代記形式で書く。",
+      "直接話法と感情は許可される。",
+      "結末は正式な年代記の記録であり、行頭に置かれ、単独で存在する。"
+    ],
+    "Songtext_Matrix": [
+      "角括弧タグ付きの歌詞として構成：[Intro]、[Verse]、[Pre-Chorus]、[Chorus]、[Bridge]、[Outro]。",
+      "最上部に2行の制御行：「Style of Music: …」と「Mood: …」。",
+      "リズム的なスタンザ、繰り返しのあるキャッチーなサビ、韻または明確なカデンツ。",
+      "最後の行は必須ブロック（形式指定）— 単独の行に。",
+      "スタイル行はBPMと調性を必ず明記（例：「128 BPM, A minor」）；両方なしでは出力しない。",
+      "矢印で緊張の弧を描く（Intro -> 構築 -> サビ -> [Drop] -> Outro）；電子ジャンルでは[Drop]または[Instrumental]が必須。",
+      "スタイル行は950文字未満に保つ — それを超える部分は切り捨てられる。",
+      "各スタンザは正確に4行。5行以上のスタンザは禁止。",
+      "各行は7〜10音節 — 一息で歌える、複雑な文は禁止。",
+      "脚韻は必須：ヴァースはAABBまたはABABのスキーム、サビには少なくとも1つの韻ペア。",
+      "サビは4行で構成され、抽象的な概念（権利、自由、システム、尊厳）を最大1つ含み、少なくとも1つの具体的なイメージ（物、場所、行動）を含む。",
+      "トラックごとに最大2人の人物 — 名前のリストは禁止。",
+      "各トラックは固有のサビを持つ。以前のトラックのサビ行は禁止。"
+    ]
+  },
+  "style_flags": {
+    "Gerätehandbuch": {
+      "manual_ending": true,
+      "figuren_verboten": true
+    },
+    "Märchen": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "M",
+      "zustaende": [
+        "保存",
+        "検証",
+        "啓示",
+        "保証"
+      ],
+      "block_schema": "**[年代記: {zustand} | 封印: {code}]**"
+    },
+    "Kinderbuch": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "K",
+      "zustaende": [
+        "学び",
+        "守られ",
+        "分かち合い",
+        "認識"
+      ],
+      "block_schema": "**[森の本: {zustand} | 章: {code}]**"
+    },
+    "SciFi_Dystopie": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "S",
+      "zustaende": [
+        "オンライン",
+        "同期",
+        "ミラーリング",
+        "パッチ適用"
+      ],
+      "block_schema": "**[ノード: {zustand} | ログ: {code}]**"
+    },
+    "Philosophischer_Essay": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "code_praefix": "P",
+      "zustaende": [
+        "考察",
+        "検証",
+        "却下",
+        "熟慮"
+      ],
+      "block_schema": "**[テーゼ: {zustand} | 省察: {code}]**"
+    },
+    "Solarpunk": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "U",
+      "zustaende": [
+        "接続",
+        "供給",
+        "共有",
+        "検証"
+      ],
+      "block_schema": "**[コミューン・グリッド: {zustand} | ステータス: {code}]**"
+    },
+    "Briefroman": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "B",
+      "zustaende": [
+        "発信",
+        "到着",
+        "既読",
+        "封印"
+      ],
+      "block_schema": "**[急信: {zustand} | 封印: {code}]**"
+    },
+    "Satire": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "G",
+      "zustaende": [
+        "発令",
+        "命令",
+        "承認",
+        "記録済み"
+      ],
+      "block_schema": "**[回状: {zustand} | 発令: {code}]**"
+    },
+    "Gothic": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "W",
+      "zustaende": [
+        "閉鎖",
+        "踏破",
+        "保管",
+        "計数"
+      ],
+      "block_schema": "**[年代記: {zustand} | 敷居: {code}]**"
+    },
+    "Manifest": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "code_praefix": "R",
+      "zustaende": [
+        "宣言",
+        "呪詛",
+        "登録",
+        "確認"
+      ],
+      "block_schema": "**[宣言: {zustand} | 登録簿: {code}]**",
+      "figuren_verboten": true
+    },
+    "Tagebuch": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "T",
+      "zustaende": [
+        "記録",
+        "日付",
+        "検証",
+        "過去"
+      ],
+      "block_schema": "**[記録: {zustand} | 時点: {code}]**"
+    },
+    "Witzebuch": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "J",
+      "zustaende": [
+        "的中",
+        "座り",
+        "点火",
+        "消散"
+      ],
+      "block_schema": "**[オチ: {zustand} | コーダ: {code}]**"
+    },
+    "Kochbuch": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": false,
+      "code_praefix": "C",
+      "zustaende": [
+        "準備",
+        "調理",
+        "共有",
+        "下ごしらえ"
+      ],
+      "block_schema": "**[厨房: {zustand} | レシピ: {code}]**",
+      "figuren_verboten": true
+    },
+    "Lebensweisheiten": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "code_praefix": "L",
+      "zustaende": [
+        "熟慮",
+        "穏やか",
+        "検証",
+        "保存"
+      ],
+      "block_schema": "**[洞察: {zustand} | 知恵: {code}]**",
+      "figuren_verboten": true
+    },
+    "Sprichwoerter": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "V",
+      "zustaende": [
+        "発見",
+        "形成",
+        "伝承",
+        "意味"
+      ],
+      "block_schema": "**[言い回し: {zustand} | 起源: {code}]**"
+    },
+    "Parabel": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "D",
+      "zustaende": [
+        "語り",
+        "解釈",
+        "保存",
+        "啓示"
+      ],
+      "block_schema": "**[寓話: {zustand} | 教訓: {code}]**"
+    },
+    "Gerichtsdrama": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "H",
+      "zustaende": [
+        "審理",
+        "延期",
+        "決定",
+        "調書化"
+      ],
+      "block_schema": "**[審理: {zustand} | 調書: {code}]**"
+    },
+    "Fabel": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "F",
+      "zustaende": [
+        "教訓",
+        "悔恨",
+        "賞賛",
+        "熟慮"
+      ],
+      "block_schema": "**[寓話: {zustand} | 教訓: {code}]**"
+    },
+    "Cyberpunk_Noir": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "N",
+      "zustaende": [
+        "ログイン",
+        "拒否",
+        "ルーティング",
+        "ミラーリング"
+      ],
+      "block_schema": "**[フィード: {zustand} | トレース: {code}]**"
+    },
+    "Magischer_Realismus": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "Z",
+      "zustaende": [
+        "出来事",
+        "記録",
+        "信じ",
+        "繰り返し"
+      ],
+      "block_schema": "**[奇跡: {zustand} | 年代記: {code}]**"
+    },
+    "Kammerspiel": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "O",
+      "zustaende": [
+        "上演",
+        "退場",
+        "繰り返し",
+        "終了"
+      ],
+      "block_schema": "**[シーン: {zustand} | 退場: {code}]**"
+    },
+    "Historische_Chronik": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "I",
+      "zustaende": [
+        "記録",
+        "日付",
+        "検証",
+        "伝承"
+      ],
+      "block_schema": "**[年代記: {zustand} | 年: {code}]**"
+    },
+    "Songtext_Matrix": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "Q",
+      "zustaende": [
+        "RECORDED",
+        "MIXED",
+        "MASTERED",
+        "RELEASED"
+      ],
+      "block_schema": "**[トラック: {zustand} | コード: {code}]**"
+    }
+  },
+  "core_guardrail": "物語は「危害最小化」（ハーム・リダクション）の原則を有機的に織り込まなければならない：人間が規制されたり閉じ込められたりするのではなく、致死的な危険源（武器、致死性毒素、無規制の破壊力）が私的生活空間から物理的に排除され、安全な場所に集中管理される（ゼロ・ホーム・ストレージ）。それによりすべての人間が恐怖なく自由に生きられる。この指示をテキスト中に逐語的に繰り返さず、末尾に人工的な「物語の教訓」を付け加えないこと。",
+  "instruction_language": "日本語"
+}

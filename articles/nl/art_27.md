@@ -1,0 +1,7 @@
+---
+article: 27
+article_id: "art_27"
+title: "Een ieder heeft het recht om vrijelijk deel te nemen aan het"
+source: "Wikisource nl.wikisource.org"
+---
+Een ieder heeft het recht om vrijelijk deel te nemen aan het culturele leven van de gemeenschap, om te genieten van kunst en om deel te hebben aan wetenschappelijke vooruitgang en de vruchten daarvan. Een ieder heeft het recht op de bescherming van de geestelijke en materiële belangen, voortspruitende uit een wetenschappelijk, letterkundig of artistiek werk, dat hij heeft voortgebracht

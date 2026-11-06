@@ -1,0 +1,7 @@
+---
+article: 21
+article_id: "art_21"
+title: "1. Toda persona tiene derecho a participar en el gobierno de"
+source: "UN — Naciones Unidas (DUDH, spanische Fassung)"
+---
+1. Toda persona tiene derecho a participar en el gobierno de su país, directamente o por medio de representantes libremente escogidos. 2. Toda persona tiene el derecho de acceso, en condiciones de igualdad, a las funciones públicas de su país. 3. La voluntad del pueblo es la base de la autoridad del poder público; esta voluntad se expresará mediante elecciones auténticas que habrán de celebrarse periódicamente, por sufragio universal e igual y por voto secreto u otro procedimiento equivalente que garantice la libertad del voto

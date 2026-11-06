@@ -1,0 +1,8 @@
+---
+article: 30
+article_id: "art_30"
+title: "Nothing in this Declaration may be interpreted as implying f"
+source: "UN — United Nations (UDHR, English version)"
+url: https://www.un.org/en/about-us/universal-declaration-of-human-rights
+---
+Nothing in this Declaration may be interpreted as implying for any State, group or person any right to engage in any activity or to perform any act aimed at the destruction of any of the rights and freedoms set forth herein. Universal Declaration of Human Rights (UDHR) Text of the Declaration History of the Declaration Drafters of the Declaration The Foundation of International Human Rights Law Human Rights Law 2023: UDHR turns 75 What is the Declaration of Human Rights? Narrated by Morgan Freeman. UN digital ambassador Elyx animates the UDHR The first animated version of the Universal Declaration of Human Rights was created through the United Nations partnership&nbsp;with French digital artist YAK (Yacine Ait Kaci) – whose illustrated character Elyx is the first digital ambassador of the United Nations.&nbsp;The animation uses symbolic movements to bring to life the 30 Articles of the Universal Declaration of Human Rights. UDHR Illustrated Read the Illustrated edition of the Universal Declaration of Human Rights UDHR in 80+ languages Watch and listen to people around the world reading articles of the Universal Declaration of Human Rights in more than 80 languages. Women Who Shaped the Declaration Women delegates from various countries played a key role in getting women’s rights included in the Declaration. Hansa Mehta of India (standing above Eleanor Roosevelt) is widely credited with changing the phrase "All men are born free and equal" to "All human beings are born free and equal" in

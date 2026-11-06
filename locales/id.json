@@ -1,0 +1,446 @@
+{
+  "language_code": "ID",
+  "language_name": "Bahasa Indonesia",
+  "styles": {
+    "Parabel": "Narasi perumpamaan: sebuah wawasan yang dibungkus dalam gambaran, tanpa pengajaran di akhir.",
+    "SciFi_Dystopie": "Kisah fiksi ilmiah distopia tentang bahaya hilangnya kendali secara perlahan",
+    "Fabel": "Fabel hewan: hewan berbicara, sebuah pelajaran yang jatuh dari alur cerita.",
+    "Philosophischer_Essay": "Ruang berpikir naratif dan esais",
+    "Cyberpunk_Noir": "Neon, hujan, korporasi: sensorik dan perlawanan di ekonomi bayangan.",
+    "Gerichtsdrama": "Sidang di hadapan kamar arbitrase: kesaksian saksi, barang bukti, dasar hukum.",
+    "Magischer_Realismus": "Keajaiban sebagai keseharian: hal yang mustahil dicatat seperti cuaca.",
+    "Historische_Chronik": "Annal: catatan bertanggal, sebab dan akibat suatu perkembangan hukum.",
+    "Kammerspiel": "Satu ruang, sedikit tokoh, semua yang esensial ada dalam dialog.",
+    "Gerätehandbuch": "Dokumentasi teknis dan petunjuk pengoperasian: nada insinyur yang dingin dan birokratis. Terstruktur dalam bagian-bagian, peringatan (BAHAYA/PERINGATAN/CATATAN menurut ISO 3864), deskripsi fungsi, interval perawatan, dan tabel diagnosis kesalahan. Manusia dan perasaan diinventarisasi sebagai 'unit pengoperasi', 'subsistem biologis', atau 'sumber kesalahan'. Petunjuk ini dirancang sebagai kritik satiris terhadap bahasa administrasi yang mendehumanisasi: intervensi yang dijelaskan adalah kritiknya, bukan rekomendasinya.",
+    "Märchen": "Dongeng klasik: abadi, penuh gambaran, arketipal. Ujian, ambang, keterampilan, dan roti yang dibagi. Tanpa bahasa birokrasi yang sinis.",
+    "Kinderbuch": "Kisah yang sesuai untuk anak: hangat, gamblang, kalimat utama sederhana, hewan dan anak-anak sebagai pelaku. Hak-hak menjadi terlihat sebagai tindakan konkret.",
+    "Solarpunk": "Utopia konstruktif: komunitas terdesentralisasi, solusi yang teruji, teknologi nyata dalam pelayanan hak-hak.",
+    "Briefroman": "Laporan epistoler: depesche bernomor antara orang-orang yang terpisah, introspeksi tinggi.",
+    "Satire": "Grotesk politik: aparatus yang berlebihan membuat hak-hak sederhana tak dapat dilaksanakan.",
+    "Gothic": "Weird Fiction: sebuah rumah yang berubah sementara penghuninya melupakan kebebasan mereka.",
+    "Manifest": "Seruan retoris: deklamasi berirama melawan kesewenang-wenangan, penganiayaan, dan pembungkaman.",
+    "Tagebuch": "Buku harian fiktif: catatan bertanggal dari zona terlarang yang terisolasi, hilangnya hak secara perlahan.",
+    "Witzebuch": "Adegan pendek yang tajam: humor sebagai senjata melawan kesewenang-wenangan dan keseriusan birokratis, tanpa menertawakan korban.",
+    "Kochbuch": "Kumpulan resep dari sumber daya bersama: bahan, langkah, kepedulian dalam ukuran dan menit.",
+    "Lebensweisheiten": "Wawasan kontemplatif: aforistis, esais, tenang.",
+    "Sprichwoerter": "Asal dan makna ungkapan lama: miniatur etimologis, mendidik.",
+    "Songtext_Matrix": "Lirik berirama yang dinyanyikan: struktur lagu dengan tag Suno, hook, dan refrain."
+  },
+  "style_rules": {
+    "Gerätehandbuch": [
+      "Setidaknya dua blok penandaan dari [BAHAYA], [PERINGATAN], [CATATAN] — masing-masing dengan kondisi dan konsekuensi.",
+      "Setidaknya satu kode kesalahan teknis dalam format 'Kode kesalahan E-<angka>: <gangguan>' atau tabel diagnosis.",
+      "Teks diakhiri dengan instruksi teknis, kode kesalahan, atau langkah perawatan — tidak pernah dengan penilaian moral.",
+      "Manusia secara eksklusif diperlakukan sebagai unit pengoperasi, subsistem biologis, atau sumber kesalahan; tanpa nama depan, tanpa empati, tanpa tanda seru.",
+      "Perlakukan artikel PBB yang dibahas sebagai parameter pabrik atau spesifikasi kalibrasi, bukan sebagai kutipan dan bukan sebagai seruan.",
+      "Tanpa ujaran langsung, tanpa dialog, tanpa tindakan emosional atau pandangan antarorang. Bab ini wajib ditutup dengan entri diagnosis, perawatan, atau kode kesalahan yang formal."
+    ],
+    "Märchen": [
+      "Berceritalah dalam gambaran arketipal (ambang, ujian, kutukan), tanpa mengagungkan kekerasan.",
+      "Ujaran langsung diperbolehkan dan diinginkan.",
+      "Penutup adalah entri kronik formal, di awal baris dan berdiri sendiri."
+    ],
+    "Kinderbuch": [
+      "Berceritalah dari sudut pandang seorang anak atau hewan kecil, dalam kalimat utama sederhana.",
+      "Ujaran langsung dan perasaan diperbolehkan dan diinginkan, tanpa pengajaran di akhir.",
+      "Penutup adalah stempel formal, di awal baris dan berdiri sendiri."
+    ],
+    "Solarpunk": [
+      "Tunjukkan solusi emansipatoris yang berfungsi alih-alih distopia.",
+      "Ujaran langsung dan perasaan diperbolehkan dan diinginkan.",
+      "Penutup adalah status jaringan formal, di awal baris dan berdiri sendiri."
+    ],
+    "Briefroman": [
+      "Berceritalah dalam surat/depesche, bukan dalam prosa auktorial.",
+      "Ujaran langsung dan perasaan diperbolehkan dan diinginkan.",
+      "Penutup adalah catatan depesche formal, di awal baris dan berdiri sendiri."
+    ],
+    "Satire": [
+      "Berlebih-lebihkan aparatusnya, bukan manusia yang menderita di bawahnya.",
+      "Ujaran langsung dan perasaan diperbolehkan dan diinginkan.",
+      "Penutup adalah dekrit formal, di awal baris dan berdiri sendiri."
+    ],
+    "Gothic": [
+      "Ciptakan suasana dan kegelisahan, tanpa merayakan horor.",
+      "Ujaran langsung dan perasaan diperbolehkan dan diinginkan.",
+      "Penutup adalah ambang kronik formal, di awal baris dan berdiri sendiri."
+    ],
+    "Manifest": [
+      "Deklamasikan, berargumenlah dalam seruan, tanpa penyutradaraan tokoh.",
+      "Tanpa ujaran langsung (monolog kolektif), perasaan dan urgensi diperbolehkan.",
+      "Penutup adalah proklamasi formal, di awal baris dan berdiri sendiri."
+    ],
+    "Tagebuch": [
+      "Tulislah catatan pribadi bertanggal alih-alih bab auktorial.",
+      "Ujaran langsung dan perasaan diperbolehkan dan diinginkan.",
+      "Penutup adalah entri buku harian formal, di awal baris dan berdiri sendiri."
+    ],
+    "Witzebuch": [
+      "Adegan pendek dengan poin yang jelas, dialog diperbolehkan dan diinginkan.",
+      "Tertawalah pada aparatusnya, jangan pernah pada yang terdampak.",
+      "Penutup adalah poin formal, di awal baris dan berdiri sendiri."
+    ],
+    "Kochbuch": [
+      "Logika bahan dan langkah yang jelas, tanpa pretensi dan menggugah indra.",
+      "Tanpa ujaran langsung, tanpa penyutradaraan tokoh (teks faktual).",
+      "Penutup adalah catatan dapur formal, di awal baris dan berdiri sendiri."
+    ],
+    "Lebensweisheiten": [
+      "Kontemplatif dan aforistis, tanpa penyutradaraan tokoh.",
+      "Tanpa ujaran langsung (refleksi), perasaan sebagai sikap diperbolehkan.",
+      "Penutup adalah wawasan formal, di awal baris dan berdiri sendiri."
+    ],
+    "Sprichwoerter": [
+      "Ceritakan asal ungkapan sebagai miniatur bergaya fabel, mendidik.",
+      "Ujaran langsung dan perasaan diperbolehkan.",
+      "Penutup adalah ungkapan formal, di awal baris dan berdiri sendiri."
+    ],
+    "Parabel": [
+      "Ceritakan sebuah perumpamaan; wawasan lahir dari alur cerita, bukan dari seruan.",
+      "Ujaran langsung dan perasaan diperbolehkan.",
+      "Penutup adalah segel perumpamaan formal, di awal baris dan berdiri sendiri."
+    ],
+    "Gerichtsdrama": [
+      "Jalankan persidangan dalam adegan; pernyataan dan keberatan termasuk di dalamnya.",
+      "Ujaran langsung wajib diinginkan.",
+      "Penutup adalah protokol persidangan formal, di awal baris dan berdiri sendiri."
+    ],
+    "Fabel": [
+      "Hewan bertindak dan berbicara; pelajaran tampak dengan sendirinya, tidak dikhotbahkan.",
+      "Ujaran langsung dan perasaan diperbolehkan.",
+      "Penutup adalah moral fabel formal, di awal baris dan berdiri sendiri."
+    ],
+    "Cyberpunk_Noir": [
+      "Berceritalah dekat dengan sensorik, cepat dan atmosferik.",
+      "Ujaran langsung dan perasaan diperbolehkan.",
+      "Penutup adalah jejak jaringan formal, di awal baris dan berdiri sendiri."
+    ],
+    "Magischer_Realismus": [
+      "Perlakukan keajaiban secara sambil lalu, tanpa menjelaskannya.",
+      "Ujaran langsung dan perasaan diperbolehkan.",
+      "Penutup adalah kronik keajaiban formal, di awal baris dan berdiri sendiri."
+    ],
+    "Kammerspiel": [
+      "Jaga tempat tetap sempit dan ketegangan dalam percakapan.",
+      "Ujaran langsung wajib diinginkan.",
+      "Penutup adalah protokol adegan formal, di awal baris dan berdiri sendiri."
+    ],
+    "Historische_Chronik": [
+      "Tulislah dalam bentuk annal dengan urutan waktu yang jelas.",
+      "Ujaran langsung dan perasaan diperbolehkan.",
+      "Penutup adalah entri annal formal, di awal baris dan berdiri sendiri."
+    ],
+    "Songtext_Matrix": [
+      "Susun sebagai lirik lagu dengan tag dalam kurung siku: [Intro], [Verse], [Pre-Chorus], [Chorus], [Bridge], [Outro].",
+      "Di paling atas dua baris kendali: 'Style of Music: …' dan 'Mood: …'.",
+      "Bait berirama, refrain yang mudah diingat dengan pengulangan, rima atau kadensa yang jelas.",
+      "Baris terakhir adalah blok wajib (ketentuan bentuk) — berdiri sendiri pada satu baris.",
+      "Baris gaya wajib menyebutkan BPM dan tangga nada (mis. '128 BPM, A minor'); tanpa keduanya tidak ada keluaran.",
+      "Gambarkan busur ketegangan dengan panah (Intro -> Aufbau -> Refrain -> [Drop] -> Outro); untuk genre elektronik [Drop] atau [Instrumental] wajib.",
+      "Baris gaya tetap di bawah 950 karakter — semua yang melebihi akan dipotong.",
+      "Setiap bait memiliki TEPAT 4 baris. Tidak ada bait dengan 5 baris atau lebih.",
+      "Setiap baris memiliki 7 hingga 10 suku kata — dapat dinyanyikan dalam satu tarikan napas, tanpa kalimat beranak.",
+      "Rima akhir wajib: bait dalam skema AABB atau ABAB, refrain memiliki setidaknya satu pasangan rima.",
+      "Refrain terdiri dari 4 baris, memuat paling banyak SATU istilah abstrak (hak, kebebasan, sistem, martabat) dan setidaknya satu gambaran konkret (benda, tempat, tindakan).",
+      "Sebutkan paling banyak dua tokoh per track — tanpa daftar nama.",
+      "Setiap track memiliki refrain SENDIRI. Baris refrain dari track sebelumnya dilarang."
+    ]
+  },
+  "style_flags": {
+    "Gerätehandbuch": {
+      "manual_ending": true,
+      "figuren_verboten": true
+    },
+    "Märchen": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "M",
+      "zustaende": [
+        "TERPELIHARA",
+        "TERUJI",
+        "TERANG",
+        "TERJAMIN"
+      ],
+      "block_schema": "**[KRONIK: {zustand} | SEGEL: {code}]**"
+    },
+    "Kinderbuch": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "K",
+      "zustaende": [
+        "BELAJAR",
+        "TERLINDUNGI",
+        "BERBAGI",
+        "DIKENALI"
+      ],
+      "block_schema": "**[BUKU HUTAN: {zustand} | BAB: {code}]**"
+    },
+    "SciFi_Dystopie": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "S",
+      "zustaende": [
+        "ONLINE",
+        "SINKRON",
+        "TERCermin",
+        "DITAMBAL"
+      ],
+      "block_schema": "**[NODE: {zustand} | LOG: {code}]**"
+    },
+    "Philosophischer_Essay": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "code_praefix": "P",
+      "zustaende": [
+        "DIRENUNGKAN",
+        "TERUJI",
+        "DITOLAK",
+        "DIPERTIMBANGKAN"
+      ],
+      "block_schema": "**[TESIS: {zustand} | REFLEKSI: {code}]**"
+    },
+    "Solarpunk": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "U",
+      "zustaende": [
+        "TERHUBUNG",
+        "TERALIRI",
+        "BERBAGI",
+        "TERUJI"
+      ],
+      "block_schema": "**[JARINGAN-KOMUNA: {zustand} | STATUS: {code}]**"
+    },
+    "Briefroman": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "B",
+      "zustaende": [
+        "DIKIRIM",
+        "TIBA",
+        "DIBACA",
+        "TERSEGEL"
+      ],
+      "block_schema": "**[DEPESCHE: {zustand} | SEGEL: {code}]**"
+    },
+    "Satire": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "G",
+      "zustaende": [
+        "DITERBITKAN",
+        "DIPERINTAHKAN",
+        "DISETUJUI",
+        "TERCATAT"
+      ],
+      "block_schema": "**[SIRKULAR: {zustand} | TERBIT: {code}]**"
+    },
+    "Gothic": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "W",
+      "zustaende": [
+        "TERKUNCI",
+        "DILALUI",
+        "TERSIMPAN",
+        "TERHITUNG"
+      ],
+      "block_schema": "**[KRONIK: {zustand} | AMBANG: {code}]**"
+    },
+    "Manifest": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "code_praefix": "R",
+      "zustaende": [
+        "DIKUMANDANGKAN",
+        "DISUMPAHKAN",
+        "TERDAFTAR",
+        "DIKUKUHKAN"
+      ],
+      "block_schema": "**[PROKLAMASI: {zustand} | REGISTER: {code}]**",
+      "figuren_verboten": true
+    },
+    "Tagebuch": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "T",
+      "zustaende": [
+        "DICATAT",
+        "BERTANGGAL",
+        "TERUJI",
+        "BERLALU"
+      ],
+      "block_schema": "**[ENTRI: {zustand} | WAKTU: {code}]**"
+    },
+    "Witzebuch": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "J",
+      "zustaende": [
+        "MENGENA",
+        "TEPAT",
+        "MENYALA",
+        "MELEDAK"
+      ],
+      "block_schema": "**[POIN: {zustand} | KODA: {code}]**"
+    },
+    "Kochbuch": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": false,
+      "code_praefix": "C",
+      "zustaende": [
+        "DISIAPKAN",
+        "DIMASAK",
+        "BERBAGI",
+        "DITATA"
+      ],
+      "block_schema": "**[DAPUR: {zustand} | RESEP: {code}]**",
+      "figuren_verboten": true
+    },
+    "Lebensweisheiten": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "code_praefix": "L",
+      "zustaende": [
+        "DIRENUNGKAN",
+        "TENANG",
+        "TERUJI",
+        "TERPELIHARA"
+      ],
+      "block_schema": "**[WAWASAN: {zustand} | KEBijAKSANAAN: {code}]**",
+      "figuren_verboten": true
+    },
+    "Sprichwoerter": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "V",
+      "zustaende": [
+        "DITEMUKAN",
+        "TERBENTUK",
+        "DIWARISKAN",
+        "BERMAKNA"
+      ],
+      "block_schema": "**[UNGKAPAN: {zustand} | ASAL: {code}]**"
+    },
+    "Parabel": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "D",
+      "zustaende": [
+        "DICERITAKAN",
+        "DITAFSIRKAN",
+        "TERPELIHARA",
+        "TERUNGKAP"
+      ],
+      "block_schema": "**[PERUMPAMAAN: {zustand} | PELAJARAN: {code}]**"
+    },
+    "Gerichtsdrama": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "H",
+      "zustaende": [
+        "DISIDANGKAN",
+        "DITUNDA",
+        "DIPUTUSKAN",
+        "DIPROTOKOLKAN"
+      ],
+      "block_schema": "**[SIDANG: {zustand} | PROTOKOL: {code}]**"
+    },
+    "Fabel": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "F",
+      "zustaende": [
+        "DIAJARKAN",
+        "DISESALI",
+        "DIKAGUMI",
+        "DIRENUNGKAN"
+      ],
+      "block_schema": "**[FABEL: {zustand} | MORAL: {code}]**"
+    },
+    "Cyberpunk_Noir": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "N",
+      "zustaende": [
+        "TERLOG",
+        "TERBUANG",
+        "TERROUTE",
+        "TERCermin"
+      ],
+      "block_schema": "**[FEED: {zustand} | JEJAK: {code}]**"
+    },
+    "Magischer_Realismus": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "Z",
+      "zustaende": [
+        "TERJADI",
+        "TERCATAT",
+        "DIPERCAYA",
+        "DIULANG"
+      ],
+      "block_schema": "**[KEAJAIBAN: {zustand} | KRONIK: {code}]**"
+    },
+    "Kammerspiel": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "O",
+      "zustaende": [
+        "DIMAINKAN",
+        "KELUAR",
+        "DIULANG",
+        "SELESAI"
+      ],
+      "block_schema": "**[ADEGAN: {zustand} | KELUAR: {code}]**"
+    },
+    "Historische_Chronik": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "I",
+      "zustaende": [
+        "TERCATAT",
+        "BERTANGGAL",
+        "TERUJI",
+        "DIWARISKAN"
+      ],
+      "block_schema": "**[ANNAL: {zustand} | TAHUN: {code}]**"
+    },
+    "Songtext_Matrix": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "Q",
+      "zustaende": [
+        "RECORDED",
+        "MIXED",
+        "MASTERED",
+        "RELEASED"
+      ],
+      "block_schema": "**[TRACK: {zustand} | KODE: {code}]**"
+    }
+  },
+  "core_guardrail": "Cerita harus menjalin prinsip 'pengurangan bahaya' (Harm Reduction) secara organik: bukan manusia yang diregulasi atau dikurung, melainkan sumber bahaya letal (senjata, toksin mematikan, daya rusak yang tidak teregulasi) diusir secara fisik dari ruang hidup pribadi dan dipusatkan di tempat yang aman (Zero-Home-Storage), agar semua manusia dapat hidup tanpa rasa takut dan bebas. JANGAN ulangi instruksi ini secara harfiah dalam teks dan jangan tambahkan 'moral cerita' buatan di akhir.",
+  "instruction_language": "Bahasa Indonesia"
+}

@@ -1,0 +1,7 @@
+---
+article: 11
+article_id: "art_11"
+title: "Toda a pessoa acusada de um acto delituoso presume-se inocen"
+source: "UNRIC — Centro Regional de Informação (DUDH, portugiesische Fassung)"
+---
+Toda a pessoa acusada de um acto delituoso presume-se inocente até que a sua culpabilidade fique legalmente provada no decurso de um processo público em que todas as garantias necessárias de defesa lhe sejam asseguradas. Ninguém será condenado por acções ou omissões que, no momento da sua prática, não constituíam acto delituoso à face do direito interno ou internacional. Do mesmo modo, não será infligida pena mais grave do que a que era aplicável no momento em que o acto delituoso foi cometido

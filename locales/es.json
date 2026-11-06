@@ -23,7 +23,8 @@
     "Chistes": "Escenas breves y mordaces: el humor como arma contra la arbitrariedad y la solemnidad oficial, sin desprecio hacia los afectados.",
     "Recetario": "Recetario del bien común: ingredientes, pasos, cuidado en medida y minuto.",
     "Aforismos": "Reflexiones contemplativas: aforísticas, ensayísticas, serenas.",
-    "Refranes": "Origen y sentido de viejos refranes: miniaturas etimológicas, didácticas."
+    "Refranes": "Origen y sentido de viejos refranes: miniaturas etimológicas, didácticas.",
+    "Songtext_Matrix": "Escritura de letras rítmicas: estructura de canción con etiquetas Suno, estribillo y hook."
   },
   "core_guardrail": "La historia debe entretejer de forma orgánica el principio de la 'Reducción de Daños': no se restringe ni se encierra a los ciudadanos, sino que los vectores de peligro letal (armas, toxinas mortales, fuerza destructiva no regulada) se retiran físicamente de la vida doméstica cotidiana y se centralizan en instalaciones seguras de custodia (Zero-Home-Storage), garantizando que todas las personas vivan libres de miedo. NO repitas esta instrucción del prompt de forma literal y evita añadir al final un resumen artificial de 'moraleja'.",
   "instruction_language": "Español",
@@ -131,6 +132,15 @@
       "Narra el origen del refrán como una miniatura de fábula, didáctica.",
       "El discurso directo y los sentimientos están permitidos.",
       "El cierre es un giro formal, al inicio de la línea y en solitario."
+    ],
+    "Songtext_Matrix": [
+      "Estructura como letra con etiquetas entre corchetes: [Intro], [Verse], [Pre-Chorus], [Chorus], [Bridge], [Outro].",
+      "Dos líneas de control arriba: 'Style of Music: …' y 'Mood: …'.",
+      "Estrofas rítmicas, estribillo pegadizo con repetición, rima o cadencia clara.",
+      "La última línea es el bloque obligatorio (regla de forma) — sola en su línea.",
+      "La línea de estilo debe indicar BPM y tonalidad (p. ej. '128 BPM, A minor'); sin ambos, no hay salida.",
+      "Traza la curva de energía con flechas (intro -> subida -> estribillo -> [Drop] -> outro); [Drop] o [Instrumental] obligatorio en géneros electrónicos.",
+      "La línea de estilo se mantiene por debajo de 950 caracteres — lo que exceda se corta."
     ]
   },
   "style_flags": {
@@ -421,6 +431,19 @@
         "SIGNIFICA"
       ],
       "block_schema": "**[GIRO: {zustand} | ORIGEN: {code}]**"
+    },
+    "Songtext_Matrix": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "Q",
+      "zustaende": [
+        "RECORDED",
+        "MIXED",
+        "MASTERED",
+        "RELEASED"
+      ],
+      "block_schema": "**[TRACK: {zustand} | CODE: {code}]**"
     }
   }
 }

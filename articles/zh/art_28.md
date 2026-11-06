@@ -1,0 +1,8 @@
+---
+article: 28
+article_id: "art_28"
+title: "人人有权要求一种社会的和国际的秩序，在这种秩序中，本宣言所载的权利和自由能获得充分实现。"
+source: "UN — Vereinte Nationen (UDHR, chinesische Fassung)"
+url: https://www.un.org/zh/about-us/universal-declaration-of-human-rights
+---
+人人有权要求一种社会的和国际的秩序，在这种秩序中，本宣言所载的权利和自由能获得充分实现。

@@ -1,0 +1,7 @@
+---
+article: 25
+article_id: "art_25"
+title: "Een ieder heeft recht op een levensstandaard, die hoog genoe"
+source: "Wikisource nl.wikisource.org"
+---
+Een ieder heeft recht op een levensstandaard, die hoog genoeg is voor de gezondheid en het welzijn van zichzelf en zijn gezin, waaronder inbegrepen voeding, kleding, huisvesting en geneeskundige verzorging en de noodzakelijke sociale diensten, alsmede het recht op voorziening in geval van werkloosheid, ziekte, invaliditeit, overlijden van de echtgenoot, ouderdom of een ander gemis aan bestaansmiddelen, ontstaan ten gevolge van omstandigheden onafhankelijk van zijn wil. Moeder en kind hebben recht op bijzondere zorg en bijstand. Alle kinderen, al dan niet wettig, zullen dezelfde sociale bescherming genieten

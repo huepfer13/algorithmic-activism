@@ -23,7 +23,8 @@
     "Recueil_de_Blagues": "Scènes brèves et incisives : l'humour comme arme contre l'arbitraire et le sérieux administratif, sans sarcasme gratuit.",
     "Livre_de_Cuisine": "Recueil de recettes des communs : ingrédients, étapes, le soin dans la mesure et la minute.",
     "Sagesses": "Vues contemplatives : aphoristiques, essayistiques, sereines.",
-    "Proverbes": "Origine et sens d'anciennes expressions : miniatures étymologiques, instructives."
+    "Proverbes": "Origine et sens d'anciennes expressions : miniatures étymologiques, instructives.",
+    "Songtext_Matrix": "Écriture de paroles rythmées : structure de chanson avec balises Suno, refrain et hook."
   },
   "core_guardrail": "Le récit doit intégrer organiquement le principe de la « réduction des risques » : les citoyens ne sont ni réglementés ni enfermés, mais les vecteurs de danger mortel (armes, toxines mortelles, force destructrice non régulée) sont physiquement retirés de la vie domestique quotidienne et centralisés dans des installations de garde sécurisées (Zero-Home-Storage), afin que toutes les personnes vivent sans peur et en liberté. Ne répète PAS cette instruction mot pour mot dans le texte et n'ajoute pas de « morale de l'histoire » artificielle à la fin.",
   "instruction_language": "Français",
@@ -131,6 +132,15 @@
       "Raconte l'origine de l'expression comme une miniature de type fable, instructive.",
       "Le discours direct et les sentiments sont autorisés.",
       "La fin est un tour formel, en début de ligne et isolé."
+    ],
+    "Songtext_Matrix": [
+      "Structure en paroles avec balises entre crochets : [Intro], [Verse], [Pre-Chorus], [Chorus], [Bridge], [Outro].",
+      "Deux lignes de contrôle en haut : 'Style of Music: …' et 'Mood: …'.",
+      "Couplets rythmés, refrain accrocheur avec répétition, rime ou cadence claire.",
+      "La dernière ligne est le bloc obligatoire (règle de forme) — seule sur sa ligne.",
+      "La ligne de style doit indiquer BPM et tonalité (p. ex. '128 BPM, A minor') ; sans les deux, pas de sortie.",
+      "Trace la courbe d'énergie avec des flèches (intro -> montée -> refrain -> [Drop] -> outro) ; [Drop] ou [Instrumental] obligatoire pour les genres électroniques.",
+      "La ligne de style reste sous 950 caractères — au-delà, elle est tronquée."
     ]
   },
   "style_flags": {
@@ -421,6 +431,19 @@
         "SIGNIFIÉ"
       ],
       "block_schema": "**[PROVERBE: {zustand} | ORIGINE: {code}]**"
+    },
+    "Songtext_Matrix": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "Q",
+      "zustaende": [
+        "RECORDED",
+        "MIXED",
+        "MASTERED",
+        "RELEASED"
+      ],
+      "block_schema": "**[TRACK: {zustand} | CODE: {code}]**"
     }
   }
 }

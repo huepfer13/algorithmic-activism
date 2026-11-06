@@ -1,0 +1,446 @@
+{
+  "language_code": "NL",
+  "language_name": "Nederlands",
+  "styles": {
+    "Parabel": "Gelijkende vertelling: een inzicht in beelden gehuld, zonder vermaning aan het einde.",
+    "SciFi_Dystopie": "Een dystopisch sciencefictionverhaal over de gevaren van sluipend controleverlies",
+    "Fabel": "Dierenfabel: sprekende dieren, een les die uit de handeling valt.",
+    "Philosophischer_Essay": "Een verhalende, essayistische denkruimte",
+    "Cyberpunk_Noir": "Neon, regen, concerns: zintuiglijkheid en verzet in de schaduweconomie.",
+    "Gerichtsdrama": "Zitting voor een scheidskamer: getuigenverklaringen, bewijsmiddelen, rechtsgronden.",
+    "Magischer_Realismus": "Het wonderbaarlijke als alledaags: het onmogelijke wordt geregistreerd als weer.",
+    "Historische_Chronik": "Annalen: gedateerde vermeldingen, oorzaken en gevolgen van een rechtsontwikkeling.",
+    "Kammerspiel": "Eén ruimte, weinig personages, alles wezenlijke in de dialoog.",
+    "Gerätehandbuch": "Technische documentatie en bedieningshandleiding: nuchtere, bureaucratische ingenieurstoon. Gestructureerd in secties, waarschuwingen (GEVAAR/WAARSCHUWING/LET OP volgens ISO 3864), functiebeschrijvingen, onderhoudsintervallen en foutdiagnosetabellen. Mensen en gevoelens worden geïnventariseerd als 'bedieningseenheden', 'biologische subsystemen' of 'foutbronnen'. De handleiding is opgezet als satirische kritiek op ontmenselijkende bestuurstaal: de beschreven ingrepen zijn de kritiek, niet de aanbeveling.",
+    "Märchen": "Klassiek kunstsprookje: tijdloos, beeldrijk, archetypisch. Beproevingen, drempels, ambacht en gedeeld brood. Geen cynische ambtelijke taal.",
+    "Kinderbuch": "Kindvriendelijk verhaal: warm, beeldend, eenvoudige hoofdzinnen, dieren en kinderen als handelende personen. Rechten worden als concrete handeling zichtbaar.",
+    "Solarpunk": "Constructieve utopie: gedecentraliseerde gemeenschap, beproefde oplossingen, degelijke techniek in dienst van de rechten.",
+    "Briefroman": "Epistolair verslag: genummerde depêches tussen gescheidenen, hoge introspectie.",
+    "Satire": "Politieke groteske: een uitdijend apparaat maakt eenvoudige rechten onuitvoerbaar.",
+    "Gothic": "Weird fiction: een huis dat verandert terwijl de bewoners hun vrijheid vergeten.",
+    "Manifest": "Retorische oproep: ritmische declamatie tegen willekeur, vervolging en stilte.",
+    "Tagebuch": "Fictief dagboek: gedateerde notities uit een geïsoleerde sperzone, sluipend rechtsverlies.",
+    "Witzebuch": "Puntige korte scènes: humor als wapen tegen willekeur en ambtelijke ernst, zonder hoon.",
+    "Kochbuch": "Receptenverzameling van de meent: ingrediënten, stappen, zorg in maat en minuut.",
+    "Lebensweisheiten": "Beschouwende inzichten: aforistisch, essayistisch, gelaten.",
+    "Sprichwoerter": "Herkomst en betekenis van oude uitdrukkingen: etymologische miniaturen, leerzaam.",
+    "Songtext_Matrix": "Ritmische, getoonzette lyriek: songstructuur met Suno-tags, hook en refrein."
+  },
+  "style_rules": {
+    "Gerätehandbuch": [
+      "Minstens twee markeringsblokken uit [GEVAAR], [WAARSCHUWING], [LET OP] — elk met voorwaarde en gevolg.",
+      "Minstens één technische foutcode in het formaat 'Foutcode E-<getal>: <storing>' of een diagnosetabel.",
+      "De tekst eindigt met een technische instructie, een foutcode of een onderhoudsstap — nooit met een morele duiding.",
+      "Mensen uitsluitend als bedieningseenheden, biologische subsystemen of foutbronnen opvoeren; geen voornaam, geen medeleven, geen uitroepteken.",
+      "Behandel het behandelde VN-artikel als fabrieksparameter of kalibratievoorschrift, niet als citaat en niet als oproep.",
+      "Geen directe rede, geen dialogen, geen emotionele handelingen of blikken tussen personen. Het hoofdstuk sluit verplicht met een formele diagnose-, onderhouds- of foutcode-vermelding."
+    ],
+    "Märchen": [
+      "Vertel in archetypische beelden (drempel, beproeving, ban), zonder geweld te verheerlijken.",
+      "Directe rede is toegestaan en gewenst.",
+      "Het slot is een formele kroniekvermelding, regelinitaal en op zichzelf staand."
+    ],
+    "Kinderbuch": [
+      "Vertel vanuit het perspectief van een kind of een klein dier, in eenvoudige hoofdzinnen.",
+      "Directe rede en gevoelens zijn toegestaan en gewenst, zonder vermaning aan het einde.",
+      "Het slot is een formele stempel, regelinitaal en op zichzelf staand."
+    ],
+    "Solarpunk": [
+      "Toon werkende, emancipatorische oplossingen in plaats van dystopie.",
+      "Directe rede en gevoelens zijn toegestaan en gewenst.",
+      "Het slot is een formele netwerkstatus, regelinitaal en op zichzelf staand."
+    ],
+    "Briefroman": [
+      "Vertel in brieven/depêches, niet in auctoriale proza.",
+      "Directe rede en gevoelens zijn toegestaan en gewenst.",
+      "Het slot is een formele depêche-notitie, regelinitaal en op zichzelf staand."
+    ],
+    "Satire": [
+      "Overdrijf het apparaat, niet de mensen die eronder lijden.",
+      "Directe rede en gevoelens zijn toegestaan en gewenst.",
+      "Het slot is een formeel besluit, regelinitaal en op zichzelf staand."
+    ],
+    "Gothic": [
+      "Creëer sfeer en onbehagen, zonder gruwel te vieren.",
+      "Directe rede en gevoelens zijn toegestaan en gewenst.",
+      "Het slot is een formele kroniekdrempel, regelinitaal en op zichzelf staand."
+    ],
+    "Manifest": [
+      "Declameer, argumenteer in oproepen, zonder personageregisse.",
+      "Geen directe rede (collectief-monologisch), gevoelens en urgentie toegestaan.",
+      "Het slot is een formele proclamatie, regelinitaal en op zichzelf staand."
+    ],
+    "Tagebuch": [
+      "Schrijf gedateerde, persoonlijke notities in plaats van auctoriale hoofdstukken.",
+      "Directe rede en gevoelens zijn toegestaan en gewenst.",
+      "Het slot is een formele dagboekvermelding, regelinitaal en op zichzelf staand."
+    ],
+    "Witzebuch": [
+      "Korte scènes met een duidelijke pointe, dialoog toegestaan en gewenst.",
+      "Lach om het apparaat, nooit om de betrokkenen.",
+      "Het slot is een formele pointe, regelinitaal en op zichzelf staand."
+    ],
+    "Kochbuch": [
+      "Duidelijke ingrediënten- en stappenlogica, pretentieloos en zintuiglijk.",
+      "Geen directe rede, geen personageregisse (zakelijke tekst).",
+      "Het slot is een formele keukennotitie, regelinitaal en op zichzelf staand."
+    ],
+    "Lebensweisheiten": [
+      "Beschouwend en aforistisch, zonder personageregisse.",
+      "Geen directe rede (reflectie), gevoelens als houding toegestaan.",
+      "Het slot is een formeel inzicht, regelinitaal en op zichzelf staand."
+    ],
+    "Sprichwoerter": [
+      "Vertel de herkomst van de uitdrukking als fabelachtige miniatuur, leerzaam.",
+      "Directe rede en gevoelens zijn toegestaan.",
+      "Het slot is een formele wending, regelinitaal en op zichzelf staand."
+    ],
+    "Parabel": [
+      "Vertel een gelijkenis; het inzicht ontstaat uit de handeling, niet uit een oproep.",
+      "Directe rede en gevoelens zijn toegestaan.",
+      "Het slot is een formeel gelijkeniszegel, regelinitaal en op zichzelf staand."
+    ],
+    "Gerichtsdrama": [
+      "Voer de zitting in scènes op; verklaringen en bezwaren horen erbij.",
+      "Directe rede is verplicht gewenst.",
+      "Het slot is een formeel zittingsprotocol, regelinitaal en op zichzelf staand."
+    ],
+    "Fabel": [
+      "Dieren handelen en spreken; de les toont zich, zij wordt niet gepredikt.",
+      "Directe rede en gevoelens zijn toegestaan.",
+      "Het slot is een formele fabelmoraal, regelinitaal en op zichzelf staand."
+    ],
+    "Cyberpunk_Noir": [
+      "Vertel dicht bij de zintuiglijkheid, snel en sfeervol.",
+      "Directe rede en gevoelens zijn toegestaan.",
+      "Het slot is een formele netwerk-trace, regelinitaal en op zichzelf staand."
+    ],
+    "Magischer_Realismus": [
+      "Behandel het wonderbaarlijke terloops, zonder het te verklaren.",
+      "Directe rede en gevoelens zijn toegestaan.",
+      "Het slot is een formele wonderkroniek, regelinitaal en op zichzelf staand."
+    ],
+    "Kammerspiel": [
+      "Houd de plaats eng en de spanning in het spreken.",
+      "Directe rede is verplicht gewenst.",
+      "Het slot is een formeel scèneprotocol, regelinitaal en op zichzelf staand."
+    ],
+    "Historische_Chronik": [
+      "Schrijf in annalenvorm met duidelijke tijdsvolgorde.",
+      "Directe rede en gevoelens zijn toegestaan.",
+      "Het slot is een formele annalenvermelding, regelinitaal en op zichzelf staand."
+    ],
+    "Songtext_Matrix": [
+      "Opbouw als songtekst met tags tussen vierkante haken: [Intro], [Verse], [Pre-Chorus], [Chorus], [Bridge], [Outro].",
+      "Helemaal bovenaan twee stuurregels: 'Style of Music: …' en 'Mood: …'.",
+      "Ritmische strofen, pakkend refrein met herhaling, rijm of duidelijke cadans.",
+      "De laatste regel is het verplichte blok (vormvoorschrift) — alleen op één regel.",
+      "De Style-regel noemt verplicht BPM en toonaard (bijv. '128 BPM, A minor'); zonder beide geen uitvoer.",
+      "Teken de spanningsboog met pijlen (Intro -> Opbouw -> Refrein -> [Drop] -> Outro); bij elektronische genres [Drop] of [Instrumental] verplicht.",
+      "De Style-regel blijft onder 950 tekens — alles daarboven wordt afgekapt.",
+      "Elke strofe heeft PRECIES 4 regels. Geen strofe met 5 of meer regels.",
+      "Elke regel heeft 7 tot 10 lettergrepen — zingbaar in één ademtocht, geen samengestelde zinnen.",
+      "Eindrijm is verplicht: verzen in het schema AABB of ABAB, het refrein heeft minstens één rijmend paar.",
+      "Het refrein bestaat uit 4 regels, bevat hoogstens ÉÉN abstract begrip (recht, vrijheid, systeem, waardigheid) en minstens één concreet beeld (voorwerp, plaats, handeling).",
+      "Noem hoogstens twee personages per track — geen namenlijsten.",
+      "Elke track heeft een EIGEN refrein. Refreinregels uit eerdere tracks zijn verboden."
+    ]
+  },
+  "style_flags": {
+    "Gerätehandbuch": {
+      "manual_ending": true,
+      "figuren_verboten": true
+    },
+    "Märchen": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "M",
+      "zustaende": [
+        "BEWAARD",
+        "GETOETST",
+        "VERLICHT",
+        "BEZEGELD"
+      ],
+      "block_schema": "**[KRONIEK: {zustand} | ZEGEL: {code}]**"
+    },
+    "Kinderbuch": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "K",
+      "zustaende": [
+        "GELEERD",
+        "GEHOED",
+        "GEDEELD",
+        "HERKEND"
+      ],
+      "block_schema": "**[BOSBOEK: {zustand} | HOOFDSTUK: {code}]**"
+    },
+    "SciFi_Dystopie": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "S",
+      "zustaende": [
+        "ONLINE",
+        "SYNCHROON",
+        "GESPIEGELD",
+        "GEPATCHT"
+      ],
+      "block_schema": "**[NODE: {zustand} | LOG: {code}]**"
+    },
+    "Philosophischer_Essay": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "code_praefix": "P",
+      "zustaende": [
+        "OVERWOGEN",
+        "GETOETST",
+        "VERWORPEN",
+        "BEDACHT"
+      ],
+      "block_schema": "**[THESE: {zustand} | REFLECTIE: {code}]**"
+    },
+    "Solarpunk": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "U",
+      "zustaende": [
+        "GEKOPPELD",
+        "GEVOED",
+        "GEDEELD",
+        "GETOETST"
+      ],
+      "block_schema": "**[COMMUNE-GRID: {zustand} | STATUS: {code}]**"
+    },
+    "Briefroman": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "B",
+      "zustaende": [
+        "OPGEGEVEN",
+        "AANGEKOMEN",
+        "GELEZEN",
+        "VERZEGELD"
+      ],
+      "block_schema": "**[DEPÊCHE: {zustand} | ZEGEL: {code}]**"
+    },
+    "Satire": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "G",
+      "zustaende": [
+        "UITGEVAARDIGD",
+        "BESCHIKT",
+        "GOEDGEKEURD",
+        "TER_KENNIS"
+      ],
+      "block_schema": "**[CIRCULAIRE: {zustand} | UITGEVAARDIGD: {code}]**"
+    },
+    "Gothic": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "W",
+      "zustaende": [
+        "GESLOTEN",
+        "DOORSTAP",
+        "BEWAARD",
+        "GETELD"
+      ],
+      "block_schema": "**[KRONIEK: {zustand} | DREMPEL: {code}]**"
+    },
+    "Manifest": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "code_praefix": "R",
+      "zustaende": [
+        "AFGEKONDIGD",
+        "BEZWOREN",
+        "INGESCHREVEN",
+        "BEVESTIGD"
+      ],
+      "block_schema": "**[PROCLAMATIE: {zustand} | REGISTER: {code}]**",
+      "figuren_verboten": true
+    },
+    "Tagebuch": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "T",
+      "zustaende": [
+        "GENOTEERD",
+        "GEDATEERD",
+        "GETOETST",
+        "VERLEDEN"
+      ],
+      "block_schema": "**[VERMELDING: {zustand} | TIJDSTIP: {code}]**"
+    },
+    "Witzebuch": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "J",
+      "zustaende": [
+        "TREFT",
+        "ZIT",
+        "ONTSTEKET",
+        "VERPUFT"
+      ],
+      "block_schema": "**[POINTE: {zustand} | CODA: {code}]**"
+    },
+    "Kochbuch": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": false,
+      "code_praefix": "C",
+      "zustaende": [
+        "AANGEZET",
+        "GEKOOKT",
+        "GEDEELD",
+        "VOORBEREID"
+      ],
+      "block_schema": "**[KEUKEN: {zustand} | RECEPT: {code}]**",
+      "figuren_verboten": true
+    },
+    "Lebensweisheiten": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "code_praefix": "L",
+      "zustaende": [
+        "BEDACHT",
+        "GELATEN",
+        "GETOETST",
+        "BEWAARD"
+      ],
+      "block_schema": "**[INZICHT: {zustand} | WIJSHEID: {code}]**",
+      "figuren_verboten": true
+    },
+    "Sprichwoerter": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "V",
+      "zustaende": [
+        "GEVONDEN",
+        "GEVORMD",
+        "OVERGELEVERD",
+        "BETEKENT"
+      ],
+      "block_schema": "**[WENDING: {zustand} | OORSPRONG: {code}]**"
+    },
+    "Parabel": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "D",
+      "zustaende": [
+        "VERTELD",
+        "GEDUID",
+        "BEWAARD",
+        "ONTHULD"
+      ],
+      "block_schema": "**[GELIJKENIS: {zustand} | LES: {code}]**"
+    },
+    "Gerichtsdrama": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "H",
+      "zustaende": [
+        "BEHANDELD",
+        "AANGEHOUDEN",
+        "BESLOTEN",
+        "TE_PROTOCOLLEREN"
+      ],
+      "block_schema": "**[ZITTING: {zustand} | PROTOCOL: {code}]**"
+    },
+    "Fabel": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "F",
+      "zustaende": [
+        "GELEERD",
+        "BETREURD",
+        "BEWONDERD",
+        "BEDACHT"
+      ],
+      "block_schema": "**[FABEL: {zustand} | MORAAL: {code}]**"
+    },
+    "Cyberpunk_Noir": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "N",
+      "zustaende": [
+        "GELOGD",
+        "VERWORPEN",
+        "GEROUT",
+        "GESPIEGELD"
+      ],
+      "block_schema": "**[FEED: {zustand} | TRACE: {code}]**"
+    },
+    "Magischer_Realismus": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "Z",
+      "zustaende": [
+        "GESCHIED",
+        "VERMELD",
+        "GELOOFD",
+        "HERHAALD"
+      ],
+      "block_schema": "**[WONDER: {zustand} | KRONIEK: {code}]**"
+    },
+    "Kammerspiel": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "O",
+      "zustaende": [
+        "GESPEELD",
+        "AFGEGAAN",
+        "HERHAALD",
+        "BEËINDIGD"
+      ],
+      "block_schema": "**[SCÈNE: {zustand} | AFGANG: {code}]**"
+    },
+    "Historische_Chronik": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "I",
+      "zustaende": [
+        "VERMELD",
+        "GEDATEERD",
+        "GETOETST",
+        "OVERGELEVERD"
+      ],
+      "block_schema": "**[ANNALEN: {zustand} | JAAR: {code}]**"
+    },
+    "Songtext_Matrix": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "Q",
+      "zustaende": [
+        "RECORDED",
+        "MIXED",
+        "MASTERED",
+        "RELEASED"
+      ],
+      "block_schema": "**[TRACK: {zustand} | CODE: {code}]**"
+    }
+  },
+  "core_guardrail": "Het verhaal moet het principe van 'schadebeperking' (harm reduction) organisch verweven: niet de mensen worden gereguleerd of opgesloten, maar letale gevarenbronnen (wapens, dodelijke toxines, ongereguleerde vernietigingskracht) worden fysiek uit de privéleefruimte verbannen en op beveiligde plaatsen gecentraliseerd (zero-home-storage), zodat alle mensen angstvrij en vrij kunnen leven. Herhaal deze instructie NIET letterlijk in de tekst en hang geen kunstmatige 'moraal van het verhaal' aan het einde.",
+  "instruction_language": "Nederlands"
+}

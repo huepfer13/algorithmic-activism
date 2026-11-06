@@ -1,0 +1,7 @@
+---
+article: 12
+article_id: "art_12"
+title: "Niemand zal onderworpen worden aan willekeurige inmenging in"
+source: "Wikisource nl.wikisource.org"
+---
+Niemand zal onderworpen worden aan willekeurige inmenging in zijn persoonlijke aangelegenheden, in zijn gezin, zijn tehuis of zijn briefwisseling, noch aan enige aantasting van zijn eer of goede naam. Tegen een dergelijke inmenging of aantasting heeft een ieder recht op bescherming door de wet

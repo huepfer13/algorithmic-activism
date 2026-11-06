@@ -1,0 +1,7 @@
+---
+article: 27
+article_id: "art_27"
+title: "1. Toda persona tiene derecho a tomar parte libremente en la"
+source: "UN — Naciones Unidas (DUDH, spanische Fassung)"
+---
+1. Toda persona tiene derecho a tomar parte libremente en la vida cultural de la comunidad, a gozar de las artes y a participar en el progreso científico y en los beneficios que de él resulten. 2. Toda persona tiene derecho a la protección de los intereses morales y materiales que le correspondan por razón de las producciones científicas, literarias o artísticas de que sea autora

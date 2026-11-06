@@ -1,0 +1,446 @@
+{
+  "language_code": "SV",
+  "language_name": "Svenska",
+  "styles": {
+    "Parabel": "Liknelseartad berättelse: en insikt klädd i bilder, utan förmaning i slutet.",
+    "SciFi_Dystopie": "En dystopisk science fiction-berättelse om farorna med smygande kontrollförlust",
+    "Fabel": "Djur fabel: talande djur, en lärdom som faller ur handlingen.",
+    "Philosophischer_Essay": "Ett berättande, essäistiskt tankerum",
+    "Cyberpunk_Noir": "Neon, regn, koncerner: sensorik och motstånd i skuggekonomin.",
+    "Gerichtsdrama": "Förhandling inför en skiljenämnd: vittnesmål, bevis, rättsliga motiveringar.",
+    "Magischer_Realismus": "Det underbara som vardag: det omöjliga protokollförs som väder.",
+    "Historische_Chronik": "Annaler: daterade poster, orsaker och följder av en rättsutveckling.",
+    "Kammerspiel": "Ett rum, få figurer, allt väsentligt i dialogen.",
+    "Gerätehandbuch": "Teknisk dokumentation och bruksanvisning: saklig, byråkratisk ingenjörston. Strukturerad i avsnitt, varningar (FARA/VARNING/ANMÄRKNING enligt ISO 3864), funktionsbeskrivningar, underhållsintervall och feldiagnostabeller. Människor och känslor inventeras som 'manöverenheter', 'biologiska delsystem' eller 'felkällor'. Anvisningen är utformad som satirisk kritik av ett avhumaniserande förvaltningsspråk: de beskrivna ingreppen är kritiken, inte rekommendationen.",
+    "Märchen": "Klassisk konst saga: tidlös, bildrik, arketypisk. Prövningar, trösklar, hantverk och delat bröd. Inget cyniskt myndighetsspråk.",
+    "Kinderbuch": "Barnanpassad berättelse: varm, åskådlig, enkla huvudsatser, djur och barn som handlande. Rättigheter blir synliga som konkret handling.",
+    "Solarpunk": "Konstruktiv utopi: decentraliserat kollektiv, beprövade lösningar, handfast teknik i rättigheternas tjänst.",
+    "Briefroman": "Epistolär rapport: numrerade depescher mellan åtskilda, hög introspektion.",
+    "Satire": "Politisk grotesk: en överlastad apparat gör enkla rättigheter ogenomförbara.",
+    "Gothic": "Weird fiction: ett hus som förändras medan invånarna glömmer sin frihet.",
+    "Manifest": "Retorisk appell: rytmisk deklamation mot godtycke, förföljelse och tystnad.",
+    "Tagebuch": "Fiktiv dagbok: daterade anteckningar från en isolerad spärrzon, smygande rättsförlust.",
+    "Witzebuch": "Pregnant korta scener: humor som vapen mot godtycke och ämbetsallvar, utan hån.",
+    "Kochbuch": "Receptsamling från allmänningen: ingredienser, steg, omsorg i mått och minut.",
+    "Lebensweisheiten": "Kontemplativa insikter: aforistiskt, essäistiskt, lugnt.",
+    "Sprichwoerter": "Ursprung och mening hos gamla vändningar: etymologiska miniatyrer, lärorika.",
+    "Songtext_Matrix": "Rytmisk, tonsatt lyrik: låtstruktur med Suno-taggar, hook och refräng."
+  },
+  "style_rules": {
+    "Gerätehandbuch": [
+      "Minst två markeringsblock av [FARA], [VARNING], [ANMÄRKNING] — var och en med villkor och följd.",
+      "Minst en teknisk felkod i formatet 'Felkod E-<tal>: <störning>' eller en diagnostabell.",
+      "Texten slutar med en teknisk instruktion, en felkod eller ett underhållssteg — aldrig med en moralisk värdering.",
+      "Människor får uteslutande föras som manöverenheter, biologiska delsystem eller felkällor; inget förnamn, ingen medkänsla, inget utropstecken.",
+      "Behandla den förhandlade FN-artikeln som en fabriksparameter eller kalibreringsanvisning, inte som citat och inte som appell.",
+      "Ingen direkt anföring, inga dialoger, inga emotionella handlingar eller blickar mellan personer. Kapitlet avslutas obligatoriskt med en formell diagnos-, underhålls- eller felkodspost."
+    ],
+    "Märchen": [
+      "Berätta i arketypiska bilder (tröskel, prövning, förbannelse), utan att förhärliga våld.",
+      "Direkt anföring är tillåten och önskvärd.",
+      "Slutet är en formell krönikepost, radinledande och fristående."
+    ],
+    "Kinderbuch": [
+      "Berätta ur ett barns eller ett litet djurs perspektiv, i enkla huvudsatser.",
+      "Direkt anföring och känslor är tillåtna och önskvärda, utan förmaning i slutet.",
+      "Slutet är en formell stämpel, radinledande och fristående."
+    ],
+    "Solarpunk": [
+      "Visa fungerande, emancipatoriska lösningar i stället för dystopi.",
+      "Direkt anföring och känslor är tillåtna och önskvärda.",
+      "Slutet är en formell nätstatus, radinledande och fristående."
+    ],
+    "Briefroman": [
+      "Berätta i brev/depescher, inte i auktoritär prosa.",
+      "Direkt anföring och känslor är tillåtna och önskvärda.",
+      "Slutet är en formell depeschanteckning, radinledande och fristående."
+    ],
+    "Satire": [
+      "Överdriv apparaten, inte människorna som lider under den.",
+      "Direkt anföring och känslor är tillåtna och önskvärda.",
+      "Slutet är en formell förordning, radinledande och fristående."
+    ],
+    "Gothic": [
+      "Skapa atmosfär och obehag, utan att fira skräck.",
+      "Direkt anföring och känslor är tillåtna och önskvärda.",
+      "Slutet är en formell kröniketröskel, radinledande och fristående."
+    ],
+    "Manifest": [
+      "Deklamera, argumentera i appeller, utan figurregi.",
+      "Ingen direkt anföring (kollektivt-monologiskt), känslor och brådska tillåtna.",
+      "Slutet är en formell proklamation, radinledande och fristående."
+    ],
+    "Tagebuch": [
+      "Skriv daterade, personliga anteckningar i stället för auktoritära kapitel.",
+      "Direkt anföring och känslor är tillåtna och önskvärda.",
+      "Slutet är en formell dagbokspost, radinledande och fristående."
+    ],
+    "Witzebuch": [
+      "Korta scener med tydlig poäng, dialog tillåten och önskvärd.",
+      "Skratta åt apparaten, aldrig åt de drabbade.",
+      "Slutet är en formell poäng, radinledande och fristående."
+    ],
+    "Kochbuch": [
+      "Tydlig ingrediens- och steglogik, opretentiöst och sinnligt.",
+      "Ingen direkt anföring, ingen figurregi (saktext).",
+      "Slutet är en formell köksanteckning, radinledande och fristående."
+    ],
+    "Lebensweisheiten": [
+      "Kontemplativt och aforistiskt, utan figurregi.",
+      "Ingen direkt anföring (reflektion), känslor som hållning tillåtna.",
+      "Slutet är en formell insikt, radinledande och fristående."
+    ],
+    "Sprichwoerter": [
+      "Berätta vändningens ursprung som en fabelliknande miniatyr, lärorikt.",
+      "Direkt anföring och känslor är tillåtna.",
+      "Slutet är en formell vändning, radinledande och fristående."
+    ],
+    "Parabel": [
+      "Berätta en liknelse; insikten uppstår ur handlingen, inte ur en appell.",
+      "Direkt anföring och känslor är tillåtna.",
+      "Slutet är ett formellt liknelse-sigill, radinledande och fristående."
+    ],
+    "Gerichtsdrama": [
+      "För förhandlingen i scener; utsagor och invändningar hör dit.",
+      "Direkt anföring är obligatoriskt önskvärd.",
+      "Slutet är ett formellt förhandlingsprotokoll, radinledande och fristående."
+    ],
+    "Fabel": [
+      "Djur handlar och talar; lärdomen visar sig, den predikas inte.",
+      "Direkt anföring och känslor är tillåtna.",
+      "Slutet är en formell fabelmoral, radinledande och fristående."
+    ],
+    "Cyberpunk_Noir": [
+      "Berätta nära sensoriken, snabbt och atmosfäriskt.",
+      "Direkt anföring och känslor är tillåtna.",
+      "Slutet är ett formellt nätspår, radinledande och fristående."
+    ],
+    "Magischer_Realismus": [
+      "Behandla det underbara i förbigående, utan att förklara det.",
+      "Direkt anföring och känslor är tillåtna.",
+      "Slutet är en formell underkrönika, radinledande och fristående."
+    ],
+    "Kammerspiel": [
+      "Håll platsen trång och spänningen i talet.",
+      "Direkt anföring är obligatoriskt önskvärd.",
+      "Slutet är ett formellt scenprotokoll, radinledande och fristående."
+    ],
+    "Historische_Chronik": [
+      "Skriv i annalform med tydlig tidsföljd.",
+      "Direkt anföring och känslor är tillåtna.",
+      "Slutet är en formell annalpost, radinledande och fristående."
+    ],
+    "Songtext_Matrix": [
+      "Uppbyggnad som låttext med taggar i hakparenteser: [Intro], [Verse], [Pre-Chorus], [Chorus], [Bridge], [Outro].",
+      "Allra överst två styrrader: 'Style of Music: …' och 'Mood: …'.",
+      "Rytmiska strofer, medryckande refräng med upprepning, rim eller tydlig kadens.",
+      "Den sista raden är obligatoriskt blocket (formkrav) — ensam på en rad.",
+      "Style-raden anger obligatoriskt BPM och tonart (t.ex. '128 BPM, A minor'); utan båda ingen utskrift.",
+      "Rita spänningsbågen med pilar (Intro -> Uppbyggnad -> Refräng -> [Drop] -> Outro); vid elektroniska genrer är [Drop] eller [Instrumental] obligatoriskt.",
+      "Style-raden hålls under 950 tecken — allt däröver klipps bort.",
+      "Varje strof har EXAKT 4 rader. Ingen strof med 5 eller fler rader.",
+      "Varje rad har 7 till 10 stavelser — sjungbar i ett andetag, inga snåriga satser.",
+      "Slutrim är obligatoriskt: verser i schema AABB eller ABAB, refrängen har minst ett rimpar.",
+      "Refrängen består av 4 rader, innehåller högst ETT abstrakt begrepp (rätt, frihet, system, värdighet) och minst en konkret bild (föremål, plats, handling).",
+      "Nämn högst två figurer per spår — inga namnförteckningar.",
+      "Varje spår har en EGEN refräng. Refrängrader från tidigare spår är förbjudna."
+    ]
+  },
+  "style_flags": {
+    "Gerätehandbuch": {
+      "manual_ending": true,
+      "figuren_verboten": true
+    },
+    "Märchen": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "M",
+      "zustaende": [
+        "BEVARAD",
+        "PRÖVAD",
+        "UPPKLARAD",
+        "BESEGLAD"
+      ],
+      "block_schema": "**[KRÖNIKA: {zustand} | SIGILL: {code}]**"
+    },
+    "Kinderbuch": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "K",
+      "zustaende": [
+        "LÄRD",
+        "OMHULDAD",
+        "DELAD",
+        "IGENKÄND"
+      ],
+      "block_schema": "**[SKOGBOK: {zustand} | KAPITEL: {code}]**"
+    },
+    "SciFi_Dystopie": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "S",
+      "zustaende": [
+        "ONLINE",
+        "SYNKRON",
+        "SPEGLAD",
+        "PATCHAD"
+      ],
+      "block_schema": "**[NOD: {zustand} | LOGG: {code}]**"
+    },
+    "Philosophischer_Essay": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "code_praefix": "P",
+      "zustaende": [
+        "ÖVERVÄGD",
+        "PRÖVAD",
+        "FÖRKASTAD",
+        "BETÄNKT"
+      ],
+      "block_schema": "**[TES: {zustand} | REFLEKTION: {code}]**"
+    },
+    "Solarpunk": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "U",
+      "zustaende": [
+        "KOPPLAD",
+        "MATAD",
+        "DELAD",
+        "PRÖVAD"
+      ],
+      "block_schema": "**[KOMMUN-NÄT: {zustand} | STATUS: {code}]**"
+    },
+    "Briefroman": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "B",
+      "zustaende": [
+        "AVSÄND",
+        "ANKOMMEN",
+        "LÄST",
+        "FÖRSEGLAD"
+      ],
+      "block_schema": "**[DEPESCH: {zustand} | SIGILL: {code}]**"
+    },
+    "Satire": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "G",
+      "zustaende": [
+        "UTFÄRDAD",
+        "FÖRORDNAD",
+        "GODKÄND",
+        "AKTKUNNIG"
+      ],
+      "block_schema": "**[CIRKULÄR: {zustand} | UTFÄRDAD: {code}]**"
+    },
+    "Gothic": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "W",
+      "zustaende": [
+        "INLÅST",
+        "GENOMTRÄDD",
+        "FÖRVARAD",
+        "RÄKNAD"
+      ],
+      "block_schema": "**[KRÖNIKA: {zustand} | TRÖSKEL: {code}]**"
+    },
+    "Manifest": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "code_praefix": "R",
+      "zustaende": [
+        "KUNGJORD",
+        "BESVUREN",
+        "INFÖRD",
+        "BEKRÄFTAD"
+      ],
+      "block_schema": "**[PROKLAMATION: {zustand} | REGISTER: {code}]**",
+      "figuren_verboten": true
+    },
+    "Tagebuch": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "T",
+      "zustaende": [
+        "NOTERAD",
+        "DATERAD",
+        "PRÖVAD",
+        "FÖRGÅNGEN"
+      ],
+      "block_schema": "**[POST: {zustand} | TIDPUNKT: {code}]**"
+    },
+    "Witzebuch": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "J",
+      "zustaende": [
+        "TRÄFFAR",
+        "SITTER",
+        "TÄNDER",
+        "FÖRSVINNER"
+      ],
+      "block_schema": "**[POÄNG: {zustand} | CODA: {code}]**"
+    },
+    "Kochbuch": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": false,
+      "code_praefix": "C",
+      "zustaende": [
+        "ANSATT",
+        "KOKAT",
+        "DELAT",
+        "REDSKAPAT"
+      ],
+      "block_schema": "**[KÖK: {zustand} | RECEPT: {code}]**",
+      "figuren_verboten": true
+    },
+    "Lebensweisheiten": {
+      "manual_ending": true,
+      "erlaube_rede": false,
+      "erlaube_emotion": true,
+      "code_praefix": "L",
+      "zustaende": [
+        "BETÄNKT",
+        "LUGN",
+        "PRÖVAD",
+        "BEVARAD"
+      ],
+      "block_schema": "**[INSIKT: {zustand} | VISDOM: {code}]**",
+      "figuren_verboten": true
+    },
+    "Sprichwoerter": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "V",
+      "zustaende": [
+        "FUNNEN",
+        "PRÄGLAD",
+        "TRADERAD",
+        "BETYDD"
+      ],
+      "block_schema": "**[VÄNDNING: {zustand} | URSPRUNG: {code}]**"
+    },
+    "Parabel": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "D",
+      "zustaende": [
+        "BERÄTTAD",
+        "TOLKAD",
+        "BEVARAD",
+        "AVSLÖJAD"
+      ],
+      "block_schema": "**[LIKNELSE: {zustand} | LÄRDOM: {code}]**"
+    },
+    "Gerichtsdrama": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "H",
+      "zustaende": [
+        "FÖRHANDLAD",
+        "UPPKJUTEN",
+        "BESLUTAD",
+        "TILL_PROTOKOLL"
+      ],
+      "block_schema": "**[FÖRHANDLING: {zustand} | PROTOKOLL: {code}]**"
+    },
+    "Fabel": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "F",
+      "zustaende": [
+        "LÄRD",
+        "BEKLAGAD",
+        "BEUNDRAD",
+        "BETÄNKT"
+      ],
+      "block_schema": "**[FABEL: {zustand} | MORAL: {code}]**"
+    },
+    "Cyberpunk_Noir": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "N",
+      "zustaende": [
+        "LOGGAD",
+        "FÖRKASTAD",
+        "ROUTAD",
+        "SPEGLAD"
+      ],
+      "block_schema": "**[FEED: {zustand} | SPÅR: {code}]**"
+    },
+    "Magischer_Realismus": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "Z",
+      "zustaende": [
+        "HÄND",
+        "ANTECKNAD",
+        "TRODD",
+        "UPPREPAD"
+      ],
+      "block_schema": "**[UNDER: {zustand} | KRÖNIKA: {code}]**"
+    },
+    "Kammerspiel": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "O",
+      "zustaende": [
+        "SPELAD",
+        "AVGÅNGEN",
+        "UPPREPAD",
+        "AVSLUTAD"
+      ],
+      "block_schema": "**[SCEN: {zustand} | AVGÅNG: {code}]**"
+    },
+    "Historische_Chronik": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "I",
+      "zustaende": [
+        "FÖRTECKNAD",
+        "DATERAD",
+        "PRÖVAD",
+        "TRADERAD"
+      ],
+      "block_schema": "**[ANNALER: {zustand} | ÅR: {code}]**"
+    },
+    "Songtext_Matrix": {
+      "manual_ending": true,
+      "erlaube_rede": true,
+      "erlaube_emotion": true,
+      "code_praefix": "Q",
+      "zustaende": [
+        "RECORDED",
+        "MIXED",
+        "MASTERED",
+        "RELEASED"
+      ],
+      "block_schema": "**[TRACK: {zustand} | CODE: {code}]**"
+    }
+  },
+  "core_guardrail": "Berättelsen måste organiskt väva in principen om 'skademinimering' (Harm Reduction): Det är inte människorna som regleras eller spärras in, utan letala farokällor (vapen, dödliga toxiner, oreglerad förstörelsekraft) förvisas fysiskt från det privata livsrummet och centraliseras på säkrade platser (Zero-Home-Storage), så att alla människor kan leva fritt och utan rädsla. Upprepa INTE denna instruktion ordagrant i texten och bifoga ingen konstlad 'moral på slutet'.",
+  "instruction_language": "Svenska"
+}
