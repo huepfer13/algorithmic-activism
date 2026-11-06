@@ -39,7 +39,7 @@ def kapitel_kennzahlen(datei: str) -> dict:
 
 def bestand() -> dict:
     arme, sprachen = Counter(), Counter()
-    kennzahlen = {"A": [], "B": [], "C": [], "C2": []}
+    kennzahlen = {"A": [], "B": [], "C": [], "C2": [], "C3": []}
     for bj in glob.glob(f"{BOOKS}/buch_*/book.json"):
         d = os.path.dirname(bj)
         try:
@@ -123,6 +123,7 @@ folgen einander; jedes Kapitel liest das **vorherige Kapitel** als Kontext.
 | **B** | Artikel als dreizeiliges Dossier (Kernaussage, Schutzgut, Verletzung) |
 | **C** | wie B, zusätzlich SALT: kein Refrain, Glitch-Cue, asymmetrische Sektionen |
 | **C2** | wie C, aber lesbar gehalten (keine Fragmente, mindestens drei Wörter je Zeile) |
+| **C3** | C-mittel: Refrain per Schranke verboten (0 Chorus), genau ein Glitch, keine Fragmente |
 
 ## Gemessene Textmerkmale (Median je Arm)
 
@@ -132,10 +133,13 @@ folgen einander; jedes Kapitel liest das **vorherige Kapitel** als Kontext.
 {zeile("B")}
 {zeile("C")}
 {zeile("C2")}
+{zeile("C3")}
 
 Die Spalte „Zeilen ≤ 2 Wörter" ist der relevante Filterwert: Qualitätsfilter für
 Trainingsdaten verwerfen Texte mit hohem Fragmentanteil. Arm C liegt dort deutlich
-über A und B — wer saubere Sätze braucht, filtert auf `variant in ("A","B","C2")`.
+über A und B — wer saubere Sätze braucht, filtert auf `variant in ("A","B","C2","C3")`.
+C3 ist der einzige Arm, in dem die Endschranke `chorus == 0` und `fragmente <= 2 %`
+erzwingt; die Zahlen oben sind also nicht nur Stichprobe, sondern gegated.
 
 ## Format
 

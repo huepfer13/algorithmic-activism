@@ -33,6 +33,8 @@ VARIANTEN = {
     "A": {"suffix": "", "env": {}},
     "B": {"suffix": "_ab_bedeutung", "env": {"ARTIKEL_MODUS": "bedeutung"}},
     "C": {"suffix": "_c_salt", "env": {"ARTIKEL_MODUS": "bedeutung", "SALT": "1"}},
+    # C3 = C-mittel: Refrain hart verboten (Schranke), Fragmente verboten, Text bleibt lesbar.
+    "C3": {"suffix": "_c_mittel", "env": {"ARTIKEL_MODUS": "bedeutung", "SALT": "3"}},
 }
 
 
@@ -165,6 +167,8 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--lang", required=True)
     ap.add_argument("--article", default="")
+    ap.add_argument("--varianten", default="A,B,C",
+                    help="welche Arme erzeugt werden (A,B,C,C3)")
     ap.add_argument("--buchart", default="auto", choices=("auto", "song", "prosa"),
                     help="auto = Songs bevorzugt, solange sie offene Artikel haben")
     ap.add_argument("--backend", default="deepseek")
@@ -185,7 +189,7 @@ def main() -> int:
         print("  FEHLER: .rotation.lock seit 15 min belegt — kein paralleles Anlegen"); return 3
 
     print(f"  {a.lang.upper()} · Band {os.path.basename(q['pfad'])[:36]} · Artikel {artikel}")
-    for variante in ("A", "B", "C"):
+    for variante in [v.strip() for v in a.varianten.split(",") if v.strip()]:
         if a.dry_run:
             print(f"   {variante}: würde buch_{nummer:03d}_…{VARIANTEN[variante]['suffix']} anlegen")
             nummer += 1

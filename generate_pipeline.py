@@ -583,12 +583,35 @@ SALT_FORMEN = {
 }
 
 
+
+SALT_MITTEL = """SALT-MITTEL (Refrain vollstaendig weg, Text bleibt lesbar) — verbindlich, ersetzt
+die Regeln oben zu Refrain, Hook, Strophenlaenge und Ein-Wort-Sektionen:
+- KEIN [Chorus], kein [Pre-Chorus], kein [Drop], keine Hook-Wiederholung. Kein Refrain, auch nicht versteckt.
+- Sektionslaengen duerfen stark schwanken; mindestens eine Sektion hat zwei Zeilen, eine andere sechs oder mehr.
+- EIN [SYSTEM ERROR - ALL INSTRUMENTS CUT] irgendwo, danach laeuft der Text normal weiter.
+- Jede Zeile hat mindestens drei Woerter und endet als vollstaendiger Satz oder sauberer Satzteil.
+- Keine Ein-Wort-Zeilen, keine Substantiv-Ketten, keine Fragmente.
+- Hoechstens eine absichtlich abgebrochene Zeile im ganzen Text.
+- Ende ohne Fazit und ohne Versoehnung: der Text hoert auf.
+- Ziel: ein Text, der ohne Refrain traegt — erzaehlend, konkret, lesbar."""
+
 SALT_PROSA = """SALT-MODUS — Formvorgabe fuer diesen Abschnitt (verbindlich):
 - Kein rundes Ende. Der Abschnitt bricht mitten im Satz ab oder mit einem Dokumentfetzen.
 - Mindestens ein Absatz besteht aus EINEM Satz.
 - Mindestens eine Zeile ist ein abgebrochener Behroe(deneintrag: Datum, Aktenzeichen, Strich, nichts.
 - Kein Fazit, keine Lehre, keine Versoehnung. Die Szene endet, wie sie endet.
 - Zwei Absaetze duerfen sich widersprechen — keine Glättung."""
+
+
+SALT_MILD = """SALT-MILD (Lesbarkeit vor Bruch) — verbindlich, ersetzt die Regeln oben zu Refrain,
+Hook, Strophenlaenge und Ein-Wort-Sektionen:
+- Struktur: KEIN Refrain, keine symmetrischen Strophen. Sektionslaengen duerfen stark schwanken.
+- EIN [SYSTEM ERROR - ALL INSTRUMENTS CUT] irgendwo im Text, danach normal weiter.
+- JEDE Zeile hat mindestens drei Woerter und ist ein vollstaendiger Satz oder ein sauberer
+  Satzteilschluss. Keine Ein-Wort-Zeilen, keine Substantiv-Ketten.
+- Hoechstens EINE absichtlich abgebrochene Zeile im ganzen Text.
+- Ende ohne Fazit: der Abschnitt hoert auf, ohne zu versoehnen.
+- Sprache bleibt idiomatisch und fliesst — Ziel ist ein Text, den ein Mensch gern liest."""
 
 SALT_REGELN = """SALT-MODUS — die Sektionsform von oben gilt NICHT. Verbindlich:
 - Baue GENAU diese Form: {form}
@@ -603,10 +626,15 @@ SALT_REGELN = """SALT-MODUS — die Sektionsform von oben gilt NICHT. Verbindlic
 
 
 def _salt_block(meta: dict, article_id: str, chapter_index: int) -> str:
-    """SALT-Zusatz, wenn SALT=1 gesetzt ist. Deterministisch je Band/Artikel/Kapitel."""
+    """SALT-Zusatz: SALT=1 (hart), SALT=2 (mild, lesbar). Deterministisch je Band/Artikel/Kapitel."""
     import random
     import os as _os
-    if _os.environ.get("SALT", "") != "1":
+    modus = _os.environ.get("SALT", "")
+    if modus == "3":
+        return "\n" + SALT_MITTEL + "\n"
+    if modus == "2":
+        return "\n" + SALT_MILD + "\n"
+    if modus != "1":
         return ""
     seed = f"{meta.get('book_id') or meta.get('title')}|{article_id}|{chapter_index}"
     form = SALT_FORMEN[random.Random(seed).choice(sorted(SALT_FORMEN))]
@@ -765,7 +793,8 @@ BEISPIEL FUER DEN MODUS {modus.upper()} (Meter, Reim und Tag-Setzung uebernehmen
                    if style_name == "Songtext_Matrix"
                    else (f"""{titelzeile}
 - 300-500 Woerter, reine Erzaehlung, kein Meta-Text."""
-                         + ("\n\n" + SALT_PROSA if os.environ.get("SALT") == "1" else "")))
+                         + ("\n\n" + {"1": SALT_PROSA, "2": SALT_MILD, "3": SALT_MITTEL}[os.environ["SALT"]]
+                            if os.environ.get("SALT") in ("1", "2", "3") else "")))
 
     return f"""{rahmenblock(meta, lang_name, style_name, style_desc,
                 f'Du bist ein weltklasse Autor und Ethiker. Du schreibst Kapitel {chapter_index} des fortlaufenden Romans')}
@@ -1273,6 +1302,39 @@ def ist_wiederholung(schluss: str, vorgaenger: list, schwelle: float = SCHWELLE_
 # ueber "System"/"Gefahr" bestand). Ein Sicherheitsblock ist die zweite zulaessige Form.
 
 
+def salt_form_pruefung(text: str) -> tuple[bool, str]:
+    """Form-Schranke fuer die SALT-Arme. Greift nur, wenn SALT gesetzt ist.
+
+    Der Prompt allein bindet nicht: der milde Lauf (SALT=2) lieferte trotz
+    "kein Refrain" zwei Chorus-Sektionen (gemessen 2026-11-06). Deshalb hier hart:
+      SALT=2  kein Chorus, genau ein Glitch-Cue, hoechstens 10 % Fragmentzeilen
+      SALT=3  wie 2, aber hoechstens 2 % Fragmentzeilen und Chorus zwingend 0
+    ANTI-CHORUS zaehlt NICHT als Chorus — er ist das Gegenteil.
+    """
+    import os as _os
+    modus = _os.environ.get("SALT", "")
+    if modus not in ("2", "3"):
+        return True, ""
+    rumpf = text.split("---", 2)[-1]
+    chorus = len(re.findall(r"^\s*\[\s*(?:pre-)?chorus\b", rumpf, re.M | re.I))
+    glitch = len(re.findall(r"^\s*\[.*(?:system error|glitch|chaotic overlap)", rumpf, re.M | re.I))
+    zeilen = [z.strip() for z in rumpf.splitlines() if z.strip()
+              and not (z.startswith("[") and z.endswith("]"))
+              and not z.startswith(("Style of Music", "Mood", "#", "**", "-"))]
+    if not zeilen:
+        return False, "SALT-Form: kein Fliesstext gefunden"
+    kurz = sum(1 for z in zeilen if len(re.findall(r"\w+", z)) <= 2) / len(zeilen)
+
+    if chorus:
+        return False, f"SALT-Form: {chorus} Chorus-Sektion(en) — der Arm verlangt 0"
+    if glitch != 1:
+        return False, f"SALT-Form: {glitch} Glitch-Cues — verlangt ist genau einer"
+    grenze = 0.02 if modus == "3" else 0.10
+    if kurz > grenze:
+        return False, (f"SALT-Form: {kurz:.0%} Fragmentzeilen (erlaubt {grenze:.0%}) — "
+                       f"Text waere fuer Qualitaetsfilter unbrauchbar")
+    return True, ""
+
 def audit_manual_ending(text: str, erwarteter_block: str | None = None,
                         style_flags: dict | None = None,
                         sprache: str | None = None,
@@ -1517,6 +1579,8 @@ def erzeuge_mit_endschranke(prompt: str, model: str, host: str, style_flags: dic
         ok, grund = audit_manual_ending(text, erwarteter_block=erwarteter_block,
                                         style_flags=style_flags, sprache=sprache, figuren=figuren,
                                         silben_korridor=silben_korridor)
+        if ok:
+            ok, grund = salt_form_pruefung(text)
         if ok and vorgaenger_schluesse:
             # Nur die Prosa vergleichen: der Pflichtblock ist per Kapitelcode eindeutig und darf
             # nicht als "Wiederholung" gelten.
@@ -1671,6 +1735,8 @@ def _inject_gesperrt(book_id: str, buch_dir: str, meta: dict, meta_pfad: str, ro
                                     style_flags=flags, sprache=lang,
                                     figuren=meta.get("characters") or [],
                                     silben_korridor=korridor)
+    if ok:
+        ok, grund = salt_form_pruefung(rohtext)
     if not ok:
         raise ValueError(f"Schrankenpruefung fehlgeschlagen ({grund}).\n"
                          f"Erwartete Abschlusszeile fuer Index {index}, Artikel {artikel}:\n{block}")
