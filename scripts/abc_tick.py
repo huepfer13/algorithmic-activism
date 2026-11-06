@@ -26,6 +26,29 @@ def offene(lang: str) -> int:
     return max(0, 30 - len(abc_lauf.verhandelt(lang)))
 
 
+def committen(nachricht: str) -> str:
+    """Bände und Web-Index committen und pushen.
+
+    Ohne diesen Schritt bleibt der Korpus lokal: der Stunden-Tick erzeugte Bände,
+    die weder auf GitHub noch bei Hugging Face ankamen (gemessen 2026-11-06:
+    17 Bände untracked, HF-Datensatz unverändert). Der alte Kapitel-Runner hat das
+    erledigt; der ist abgeschaltet, seit A/B/C allein läuft.
+    """
+    pfade = ["menschenrechte_books", "web/books.json", "web/api"]
+    subprocess.run(["git", "add", *pfade], cwd=REPO, capture_output=True)
+    status = subprocess.run(["git", "status", "--porcelain"], cwd=REPO, capture_output=True, text=True)
+    if not status.stdout.strip():
+        return "nichts zu committen"
+    c = subprocess.run(["git", "-c", "user.name=agent-runner-xomni",
+                        "-c", "user.email=agent@xomni.local", "commit", "-q", "-m", nachricht],
+                       cwd=REPO, capture_output=True, text=True)
+    if c.returncode != 0:
+        return "Commit fehlgeschlagen: " + (c.stderr or c.stdout).strip()[:80]
+    pu = subprocess.run(["git", "push", "origin", "main"], cwd=REPO, capture_output=True, text=True,
+                        timeout=240)
+    return "committet und gepusht" if pu.returncode == 0 else ("committet, Push fehlgeschlagen: "
+                                                             + (pu.stderr or pu.stdout).strip()[-80:])
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
@@ -54,12 +77,18 @@ def main() -> int:
 
     # Die Sperre hält abc_lauf selbst (.rotation.lock); hier keine zweite,
     # sonst blockiert der Unterprozess gegen den eigenen Elternprozess.
+    bbox = "Triple"
     r = subprocess.run([sys.executable, "scripts/abc_lauf.py", "--lang", lang, "--buchart", buchart],
                        cwd=REPO, capture_output=True, text=True, timeout=3000)
     print(r.stdout.strip()[-800:])
+    mm = __import__("re").search(r"Artikel (art_\d+)", r.stdout)
+    if mm:
+        bbox = mm.group(1)
     if r.returncode != 0:
         print("  FEHLER:", (r.stderr or r.stdout).strip()[-300:])
         return r.returncode
+    print(" ", committen(f"feat(abc): {lang.upper()} {bbox} — A/B/C-Triple"))
+
     os.makedirs(os.path.dirname(STATE), exist_ok=True)
     json.dump({"zuletzt": lang, "buchart": buchart, "zeit": __import__("datetime").datetime.now().isoformat(timespec="seconds")},
               open(STATE, "w", encoding="utf-8"))
