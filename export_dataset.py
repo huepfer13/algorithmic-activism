@@ -18,6 +18,7 @@ except Exception:  # pragma: no cover
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TALES_DIR = os.path.join(BASE_DIR, "menschenrechte_tales")
+BOOKS_DIR = os.path.join(BASE_DIR, "menschenrechte_books")
 OUTPUT_FILE = os.path.join(BASE_DIR, "dataset.jsonl")
 
 
@@ -88,12 +89,34 @@ def first_heading(body, fallback):
     return fallback
 
 
+def _buch_meta(buch_dir: str) -> dict:
+    """book.json des Bandes, einmal je Verzeichnis gelesen."""
+    global _BUCH_CACHE
+    if buch_dir not in _BUCH_CACHE:
+        pfad = os.path.join(buch_dir, "book.json")
+        try:
+            _BUCH_CACHE[buch_dir] = json.load(open(pfad, encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            _BUCH_CACHE[buch_dir] = {}
+    return _BUCH_CACHE[buch_dir]
+
+
+_BUCH_CACHE: dict = {}
+
+
 def main():
     records = []
     skipped = []
-    files = sorted(glob.glob(os.path.join(TALES_DIR, "**", "*.md"), recursive=True))
+    # Zwei Korpora: Erzählungen (Tales) und Buchkapitel inklusive Songtext-Matrix.
+    # Nur Tales zu exportieren hiess: 19 Sprachen und die A/B/C-Arme fehlten im Datensatz.
+    quellen = [(TALES_DIR, "tales"), (BOOKS_DIR, "books")]
+    files = []
+    for verzeichnis, korpus in quellen:
+        for pfad in sorted(glob.glob(os.path.join(verzeichnis, "**", "*.md"), recursive=True)):
+            files.append((pfad, korpus))
 
-    for path in files:
+    for pfad, korpus in files:
+        path = pfad
         with open(path, "r", encoding="utf-8") as f:
             content = f.read()
 
@@ -107,6 +130,7 @@ def main():
         title = meta.get("title") or first_heading(body, os.path.splitext(os.path.basename(path))[0])
 
         meta = dict(meta)  # Kopie, Original unangetastet
+        meta["corpus"] = korpus
         meta.setdefault("title", title)
         meta.setdefault("language", lang)
         if not had_fm:
@@ -124,10 +148,20 @@ def main():
             f"im Stil {style} unter strikter Wahrung der Schadensminimierung."
         )
 
+        # A/B/C-Arm aus book.json übernehmen: das Kapitel-Frontmatter kennt ihn nicht,
+        # ohne diese Felder ist der Datensatz nicht filterbar (Messreihe 2026-11-06).
+        buch_meta = _buch_meta(os.path.dirname(path))
+        for feld in ("variant", "article_mode", "form", "song_mode", "song_genre"):
+            wert = buch_meta.get(feld)
+            if wert is not None:
+                meta[feld] = wert
+
         records.append({
             "instruction": instruction,
             "input": article,
             "output": body,
+            "variant": meta.get("variant"),
+            "article_mode": meta.get("article_mode"),
             "meta": meta,
         })
 
