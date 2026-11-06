@@ -561,6 +561,50 @@ def _genre_profil(meta: dict, chapter_index: int = 0) -> str:
     return "\n" + "\n".join(teile) if teile else ""
 
 
+
+# --- SALT: asymmetrische Songformen (Messreihe 2026-11-06) -------------------
+# Der Standard-Modus baut Intro/Verse/Pre-Chorus/Chorus/Bridge/Drop/Outro. Gemessen über
+# 21 Songs: die Sektionsfolge variierte, aber das Gerüst (Refrain, 4-Zeilen-Strophen,
+# gleichmäßiger Metrenfluss) blieb. SALT ersetzt das Gerüst durch eine von vier Formen,
+# deterministisch aus Band+Artikel+Kapitel gewählt.
+SALT_FORMEN = {
+    "monolog": """[INTRO - ABRUPT SILENCE] (nur Atem, keine Musik) → [MONOLOGUE - CLOSE MIC] →
+[MONOLOGUE CONTINUED] → [ANTI-CHORUS - MUSIC DROPS OUT, ONE NOTE] → [MONOLOGUE - FRAGMENTS] →
+[OUTRO - TAPE-MANGLE] (bricht ab, kein Ausklang)""",
+    "fragmente": """[INTRO - SYSTEM ERROR - ALL INSTRUMENTS CUT] → [FRAGMENTS - ONE WORD PER LINE] →
+[ANTI-CHORUS - SILENCE AND A SINGLE WHISPER] → [INTERROGATION - PROTOCOL, NO MUSIC] →
+[FRAGMENTS - TWO WORDS PER LINE] → [OUTRO - ABRUPT SILENCE]""",
+    "verhoer": """[INTRO - CHAIR ON CONCRETE] → [INTERROGATION - QUESTION/ANSWER, NO MUSIC] →
+[BROKEN VOICE] → [ANTI-CHORUS - NUR EIN CELLO] → [INTERROGATION - REPETITION] →
+[OUTRO - TAPE-STOP]""",
+    "kollektiv": """[INTRO - CHAOTIC OVERLAP - THREE VOICES AT ONCE] → [VOICE 1] / [VOICE 2] /
+[VOICE 3] im Wechsel → [ANTI-CHORUS - ALLE SCHWEIGEN] → [CHAOTIC OVERLAP - UNREADABLE] →
+[OUTRO - ONE VOICE REMAINS]""",
+}
+
+SALT_REGELN = """SALT-MODUS — die Sektionsform von oben gilt NICHT. Verbindlich:
+- Baue GENAU diese Form: {form}
+- Kein [Chorus], kein [Pre-Chorus], kein [Drop]. Der Refrain entfaellt.
+- KEIN Endreim-Zwang. Reime sind erlaubt, aber nicht gesucht; wo sie sich aufdrängen, brich sie.
+- Strophen sind NICHT gleich lang. Mindestens eine Sektion hat 2 Zeilen, eine andere 7 oder mehr.
+- Pflicht: mindestens eine Zeile, die grammatisch abbricht (Satz ohne Praedikat, oder Praedikat ohne Subjekt).
+- Pflicht: eine Sektion besteht aus 3 bis 6 Ein-Wort-Zeilen, jede mit Punkt — "Mauer. Draht. Relais. Nichts."
+- Pflicht: ein [SYSTEM ERROR - ALL INSTRUMENTS CUT] mitten im Text, danach geht es weiter, als waere nichts.
+- Hoechstens eine wiederkehrende Kurzzeile, maximal zweimal.
+- Keine Erklaerung, kein Meta-Kommentar, kein versoehnlicher Schluss."""
+
+
+def _salt_block(meta: dict, article_id: str, chapter_index: int) -> str:
+    """SALT-Zusatz, wenn SALT=1 gesetzt ist. Deterministisch je Band/Artikel/Kapitel."""
+    import random
+    import os as _os
+    if _os.environ.get("SALT", "") != "1":
+        return ""
+    seed = f"{meta.get('book_id') or meta.get('title')}|{article_id}|{chapter_index}"
+    form = SALT_FORMEN[random.Random(seed).choice(sorted(SALT_FORMEN))]
+    return "\n" + SALT_REGELN.format(form=form) + "\n"
+
+
 def build_chapter_prompt(meta: dict, lang_name: str, style_name: str, style_desc: str, style_rules: list,
                          core_rule: str, chapter_index: int, article_id: str, article_text: str,
                          previous_text: str, previous_label: str) -> str:
@@ -706,7 +750,7 @@ turned the struggle to a blessing, got a whole lot to prove (to prove).""",
 
     format_block = (f"""{LYRIK_BASIS}
 {LYRIK_MODI.get(modus, LYRIK_MODI["reim"])}
-{_genre_profil(meta, chapter_index)}
+{_genre_profil(meta, chapter_index)}{_salt_block(meta, article_id, chapter_index)}
 
 BEISPIEL FUER DEN MODUS {modus.upper()} (Meter, Reim und Tag-Setzung uebernehmen — NICHT den Inhalt):
 {ANKER.get(modus, ANKER["reim"])}"""
@@ -1750,8 +1794,21 @@ def _append_chapter_gesperrt(book_id: str | None = None, lang: str | None = None
         raise RuntimeError(f"Alle Artikel in '{book_id}' verhandelt — neues Buch per --mode new-book.")
 
     art = load_article(artikel, sprache)
+    # Betriebsart des Artikel-Inputs. "bedeutung" ersetzt den Gesetzestext durch ein
+    # semantisches Dossier (Kernaussage, Schutzgut, typische Verletzung) — das Modell
+    # bekommt die Bedeutung, nicht den Wortlaut (Messreihe 2026-11-06).
+    art_body = art["body"]
+    if os.environ.get("ARTIKEL_MODUS", "").lower() == "bedeutung":
+        dossier = os.path.join(ARTICLES_DIR, sprache.lower(), "bedeutung", f"{artikel}.md")
+        if os.path.exists(dossier):
+            art_body = open(dossier, encoding="utf-8").read().strip()
+            print(f"[Kapitel {index}] Artikel-Input: BEDEUTUNG ({len(art_body)} Zeichen, "
+                  f"Klartext {len(art['body'])} Zeichen)", flush=True)
+        else:
+            print(f"[Kapitel {index}] WARNUNG: kein Bedeutungs-Dossier fuer {artikel} — Klartext",
+                  flush=True)
     prompt = build_chapter_prompt(meta, lang_name, style_name, style_desc, style_rules, core_rule,
-                                  index, artikel, art["body"], vorgaenger, vorherige)
+                                  index, artikel, art_body, vorgaenger, vorherige)
     print(f"[Kapitel {index}] Buch '{book_id}' | Artikel {artikel} | Vorgaenger {vorherige}", flush=True)
     # Schlussabsaetze der Vorkapitel — die Schranke braucht ein Gedaechtnis ueber Kapitel hinweg,
     # sonst passiert derselbe Mustersatz jede Runde erneut (belegt 2026-10-12, Kapitel 3 == 4).

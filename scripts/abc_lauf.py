@@ -1,0 +1,134 @@
+#!/usr/bin/env python3
+"""Ein Artikel, drei Varianten — der Standardlauf.
+
+Für eine Sprache und einen Artikel entstehen drei Bände mit identischem Meta und
+identischem Prolog:
+
+  A  Wortlaut    — Artikel als Gesetzestext        (variant: "A")
+  B  Bedeutung   — Artikel als Dossier (3 Zeilen)  (variant: "B")
+  C  SALT        — Dossier + asymmetrische Form    (variant: "C")
+
+`book.json` trägt danach `variant` und `article_mode`, damit der Datensatz-Export
+die drei Arme filtern kann, ohne am Ordnernamen zu raten.
+
+Aufruf:
+  python3 scripts/abc_lauf.py --lang es                 # nächster freier Artikel
+  python3 scripts/abc_lauf.py --lang es --article art_05
+  python3 scripts/abc_lauf.py --lang es --dry-run
+"""
+import argparse
+import glob
+import json
+import os
+import re
+import shutil
+import subprocess
+import sys
+
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, REPO)
+BOOKS = os.path.join(REPO, "menschenrechte_books")
+
+VARIANTEN = {
+    "A": {"suffix": "", "env": {}},
+    "B": {"suffix": "_ab_bedeutung", "env": {"ARTIKEL_MODUS": "bedeutung"}},
+    "C": {"suffix": "_c_salt", "env": {"ARTIKEL_MODUS": "bedeutung", "SALT": "1"}},
+}
+
+
+def quelle(lang: str) -> dict:
+    """Buch-Meta und Prolog der Sprache: erster Band mit Songtext-Stil, ohne Zwilling."""
+    for bj in sorted(glob.glob(f"{BOOKS}/buch_*/book.json")):
+        try:
+            m = json.load(open(bj, encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        name = os.path.basename(os.path.dirname(bj))
+        if (m.get("language") or "").lower() != lang or m.get("style") != "Songtext_Matrix":
+            continue
+        if name.endswith(tuple(v["suffix"] for v in VARIANTEN.values() if v["suffix"])):
+            continue
+        return {"pfad": os.path.dirname(bj), "meta": m}
+    return {}
+
+
+def offene_artikel(lang: str, meta: dict) -> str:
+    """Nächster Artikel, den A noch nicht verhandelt hat."""
+    covered = set(meta.get("covered_articles") or [])
+    for i in range(1, 31):
+        kennung = f"art_{i:02d}"
+        if kennung not in covered:
+            return kennung
+    return ""
+
+
+def naechste_nummer() -> int:
+    nummern = [int(m.group(1)) for p in glob.glob(f"{BOOKS}/buch_*")
+               if (m := re.match(r"buch_(\d+)", os.path.basename(p)))]
+    return (max(nummern) + 1) if nummern else 1
+
+
+def band_anlegen(q: dict, variante: str, nummer: int) -> str:
+    meta = json.loads(json.dumps(q["meta"]))
+    slug = re.sub(r"[^a-z0-9]+", "_", (meta.get("title") or "band").lower())[:24].strip("_")
+    slug = slug or (meta.get("language") or "band").lower()
+    neu_id = f"buch_{nummer:03d}_{slug}{VARIANTEN[variante]['suffix']}"
+    ziel = os.path.join(BOOKS, neu_id)
+    os.makedirs(ziel, exist_ok=True)
+    meta.update({
+        "book_id": neu_id, "covered_articles": [], "current_chapter": 0,
+        "variant": variante,
+        "article_mode": "bedeutung" if VARIANTEN[variante]["env"].get("ARTIKEL_MODUS") else "text",
+        "form": "salt" if variante == "C" else "standard",
+    })
+    json.dump(meta, open(os.path.join(ziel, "book.json"), "w", encoding="utf-8"),
+              ensure_ascii=False, indent=2)
+    prolog = os.path.join(q["pfad"], "00_prolog.md")
+    if os.path.exists(prolog):
+        shutil.copy2(prolog, os.path.join(ziel, "00_prolog.md"))
+    return ziel
+
+
+def erzeuge(lang: str, band: str, artikel: str, variante: str, backend: str, model: str) -> tuple:
+    env = dict(os.environ, **VARIANTEN[variante]["env"])
+    r = subprocess.run([sys.executable, "generate_pipeline.py", "--mode", "append-chapter",
+                        "--lang", lang.upper(), "--book-id", os.path.basename(band),
+                        "--article", artikel, "--backend", backend, "--model", model],
+                       cwd=REPO, env=env, capture_output=True, text=True, timeout=900)
+    kap = sorted(glob.glob(f"{band}/*_art_*.md"))
+    zeilen = [z for z in (r.stdout + r.stderr).splitlines()
+              if "Versuch" in z or "Artikel-Input" in z or "angehaengt" in z]
+    return (kap[-1] if kap else ""), (zeilen[-1][:70] if zeilen else f"rc={r.returncode}")
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--lang", required=True)
+    ap.add_argument("--article", default="")
+    ap.add_argument("--backend", default="deepseek")
+    ap.add_argument("--model", default="deepseek-chat")
+    ap.add_argument("--dry-run", action="store_true")
+    a = ap.parse_args()
+
+    q = quelle(a.lang)
+    if not q:
+        print(f"  FEHLER: keine Songtext-Band für '{a.lang}'"); return 2
+    artikel = a.article or offene_artikel(a.lang, q["meta"])
+    if not artikel:
+        print(f"  {a.lang}: alle 30 Artikel verhandelt"); return 0
+    nummer = naechste_nummer()
+
+    print(f"  {a.lang.upper()} · Band {os.path.basename(q['pfad'])[:36]} · Artikel {artikel}")
+    for variante in ("A", "B", "C"):
+        if a.dry_run:
+            print(f"   {variante}: würde buch_{nummer:03d}_…{VARIANTEN[variante]['suffix']} anlegen")
+            nummer += 1
+            continue
+        band = band_anlegen(q, variante, nummer); nummer += 1
+        datei, info = erzeuge(a.lang, band, artikel, variante, a.backend, a.model)
+        print(f"   {variante}: {os.path.basename(band)[:44]:46} {'ok' if datei else 'FEHLER'} · {info}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
