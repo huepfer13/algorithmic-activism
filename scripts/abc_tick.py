@@ -13,6 +13,7 @@ import json
 import os
 import subprocess
 import sys
+import time
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BOOKS = os.path.join(REPO, "menschenrechte_books")
@@ -24,6 +25,26 @@ def offene(lang: str) -> int:
     sys.path.insert(0, os.path.join(REPO, "scripts"))
     import abc_lauf
     return max(0, 30 - len(abc_lauf.verhandelt(lang)))
+
+
+def laufsuffix(variante: str) -> str:
+    """Verzeichnis-Suffix eines Arms — eine Quelle: abc_lauf.VARIANTEN."""
+    sys.path.insert(0, os.path.join(REPO, "scripts"))
+    import abc_lauf
+    return abc_lauf.VARIANTEN.get(variante, {}).get("suffix", "")
+
+
+def gerissene_kapitel(varianten: str, seit: float) -> list:
+    """Kapitel ohne bestandene Endschranke, die seit `seit` entstanden sind."""
+    treffer = []
+    for variante in [v.strip() for v in varianten.split(",") if v.strip()]:
+        for d in glob.glob(f"{REPO}/menschenrechte_books/buch_*{laufsuffix(variante)}"):
+            if os.path.getmtime(d) < seit:
+                continue
+            for f in glob.glob(f"{d}/*_art_*.md"):
+                if "manual_ending_ok: true" not in open(f, encoding="utf-8").read():
+                    treffer.append(os.path.basename(f))
+    return treffer
 
 
 def committen(nachricht: str) -> str:
@@ -62,6 +83,8 @@ def committen(nachricht: str) -> str:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
+    ap.add_argument("--varianten", default="C3",
+                    help="Arme je Lauf (Standard C3 = C-mittel mit harter Formschranke)")
     ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args()
 
@@ -79,17 +102,20 @@ def main() -> int:
     # Abwechselnd Song- und Prosaband: das Konzept gilt für alle Bücher, Songs haben
     # nur Vorrang, weil dort die Struktur (SALT) am stärksten greift.
     buchart = "prosa" if zustand.get("buchart") == "song" else "song"
-    print(f"  Sprache: {lang} ({max_offen} Artikel offen) · Buchart {buchart} · Kandidaten {len(kandidaten)}")
+    print(f"  Sprache: {lang} ({max_offen} Artikel offen) · Buchart {buchart} · "
+          f"Arme {a.varianten} · Kandidaten {len(kandidaten)}")
 
     if a.dry_run:
         subprocess.run([sys.executable, "scripts/abc_lauf.py", "--lang", lang, "--buchart", buchart,
-                        "--dry-run"], cwd=REPO)
+                        "--varianten", a.varianten, "--dry-run"], cwd=REPO)
         return 0
 
     # Die Sperre hält abc_lauf selbst (.rotation.lock); hier keine zweite,
     # sonst blockiert der Unterprozess gegen den eigenen Elternprozess.
+    start_zeit = time.time()
     bbox = "Triple"
-    r = subprocess.run([sys.executable, "scripts/abc_lauf.py", "--lang", lang, "--buchart", buchart],
+    r = subprocess.run([sys.executable, "scripts/abc_lauf.py", "--lang", lang, "--buchart", buchart,
+                        "--varianten", a.varianten],
                        cwd=REPO, capture_output=True, text=True, timeout=3000)
     print(r.stdout.strip()[-800:])
     mm = __import__("re").search(r"Artikel (art_\d+)", r.stdout)
@@ -98,7 +124,14 @@ def main() -> int:
     if r.returncode != 0:
         print("  FEHLER:", (r.stderr or r.stdout).strip()[-300:])
         return r.returncode
-    print(" ", committen(f"feat(abc): {lang.upper()} {bbox} — A/B/C-Triple"))
+    # Gerissene Schranke ZUERST pruefen: ein Fallback-Kapitel darf nicht in den Korpus.
+    gerissen = gerissene_kapitel(a.varianten, start_zeit)
+    if gerissen:
+        print(f"  SCHRANKE GERISSEN: {len(gerissen)} Kapitel ohne bestandene Pruefung — "
+              f"{gerissen[:2]}")
+        print("  Nicht committet. Exit 4 loest algorithmic-alert@ aus.")
+        return 4
+    print(" ", committen(f"feat(abc): {lang.upper()} {bbox} — Arm {a.varianten}"))
 
     os.makedirs(os.path.dirname(STATE), exist_ok=True)
     json.dump({"zuletzt": lang, "buchart": buchart, "zeit": __import__("datetime").datetime.now().isoformat(timespec="seconds")},

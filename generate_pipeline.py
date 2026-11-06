@@ -1302,7 +1302,7 @@ def ist_wiederholung(schluss: str, vorgaenger: list, schwelle: float = SCHWELLE_
 # ueber "System"/"Gefahr" bestand). Ein Sicherheitsblock ist die zweite zulaessige Form.
 
 
-def salt_form_pruefung(text: str) -> tuple[bool, str]:
+def salt_form_pruefung(text: str, sprache: str = "") -> tuple[bool, str]:
     """Form-Schranke fuer die SALT-Arme. Greift nur, wenn SALT gesetzt ist.
 
     Der Prompt allein bindet nicht: der milde Lauf (SALT=2) lieferte trotz
@@ -1323,7 +1323,15 @@ def salt_form_pruefung(text: str) -> tuple[bool, str]:
               and not z.startswith(("Style of Music", "Mood", "#", "**", "-"))]
     if not zeilen:
         return False, "SALT-Form: kein Fliesstext gefunden"
-    kurz = sum(1 for z in zeilen if len(re.findall(r"\w+", z)) <= 2) / len(zeilen)
+    # CJK/Hangul kennen keine Wortgrenzen: "\w+" zaehlt dort fast nichts, jede Zeile gaelte
+    # als Fragment. Gemessen 2026-11-06: japanisches Kapitel mit 30 von 31 Zeilen unter der
+    # Wortgrenze, obwohl der Text vollstaendige Saetze enthielt. Deshalb zeichenbasiert.
+    schrift = (sprache or "").upper() in ("ZH", "JA", "KO", "TH")
+    def zu_kurz(z: str) -> bool:
+        if schrift:
+            return len(re.findall(r"[^\W\d_]", z)) <= 6
+        return len(re.findall(r"\w+", z)) <= 2
+    kurz = sum(1 for z in zeilen if zu_kurz(z)) / len(zeilen)
 
     if chorus:
         return False, f"SALT-Form: {chorus} Chorus-Sektion(en) — der Arm verlangt 0"
@@ -1580,7 +1588,7 @@ def erzeuge_mit_endschranke(prompt: str, model: str, host: str, style_flags: dic
                                         style_flags=style_flags, sprache=sprache, figuren=figuren,
                                         silben_korridor=silben_korridor)
         if ok:
-            ok, grund = salt_form_pruefung(text)
+            ok, grund = salt_form_pruefung(text, sprache or "")
         if ok and vorgaenger_schluesse:
             # Nur die Prosa vergleichen: der Pflichtblock ist per Kapitelcode eindeutig und darf
             # nicht als "Wiederholung" gelten.
@@ -1736,7 +1744,7 @@ def _inject_gesperrt(book_id: str, buch_dir: str, meta: dict, meta_pfad: str, ro
                                     figuren=meta.get("characters") or [],
                                     silben_korridor=korridor)
     if ok:
-        ok, grund = salt_form_pruefung(rohtext)
+        ok, grund = salt_form_pruefung(rohtext, lang or "")
     if not ok:
         raise ValueError(f"Schrankenpruefung fehlgeschlagen ({grund}).\n"
                          f"Erwartete Abschlusszeile fuer Index {index}, Artikel {artikel}:\n{block}")
