@@ -18,6 +18,7 @@ import os
 import re
 import sys
 from collections import Counter, defaultdict
+from datetime import date
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BOOKS = os.path.join(REPO, "menschenrechte_books")
@@ -65,21 +66,27 @@ def block(z: dict) -> str:
     varianten = z["varianten"]
     b_gesamt = sum(varianten.values()) or 1
     fig5 = sum(1 for n in z["figuren"] if n == 5)
-    zonen_top = z["zonen"].most_common(1)
+    zonen_top = Counter(z["zonen"]).most_common(1)
     zonen_gesamt = sum(z["zonen"].values()) or 1
+
+    gesamt_baende = sum(v["baende"] for v in z["sprachen"].values())
+    zeichen = f"{z['zeichen']:,}".replace(",", ".")
+    zonen_zeile = (f"* Häufigste Stil-Phrase: `{zonen_top[0][0]}` in "
+                   f"{zonen_top[0][1] / zonen_gesamt:.0%} der Zuordnungen"
+                   if zonen_top else "* Häufigste Stil-Phrase: keine Daten")
 
     zeilen = [START,
               "### Live-Kennzahlen des Korpus",
               "",
-              f"*Generiert aus dem Bestand, nicht geschätzt — zuletzt: {__import__('datetime').date.today().isoformat()}*",
+              f"*Generiert aus dem Bestand, nicht geschätzt — zuletzt: {date.today().isoformat()}*",
               "",
-              f"| | |",
-              f"|---|---:|",
-              f"| Bände | {sum(v['baende'] for v in z['sprachen'].values())} |",
+              "| Kennzahl | Wert |",
+              "|---|---:|",
+              f"| Bände | {gesamt_baende} |",
               f"| Kapitel | {gesamt_kap} |",
               f"| Artikel-Abdeckung (Summe über Sprachen) | {gesamt_art} / {ZIEL * len(z['sprachen'])} |",
               f"| Sprachen | {len(z['sprachen'])} |",
-              f"| Zeichen im Korpus | {z['zeichen']:,} |".replace(",", "."),
+              f"| Zeichen im Korpus | {zeichen} |",
               "",
               "**Abdeckung je Sprache** (Kapitel / Artikel von 30)",
               "",
@@ -98,8 +105,7 @@ def block(z: dict) -> str:
     zeilen += ["",
                "**Diversität** (je niedriger der erste Wert, desto weniger Schablone)",
                "",
-               f"* Häufigste Stil-Phrase: `{zonen_top[0][0]}` in {zonen_top[0][1] / zonen_gesamt:.0%} der Zuordnungen"
-               if zonen_top else "* Häufigste Stil-Phrase: keine Daten",
+               zonen_zeile,
                f"* Bände mit genau 5 Figuren: {fig5} von {len(z['figuren'])} "
                f"({fig5 / max(len(z['figuren']), 1):.0%})",
                "", ENDE]
