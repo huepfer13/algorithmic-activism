@@ -175,7 +175,7 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 
 *Generiert aus dem Bestand, nicht geschätzt — zuletzt: 2026-11-06*
 
-| | |
+| Kennzahl | Wert |
 |---|---:|
 | Bände | 295 |
 | Kapitel | 721 |
@@ -215,6 +215,28 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | A2 | 5 | 2% |
 | B | 25 | 8% |
 | C | 25 | 8% |
+
+**Stil-Verteilung** (Stil ist je Band fest; innerhalb eines Bandes wechselt er nicht)
+
+| Stil | Bände |
+|---|---:|
+| Songtext_Matrix | 77 |
+| Satire | 9 |
+| Fable | 8 |
+| Parabel | 6 |
+| Fábula | 6 |
+| Sátira | 6 |
+| Crónica_Histórica | 6 |
+| Parábola | 6 |
+| Drama_Judicial | 6 |
+| Distopia_SciFi | 6 |
+
+* 75 verschiedene Stile im Bestand · 26 Bände mit mindestens 10 Kapiteln
+
+**Ketten-Tiefe** (jedes Kapitel liest genau das VORHERIGE Kapitel, nicht die ganze Historie)
+
+* Kapitel je Band: Median 0 · Maximum 28
+* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3379 Zeichen (~845 Tokens)
 
 **Diversität** (je niedriger der erste Wert, desto weniger Schablone)
 

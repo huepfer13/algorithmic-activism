@@ -18,6 +18,7 @@ import os
 import re
 import sys
 from collections import Counter, defaultdict
+import statistics
 from datetime import date
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -34,6 +35,8 @@ def bestand() -> dict:
     varianten = Counter()
     figuren = []
     zonen = Counter()
+    stile = Counter()
+    ketten = []                     # Kapitel je Band — Tiefe der Volltext-Kette
     zeichen = 0
 
     for bj in sorted(glob.glob(f"{BOOKS}/buch_*/book.json")):
@@ -48,6 +51,8 @@ def bestand() -> dict:
         sprachen[lang]["kapitel"] += len(kap)
         sprachen[lang]["artikel"].update(m.get("covered_articles") or [])
         varianten[m.get("variant") or "A"] += 1
+        stile[m.get("style") or "?"] += 1
+        ketten.append(len(kap))
         if m.get("characters"):
             figuren.append(len(m["characters"]))
         for f in kap:
@@ -57,7 +62,7 @@ def bestand() -> dict:
                 zonen[treffer.strip()] += 1
 
     return {"sprachen": sprachen, "varianten": varianten, "figuren": figuren,
-            "zonen": zonen, "zeichen": zeichen}
+            "zonen": zonen, "zeichen": zeichen, "stile": stile, "ketten": ketten}
 
 
 def block(z: dict) -> str:
@@ -65,6 +70,8 @@ def block(z: dict) -> str:
     gesamt_art = sum(len(v["artikel"]) for v in z["sprachen"].values())
     varianten = z["varianten"]
     b_gesamt = sum(varianten.values()) or 1
+    stile = Counter(z["stile"])          # dict oder Counter akzeptieren
+    ketten = z["ketten"] or [0]
     fig5 = sum(1 for n in z["figuren"] if n == 5)
     zonen_top = Counter(z["zonen"]).most_common(1)
     zonen_gesamt = sum(z["zonen"].values()) or 1
@@ -103,6 +110,22 @@ def block(z: dict) -> str:
     for var, n in sorted(varianten.items()):
         zeilen.append(f"| {var} | {n} | {n / b_gesamt:.0%} |")
     zeilen += ["",
+               "**Stil-Verteilung** (Stil ist je Band fest; innerhalb eines Bandes wechselt er nicht)",
+               "",
+               "| Stil | Bände |",
+               "|---|---:|"]
+    for stil, n in stile.most_common(10):
+        zeilen.append(f"| {stil} | {n} |")
+    zeilen += ["",
+               f"* {len(stile)} verschiedene Stile im Bestand"
+               f" · {sum(1 for k in ketten if k >= 10)} Bände mit mindestens 10 Kapiteln",
+               "",
+               "**Ketten-Tiefe** (jedes Kapitel liest genau das VORHERIGE Kapitel, nicht die ganze Historie)",
+               "",
+               f"* Kapitel je Band: Median {statistics.median(ketten):.0f} · Maximum {max(ketten)}",
+               f"* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel "
+               f"{(z['zeichen'] / max(gesamt_kap, 1)):.0f} Zeichen (~{(z['zeichen'] / max(gesamt_kap, 1)) / 4:.0f} Tokens)",
+               "",
                "**Diversität** (je niedriger der erste Wert, desto weniger Schablone)",
                "",
                zonen_zeile,
