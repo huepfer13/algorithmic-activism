@@ -1003,7 +1003,7 @@ BIDI_STEUERZEICHEN = re.compile("[\u200e\u200f\u202a-\u202e\u2066-\u2069\u061c]"
 
 # Ein Pflichtblock ist eine ALLEINSTEHENDE Klammerzeile "**[NAME: ... | ...]**".
 # Das deckt [STATUS: ...] ebenso ab wie [CHRONIK: ... | SIEGEL: M-06-11] — Forum statt Wortliste.
-STEMPEL_RE = re.compile(r"^\*{0,2}\[[A-Za-zÄÖÜäöü\-]{3,24}:[^\]]*\]\*{0,2}$")
+STEMPEL_RE = re.compile(r"^\*{0,2}\[[^:\]\n]{2,30}:[^\]]*\]\*{0,2}$")
 SCHWELLE_WIEDERHOLUNG = 0.4
 HISTORIE_FENSTER = 10          # Vergleich nur gegen die letzten N prosatragenden Vorgaenger
 
@@ -1200,7 +1200,10 @@ def pflichtblock_muster(erwarteter_block: str):
     eigen_code = block_code(erwarteter_block)
     if eigen_code:
         code = _normalisiere(eigen_code).lower()
-        return re.compile(r"^\*{0,2}\[[A-Za-zÄÖÜäöü\-]{3,24}:[^\]]*"
+        # Label beliebig (auch トラック/ТРЕК): der CODE traegt die Identitaet, nicht das Wort.
+        # Gemessen 2026-11-06: japanisches Kapitel schrieb "**[トラック: MASTERED | コード: Q-02-01]**"
+        # und fiel durch, obwohl Code und Form stimmten.
+        return re.compile(r"^\*{0,2}\[[^:\]\n]{2,30}:[^\]]*"
                           + re.escape(code) + r"[^\]]*\]\*{0,2}$")
     alt = re.search(r"CODE:\s*([^|\]]+)", erwarteter_block)
     code = _normalisiere((alt.group(1) if alt else "").strip()).lower()

@@ -34,6 +34,33 @@ def laufsuffix(variante: str) -> str:
     return abc_lauf.VARIANTEN.get(variante, {}).get("suffix", "")
 
 
+def fehlversuche(lang: str, grenze: int = 2) -> int:
+    """Wie viele der letzten Läufe dieser Sprache sind an der Schranke gerissen?
+
+    Ohne diese Bremse dreht der Tick ewig dieselbe Sprache: steht die Schranke,
+    bleibt der Artikel offen, die Sprache bleibt Kandidat (gemessen 2026-11-06:
+    Japanisch dreimal hintereinander, jedes Mal ein neuer Band ohne Kapitel im Repo).
+    """
+    pfad = os.path.join(REPO, "web", "api", "abc_log.jsonl")
+    if not os.path.exists(pfad):
+        return 0
+    laeufe = []
+    for zeile in open(pfad, encoding="utf-8"):
+        try:
+            d = json.loads(zeile)
+        except json.JSONDecodeError:
+            continue
+        if (d.get("sprache") or "").lower() == lang.lower():
+            laeufe.append(d.get("exit"))
+    zahl = 0
+    for eintrag in reversed(laeufe):
+        if eintrag == 4:
+            zahl += 1
+        else:
+            break
+    return zahl
+
+
 def gerissene_kapitel(varianten: str, seit: float) -> list:
     """Kapitel ohne bestandene Endschranke, die seit `seit` entstanden sind."""
     treffer = []
@@ -100,6 +127,12 @@ def main() -> int:
     zustand = json.load(open(STATE, encoding="utf-8")) if os.path.exists(STATE) else {}
     kandidaten = [(offene(s), s) for s in sprachen]
     kandidaten = [k for k in kandidaten if k[0] > 0]
+    gesperrt = {s for _, s in kandidaten if fehlversuche(s) >= 2}
+    if gesperrt:
+        rest = [k for k in kandidaten if k[1] not in gesperrt]
+        print(f"  Übersprungen (2× Schranke gerissen): {', '.join(sorted(gesperrt))}")
+        if rest:
+            kandidaten = rest
     if not kandidaten:
         print("  alle Sprachen vollständig — nichts zu tun"); return 0
     # Sprache mit den meisten offenen Artikeln; bei Gleichstand rotieren
