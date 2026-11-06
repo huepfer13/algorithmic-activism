@@ -9,6 +9,7 @@ on:
       - 'web/**'
       - 'menschenrechte_books/**'
       - 'export_dataset.py'
+      - 'scripts/build_dataset_card.py'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -66,7 +67,17 @@ jobs:
               repo_type="dataset",
               commit_message="ci: sync dataset.jsonl (automated corpus update)",
           )
-          print("Hugging Face commit:", info.oid)
+          print("Hugging Face commit (dataset):", info.oid)
+          # Die Dataset-Card wird gerechnet, nicht getippt: Sprache, Umfang und die
+          # gemessenen Textmerkmale je Arm stehen sonst nicht im HF-Repo.
+          card = api.upload_file(
+              path_or_fileobj="DATASET_CARD.md",
+              path_in_repo="README.md",
+              repo_id="hardtoneselector/algorithmic-activism-corpus",
+              repo_type="dataset",
+              commit_message="ci: dataset card aus dem Korpus neu erzeugt",
+          )
+          print("Hugging Face commit (card):", card.oid)
           PY
 
       - name: Setup Pages
