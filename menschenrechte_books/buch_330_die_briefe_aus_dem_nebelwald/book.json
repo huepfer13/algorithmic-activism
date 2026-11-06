@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_330_die_briefe_aus_dem_nebelwald",
+  "title": "Die Briefe aus dem Nebelwald",
+  "pov": "first_person",
+  "language": "DE",
+  "style": "Briefroman",
+  "setting_summary": "In einem abgelegenen Bergtal liegt das Sanatorium Sankt Verena, in dem Lorenz und Mira als Patienten unter strenger Aufsicht leben und nur über zensierte Briefe miteinander sprechen dürfen. Die Anstalt wird von einer misstrauischen Verwaltung kontrolliert, die jede Nachricht prüft, während ein nahender Winter das Tal von der Außenwelt abschneidet und die Vorräte knapp werden. Lorenz und Mira beginnen, in ihren Depeschen verschlüsselte Fragen nach Würde, Freiheit und Gerechtigkeit zu verhandeln, die bald die gesamte Ordnung des Hauses infrage stellen.",
+  "characters": [
+    "Lorenz",
+    "Mira",
+    "Hedwig",
+    "Jonas",
+    "Pfarrer Anselm"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-06T23:05:16.770686+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
