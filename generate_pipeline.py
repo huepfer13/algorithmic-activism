@@ -582,6 +582,14 @@ SALT_FORMEN = {
 [OUTRO - ONE VOICE REMAINS]""",
 }
 
+
+SALT_PROSA = """SALT-MODUS — Formvorgabe fuer diesen Abschnitt (verbindlich):
+- Kein rundes Ende. Der Abschnitt bricht mitten im Satz ab oder mit einem Dokumentfetzen.
+- Mindestens ein Absatz besteht aus EINEM Satz.
+- Mindestens eine Zeile ist ein abgebrochener Behroe(deneintrag: Datum, Aktenzeichen, Strich, nichts.
+- Kein Fazit, keine Lehre, keine Versoehnung. Die Szene endet, wie sie endet.
+- Zwei Absaetze duerfen sich widersprechen — keine Glättung."""
+
 SALT_REGELN = """SALT-MODUS — die Sektionsform von oben gilt NICHT. Verbindlich:
 - Baue GENAU diese Form: {form}
 - Kein [Chorus], kein [Pre-Chorus], kein [Drop]. Der Refrain entfaellt.
@@ -755,8 +763,9 @@ turned the struggle to a blessing, got a whole lot to prove (to prove).""",
 BEISPIEL FUER DEN MODUS {modus.upper()} (Meter, Reim und Tag-Setzung uebernehmen — NICHT den Inhalt):
 {ANKER.get(modus, ANKER["reim"])}"""
                    if style_name == "Songtext_Matrix"
-                   else f"""{titelzeile}
-- 300-500 Woerter, reine Erzaehlung, kein Meta-Text.""")
+                   else (f"""{titelzeile}
+- 300-500 Woerter, reine Erzaehlung, kein Meta-Text."""
+                         + ("\n\n" + SALT_PROSA if os.environ.get("SALT") == "1" else "")))
 
     return f"""{rahmenblock(meta, lang_name, style_name, style_desc,
                 f'Du bist ein weltklasse Autor und Ethiker. Du schreibst Kapitel {chapter_index} des fortlaufenden Romans')}

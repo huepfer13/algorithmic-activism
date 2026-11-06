@@ -36,20 +36,37 @@ VARIANTEN = {
 }
 
 
-def quelle(lang: str) -> dict:
-    """Buch-Meta und Prolog der Sprache: erster Band mit Songtext-Stil, ohne Zwilling."""
+def quelle(lang: str, buchart: str = "auto") -> dict:
+    """Buch-Meta und Prolog der Sprache — jede Buchart, nicht nur Songtext.
+
+    Gewählt wird das Buch mit den meisten offenen Artikeln; Songs haben Vorrang,
+    solange sie offene Artikel haben, weil dort die Struktur (SALT) am stärksten greift.
+    """
+    treffer = []
     for bj in sorted(glob.glob(f"{BOOKS}/buch_*/book.json")):
         try:
             m = json.load(open(bj, encoding="utf-8"))
         except (OSError, json.JSONDecodeError):
             continue
         name = os.path.basename(os.path.dirname(bj))
-        if (m.get("language") or "").lower() != lang or m.get("style") != "Songtext_Matrix":
+        if (m.get("language") or "").lower() != lang:
             continue
         if name.endswith(tuple(v["suffix"] for v in VARIANTEN.values() if v["suffix"])):
             continue
-        return {"pfad": os.path.dirname(bj), "meta": m}
-    return {}
+        offen = 30 - len(m.get("covered_articles") or [])
+        if offen <= 0:
+            continue
+        ist_song = m.get("style") == "Songtext_Matrix"
+        if buchart == "song" and not ist_song:
+            continue
+        if buchart == "prosa" and ist_song:
+            continue
+        treffer.append((not ist_song, -offen, name, os.path.dirname(bj), m))
+    if not treffer:
+        return {}
+    treffer.sort()
+    _, _, _, pfad, m = treffer[0]
+    return {"pfad": pfad, "meta": m}
 
 
 def verhandelt(lang: str) -> set:
@@ -68,7 +85,7 @@ def verhandelt(lang: str) -> set:
             m = json.load(open(bj, encoding="utf-8"))
         except (OSError, json.JSONDecodeError):
             continue
-        if (m.get("language") or "").lower() != lang or m.get("style") != "Songtext_Matrix":
+        if (m.get("language") or "").lower() != lang:
             continue
         treffer.update(m.get("covered_articles") or [])
     return treffer
@@ -123,22 +140,49 @@ def erzeuge(lang: str, band: str, artikel: str, variante: str, backend: str, mod
     return (kap[-1] if kap else ""), (zeilen[-1][:70] if zeilen else f"rc={r.returncode}")
 
 
+def _sperre(warten_s: int = 900):
+    """Exklusive Sperre auf .rotation.lock — wie run_model_rotation.py.
+
+    Ohne sie lesen zwei gleichzeitige Läufe dieselbe nächste Bandnummer und legen
+    zwei Verzeichnisse mit derselben Zahl an (gemessen 2026-11-06: buch_295 doppelt,
+    einmal Prosa-Lauf, einmal Stunden-Tick). Rückgabe: offene Datei oder None.
+    """
+    import fcntl
+    import time
+    f = open(os.path.join(REPO, ".rotation.lock"), "w")
+    ende = time.monotonic() + warten_s
+    while True:
+        try:
+            fcntl.flock(f, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            return f
+        except OSError:
+            if time.monotonic() > ende:
+                f.close()
+                return None
+            time.sleep(10)
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--lang", required=True)
     ap.add_argument("--article", default="")
+    ap.add_argument("--buchart", default="auto", choices=("auto", "song", "prosa"),
+                    help="auto = Songs bevorzugt, solange sie offene Artikel haben")
     ap.add_argument("--backend", default="deepseek")
     ap.add_argument("--model", default="deepseek-chat")
     ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args()
 
-    q = quelle(a.lang)
+    q = quelle(a.lang, a.buchart)
     if not q:
-        print(f"  FEHLER: keine Songtext-Band für '{a.lang}'"); return 2
+        print(f"  FEHLER: kein Buch mit offenen Artikeln für '{a.lang}' ({a.buchart})"); return 2
     artikel = a.article or offene_artikel(a.lang, q["meta"])
     if not artikel:
         print(f"  {a.lang}: alle 30 Artikel verhandelt"); return 0
     nummer = naechste_nummer()
+
+    griff = None if a.dry_run else _sperre()
+    if not a.dry_run and griff is None:
+        print("  FEHLER: .rotation.lock seit 15 min belegt — kein paralleles Anlegen"); return 3
 
     print(f"  {a.lang.upper()} · Band {os.path.basename(q['pfad'])[:36]} · Artikel {artikel}")
     for variante in ("A", "B", "C"):
@@ -149,6 +193,10 @@ def main() -> int:
         band = band_anlegen(q, variante, nummer); nummer += 1
         datei, info = erzeuge(a.lang, band, artikel, variante, a.backend, a.model)
         print(f"   {variante}: {os.path.basename(band)[:44]:46} {'ok' if datei else 'FEHLER'} · {info}")
+    if griff is not None:
+        import fcntl
+        fcntl.flock(griff, fcntl.LOCK_UN)
+        griff.close()
     return 0
 
 

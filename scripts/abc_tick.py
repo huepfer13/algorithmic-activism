@@ -42,36 +42,26 @@ def main() -> int:
     gleich = sorted(s for n, s in kandidaten if n == max_offen)
     letzte = zustand.get("zuletzt", "")
     lang = next((s for s in gleich if s > letzte), gleich[0])
-    print(f"  Sprache: {lang} ({max_offen} Artikel offen) · Kandidaten {len(kandidaten)}")
+    # Abwechselnd Song- und Prosaband: das Konzept gilt für alle Bücher, Songs haben
+    # nur Vorrang, weil dort die Struktur (SALT) am stärksten greift.
+    buchart = "prosa" if zustand.get("buchart") == "song" else "song"
+    print(f"  Sprache: {lang} ({max_offen} Artikel offen) · Buchart {buchart} · Kandidaten {len(kandidaten)}")
 
     if a.dry_run:
-        subprocess.run([sys.executable, "scripts/abc_lauf.py", "--lang", lang, "--dry-run"], cwd=REPO)
+        subprocess.run([sys.executable, "scripts/abc_lauf.py", "--lang", lang, "--buchart", buchart,
+                        "--dry-run"], cwd=REPO)
         return 0
 
-    # Gleiche Sperre wie run_model_rotation.py: ohne sie legen beide Prozesse Bände mit
-    # derselben Nummer an (die Nummer wird vor dem Schreiben gelesen).
-    import fcntl
-    import time
-    sperre = open(os.path.join(REPO, ".rotation.lock"), "w")
-    ende = time.monotonic() + 900
-    while True:
-        try:
-            fcntl.flock(sperre, fcntl.LOCK_EX | fcntl.LOCK_NB)
-            break
-        except OSError:
-            if time.monotonic() > ende:
-                print("  Sperre .rotation.lock seit 15 min belegt — Abbruch"); return 3
-            time.sleep(15)
-
-    r = subprocess.run([sys.executable, "scripts/abc_lauf.py", "--lang", lang],
+    # Die Sperre hält abc_lauf selbst (.rotation.lock); hier keine zweite,
+    # sonst blockiert der Unterprozess gegen den eigenen Elternprozess.
+    r = subprocess.run([sys.executable, "scripts/abc_lauf.py", "--lang", lang, "--buchart", buchart],
                        cwd=REPO, capture_output=True, text=True, timeout=3000)
-    fcntl.flock(sperre, fcntl.LOCK_UN)
     print(r.stdout.strip()[-800:])
     if r.returncode != 0:
         print("  FEHLER:", (r.stderr or r.stdout).strip()[-300:])
         return r.returncode
     os.makedirs(os.path.dirname(STATE), exist_ok=True)
-    json.dump({"zuletzt": lang, "zeit": __import__("datetime").datetime.now().isoformat(timespec="seconds")},
+    json.dump({"zuletzt": lang, "buchart": buchart, "zeit": __import__("datetime").datetime.now().isoformat(timespec="seconds")},
               open(STATE, "w", encoding="utf-8"))
     return 0
 
