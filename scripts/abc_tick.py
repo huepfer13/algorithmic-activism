@@ -47,6 +47,14 @@ def gerissene_kapitel(varianten: str, seit: float) -> list:
     return treffer
 
 
+def protokollieren(daten: dict) -> None:
+    """Eine JSON-Zeile je Lauf in web/api/abc_log.jsonl (Wächter-Quelle)."""
+    pfad = os.path.join(REPO, "web", "api", "abc_log.jsonl")
+    os.makedirs(os.path.dirname(pfad), exist_ok=True)
+    with open(pfad, "a", encoding="utf-8") as f:
+        f.write(json.dumps(daten, ensure_ascii=False) + "\n")
+
+
 def committen(nachricht: str) -> str:
     """Bände und Web-Index committen und pushen.
 
@@ -130,8 +138,15 @@ def main() -> int:
         print(f"  SCHRANKE GERISSEN: {len(gerissen)} Kapitel ohne bestandene Pruefung — "
               f"{gerissen[:2]}")
         print("  Nicht committet. Exit 4 loest algorithmic-alert@ aus.")
+        protokollieren({"zeit": __import__("datetime").datetime.now().isoformat(timespec="seconds"),
+                        "sprache": lang, "buchart": buchart, "arme": a.varianten,
+                        "artikel": bbox, "exit": 4, "gerissen": gerissen})
         return 4
-    print(" ", committen(f"feat(abc): {lang.upper()} {bbox} — Arm {a.varianten}"))
+    ergebnis = committen(f"feat(abc): {lang.upper()} {bbox} — Arm {a.varianten}")
+    print(" ", ergebnis)
+    protokollieren({"zeit": __import__("datetime").datetime.now().isoformat(timespec="seconds"),
+                    "sprache": lang, "buchart": buchart, "arme": a.varianten,
+                    "artikel": bbox, "exit": 0, "gerissen": [], "commit": ergebnis})
 
     os.makedirs(os.path.dirname(STATE), exist_ok=True)
     json.dump({"zuletzt": lang, "buchart": buchart, "zeit": __import__("datetime").datetime.now().isoformat(timespec="seconds")},
