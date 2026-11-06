@@ -57,7 +57,7 @@ def fehlversuche(lang: str, grenze: int = 2) -> int:
     bleibt der Artikel offen, die Sprache bleibt Kandidat (gemessen 2026-11-06:
     Japanisch dreimal hintereinander, jedes Mal ein neuer Band ohne Kapitel im Repo).
     """
-    pfad = os.path.join(REPO, "web", "api", "abc_log.jsonl")
+    pfad = os.path.expanduser("~/.hermes/logs/abc_log.jsonl")
     if not os.path.exists(pfad):
         return 0
     laeufe = []
@@ -92,7 +92,9 @@ def gerissene_kapitel(varianten: str, seit: float) -> list:
 
 def protokollieren(daten: dict) -> None:
     """Eine JSON-Zeile je Lauf in web/api/abc_log.jsonl (Wächter-Quelle)."""
-    pfad = os.path.join(REPO, "web", "api", "abc_log.jsonl")
+    # NICHT ins Repo: web/api gilt als Korpus-Bereich, corpus-sync bricht sonst mit
+    # "das ueberschreibt vorhandene Tales" ab (gemessen 2026-11-06, 06:21).
+    pfad = os.path.expanduser("~/.hermes/logs/abc_log.jsonl")
     os.makedirs(os.path.dirname(pfad), exist_ok=True)
     with open(pfad, "a", encoding="utf-8") as f:
         f.write(json.dumps(daten, ensure_ascii=False) + "\n")
