@@ -1,0 +1,27 @@
+{
+  "book_id": "buch_266_hi_c_salt",
+  "title": "काँच के शहर का गीत",
+  "pov": "first_person",
+  "language": "HI",
+  "style": "Songtext_Matrix",
+  "setting_summary": "एक काँच से घिरा शहर जहाँ हर आवाज़ गूँजती और गिनी जाती है, और चुप्पी सबसे महँगी चीज़ है। शहर की हवा में उमस और निगरानी का दबाव है, और रोज़गार तथा पानी दोनों सीमित हैं। अमरा और उसके साथी गीतों में छिपे सच को गाते हुए शहर के भीतर सम्मान, आवाज़ और जीवन के अधिकार की लड़ाई शुरू करते हैं।",
+  "characters": [
+    "अमरा",
+    "कबीर",
+    "रोशनी",
+    "तारा",
+    "बंदा"
+  ],
+  "covered_articles": [
+    "art_02"
+  ],
+  "current_chapter": 1,
+  "created_at": "2026-11-05T23:44:17.168884+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner.",
+  "song_mode": "erzaehl",
+  "song_genre": "dark_ambient",
+  "song_style_engine": true,
+  "variant": "C",
+  "article_mode": "bedeutung",
+  "form": "salt"
+}

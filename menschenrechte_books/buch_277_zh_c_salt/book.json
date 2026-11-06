@@ -1,0 +1,27 @@
+{
+  "book_id": "buch_277_zh_c_salt",
+  "title": "玻璃城的回声账本",
+  "pov": "first_person",
+  "language": "ZH",
+  "style": "Songtext_Matrix",
+  "setting_summary": "一座被高墙围住的玻璃城，每句话都被记录进回声账本，居民必须用“配额”换取发言与申诉的机会。城中水库日渐干涸，配给按等级发放，底层人被迫在沉默与揭发之间选择。主角在账本里发现自己的名字被提前写上了罪名，必须在一次公开听证前找到真相。",
+  "characters": [
+    "林昭",
+    "阿岚",
+    "老秤",
+    "小满",
+    "铁面"
+  ],
+  "covered_articles": [
+    "art_03"
+  ],
+  "current_chapter": 1,
+  "created_at": "2026-11-05T22:55:46.870781+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner.",
+  "song_mode": "erzaehl",
+  "song_style_engine": true,
+  "song_genre": "dark_ambient",
+  "variant": "C",
+  "article_mode": "bedeutung",
+  "form": "salt"
+}

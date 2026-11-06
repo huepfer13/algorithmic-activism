@@ -1,0 +1,27 @@
+{
+  "book_id": "buch_261_lanterns_of_the_ledger_line_c_salt",
+  "title": "Lanterns of the Ledger Line",
+  "pov": "third_person",
+  "language": "EN",
+  "style": "Songtext_Matrix",
+  "setting_summary": "A vertical arcology called the Ledger Line runs on rationed daylight and a strict merit-point economy, where every resident's worth is recalculated each dawn by an unseen auditing authority. When a clerical error erases an entire floor's points, a small crew of auditors and couriers must decide whether to correct the math or expose the system that made them complicit. Each chapter hears a different resident's case, turning the arcology into a courtroom of songs where dignity, voice, and survival are weighed against the ledger.",
+  "characters": [
+    "Mara Voss",
+    "Ilyan Brecht",
+    "Sable Odum",
+    "Tobin Reyes",
+    "The Adjuster"
+  ],
+  "covered_articles": [
+    "art_02"
+  ],
+  "current_chapter": 1,
+  "created_at": "2026-11-05T22:52:12.243964+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner.",
+  "song_mode": "skizze",
+  "song_style_engine": true,
+  "song_genre": "dark_ambient",
+  "variant": "C",
+  "article_mode": "bedeutung",
+  "form": "salt"
+}

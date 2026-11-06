@@ -1,0 +1,27 @@
+{
+  "book_id": "buch_260_die_stimmen_von_sektor_neun_c_salt",
+  "title": "Die Stimmen von Sektor Neun",
+  "pov": "first_person",
+  "language": "DE",
+  "style": "Songtext_Matrix",
+  "setting_summary": "In einem unterirdischen Wohnblock namens Sektor Neun leben tausende Menschen unter ständiger Lautsprecherüberwachung und knapper Luftzuteilung, während die Obrigkeit jeden öffentlichen Gesang als Aufruhr wertet. Die Bewohner dürfen nur flüstern, doch eine verbotene Liedersammlung wandert von Hand zu Hand und wird zum einzigen Mittel, Würde und Zusammenhalt zu bewahren.",
+  "characters": [
+    "Mira",
+    "Tobias",
+    "Leyla",
+    "Kai",
+    "Herr Brandt"
+  ],
+  "covered_articles": [
+    "art_04"
+  ],
+  "current_chapter": 1,
+  "created_at": "2026-11-05T22:37:20.537678+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner.",
+  "song_mode": "reim",
+  "song_genre": "deutschpunk",
+  "song_style_engine": true,
+  "variant": "C",
+  "article_mode": "bedeutung",
+  "form": "salt"
+}

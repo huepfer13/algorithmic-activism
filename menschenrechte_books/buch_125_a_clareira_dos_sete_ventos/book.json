@@ -15,5 +15,8 @@
   "covered_articles": [],
   "current_chapter": 0,
   "created_at": "2026-11-05T21:27:58.671132+00:00",
-  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner.",
+  "variant": "A",
+  "article_mode": "text",
+  "form": "standard"
 }

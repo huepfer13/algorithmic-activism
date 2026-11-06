@@ -21,5 +21,8 @@
   "song_mode": "reim",
   "song_genre": "deutschpunk",
   "song_style_engine": true,
-  "_titel_hinweis": "Titel geändert: 'Die Tonleiter …' war Formel-Dublette zu buch_220"
+  "_titel_hinweis": "Titel geändert: 'Die Tonleiter …' war Formel-Dublette zu buch_220",
+  "variant": "A",
+  "article_mode": "text",
+  "form": "standard"
 }

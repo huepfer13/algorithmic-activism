@@ -1,0 +1,27 @@
+{
+  "book_id": "buch_281_la_nave_de_los_turnos_ro_ab_bedeutung",
+  "title": "La nave de los turnos rotos",
+  "pov": "third_person",
+  "language": "ES",
+  "style": "Songtext_Matrix",
+  "setting_summary": "Una plataforma flotante de reciclaje llamada El Turno, anclada en un mar muerto, donde cada habitante debe renovar a diario su derecho a respirar aire filtrado mediante una cuota de trabajo y silencio. La Contadora administra los turnos desde una torre de vidrio opaco, mientras la escasez de agua y la vigilancia constante convierten cada palabra en un riesgo. Amara, Tobías, Nieve y Sergio descubren que los registros de turnos ocultan una lista de personas a las que se les niega la existencia, y deberán decidir si cantar lo que saben o seguir respirando.",
+  "characters": [
+    "Amara Vent",
+    "Tobías Rez",
+    "La Contadora",
+    "Nieve",
+    "Sergio Umbral"
+  ],
+  "covered_articles": [
+    "art_02"
+  ],
+  "current_chapter": 1,
+  "created_at": "2026-11-05T23:54:34.855320+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner.",
+  "song_mode": "erzaehl",
+  "song_genre": "dark_ambient",
+  "song_style_engine": true,
+  "variant": "B",
+  "article_mode": "bedeutung",
+  "form": "standard"
+}

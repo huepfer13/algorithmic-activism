@@ -22,5 +22,8 @@
   "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner.",
   "song_mode": "erzaehl",
   "song_style_engine": true,
-  "song_genre": "dark_ambient"
+  "song_genre": "dark_ambient",
+  "variant": "A",
+  "article_mode": "text",
+  "form": "standard"
 }
