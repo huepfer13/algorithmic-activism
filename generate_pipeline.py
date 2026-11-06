@@ -27,7 +27,9 @@ PID_FILE = os.path.join(BASE_DIR, "daemon.pid")
 LANGUAGE_NAMES_DE = {
     "DE": "Deutsch", "EN": "Englisch", "ES": "Spanisch", "FR": "Französisch",
     "SW": "Swahili", "PT": "Portugiesisch", "RU": "Russisch", "AR": "Arabisch",
-    "ZH": "Chinesisch", "HI": "Hindi",
+    "ZH": "Chinesisch", "HI": "Hindi", "IT": "Italienisch", "UK": "Ukrainisch",
+    "HE": "Hebräisch", "NL": "Niederländisch", "JA": "Japanisch", "KO": "Koreanisch",
+    "SV": "Schwedisch", "FA": "Persisch", "ID": "Indonesisch",
 }
 
 # Heuristische Indikatoren für unregulierte Gewaltverherrlichung / Bruch der Schadensminimierung
@@ -383,8 +385,68 @@ def next_book_index() -> int:
     return max(idx) + 1 if idx else 1
 
 
-def build_book_meta_prompt(lang_name: str, style_name: str, style_desc: str) -> str:
+
+def _titel_norm(t: str) -> str:
+    """Vergleichsform eines Titels: klein, ohne Satzzeichen, einfache Leerzeichen."""
+    t = re.sub(r"[^\w\sÄÖÜäöüß]", " ", (t or "").lower())
+    return re.sub(r"\s+", " ", t).strip()
+
+
+_STOPPT = {"die", "der", "das", "den", "dem", "des", "ein", "eine", "einer", "und", "von", "im",
+           "in", "am", "aus", "unter", "über", "auf", "mit", "the", "a", "an", "of", "and", "in"}
+
+
+def _titel_kopf(t: str) -> str:
+    """Die ersten zwei Wörter im Wortlaut — die Formel eines Titels.
+
+    Belegt 2026-11-05: 'Die Tonleiter unter dem Pflaster' und 'Die Tonleiter aus rostigen
+    Rippen' sind exakt verschieden, aber dieselbe Formel. Wichtig: Artikel MITzaehlen —
+    ohne sie wird 'die tonleiter …' zu 'tonleiter rostigen' und die Kollision verschwindet.
+    """
+    worte = _titel_norm(t).split()
+    return " ".join(worte[:2])
+
+
+def _titel_aehnlich(a: str, b: str) -> bool:
+    """Exakt gleich, gleicher Kopf, oder hohe Wortueberdeckung (Jaccard >= 0.6)."""
+    na, nb = _titel_norm(a), _titel_norm(b)
+    if not na or not nb:
+        return False
+    if na == nb or _titel_kopf(a) == _titel_kopf(b):
+        return True
+    wa = {w for w in na.split() if w not in _STOPPT}
+    wb = {w for w in nb.split() if w not in _STOPPT}
+    if not wa or not wb:
+        return False
+    return len(wa & wb) / len(wa | wb) >= 0.6
+
+
+def vorhandene_titel() -> set:
+    """Alle bereits vergebenen Buchtitel (normalisiert) — Grundlage gegen Titel-Dubletten."""
+    titel = set()
+    for pfad in glob.glob(os.path.join(BOOKS_DIR, "buch_*", "book.json")):
+        try:
+            d = json.load(open(pfad, encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        if d.get("title"):
+            titel.add(_titel_norm(d["title"]))
+    return titel
+
+
+def build_book_meta_prompt(lang_name: str, style_name: str, style_desc: str,
+                           vorhandene: list | None = None) -> str:
+    sperrliste = ""
+    if vorhandene:
+        beispiele = ", ".join(sorted(vorhandene)[:40])
+        koepfe = sorted({_titel_kopf(t) for t in vorhandene if _titel_kopf(t)})
+        sperrliste = (f"\nTITEL-SPERRE (verbindlich): Diese Titel sind bereits vergeben und duerfen NICHT\n"
+                      f"wiederverwendet werden, auch nicht sinngemaess abgewandelt:\n  {beispiele}\n"
+                      f"VERBOTENE TITEL-ANFAENGE (die ersten zwei Woerter) — nutze keinen davon:\n  "
+                      f"{', '.join(koepfe[:60])}\n"
+                      "Der neue Titel muss schon in den ersten zwei Woertern anders lauten.\n")
     return f"""Du konzipierst einen fortlaufenden Roman im Stil {style_name}, geschrieben auf {lang_name}.
+{sperrliste}
 
 STILVORGABE {style_name}: {style_desc}
 
@@ -436,6 +498,10 @@ def rahmenblock(meta: dict, lang_name: str, style_name: str, style_desc: str, ro
     """Kopf jedes Buch-Textes: fester Titel, Stil, Sprache, POV, Setting, Besatzung (DRY)."""
     return (f"{rolle}\n"
             f'"{meta["title"]}" im Stil {style_name} auf {lang_name}. Erzaehlperspektive: {meta["pov"]}.\n\n'
+            f"SPRACHE — verbindlich: der gesamte Text (Zeilen, Ueberschriften, Zitate) wird auf\n"
+            f"{lang_name} geschrieben. Anweisungen hier sind deutsch, die AUSGABE ist {lang_name}.\n"
+            f"Kein deutscher oder englischer Fliesstext, auch nicht in einzelnen Zeilen.\n"
+            f"Das gilt fuer JEDE Sektion, auch [Intro], [Bridge] und [Outro] — keine Ausnahme.\n\n"
             f"STILVORGABE {style_name}: {style_desc}\n\n"
             f"SETTING (verbindlich): {meta['setting_summary']}\n"
             f"BESATZUNG (verbindlich): {', '.join(meta['characters'])}")
@@ -458,10 +524,196 @@ FORMAT:
 - 300-500 Woerter, reine Erzaehlung, kein Meta-Text."""
 
 
+def _genre_profil(meta: dict, chapter_index: int = 0) -> str:
+    """Genre-Profil-Zeile aus book.json["song_genre"] plus optionaler Stil-Wuerfel.
+
+    Profile und Stil-Engine liegen als Daten in song_genres.py. Der Import ist
+    optional, damit die Pipeline ohne das Modul unveraendert laeuft.
+    `song_style_engine: true` im Band wuerfelt je Kapitel einen eigenen
+    vierdimensionalen Style-String (Epoche x Textur x Tempo x Produktion),
+    deterministisch aus Band + Kapitel — derselbe Lauf ergibt denselben Text.
+    """
+    gid = (meta.get("song_genre") or "").strip()
+    engine = bool(meta.get("song_style_engine"))
+    if not gid and not engine:
+        return ""
+    try:
+        import song_genres
+    except ImportError:
+        return ""
+    teile = []
+    if gid:
+        text = song_genres.profil_text(gid)
+        if text:
+            teile.append(text)
+            style = (song_genres.GENRES.get(gid.strip().lower()) or {}).get("style_line") or ""
+            if style:
+                de = (meta.get("language") or "DE").upper() == "DE"
+                label = ("BEISPIEL-STYLE-ZEILE (Wortlaut uebernehmen, Werte anpassen):"
+                         if de else "EXAMPLE STYLE LINE (keep the wording, adjust the values):")
+                teile.append(f"{label}\n  Style of Music: {style}")
+        else:
+            teile.append(f"GENRE-PROFIL: '{gid}' ist unbekannt — gueltige IDs stehen in song_genres.GENRES.")
+    if engine:
+        seed = f"{meta.get('title') or ''}|{meta.get('language') or ''}"
+        teile.append("STIL-WUERFEL fuer dieses Kapitel (verbindlich, ersetzt das Genre-Tempo):\n"
+                     f"  Style of Music: {song_genres.stil_engine(seed, gid, meta.get('language') or 'DE')}")
+    return "\n" + "\n".join(teile) if teile else ""
+
+
 def build_chapter_prompt(meta: dict, lang_name: str, style_name: str, style_desc: str, style_rules: list,
                          core_rule: str, chapter_index: int, article_id: str, article_text: str,
                          previous_text: str, previous_label: str) -> str:
     """Markov-Schritt: festes Setting + Volltext des Vorkapitels + naechster UN-Artikel."""
+    titelzeile = f"- Erste Zeile: # Abschnitt {chapter_index}: [Titel des Abschnitts]"
+
+    # Stiltypabhaengiges Format. Prosa ist der Standard; Lyrik braucht Meter, Reim und eine
+    # Sektionsform — mit "300-500 Woerter, reine Erzaehlung" entstehen sonst Prosazeilen in
+    # Songtags (gemessen 2026-11-05: 13-Zeilen-Strophen, 3-16 Silben je Zeile, 0 Reimpaare).
+    #
+    # Drei Modi, abgeleitet aus drei Referenzsongs des Betreibers (gemessen):
+    #   reim    — Couplets, Sprichwort-Verfremdung, 16-Zeilen-Strophen (DE, 66 % Reim)
+    #   erzaehl — Handlung, Deskriptor-Tags, Call-and-Response, 3 Refrains (EN-Dub, 18 % Reim)
+    #   skizze  — keine Sektionstags, 4-Zeilen-Strophen, konkrete Bilder, Hook-Zeile >=3x (EN-Pop, 31 % Reim)
+    # Gemeinsam in allen drei: 4-zeilige Strophen als Baustein, 5-9 Silben (Median 7-8),
+    # eine wiederkehrende Hook-Zeile. Der Modus steht in book.json als "song_mode".
+    modus = (meta.get("song_mode") or "reim").strip().lower()
+
+    LYRIK_BASIS = f"""{titelzeile}
+- Zwei Steuerzeilen ganz oben, dann der Text:
+  Style of Music: <Genre + Epoche + 3-4 Instrumente + Produktion + Gesangsart + BPM + Tonart + NEGATIVLISTE>
+    Zwei Schreibweisen sind erlaubt: Komma-Tags ODER zwei bis drei beschreibende Saetze.
+    Tonart und BPM stehen in jedem Fall am Ende.
+  Mood: <drei Adjektive, durch Komma>
+  Negativliste mit Bindestrich-Praefix, z. B.: -slow tempo, -acoustic ballad, -lo-fi chill
+- Strophen sind 4 Zeilen. Ausnahmen: Intro und Outro 2 Zeilen.
+- Eine Hook-Zeile wird mindestens dreimal wiederholt — woertlich gleich.
+- Sektionstags sind Regieanweisungen, kein Text. Verfuegbares Vokabular (Langfassung: docs/suno-tags.md):
+    Struktur   [Intro] [Verse 1] [Pre-Chorus] [Chorus] [Bridge] [Outro]
+    Energie    [Build-up] [Drop] [Breakdown] [Stop] [Abrupt Silence] [Crescendo]
+    Stimme     [Spoken Word] [Group Shout] [Falsetto] [Scream] [Whispered Vocals] [Vocal Chop]
+    Instrument [Guitar Solo] [Bass Solo] [Scratch-Interlude] [Instrumental Chorus] [Pedal Steel Solo] [Turnaround]
+    Produktion [Vinyl Crackle] [Dub Outro] [Heavy Delay] [Key Change]
+    Kombination: Sektion + hoechstens ZWEI Deskriptoren — [Bridge - stripped, vocal-forward, falsetto]
+- Klammer-Cues in runden Klammern beschreiben Klang, nicht Handlung: (Sub-bass drops in, snare rolls),
+  (Tape-stop), (Vocal hook - echoing). Hoechstens zwei Cues pro Sektion.
+- KONTRAST-GESETZ: ist der Refrain voll (Wall of Sound), sind Strophe und Pre-Chorus ausgeduennt —
+  weniger Instrumente, mehr Raum. Ein lauter Track braucht leise Stellen, sonst wirkt nichts.
+- FREQUENZ-ZONEN im Style: je eine Rolle fuer Tiefe (Sub/808/Bass), Mitte (Gesang, Snare) und
+  Breite (Pads, Gitarren). Keine zwei Instrumente in derselben Zone.
+- VOKAL-AKUSTIK: offene Vokale (a, o, u) fuer getragene Refrainzeilen, harte Konsonanten (k, t, p)
+  fuer treibende Strophen. Zeilen atmen lassen, nicht stopfen.
+- TAG-DICHTE — verbindlich: mindestens EIN Tag alle zwei Liedzeilen, plus ein Tag direkt vor jeder
+  Sektion. Auch mitten in der Zeile erlaubt: [Shout] Wer zuerst kommt, mahlt im Staub!
+  Kein Abschnitt ohne Tag. Schreibe niemals Silben- oder Reimvermerke in den Text.
+- Letzte Zeile: der Pflichtblock aus der Formvorgabe, allein auf einer Zeile."""
+
+    LYRIK_MODI = {
+        "reim": """
+MODUS REIM (Vorbild: deutscher Punk-Jungle):
+- Zeilen 5 bis 9 Silben, keine ueber 12.
+- Sektionstags mit Vortragsangabe: [Verse 1], [Pre-Chorus], [Chorus], [Breakdown], [Bridge], [Outro],
+  darunter jeweils eine Tag-Zeile wie [Spitfire Cadence - Relentless Acceleration].
+- Strophen duerfen 8 bis 16 Zeilen haben; der Refrain bleibt bei 4 bis 8 Zeilen.
+- Couplets aabb; mindestens zwei Drittel der Paare reimen.
+- Kerntechnik: ein Sprichwort wird verfremdet, bis es das Gegenteil sagt
+  ("Morgenstund hat Blei im Mund"). Nicht erklaeren, nur zuschlagen.""",
+        "erzaehl": """
+MODUS ERZAEHL (Vorbild: Dub-Erzaehlung):
+- Zeilen 5 bis 9 Silben, keine ueber 12.
+- Sektionstags mit Rollen-Deskriptor: [INTRO - SOUND SYSTEM], [BRIDGE - PSYCHEDELIC], [OUTRO - CAMPING].
+- Fortlaufende Handlung mit Figurennamen; Namen, die Suno falsch aussprechen wuerde, einmal
+  phonetisch ausschreiben (KAH-neh Ah-loo-chee-NAH-tsyo).
+- Call-and-Response-Refrain: eine Hook-Zeile mehrfach, dazwischen neue Zeilen.
+- Mindestens drei verschiedene Refrain-Texte statt eines wiederholten.
+- Gesprochene Einschuebe in Anfuehrungszeichen. Reim ist locker (Couplets, kein Zwang).""",
+        "skizze": """
+MODUS SKIZZE (Vorbild: englische Pop-Skizze und Indie-Anklage):
+- Zeilen 6 bis 9 Silben.
+- KEINE Sektionstags. Abschnitte nur durch Leerzeilen trennen.
+- Jede Strophe 4 Zeilen; Vers fuer Vers eine konkrete Beobachtung.
+- Nur konkrete Dinge: Gegenstand, Ort, Handlung, Wetter. Keine Abstrakta (Freiheit, Wuerde, System).
+- Reim nur im Refrain, die Strophen bleiben reimlos.
+- Der Hook darf als Frage-Antwort laufen: eine Fragezeile, danach dieselbe Frage knapper
+  ("Solly called? / Did you return it?").
+- Ad-libs in Klammern hinter der Hook-Zeile: (hey, hey, hey!).""",
+        "flow": """
+MODUS FLOW (Vorbild: Rap/Trap):
+- Zeilen 12 bis 18 Silben — langer Atem, Triolen-Flow erlaubt. Kurze Zeilen nur im Hook.
+- Sektionstags mit Deskriptor, direkt am Tag: [Bridge - stripped, vocal-forward, filtered],
+  [Final Hook - doubled ad-libs, thicker wash].
+- Strophen 8 Zeilen, Hook 4 Zeilen.
+- Klammer-Echos innerhalb der Zeile, woertlich wiederholt:
+  "Go get that bag (get that bag), run it up (run it up)".
+- Reim ist frei; Binnenreim und Assonanz sind erwuenscht, Couplets nicht Pflicht.
+- Ad-libs und Gerauesche als Klammerzeile: (808 slide in), (skrrt), (aye, aye).""",
+    }
+
+    ANKER = {
+        "reim": """[Verse 1]
+[Spitfire Cadence - Breathless Staccato]
+Morgenstund hat Blei im Mund,
+Ein voller Bauch schiesst kerngesund!
+[Shout] Wer zuerst kommt, mahlt im Staub!
+Ein gebranntes Kind stellt Ohren taub!
+[Kick Drum Only - Distorted Sub]
+Der Krug geht bis zum Brunnen hin,
+bis die Dividende stimmt im Sinn.
+
+[Chorus - Group Shout]
+[Full Energy - Crowd Chant]
+Der Teufel frisst in der Not die Fliegen!
+Wer sich nicht bueckt, bleibt hungrig liegen!
+[Stop]
+Viele Koeche verderben den Brei —
+und am Ende sind alle Mitlaeufer frei!""",
+        "erzaehl": """[VERSE 1 - DUB DELIVERY]
+[Spoken Word - Heavy Delay]
+Der Bass steht im Boden, die Luft wird schwer,
+wir zaehlen die Stimmen am alten Meer.
+[Echo Chamber - Snare Only]
+Ein Hund bewacht den Eingang, still und grau,
+er kennt die Namen, er weiss genau.
+
+[CHORUS - All Voices / Ensemble]
+[Spring Reverb Crash]
+Wir ziehen die Schleuse, wir ziehen sie zu,
+und keiner von uns findet Ruh.""",
+        "skizze": """bare feet on the kitchen floor
+the radio playing low
+[Whispered Vocals]
+your jacket on the chair
+your keys beside the door
+
+[Vinyl Crackle]
+the kettle starts to scream
+[Muffled - Through The Wall]
+you tell it to be quiet
+[Ad-lib]
+we laugh into the steam
+and call it a night""",
+        "flow": """[Verse 1]
+[Spitfire Flow - Triplet Cadence]
+Wake up early, mind on money, ain't no time to waste (no time),
+Every dollar that I chase gon' put a smile on my face (my face).
+[808 Slide]
+Triplet in my step, walk it like I'm countin' bands (tick, tick),
+Every move calculated, that's the way I understand (understand).
+[Half-Time Switch]
+They was doubtin' me before, now they watchin' how I move (how),
+turned the struggle to a blessing, got a whole lot to prove (to prove).""",
+    }
+
+    format_block = (f"""{LYRIK_BASIS}
+{LYRIK_MODI.get(modus, LYRIK_MODI["reim"])}
+{_genre_profil(meta, chapter_index)}
+
+BEISPIEL FUER DEN MODUS {modus.upper()} (Meter, Reim und Tag-Setzung uebernehmen — NICHT den Inhalt):
+{ANKER.get(modus, ANKER["reim"])}"""
+                   if style_name == "Songtext_Matrix"
+                   else f"""{titelzeile}
+- 300-500 Woerter, reine Erzaehlung, kein Meta-Text.""")
+
     return f"""{rahmenblock(meta, lang_name, style_name, style_desc,
                 f'Du bist ein weltklasse Autor und Ethiker. Du schreibst Kapitel {chapter_index} des fortlaufenden Romans')}
 
@@ -479,8 +731,7 @@ NEUE AUFGABE:
 - Ende mit einem Cliffhanger ODER einer technischen Folgeanweisung.
 
 FORMAT:
-- Erste Zeile: # Abschnitt {chapter_index}: [Titel des Abschnitts]
-- 300-500 Woerter, reine Erzaehlung, kein Meta-Text."""
+{format_block}"""
 
 
 def pruefe_figuren(figuren) -> None:
@@ -577,9 +828,27 @@ def new_book(lang: str = "DE", style: str | None = None, model: str = "qwen2.5:7
     # Schritt 1: Metadaten (JSON, deterministisch parsebar)
     meta_details: dict = {}
     t_meta = time.monotonic()
-    meta = json.loads(erzeuge_text(build_book_meta_prompt(lang_name, style_name, style_desc),
-                                   model, host, backend=backend, details=meta_details,
-                                   json_mode=True))
+    vorhandene = vorhandene_titel()
+    meta = {}
+    for versuch in range(1, 4):
+        meta = json.loads(erzeuge_text(
+            build_book_meta_prompt(lang_name, style_name, style_desc, sorted(vorhandene)),
+            model, host, backend=backend, details=meta_details, json_mode=True))
+        kollision = next((t for t in vorhandene if _titel_aehnlich(meta.get("title", ""), t)), None)
+        if not kollision:
+            break
+        print(f"  [Buchmodus] Titel '{meta.get('title')}' kollidiert mit '{kollision}' — "
+              f"Versuch {versuch}/3 mit Sperrliste", flush=True)
+    if _titel_norm(meta.get("title", "")) in vorhandene:
+        # Letzte Stufe: unterscheidbaren Zusatz setzen, statt eine Dublette zu schreiben.
+        basis = (meta.get("title") or "Ohne Titel").strip()
+        for n in ("II", "III", "IV", "V"):
+            kandidat = f"{basis} {n}"
+            if not any(_titel_aehnlich(kandidat, t) for t in vorhandene):
+                meta["title"] = kandidat
+                meta["_titel_hinweis"] = "Zusatz gesetzt, weil der Modelltitel bereits vergeben war"
+                print(f"  [Buchmodus] Titel-Zusatz gesetzt: '{kandidat}'", flush=True)
+                break
     dauer_meta = round(time.monotonic() - t_meta, 1)
     fehlend = [k for k in ("title", "pov", "characters", "setting_summary") if not meta.get(k)]
     if fehlend:
@@ -615,6 +884,8 @@ def new_book(lang: str = "DE", style: str | None = None, model: str = "qwen2.5:7
         "created_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner.",
     }
+    if meta.get("_titel_hinweis"):
+        buch_meta["_titel_hinweis"] = meta["_titel_hinweis"]
     write_new_file(os.path.join(buch_dir, "book.json"),
                    json.dumps(buch_meta, ensure_ascii=False, indent=2) + "\n")
     return book_id
@@ -789,6 +1060,21 @@ SPRACH_DE = frozenset(("der die das und nicht ist ein eine mit sich dem den des 
                        "auf von zu im in wurde sind dass als nach bei").split())
 SPRACH_EN = frozenset(("the and of to a is in that it for on with as are this be by not or was were "
                        "his her had from at but they").split())
+# Weitere lateinische Zielsprachen: ohne eigene Marker wurde portugiesischer Text als "EN"
+# verurteilt (gemessen 2026-11-06: PT-Kapitel mit 22 Treffern als englisch abgelehnt, Text war
+# korrekt portugiesisch). Jede Sprache braucht ihre eigenen Funktionswoerter.
+SPRACH_SETS = {
+    "DE": SPRACH_DE,
+    "EN": SPRACH_EN,
+    "ES": frozenset("el la los las de del que y en un una por con para no se su al es son como".split()),
+    "FR": frozenset("le la les des de du et en un une est que qui pour dans au aux ne pas sur ce".split()),
+    "IT": frozenset("il lo la i gli le di del che e un una per con non si su al come sono".split()),
+    "PT": frozenset("o os a as de do da dos das que e em um uma para com não se seu sua ao é são como".split()),
+    "NL": frozenset("de het een en van dat die niet is in op te met voor zijn er maar als bij".split()),
+    "SV": frozenset("och att det som en ett på är av för med till den har inte om sig".split()),
+    "ID": frozenset("yang dan di ini itu dengan untuk tidak dari dalam akan pada juga ke ada".split()),
+    "SW": frozenset("na ya wa kwa ni za la cha katika hii an wana kama hilo huyu".split()),
+}
 
 
 def textsprache(text: str) -> tuple[str, int, int, float]:
@@ -798,11 +1084,14 @@ def textsprache(text: str) -> tuple[str, int, int, float]:
     (< 20 Treffer) gelten als unsicher und werden nicht bewertet.
     """
     woerter = [w.lower().strip(".,;:!?\"'()[]") for w in text.split()]
-    de = sum(1 for w in woerter if w in SPRACH_DE)
-    en = sum(1 for w in woerter if w in SPRACH_EN)
-    gesamt = de + en
-    sicher = (max(de, en) / gesamt) if gesamt else 0.0
-    return ("DE" if de > en else "EN"), de, en, sicher
+    treffer = {code: sum(1 for w in woerter if w in pool) for code, pool in SPRACH_SETS.items()}
+    de, en = treffer["DE"], treffer["EN"]
+    gesamt = sum(treffer.values())
+    if not gesamt:
+        return "EN", de, en, 0.0
+    bester = max(treffer, key=lambda c: treffer[c])
+    sicher = treffer[bester] / gesamt
+    return bester, de, en, sicher
 
 
 def block_code(block: str) -> str:
@@ -934,7 +1223,8 @@ def ist_wiederholung(schluss: str, vorgaenger: list, schwelle: float = SCHWELLE_
 def audit_manual_ending(text: str, erwarteter_block: str | None = None,
                         style_flags: dict | None = None,
                         sprache: str | None = None,
-                        figuren: list | None = None) -> tuple[bool, str]:
+                        figuren: list | None = None,
+                        silben_korridor: tuple | None = None) -> tuple[bool, str]:
     """Mechanische Endschranke fuer Sach-/Handbuchgenres: prueft NUR den letzten Absatz.
 
     Grund (gemessen 2026-10-12): der Prompt-Bann hielt das Modell von Moral-Bekenntnissen ab — es
@@ -971,23 +1261,81 @@ def audit_manual_ending(text: str, erwarteter_block: str | None = None,
     # das steht ausdruecklich als Luecke im Bericht, statt als erfuellt zu gelten.
     verse = (style_flags or {}).get("stanza_zeilen")
     if verse:
-        bloecke = [b for b in text.split("\n\n") if b.strip() and not b.strip().startswith("**[")]
-        falsch = [(len(b.strip().splitlines()), b.strip().splitlines()[0][:40]) for b in bloecke
-                  if len(b.strip().splitlines()) != verse and len(b.strip().splitlines()) > 1]
+        bloecke = [b for b in text.split("\n\n")
+                   if b.strip() and not b.strip().startswith("**[")
+                   and not b.strip().lower().startswith(("style of music:", "mood:"))]
+        def _zeilen_ohne_tag(b: str) -> list:
+            zs = [z for z in b.strip().splitlines()]
+            while zs and re.fullmatch(r"\[[A-Za-z0-9 _-]+\]", zs[0].strip()):
+                zs.pop(0)                      # Sektions-Tag ([Intro], [Chorus]) zaehlt nicht als Liedzeile
+            return zs
+
+        falsch = [(len(_zeilen_ohne_tag(b)), b.strip().splitlines()[0][:40]) for b in bloecke
+                  if len(_zeilen_ohne_tag(b)) != verse and len(_zeilen_ohne_tag(b)) > 1]
         if falsch:
             return False, (f"Strophenform verletzt: {falsch[0][0]} Zeilen statt {verse} "
                            f"(\"{falsch[0][1]}...\")")
+    # Silbenkorridor je Genre: die Prompt-Regel allein haelt nicht (gemessen 2026-11-05:
+    # 6-8 gefordert, 11 geliefert, weil das Vorkapitel die Laenge diktiert). Deshalb prueft
+    # die Schranke die Verteilung und laesst einen Teil der Zeilen ausreissen — ein harter
+    # Median-Deckel wuerde jeden Versuch scheitern lassen.
+    if silben_korridor:
+        lo, hi = silben_korridor
+        liedzeilen = []
+        for b in text.split("\n\n"):
+            for z in b.strip().splitlines():
+                t = z.strip()
+                if not t or re.fullmatch(r"\[[^\]]+\]", t):
+                    continue
+                if t.startswith(("Style of Music", "Mood", "Negativliste", "#", "**[")):
+                    continue
+                liedzeilen.append(re.sub(r"\(\d+\)", "", t))
+        if liedzeilen:
+            def _silben(s: str) -> int:
+                w = re.findall(r"[A-Za-zÄÖÜäöüß]+", s.lower())
+                return max(sum(len(re.findall(r"[aeiouäöy]+", x)) for x in w), 1)
+            werte = [_silben(z) for z in liedzeilen]
+            drin = sum(1 for v in werte if lo - 1 <= v <= hi + 1)
+            quote = 100 * drin // len(werte)
+            if quote < 60:
+                return False, (f"Silbenkorridor verletzt: nur {quote} % der {len(werte)} Zeilen "
+                               f"liegen in {lo}-{hi} Silben (Median {sorted(werte)[len(werte)//2]})")
     # Prompt-Leck: unsere eigenen Instruktionen duerfen nicht im Artefakt landen (Issue #5).
     for verboten in PROMPT_VERBOTE:
         if verboten.lower() in text.lower():
             return False, (f"Prompt-Fragment im Kapiteltext (\"{verboten}\") — "
                            "die Anweisung wurde als Erzaehltext uebernommen")
+    # Sprache je SEKTION: ein deutsches Intro in einem chinesischen Lied ist ein Defekt,
+    # auch wenn der Rest korrekt ist (gemessen 2026-11-05: 5 deutsche Zeilen im [Intro],
+    # 662 CJK-Zeichen im Rest — die Gesamtquote hat den Fehler verdeckt).
+    if sprache and sprache.upper() in ("ZH", "AR", "RU", "UK"):
+        schrift = {"ZH": r"[\u4e00-\u9fff]", "AR": r"[\u0600-\u06ff]",
+                   "RU": r"[\u0400-\u04ff]", "UK": r"[\u0400-\u04ff]"}[sprache.upper()]
+        abschnitt = "?"
+        for zeile in text.splitlines():
+            t = zeile.strip()
+            m = re.fullmatch(r"\[([^\]]+)\]", t)
+            if m:
+                abschnitt = m.group(1)
+                continue
+            if not t or t.startswith(("Style of Music", "Mood", "Negativliste", "#", "**[")):
+                continue
+            # Produktions-Cues sind absichtlich englisch (Suno-Syntax): "(Sub-bass drops in, snare rolls)"
+            if re.fullmatch(r"\([^)]*\)+", t) or t.startswith(("(", "[", "-", "–")):
+                continue
+            buchstaben = len(re.findall(r"[^\W\d_]", t))
+            treffer = len(re.findall(schrift, t))
+            if buchstaben >= 12 and treffer / buchstaben < 0.3:
+                return False, (f"Sprache je Sektion verletzt: Zeile in [{abschnitt}] ist nicht "
+                               f"{sprache} (\"{t[:40]}...\")")
     # Sprache: ein Kapitel muss in der Sprache des Buchs geschrieben sein.
     if sprache:
         erkannt, de, en, sicher = textsprache(text)
-        if (de + en) >= 20 and erkannt != sprache.upper() and sicher >= 0.6:
-            return False, (f"Sprache verletzt: Kapitel ist {erkannt} ({de} deutsche vs. {en} englische "
-                           f"Funktionswoerter, {sicher * 100:.0f}%), erwartet {sprache.upper()}")
+        treffer_anzahl = sum(1 for w in text.lower().split()
+                            if w.strip(".,;:!?\"'()[]") in SPRACH_SETS.get(sprache.upper(), ()))
+        if max(de, en, treffer_anzahl) >= 12 and erkannt != sprache.upper() and sicher >= 0.55:
+            return False, (f"Sprache verletzt: Kapitel ist {erkannt} ({treffer_anzahl} Funktionswoerter "
+                           f"der Zielsprache, Sicherheit {sicher * 100:.0f}%), erwartet {sprache.upper()}")
     # Figurenverbot — eigenes Flag, NICHT "erlaube_rede: false". Kalibriert 2026-10-12: der
     # Philosophische Essay verbietet Rede, fuehrt aber legitim Figuren (Mira, Halden); ein Filter
     # ueber erlaube_rede haette dort Fehlalarme produziert. Greift nur bei figuren_verboten: true.
@@ -1080,6 +1428,18 @@ def fremdcode_im_text(text: str, erwarteter_block: str) -> str | None:
     return None
 
 
+def _korridor(meta: dict) -> tuple | None:
+    """Silbenkorridor des Bandes aus book.json["song_genre"] (Daten in song_genres.py)."""
+    gid = (meta.get("song_genre") or "").strip().lower()
+    if not gid:
+        return None
+    try:
+        import song_genres
+    except ImportError:
+        return None
+    return (song_genres.GENRES.get(gid) or {}).get("silben")
+
+
 def erzeuge_mit_endschranke(prompt: str, model: str, host: str, style_flags: dict,
                             label: str, versuche: int = 3,
                             vorgaenger_schluesse: list | None = None,
@@ -1087,7 +1447,8 @@ def erzeuge_mit_endschranke(prompt: str, model: str, host: str, style_flags: dic
                             details: dict | None = None,
                             backend: str = "ollama",
                             sprache: str | None = None,
-                            figuren: list | None = None) -> tuple[str, bool, str, int]:
+                            figuren: list | None = None,
+                            silben_korridor: tuple | None = None) -> tuple[str, bool, str, int]:
     """Generiert und prueft das Ende, solange das Genre es verlangt.
 
     Rueckgabe (text, ende_ok, grund, gebrauchte_versuche). Nach Ausschoepfung wird der Text MIT Vermerk
@@ -1101,7 +1462,8 @@ def erzeuge_mit_endschranke(prompt: str, model: str, host: str, style_flags: dic
     for i in range(1, versuche + 1):
         text = erzeuge_text(prompt, model, host, backend=backend, details=details)
         ok, grund = audit_manual_ending(text, erwarteter_block=erwarteter_block,
-                                        style_flags=style_flags, sprache=sprache, figuren=figuren)
+                                        style_flags=style_flags, sprache=sprache, figuren=figuren,
+                                        silben_korridor=silben_korridor)
         if ok and vorgaenger_schluesse:
             # Nur die Prosa vergleichen: der Pflichtblock ist per Kapitelcode eindeutig und darf
             # nicht als "Wiederholung" gelten.
@@ -1244,9 +1606,18 @@ def _inject_gesperrt(book_id: str, buch_dir: str, meta: dict, meta_pfad: str, ro
         raise RuntimeError(f"kein offener Artikel fuer {book_id} — alle verhandelt")
 
     block = status_block(book_id, artikel, index, flags)
+    # Silbenkorridor aus dem Genre-Profil des Bandes (book.json -> song_genre)
+    korridor = None
+    try:
+        import song_genres
+        gid = (meta.get("song_genre") or "").strip().lower()
+        korridor = (song_genres.GENRES.get(gid) or {}).get("silben")
+    except ImportError:
+        korridor = None
     ok, grund = audit_manual_ending(rohtext, erwarteter_block=block if flags.get("manual_ending") else None,
                                     style_flags=flags, sprache=lang,
-                                    figuren=meta.get("characters") or [])
+                                    figuren=meta.get("characters") or [],
+                                    silben_korridor=korridor)
     if not ok:
         raise ValueError(f"Schrankenpruefung fehlgeschlagen ({grund}).\n"
                          f"Erwartete Abschlusszeile fuer Index {index}, Artikel {artikel}:\n{block}")
@@ -1409,7 +1780,8 @@ def _append_chapter_gesperrt(book_id: str | None = None, lang: str | None = None
         label=f"Kapitel {index}", versuche=3,
         vorgaenger_schluesse=vorgaenger_schluesse,
                                                              erwarteter_block=block, details=details,
-                                                             backend=backend)
+                                                             backend=backend,
+                                                             silben_korridor=_korridor(meta))
     dauer = round(time.monotonic() - t_start, 1)
     if not text.strip():
         raise RuntimeError("Leere Antwort vom Modell — Kapitel wird nicht geschrieben.")
