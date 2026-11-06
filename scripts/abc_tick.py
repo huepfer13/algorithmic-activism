@@ -34,6 +34,22 @@ def laufsuffix(variante: str) -> str:
     return abc_lauf.VARIANTEN.get(variante, {}).get("suffix", "")
 
 
+def passende_buchart(lang: str, wunsch: str) -> str:
+    """Buchart, die für diese Sprache wirklich offene Artikel hat.
+
+    Der Tick wechselt stündlich zwischen Song und Prosa; nicht jede Sprache hat
+    beides (Koreanisch hatte nur das Song-Album). Ohne diesen Fallback bricht der
+    Lauf mit rc=2 ab und meldet "kein Buch mit offenen Artikeln"
+    (gemessen 2026-11-06, 05:30).
+    """
+    sys.path.insert(0, os.path.join(REPO, "scripts"))
+    import abc_lauf
+    for art in (wunsch, "prosa" if wunsch == "song" else "song"):
+        if abc_lauf.quelle(lang, art):
+            return art
+    return wunsch
+
+
 def fehlversuche(lang: str, grenze: int = 2) -> int:
     """Wie viele der letzten Läufe dieser Sprache sind an der Schranke gerissen?
 
@@ -143,6 +159,7 @@ def main() -> int:
     # Abwechselnd Song- und Prosaband: das Konzept gilt für alle Bücher, Songs haben
     # nur Vorrang, weil dort die Struktur (SALT) am stärksten greift.
     buchart = "prosa" if zustand.get("buchart") == "song" else "song"
+    buchart = passende_buchart(lang, buchart)
     print(f"  Sprache: {lang} ({max_offen} Artikel offen) · Buchart {buchart} · "
           f"Arme {a.varianten} · Kandidaten {len(kandidaten)}")
 
