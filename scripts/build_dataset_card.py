@@ -69,7 +69,12 @@ def karte(z: dict) -> str:
     kk = z["kennzahlen"]
 
     werte = list(z["korpora"].values())
-    korpus_spanne = (f"{werte[0]}" if len(set(werte)) == 1 else f"{min(werte)}–{max(werte)}")
+    if not werte:
+        korpus_spanne = "0"
+    elif len(set(werte)) == 1:
+        korpus_spanne = f"{werte[0]}"
+    else:
+        korpus_spanne = f"{min(werte)}–{max(werte)}"
 
     def zeile(arm: str) -> str:
         v = kk.get(arm) or []
