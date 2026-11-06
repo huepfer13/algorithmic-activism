@@ -52,9 +52,31 @@ def quelle(lang: str) -> dict:
     return {}
 
 
+def verhandelt(lang: str) -> set:
+    """Vereinigung aller Artikel, die irgendein Nicht-Zwilling-Band der Sprache behandelt.
+
+    Nur book.json des ersten Bandes zu lesen war falsch: jeder ABC-Lauf legt einen
+    NEUEN Band an, der Quellband bleibt stehen — der Tick hätte ewig art_02 erzeugt
+    (gemessen 2026-11-06: zwei Läufe, beide art_02).
+    """
+    treffer = set()
+    for bj in glob.glob(f"{BOOKS}/buch_*/book.json"):
+        d = os.path.basename(os.path.dirname(bj))
+        if d.endswith(tuple(v["suffix"] for v in VARIANTEN.values() if v["suffix"])):
+            continue
+        try:
+            m = json.load(open(bj, encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        if (m.get("language") or "").lower() != lang or m.get("style") != "Songtext_Matrix":
+            continue
+        treffer.update(m.get("covered_articles") or [])
+    return treffer
+
+
 def offene_artikel(lang: str, meta: dict) -> str:
-    """Nächster Artikel, den A noch nicht verhandelt hat."""
-    covered = set(meta.get("covered_articles") or [])
+    """Nächster Artikel, den die Sprache noch nicht verhandelt hat."""
+    covered = verhandelt(lang) | set(meta.get("covered_articles") or [])
     for i in range(1, 31):
         kennung = f"art_{i:02d}"
         if kennung not in covered:
