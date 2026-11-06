@@ -34,8 +34,12 @@ def committen(nachricht: str) -> str:
     17 Bände untracked, HF-Datensatz unverändert). Der alte Kapitel-Runner hat das
     erledigt; der ist abgeschaltet, seit A/B/C allein läuft.
     """
-    pfade = ["menschenrechte_books", "web/books.json", "web/api"]
-    subprocess.run(["git", "add", *pfade], cwd=REPO, capture_output=True)
+    # Nur vorhandene Pfade stagen: ein fehlendes Pfad-Argument laesst `git add`
+    # komplett scheitern, dann wird NICHTS committet (im Prüfrepo aufgefallen, 2026-11-06).
+    pfade = [p for p in ("menschenrechte_books", "web/books.json", "web/api")
+             if os.path.exists(os.path.join(REPO, p))]
+    if pfade:
+        subprocess.run(["git", "add", "--", *pfade], cwd=REPO, capture_output=True)
     status = subprocess.run(["git", "status", "--porcelain"], cwd=REPO, capture_output=True, text=True)
     if not status.stdout.strip():
         return "nichts zu committen"
@@ -46,8 +50,15 @@ def committen(nachricht: str) -> str:
         return "Commit fehlgeschlagen: " + (c.stderr or c.stdout).strip()[:80]
     pu = subprocess.run(["git", "push", "origin", "main"], cwd=REPO, capture_output=True, text=True,
                         timeout=240)
+    if pu.returncode != 0:
+        # Der CI-Lauf schreibt die README selbst zurueck ("[skip ci]"); ohne Rebase
+        # scheitert der naechste Push als non-fast-forward (gemessen 2026-11-06).
+        subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"],
+                       cwd=REPO, capture_output=True, text=True, timeout=240)
+        pu = subprocess.run(["git", "push", "origin", "main"], cwd=REPO, capture_output=True,
+                            text=True, timeout=240)
     return "committet und gepusht" if pu.returncode == 0 else ("committet, Push fehlgeschlagen: "
-                                                             + (pu.stderr or pu.stdout).strip()[-80:])
+                                                             + (pu.stderr or pu.stdout).strip()[-100:])
 
 def main() -> int:
     ap = argparse.ArgumentParser()
