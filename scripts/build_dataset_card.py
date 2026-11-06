@@ -38,7 +38,7 @@ def kapitel_kennzahlen(datei: str) -> dict:
 
 
 def bestand() -> dict:
-    arme, sprachen, journal = Counter(), Counter(), []
+    arme, sprachen = Counter(), Counter()
     kennzahlen = {"A": [], "B": [], "C": [], "C2": []}
     for bj in glob.glob(f"{BOOKS}/buch_*/book.json"):
         d = os.path.dirname(bj)
@@ -53,7 +53,6 @@ def bestand() -> dict:
             continue
         arme[arm] += len(kap)
         for f in kap:
-            journal.append(os.path.basename(d))
             k = kapitel_kennzahlen(f)
             if k and arm in kennzahlen:
                 kennzahlen[arm].append(k)
