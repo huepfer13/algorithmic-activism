@@ -1,0 +1,27 @@
+{
+  "book_id": "buch_297_nyanyian_gerbang_kabut_c_salt",
+  "title": "Nyanyian Gerbang Kabut",
+  "pov": "first_person",
+  "language": "ID",
+  "style": "Songtext_Matrix",
+  "setting_summary": "Di kota pelabuhan yang selalu tertutup kabut, sebuah gerbang besar mengatur siapa yang boleh bernapas di udara bersih dan siapa yang harus menunggu di zona asap. Setiap warga membawa jam pasir pribadi yang terus menetes; bila habis, suara mereka dicabut dari daftar kota. Sari, penyanyi jalanan, menemukan bahwa lagu-lagu lama bisa mengembalikan butir pasir yang hilang, dan sejak itu gerbang mulai menghitung setiap nada yang ia lantunkan.",
+  "characters": [
+    "Sari",
+    "Bram",
+    "Nur",
+    "Tegar",
+    "Ibu Wulan"
+  ],
+  "covered_articles": [
+    "art_02"
+  ],
+  "current_chapter": 1,
+  "created_at": "2026-11-05T23:55:06.560303+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner.",
+  "song_mode": "erzaehl",
+  "song_genre": "dark_ambient",
+  "song_style_engine": true,
+  "variant": "C",
+  "article_mode": "bedeutung",
+  "form": "salt"
+}
