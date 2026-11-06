@@ -1,0 +1,24 @@
+{
+  "book_id": "buch_228_signal_fire_ledger",
+  "title": "Signal Fire Ledger",
+  "pov": "first_person",
+  "language": "EN",
+  "style": "Songtext_Matrix",
+  "setting_summary": "A vertical city built inside a decommissioned radio tower, where every resident's voice is metered and broadcast through a central switchboard that decides who may speak and for how long. Mara Voss runs the night shift at the switchboard and begins logging the voices the system erases. As scarcity of airtime tightens and the tower's hierarchy enforces silence quotas, the crew must decide which words are worth the cost of being heard.",
+  "characters": [
+    "Mara Voss",
+    "Tolliver",
+    "Nissa Quill",
+    "Bram Kade",
+    "The Warden of Lines"
+  ],
+  "covered_articles": [
+    "art_01"
+  ],
+  "current_chapter": 1,
+  "created_at": "2026-11-05T23:13:03.812889+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner.",
+  "song_mode": "reim",
+  "song_genre": "country",
+  "song_style_engine": true
+}
