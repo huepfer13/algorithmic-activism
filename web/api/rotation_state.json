@@ -1008,7 +1008,8 @@
     "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_161_سجل_الحظيرة",
     "r1:nvidia/nemotron-3-super-120b-a12b:free:buch_196_право_на_голос_у_глиняному_дворі",
     "r2:deepseek-chat:buch_145_kituo_cha_mwisho_cha_njia_ya_tisa",
-    "r1:deepseek-chat:buch_115_il_turno_della_parola"
+    "r1:deepseek-chat:buch_115_il_turno_della_parola",
+    "r1:nvidia/nemotron-3-ultra-550b-a55b:free:buch_165_دائرة_تصحيح_الحقوق"
   ],
   "runden": {
     "1": [
@@ -2736,6 +2737,21 @@
         "tokens": "912",
         "versuche": "1",
         "woerter": 517
+      },
+      {
+        "backend": "openrouter",
+        "buch": "buch_165_دائرة_تصحيح_الحقوق",
+        "code": "G-01-01",
+        "datei": "01_art_01_قسم_1_معايرة_الكرامة_وفق_المواصفة_القياس.md",
+        "dauer_s": "169.2",
+        "ending_ok": "true",
+        "exit": 0,
+        "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "modell": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "runde": 1,
+        "tokens": "962",
+        "versuche": "1",
+        "woerter": 312
       }
     ],
     "10": [

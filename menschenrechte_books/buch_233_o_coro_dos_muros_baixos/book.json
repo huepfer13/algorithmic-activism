@@ -14,9 +14,10 @@
   ],
   "covered_articles": [
     "art_01",
-    "art_02"
+    "art_02",
+    "art_03"
   ],
-  "current_chapter": 1,
+  "current_chapter": 2,
   "created_at": "2026-11-05T23:53:04.812662+00:00",
   "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner.",
   "song_mode": "erzaehl",

@@ -1,0 +1,24 @@
+{
+  "book_id": "buch_247_les_voix_sous_la_coupole_ab_bedeutung",
+  "title": "Les Voix sous la Coupole",
+  "pov": "first_person",
+  "language": "FR",
+  "style": "Songtext_Matrix",
+  "setting_summary": "Dans un dôme-forteresse saturé où l'air, l'eau et le droit de parole sont comptés au litre et à la seconde, une équipe de maintenance découvre que les registres de consommation peuvent être réécrits. Chaque chapitre est une chanson : la pression monte, les quotas se resserrent, et quelqu'un commence à chuchoter ce que le Règlement interdit de nommer.",
+  "characters": [
+    "Nour",
+    "Basile",
+    "Sylvie",
+    "Le Contremaître",
+    "Adama"
+  ],
+  "covered_articles": [
+    "art_02"
+  ],
+  "current_chapter": 1,
+  "created_at": "2026-11-05T22:39:38.081339+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner.",
+  "song_mode": "skizze",
+  "song_genre": "dark_ambient",
+  "song_style_engine": true
+}

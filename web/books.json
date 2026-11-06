@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 234,
+  "count": 251,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -18340,10 +18340,12 @@
         "العميد خميس",
         "نور"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 485,
-      "reading_minutes": 2,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 797,
+      "reading_minutes": 4,
       "cover": null,
       "chapters": [
         {
@@ -18362,6 +18364,24 @@
           "genre": "السخرية",
           "leak_free": "",
           "words": 485,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_01_قسم_1_معايرة_الكرامة_وفق_المواصفة_القياس.md",
+          "index": 1,
+          "title": "قسم 1: معايرة الكرامة وفق المواصفة القياسية",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "duration_seconds": "169.2",
+          "jaccard_max": "0.04",
+          "tokens_generated": "962",
+          "manual_ending_code": "G-01-01",
+          "backend": "openrouter",
+          "genre": "السخرية",
+          "leak_free": "true",
+          "words": 312,
           "reading_minutes": 2
         }
       ]
@@ -20220,14 +20240,15 @@
         "Kai",
         "Herr Brandt"
       ],
-      "chapter_count": 3,
+      "chapter_count": 4,
       "covered_articles": [
         "art_01",
         "art_02",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 1619,
-      "reading_minutes": 8,
+      "words": 2106,
+      "reading_minutes": 11,
       "cover": null,
       "chapters": [
         {
@@ -20301,6 +20322,24 @@
           "leak_free": "true",
           "words": 483,
           "reading_minutes": 2
+        },
+        {
+          "file": "04_art_04_abschnitt_4_die_klappe_im_zwischenboden.md",
+          "index": 4,
+          "title": "Abschnitt 4: Die Klappe im Zwischenboden",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.5",
+          "jaccard_max": "0.038",
+          "tokens_generated": "978",
+          "manual_ending_code": "Q-04-04",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 487,
+          "reading_minutes": 2
         }
       ]
     },
@@ -20318,12 +20357,13 @@
         "Le Contremaître",
         "Adama"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 782,
-      "reading_minutes": 4,
+      "words": 1152,
+      "reading_minutes": 6,
       "cover": null,
       "chapters": [
         {
@@ -20360,6 +20400,24 @@
           "genre": "Songtext_Matrix",
           "leak_free": "true",
           "words": 391,
+          "reading_minutes": 2
+        },
+        {
+          "file": "02_art_02_abschnitt_2_la_capsule_vide.md",
+          "index": 2,
+          "title": "Abschnitt 2: La Capsule Vide",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "682",
+          "manual_ending_code": "Q-02-02",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 370,
           "reading_minutes": 2
         }
       ]
@@ -20478,12 +20536,13 @@
         "Tobin Reyes",
         "The Adjuster"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 943,
-      "reading_minutes": 5,
+      "words": 1346,
+      "reading_minutes": 7,
       "cover": null,
       "chapters": [
         {
@@ -20521,6 +20580,24 @@
           "leak_free": "true",
           "words": 418,
           "reading_minutes": 2
+        },
+        {
+          "file": "02_art_02_abschnitt_2_the_calibration_clause.md",
+          "index": 2,
+          "title": "Abschnitt 2: The Calibration Clause",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "4.5",
+          "jaccard_max": "0.075",
+          "tokens_generated": "693",
+          "manual_ending_code": "Q-02-02",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 403,
+          "reading_minutes": 2
         }
       ]
     },
@@ -20538,13 +20615,14 @@
         "Babuu Rashidi",
         "Nuru"
       ],
-      "chapter_count": 2,
+      "chapter_count": 3,
       "covered_articles": [
         "art_01",
-        "art_02"
+        "art_02",
+        "art_03"
       ],
-      "words": 1307,
-      "reading_minutes": 7,
+      "words": 1773,
+      "reading_minutes": 9,
       "cover": null,
       "chapters": [
         {
@@ -20600,6 +20678,24 @@
           "leak_free": "true",
           "words": 488,
           "reading_minutes": 2
+        },
+        {
+          "file": "03_art_03_abschnitt_3_kipimo_cha_tatu.md",
+          "index": 3,
+          "title": "Abschnitt 3: Kipimo cha Tatu",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1157",
+          "manual_ending_code": "Q-03-03",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 466,
+          "reading_minutes": 2
         }
       ]
     },
@@ -20617,13 +20713,14 @@
         "小满",
         "铁面"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
         "art_01",
-        "art_02"
+        "art_02",
+        "art_03"
       ],
-      "words": 301,
-      "reading_minutes": 2,
+      "words": 512,
+      "reading_minutes": 3,
       "cover": null,
       "chapters": [
         {
@@ -20661,6 +20758,24 @@
           "leak_free": "true",
           "words": 213,
           "reading_minutes": 1
+        },
+        {
+          "file": "02_art_03_abschnitt_2_继电器里的纸屑.md",
+          "index": 2,
+          "title": "Abschnitt 2: 继电器里的纸屑",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.9",
+          "jaccard_max": "0.077",
+          "tokens_generated": "851",
+          "manual_ending_code": "Q-03-02",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 211,
+          "reading_minutes": 1
         }
       ]
     },
@@ -20678,14 +20793,15 @@
         "Тимур Ахметов",
         "Лена Дубова"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
         "art_01",
         "art_02",
-        "art_03"
+        "art_03",
+        "art_04"
       ],
-      "words": 590,
-      "reading_minutes": 3,
+      "words": 936,
+      "reading_minutes": 5,
       "cover": null,
       "chapters": [
         {
@@ -20722,6 +20838,24 @@
           "genre": "Songtext_Matrix",
           "leak_free": "true",
           "words": 335,
+          "reading_minutes": 2
+        },
+        {
+          "file": "02_art_04_abschnitt_2_ночная_сверка.md",
+          "index": 2,
+          "title": "Abschnitt 2: Ночная сверка",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "765",
+          "manual_ending_code": "Q-04-02",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 346,
           "reading_minutes": 2
         }
       ]
@@ -20840,12 +20974,13 @@
         "בן־ציון",
         "תמר"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 730,
-      "reading_minutes": 4,
+      "words": 1247,
+      "reading_minutes": 6,
       "cover": null,
       "chapters": [
         {
@@ -20883,6 +21018,24 @@
           "leak_free": "true",
           "words": 460,
           "reading_minutes": 2
+        },
+        {
+          "file": "02_art_02_abschnitt_2_הפתק_שמאחורי_הדלפק.md",
+          "index": 2,
+          "title": "Abschnitt 2: הפתק שמאחורי הדלפק",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "10.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1254",
+          "manual_ending_code": "Q-02-02",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 517,
+          "reading_minutes": 3
         }
       ]
     },
@@ -20900,12 +21053,13 @@
         "برهان الحارس",
         "نضال الصغيرة"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 553,
-      "reading_minutes": 3,
+      "words": 867,
+      "reading_minutes": 4,
       "cover": null,
       "chapters": [
         {
@@ -20943,6 +21097,24 @@
           "leak_free": "true",
           "words": 332,
           "reading_minutes": 2
+        },
+        {
+          "file": "02_art_02_abschnitt_2_ماء_يقاس_بالخوف.md",
+          "index": 2,
+          "title": "Abschnitt 2: ماءٌ يُقاسُ بالخوف",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.1",
+          "jaccard_max": "0.043",
+          "tokens_generated": "924",
+          "manual_ending_code": "Q-02-02",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 314,
+          "reading_minutes": 2
         }
       ]
     },
@@ -20960,12 +21132,13 @@
         "Пан Лис",
         "Соломія"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 814,
-      "reading_minutes": 4,
+      "words": 1230,
+      "reading_minutes": 6,
       "cover": null,
       "chapters": [
         {
@@ -21003,6 +21176,24 @@
           "leak_free": "true",
           "words": 416,
           "reading_minutes": 2
+        },
+        {
+          "file": "02_art_02_abschnitt_2_реле_на_дні_скриньки.md",
+          "index": 2,
+          "title": "Abschnitt 2: Реле на дні скриньки",
+          "article": "art_02",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "14.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1098",
+          "manual_ending_code": "Q-02-02",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 416,
+          "reading_minutes": 2
         }
       ]
     },
@@ -21020,12 +21211,13 @@
         "तारा",
         "बंदा"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
-        "art_01"
+        "art_01",
+        "art_02"
       ],
-      "words": 756,
-      "reading_minutes": 4,
+      "words": 1237,
+      "reading_minutes": 6,
       "cover": null,
       "chapters": [
         {
@@ -21063,6 +21255,24 @@
           "leak_free": "true",
           "words": 494,
           "reading_minutes": 2
+        },
+        {
+          "file": "02_art_02_abschnitt_2_कट_पर_बरद_दरवज_पर_सस.md",
+          "index": 2,
+          "title": "Abschnitt 2: काँटों पर बुरादा, दरवाज़े पर साँस",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.6",
+          "jaccard_max": "0.143",
+          "tokens_generated": "1344",
+          "manual_ending_code": "Q-02-02",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 481,
+          "reading_minutes": 2
         }
       ]
     },
@@ -21080,13 +21290,14 @@
         "Madalena Foz",
         "O Cego da Rádio"
       ],
-      "chapter_count": 1,
+      "chapter_count": 2,
       "covered_articles": [
         "art_01",
-        "art_02"
+        "art_02",
+        "art_03"
       ],
-      "words": 945,
-      "reading_minutes": 5,
+      "words": 1415,
+      "reading_minutes": 7,
       "cover": null,
       "chapters": [
         {
@@ -21124,6 +21335,24 @@
           "leak_free": "true",
           "words": 509,
           "reading_minutes": 3
+        },
+        {
+          "file": "02_art_03_abschnitt_2_o_protocolo_de_calibração.md",
+          "index": 2,
+          "title": "Abschnitt 2: O Protocolo de Calibração",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "875",
+          "manual_ending_code": "Q-03-02",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 470,
+          "reading_minutes": 2
         }
       ]
     },
@@ -21141,10 +21370,12 @@
         "Nieve",
         "Sergio Umbral"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 396,
-      "reading_minutes": 2,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 983,
+      "reading_minutes": 5,
       "cover": null,
       "chapters": [
         {
@@ -21164,6 +21395,24 @@
           "leak_free": "",
           "words": 396,
           "reading_minutes": 2
+        },
+        {
+          "file": "01_art_01_abschnitt_1_el_filtro_de_los_nombres_tac.md",
+          "index": 1,
+          "title": "Abschnitt 1: El filtro de los nombres tachados",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "25.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1116",
+          "manual_ending_code": "Q-01-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 587,
+          "reading_minutes": 3
         }
       ]
     },
@@ -21181,10 +21430,12 @@
         "Il Muto",
         "Vanni"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 384,
-      "reading_minutes": 2,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 888,
+      "reading_minutes": 4,
       "cover": null,
       "chapters": [
         {
@@ -21204,6 +21455,24 @@
           "leak_free": "",
           "words": 384,
           "reading_minutes": 2
+        },
+        {
+          "file": "01_art_01_abschnitt_1_la_polvere_sui_relè.md",
+          "index": 1,
+          "title": "Abschnitt 1: La polvere sui relè",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "943",
+          "manual_ending_code": "Q-01-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 504,
+          "reading_minutes": 3
         }
       ]
     },
@@ -21221,10 +21490,12 @@
         "کاوه",
         "مادر روشنک"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 225,
-      "reading_minutes": 1,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 690,
+      "reading_minutes": 3,
       "cover": null,
       "chapters": [
         {
@@ -21244,6 +21515,24 @@
           "leak_free": "",
           "words": 225,
           "reading_minutes": 1
+        },
+        {
+          "file": "01_art_01_abschnitt_1_پرونده_اول_روزنه_هوای_سرد.md",
+          "index": 1,
+          "title": "Abschnitt 1: پروندهٔ اول — روزنهٔ هوای سرد",
+          "article": "art_01",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "21.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1141",
+          "manual_ending_code": "Q-01-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 465,
+          "reading_minutes": 2
         }
       ]
     },
@@ -21261,10 +21550,12 @@
         "Tegar",
         "Ibu Wulan"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 259,
-      "reading_minutes": 1,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 607,
+      "reading_minutes": 3,
       "cover": null,
       "chapters": [
         {
@@ -21284,6 +21575,24 @@
           "leak_free": "",
           "words": 259,
           "reading_minutes": 1
+        },
+        {
+          "file": "01_art_01_abschnitt_1_lagu_pertama_di_zona_asap.md",
+          "index": 1,
+          "title": "Abschnitt 1: Lagu Pertama di Zona Asap",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "4.8",
+          "jaccard_max": "0.027",
+          "tokens_generated": "721",
+          "manual_ending_code": "Q-01-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 348,
+          "reading_minutes": 2
         }
       ]
     },
@@ -21301,10 +21610,12 @@
         "リオ",
         "ハナ"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 73,
-      "reading_minutes": 1,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 303,
+      "reading_minutes": 2,
       "cover": null,
       "chapters": [
         {
@@ -21324,6 +21635,24 @@
           "leak_free": "",
           "words": 73,
           "reading_minutes": 1
+        },
+        {
+          "file": "01_art_01_abschnitt_1_紙粉のリズム.md",
+          "index": 1,
+          "title": "Abschnitt 1: 紙粉のリズム",
+          "article": "art_01",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "16.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "778",
+          "manual_ending_code": "Q-01-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 230,
+          "reading_minutes": 1
         }
       ]
     },
@@ -21341,10 +21670,12 @@
         "늙은 뱃사공",
         "관제관 민"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 163,
-      "reading_minutes": 1,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 432,
+      "reading_minutes": 2,
       "cover": null,
       "chapters": [
         {
@@ -21364,6 +21695,24 @@
           "leak_free": "",
           "words": 163,
           "reading_minutes": 1
+        },
+        {
+          "file": "01_art_01_abschnitt_1_종이_가루와_첫_소절.md",
+          "index": 1,
+          "title": "Abschnitt 1: 종이 가루와 첫 소절",
+          "article": "art_01",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "18.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "702",
+          "manual_ending_code": "Q-01-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 269,
+          "reading_minutes": 1
         }
       ]
     },
@@ -21381,10 +21730,12 @@
         "Ome Bram",
         "Liesbeth de Wit"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 284,
-      "reading_minutes": 1,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 633,
+      "reading_minutes": 3,
       "cover": null,
       "chapters": [
         {
@@ -21404,6 +21755,24 @@
           "leak_free": "",
           "words": 284,
           "reading_minutes": 1
+        },
+        {
+          "file": "01_art_01_abschnitt_1_de_ijking_van_de_zeven_trede.md",
+          "index": 1,
+          "title": "Abschnitt 1: De Ijking van de Zeven Treden",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "649",
+          "manual_ending_code": "Q-01-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 349,
+          "reading_minutes": 2
         }
       ]
     },
@@ -21421,10 +21790,12 @@
         "Lille Orm",
         "Rådsherre Bergvall"
       ],
-      "chapter_count": 0,
-      "covered_articles": [],
-      "words": 334,
-      "reading_minutes": 2,
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 809,
+      "reading_minutes": 4,
       "cover": null,
       "chapters": [
         {
@@ -21444,6 +21815,1082 @@
           "leak_free": "",
           "words": 334,
           "reading_minutes": 2
+        },
+        {
+          "file": "01_art_01_abschnitt_1_remsorna_i_mörkret.md",
+          "index": 1,
+          "title": "Abschnitt 1: Remsorna i mörkret",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "988",
+          "manual_ending_code": "Q-01-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 475,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_242__ab_bedeutung",
+      "title": "مرايا الأرشيف المائي",
+      "language": "AR",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "مدينةٌ ساحليةٌ محاصرةٌ بجدارٍ إسمنتيٍّ عالٍ، تُقاس فيها حياةُ السكان بكميّة المياه المخصّصة لكلّ بيتٍ وتُسجَّل أنفاسُهم في أرشيفٍ مركزيٍّ لا يُفتح إلا بإذنٍ. تعيش سلمى ويوسف وحفيظة وبرهان ونضال داخل حيّ الأزقّة الضيّقة حيث تتقاطع الرقابةُ والجفافُ والحاجةُ إلى الكلام، فيصير كلُّ اعتراضٍ على جدول التوزيع معركةً حول الكرامة والمساواة وحقّ الحياة.",
+      "characters": [
+        "سلمى الهاربة",
+        "يوسف الناسخ",
+        "حفيظة الشاهدة",
+        "برهان الحارس",
+        "نضال الصغيرة"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 550,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.6",
+          "jaccard_max": "",
+          "tokens_generated": "718",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 221,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_02_abschnitt_1_مفتاح_في_الرمل_الرطب.md",
+          "index": 1,
+          "title": "Abschnitt 1: مفتاحٌ في الرملِ الرطب",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.1",
+          "jaccard_max": "0.2",
+          "tokens_generated": "983",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 329,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_243_die_stimmen_von_sektor_neun_ab_bedeutung",
+      "title": "Die Stimmen von Sektor Neun",
+      "language": "DE",
+      "style": "Songtext_Matrix",
+      "pov": "first_person",
+      "setting_summary": "In einem unterirdischen Wohnblock namens Sektor Neun leben tausende Menschen unter ständiger Lautsprecherüberwachung und knapper Luftzuteilung, während die Obrigkeit jeden öffentlichen Gesang als Aufruhr wertet. Die Bewohner dürfen nur flüstern, doch eine verbotene Liedersammlung wandert von Hand zu Hand und wird zum einzigen Mittel, Würde und Zusammenhalt zu bewahren.",
+      "characters": [
+        "Mira",
+        "Tobias",
+        "Leyla",
+        "Kai",
+        "Herr Brandt"
+      ],
+      "chapter_count": 3,
+      "covered_articles": [
+        "art_03",
+        "art_04",
+        "art_05"
+      ],
+      "words": 1617,
+      "reading_minutes": 8,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.0",
+          "jaccard_max": "",
+          "tokens_generated": "647",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 330,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_04_abschnitt_1_das_papier_im_relais.md",
+          "index": 1,
+          "title": "Abschnitt 1: Das Papier im Relais",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "2",
+          "model": "deepseek-chat",
+          "duration_seconds": "13.5",
+          "jaccard_max": "0.0",
+          "tokens_generated": "835",
+          "manual_ending_code": "Q-04-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 393,
+          "reading_minutes": 2
+        },
+        {
+          "file": "02_art_05_abschnitt_2_die_kapsel_im_schacht.md",
+          "index": 2,
+          "title": "Abschnitt 2: Die Kapsel im Schacht",
+          "article": "art_05",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "847",
+          "manual_ending_code": "Q-05-02",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 406,
+          "reading_minutes": 2
+        },
+        {
+          "file": "03_art_03_abschnitt_3_die_kalibrierung_im_flackern.md",
+          "index": 3,
+          "title": "Abschnitt 3: Die Kalibrierung im Flackern",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1039",
+          "manual_ending_code": "Q-03-03",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 488,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_244_lanterns_of_the_ledger_line_ab_bedeutung",
+      "title": "Lanterns of the Ledger Line",
+      "language": "EN",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "A vertical arcology called the Ledger Line runs on rationed daylight and a strict merit-point economy, where every resident's worth is recalculated each dawn by an unseen auditing authority. When a clerical error erases an entire floor's points, a small crew of auditors and couriers must decide whether to correct the math or expose the system that made them complicit. Each chapter hears a different resident's case, turning the arcology into a courtroom of songs where dignity, voice, and survival are weighed against the ledger.",
+      "characters": [
+        "Mara Voss",
+        "Ilyan Brecht",
+        "Sable Odum",
+        "Tobin Reyes",
+        "The Adjuster"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 994,
+      "reading_minutes": 5,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.6",
+          "jaccard_max": "",
+          "tokens_generated": "805",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 525,
+          "reading_minutes": 3
+        },
+        {
+          "file": "01_art_02_abschnitt_1_the_paper_grit.md",
+          "index": 1,
+          "title": "Abschnitt 1: The Paper Grit",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.2",
+          "jaccard_max": "0.014",
+          "tokens_generated": "708",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 469,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_245_la_nave_de_los_turnos_rotos_ab_bedeutung",
+      "title": "La nave de los turnos rotos",
+      "language": "ES",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "Una plataforma flotante de reciclaje llamada El Turno, anclada en un mar muerto, donde cada habitante debe renovar a diario su derecho a respirar aire filtrado mediante una cuota de trabajo y silencio. La Contadora administra los turnos desde una torre de vidrio opaco, mientras la escasez de agua y la vigilancia constante convierten cada palabra en un riesgo. Amara, Tobías, Nieve y Sergio descubren que los registros de turnos ocultan una lista de personas a las que se les niega la existencia, y deberán decidir si cantar lo que saben o seguir respirando.",
+      "characters": [
+        "Amara Vent",
+        "Tobías Rez",
+        "La Contadora",
+        "Nieve",
+        "Sergio Umbral"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 902,
+      "reading_minutes": 5,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.7",
+          "jaccard_max": "",
+          "tokens_generated": "732",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 396,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_01_abschnitt_1_el_turno_que_no_figura.md",
+          "index": 1,
+          "title": "Abschnitt 1: El turno que no figura",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "2",
+          "model": "deepseek-chat",
+          "duration_seconds": "15.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "975",
+          "manual_ending_code": "Q-01-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 506,
+          "reading_minutes": 3
+        }
+      ]
+    },
+    {
+      "book_id": "buch_246__ab_bedeutung",
+      "title": "آوازِ برجِ ساعتِ آبی",
+      "language": "FA",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "در برجی بندری که ساعتِ مرکزی‌اش هر روز چند دقیقه عقب می‌افتد و نگهبانان زمان را سلاحِ فشار ساخته‌اند، گروهی کوچک از ساکنان باید میان اطاعت و اعتراض انتخاب کنند. هر فصل یک پروندهٔ تازه از سکوت، صدا و حقِ نفس کشیدن را در ترانه‌های موزون می‌گشاید.",
+      "characters": [
+        "نگار",
+        "بهرام",
+        "شیرین",
+        "کاوه",
+        "مادر روشنک"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 591,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.1",
+          "jaccard_max": "",
+          "tokens_generated": "623",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 225,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_01_abschnitt_1_پرونده_کالیبراسیون_روغنریزی_.md",
+          "index": 1,
+          "title": "Abschnitt 1: پروندهٔ کالیبراسیون — روغن‌ریزیِ ساعت",
+          "article": "art_01",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "21.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "916",
+          "manual_ending_code": "Q-01-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 366,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_247_les_voix_sous_la_coupole_ab_bedeutung",
+      "title": "Les Voix sous la Coupole",
+      "language": "FR",
+      "style": "Songtext_Matrix",
+      "pov": "first_person",
+      "setting_summary": "Dans un dôme-forteresse saturé où l'air, l'eau et le droit de parole sont comptés au litre et à la seconde, une équipe de maintenance découvre que les registres de consommation peuvent être réécrits. Chaque chapitre est une chanson : la pression monte, les quotas se resserrent, et quelqu'un commence à chuchoter ce que le Règlement interdit de nommer.",
+      "characters": [
+        "Nour",
+        "Basile",
+        "Sylvie",
+        "Le Contremaître",
+        "Adama"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 830,
+      "reading_minutes": 4,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.8",
+          "jaccard_max": "",
+          "tokens_generated": "709",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 391,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_02_abschnitt_1_le_grincement_des_relais.md",
+          "index": 1,
+          "title": "Abschnitt 1: Le Grincement des Relais",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "781",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 439,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_248__ab_bedeutung",
+      "title": "השעון של כיכר המלח",
+      "language": "HE",
+      "style": "Songtext_Matrix",
+      "pov": "first_person",
+      "setting_summary": "בעיר נמל קטנה המוקפת חומות, שעון הכיכר המרכזית קובע מתי מותר לדבר, לסחור ולצאת מהבית, וכל סטייה מזמנת קנס או מעצר. מירה, כותבת פרוטוקולים לשעבר, מגלה שהשעון מכוון בכוונה כדי לדחוק את התושבים אל תוך חובות, ומתחילה לתעד את הפערים בין הזמן הרשמי לזמן האמיתי. כשהתיעוד שלה הופך לרשומה ציבורית, נפתח מאבק על מי רשאי לקבוע את הזמן — ועל מי נחשב אדם שדברו נשמע.",
+      "characters": [
+        "מירה",
+        "עוז",
+        "חנה",
+        "בן־ציון",
+        "תמר"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 643,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.1",
+          "jaccard_max": "",
+          "tokens_generated": "681",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 270,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_02_abschnitt_1_הקליברציה_של_הדקה_השתיםעשרה.md",
+          "index": 1,
+          "title": "Abschnitt 1: הקליברציה של הדקה השתים־עשרה",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "849",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 373,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_249__ab_bedeutung",
+      "title": "काँच के शहर का गीत",
+      "language": "HI",
+      "style": "Songtext_Matrix",
+      "pov": "first_person",
+      "setting_summary": "एक काँच से घिरा शहर जहाँ हर आवाज़ गूँजती और गिनी जाती है, और चुप्पी सबसे महँगी चीज़ है। शहर की हवा में उमस और निगरानी का दबाव है, और रोज़गार तथा पानी दोनों सीमित हैं। अमरा और उसके साथी गीतों में छिपे सच को गाते हुए शहर के भीतर सम्मान, आवाज़ और जीवन के अधिकार की लड़ाई शुरू करते हैं।",
+      "characters": [
+        "अमरा",
+        "कबीर",
+        "रोशनी",
+        "तारा",
+        "बंदा"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 733,
+      "reading_minutes": 4,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.2",
+          "jaccard_max": "",
+          "tokens_generated": "757",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 262,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_02_abschnitt_1_कच_क_शहर_क_सबह.md",
+          "index": 1,
+          "title": "Abschnitt 1: काँच के शहर की सुबह",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.1",
+          "jaccard_max": "0.125",
+          "tokens_generated": "1229",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 471,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_250_nyanyian_gerbang_kabut_ab_bedeutung",
+      "title": "Nyanyian Gerbang Kabut",
+      "language": "ID",
+      "style": "Songtext_Matrix",
+      "pov": "first_person",
+      "setting_summary": "Di kota pelabuhan yang selalu tertutup kabut, sebuah gerbang besar mengatur siapa yang boleh bernapas di udara bersih dan siapa yang harus menunggu di zona asap. Setiap warga membawa jam pasir pribadi yang terus menetes; bila habis, suara mereka dicabut dari daftar kota. Sari, penyanyi jalanan, menemukan bahwa lagu-lagu lama bisa mengembalikan butir pasir yang hilang, dan sejak itu gerbang mulai menghitung setiap nada yang ia lantunkan.",
+      "characters": [
+        "Sari",
+        "Bram",
+        "Nur",
+        "Tegar",
+        "Ibu Wulan"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 657,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "4.4",
+          "jaccard_max": "",
+          "tokens_generated": "549",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 259,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_01_abschnitt_1_lagu_untuk_gerbang_yang_meng.md",
+          "index": 1,
+          "title": "Abschnitt 1: Lagu untuk Gerbang yang Menghitung",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.2",
+          "jaccard_max": "0.029",
+          "tokens_generated": "830",
+          "manual_ending_code": "Q-01-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 398,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_251_il_canto_dei_tornelli_ab_bedeutung",
+      "title": "Il canto dei tornelli",
+      "language": "IT",
+      "style": "Songtext_Matrix",
+      "pov": "first_person",
+      "setting_summary": "Nella stazione sotterranea di Cerniera, un enorme snodo ferroviario sigillato da un'alluvione, mille persone vivono sotto un regime di tornelli che contano ogni passaggio e ogni respiro. La voce narrante è Nerina, una cantatrice di corridoio che trasforma gli annunci del sistema in canzoni per farle ricordare ai compagni. Quando il conteggio dei tornelli inizia a escludere qualcuno, la stazione diventa il teatro di una lotta per la dignità, la parola e il diritto di esistere nel registro.",
+      "characters": [
+        "Nerina",
+        "Tobias",
+        "Suor Clelia",
+        "Il Muto",
+        "Vanni"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 985,
+      "reading_minutes": 5,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.0",
+          "jaccard_max": "",
+          "tokens_generated": "709",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 384,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_01_abschnitt_1_il_registro_che_respira.md",
+          "index": 1,
+          "title": "Abschnitt 1: Il registro che respira",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1136",
+          "manual_ending_code": "Q-01-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 601,
+          "reading_minutes": 3
+        }
+      ]
+    },
+    {
+      "book_id": "buch_252__ab_bedeutung",
+      "title": "灯台守のリズム",
+      "language": "JA",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "潮騒だけが響く孤島の灯台に、五人のはぐれ者が閉じ込められている。灯りを絶やせば本土の船団が沈むため、交代で灯を守る過酷な勤務と監視の目が彼らを縛る。やがて灯台の記録帳に隠された真実をめぐり、仲間同士の信頼と尊厳が試されていく。",
+      "characters": [
+        "ミナ",
+        "カイ",
+        "ソウタ",
+        "リオ",
+        "ハナ"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 369,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "4.4",
+          "jaccard_max": "",
+          "tokens_generated": "509",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 73,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_01_abschnitt_1_紙粉のリズム.md",
+          "index": 1,
+          "title": "Abschnitt 1: 紙粉のリズム",
+          "article": "art_01",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "17.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "957",
+          "manual_ending_code": "Q-01-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 296,
+          "reading_minutes": 1
+        }
+      ]
+    },
+    {
+      "book_id": "buch_253__ab_bedeutung",
+      "title": "붉은 정류장의 노래",
+      "language": "KO",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "바다가 삼면을 막아선 항구도시 '붉은 정류장'은 모든 주민에게 하루 한 번의 '노래 허가증'만을 발급한다. 허가증 없이 입을 여는 순간 관제탑의 기록계가 이름을 각인하고, 세 번 각인된 자는 항구 밖 소금밭으로 추방된다. 도시의 마지막 자유 가수 한여름과 기록계를 고치는 기술자 박도윤, 그리고 이름을 잃은 아이 서리가 추방의 노래를 완성하려 한다.",
+      "characters": [
+        "한여름",
+        "박도윤",
+        "서리",
+        "늙은 뱃사공",
+        "관제관 민"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 457,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.0",
+          "jaccard_max": "",
+          "tokens_generated": "498",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 163,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_01_abschnitt_1_노래_허가증의_균열.md",
+          "index": 1,
+          "title": "Abschnitt 1: 노래 허가증의 균열",
+          "article": "art_01",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "19.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "730",
+          "manual_ending_code": "Q-01-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 294,
+          "reading_minutes": 1
+        }
+      ]
+    },
+    {
+      "book_id": "buch_254_o_coro_dos_muros_baixos_ab_bedeutung",
+      "title": "O Coro dos Muros Baixos",
+      "language": "PT",
+      "style": "Songtext_Matrix",
+      "pov": "first_person",
+      "setting_summary": "Numa cidade portuária cercada por um muro de som que engole toda palavra cantada, a Rádio Foz emite apenas ruído branco e o mercado central funciona como tribunal improvisado. Nuno Cardim, afinador de instrumentos proibidos, descobre fitas que guardam canções capazes de despertar memórias suprimidas. O tempo escorre por turnos de racionamento de ar e de voz, e cada canção entoada encurta a liberdade de quem a canta.",
+      "characters": [
+        "Nuno Cardim",
+        "Vera Sombra",
+        "Tobias Rijo",
+        "Madalena Foz",
+        "O Cego da Rádio"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_03"
+      ],
+      "words": 999,
+      "reading_minutes": 5,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.4",
+          "jaccard_max": "",
+          "tokens_generated": "729",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 436,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_03_abschnitt_1_o_turno_das_seis.md",
+          "index": 1,
+          "title": "Abschnitt 1: O Turno das Seis",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1013",
+          "manual_ending_code": "Q-03-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 563,
+          "reading_minutes": 3
+        }
+      ]
+    },
+    {
+      "book_id": "buch_255__ab_bedeutung",
+      "title": "Хроника Дома Счёта",
+      "language": "RU",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "В тесном северном городе действует Учётный Дом — учреждение, где каждому жителю ежедневно начисляют и списывают «единицы достоинства» за слова, поступки и молчание. Очередь у окошка, счётчики на стенах и вечное нехватка талонов держат людей в напряжении: похвала повышает счёт, жалоба его сжигает, а несогласие может обнулить человека за одну ночь. Вера, Марк и Тимур пытаются вести дневник прав, который сам по себе становится нарушением.",
+      "characters": [
+        "Вера Соловьёва",
+        "Марк Ковач",
+        "Старуха Зоя",
+        "Тимур Ахметов",
+        "Лена Дубова"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_04"
+      ],
+      "words": 740,
+      "reading_minutes": 4,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.0",
+          "jaccard_max": "",
+          "tokens_generated": "574",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 255,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_04_abschnitt_1_паспорт_в_переплёте.md",
+          "index": 1,
+          "title": "Abschnitt 1: Паспорт в переплёте",
+          "article": "art_04",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1042",
+          "manual_ending_code": "Q-04-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 485,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_256_s_ngerna_fr_n_vattenverket_ab_bedeutung",
+      "title": "Sångerna från Vattenverket",
+      "language": "SV",
+      "style": "Songtext_Matrix",
+      "pov": "first_person",
+      "setting_summary": "I det slutna vattenverket under den sönderfallande staden lever femhundra människor på ransonerat vatten och en enda röst som läser upp reglerna varje morgon. Mira Voss skriver hemliga sånger på pappersremsor som klistras i korridorerna, och varje natt försvinner någon som sjungit för högt. Trycket är tiden: varje dygn måste en invånare väljas ut för att vittna mot en annan, annars stängs vattnet av för alla.",
+      "characters": [
+        "Mira Voss",
+        "Tobias Ek",
+        "Syster Halina",
+        "Lille Orm",
+        "Rådsherre Bergvall"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_01"
+      ],
+      "words": 755,
+      "reading_minutes": 4,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.2",
+          "jaccard_max": "",
+          "tokens_generated": "722",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 334,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_01_abschnitt_1_rörets_tystnad.md",
+          "index": 1,
+          "title": "Abschnitt 1: Rörets Tystnad",
+          "article": "art_01",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.5",
+          "jaccard_max": "0.0",
+          "tokens_generated": "879",
+          "manual_ending_code": "Q-01-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 421,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_257_nyimbo_za_kivuli_cha_mto_ab_bedeutung",
+      "title": "Nyimbo za Kivuli cha Mto",
+      "language": "SW",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "Katika mji wa pwani unaoitwa Kilwa Mpya, jamii ndogo imefungwa ndani ya ukuta wa kambi ya uhamisho inayodhibitiwa na wakala wa serikali anayeitwa Mlinzi. Muda, chakula na sauti vinahesabiwa kwa kanuni kali, na kila mtu lazima arekodi maneno yake kila jioni kwenye daftari la sauti. Zawadi, kijana anayejua kuimba, anagundua kuwa nyimbo zinaweza kubeba ujumbe usioonekana, na hivyo kuanzisha mgogoro kuhusu haki ya kusema, utu na usawa ndani ya kambi.",
+      "characters": [
+        "Zawadi",
+        "Mhenga Kito",
+        "Asha Mwanga",
+        "Babuu Rashidi",
+        "Nuru"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_03"
+      ],
+      "words": 834,
+      "reading_minutes": 4,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.3",
+          "jaccard_max": "",
+          "tokens_generated": "847",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 329,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_03_abschnitt_1_kengele_ya_tatu_na_daftari_l.md",
+          "index": 1,
+          "title": "Abschnitt 1: Kengele ya Tatu na Daftari la Sauti",
+          "article": "art_03",
+          "ending_ok": "true",
+          "attempts": "2",
+          "model": "deepseek-chat",
+          "duration_seconds": "22.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1198",
+          "manual_ending_code": "Q-03-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 505,
+          "reading_minutes": 3
+        }
+      ]
+    },
+    {
+      "book_id": "buch_258__ab_bedeutung",
+      "title": "Крамниця позичених голосів",
+      "language": "UK",
+      "style": "Songtext_Matrix",
+      "pov": "first_person",
+      "setting_summary": "У прифронтовому місті діє підпільна крамниця, де люди обмінюють власні голоси на позичені — щоб висловитися там, де заборонено. Кожен позичений голос має термін дії, а за прострочення платять спогадом. Оксана веде облік, поки місто вчиться чути одне одного без страху.",
+      "characters": [
+        "Оксана Гриб",
+        "Тарас Вовк",
+        "Марта Дзвін",
+        "Пан Лис",
+        "Соломія"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 906,
+      "reading_minutes": 5,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.2",
+          "jaccard_max": "",
+          "tokens_generated": "1003",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 398,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_02_abschnitt_1_релеї_і_папір.md",
+          "index": 1,
+          "title": "Abschnitt 1: Релеї і папір",
+          "article": "art_02",
+          "ending_ok": "false",
+          "attempts": "3",
+          "model": "deepseek-chat",
+          "duration_seconds": "28.4",
+          "jaccard_max": "0.4",
+          "tokens_generated": "1153",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 508,
+          "reading_minutes": 3
         }
       ]
     }

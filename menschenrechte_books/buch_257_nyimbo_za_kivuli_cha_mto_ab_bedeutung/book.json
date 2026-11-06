@@ -1,0 +1,24 @@
+{
+  "book_id": "buch_257_nyimbo_za_kivuli_cha_mto_ab_bedeutung",
+  "title": "Nyimbo za Kivuli cha Mto",
+  "pov": "third_person",
+  "language": "SW",
+  "style": "Songtext_Matrix",
+  "setting_summary": "Katika mji wa pwani unaoitwa Kilwa Mpya, jamii ndogo imefungwa ndani ya ukuta wa kambi ya uhamisho inayodhibitiwa na wakala wa serikali anayeitwa Mlinzi. Muda, chakula na sauti vinahesabiwa kwa kanuni kali, na kila mtu lazima arekodi maneno yake kila jioni kwenye daftari la sauti. Zawadi, kijana anayejua kuimba, anagundua kuwa nyimbo zinaweza kubeba ujumbe usioonekana, na hivyo kuanzisha mgogoro kuhusu haki ya kusema, utu na usawa ndani ya kambi.",
+  "characters": [
+    "Zawadi",
+    "Mhenga Kito",
+    "Asha Mwanga",
+    "Babuu Rashidi",
+    "Nuru"
+  ],
+  "covered_articles": [
+    "art_03"
+  ],
+  "current_chapter": 1,
+  "created_at": "2026-11-05T22:53:01.108676+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner.",
+  "song_mode": "erzaehl",
+  "song_genre": "postrock_spoken",
+  "song_style_engine": true
+}
