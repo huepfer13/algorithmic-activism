@@ -169,3 +169,56 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
   }
 }
 ```
+
+<!-- START_DYNAMIC_STATS -->
+### Live-Kennzahlen des Korpus
+
+*Generiert aus dem Bestand, nicht geschätzt — zuletzt: 2026-11-06*
+
+| | |
+|---|---:|
+| Bände | 292 |
+| Kapitel | 718 |
+| Artikel-Abdeckung (Summe über Sprachen) | 74 / 570 |
+| Sprachen | 19 |
+| Zeichen im Korpus | 2.425.021 |
+
+**Abdeckung je Sprache** (Kapitel / Artikel von 30)
+
+| Sprache | Bände | Kapitel | Artikel |
+|---|---:|---:|---:|
+| AR | 21 | 5 | 2 / 30 |
+| DE | 47 | 505 | 29 / 30 |
+| EN | 34 | 131 | 10 / 30 |
+| ES | 28 | 10 | 2 / 30 |
+| FA | 6 | 6 | 2 / 30 |
+| FR | 21 | 4 | 2 / 30 |
+| HE | 3 | 4 | 2 / 30 |
+| HI | 4 | 5 | 2 / 30 |
+| ID | 6 | 6 | 2 / 30 |
+| IT | 21 | 4 | 1 / 30 |
+| JA | 4 | 4 | 1 / 30 |
+| KO | 3 | 3 | 1 / 30 |
+| NL | 3 | 3 | 1 / 30 |
+| PT | 22 | 6 | 4 / 30 |
+| RU | 3 | 4 | 4 / 30 |
+| SV | 3 | 3 | 1 / 30 |
+| SW | 21 | 7 | 3 / 30 |
+| UK | 21 | 4 | 2 / 30 |
+| ZH | 21 | 4 | 3 / 30 |
+
+**Varianten (A = Wortlaut, B = Bedeutung, C = SALT)**
+
+| Variante | Bände | Anteil |
+|---|---:|---:|
+| A | 239 | 82% |
+| A2 | 5 | 2% |
+| B | 24 | 8% |
+| C | 24 | 8% |
+
+**Diversität** (je niedriger der erste Wert, desto weniger Schablone)
+
+* Häufigste Stil-Phrase: `rhodes in the mids` in 13% der Zuordnungen
+* Bände mit genau 5 Figuren: 266 von 282 (94%)
+
+<!-- END_DYNAMIC_STATS -->
