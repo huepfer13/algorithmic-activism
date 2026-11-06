@@ -139,7 +139,7 @@ def offene_buecher(alle: list) -> list:
     am Runden-Deckel, ohne ein offenes Buch zu erreichen (00:00 und 03:00 ohne Kapitel).
     Der Filter greift VOR dem Rundenverbrauch, nicht im Kapitelversuch.
     """
-    offen, voll = [], []
+    offen, voll, ohne = [], [], []
     for buch in alle:
         pfad = os.path.join(REPO, "menschenrechte_books", buch, "book.json")
         try:
@@ -149,10 +149,18 @@ def offene_buecher(alle: list) -> list:
         sprache = (meta.get("language") or "").strip()
         grenze = artikel_korpus(sprache)
         verhandelt = len(meta.get("covered_articles") or [])
-        if grenze and verhandelt >= grenze:
+        if not grenze:
+            # Sprache ohne Artikelkorpus: der Band kann NIE ein Kapitel aufnehmen.
+            # Gemessen 2026-11-06: 72 Baende in AR/ES/IT/PT/UK meldeten "Alle Artikel
+            # verhandelt", obwohl sie null Kapitel hatten — und verbrannten Runden.
+            ohne.append(buch)
+        elif verhandelt >= grenze:
             voll.append(buch)
         else:
             offen.append(buch)
+    if ohne:
+        print(f"[Runner] {len(ohne)} Baende ohne Artikelkorpus (Sprache fehlt in articles/) "
+              f"— nicht im Pool: {sorted({json.load(open(os.path.join(REPO, 'menschenrechte_books', b, 'book.json'), encoding='utf-8')).get('language') for b in ohne})}", flush=True)
     if voll:
         print(f"[Runner] {len(voll)} Baende vollstaendig verhandelt — aus dem Pool genommen: "
               f"{[b[:22] for b in voll[:5]]}{' …' if len(voll) > 5 else ''}", flush=True)
