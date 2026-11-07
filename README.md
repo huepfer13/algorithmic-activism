@@ -177,11 +177,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 
 | Kennzahl | Wert |
 |---|---:|
-| Bände | 342 |
-| Kapitel | 766 |
+| Bände | 343 |
+| Kapitel | 767 |
 | Artikel-Abdeckung (Summe über Sprachen) | 82 / 570 |
 | Sprachen | 19 |
-| Zeichen im Korpus | 2.545.852 |
+| Zeichen im Korpus | 2.548.541 |
 
 **Abdeckung je Sprache** (Kapitel / Artikel von 30)
 
@@ -198,7 +198,7 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | ID | 6 | 6 | 2 / 30 |
 | IT | 24 | 7 | 2 / 30 |
 | JA | 17 | 16 | 2 / 30 |
-| KO | 12 | 12 | 2 / 30 |
+| KO | 13 | 13 | 2 / 30 |
 | NL | 12 | 12 | 2 / 30 |
 | PT | 24 | 8 | 5 / 30 |
 | RU | 3 | 4 | 4 / 30 |
@@ -216,13 +216,13 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | B | 25 | 7% |
 | C | 25 | 7% |
 | C2 | 3 | 1% |
-| C3 | 43 | 13% |
+| C3 | 44 | 13% |
 
 **Stil-Verteilung** (Stil ist je Band fest; innerhalb eines Bandes wechselt er nicht)
 
 | Stil | Bände |
 |---|---:|
-| Songtext_Matrix | 122 |
+| Songtext_Matrix | 123 |
 | Satire | 9 |
 | Fable | 8 |
 | Parabel | 6 |
@@ -238,11 +238,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 **Ketten-Tiefe** (jedes Kapitel liest genau das VORHERIGE Kapitel, nicht die ganze Historie)
 
 * Kapitel je Band: Median 1 · Maximum 28
-* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3324 Zeichen (~831 Tokens)
+* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3323 Zeichen (~831 Tokens)
 
 **Diversität** (je niedriger der erste Wert, desto weniger Schablone)
 
-* Häufigste Stil-Phrase: `filtered reese bass` in 16% der Zuordnungen
-* Bände mit genau 5 Figuren: 316 von 332 (95%)
+* Häufigste Stil-Phrase: `filtered reese bass` in 17% der Zuordnungen
+* Bände mit genau 5 Figuren: 317 von 333 (95%)
 
 <!-- END_DYNAMIC_STATS -->
