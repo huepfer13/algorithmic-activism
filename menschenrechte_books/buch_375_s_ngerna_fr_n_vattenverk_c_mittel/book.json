@@ -1,0 +1,27 @@
+{
+  "book_id": "buch_375_s_ngerna_fr_n_vattenverk_c_mittel",
+  "title": "Sångerna från Vattenverket",
+  "pov": "first_person",
+  "language": "SV",
+  "style": "Songtext_Matrix",
+  "setting_summary": "I det slutna vattenverket under den sönderfallande staden lever femhundra människor på ransonerat vatten och en enda röst som läser upp reglerna varje morgon. Mira Voss skriver hemliga sånger på pappersremsor som klistras i korridorerna, och varje natt försvinner någon som sjungit för högt. Trycket är tiden: varje dygn måste en invånare väljas ut för att vittna mot en annan, annars stängs vattnet av för alla.",
+  "characters": [
+    "Mira Voss",
+    "Tobias Ek",
+    "Syster Halina",
+    "Lille Orm",
+    "Rådsherre Bergvall"
+  ],
+  "covered_articles": [
+    "art_02"
+  ],
+  "current_chapter": 1,
+  "created_at": "2026-11-05T23:55:40.054777+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner.",
+  "song_mode": "erzaehl",
+  "song_genre": "dark_ambient",
+  "song_style_engine": true,
+  "variant": "C3",
+  "article_mode": "bedeutung",
+  "form": "standard"
+}
