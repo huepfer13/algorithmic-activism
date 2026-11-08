@@ -177,18 +177,18 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 
 | Kennzahl | Wert |
 |---|---:|
-| Bände | 374 |
-| Kapitel | 797 |
+| Bände | 376 |
+| Kapitel | 798 |
 | Artikel-Abdeckung (Summe über Sprachen) | 82 / 570 |
 | Sprachen | 19 |
-| Zeichen im Korpus | 2.621.822 |
+| Zeichen im Korpus | 2.623.592 |
 
 **Abdeckung je Sprache** (Kapitel / Artikel von 30)
 
 | Sprache | Bände | Kapitel | Artikel |
 |---|---:|---:|---:|
 | AR | 21 | 5 | 2 / 30 |
-| DE | 51 | 507 | 30 / 30 |
+| DE | 52 | 507 | 30 / 30 |
 | EN | 34 | 131 | 10 / 30 |
 | ES | 30 | 12 | 3 / 30 |
 | FA | 6 | 6 | 2 / 30 |
@@ -197,7 +197,7 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | HI | 4 | 5 | 2 / 30 |
 | ID | 6 | 6 | 2 / 30 |
 | IT | 24 | 7 | 2 / 30 |
-| JA | 24 | 23 | 2 / 30 |
+| JA | 25 | 24 | 2 / 30 |
 | KO | 20 | 20 | 2 / 30 |
 | NL | 20 | 20 | 2 / 30 |
 | PT | 24 | 8 | 5 / 30 |
@@ -211,18 +211,18 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 
 | Variante | Bände | Anteil |
 |---|---:|---:|
-| A | 242 | 65% |
+| A | 243 | 65% |
 | A2 | 5 | 1% |
 | B | 25 | 7% |
 | C | 25 | 7% |
 | C2 | 3 | 1% |
-| C3 | 74 | 20% |
+| C3 | 75 | 20% |
 
 **Stil-Verteilung** (Stil ist je Band fest; innerhalb eines Bandes wechselt er nicht)
 
 | Stil | Bände |
 |---|---:|
-| Songtext_Matrix | 153 |
+| Songtext_Matrix | 154 |
 | Satire | 9 |
 | Fable | 8 |
 | Parabel | 6 |
@@ -238,11 +238,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 **Ketten-Tiefe** (jedes Kapitel liest genau das VORHERIGE Kapitel, nicht die ganze Historie)
 
 * Kapitel je Band: Median 1 · Maximum 28
-* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3290 Zeichen (~822 Tokens)
+* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3288 Zeichen (~822 Tokens)
 
 **Diversität** (je niedriger der erste Wert, desto weniger Schablone)
 
 * Häufigste Stil-Phrase: `filtered reese bass` in 19% der Zuordnungen
-* Bände mit genau 5 Figuren: 348 von 364 (96%)
+* Bände mit genau 5 Figuren: 350 von 366 (96%)
 
 <!-- END_DYNAMIC_STATS -->
