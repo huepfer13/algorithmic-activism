@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 400,
+  "count": 425,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -31744,6 +31744,1486 @@
           "leak_free": "",
           "words": 470,
           "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_406_ja_c_mittel",
+      "title": "灯台守のリズム",
+      "language": "JA",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "潮騒だけが響く孤島の灯台に、五人のはぐれ者が閉じ込められている。灯りを絶やせば本土の船団が沈むため、交代で灯を守る過酷な勤務と監視の目が彼らを縛る。やがて灯台の記録帳に隠された真実をめぐり、仲間同士の信頼と尊厳が試されていく。",
+      "characters": [
+        "ミナ",
+        "カイ",
+        "ソウタ",
+        "リオ",
+        "ハナ"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 247,
+      "reading_minutes": 1,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "4.4",
+          "jaccard_max": "",
+          "tokens_generated": "509",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 73,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_02_abschnitt_1_紙粉のリズム.md",
+          "index": 1,
+          "title": "Abschnitt 1: 紙粉のリズム",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "876",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 174,
+          "reading_minutes": 1
+        }
+      ]
+    },
+    {
+      "book_id": "buch_407_ko_c_mittel",
+      "title": "붉은 정류장의 노래",
+      "language": "KO",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "바다가 삼면을 막아선 항구도시 '붉은 정류장'은 모든 주민에게 하루 한 번의 '노래 허가증'만을 발급한다. 허가증 없이 입을 여는 순간 관제탑의 기록계가 이름을 각인하고, 세 번 각인된 자는 항구 밖 소금밭으로 추방된다. 도시의 마지막 자유 가수 한여름과 기록계를 고치는 기술자 박도윤, 그리고 이름을 잃은 아이 서리가 추방의 노래를 완성하려 한다.",
+      "characters": [
+        "한여름",
+        "박도윤",
+        "서리",
+        "늙은 뱃사공",
+        "관제관 민"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 446,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.0",
+          "jaccard_max": "",
+          "tokens_generated": "498",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 163,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_02_abschnitt_1_소금밭의_첫_소절.md",
+          "index": 1,
+          "title": "Abschnitt 1: 소금밭의 첫 소절",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "730",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 283,
+          "reading_minutes": 1
+        }
+      ]
+    },
+    {
+      "book_id": "buch_408_nachtlicht_op_de_zevende_c_mittel",
+      "title": "Nachtlicht op de Zevende Wal",
+      "language": "NL",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "Op een verlaten binnenplaats achter de oude zeedijk wonen vijf mensen in een omgebouwde vuurtoren die door de stad wordt gedoogd zolang de stroommeter onder een geheim maximum blijft. Elke nacht krimpt het toegestane aantal woorden dat via de enige kabel naar buiten mag, en wie te veel zegt, verliest licht. De bewoners moeten kiezen tussen zwijgen en elkaar, terwijl een jonge ambtenaar de meter komt ijken en de waarheid over de telling begint te lekken.",
+      "characters": [
+        "Wende Maris",
+        "Tobias Vlek",
+        "Suze Kwartier",
+        "Ome Bram",
+        "Liesbeth de Wit"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 692,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.9",
+          "jaccard_max": "",
+          "tokens_generated": "525",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 284,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_02_abschnitt_1_de_ijk_van_de_zevende_wal.md",
+          "index": 1,
+          "title": "Abschnitt 1: De Ijk van de Zevende Wal",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.2",
+          "jaccard_max": "0.034",
+          "tokens_generated": "757",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 408,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_409_s_ngerna_fr_n_vattenverk_c_mittel",
+      "title": "Sångerna från Vattenverket",
+      "language": "SV",
+      "style": "Songtext_Matrix",
+      "pov": "first_person",
+      "setting_summary": "I det slutna vattenverket under den sönderfallande staden lever femhundra människor på ransonerat vatten och en enda röst som läser upp reglerna varje morgon. Mira Voss skriver hemliga sånger på pappersremsor som klistras i korridorerna, och varje natt försvinner någon som sjungit för högt. Trycket är tiden: varje dygn måste en invånare väljas ut för att vittna mot en annan, annars stängs vattnet av för alla.",
+      "characters": [
+        "Mira Voss",
+        "Tobias Ek",
+        "Syster Halina",
+        "Lille Orm",
+        "Rådsherre Bergvall"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 992,
+      "reading_minutes": 5,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.2",
+          "jaccard_max": "",
+          "tokens_generated": "722",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 334,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_02_abschnitt_1_remspapper_och_rost.md",
+          "index": 1,
+          "title": "Abschnitt 1: Remspapper och rost",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "2",
+          "model": "deepseek-chat",
+          "duration_seconds": "28.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1297",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 658,
+          "reading_minutes": 3
+        }
+      ]
+    },
+    {
+      "book_id": "buch_410_ja_c_mittel",
+      "title": "灯台守のリズム",
+      "language": "JA",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "潮騒だけが響く孤島の灯台に、五人のはぐれ者が閉じ込められている。灯りを絶やせば本土の船団が沈むため、交代で灯を守る過酷な勤務と監視の目が彼らを縛る。やがて灯台の記録帳に隠された真実をめぐり、仲間同士の信頼と尊厳が試されていく。",
+      "characters": [
+        "ミナ",
+        "カイ",
+        "ソウタ",
+        "リオ",
+        "ハナ"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 283,
+      "reading_minutes": 1,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "4.4",
+          "jaccard_max": "",
+          "tokens_generated": "509",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 73,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_02_abschnitt_1_紙粉とレシーブ.md",
+          "index": 1,
+          "title": "Abschnitt 1: 紙粉とレシーブ",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "878",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 210,
+          "reading_minutes": 1
+        }
+      ]
+    },
+    {
+      "book_id": "buch_411_ko_c_mittel",
+      "title": "붉은 정류장의 노래",
+      "language": "KO",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "바다가 삼면을 막아선 항구도시 '붉은 정류장'은 모든 주민에게 하루 한 번의 '노래 허가증'만을 발급한다. 허가증 없이 입을 여는 순간 관제탑의 기록계가 이름을 각인하고, 세 번 각인된 자는 항구 밖 소금밭으로 추방된다. 도시의 마지막 자유 가수 한여름과 기록계를 고치는 기술자 박도윤, 그리고 이름을 잃은 아이 서리가 추방의 노래를 완성하려 한다.",
+      "characters": [
+        "한여름",
+        "박도윤",
+        "서리",
+        "늙은 뱃사공",
+        "관제관 민"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 496,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.0",
+          "jaccard_max": "",
+          "tokens_generated": "498",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 163,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_02_abschnitt_1_종이_가루가_내리는_밤.md",
+          "index": 1,
+          "title": "Abschnitt 1: 종이 가루가 내리는 밤",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "2",
+          "model": "deepseek-chat",
+          "duration_seconds": "17.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "840",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 333,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_412_nachtlicht_op_de_zevende_c_mittel",
+      "title": "Nachtlicht op de Zevende Wal",
+      "language": "NL",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "Op een verlaten binnenplaats achter de oude zeedijk wonen vijf mensen in een omgebouwde vuurtoren die door de stad wordt gedoogd zolang de stroommeter onder een geheim maximum blijft. Elke nacht krimpt het toegestane aantal woorden dat via de enige kabel naar buiten mag, en wie te veel zegt, verliest licht. De bewoners moeten kiezen tussen zwijgen en elkaar, terwijl een jonge ambtenaar de meter komt ijken en de waarheid over de telling begint te lekken.",
+      "characters": [
+        "Wende Maris",
+        "Tobias Vlek",
+        "Suze Kwartier",
+        "Ome Bram",
+        "Liesbeth de Wit"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 593,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.9",
+          "jaccard_max": "",
+          "tokens_generated": "525",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 284,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_02_abschnitt_1_de_ijking_van_de_zevende_tre.md",
+          "index": 1,
+          "title": "Abschnitt 1: De Ijking van de Zevende Trede",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.8",
+          "jaccard_max": "0.071",
+          "tokens_generated": "583",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 309,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_413_s_ngerna_fr_n_vattenverk_c_mittel",
+      "title": "Sångerna från Vattenverket",
+      "language": "SV",
+      "style": "Songtext_Matrix",
+      "pov": "first_person",
+      "setting_summary": "I det slutna vattenverket under den sönderfallande staden lever femhundra människor på ransonerat vatten och en enda röst som läser upp reglerna varje morgon. Mira Voss skriver hemliga sånger på pappersremsor som klistras i korridorerna, och varje natt försvinner någon som sjungit för högt. Trycket är tiden: varje dygn måste en invånare väljas ut för att vittna mot en annan, annars stängs vattnet av för alla.",
+      "characters": [
+        "Mira Voss",
+        "Tobias Ek",
+        "Syster Halina",
+        "Lille Orm",
+        "Rådsherre Bergvall"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 818,
+      "reading_minutes": 4,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.2",
+          "jaccard_max": "",
+          "tokens_generated": "722",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 334,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_02_abschnitt_1_tryckfall.md",
+          "index": 1,
+          "title": "Abschnitt 1: Tryckfall",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "11.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "942",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 484,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_414_ja_c_mittel",
+      "title": "灯台守のリズム",
+      "language": "JA",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "潮騒だけが響く孤島の灯台に、五人のはぐれ者が閉じ込められている。灯りを絶やせば本土の船団が沈むため、交代で灯を守る過酷な勤務と監視の目が彼らを縛る。やがて灯台の記録帳に隠された真実をめぐり、仲間同士の信頼と尊厳が試されていく。",
+      "characters": [
+        "ミナ",
+        "カイ",
+        "ソウタ",
+        "リオ",
+        "ハナ"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 280,
+      "reading_minutes": 1,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "4.4",
+          "jaccard_max": "",
+          "tokens_generated": "509",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 73,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_02_abschnitt_1_紙粉のリズム.md",
+          "index": 1,
+          "title": "Abschnitt 1: 紙粉のリズム",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "801",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 207,
+          "reading_minutes": 1
+        }
+      ]
+    },
+    {
+      "book_id": "buch_415_ko_c_mittel",
+      "title": "붉은 정류장의 노래",
+      "language": "KO",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "바다가 삼면을 막아선 항구도시 '붉은 정류장'은 모든 주민에게 하루 한 번의 '노래 허가증'만을 발급한다. 허가증 없이 입을 여는 순간 관제탑의 기록계가 이름을 각인하고, 세 번 각인된 자는 항구 밖 소금밭으로 추방된다. 도시의 마지막 자유 가수 한여름과 기록계를 고치는 기술자 박도윤, 그리고 이름을 잃은 아이 서리가 추방의 노래를 완성하려 한다.",
+      "characters": [
+        "한여름",
+        "박도윤",
+        "서리",
+        "늙은 뱃사공",
+        "관제관 민"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 492,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.0",
+          "jaccard_max": "",
+          "tokens_generated": "498",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 163,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_02_abschnitt_1_종이_가루가_내리는_밤.md",
+          "index": 1,
+          "title": "Abschnitt 1: 종이 가루가 내리는 밤",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "859",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 329,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_416_nachtlicht_op_de_zevende_c_mittel",
+      "title": "Nachtlicht op de Zevende Wal",
+      "language": "NL",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "Op een verlaten binnenplaats achter de oude zeedijk wonen vijf mensen in een omgebouwde vuurtoren die door de stad wordt gedoogd zolang de stroommeter onder een geheim maximum blijft. Elke nacht krimpt het toegestane aantal woorden dat via de enige kabel naar buiten mag, en wie te veel zegt, verliest licht. De bewoners moeten kiezen tussen zwijgen en elkaar, terwijl een jonge ambtenaar de meter komt ijken en de waarheid over de telling begint te lekken.",
+      "characters": [
+        "Wende Maris",
+        "Tobias Vlek",
+        "Suze Kwartier",
+        "Ome Bram",
+        "Liesbeth de Wit"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 600,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.9",
+          "jaccard_max": "",
+          "tokens_generated": "525",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 284,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_02_abschnitt_1_de_meter_en_de_muis.md",
+          "index": 1,
+          "title": "Abschnitt 1: De Meter en de Muis",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.7",
+          "jaccard_max": "0.053",
+          "tokens_generated": "586",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 316,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_417_s_ngerna_fr_n_vattenverk_c_mittel",
+      "title": "Sångerna från Vattenverket",
+      "language": "SV",
+      "style": "Songtext_Matrix",
+      "pov": "first_person",
+      "setting_summary": "I det slutna vattenverket under den sönderfallande staden lever femhundra människor på ransonerat vatten och en enda röst som läser upp reglerna varje morgon. Mira Voss skriver hemliga sånger på pappersremsor som klistras i korridorerna, och varje natt försvinner någon som sjungit för högt. Trycket är tiden: varje dygn måste en invånare väljas ut för att vittna mot en annan, annars stängs vattnet av för alla.",
+      "characters": [
+        "Mira Voss",
+        "Tobias Ek",
+        "Syster Halina",
+        "Lille Orm",
+        "Rådsherre Bergvall"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 873,
+      "reading_minutes": 4,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.2",
+          "jaccard_max": "",
+          "tokens_generated": "722",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 334,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_02_abschnitt_1_papierschliff.md",
+          "index": 1,
+          "title": "Abschnitt 1: Papierschliff",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "13.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1071",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 539,
+          "reading_minutes": 3
+        }
+      ]
+    },
+    {
+      "book_id": "buch_418_ja_c_mittel",
+      "title": "灯台守のリズム",
+      "language": "JA",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "潮騒だけが響く孤島の灯台に、五人のはぐれ者が閉じ込められている。灯りを絶やせば本土の船団が沈むため、交代で灯を守る過酷な勤務と監視の目が彼らを縛る。やがて灯台の記録帳に隠された真実をめぐり、仲間同士の信頼と尊厳が試されていく。",
+      "characters": [
+        "ミナ",
+        "カイ",
+        "ソウタ",
+        "リオ",
+        "ハナ"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 208,
+      "reading_minutes": 1,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "4.4",
+          "jaccard_max": "",
+          "tokens_generated": "509",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 73,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_02_abschnitt_1_灯台のリズム_紙粉の舞う夜.md",
+          "index": 1,
+          "title": "Abschnitt 1: 灯台のリズム — 紙粉の舞う夜",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "4.9",
+          "jaccard_max": "0.0",
+          "tokens_generated": "594",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 135,
+          "reading_minutes": 1
+        }
+      ]
+    },
+    {
+      "book_id": "buch_419_ko_c_mittel",
+      "title": "붉은 정류장의 노래",
+      "language": "KO",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "바다가 삼면을 막아선 항구도시 '붉은 정류장'은 모든 주민에게 하루 한 번의 '노래 허가증'만을 발급한다. 허가증 없이 입을 여는 순간 관제탑의 기록계가 이름을 각인하고, 세 번 각인된 자는 항구 밖 소금밭으로 추방된다. 도시의 마지막 자유 가수 한여름과 기록계를 고치는 기술자 박도윤, 그리고 이름을 잃은 아이 서리가 추방의 노래를 완성하려 한다.",
+      "characters": [
+        "한여름",
+        "박도윤",
+        "서리",
+        "늙은 뱃사공",
+        "관제관 민"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 558,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.0",
+          "jaccard_max": "",
+          "tokens_generated": "498",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 163,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_02_abschnitt_1_종이_가루가_내리는_밤.md",
+          "index": 1,
+          "title": "Abschnitt 1: 종이 가루가 내리는 밤",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "2",
+          "model": "deepseek-chat",
+          "duration_seconds": "25.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1075",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 395,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_420_nachtlicht_op_de_zevende_c_mittel",
+      "title": "Nachtlicht op de Zevende Wal",
+      "language": "NL",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "Op een verlaten binnenplaats achter de oude zeedijk wonen vijf mensen in een omgebouwde vuurtoren die door de stad wordt gedoogd zolang de stroommeter onder een geheim maximum blijft. Elke nacht krimpt het toegestane aantal woorden dat via de enige kabel naar buiten mag, en wie te veel zegt, verliest licht. De bewoners moeten kiezen tussen zwijgen en elkaar, terwijl een jonge ambtenaar de meter komt ijken en de waarheid over de telling begint te lekken.",
+      "characters": [
+        "Wende Maris",
+        "Tobias Vlek",
+        "Suze Kwartier",
+        "Ome Bram",
+        "Liesbeth de Wit"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 627,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.9",
+          "jaccard_max": "",
+          "tokens_generated": "525",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 284,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_02_abschnitt_1_de_ijkdag.md",
+          "index": 1,
+          "title": "Abschnitt 1: De Ijkdag",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.8",
+          "jaccard_max": "0.071",
+          "tokens_generated": "653",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 343,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_421_s_ngerna_fr_n_vattenverk_c_mittel",
+      "title": "Sångerna från Vattenverket",
+      "language": "SV",
+      "style": "Songtext_Matrix",
+      "pov": "first_person",
+      "setting_summary": "I det slutna vattenverket under den sönderfallande staden lever femhundra människor på ransonerat vatten och en enda röst som läser upp reglerna varje morgon. Mira Voss skriver hemliga sånger på pappersremsor som klistras i korridorerna, och varje natt försvinner någon som sjungit för högt. Trycket är tiden: varje dygn måste en invånare väljas ut för att vittna mot en annan, annars stängs vattnet av för alla.",
+      "characters": [
+        "Mira Voss",
+        "Tobias Ek",
+        "Syster Halina",
+        "Lille Orm",
+        "Rådsherre Bergvall"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 785,
+      "reading_minutes": 4,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.2",
+          "jaccard_max": "",
+          "tokens_generated": "722",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 334,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_02_abschnitt_1_rörets_damm.md",
+          "index": 1,
+          "title": "Abschnitt 1: Rörets Damm",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "10.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "948",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 451,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_422_ja_c_mittel",
+      "title": "灯台守のリズム",
+      "language": "JA",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "潮騒だけが響く孤島の灯台に、五人のはぐれ者が閉じ込められている。灯りを絶やせば本土の船団が沈むため、交代で灯を守る過酷な勤務と監視の目が彼らを縛る。やがて灯台の記録帳に隠された真実をめぐり、仲間同士の信頼と尊厳が試されていく。",
+      "characters": [
+        "ミナ",
+        "カイ",
+        "ソウタ",
+        "リオ",
+        "ハナ"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 233,
+      "reading_minutes": 1,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "4.4",
+          "jaccard_max": "",
+          "tokens_generated": "509",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 73,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_02_abschnitt_1_紙粉のリズム.md",
+          "index": 1,
+          "title": "Abschnitt 1: 紙粉のリズム",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "835",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 160,
+          "reading_minutes": 1
+        }
+      ]
+    },
+    {
+      "book_id": "buch_423_ko_c_mittel",
+      "title": "붉은 정류장의 노래",
+      "language": "KO",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "바다가 삼면을 막아선 항구도시 '붉은 정류장'은 모든 주민에게 하루 한 번의 '노래 허가증'만을 발급한다. 허가증 없이 입을 여는 순간 관제탑의 기록계가 이름을 각인하고, 세 번 각인된 자는 항구 밖 소금밭으로 추방된다. 도시의 마지막 자유 가수 한여름과 기록계를 고치는 기술자 박도윤, 그리고 이름을 잃은 아이 서리가 추방의 노래를 완성하려 한다.",
+      "characters": [
+        "한여름",
+        "박도윤",
+        "서리",
+        "늙은 뱃사공",
+        "관제관 민"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 569,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.0",
+          "jaccard_max": "",
+          "tokens_generated": "498",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 163,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_02_abschnitt_1_종이_가루가_내리는_밤.md",
+          "index": 1,
+          "title": "Abschnitt 1: 종이 가루가 내리는 밤",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.7",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1032",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 406,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_424_nachtlicht_op_de_zevende_c_mittel",
+      "title": "Nachtlicht op de Zevende Wal",
+      "language": "NL",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "Op een verlaten binnenplaats achter de oude zeedijk wonen vijf mensen in een omgebouwde vuurtoren die door de stad wordt gedoogd zolang de stroommeter onder een geheim maximum blijft. Elke nacht krimpt het toegestane aantal woorden dat via de enige kabel naar buiten mag, en wie te veel zegt, verliest licht. De bewoners moeten kiezen tussen zwijgen en elkaar, terwijl een jonge ambtenaar de meter komt ijken en de waarheid over de telling begint te lekken.",
+      "characters": [
+        "Wende Maris",
+        "Tobias Vlek",
+        "Suze Kwartier",
+        "Ome Bram",
+        "Liesbeth de Wit"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 663,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.9",
+          "jaccard_max": "",
+          "tokens_generated": "525",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 284,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_02_abschnitt_1_de_ijking_van_de_zevende_wal.md",
+          "index": 1,
+          "title": "Abschnitt 1: De Ijking van de Zevende Wal",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.5",
+          "jaccard_max": "0.0",
+          "tokens_generated": "698",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 379,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_425_s_ngerna_fr_n_vattenverk_c_mittel",
+      "title": "Sångerna från Vattenverket",
+      "language": "SV",
+      "style": "Songtext_Matrix",
+      "pov": "first_person",
+      "setting_summary": "I det slutna vattenverket under den sönderfallande staden lever femhundra människor på ransonerat vatten och en enda röst som läser upp reglerna varje morgon. Mira Voss skriver hemliga sånger på pappersremsor som klistras i korridorerna, och varje natt försvinner någon som sjungit för högt. Trycket är tiden: varje dygn måste en invånare väljas ut för att vittna mot en annan, annars stängs vattnet av för alla.",
+      "characters": [
+        "Mira Voss",
+        "Tobias Ek",
+        "Syster Halina",
+        "Lille Orm",
+        "Rådsherre Bergvall"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 837,
+      "reading_minutes": 4,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.2",
+          "jaccard_max": "",
+          "tokens_generated": "722",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 334,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_02_abschnitt_1_remsorna_i_mörkret.md",
+          "index": 1,
+          "title": "Abschnitt 1: Remsorna i mörkret",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.9",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1075",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 503,
+          "reading_minutes": 3
+        }
+      ]
+    },
+    {
+      "book_id": "buch_426_ja_c_mittel",
+      "title": "灯台守のリズム",
+      "language": "JA",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "潮騒だけが響く孤島の灯台に、五人のはぐれ者が閉じ込められている。灯りを絶やせば本土の船団が沈むため、交代で灯を守る過酷な勤務と監視の目が彼らを縛る。やがて灯台の記録帳に隠された真実をめぐり、仲間同士の信頼と尊厳が試されていく。",
+      "characters": [
+        "ミナ",
+        "カイ",
+        "ソウタ",
+        "リオ",
+        "ハナ"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 293,
+      "reading_minutes": 1,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "4.4",
+          "jaccard_max": "",
+          "tokens_generated": "509",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 73,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_02_abschnitt_1_紙粉のリズム.md",
+          "index": 1,
+          "title": "Abschnitt 1: 紙粉のリズム",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "960",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 220,
+          "reading_minutes": 1
+        }
+      ]
+    },
+    {
+      "book_id": "buch_427_ko_c_mittel",
+      "title": "붉은 정류장의 노래",
+      "language": "KO",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "바다가 삼면을 막아선 항구도시 '붉은 정류장'은 모든 주민에게 하루 한 번의 '노래 허가증'만을 발급한다. 허가증 없이 입을 여는 순간 관제탑의 기록계가 이름을 각인하고, 세 번 각인된 자는 항구 밖 소금밭으로 추방된다. 도시의 마지막 자유 가수 한여름과 기록계를 고치는 기술자 박도윤, 그리고 이름을 잃은 아이 서리가 추방의 노래를 완성하려 한다.",
+      "characters": [
+        "한여름",
+        "박도윤",
+        "서리",
+        "늙은 뱃사공",
+        "관제관 민"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 499,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.0",
+          "jaccard_max": "",
+          "tokens_generated": "498",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 163,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_02_abschnitt_1_종이_가루가_내리는_밤.md",
+          "index": 1,
+          "title": "Abschnitt 1: 종이 가루가 내리는 밤",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "879",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 336,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_428_nachtlicht_op_de_zevende_c_mittel",
+      "title": "Nachtlicht op de Zevende Wal",
+      "language": "NL",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "Op een verlaten binnenplaats achter de oude zeedijk wonen vijf mensen in een omgebouwde vuurtoren die door de stad wordt gedoogd zolang de stroommeter onder een geheim maximum blijft. Elke nacht krimpt het toegestane aantal woorden dat via de enige kabel naar buiten mag, en wie te veel zegt, verliest licht. De bewoners moeten kiezen tussen zwijgen en elkaar, terwijl een jonge ambtenaar de meter komt ijken en de waarheid over de telling begint te lekken.",
+      "characters": [
+        "Wende Maris",
+        "Tobias Vlek",
+        "Suze Kwartier",
+        "Ome Bram",
+        "Liesbeth de Wit"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 726,
+      "reading_minutes": 4,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.9",
+          "jaccard_max": "",
+          "tokens_generated": "525",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 284,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_02_abschnitt_1_de_ijking_van_de_zevende_wal.md",
+          "index": 1,
+          "title": "Abschnitt 1: De Ijking van de Zevende Wal",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.5",
+          "jaccard_max": "0.0",
+          "tokens_generated": "839",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 442,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_429_s_ngerna_fr_n_vattenverk_c_mittel",
+      "title": "Sångerna från Vattenverket",
+      "language": "SV",
+      "style": "Songtext_Matrix",
+      "pov": "first_person",
+      "setting_summary": "I det slutna vattenverket under den sönderfallande staden lever femhundra människor på ransonerat vatten och en enda röst som läser upp reglerna varje morgon. Mira Voss skriver hemliga sånger på pappersremsor som klistras i korridorerna, och varje natt försvinner någon som sjungit för högt. Trycket är tiden: varje dygn måste en invånare väljas ut för att vittna mot en annan, annars stängs vattnet av för alla.",
+      "characters": [
+        "Mira Voss",
+        "Tobias Ek",
+        "Syster Halina",
+        "Lille Orm",
+        "Rådsherre Bergvall"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_02"
+      ],
+      "words": 874,
+      "reading_minutes": 4,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.2",
+          "jaccard_max": "",
+          "tokens_generated": "722",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 334,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_02_abschnitt_1_remsorna_i_röret.md",
+          "index": 1,
+          "title": "Abschnitt 1: Remsorna i Röret",
+          "article": "art_02",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "10.4",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1121",
+          "manual_ending_code": "Q-02-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 540,
+          "reading_minutes": 3
+        }
+      ]
+    },
+    {
+      "book_id": "buch_430_the_salt_ledger",
+      "title": "The Salt Ledger",
+      "language": "EN",
+      "style": "Historical_Chronicle",
+      "pov": "third_person_manual",
+      "setting_summary": "In the walled harbor city of Vaernholm, a quarantine authority called the Salt Ledger controls every entry, exit, and ration during a decade-long plague season. Its clerks record citizens' words as taxable property, and a single disputed entry can condemn a family to the outer wharves. As the Ledger's aging directorate fractures, five keepers of the record must decide whether ledgers can ever be rewritten.",
+      "characters": [
+        "Maren Voss",
+        "Elias Tamm",
+        "Sister Odile",
+        "Corvin Hask",
+        "Petra Lund"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 514,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.9",
+          "jaccard_max": "",
+          "tokens_generated": "639",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Historical_Chronicle",
+          "leak_free": "",
+          "words": 514,
+          "reading_minutes": 3
         }
       ]
     }

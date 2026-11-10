@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_430_the_salt_ledger",
+  "title": "The Salt Ledger",
+  "pov": "third_person_manual",
+  "language": "EN",
+  "style": "Historical_Chronicle",
+  "setting_summary": "In the walled harbor city of Vaernholm, a quarantine authority called the Salt Ledger controls every entry, exit, and ration during a decade-long plague season. Its clerks record citizens' words as taxable property, and a single disputed entry can condemn a family to the outer wharves. As the Ledger's aging directorate fractures, five keepers of the record must decide whether ledgers can ever be rewritten.",
+  "characters": [
+    "Maren Voss",
+    "Elias Tamm",
+    "Sister Odile",
+    "Corvin Hask",
+    "Petra Lund"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-10T23:05:15.930222+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
