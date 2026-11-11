@@ -1,0 +1,27 @@
+{
+  "book_id": "buch_456_ja_c_mittel",
+  "title": "灯台守のリズム",
+  "pov": "third_person",
+  "language": "JA",
+  "style": "Songtext_Matrix",
+  "setting_summary": "潮騒だけが響く孤島の灯台に、五人のはぐれ者が閉じ込められている。灯りを絶やせば本土の船団が沈むため、交代で灯を守る過酷な勤務と監視の目が彼らを縛る。やがて灯台の記録帳に隠された真実をめぐり、仲間同士の信頼と尊厳が試されていく。",
+  "characters": [
+    "ミナ",
+    "カイ",
+    "ソウタ",
+    "リオ",
+    "ハナ"
+  ],
+  "covered_articles": [
+    "art_02"
+  ],
+  "current_chapter": 1,
+  "created_at": "2026-11-05T23:55:13.175761+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner.",
+  "song_mode": "erzaehl",
+  "song_genre": "dark_ambient",
+  "song_style_engine": true,
+  "variant": "C3",
+  "article_mode": "bedeutung",
+  "form": "standard"
+}
