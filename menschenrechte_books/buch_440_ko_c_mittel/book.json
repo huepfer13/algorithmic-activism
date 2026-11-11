@@ -1,0 +1,27 @@
+{
+  "book_id": "buch_440_ko_c_mittel",
+  "title": "붉은 정류장의 노래",
+  "pov": "third_person",
+  "language": "KO",
+  "style": "Songtext_Matrix",
+  "setting_summary": "바다가 삼면을 막아선 항구도시 '붉은 정류장'은 모든 주민에게 하루 한 번의 '노래 허가증'만을 발급한다. 허가증 없이 입을 여는 순간 관제탑의 기록계가 이름을 각인하고, 세 번 각인된 자는 항구 밖 소금밭으로 추방된다. 도시의 마지막 자유 가수 한여름과 기록계를 고치는 기술자 박도윤, 그리고 이름을 잃은 아이 서리가 추방의 노래를 완성하려 한다.",
+  "characters": [
+    "한여름",
+    "박도윤",
+    "서리",
+    "늙은 뱃사공",
+    "관제관 민"
+  ],
+  "covered_articles": [
+    "art_02"
+  ],
+  "current_chapter": 1,
+  "created_at": "2026-11-05T23:55:21.017236+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner.",
+  "song_mode": "erzaehl",
+  "song_genre": "dark_ambient",
+  "song_style_engine": true,
+  "variant": "C3",
+  "article_mode": "bedeutung",
+  "form": "standard"
+}
