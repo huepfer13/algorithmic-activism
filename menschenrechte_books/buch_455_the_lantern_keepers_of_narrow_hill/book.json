@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_455_the_lantern_keepers_of_narrow_hill",
+  "title": "The Lantern Keepers of Narrow Hill",
+  "pov": "third_person",
+  "language": "EN",
+  "style": "Childrens_Book",
+  "setting_summary": "A small hillside town called Narrow Hill lives squeezed inside high stone walls, where every family must keep a lantern burning each night and the water rations are counted by the Warden's clerks. When the town's only spring begins to fail, the children discover that the oldest rule of all — that every voice may speak at the evening bell — has been quietly erased from the record. Together they must find a way to be heard before the light runs out.",
+  "characters": [
+    "Mira",
+    "Tobin",
+    "Old Sable",
+    "Pip",
+    "Warden Crale"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-11T23:05:14.881807+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
