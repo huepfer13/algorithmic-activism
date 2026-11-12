@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_480_the_ledger_of_unspoken_things",
+  "title": "The Ledger of Unspoken Things",
+  "pov": "first_person",
+  "language": "EN",
+  "style": "Philosophical_Essay",
+  "setting_summary": "A cliffside archive-city called Vellum, where every citizen's spoken words are tallied by a vast bureaucratic Order and silence is the only untaxed currency. Residents live in narrow terraced cells stacked above the sea, and each dawn they must declare their grievances aloud to a listening clerk or forfeit their ration of light. The archive's founding charter claims that all voices are equal, yet the Ledger quietly records whose words are heard and whose are erased.",
+  "characters": [
+    "Ivo Marchetti",
+    "Sister Perpetua",
+    "The Registrar",
+    "Nadia Volk",
+    "Old Tobin"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-12T23:05:20.637567+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
