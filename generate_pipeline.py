@@ -1338,8 +1338,11 @@ def salt_form_pruefung(text: str, sprache: str = "") -> tuple[bool, str]:
 
     if chorus:
         return False, f"SALT-Form: {chorus} Chorus-Sektion(en) — der Arm verlangt 0"
-    if glitch != 1:
-        return False, f"SALT-Form: {glitch} Glitch-Cues — verlangt ist genau einer"
+    # Mindestens einer, nicht genau einer: ein zweiter Systemabfall ist kein Defekt,
+    # ein fehlender schon. Der franzoesische Lauf lieferte 0 und fiel zu Recht durch
+    # (gemessen 2026-11-13) — die Obergrenze war unnoetig streng.
+    if glitch < 1:
+        return False, f"SALT-Form: kein Glitch-Cue — der Arm verlangt mindestens einen"
     grenze = 0.02 if modus == "3" else 0.10
     if kurz > grenze:
         return False, (f"SALT-Form: {kurz:.0%} Fragmentzeilen (erlaubt {grenze:.0%}) — "
