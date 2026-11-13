@@ -1,0 +1,27 @@
+{
+  "book_id": "buch_496_nachtlicht_op_de_zevende_c_mittel",
+  "title": "Nachtlicht op de Zevende Wal",
+  "pov": "third_person",
+  "language": "NL",
+  "style": "Songtext_Matrix",
+  "setting_summary": "Op een verlaten binnenplaats achter de oude zeedijk wonen vijf mensen in een omgebouwde vuurtoren die door de stad wordt gedoogd zolang de stroommeter onder een geheim maximum blijft. Elke nacht krimpt het toegestane aantal woorden dat via de enige kabel naar buiten mag, en wie te veel zegt, verliest licht. De bewoners moeten kiezen tussen zwijgen en elkaar, terwijl een jonge ambtenaar de meter komt ijken en de waarheid over de telling begint te lekken.",
+  "characters": [
+    "Wende Maris",
+    "Tobias Vlek",
+    "Suze Kwartier",
+    "Ome Bram",
+    "Liesbeth de Wit"
+  ],
+  "covered_articles": [
+    "art_03"
+  ],
+  "current_chapter": 1,
+  "created_at": "2026-11-05T23:55:29.829960+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner.",
+  "song_mode": "erzaehl",
+  "song_genre": "dark_ambient",
+  "song_style_engine": true,
+  "variant": "C3",
+  "article_mode": "bedeutung",
+  "form": "standard"
+}
