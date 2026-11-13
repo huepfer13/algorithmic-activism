@@ -71,17 +71,22 @@ def quelle(lang: str, buchart: str = "auto") -> dict:
     return {"pfad": pfad, "meta": m}
 
 
-def verhandelt(lang: str) -> set:
-    """Vereinigung aller Artikel, die irgendein Nicht-Zwilling-Band der Sprache behandelt.
+# Zwillinge aus der Messreihe zaehlen NICHT als verhandelt (sie sind Vergleichsarme).
+# Der Produktionsarm C3 zaehlt: er hat ebenfalls ein Suffix, ist aber der laufende Betrieb.
+EXPERIMENT = {"A2", "B", "C", "_ab_bedeutung", "_c_salt", "_a2_kontrolle"}
 
-    Nur book.json des ersten Bandes zu lesen war falsch: jeder ABC-Lauf legt einen
-    NEUEN Band an, der Quellband bleibt stehen — der Tick hätte ewig art_02 erzeugt
-    (gemessen 2026-11-06: zwei Läufe, beide art_02).
+
+def verhandelt(lang: str) -> set:
+    """Artikel, die im Betrieb wirklich behandelt wurden.
+
+    Frueher wurden ALLE Suffix-Baende uebersprungen — auch der Produktionsarm C3.
+    Folge: derselbe Artikel blieb ewig offen und wurde 44-46 Mal je Sprache neu
+    erzeugt (gemessen 2026-11-13: JA/KO/NL/SV je 44+ Wiederholungen).
     """
     treffer = set()
     for bj in glob.glob(f"{BOOKS}/buch_*/book.json"):
         d = os.path.basename(os.path.dirname(bj))
-        if d.endswith(tuple(v["suffix"] for v in VARIANTEN.values() if v["suffix"])):
+        if any(d.endswith(sfx) for sfx in EXPERIMENT):
             continue
         try:
             m = json.load(open(bj, encoding="utf-8"))
@@ -132,10 +137,14 @@ def band_anlegen(q: dict, variante: str, nummer: int) -> str:
 
 def erzeuge(lang: str, band: str, artikel: str, variante: str, backend: str, model: str) -> tuple:
     env = dict(os.environ, **VARIANTEN[variante]["env"])
-    r = subprocess.run([sys.executable, "generate_pipeline.py", "--mode", "append-chapter",
-                        "--lang", lang.upper(), "--book-id", os.path.basename(band),
-                        "--article", artikel, "--backend", backend, "--model", model],
-                       cwd=REPO, env=env, capture_output=True, text=True, timeout=900)
+    try:
+        r = subprocess.run([sys.executable, "generate_pipeline.py", "--mode", "append-chapter",
+                            "--lang", lang.upper(), "--book-id", os.path.basename(band),
+                            "--article", artikel, "--backend", backend, "--model", model],
+                           cwd=REPO, env=env, capture_output=True, text=True, timeout=900)
+    except subprocess.TimeoutExpired:
+        # 900 s ohne Ergebnis heisst: Provider haengt. Kein Traceback, sondern Befund.
+        return "", "TIMEOUT nach 900 s — Provider antwortet nicht"
     kap = sorted(glob.glob(f"{band}/*_art_*.md"))
     zeilen = [z for z in (r.stdout + r.stderr).splitlines()
               if "Versuch" in z or "Artikel-Input" in z or "angehaengt" in z]
