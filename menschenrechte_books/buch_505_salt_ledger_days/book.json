@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_505_salt_ledger_days",
+  "title": "Salt Ledger Days",
+  "pov": "first_person",
+  "language": "EN",
+  "style": "Diary",
+  "setting_summary": "A tidal salt-harvesting station on a shrinking island where every bucket, hour, and breath is logged by a single ledger, and the tide decides who eats. The station's Warden enforces quotas while rumors of a mainland audit stir quiet rebellion among the crew. Each entry traces how small acts of dignity, speech, and fairness collide with the ledger's cold arithmetic.",
+  "characters": [
+    "Mira Halvorsen",
+    "Tobias Renn",
+    "Old Cass",
+    "Bex Aduro",
+    "Warden Sile"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-13T23:05:24.167059+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
