@@ -613,6 +613,16 @@ Hook, Strophenlaenge und Ein-Wort-Sektionen:
 - Ende ohne Fazit: der Abschnitt hoert auf, ohne zu versoehnen.
 - Sprache bleibt idiomatisch und fliesst — Ziel ist ein Text, den ein Mensch gern liest."""
 
+
+SALT_MITTEL_PROSA = """SALT-MITTEL fuer Prosa (Formvorgabe, verbindlich):
+- Kein rundes Ende: der Abschnitt bricht ab oder endet mit einem Dokumentfetzen. Keine Lehre.
+- Genau EINE Unterbrechung mitten im Text, woertlich so: [SYSTEM ERROR - TEXT CUTS OFF]
+  (eigene Zeile, danach laeuft der Text weiter, als waere nichts geschehen)
+- Mindestens ein Absatz besteht aus EINEM Satz.
+- Sektionslaengen duerfen stark schwanken; keine symmetrische Gliederung.
+- Jede Zeile bleibt vollstaendiger Text: keine Fragmente, keine Ein-Wort-Absaetze.
+- Ziel: lesbare Prosa, die trotzdem nicht rund wird."""
+
 SALT_REGELN = """SALT-MODUS — die Sektionsform von oben gilt NICHT. Verbindlich:
 - Baue GENAU diese Form: {form}
 - Kein [Chorus], kein [Pre-Chorus], kein [Drop]. Der Refrain entfaellt.
@@ -793,7 +803,7 @@ BEISPIEL FUER DEN MODUS {modus.upper()} (Meter, Reim und Tag-Setzung uebernehmen
                    if style_name == "Songtext_Matrix"
                    else (f"""{titelzeile}
 - 300-500 Woerter, reine Erzaehlung, kein Meta-Text."""
-                         + ("\n\n" + {"1": SALT_PROSA, "2": SALT_MILD, "3": SALT_MITTEL}[os.environ["SALT"]]
+                         + ("\n\n" + {"1": SALT_PROSA, "2": SALT_MILD, "3": SALT_MITTEL_PROSA}[os.environ["SALT"]]
                             if os.environ.get("SALT") in ("1", "2", "3") else "")))
 
     return f"""{rahmenblock(meta, lang_name, style_name, style_desc,
