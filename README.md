@@ -177,11 +177,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 
 | Kennzahl | Wert |
 |---|---:|
-| Bände | 525 |
-| Kapitel | 940 |
-| Artikel-Abdeckung (Summe über Sprachen) | 116 / 570 |
+| Bände | 526 |
+| Kapitel | 941 |
+| Artikel-Abdeckung (Summe über Sprachen) | 117 / 570 |
 | Sprachen | 19 |
-| Zeichen im Korpus | 2.993.620 |
+| Zeichen im Korpus | 2.997.715 |
 
 **Abdeckung je Sprache** (Kapitel / Artikel von 30)
 
@@ -190,7 +190,7 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | AR | 24 | 8 | 5 / 30 |
 | DE | 52 | 507 | 30 / 30 |
 | EN | 39 | 131 | 10 / 30 |
-| ES | 31 | 13 | 4 / 30 |
+| ES | 32 | 14 | 5 / 30 |
 | FA | 8 | 8 | 4 / 30 |
 | FR | 23 | 6 | 4 / 30 |
 | HE | 5 | 6 | 4 / 30 |
@@ -216,7 +216,7 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | B | 25 | 5% |
 | C | 25 | 5% |
 | C2 | 3 | 1% |
-| C3 | 219 | 42% |
+| C3 | 220 | 42% |
 
 **Stil-Verteilung** (Stil ist je Band fest; innerhalb eines Bandes wechselt er nicht)
 
@@ -238,11 +238,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 **Ketten-Tiefe** (jedes Kapitel liest genau das VORHERIGE Kapitel, nicht die ganze Historie)
 
 * Kapitel je Band: Median 1 · Maximum 28
-* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3185 Zeichen (~796 Tokens)
+* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3186 Zeichen (~796 Tokens)
 
 **Diversität** (je niedriger der erste Wert, desto weniger Schablone)
 
 * Häufigste Stil-Phrase: `filtered reese bass` in 22% der Zuordnungen
-* Bände mit genau 5 Figuren: 497 von 515 (97%)
+* Bände mit genau 5 Figuren: 498 von 516 (97%)
 
 <!-- END_DYNAMIC_STATS -->
