@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_532_stimmen_gegen_die_stille",
+  "title": "Stimmen gegen die Stille",
+  "pov": "first_person",
+  "language": "DE",
+  "style": "Manifest",
+  "setting_summary": "In der abgeriegelten Stadt Haldenbrück regiert ein Amt für öffentliche Ruhe, das jede laute Klage als Störung protokolliert und Schweigen mit Lebensmitteln belohnt. Die Bewohner leben in engen, zugewiesenen Kammern, in denen jedes gesprochene Wort über Lautsprecher mitgehört und bei Verstoß gegen die Ruheordnung bestraft wird. Mara Voss beginnt, die vorgeschriebene Stille mit Flugblättern und heimlichen Versammlungen zu brechen, und zieht damit die Aufmerksamkeit des Kommissars Dorn auf sich.",
+  "characters": [
+    "Mara Voss",
+    "Ilyas Brenner",
+    "Tante Reike",
+    "Kommissar Dorn",
+    "der Taube Bote"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-14T23:05:44.421557+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
