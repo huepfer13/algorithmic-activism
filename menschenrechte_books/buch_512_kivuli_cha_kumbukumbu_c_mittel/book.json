@@ -1,0 +1,24 @@
+{
+  "book_id": "buch_512_kivuli_cha_kumbukumbu_c_mittel",
+  "title": "Kivuli cha Kumbukumbu",
+  "pov": "third_person",
+  "language": "SW",
+  "style": "Sayansi_Dystopia",
+  "setting_summary": "Katika jiji la chini ya ardhi la Kizazi-Kumi, mfumo wa kumbukumbu unaosimamiwa na Baraza unahifadhi na kufuta kumbukumbu za raia ili kudhibiti furaha na utii. Wakazi wanakaa katika vyumba vidogo vilivyopangwa kwa vyeo, huku kamera na alama za ufuatiliaji zikipima kila hatua, na upungufu wa hewa safi na maji ukiongeza hofu ya kila siku.",
+  "characters": [
+    "Zawadi",
+    "Mkubwa Rehema",
+    "Kito",
+    "Nuru",
+    "Babamkubwa Sefu"
+  ],
+  "covered_articles": [
+    "art_04"
+  ],
+  "current_chapter": 1,
+  "created_at": "2026-11-05T21:30:34.745125+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner.",
+  "variant": "C3",
+  "article_mode": "bedeutung",
+  "form": "standard"
+}
