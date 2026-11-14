@@ -177,21 +177,21 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 
 | Kennzahl | Wert |
 |---|---:|
-| Bände | 526 |
-| Kapitel | 941 |
-| Artikel-Abdeckung (Summe über Sprachen) | 117 / 570 |
+| Bände | 528 |
+| Kapitel | 942 |
+| Artikel-Abdeckung (Summe über Sprachen) | 118 / 570 |
 | Sprachen | 19 |
-| Zeichen im Korpus | 2.997.715 |
+| Zeichen im Korpus | 3.000.530 |
 
 **Abdeckung je Sprache** (Kapitel / Artikel von 30)
 
 | Sprache | Bände | Kapitel | Artikel |
 |---|---:|---:|---:|
 | AR | 24 | 8 | 5 / 30 |
-| DE | 52 | 507 | 30 / 30 |
+| DE | 53 | 507 | 30 / 30 |
 | EN | 39 | 131 | 10 / 30 |
 | ES | 32 | 14 | 5 / 30 |
-| FA | 8 | 8 | 4 / 30 |
+| FA | 9 | 9 | 5 / 30 |
 | FR | 23 | 6 | 4 / 30 |
 | HE | 5 | 6 | 4 / 30 |
 | HI | 6 | 7 | 4 / 30 |
@@ -211,18 +211,18 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 
 | Variante | Bände | Anteil |
 |---|---:|---:|
-| A | 248 | 47% |
+| A | 249 | 47% |
 | A2 | 5 | 1% |
 | B | 25 | 5% |
 | C | 25 | 5% |
 | C2 | 3 | 1% |
-| C3 | 220 | 42% |
+| C3 | 221 | 42% |
 
 **Stil-Verteilung** (Stil ist je Band fest; innerhalb eines Bandes wechselt er nicht)
 
 | Stil | Bände |
 |---|---:|
-| Songtext_Matrix | 288 |
+| Songtext_Matrix | 289 |
 | Satire | 9 |
 | Fable | 8 |
 | Distopia_SciFi | 8 |
@@ -238,11 +238,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 **Ketten-Tiefe** (jedes Kapitel liest genau das VORHERIGE Kapitel, nicht die ganze Historie)
 
 * Kapitel je Band: Median 1 · Maximum 28
-* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3186 Zeichen (~796 Tokens)
+* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3185 Zeichen (~796 Tokens)
 
 **Diversität** (je niedriger der erste Wert, desto weniger Schablone)
 
-* Häufigste Stil-Phrase: `filtered reese bass` in 22% der Zuordnungen
-* Bände mit genau 5 Figuren: 498 von 516 (97%)
+* Häufigste Stil-Phrase: `filtered reese bass` in 21% der Zuordnungen
+* Bände mit genau 5 Figuren: 500 von 518 (97%)
 
 <!-- END_DYNAMIC_STATS -->
