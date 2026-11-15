@@ -177,11 +177,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 
 | Kennzahl | Wert |
 |---|---:|
-| Bände | 543 |
-| Kapitel | 957 |
-| Artikel-Abdeckung (Summe über Sprachen) | 133 / 570 |
+| Bände | 544 |
+| Kapitel | 958 |
+| Artikel-Abdeckung (Summe über Sprachen) | 134 / 570 |
 | Sprachen | 19 |
-| Zeichen im Korpus | 3.044.712 |
+| Zeichen im Korpus | 3.048.597 |
 
 **Abdeckung je Sprache** (Kapitel / Artikel von 30)
 
@@ -190,7 +190,7 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | AR | 25 | 9 | 6 / 30 |
 | DE | 53 | 507 | 30 / 30 |
 | EN | 39 | 131 | 10 / 30 |
-| ES | 32 | 14 | 5 / 30 |
+| ES | 33 | 15 | 6 / 30 |
 | FA | 9 | 9 | 5 / 30 |
 | FR | 24 | 7 | 5 / 30 |
 | HE | 6 | 7 | 5 / 30 |
@@ -216,7 +216,7 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | B | 25 | 5% |
 | C | 25 | 5% |
 | C2 | 3 | 1% |
-| C3 | 236 | 43% |
+| C3 | 237 | 44% |
 
 **Stil-Verteilung** (Stil ist je Band fest; innerhalb eines Bandes wechselt er nicht)
 
@@ -228,21 +228,21 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | Fable | 8 |
 | Parabel | 6 |
 | Drame_Judiciaire | 6 |
+| SciFi_Distopía | 6 |
 | Fábula | 6 |
 | Sátira | 6 |
 | Crónica_Histórica | 6 |
-| Parábola | 6 |
 
 * 77 verschiedene Stile im Bestand · 26 Bände mit mindestens 10 Kapiteln
 
 **Ketten-Tiefe** (jedes Kapitel liest genau das VORHERIGE Kapitel, nicht die ganze Historie)
 
 * Kapitel je Band: Median 1 · Maximum 28
-* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3182 Zeichen (~795 Tokens)
+* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3182 Zeichen (~796 Tokens)
 
 **Diversität** (je niedriger der erste Wert, desto weniger Schablone)
 
 * Häufigste Stil-Phrase: `filtered reese bass` in 21% der Zuordnungen
-* Bände mit genau 5 Figuren: 514 von 533 (96%)
+* Bände mit genau 5 Figuren: 515 von 534 (96%)
 
 <!-- END_DYNAMIC_STATS -->
