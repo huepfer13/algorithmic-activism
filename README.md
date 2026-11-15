@@ -177,11 +177,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 
 | Kennzahl | Wert |
 |---|---:|
-| Bände | 551 |
-| Kapitel | 964 |
-| Artikel-Abdeckung (Summe über Sprachen) | 140 / 570 |
+| Bände | 553 |
+| Kapitel | 965 |
+| Artikel-Abdeckung (Summe über Sprachen) | 141 / 570 |
 | Sprachen | 19 |
-| Zeichen im Korpus | 3.064.405 |
+| Zeichen im Korpus | 3.065.930 |
 
 **Abdeckung je Sprache** (Kapitel / Artikel von 30)
 
@@ -189,7 +189,7 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 |---|---:|---:|---:|
 | AR | 25 | 9 | 6 / 30 |
 | DE | 53 | 507 | 30 / 30 |
-| EN | 39 | 131 | 10 / 30 |
+| EN | 40 | 131 | 10 / 30 |
 | ES | 33 | 15 | 6 / 30 |
 | FA | 10 | 10 | 6 / 30 |
 | FR | 25 | 7 | 5 / 30 |
@@ -198,7 +198,7 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | ID | 10 | 10 | 6 / 30 |
 | IT | 28 | 11 | 6 / 30 |
 | JA | 56 | 54 | 6 / 30 |
-| KO | 51 | 51 | 5 / 30 |
+| KO | 52 | 52 | 6 / 30 |
 | NL | 52 | 51 | 6 / 30 |
 | PT | 25 | 9 | 6 / 30 |
 | RU | 5 | 6 | 6 / 30 |
@@ -211,18 +211,18 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 
 | Variante | Bände | Anteil |
 |---|---:|---:|
-| A | 249 | 45% |
+| A | 250 | 45% |
 | A2 | 5 | 1% |
 | B | 25 | 5% |
 | C | 25 | 5% |
 | C2 | 3 | 1% |
-| C3 | 244 | 44% |
+| C3 | 245 | 44% |
 
 **Stil-Verteilung** (Stil ist je Band fest; innerhalb eines Bandes wechselt er nicht)
 
 | Stil | Bände |
 |---|---:|
-| Songtext_Matrix | 304 |
+| Songtext_Matrix | 305 |
 | Distopia_SciFi | 10 |
 | Satire | 9 |
 | Fable | 8 |
@@ -238,11 +238,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 **Ketten-Tiefe** (jedes Kapitel liest genau das VORHERIGE Kapitel, nicht die ganze Historie)
 
 * Kapitel je Band: Median 1 · Maximum 28
-* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3179 Zeichen (~795 Tokens)
+* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3177 Zeichen (~794 Tokens)
 
 **Diversität** (je niedriger der erste Wert, desto weniger Schablone)
 
 * Häufigste Stil-Phrase: `filtered reese bass` in 21% der Zuordnungen
-* Bände mit genau 5 Figuren: 521 von 541 (96%)
+* Bände mit genau 5 Figuren: 522 von 543 (96%)
 
 <!-- END_DYNAMIC_STATS -->
