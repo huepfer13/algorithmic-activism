@@ -177,11 +177,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 
 | Kennzahl | Wert |
 |---|---:|
-| Bände | 544 |
-| Kapitel | 958 |
-| Artikel-Abdeckung (Summe über Sprachen) | 134 / 570 |
+| Bände | 545 |
+| Kapitel | 959 |
+| Artikel-Abdeckung (Summe über Sprachen) | 135 / 570 |
 | Sprachen | 19 |
-| Zeichen im Korpus | 3.048.597 |
+| Zeichen im Korpus | 3.051.329 |
 
 **Abdeckung je Sprache** (Kapitel / Artikel von 30)
 
@@ -191,7 +191,7 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | DE | 53 | 507 | 30 / 30 |
 | EN | 39 | 131 | 10 / 30 |
 | ES | 33 | 15 | 6 / 30 |
-| FA | 9 | 9 | 5 / 30 |
+| FA | 10 | 10 | 6 / 30 |
 | FR | 24 | 7 | 5 / 30 |
 | HE | 6 | 7 | 5 / 30 |
 | HI | 7 | 8 | 5 / 30 |
@@ -216,13 +216,13 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | B | 25 | 5% |
 | C | 25 | 5% |
 | C2 | 3 | 1% |
-| C3 | 237 | 44% |
+| C3 | 238 | 44% |
 
 **Stil-Verteilung** (Stil ist je Band fest; innerhalb eines Bandes wechselt er nicht)
 
 | Stil | Bände |
 |---|---:|
-| Songtext_Matrix | 299 |
+| Songtext_Matrix | 300 |
 | Satire | 9 |
 | Distopia_SciFi | 9 |
 | Fable | 8 |
@@ -238,11 +238,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 **Ketten-Tiefe** (jedes Kapitel liest genau das VORHERIGE Kapitel, nicht die ganze Historie)
 
 * Kapitel je Band: Median 1 · Maximum 28
-* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3182 Zeichen (~796 Tokens)
+* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3182 Zeichen (~795 Tokens)
 
 **Diversität** (je niedriger der erste Wert, desto weniger Schablone)
 
 * Häufigste Stil-Phrase: `filtered reese bass` in 21% der Zuordnungen
-* Bände mit genau 5 Figuren: 515 von 534 (96%)
+* Bände mit genau 5 Figuren: 516 von 535 (96%)
 
 <!-- END_DYNAMIC_STATS -->
