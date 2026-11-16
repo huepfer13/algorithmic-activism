@@ -1,0 +1,18 @@
+{
+  "book_id": "buch_582_the_ledger_of_small_mercies",
+  "title": "The Ledger of Small Mercies",
+  "pov": "third_person",
+  "language": "EN",
+  "style": "Chamber_Play",
+  "setting_summary": "A disused customs house on a river island, sealed by floodwater for the length of a single night, holds four people and one locked cabinet of confiscated papers. As the water rises and the only radio fails, Mara Voss, an auditor sent to burn the files, must negotiate their fate with Elias Crane, the clerk who refuses to let the record vanish. The room's shrinking light and the ticking pump become the clock against which dignity, speech, and survival are bargained.",
+  "characters": [
+    "Mara Voss",
+    "Elias Crane",
+    "Sister Ines",
+    "The Warden"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-16T23:05:41.352576+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
