@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_607_stimmen_gegen_die_stille",
+  "title": "Stimmen gegen die Stille",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Manifest",
+  "setting_summary": "In der abgeriegelten Tiefebene von Haldenbrück regiert ein städtisches Amt, das jede Äußerung registriert und in Aktenbänden der Versteinerung zuführt; wer schweigt, überlebt, wer spricht, verschwindet in den Korridoren der Prüfstelle. Ein Kreis von fünf Menschen, die einander nur über geflüsterte Zettel kennen, beginnt, die Sprache der Unterdrückung öffentlich zu zerlegen, während die Stadt ihre Fristen, Zählungen und Verbote als Waffe gegen sie richtet.",
+  "characters": [
+    "Mara Venske",
+    "Tobias Rell",
+    "Ilse Brandt",
+    "Kajetan Dorr",
+    "Nadia Sorkin"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-17T23:05:44.240099+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
