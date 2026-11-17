@@ -173,15 +173,15 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 <!-- START_DYNAMIC_STATS -->
 ### Live-Kennzahlen des Korpus
 
-*Generiert aus dem Bestand, nicht geschätzt — zuletzt: 2026-11-16*
+*Generiert aus dem Bestand, nicht geschätzt — zuletzt: 2026-11-17*
 
 | Kennzahl | Wert |
 |---|---:|
-| Bände | 578 |
-| Kapitel | 988 |
-| Artikel-Abdeckung (Summe über Sprachen) | 164 / 570 |
+| Bände | 579 |
+| Kapitel | 989 |
+| Artikel-Abdeckung (Summe über Sprachen) | 165 / 570 |
 | Sprachen | 19 |
-| Zeichen im Korpus | 3.137.494 |
+| Zeichen im Korpus | 3.139.531 |
 
 **Abdeckung je Sprache** (Kapitel / Artikel von 30)
 
@@ -197,7 +197,7 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | HI | 10 | 11 | 8 / 30 |
 | ID | 12 | 12 | 8 / 30 |
 | IT | 30 | 13 | 8 / 30 |
-| JA | 57 | 55 | 7 / 30 |
+| JA | 58 | 56 | 8 / 30 |
 | KO | 53 | 53 | 7 / 30 |
 | NL | 53 | 52 | 7 / 30 |
 | PT | 26 | 10 | 7 / 30 |
@@ -216,13 +216,13 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | B | 25 | 4% |
 | C | 25 | 4% |
 | C2 | 3 | 1% |
-| C3 | 269 | 47% |
+| C3 | 270 | 47% |
 
 **Stil-Verteilung** (Stil ist je Band fest; innerhalb eines Bandes wechselt er nicht)
 
 | Stil | Bände |
 |---|---:|
-| Songtext_Matrix | 320 |
+| Songtext_Matrix | 321 |
 | Distopia_SciFi | 12 |
 | Drame_Judiciaire | 10 |
 | Satire | 9 |
@@ -238,11 +238,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 **Ketten-Tiefe** (jedes Kapitel liest genau das VORHERIGE Kapitel, nicht die ganze Historie)
 
 * Kapitel je Band: Median 1 · Maximum 28
-* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3176 Zeichen (~794 Tokens)
+* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3174 Zeichen (~794 Tokens)
 
 **Diversität** (je niedriger der erste Wert, desto weniger Schablone)
 
 * Häufigste Stil-Phrase: `filtered reese bass` in 20% der Zuordnungen
-* Bände mit genau 5 Figuren: 543 von 568 (96%)
+* Bände mit genau 5 Figuren: 544 von 569 (96%)
 
 <!-- END_DYNAMIC_STATS -->
