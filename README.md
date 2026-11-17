@@ -177,18 +177,18 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 
 | Kennzahl | Wert |
 |---|---:|
-| Bände | 601 |
-| Kapitel | 1011 |
-| Artikel-Abdeckung (Summe über Sprachen) | 187 / 570 |
+| Bände | 603 |
+| Kapitel | 1012 |
+| Artikel-Abdeckung (Summe über Sprachen) | 188 / 570 |
 | Sprachen | 19 |
-| Zeichen im Korpus | 3.205.376 |
+| Zeichen im Korpus | 3.209.339 |
 
 **Abdeckung je Sprache** (Kapitel / Artikel von 30)
 
 | Sprache | Bände | Kapitel | Artikel |
 |---|---:|---:|---:|
 | AR | 27 | 11 | 8 / 30 |
-| DE | 53 | 507 | 30 / 30 |
+| DE | 54 | 507 | 30 / 30 |
 | EN | 41 | 131 | 10 / 30 |
 | ES | 35 | 17 | 8 / 30 |
 | FA | 13 | 12 | 8 / 30 |
@@ -203,7 +203,7 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | PT | 28 | 12 | 9 / 30 |
 | RU | 8 | 9 | 9 / 30 |
 | SV | 54 | 54 | 9 / 30 |
-| SW | 26 | 12 | 8 / 30 |
+| SW | 27 | 13 | 9 / 30 |
 | UK | 27 | 10 | 8 / 30 |
 | ZH | 26 | 9 | 8 / 30 |
 
@@ -211,12 +211,12 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 
 | Variante | Bände | Anteil |
 |---|---:|---:|
-| A | 251 | 42% |
+| A | 252 | 42% |
 | A2 | 5 | 1% |
 | B | 25 | 4% |
 | C | 25 | 4% |
 | C2 | 3 | 0% |
-| C3 | 292 | 49% |
+| C3 | 293 | 49% |
 
 **Stil-Verteilung** (Stil ist je Band fest; innerhalb eines Bandes wechselt er nicht)
 
@@ -226,9 +226,9 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | Distopia_SciFi | 13 |
 | Drame_Judiciaire | 11 |
 | Satire | 9 |
+| Sayansi_Dystopia | 9 |
 | Fable | 8 |
 | SciFi_Distopía | 8 |
-| Sayansi_Dystopia | 8 |
 | 科幻反乌托邦 | 8 |
 | SciFi_Distopia | 7 |
 | Parabel | 6 |
@@ -243,6 +243,6 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 **Diversität** (je niedriger der erste Wert, desto weniger Schablone)
 
 * Häufigste Stil-Phrase: `filtered reese bass` in 20% der Zuordnungen
-* Bände mit genau 5 Figuren: 565 von 591 (96%)
+* Bände mit genau 5 Figuren: 567 von 593 (96%)
 
 <!-- END_DYNAMIC_STATS -->
