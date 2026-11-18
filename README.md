@@ -177,11 +177,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 
 | Kennzahl | Wert |
 |---|---:|
-| Bände | 616 |
-| Kapitel | 1025 |
-| Artikel-Abdeckung (Summe über Sprachen) | 201 / 570 |
+| Bände | 617 |
+| Kapitel | 1026 |
+| Artikel-Abdeckung (Summe über Sprachen) | 202 / 570 |
 | Sprachen | 19 |
-| Zeichen im Korpus | 3.246.611 |
+| Zeichen im Korpus | 3.250.783 |
 
 **Abdeckung je Sprache** (Kapitel / Artikel von 30)
 
@@ -200,7 +200,7 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | JA | 60 | 58 | 10 / 30 |
 | KO | 56 | 56 | 10 / 30 |
 | NL | 56 | 55 | 10 / 30 |
-| PT | 28 | 12 | 9 / 30 |
+| PT | 29 | 13 | 10 / 30 |
 | RU | 8 | 9 | 9 / 30 |
 | SV | 54 | 54 | 9 / 30 |
 | SW | 27 | 13 | 9 / 30 |
@@ -216,7 +216,7 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | B | 25 | 4% |
 | C | 25 | 4% |
 | C2 | 3 | 0% |
-| C3 | 306 | 50% |
+| C3 | 307 | 50% |
 
 **Stil-Verteilung** (Stil ist je Band fest; innerhalb eines Bandes wechselt er nicht)
 
@@ -230,7 +230,7 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | Sayansi_Dystopia | 9 |
 | 科幻反乌托邦 | 9 |
 | Fable | 8 |
-| SciFi_Distopia | 7 |
+| SciFi_Distopia | 8 |
 | Parabel | 6 |
 
 * 77 verschiedene Stile im Bestand · 26 Bände mit mindestens 10 Kapiteln
@@ -238,11 +238,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 **Ketten-Tiefe** (jedes Kapitel liest genau das VORHERIGE Kapitel, nicht die ganze Historie)
 
 * Kapitel je Band: Median 1 · Maximum 28
-* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3167 Zeichen (~792 Tokens)
+* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3168 Zeichen (~792 Tokens)
 
 **Diversität** (je niedriger der erste Wert, desto weniger Schablone)
 
 * Häufigste Stil-Phrase: `filtered reese bass` in 20% der Zuordnungen
-* Bände mit genau 5 Figuren: 579 von 606 (96%)
+* Bände mit genau 5 Figuren: 580 von 607 (96%)
 
 <!-- END_DYNAMIC_STATS -->
