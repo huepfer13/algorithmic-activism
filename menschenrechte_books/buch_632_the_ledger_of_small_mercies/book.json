@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_632_the_ledger_of_small_mercies",
+  "title": "The Ledger of Small Mercies",
+  "pov": "third_person",
+  "language": "EN",
+  "style": "Proverbs",
+  "setting_summary": "In the river-town of Cranholm, every household must render a yearly account of its deeds to the Warden of Weights, who decides who may draw water, trade, or speak in the common square. The town survives on rationed flour, borrowed light, and the sayings inherited from the drowned founders, which are now quoted by clerks to justify any verdict. A dispute over a widow's unrecorded kindness forces the townsfolk to test old proverbs against what the present actually needs.",
+  "characters": [
+    "Maren Voss",
+    "Old Tobin",
+    "Sister Ilse",
+    "Petr Kral",
+    "The Warden of Weights"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-18T23:06:15.811710+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
