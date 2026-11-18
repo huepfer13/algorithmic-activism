@@ -177,11 +177,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 
 | Kennzahl | Wert |
 |---|---:|
-| Bände | 626 |
-| Kapitel | 1035 |
-| Artikel-Abdeckung (Summe über Sprachen) | 211 / 570 |
+| Bände | 628 |
+| Kapitel | 1036 |
+| Artikel-Abdeckung (Summe über Sprachen) | 212 / 570 |
 | Sprachen | 19 |
-| Zeichen im Korpus | 3.277.493 |
+| Zeichen im Korpus | 3.279.982 |
 
 **Abdeckung je Sprache** (Kapitel / Artikel von 30)
 
@@ -189,11 +189,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 |---|---:|---:|---:|
 | AR | 29 | 13 | 10 / 30 |
 | DE | 54 | 507 | 30 / 30 |
-| EN | 41 | 131 | 10 / 30 |
+| EN | 42 | 131 | 10 / 30 |
 | ES | 37 | 19 | 10 / 30 |
 | FA | 15 | 14 | 10 / 30 |
 | FR | 31 | 13 | 11 / 30 |
-| HE | 11 | 12 | 10 / 30 |
+| HE | 12 | 13 | 11 / 30 |
 | HI | 12 | 13 | 10 / 30 |
 | ID | 14 | 14 | 10 / 30 |
 | IT | 32 | 15 | 10 / 30 |
@@ -211,18 +211,18 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 
 | Variante | Bände | Anteil |
 |---|---:|---:|
-| A | 252 | 40% |
+| A | 253 | 40% |
 | A2 | 5 | 1% |
 | B | 25 | 4% |
 | C | 25 | 4% |
 | C2 | 3 | 0% |
-| C3 | 316 | 50% |
+| C3 | 317 | 50% |
 
 **Stil-Verteilung** (Stil ist je Band fest; innerhalb eines Bandes wechselt er nicht)
 
 | Stil | Bände |
 |---|---:|
-| Songtext_Matrix | 350 |
+| Songtext_Matrix | 351 |
 | Distopia_SciFi | 14 |
 | Drame_Judiciaire | 13 |
 | SciFi_Distopía | 10 |
@@ -233,16 +233,16 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | SciFi_Distopia | 8 |
 | Parabel | 6 |
 
-* 77 verschiedene Stile im Bestand · 26 Bände mit mindestens 10 Kapiteln
+* 78 verschiedene Stile im Bestand · 26 Bände mit mindestens 10 Kapiteln
 
 **Ketten-Tiefe** (jedes Kapitel liest genau das VORHERIGE Kapitel, nicht die ganze Historie)
 
 * Kapitel je Band: Median 1 · Maximum 28
-* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3167 Zeichen (~792 Tokens)
+* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3166 Zeichen (~792 Tokens)
 
 **Diversität** (je niedriger der erste Wert, desto weniger Schablone)
 
 * Häufigste Stil-Phrase: `filtered reese bass` in 20% der Zuordnungen
-* Bände mit genau 5 Figuren: 588 von 616 (95%)
+* Bände mit genau 5 Figuren: 590 von 618 (95%)
 
 <!-- END_DYNAMIC_STATS -->
