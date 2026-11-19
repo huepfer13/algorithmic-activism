@@ -173,15 +173,15 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 <!-- START_DYNAMIC_STATS -->
 ### Live-Kennzahlen des Korpus
 
-*Generiert aus dem Bestand, nicht geschätzt — zuletzt: 2026-11-18*
+*Generiert aus dem Bestand, nicht geschätzt — zuletzt: 2026-11-19*
 
 | Kennzahl | Wert |
 |---|---:|
-| Bände | 628 |
-| Kapitel | 1036 |
-| Artikel-Abdeckung (Summe über Sprachen) | 212 / 570 |
+| Bände | 629 |
+| Kapitel | 1037 |
+| Artikel-Abdeckung (Summe über Sprachen) | 213 / 570 |
 | Sprachen | 19 |
-| Zeichen im Korpus | 3.279.982 |
+| Zeichen im Korpus | 3.282.960 |
 
 **Abdeckung je Sprache** (Kapitel / Artikel von 30)
 
@@ -194,7 +194,7 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | FA | 15 | 14 | 10 / 30 |
 | FR | 31 | 13 | 11 / 30 |
 | HE | 12 | 13 | 11 / 30 |
-| HI | 12 | 13 | 10 / 30 |
+| HI | 13 | 14 | 11 / 30 |
 | ID | 14 | 14 | 10 / 30 |
 | IT | 32 | 15 | 10 / 30 |
 | JA | 60 | 58 | 10 / 30 |
@@ -216,13 +216,13 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | B | 25 | 4% |
 | C | 25 | 4% |
 | C2 | 3 | 0% |
-| C3 | 317 | 50% |
+| C3 | 318 | 51% |
 
 **Stil-Verteilung** (Stil ist je Band fest; innerhalb eines Bandes wechselt er nicht)
 
 | Stil | Bände |
 |---|---:|
-| Songtext_Matrix | 351 |
+| Songtext_Matrix | 352 |
 | Distopia_SciFi | 14 |
 | Drame_Judiciaire | 13 |
 | SciFi_Distopía | 10 |
@@ -238,11 +238,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 **Ketten-Tiefe** (jedes Kapitel liest genau das VORHERIGE Kapitel, nicht die ganze Historie)
 
 * Kapitel je Band: Median 1 · Maximum 28
-* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3166 Zeichen (~792 Tokens)
+* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3166 Zeichen (~791 Tokens)
 
 **Diversität** (je niedriger der erste Wert, desto weniger Schablone)
 
 * Häufigste Stil-Phrase: `filtered reese bass` in 20% der Zuordnungen
-* Bände mit genau 5 Figuren: 590 von 618 (95%)
+* Bände mit genau 5 Figuren: 591 von 619 (95%)
 
 <!-- END_DYNAMIC_STATS -->
