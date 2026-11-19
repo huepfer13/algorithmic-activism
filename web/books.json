@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "count": 627,
+  "count": 652,
   "books": [
     {
       "book_id": "buch_001_das_büro_der_unendlichkeit",
@@ -45092,6 +45092,1483 @@
           "leak_free": "",
           "words": 368,
           "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_633_he_c_mittel",
+      "title": "השעון של כיכר המלח",
+      "language": "HE",
+      "style": "Songtext_Matrix",
+      "pov": "first_person",
+      "setting_summary": "בעיר נמל קטנה המוקפת חומות, שעון הכיכר המרכזית קובע מתי מותר לדבר, לסחור ולצאת מהבית, וכל סטייה מזמנת קנס או מעצר. מירה, כותבת פרוטוקולים לשעבר, מגלה שהשעון מכוון בכוונה כדי לדחוק את התושבים אל תוך חובות, ומתחילה לתעד את הפערים בין הזמן הרשמי לזמן האמיתי. כשהתיעוד שלה הופך לרשומה ציבורית, נפתח מאבק על מי רשאי לקבוע את הזמן — ועל מי נחשב אדם שדברו נשמע.",
+      "characters": [
+        "מירה",
+        "עוז",
+        "חנה",
+        "בן־ציון",
+        "תמר"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_11"
+      ],
+      "words": 629,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.1",
+          "jaccard_max": "",
+          "tokens_generated": "681",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 270,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_11_abschnitt_1_קליברציה_של_נייר_זכוכית.md",
+          "index": 1,
+          "title": "Abschnitt 1: קליברציה של נייר זכוכית",
+          "article": "art_11",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "12.9",
+          "jaccard_max": "0.0",
+          "tokens_generated": "868",
+          "manual_ending_code": "Q-11-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 359,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_634_hi_c_mittel",
+      "title": "काँच के शहर का गीत",
+      "language": "HI",
+      "style": "Songtext_Matrix",
+      "pov": "first_person",
+      "setting_summary": "एक काँच से घिरा शहर जहाँ हर आवाज़ गूँजती और गिनी जाती है, और चुप्पी सबसे महँगी चीज़ है। शहर की हवा में उमस और निगरानी का दबाव है, और रोज़गार तथा पानी दोनों सीमित हैं। अमरा और उसके साथी गीतों में छिपे सच को गाते हुए शहर के भीतर सम्मान, आवाज़ और जीवन के अधिकार की लड़ाई शुरू करते हैं।",
+      "characters": [
+        "अमरा",
+        "कबीर",
+        "रोशनी",
+        "तारा",
+        "बंदा"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_11"
+      ],
+      "words": 777,
+      "reading_minutes": 4,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.2",
+          "jaccard_max": "",
+          "tokens_generated": "757",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 262,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_11_abschnitt_1_कच_क_दवर_क_पछ.md",
+          "index": 1,
+          "title": "Abschnitt 1: काँच की दीवारों के पीछे",
+          "article": "art_11",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "16.7",
+          "jaccard_max": "0.167",
+          "tokens_generated": "1351",
+          "manual_ending_code": "Q-11-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 515,
+          "reading_minutes": 3
+        }
+      ]
+    },
+    {
+      "book_id": "buch_635_nyanyian_gerbang_kabut_c_mittel",
+      "title": "Nyanyian Gerbang Kabut",
+      "language": "ID",
+      "style": "Songtext_Matrix",
+      "pov": "first_person",
+      "setting_summary": "Di kota pelabuhan yang selalu tertutup kabut, sebuah gerbang besar mengatur siapa yang boleh bernapas di udara bersih dan siapa yang harus menunggu di zona asap. Setiap warga membawa jam pasir pribadi yang terus menetes; bila habis, suara mereka dicabut dari daftar kota. Sari, penyanyi jalanan, menemukan bahwa lagu-lagu lama bisa mengembalikan butir pasir yang hilang, dan sejak itu gerbang mulai menghitung setiap nada yang ia lantunkan.",
+      "characters": [
+        "Sari",
+        "Bram",
+        "Nur",
+        "Tegar",
+        "Ibu Wulan"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_11"
+      ],
+      "words": 598,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "4.4",
+          "jaccard_max": "",
+          "tokens_generated": "549",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 259,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_11_abschnitt_1_pasir_yang_menolak_jatuh.md",
+          "index": 1,
+          "title": "Abschnitt 1: Pasir yang Menolak Jatuh",
+          "article": "art_11",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.7",
+          "jaccard_max": "0.024",
+          "tokens_generated": "704",
+          "manual_ending_code": "Q-11-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 339,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_636_il_silenzio_dei_numeri_c_mittel",
+      "title": "Il Silenzio dei Numeri",
+      "language": "IT",
+      "style": "Distopia_SciFi",
+      "pov": "third_person",
+      "setting_summary": "Nella citta-stato di Cuneo Sette, ogni cittadino vive in moduli abitativi assegnati e viene valutato in tempo reale da un sistema di merito chiamato la Bilancia, che regola accesso a cibo, cure e movimento. Le risorse sono scarse e la densita abitativa estrema: chi scende sotto una soglia di punteggio viene trasferito nei Livelli Bassi, dove l'aria e filtrata e la sorveglianza non si interrompe mai. La Bilancia promette equita, ma i suoi criteri sono opachi e modificabili dall'alto.",
+      "characters": [
+        "Elia",
+        "Mara",
+        "Voss",
+        "Nadir",
+        "Sibilla"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_11"
+      ],
+      "words": 957,
+      "reading_minutes": 5,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.9",
+          "jaccard_max": "",
+          "tokens_generated": "776",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Distopia_SciFi",
+          "leak_free": "",
+          "words": 423,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_11_abschnitt_1_la_ricalibrazione.md",
+          "index": 1,
+          "title": "Abschnitt 1: La Ricalibrazione",
+          "article": "art_11",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.2",
+          "jaccard_max": "0.0",
+          "tokens_generated": "953",
+          "manual_ending_code": "S-11-01",
+          "backend": "deepseek",
+          "genre": "Distopia_SciFi",
+          "leak_free": "true",
+          "words": 534,
+          "reading_minutes": 3
+        }
+      ]
+    },
+    {
+      "book_id": "buch_637_ja_c_mittel",
+      "title": "灯台守のリズム",
+      "language": "JA",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "潮騒だけが響く孤島の灯台に、五人のはぐれ者が閉じ込められている。灯りを絶やせば本土の船団が沈むため、交代で灯を守る過酷な勤務と監視の目が彼らを縛る。やがて灯台の記録帳に隠された真実をめぐり、仲間同士の信頼と尊厳が試されていく。",
+      "characters": [
+        "ミナ",
+        "カイ",
+        "ソウタ",
+        "リオ",
+        "ハナ"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_11"
+      ],
+      "words": 215,
+      "reading_minutes": 1,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "4.4",
+          "jaccard_max": "",
+          "tokens_generated": "509",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 73,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_11_abschnitt_1_紙粉のリズム.md",
+          "index": 1,
+          "title": "Abschnitt 1: 紙粉のリズム",
+          "article": "art_11",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.0",
+          "jaccard_max": "0.0",
+          "tokens_generated": "755",
+          "manual_ending_code": "Q-11-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 142,
+          "reading_minutes": 1
+        }
+      ]
+    },
+    {
+      "book_id": "buch_638_ko_c_mittel",
+      "title": "붉은 정류장의 노래",
+      "language": "KO",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "바다가 삼면을 막아선 항구도시 '붉은 정류장'은 모든 주민에게 하루 한 번의 '노래 허가증'만을 발급한다. 허가증 없이 입을 여는 순간 관제탑의 기록계가 이름을 각인하고, 세 번 각인된 자는 항구 밖 소금밭으로 추방된다. 도시의 마지막 자유 가수 한여름과 기록계를 고치는 기술자 박도윤, 그리고 이름을 잃은 아이 서리가 추방의 노래를 완성하려 한다.",
+      "characters": [
+        "한여름",
+        "박도윤",
+        "서리",
+        "늙은 뱃사공",
+        "관제관 민"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_11"
+      ],
+      "words": 462,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.0",
+          "jaccard_max": "",
+          "tokens_generated": "498",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 163,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_11_abschnitt_1_종이_가루가_내리는_밤.md",
+          "index": 1,
+          "title": "Abschnitt 1: 종이 가루가 내리는 밤",
+          "article": "art_11",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "11.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "858",
+          "manual_ending_code": "Q-11-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 299,
+          "reading_minutes": 1
+        }
+      ]
+    },
+    {
+      "book_id": "buch_639_nachtlicht_op_de_zevende_c_mittel",
+      "title": "Nachtlicht op de Zevende Wal",
+      "language": "NL",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "Op een verlaten binnenplaats achter de oude zeedijk wonen vijf mensen in een omgebouwde vuurtoren die door de stad wordt gedoogd zolang de stroommeter onder een geheim maximum blijft. Elke nacht krimpt het toegestane aantal woorden dat via de enige kabel naar buiten mag, en wie te veel zegt, verliest licht. De bewoners moeten kiezen tussen zwijgen en elkaar, terwijl een jonge ambtenaar de meter komt ijken en de waarheid over de telling begint te lekken.",
+      "characters": [
+        "Wende Maris",
+        "Tobias Vlek",
+        "Suze Kwartier",
+        "Ome Bram",
+        "Liesbeth de Wit"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_11"
+      ],
+      "words": 619,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.9",
+          "jaccard_max": "",
+          "tokens_generated": "525",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 284,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_11_abschnitt_1_de_ijk_van_de_zevende_wal.md",
+          "index": 1,
+          "title": "Abschnitt 1: De Ijk van de Zevende Wal",
+          "article": "art_11",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.0",
+          "jaccard_max": "0.059",
+          "tokens_generated": "618",
+          "manual_ending_code": "Q-11-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 335,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_640_a_c_pula_de_vidro_c_mittel",
+      "title": "A Cúpula de Vidro",
+      "language": "PT",
+      "style": "SciFi_Distopia",
+      "pov": "third_person",
+      "setting_summary": "Numa metrópole subterrânea chamada Cúpula, a população vive sob racionamento de ar e vigilância total exercida pelo Conselho de Pureza. Quem acumula pontos de obediência sobe de nível; quem os perde é rebaixado às galerias profundas, onde o oxigênio escasseia. O tempo de permanência em cada nível é contado por um implante que todos carregam no pulso.",
+      "characters": [
+        "Iara",
+        "Tomé",
+        "Vespa",
+        "Doutor Sombra",
+        "Rui"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_11"
+      ],
+      "words": 1124,
+      "reading_minutes": 6,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.0",
+          "jaccard_max": "",
+          "tokens_generated": "825",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "SciFi_Distopia",
+          "leak_free": "",
+          "words": 480,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_11_abschnitt_1_o_pulso_morto.md",
+          "index": 1,
+          "title": "Abschnitt 1: O Pulso Morto",
+          "article": "art_11",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.0",
+          "jaccard_max": "0.097",
+          "tokens_generated": "1113",
+          "manual_ending_code": "S-11-01",
+          "backend": "deepseek",
+          "genre": "SciFi_Distopia",
+          "leak_free": "true",
+          "words": 644,
+          "reading_minutes": 3
+        }
+      ]
+    },
+    {
+      "book_id": "buch_641_ru_c_mittel",
+      "title": "Хроника Дома Счёта",
+      "language": "RU",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "В тесном северном городе действует Учётный Дом — учреждение, где каждому жителю ежедневно начисляют и списывают «единицы достоинства» за слова, поступки и молчание. Очередь у окошка, счётчики на стенах и вечное нехватка талонов держат людей в напряжении: похвала повышает счёт, жалоба его сжигает, а несогласие может обнулить человека за одну ночь. Вера, Марк и Тимур пытаются вести дневник прав, который сам по себе становится нарушением.",
+      "characters": [
+        "Вера Соловьёва",
+        "Марк Ковач",
+        "Старуха Зоя",
+        "Тимур Ахметов",
+        "Лена Дубова"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_11"
+      ],
+      "words": 611,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.0",
+          "jaccard_max": "",
+          "tokens_generated": "574",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 255,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_11_abschnitt_1_papierschliff.md",
+          "index": 1,
+          "title": "Abschnitt 1: Papierschliff",
+          "article": "art_11",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "807",
+          "manual_ending_code": "Q-11-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 356,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_642_s_ngerna_fr_n_vattenverk_c_mittel",
+      "title": "Sångerna från Vattenverket",
+      "language": "SV",
+      "style": "Songtext_Matrix",
+      "pov": "first_person",
+      "setting_summary": "I det slutna vattenverket under den sönderfallande staden lever femhundra människor på ransonerat vatten och en enda röst som läser upp reglerna varje morgon. Mira Voss skriver hemliga sånger på pappersremsor som klistras i korridorerna, och varje natt försvinner någon som sjungit för högt. Trycket är tiden: varje dygn måste en invånare väljas ut för att vittna mot en annan, annars stängs vattnet av för alla.",
+      "characters": [
+        "Mira Voss",
+        "Tobias Ek",
+        "Syster Halina",
+        "Lille Orm",
+        "Rådsherre Bergvall"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_11"
+      ],
+      "words": 704,
+      "reading_minutes": 4,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.2",
+          "jaccard_max": "",
+          "tokens_generated": "722",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 334,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_11_abschnitt_1_remsorna_i_mörkret.md",
+          "index": 1,
+          "title": "Abschnitt 1: Remsorna i mörkret",
+          "article": "art_11",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.3",
+          "jaccard_max": "0.0",
+          "tokens_generated": "753",
+          "manual_ending_code": "Q-11-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 370,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_643_kivuli_cha_kumbukumbu_c_mittel",
+      "title": "Kivuli cha Kumbukumbu",
+      "language": "SW",
+      "style": "Sayansi_Dystopia",
+      "pov": "third_person",
+      "setting_summary": "Katika jiji la chini ya ardhi la Kizazi-Kumi, mfumo wa kumbukumbu unaosimamiwa na Baraza unahifadhi na kufuta kumbukumbu za raia ili kudhibiti furaha na utii. Wakazi wanakaa katika vyumba vidogo vilivyopangwa kwa vyeo, huku kamera na alama za ufuatiliaji zikipima kila hatua, na upungufu wa hewa safi na maji ukiongeza hofu ya kila siku.",
+      "characters": [
+        "Zawadi",
+        "Mkubwa Rehema",
+        "Kito",
+        "Nuru",
+        "Babamkubwa Sefu"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_11"
+      ],
+      "words": 901,
+      "reading_minutes": 5,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "11.5",
+          "jaccard_max": "",
+          "tokens_generated": "1102",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Sayansi_Dystopia",
+          "leak_free": "",
+          "words": 432,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_11_abschnitt_1_sauti_ya_chuma_kilichokwama.md",
+          "index": 1,
+          "title": "Abschnitt 1: Sauti ya Chuma Kilichokwama",
+          "article": "art_11",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "19.9",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1242",
+          "manual_ending_code": "S-11-01",
+          "backend": "deepseek",
+          "genre": "Sayansi_Dystopia",
+          "leak_free": "true",
+          "words": 469,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_644_uk_c_mittel",
+      "title": "Крамниця позичених голосів",
+      "language": "UK",
+      "style": "Songtext_Matrix",
+      "pov": "first_person",
+      "setting_summary": "У прифронтовому місті діє підпільна крамниця, де люди обмінюють власні голоси на позичені — щоб висловитися там, де заборонено. Кожен позичений голос має термін дії, а за прострочення платять спогадом. Оксана веде облік, поки місто вчиться чути одне одного без страху.",
+      "characters": [
+        "Оксана Гриб",
+        "Тарас Вовк",
+        "Марта Дзвін",
+        "Пан Лис",
+        "Соломія"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_11"
+      ],
+      "words": 1028,
+      "reading_minutes": 5,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.2",
+          "jaccard_max": "",
+          "tokens_generated": "1003",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 398,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_11_abschnitt_1_папір_на_реле.md",
+          "index": 1,
+          "title": "Abschnitt 1: Папір на реле",
+          "article": "art_11",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "12.6",
+          "jaccard_max": "0.026",
+          "tokens_generated": "1565",
+          "manual_ending_code": "Q-11-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 630,
+          "reading_minutes": 3
+        }
+      ]
+    },
+    {
+      "book_id": "buch_645_zh_c_mittel",
+      "title": "静默配额",
+      "language": "ZH",
+      "style": "科幻反乌托邦",
+      "pov": "third_person",
+      "setting_summary": "公元2147年，地下城“蜂巢”依靠中央算法“衡”分配氧气、食物与工时，每人每日的“社会信用配额”决定生存资源。城市被层层监控与狭窄舱室挤压，任何情绪波动都会被记录为风险值。当“衡”开始悄悄削减人口以维持平衡，一群普通人必须在资源倒计时与彼此猜疑中决定是否违抗系统。",
+      "characters": [
+        "林澈",
+        "苏芮",
+        "老韩",
+        "阿棠",
+        "K-7"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_11"
+      ],
+      "words": 34,
+      "reading_minutes": 1,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.8",
+          "jaccard_max": "",
+          "tokens_generated": "711",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "科幻反乌托邦",
+          "leak_free": "",
+          "words": 11,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_11_abschnitt_1_编号4471的缓存.md",
+          "index": 1,
+          "title": "Abschnitt 1: 编号4471的缓存",
+          "article": "art_11",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.6",
+          "jaccard_max": "0.0",
+          "tokens_generated": "860",
+          "manual_ending_code": "S-11-01",
+          "backend": "deepseek",
+          "genre": "科幻反乌托邦",
+          "leak_free": "true",
+          "words": 23,
+          "reading_minutes": 1
+        }
+      ]
+    },
+    {
+      "book_id": "buch_646_ar_c_mittel",
+      "title": "مرايا الأرشيف المائي",
+      "language": "AR",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "مدينةٌ ساحليةٌ محاصرةٌ بجدارٍ إسمنتيٍّ عالٍ، تُقاس فيها حياةُ السكان بكميّة المياه المخصّصة لكلّ بيتٍ وتُسجَّل أنفاسُهم في أرشيفٍ مركزيٍّ لا يُفتح إلا بإذنٍ. تعيش سلمى ويوسف وحفيظة وبرهان ونضال داخل حيّ الأزقّة الضيّقة حيث تتقاطع الرقابةُ والجفافُ والحاجةُ إلى الكلام، فيصير كلُّ اعتراضٍ على جدول التوزيع معركةً حول الكرامة والمساواة وحقّ الحياة.",
+      "characters": [
+        "سلمى الهاربة",
+        "يوسف الناسخ",
+        "حفيظة الشاهدة",
+        "برهان الحارس",
+        "نضال الصغيرة"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_11"
+      ],
+      "words": 586,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.6",
+          "jaccard_max": "",
+          "tokens_generated": "718",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 221,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_11_abschnitt_1_مرايا_الأرشيف_المائي_الفصل_ا.md",
+          "index": 1,
+          "title": "Abschnitt 1: مرايا الأرشيف المائي — الفصل الأول: صمامُ الأنفاس",
+          "article": "art_11",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.3",
+          "jaccard_max": "0.036",
+          "tokens_generated": "1030",
+          "manual_ending_code": "Q-11-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 365,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_647_the_whispering_vine_c_mittel",
+      "title": "The Whispering Vine",
+      "language": "EN",
+      "style": "Parable",
+      "pov": "third_person",
+      "setting_summary": "Set in the dense, ancient forest of Eldoria, where time seems to move in slow, deliberate steps. The forest is a place of both beauty and danger, with a network of hidden paths and mysterious whispers that guide those who listen carefully.",
+      "characters": [
+        "Elian",
+        "Aria",
+        "Kael"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_06"
+      ],
+      "words": 1120,
+      "reading_minutes": 6,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "qwen2.5:7b",
+          "duration_seconds": "61.8",
+          "jaccard_max": "",
+          "tokens_generated": "669",
+          "manual_ending_code": "",
+          "backend": "ollama",
+          "genre": "Parable",
+          "leak_free": "",
+          "words": 536,
+          "reading_minutes": 3
+        },
+        {
+          "file": "01_art_06_abschnitt_1_the_ledger_of_small_debts.md",
+          "index": 1,
+          "title": "Abschnitt 1: The Ledger of Small Debts",
+          "article": "art_06",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.6",
+          "jaccard_max": "0.087",
+          "tokens_generated": "756",
+          "manual_ending_code": "D-06-01",
+          "backend": "deepseek",
+          "genre": "Parable",
+          "leak_free": "true",
+          "words": 584,
+          "reading_minutes": 3
+        }
+      ]
+    },
+    {
+      "book_id": "buch_648_la_nave_de_los_turnos_ro_c_mittel",
+      "title": "La nave de los turnos rotos",
+      "language": "ES",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "Una plataforma flotante de reciclaje llamada El Turno, anclada en un mar muerto, donde cada habitante debe renovar a diario su derecho a respirar aire filtrado mediante una cuota de trabajo y silencio. La Contadora administra los turnos desde una torre de vidrio opaco, mientras la escasez de agua y la vigilancia constante convierten cada palabra en un riesgo. Amara, Tobías, Nieve y Sergio descubren que los registros de turnos ocultan una lista de personas a las que se les niega la existencia, y deberán decidir si cantar lo que saben o seguir respirando.",
+      "characters": [
+        "Amara Vent",
+        "Tobías Rez",
+        "La Contadora",
+        "Nieve",
+        "Sergio Umbral"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_11"
+      ],
+      "words": 797,
+      "reading_minutes": 4,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.7",
+          "jaccard_max": "",
+          "tokens_generated": "732",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 396,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_11_abschnitt_1_la_calibración_del_silencio.md",
+          "index": 1,
+          "title": "Abschnitt 1: La calibración del silencio",
+          "article": "art_11",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.8",
+          "jaccard_max": "0.0",
+          "tokens_generated": "726",
+          "manual_ending_code": "Q-11-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 401,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_649_fa_c_mittel",
+      "title": "آوازِ برجِ ساعتِ آبی",
+      "language": "FA",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "در برجی بندری که ساعتِ مرکزی‌اش هر روز چند دقیقه عقب می‌افتد و نگهبانان زمان را سلاحِ فشار ساخته‌اند، گروهی کوچک از ساکنان باید میان اطاعت و اعتراض انتخاب کنند. هر فصل یک پروندهٔ تازه از سکوت، صدا و حقِ نفس کشیدن را در ترانه‌های موزون می‌گشاید.",
+      "characters": [
+        "نگار",
+        "بهرام",
+        "شیرین",
+        "کاوه",
+        "مادر روشنک"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_11"
+      ],
+      "words": 872,
+      "reading_minutes": 4,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.1",
+          "jaccard_max": "",
+          "tokens_generated": "623",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 225,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_11_abschnitt_1_پرونده_سکوت_و_صدای_برج.md",
+          "index": 1,
+          "title": "Abschnitt 1: پروندهٔ سکوت و صدای برج",
+          "article": "art_11",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "9.4",
+          "jaccard_max": "0.065",
+          "tokens_generated": "1431",
+          "manual_ending_code": "Q-11-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 647,
+          "reading_minutes": 3
+        }
+      ]
+    },
+    {
+      "book_id": "buch_650_le_verdict_c_mittel",
+      "title": "Le Verdict",
+      "language": "FR",
+      "style": "Drame_Judiciaire",
+      "pov": "third_person",
+      "setting_summary": "La chambre arbitrale est installée dans un ancien couvent abandonné, transformé en lieu de réunion secret. La tension monte alors que les quatre protagonistes, Alexandre, Sophie, Julien et Lucas, se retrouvent piégés par la surveillance constante des caméras de sécurité.",
+      "characters": [
+        "Alexandre",
+        "Sophie",
+        "Julien",
+        "Lucas"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_12"
+      ],
+      "words": 1047,
+      "reading_minutes": 5,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "qwen2.5:7b",
+          "duration_seconds": "74.1",
+          "jaccard_max": "",
+          "tokens_generated": "881",
+          "manual_ending_code": "",
+          "backend": "ollama",
+          "genre": "Drame_Judiciaire",
+          "leak_free": "",
+          "words": 495,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_12_abschnitt_1_la_chambre_du_silence.md",
+          "index": 1,
+          "title": "Abschnitt 1: La Chambre du Silence",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.9",
+          "jaccard_max": "0.045",
+          "tokens_generated": "980",
+          "manual_ending_code": "H-12-01",
+          "backend": "deepseek",
+          "genre": "Drame_Judiciaire",
+          "leak_free": "true",
+          "words": 552,
+          "reading_minutes": 3
+        }
+      ]
+    },
+    {
+      "book_id": "buch_651_he_c_mittel",
+      "title": "השעון של כיכר המלח",
+      "language": "HE",
+      "style": "Songtext_Matrix",
+      "pov": "first_person",
+      "setting_summary": "בעיר נמל קטנה המוקפת חומות, שעון הכיכר המרכזית קובע מתי מותר לדבר, לסחור ולצאת מהבית, וכל סטייה מזמנת קנס או מעצר. מירה, כותבת פרוטוקולים לשעבר, מגלה שהשעון מכוון בכוונה כדי לדחוק את התושבים אל תוך חובות, ומתחילה לתעד את הפערים בין הזמן הרשמי לזמן האמיתי. כשהתיעוד שלה הופך לרשומה ציבורית, נפתח מאבק על מי רשאי לקבוע את הזמן — ועל מי נחשב אדם שדברו נשמע.",
+      "characters": [
+        "מירה",
+        "עוז",
+        "חנה",
+        "בן־ציון",
+        "תמר"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_12"
+      ],
+      "words": 767,
+      "reading_minutes": 4,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.1",
+          "jaccard_max": "",
+          "tokens_generated": "681",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 270,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_12_abschnitt_1_הדף_שנפל_מהתעלה.md",
+          "index": 1,
+          "title": "Abschnitt 1: הדף שנפל מהתעלה",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "2",
+          "model": "deepseek-chat",
+          "duration_seconds": "19.9",
+          "jaccard_max": "0.0",
+          "tokens_generated": "1248",
+          "manual_ending_code": "Q-12-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 497,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_652_hi_c_mittel",
+      "title": "काँच के शहर का गीत",
+      "language": "HI",
+      "style": "Songtext_Matrix",
+      "pov": "first_person",
+      "setting_summary": "एक काँच से घिरा शहर जहाँ हर आवाज़ गूँजती और गिनी जाती है, और चुप्पी सबसे महँगी चीज़ है। शहर की हवा में उमस और निगरानी का दबाव है, और रोज़गार तथा पानी दोनों सीमित हैं। अमरा और उसके साथी गीतों में छिपे सच को गाते हुए शहर के भीतर सम्मान, आवाज़ और जीवन के अधिकार की लड़ाई शुरू करते हैं।",
+      "characters": [
+        "अमरा",
+        "कबीर",
+        "रोशनी",
+        "तारा",
+        "बंदा"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_12"
+      ],
+      "words": 716,
+      "reading_minutes": 4,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.2",
+          "jaccard_max": "",
+          "tokens_generated": "757",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 262,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_12_abschnitt_1_कच_क_दवर_क_नच.md",
+          "index": 1,
+          "title": "Abschnitt 1: काँच की दीवारों के नीचे",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "8.0",
+          "jaccard_max": "0.167",
+          "tokens_generated": "1235",
+          "manual_ending_code": "Q-12-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 454,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_653_nyanyian_gerbang_kabut_c_mittel",
+      "title": "Nyanyian Gerbang Kabut",
+      "language": "ID",
+      "style": "Songtext_Matrix",
+      "pov": "first_person",
+      "setting_summary": "Di kota pelabuhan yang selalu tertutup kabut, sebuah gerbang besar mengatur siapa yang boleh bernapas di udara bersih dan siapa yang harus menunggu di zona asap. Setiap warga membawa jam pasir pribadi yang terus menetes; bila habis, suara mereka dicabut dari daftar kota. Sari, penyanyi jalanan, menemukan bahwa lagu-lagu lama bisa mengembalikan butir pasir yang hilang, dan sejak itu gerbang mulai menghitung setiap nada yang ia lantunkan.",
+      "characters": [
+        "Sari",
+        "Bram",
+        "Nur",
+        "Tegar",
+        "Ibu Wulan"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_12"
+      ],
+      "words": 690,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "4.4",
+          "jaccard_max": "",
+          "tokens_generated": "549",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 259,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_12_abschnitt_1_lagu_pertama_di_bawah_gerban.md",
+          "index": 1,
+          "title": "Abschnitt 1: Lagu Pertama di Bawah Gerbang",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.3",
+          "jaccard_max": "0.016",
+          "tokens_generated": "876",
+          "manual_ending_code": "Q-12-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 431,
+          "reading_minutes": 2
+        }
+      ]
+    },
+    {
+      "book_id": "buch_654_il_silenzio_dei_numeri_c_mittel",
+      "title": "Il Silenzio dei Numeri",
+      "language": "IT",
+      "style": "Distopia_SciFi",
+      "pov": "third_person",
+      "setting_summary": "Nella citta-stato di Cuneo Sette, ogni cittadino vive in moduli abitativi assegnati e viene valutato in tempo reale da un sistema di merito chiamato la Bilancia, che regola accesso a cibo, cure e movimento. Le risorse sono scarse e la densita abitativa estrema: chi scende sotto una soglia di punteggio viene trasferito nei Livelli Bassi, dove l'aria e filtrata e la sorveglianza non si interrompe mai. La Bilancia promette equita, ma i suoi criteri sono opachi e modificabili dall'alto.",
+      "characters": [
+        "Elia",
+        "Mara",
+        "Voss",
+        "Nadir",
+        "Sibilla"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_12"
+      ],
+      "words": 979,
+      "reading_minutes": 5,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.9",
+          "jaccard_max": "",
+          "tokens_generated": "776",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Distopia_SciFi",
+          "leak_free": "",
+          "words": 423,
+          "reading_minutes": 2
+        },
+        {
+          "file": "01_art_12_abschnitt_1_la_ricalibrazione.md",
+          "index": 1,
+          "title": "Abschnitt 1: La Ricalibrazione",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "7.2",
+          "jaccard_max": "0.044",
+          "tokens_generated": "1010",
+          "manual_ending_code": "S-12-01",
+          "backend": "deepseek",
+          "genre": "Distopia_SciFi",
+          "leak_free": "true",
+          "words": 556,
+          "reading_minutes": 3
+        }
+      ]
+    },
+    {
+      "book_id": "buch_655_ja_c_mittel",
+      "title": "灯台守のリズム",
+      "language": "JA",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "潮騒だけが響く孤島の灯台に、五人のはぐれ者が閉じ込められている。灯りを絶やせば本土の船団が沈むため、交代で灯を守る過酷な勤務と監視の目が彼らを縛る。やがて灯台の記録帳に隠された真実をめぐり、仲間同士の信頼と尊厳が試されていく。",
+      "characters": [
+        "ミナ",
+        "カイ",
+        "ソウタ",
+        "リオ",
+        "ハナ"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_12"
+      ],
+      "words": 258,
+      "reading_minutes": 1,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "4.4",
+          "jaccard_max": "",
+          "tokens_generated": "509",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 73,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_12_abschnitt_1_紙粉とリズム.md",
+          "index": 1,
+          "title": "Abschnitt 1: 紙粉とリズム",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.5",
+          "jaccard_max": "0.0",
+          "tokens_generated": "758",
+          "manual_ending_code": "Q-12-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 185,
+          "reading_minutes": 1
+        }
+      ]
+    },
+    {
+      "book_id": "buch_656_ko_c_mittel",
+      "title": "붉은 정류장의 노래",
+      "language": "KO",
+      "style": "Songtext_Matrix",
+      "pov": "third_person",
+      "setting_summary": "바다가 삼면을 막아선 항구도시 '붉은 정류장'은 모든 주민에게 하루 한 번의 '노래 허가증'만을 발급한다. 허가증 없이 입을 여는 순간 관제탑의 기록계가 이름을 각인하고, 세 번 각인된 자는 항구 밖 소금밭으로 추방된다. 도시의 마지막 자유 가수 한여름과 기록계를 고치는 기술자 박도윤, 그리고 이름을 잃은 아이 서리가 추방의 노래를 완성하려 한다.",
+      "characters": [
+        "한여름",
+        "박도윤",
+        "서리",
+        "늙은 뱃사공",
+        "관제관 민"
+      ],
+      "chapter_count": 1,
+      "covered_articles": [
+        "art_12"
+      ],
+      "words": 444,
+      "reading_minutes": 2,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "5.0",
+          "jaccard_max": "",
+          "tokens_generated": "498",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "",
+          "words": 163,
+          "reading_minutes": 1
+        },
+        {
+          "file": "01_art_12_abschnitt_1_종이_가루가_내리는_밤.md",
+          "index": 1,
+          "title": "Abschnitt 1: 종이 가루가 내리는 밤",
+          "article": "art_12",
+          "ending_ok": "true",
+          "attempts": "1",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.1",
+          "jaccard_max": "0.0",
+          "tokens_generated": "771",
+          "manual_ending_code": "Q-12-01",
+          "backend": "deepseek",
+          "genre": "Songtext_Matrix",
+          "leak_free": "true",
+          "words": 281,
+          "reading_minutes": 1
+        }
+      ]
+    },
+    {
+      "book_id": "buch_657_the_ledger_of_small_mercies",
+      "title": "The Ledger of Small Mercies",
+      "language": "EN",
+      "style": "Proverbs",
+      "pov": "first_person",
+      "setting_summary": "A vertical river-town called Kettle Reach, built in stacked tiers along a cliff where the tide governs every hour: the lower landings flood twice daily, so the whole town lives by a bell that opens and closes gates, docks, and courts. A drowned man's ledger surfaces in the silt, listing debts and favors owed across every tier, and its owner's heirs claim the right to collect — turning neighbor against neighbor. The town's only law is a body of inherited proverbs recited aloud at the Bell Court, and whoever can bend a proverb to their case wins the day.",
+      "characters": [
+        "Maren Voss",
+        "Old Tibbs",
+        "Sable",
+        "Deacon Ruel",
+        "Nissa of the Fifth Landing"
+      ],
+      "chapter_count": 0,
+      "covered_articles": [],
+      "words": 529,
+      "reading_minutes": 3,
+      "cover": null,
+      "chapters": [
+        {
+          "file": "00_prolog.md",
+          "index": 0,
+          "title": "Prolog",
+          "article": "",
+          "ending_ok": "",
+          "attempts": "",
+          "model": "deepseek-chat",
+          "duration_seconds": "6.2",
+          "jaccard_max": "",
+          "tokens_generated": "643",
+          "manual_ending_code": "",
+          "backend": "deepseek",
+          "genre": "Proverbs",
+          "leak_free": "",
+          "words": 529,
+          "reading_minutes": 3
         }
       ]
     }
