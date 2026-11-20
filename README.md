@@ -177,11 +177,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 
 | Kennzahl | Wert |
 |---|---:|
-| Bände | 661 |
-| Kapitel | 1068 |
-| Artikel-Abdeckung (Summe über Sprachen) | 244 / 570 |
+| Bände | 662 |
+| Kapitel | 1069 |
+| Artikel-Abdeckung (Summe über Sprachen) | 245 / 570 |
 | Sprachen | 19 |
-| Zeichen im Korpus | 3.378.859 |
+| Zeichen im Korpus | 3.382.227 |
 
 **Abdeckung je Sprache** (Kapitel / Artikel von 30)
 
@@ -190,7 +190,7 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | AR | 31 | 15 | 12 / 30 |
 | DE | 54 | 507 | 30 / 30 |
 | EN | 45 | 133 | 12 / 30 |
-| ES | 38 | 20 | 11 / 30 |
+| ES | 39 | 21 | 12 / 30 |
 | FA | 16 | 15 | 11 / 30 |
 | FR | 32 | 14 | 12 / 30 |
 | HE | 13 | 14 | 12 / 30 |
@@ -216,13 +216,13 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | B | 25 | 4% |
 | C | 25 | 4% |
 | C2 | 3 | 0% |
-| C3 | 349 | 53% |
+| C3 | 350 | 53% |
 
 **Stil-Verteilung** (Stil ist je Band fest; innerhalb eines Bandes wechselt er nicht)
 
 | Stil | Bände |
 |---|---:|
-| Songtext_Matrix | 372 |
+| Songtext_Matrix | 373 |
 | Distopia_SciFi | 16 |
 | Drame_Judiciaire | 14 |
 | Sayansi_Dystopia | 12 |
@@ -243,6 +243,6 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 **Diversität** (je niedriger der erste Wert, desto weniger Schablone)
 
 * Häufigste Stil-Phrase: `filtered reese bass` in 19% der Zuordnungen
-* Bände mit genau 5 Figuren: 620 von 651 (95%)
+* Bände mit genau 5 Figuren: 621 von 652 (95%)
 
 <!-- END_DYNAMIC_STATS -->
