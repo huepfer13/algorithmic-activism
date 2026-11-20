@@ -173,15 +173,15 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 <!-- START_DYNAMIC_STATS -->
 ### Live-Kennzahlen des Korpus
 
-*Generiert aus dem Bestand, nicht geschätzt — zuletzt: 2026-11-19*
+*Generiert aus dem Bestand, nicht geschätzt — zuletzt: 2026-11-20*
 
 | Kennzahl | Wert |
 |---|---:|
-| Bände | 653 |
-| Kapitel | 1060 |
-| Artikel-Abdeckung (Summe über Sprachen) | 236 / 570 |
+| Bände | 654 |
+| Kapitel | 1061 |
+| Artikel-Abdeckung (Summe über Sprachen) | 237 / 570 |
 | Sprachen | 19 |
-| Zeichen im Korpus | 3.352.045 |
+| Zeichen im Korpus | 3.355.897 |
 
 **Abdeckung je Sprache** (Kapitel / Artikel von 30)
 
@@ -200,7 +200,7 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | JA | 62 | 60 | 12 / 30 |
 | KO | 58 | 58 | 12 / 30 |
 | NL | 58 | 57 | 12 / 30 |
-| PT | 30 | 14 | 11 / 30 |
+| PT | 31 | 15 | 12 / 30 |
 | RU | 10 | 11 | 11 / 30 |
 | SV | 56 | 56 | 11 / 30 |
 | SW | 29 | 15 | 11 / 30 |
@@ -216,7 +216,7 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | B | 25 | 4% |
 | C | 25 | 4% |
 | C2 | 3 | 0% |
-| C3 | 341 | 52% |
+| C3 | 342 | 52% |
 
 **Stil-Verteilung** (Stil ist je Band fest; innerhalb eines Bandes wechselt er nicht)
 
@@ -228,8 +228,8 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | Sayansi_Dystopia | 11 |
 | 科幻反乌托邦 | 11 |
 | SciFi_Distopía | 10 |
+| SciFi_Distopia | 10 |
 | Satire | 9 |
-| SciFi_Distopia | 9 |
 | Fable | 8 |
 | Parabel | 6 |
 
@@ -238,11 +238,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 **Ketten-Tiefe** (jedes Kapitel liest genau das VORHERIGE Kapitel, nicht die ganze Historie)
 
 * Kapitel je Band: Median 1 · Maximum 28
-* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3162 Zeichen (~791 Tokens)
+* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3163 Zeichen (~791 Tokens)
 
 **Diversität** (je niedriger der erste Wert, desto weniger Schablone)
 
 * Häufigste Stil-Phrase: `filtered reese bass` in 19% der Zuordnungen
-* Bände mit genau 5 Figuren: 613 von 643 (95%)
+* Bände mit genau 5 Figuren: 614 von 644 (95%)
 
 <!-- END_DYNAMIC_STATS -->
