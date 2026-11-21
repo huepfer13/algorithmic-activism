@@ -190,15 +190,11 @@ def main() -> int:
         print(f"  SCHRANKE GERISSEN: {len(gerissen)} Kapitel ohne bestandene Pruefung — "
               f"{gerissen[:2]}")
         print("  Nicht committet. Exit 4 loest algorithmic-alert@ aus.")
-        protokollieren({"zeit": __import__("datetime").datetime.now().isoformat(timespec="seconds"),
-                        "sprache": lang, "buchart": buchart, "arme": a.varianten,
-                        "artikel": bbox, "exit": 4, "gerissen": gerissen})
+        # Kein eigener Eintrag: abc_lauf protokolliert das gescheiterte Kapitel selbst.
         return 4
     ergebnis = committen(f"feat(abc): {lang.upper()} {bbox} — Arm {a.varianten}")
     print(" ", ergebnis)
-    protokollieren({"zeit": __import__("datetime").datetime.now().isoformat(timespec="seconds"),
-                    "sprache": lang, "buchart": buchart, "arme": a.varianten,
-                    "artikel": bbox, "exit": 0, "gerissen": [], "commit": ergebnis})
+    # Protokollzeile kommt aus abc_lauf (eine Zeile je Erzeugung, nicht zwei).
 
     os.makedirs(os.path.dirname(STATE), exist_ok=True)
     json.dump({"zuletzt": lang, "buchart": buchart, "zeit": __import__("datetime").datetime.now().isoformat(timespec="seconds")},
