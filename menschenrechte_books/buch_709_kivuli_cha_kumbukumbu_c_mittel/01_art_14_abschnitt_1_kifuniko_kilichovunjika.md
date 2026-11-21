@@ -1,0 +1,41 @@
+---
+book_id: "buch_709_kivuli_cha_kumbukumbu_c_mittel"
+chapter_index: 1
+chapter_title: "Abschnitt 1: Kifuniko Kilichovunjika"
+article: "art_14"
+language: "SW"
+style: "Sayansi_Dystopia"
+pov: "third_person"
+previous_chapter_file: "00_prolog.md"
+manual_ending_ok: true
+manual_ending_attempts: 2
+manual_ending_code: "S-14-01"
+scene_condition: "SENSORIK_DRIFT"
+archive_note: ""
+model: "deepseek-chat"
+genre: "Sayansi_Dystopia"
+backend: "deepseek"
+duration_seconds: 24.1
+jaccard_max: 0.083
+tokens_generated: 1119
+leak_free: true
+manual_ending_note: ""
+---
+
+# Abschnitt 1: Kifuniko Kilichovunjika
+
+Kito alikuwa bado amesimama mbele ya waya kumi na tatu zilizounganishwa kwa njia isiyo ya kawaida ndani ya bomba la maji, vidole vyake vikigusa vifuniko vya chuma vilivyokuwa vimefunikwa na vumbi jekundu. Alipiga hesabu ya matone yaliyotoka kwenye muhuri uliolegea — kumi na saba kwa dakika, nambari ambayo haikuwa kwenye orodha yake ya kawaida. Lakini kilichomvuta zaidi ni kitu kingine: karibu na waya hizo, kwenye sakafu ya chuma iliyochakaa, kulikuwa na mchanga mweusi wa karatasi — kama unga mwembamba uliomwagika kutoka kwenye mfumo wa posta ya nyumatiki iliyokuwa imeziba tangu wiki nne zilizopita. Alijua mfumo huo ulikuwa umekwama; ripoti za ufuatiliaji zilisema hivyo kila siku. Lakini mchanga huo haukuwa wa kawaida. Ulipanda juu ya reli za umeme kama moshi mgumu, na alipougusa kwa kidole, ulimwacha na alama nyekundu.
+
+Mkubwa Rehema alikuwa amemwita Kito kwenye ofisi yake asubuhi hiyo. Hakumwambia kwa nini. Alimtazama kwa muda mrefu kupita kiasi, kisha akasema: “Waya kumi na tatu. Unajua nini kuhusu waya kumi na tatu?” Kito alisita. Alijua nambari hiyo haikuwa kwenye orodha yake — na sasa alijua pia kwamba Mkubwa Rehema alikuwa akiligusa sikio lake la kushoto mara saba kwa dakika.
+
+[SYSTEM ERROR - TEXT CUTS OFF]
+
+Nuru alikuwa ameketi darasani akiwaza juu ya swali la mwanafunzi wake kuhusu vita vya hewa. Alipofungua jalada la kumbukumbu za shule — la zamani, lililofungwa kwa waya — aliona hati moja iliyokuwa imeharibika. Ilikuwa na muhuri wa Baraza na nambari ya kumbukumbu iliyofutwa. Lakini chini ya ukurasa kulikuwa na mstari mmoja uliosalia: *“Kifungu cha 14 — haki ya kukimbilia.”* Alisoma tena na tena. Hakukumbuka kusoma kifungu hicho kamwe.
+
+Babamkubwa Sefu alikuwa ameingia ndani ya chumba cha kumbukumbu bila ruhusa. Mlango ulikuwa wazi — haukuwa wazi kamwe. Alikagua paneli kuu, akafuta vumbi kwa kitambaa chake cha zamani, na akaona kitu kilichomfanya apige kelele ndogo: kwenye skrini ndogo ya udhibiti, kumbukumbu moja ilikuwa ikijirudia yenyewe. Ilikuwa na alama ya S-14-01. Haikuwa ya mtu yeyote aliyekuwa hai. Na ilikuwa ikisoma: *“Ufunguzi wa lango la dharura umethibitishwa. Wahamiaji watatu wamewasili.”*
+
+Zawadi aliamka kwa harufu ya chuma. Alijua harufu hiyo — ilikuwa ile ile ya vumbi la mifumo ya hewa. Lakini wakati huo, kitu kingine kilikuwa hewani: sauti ndogo, kama ya karatasi ikisuguliwa. Alitazama kando ya kitanda chake na akaona kitu ambacho hakikuwa hapo jana usiku. Kifuniko kidogo cha chuma, kilichofungwa kwa waya kumi na tatu. Ndani yake, karatasi iliyokunjwa mara tatu. Alisoma mstari mmoja tu kabla ya kamera kuwaka tena: *“S-14-01 — usikubali kufutwa.”*
+
+Kisha mlio mrefu ulisikika kutoka kwenye mashine kuu, na mwanga wote katika sekta ya tatu ulizima kwa sekunde tatu.
+
+**[NODI: MTANDAONI | KUMBUKUMBU: S-14-01]**
