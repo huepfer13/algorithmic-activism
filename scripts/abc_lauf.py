@@ -157,6 +157,19 @@ def erzeuge(lang: str, band: str, artikel: str, variante: str, backend: str, mod
     return (kap[-1] if kap else ""), (zeilen[-1][:70] if zeilen else f"rc={r.returncode}")
 
 
+def protokollieren(daten: dict) -> None:
+    """Eine Zeile je Lauf — dieselbe Datei, die der Wächter liest.
+
+    Ohne diesen Eintrag blieb ein manueller Lauf für den Wächter unsichtbar und ein
+    alter exit=4 stand bis zur nächsten Timer-Stunde als aktueller Befund da
+    (gemessen 2026-11-21).
+    """
+    pfad = os.path.expanduser("~/.hermes/logs/abc_log.jsonl")
+    os.makedirs(os.path.dirname(pfad), exist_ok=True)
+    with open(pfad, "a", encoding="utf-8") as f:
+        f.write(json.dumps(daten, ensure_ascii=False) + "\n")
+
+
 def _sperre(warten_s: int = 900):
     """Exklusive Sperre auf .rotation.lock — wie run_model_rotation.py.
 
@@ -211,6 +224,11 @@ def main() -> int:
             continue
         band = band_anlegen(q, variante, nummer); nummer += 1
         datei, info = erzeuge(a.lang, band, artikel, variante, a.backend, a.model)
+        protokollieren({"zeit": __import__("datetime").datetime.now().isoformat(timespec="seconds"),
+                        "sprache": a.lang, "buchart": a.buchart, "arme": variante,
+                        "artikel": artikel, "exit": 0 if datei else 4,
+                        "gerissen": [] if datei else [os.path.basename(info)],
+                        "quelle": "abc_lauf"})
         print(f"   {variante}: {os.path.basename(band)[:44]:46} {'ok' if datei else 'FEHLER'} · {info}")
     if griff is not None:
         import fcntl
