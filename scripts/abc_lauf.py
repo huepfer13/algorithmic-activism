@@ -94,6 +94,12 @@ def verhandelt(lang: str) -> set:
             continue
         if (m.get("language") or "").lower() != lang:
             continue
+        # Ein gescheitertes Kapitel zaehlt NICHT als verhandelt: sonst bleibt eine Luecke
+        # still stehen (gemessen 2026-11-21: HE art_14 fiel durch die Schranke, der Band
+        # stand trotzdem mit covered=[art_14] da — der Artikel waere nie wiederholt worden).
+        kap = glob.glob(f"{os.path.dirname(bj)}/*_art_*.md")
+        if any("manual_ending_ok: false" in open(f, encoding="utf-8").read() for f in kap):
+            continue
         treffer.update(m.get("covered_articles") or [])
     return treffer
 
