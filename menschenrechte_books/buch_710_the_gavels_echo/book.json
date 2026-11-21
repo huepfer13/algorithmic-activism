@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_710_the_gavels_echo",
+  "title": "The Gavel's Echo",
+  "pov": "third_person",
+  "language": "EN",
+  "style": "Courtroom_Drama",
+  "setting_summary": "In the cramped, heavily monitored tribunal of a besieged border city, five legal professionals must adjudicate a case that tests the limits of dignity, free expression, and the right to life under a state of emergency. The courtroom's tight security and the looming threat of external violence create a pressure cooker where every testimony and objection carries life-or-death consequences. As the trial unfolds, each article of the Universal Declaration of Human Rights becomes a battleground for ethical conflict and personal sacrifice.",
+  "characters": [
+    "Judge Alaric Voss",
+    "Prosecutor Mara Chen",
+    "Defense Attorney Eli Navarro",
+    "Witness Cora Hale",
+    "Court Clerk Simon Pike"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-21T23:06:07.921270+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
