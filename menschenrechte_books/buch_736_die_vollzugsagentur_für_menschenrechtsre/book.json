@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_736_die_vollzugsagentur_für_menschenrechtsre",
+  "title": "Die Vollzugsagentur für Menschenrechtsrestbestände",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Satire",
+  "setting_summary": "Im fiktiven Amtssitz Klein-Kleinkleckersdorf regiert eine überbordende Vollzugsbehörde, die jedes einfache Recht in ein mehrstufiges Genehmigungsverfahren verwandelt. Wer eine Beschwerde einlegen will, muss zunächst eine Beschwerde über die Nichtannahme der Beschwerde einreichen, während die Aktenberge höher wachsen als die Betroffenen. Ein chronischer Mangel an Formularen, Stempeln und Geduld bildet das eigentliche Druckmittel des Apparats gegen die Bürger.",
+  "characters": [
+    "Ottilie Kranz",
+    "Herr Pfundtner",
+    "Baron von Habenichts",
+    "Frau Zirbeldrüse",
+    "Josef Kümmernis"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-22T23:06:12.886270+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
