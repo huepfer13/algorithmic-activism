@@ -217,6 +217,7 @@ def main() -> int:
         print("  FEHLER: .rotation.lock seit 15 min belegt — kein paralleles Anlegen"); return 3
 
     print(f"  {a.lang.upper()} · Band {os.path.basename(q['pfad'])[:36]} · Artikel {artikel}")
+    fehlschlaege = 0
     for variante in [v.strip() for v in a.varianten.split(",") if v.strip()]:
         if a.dry_run:
             print(f"   {variante}: würde buch_{nummer:03d}_…{VARIANTEN[variante]['suffix']} anlegen")
@@ -224,6 +225,8 @@ def main() -> int:
             continue
         band = band_anlegen(q, variante, nummer); nummer += 1
         datei, info = erzeuge(a.lang, band, artikel, variante, a.backend, a.model)
+        if not datei:
+            fehlschlaege += 1
         protokollieren({"zeit": __import__("datetime").datetime.now().isoformat(timespec="seconds"),
                         "sprache": a.lang, "buchart": a.buchart, "arme": variante,
                         "artikel": artikel, "exit": 0 if datei else 4,
@@ -234,7 +237,9 @@ def main() -> int:
         import fcntl
         fcntl.flock(griff, fcntl.LOCK_UN)
         griff.close()
-    return 0
+    # 6 = Erzeugung fehlgeschlagen (Provider/Timeout). Der Tick gibt den Code weiter,
+    # damit die Unit scheitert und der Wächter alarmiert — statt "success" bei leerem Band.
+    return 6 if fehlschlaege else 0
 
 
 if __name__ == "__main__":

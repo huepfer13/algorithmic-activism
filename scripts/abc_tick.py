@@ -183,6 +183,7 @@ def main() -> int:
         bbox = mm.group(1)
     if r.returncode != 0:
         print("  FEHLER:", (r.stderr or r.stdout).strip()[-300:])
+        print(f"  Exit {r.returncode} weitergereicht — kein Commit, Wächter alarmiert.")
         return r.returncode
     # Gerissene Schranke ZUERST pruefen: ein Fallback-Kapitel darf nicht in den Korpus.
     gerissen = gerissene_kapitel(a.varianten, start_zeit)
