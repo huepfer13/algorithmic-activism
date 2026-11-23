@@ -225,12 +225,17 @@ def main() -> int:
             continue
         band = band_anlegen(q, variante, nummer); nummer += 1
         datei, info = erzeuge(a.lang, band, artikel, variante, a.backend, a.model)
-        if not datei:
+        if not datei or "manual_ending_ok: true" not in open(datei, encoding="utf-8").read():
             fehlschlaege += 1
+        # Der Exit richtet sich nach der SCHRANKE, nicht nach der Datei: ein Kapitel mit
+        # manual_ending_ok: false existiert, ist aber wertlos. Vorher stand hier exit=0,
+        # obwohl die Schranke gerissen war (gemessen 2026-11-23, RU art_16).
+        bestanden = bool(datei) and "manual_ending_ok: true" in open(datei, encoding="utf-8").read() \
+            if datei else False
         protokollieren({"zeit": __import__("datetime").datetime.now().isoformat(timespec="seconds"),
                         "sprache": a.lang, "buchart": a.buchart, "arme": variante,
-                        "artikel": artikel, "exit": 0 if datei else 4,
-                        "gerissen": [] if datei else [os.path.basename(info)],
+                        "artikel": artikel, "exit": 0 if bestanden else 4,
+                        "gerissen": [] if bestanden else [os.path.basename(datei or info)],
                         "quelle": "abc_lauf"})
         print(f"   {variante}: {os.path.basename(band)[:44]:46} {'ok' if datei else 'FEHLER'} · {info}")
     if griff is not None:
