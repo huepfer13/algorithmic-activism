@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_762_the_gilded_tribunal",
+  "title": "The Gilded Tribunal",
+  "pov": "third_person",
+  "language": "EN",
+  "style": "Courtroom_Drama",
+  "setting_summary": "In the sealed high-rise courthouse of a corporate city-state, a tribunal hears cases under constant surveillance and a strict 48-hour deadline per trial. The glass-walled chamber, with its remote jury and algorithmic evidence filters, creates an atmosphere of pressure and mistrust where every objection carries career-ending risk.",
+  "characters": [
+    "Judge Alaric Voss",
+    "Prosecutor Mira Chen",
+    "Defense Counsel Elias Ward",
+    "Dr. Lena Moravec",
+    "Warden Kade Rusk"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-23T23:06:08.442733+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
