@@ -177,11 +177,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 
 | Kennzahl | Wert |
 |---|---:|
-| Bände | 766 |
-| Kapitel | 1169 |
-| Artikel-Abdeckung (Summe über Sprachen) | 339 / 570 |
+| Bände | 773 |
+| Kapitel | 1176 |
+| Artikel-Abdeckung (Summe über Sprachen) | 346 / 570 |
 | Sprachen | 19 |
-| Zeichen im Korpus | 3.685.402 |
+| Zeichen im Korpus | 3.706.296 |
 
 **Abdeckung je Sprache** (Kapitel / Artikel von 30)
 
@@ -191,13 +191,13 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | DE | 55 | 507 | 30 / 30 |
 | EN | 53 | 138 | 17 / 30 |
 | ES | 44 | 26 | 17 / 30 |
-| FA | 23 | 22 | 17 / 30 |
-| FR | 38 | 20 | 17 / 30 |
-| HE | 19 | 20 | 17 / 30 |
-| HI | 19 | 20 | 17 / 30 |
-| ID | 21 | 21 | 17 / 30 |
-| IT | 40 | 23 | 17 / 30 |
-| JA | 68 | 66 | 18 / 30 |
+| FA | 24 | 23 | 18 / 30 |
+| FR | 39 | 21 | 18 / 30 |
+| HE | 20 | 21 | 18 / 30 |
+| HI | 20 | 21 | 18 / 30 |
+| ID | 22 | 22 | 18 / 30 |
+| IT | 41 | 24 | 18 / 30 |
+| JA | 69 | 67 | 19 / 30 |
 | KO | 64 | 64 | 18 / 30 |
 | NL | 63 | 62 | 17 / 30 |
 | PT | 36 | 20 | 17 / 30 |
@@ -211,20 +211,20 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 
 | Variante | Bände | Anteil |
 |---|---:|---:|
-| A | 258 | 34% |
+| A | 258 | 33% |
 | A2 | 5 | 1% |
 | B | 25 | 3% |
 | C | 25 | 3% |
 | C2 | 3 | 0% |
-| C3 | 450 | 59% |
+| C3 | 457 | 59% |
 
 **Stil-Verteilung** (Stil ist je Band fest; innerhalb eines Bandes wechselt er nicht)
 
 | Stil | Bände |
 |---|---:|
-| Songtext_Matrix | 440 |
-| Distopia_SciFi | 22 |
-| Drame_Judiciaire | 20 |
+| Songtext_Matrix | 445 |
+| Distopia_SciFi | 23 |
+| Drame_Judiciaire | 21 |
 | Sayansi_Dystopia | 17 |
 | 科幻反乌托邦 | 17 |
 | SciFi_Distopia | 15 |
@@ -238,11 +238,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 **Ketten-Tiefe** (jedes Kapitel liest genau das VORHERIGE Kapitel, nicht die ganze Historie)
 
 * Kapitel je Band: Median 1 · Maximum 28
-* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3153 Zeichen (~788 Tokens)
+* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3152 Zeichen (~788 Tokens)
 
 **Diversität** (je niedriger der erste Wert, desto weniger Schablone)
 
 * Häufigste Stil-Phrase: `filtered reese bass` in 18% der Zuordnungen
-* Bände mit genau 5 Figuren: 713 von 756 (94%)
+* Bände mit genau 5 Figuren: 719 von 763 (94%)
 
 <!-- END_DYNAMIC_STATS -->
