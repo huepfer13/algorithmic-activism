@@ -177,17 +177,17 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 
 | Kennzahl | Wert |
 |---|---:|
-| Bände | 762 |
-| Kapitel | 1165 |
-| Artikel-Abdeckung (Summe über Sprachen) | 335 / 570 |
+| Bände | 764 |
+| Kapitel | 1167 |
+| Artikel-Abdeckung (Summe über Sprachen) | 337 / 570 |
 | Sprachen | 19 |
-| Zeichen im Korpus | 3.674.860 |
+| Zeichen im Korpus | 3.678.922 |
 
 **Abdeckung je Sprache** (Kapitel / Artikel von 30)
 
 | Sprache | Bände | Kapitel | Artikel |
 |---|---:|---:|---:|
-| AR | 35 | 19 | 16 / 30 |
+| AR | 36 | 20 | 17 / 30 |
 | DE | 55 | 507 | 30 / 30 |
 | EN | 52 | 137 | 16 / 30 |
 | ES | 43 | 25 | 16 / 30 |
@@ -205,7 +205,7 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | SV | 62 | 62 | 17 / 30 |
 | SW | 35 | 21 | 17 / 30 |
 | UK | 38 | 21 | 18 / 30 |
-| ZH | 34 | 17 | 16 / 30 |
+| ZH | 35 | 18 | 17 / 30 |
 
 **Varianten (A = Wortlaut, B = Bedeutung, C = SALT)**
 
@@ -216,17 +216,17 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | B | 25 | 3% |
 | C | 25 | 3% |
 | C2 | 3 | 0% |
-| C3 | 446 | 59% |
+| C3 | 448 | 59% |
 
 **Stil-Verteilung** (Stil ist je Band fest; innerhalb eines Bandes wechselt er nicht)
 
 | Stil | Bände |
 |---|---:|
-| Songtext_Matrix | 438 |
+| Songtext_Matrix | 439 |
 | Distopia_SciFi | 22 |
 | Drame_Judiciaire | 20 |
 | Sayansi_Dystopia | 17 |
-| 科幻反乌托邦 | 16 |
+| 科幻反乌托邦 | 17 |
 | SciFi_Distopia | 15 |
 | Satire | 10 |
 | SciFi_Distopía | 10 |
@@ -238,11 +238,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 **Ketten-Tiefe** (jedes Kapitel liest genau das VORHERIGE Kapitel, nicht die ganze Historie)
 
 * Kapitel je Band: Median 1 · Maximum 28
-* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3154 Zeichen (~789 Tokens)
+* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3152 Zeichen (~788 Tokens)
 
 **Diversität** (je niedriger der erste Wert, desto weniger Schablone)
 
 * Häufigste Stil-Phrase: `filtered reese bass` in 18% der Zuordnungen
-* Bände mit genau 5 Figuren: 710 von 752 (94%)
+* Bände mit genau 5 Figuren: 712 von 754 (94%)
 
 <!-- END_DYNAMIC_STATS -->
