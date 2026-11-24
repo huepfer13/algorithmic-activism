@@ -173,15 +173,15 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 <!-- START_DYNAMIC_STATS -->
 ### Live-Kennzahlen des Korpus
 
-*Generiert aus dem Bestand, nicht geschätzt — zuletzt: 2026-11-23*
+*Generiert aus dem Bestand, nicht geschätzt — zuletzt: 2026-11-24*
 
 | Kennzahl | Wert |
 |---|---:|
-| Bände | 756 |
-| Kapitel | 1160 |
-| Artikel-Abdeckung (Summe über Sprachen) | 330 / 570 |
+| Bände | 761 |
+| Kapitel | 1164 |
+| Artikel-Abdeckung (Summe über Sprachen) | 334 / 570 |
 | Sprachen | 19 |
-| Zeichen im Korpus | 3.658.719 |
+| Zeichen im Korpus | 3.671.601 |
 
 **Abdeckung je Sprache** (Kapitel / Artikel von 30)
 
@@ -189,7 +189,7 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 |---|---:|---:|---:|
 | AR | 35 | 19 | 16 / 30 |
 | DE | 55 | 507 | 30 / 30 |
-| EN | 51 | 137 | 16 / 30 |
+| EN | 52 | 137 | 16 / 30 |
 | ES | 43 | 25 | 16 / 30 |
 | FA | 23 | 22 | 17 / 30 |
 | FR | 38 | 20 | 17 / 30 |
@@ -200,10 +200,10 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | JA | 68 | 66 | 18 / 30 |
 | KO | 64 | 64 | 18 / 30 |
 | NL | 63 | 62 | 17 / 30 |
-| PT | 35 | 19 | 16 / 30 |
-| RU | 16 | 17 | 16 / 30 |
-| SV | 61 | 61 | 16 / 30 |
-| SW | 34 | 20 | 16 / 30 |
+| PT | 36 | 20 | 17 / 30 |
+| RU | 17 | 18 | 17 / 30 |
+| SV | 62 | 62 | 17 / 30 |
+| SW | 35 | 21 | 17 / 30 |
 | UK | 37 | 20 | 17 / 30 |
 | ZH | 34 | 17 | 16 / 30 |
 
@@ -211,23 +211,23 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 
 | Variante | Bände | Anteil |
 |---|---:|---:|
-| A | 257 | 34% |
+| A | 258 | 34% |
 | A2 | 5 | 1% |
 | B | 25 | 3% |
 | C | 25 | 3% |
 | C2 | 3 | 0% |
-| C3 | 441 | 58% |
+| C3 | 445 | 58% |
 
 **Stil-Verteilung** (Stil ist je Band fest; innerhalb eines Bandes wechselt er nicht)
 
 | Stil | Bände |
 |---|---:|
-| Songtext_Matrix | 435 |
+| Songtext_Matrix | 437 |
 | Distopia_SciFi | 22 |
 | Drame_Judiciaire | 20 |
-| Sayansi_Dystopia | 16 |
+| Sayansi_Dystopia | 17 |
 | 科幻反乌托邦 | 16 |
-| SciFi_Distopia | 14 |
+| SciFi_Distopia | 15 |
 | Satire | 10 |
 | SciFi_Distopía | 10 |
 | Parable | 9 |
@@ -243,6 +243,6 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 **Diversität** (je niedriger der erste Wert, desto weniger Schablone)
 
 * Häufigste Stil-Phrase: `filtered reese bass` in 18% der Zuordnungen
-* Bände mit genau 5 Figuren: 704 von 746 (94%)
+* Bände mit genau 5 Figuren: 709 von 751 (94%)
 
 <!-- END_DYNAMIC_STATS -->
