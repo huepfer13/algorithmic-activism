@@ -177,11 +177,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 
 | Kennzahl | Wert |
 |---|---:|
-| Bände | 764 |
-| Kapitel | 1167 |
-| Artikel-Abdeckung (Summe über Sprachen) | 337 / 570 |
+| Bände | 766 |
+| Kapitel | 1169 |
+| Artikel-Abdeckung (Summe über Sprachen) | 339 / 570 |
 | Sprachen | 19 |
-| Zeichen im Korpus | 3.678.922 |
+| Zeichen im Korpus | 3.685.402 |
 
 **Abdeckung je Sprache** (Kapitel / Artikel von 30)
 
@@ -189,8 +189,8 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 |---|---:|---:|---:|
 | AR | 36 | 20 | 17 / 30 |
 | DE | 55 | 507 | 30 / 30 |
-| EN | 52 | 137 | 16 / 30 |
-| ES | 43 | 25 | 16 / 30 |
+| EN | 53 | 138 | 17 / 30 |
+| ES | 44 | 26 | 17 / 30 |
 | FA | 23 | 22 | 17 / 30 |
 | FR | 38 | 20 | 17 / 30 |
 | HE | 19 | 20 | 17 / 30 |
@@ -216,21 +216,21 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | B | 25 | 3% |
 | C | 25 | 3% |
 | C2 | 3 | 0% |
-| C3 | 448 | 59% |
+| C3 | 450 | 59% |
 
 **Stil-Verteilung** (Stil ist je Band fest; innerhalb eines Bandes wechselt er nicht)
 
 | Stil | Bände |
 |---|---:|
-| Songtext_Matrix | 439 |
+| Songtext_Matrix | 440 |
 | Distopia_SciFi | 22 |
 | Drame_Judiciaire | 20 |
 | Sayansi_Dystopia | 17 |
 | 科幻反乌托邦 | 17 |
 | SciFi_Distopia | 15 |
 | Satire | 10 |
+| Parable | 10 |
 | SciFi_Distopía | 10 |
-| Parable | 9 |
 | Fable | 8 |
 
 * 78 verschiedene Stile im Bestand · 26 Bände mit mindestens 10 Kapiteln
@@ -238,11 +238,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 **Ketten-Tiefe** (jedes Kapitel liest genau das VORHERIGE Kapitel, nicht die ganze Historie)
 
 * Kapitel je Band: Median 1 · Maximum 28
-* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3152 Zeichen (~788 Tokens)
+* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3153 Zeichen (~788 Tokens)
 
 **Diversität** (je niedriger der erste Wert, desto weniger Schablone)
 
 * Häufigste Stil-Phrase: `filtered reese bass` in 18% der Zuordnungen
-* Bände mit genau 5 Figuren: 712 von 754 (94%)
+* Bände mit genau 5 Figuren: 713 von 756 (94%)
 
 <!-- END_DYNAMIC_STATS -->
