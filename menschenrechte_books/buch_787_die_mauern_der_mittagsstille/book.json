@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_787_die_mauern_der_mittagsstille",
+  "title": "Die Mauern der Mittagsstille",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Gothic",
+  "setting_summary": "Ein herrschaftliches, halbverfallenes Wohnhaus namens Mittagsstille, in dem die Bewohner unter einer stets wechselnden, undurchschaubaren Hausordnung leben: Räume verschieben sich, Türen verschwinden, und wer den Flur betritt, vergisst mit jeder Stunde ein Stück seiner Vergangenheit. Je länger die Bewohner bleiben, desto mehr schrumpft ihr Gedächtnis an die eigene Freiheit, während das Haus ihre Namen, Stimmen und Wünsche in seine Wände aufnimmt und nach eigenem Gutdünken zurückgibt.",
+  "characters": [
+    "Hedwig Marstaller",
+    "Korbinian Voss",
+    "Ilse Trautwein",
+    "Severin Klotz",
+    "die Aufseherin"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-24T23:05:50.115221+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
