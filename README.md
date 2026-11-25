@@ -177,11 +177,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 
 | Kennzahl | Wert |
 |---|---:|
-| Bände | 793 |
-| Kapitel | 1195 |
-| Artikel-Abdeckung (Summe über Sprachen) | 365 / 570 |
+| Bände | 795 |
+| Kapitel | 1197 |
+| Artikel-Abdeckung (Summe über Sprachen) | 367 / 570 |
 | Sprachen | 19 |
-| Zeichen im Korpus | 3.763.999 |
+| Zeichen im Korpus | 3.770.570 |
 
 **Abdeckung je Sprache** (Kapitel / Artikel von 30)
 
@@ -199,8 +199,8 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | IT | 42 | 25 | 19 / 30 |
 | JA | 70 | 68 | 20 / 30 |
 | KO | 66 | 66 | 20 / 30 |
-| NL | 64 | 63 | 18 / 30 |
-| PT | 37 | 21 | 18 / 30 |
+| NL | 65 | 64 | 19 / 30 |
+| PT | 38 | 22 | 19 / 30 |
 | RU | 18 | 19 | 18 / 30 |
 | SV | 63 | 63 | 18 / 30 |
 | SW | 36 | 22 | 18 / 30 |
@@ -216,18 +216,18 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | B | 25 | 3% |
 | C | 25 | 3% |
 | C2 | 3 | 0% |
-| C3 | 476 | 60% |
+| C3 | 478 | 60% |
 
 **Stil-Verteilung** (Stil ist je Band fest; innerhalb eines Bandes wechselt er nicht)
 
 | Stil | Bände |
 |---|---:|
-| Songtext_Matrix | 458 |
+| Songtext_Matrix | 459 |
 | Distopia_SciFi | 24 |
 | Drame_Judiciaire | 22 |
 | Sayansi_Dystopia | 18 |
 | 科幻反乌托邦 | 18 |
-| SciFi_Distopia | 16 |
+| SciFi_Distopia | 17 |
 | Parable | 11 |
 | Satire | 10 |
 | SciFi_Distopía | 10 |
@@ -238,11 +238,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 **Ketten-Tiefe** (jedes Kapitel liest genau das VORHERIGE Kapitel, nicht die ganze Historie)
 
 * Kapitel je Band: Median 1 · Maximum 28
-* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3150 Zeichen (~787 Tokens)
+* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3150 Zeichen (~788 Tokens)
 
 **Diversität** (je niedriger der erste Wert, desto weniger Schablone)
 
 * Häufigste Stil-Phrase: `filtered reese bass` in 18% der Zuordnungen
-* Bände mit genau 5 Figuren: 737 von 783 (94%)
+* Bände mit genau 5 Figuren: 739 von 785 (94%)
 
 <!-- END_DYNAMIC_STATS -->
