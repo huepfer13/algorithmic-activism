@@ -173,25 +173,25 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 <!-- START_DYNAMIC_STATS -->
 ### Live-Kennzahlen des Korpus
 
-*Generiert aus dem Bestand, nicht geschätzt — zuletzt: 2026-11-24*
+*Generiert aus dem Bestand, nicht geschätzt — zuletzt: 2026-11-25*
 
 | Kennzahl | Wert |
 |---|---:|
-| Bände | 779 |
-| Kapitel | 1182 |
-| Artikel-Abdeckung (Summe über Sprachen) | 352 / 570 |
+| Bände | 786 |
+| Kapitel | 1188 |
+| Artikel-Abdeckung (Summe über Sprachen) | 358 / 570 |
 | Sprachen | 19 |
-| Zeichen im Korpus | 3.724.455 |
+| Zeichen im Korpus | 3.742.248 |
 
 **Abdeckung je Sprache** (Kapitel / Artikel von 30)
 
 | Sprache | Bände | Kapitel | Artikel |
 |---|---:|---:|---:|
-| AR | 36 | 20 | 17 / 30 |
-| DE | 55 | 507 | 30 / 30 |
-| EN | 53 | 138 | 17 / 30 |
-| ES | 44 | 26 | 17 / 30 |
-| FA | 24 | 23 | 18 / 30 |
+| AR | 37 | 21 | 18 / 30 |
+| DE | 56 | 507 | 30 / 30 |
+| EN | 54 | 139 | 18 / 30 |
+| ES | 45 | 27 | 18 / 30 |
+| FA | 25 | 24 | 19 / 30 |
 | FR | 39 | 21 | 18 / 30 |
 | HE | 20 | 21 | 18 / 30 |
 | HI | 20 | 21 | 18 / 30 |
@@ -204,32 +204,32 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | RU | 18 | 19 | 18 / 30 |
 | SV | 63 | 63 | 18 / 30 |
 | SW | 36 | 22 | 18 / 30 |
-| UK | 38 | 21 | 18 / 30 |
-| ZH | 35 | 18 | 17 / 30 |
+| UK | 39 | 22 | 19 / 30 |
+| ZH | 36 | 19 | 18 / 30 |
 
 **Varianten (A = Wortlaut, B = Bedeutung, C = SALT)**
 
 | Variante | Bände | Anteil |
 |---|---:|---:|
-| A | 258 | 33% |
+| A | 259 | 33% |
 | A2 | 5 | 1% |
 | B | 25 | 3% |
 | C | 25 | 3% |
 | C2 | 3 | 0% |
-| C3 | 463 | 59% |
+| C3 | 469 | 60% |
 
 **Stil-Verteilung** (Stil ist je Band fest; innerhalb eines Bandes wechselt er nicht)
 
 | Stil | Bände |
 |---|---:|
-| Songtext_Matrix | 449 |
+| Songtext_Matrix | 453 |
 | Distopia_SciFi | 23 |
 | Drame_Judiciaire | 21 |
 | Sayansi_Dystopia | 18 |
-| 科幻反乌托邦 | 17 |
+| 科幻反乌托邦 | 18 |
 | SciFi_Distopia | 16 |
+| Parable | 11 |
 | Satire | 10 |
-| Parable | 10 |
 | SciFi_Distopía | 10 |
 | Fable | 8 |
 
@@ -238,11 +238,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 **Ketten-Tiefe** (jedes Kapitel liest genau das VORHERIGE Kapitel, nicht die ganze Historie)
 
 * Kapitel je Band: Median 1 · Maximum 28
-* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3151 Zeichen (~788 Tokens)
+* Kontext je Kapitel: ein Vorgängerkapitel, im Mittel 3150 Zeichen (~788 Tokens)
 
 **Diversität** (je niedriger der erste Wert, desto weniger Schablone)
 
 * Häufigste Stil-Phrase: `filtered reese bass` in 18% der Zuordnungen
-* Bände mit genau 5 Figuren: 725 von 769 (94%)
+* Bände mit genau 5 Figuren: 731 von 776 (94%)
 
 <!-- END_DYNAMIC_STATS -->
