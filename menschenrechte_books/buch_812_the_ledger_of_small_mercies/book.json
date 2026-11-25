@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_812_the_ledger_of_small_mercies",
+  "title": "The Ledger of Small Mercies",
+  "pov": "third_person",
+  "language": "EN",
+  "style": "Jokes",
+  "setting_summary": "A cramped river-town customs house where every citizen's daily ration, movement, and spoken word is tallied in ledgers by a bored but relentless bureaucracy. A missing page in the master ledger threatens to erase one resident entirely, forcing the clerks and neighbors to argue over who counts, who decides, and what a person is worth when the ink runs out.",
+  "characters": [
+    "Mara Voss",
+    "Old Pell",
+    "Tobin Ash",
+    "Sister Iyari",
+    "The Auditor"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-25T23:05:51.609170+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
