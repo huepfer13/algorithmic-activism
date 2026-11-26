@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_837_die_registratur_der_ungehörten_stimmen",
+  "title": "Die Registratur der ungehörten Stimmen",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Magischer_Realismus",
+  "setting_summary": "Im überfüllten Verwaltungsgebäude einer Stadt, in der jede Beschwerde, jeder Wunsch und jeder Traum aktenkundig gemacht werden muss, herrscht eine stumme Ordnungsmacht, die Stimmen nach Lautstärke, Herkunft und Nützlichkeit sortiert. Wer zu leise spricht, dessen Anliegen verhallt in den Regalen; wer zu laut wird, verschwindet in einem stillen Zimmer. Als ein Bündel unregistrierter Briefe auftaucht, das von sich aus zu atmen beginnt, gerät das starre Gefüge der Registratur ins Wanken, und die Frage nach Würde, Gleichheit und dem Recht, gehört zu werden, wird zur täglichen Zumutung.",
+  "characters": [
+    "Hedwig Marstaller",
+    "Yusuf Demir",
+    "Klärchen Voss",
+    "Emil Brandtner",
+    "Frau Oberpflegerin Sonnleitner"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-26T23:05:52.475379+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
