@@ -177,11 +177,11 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 
 | Kennzahl | Wert |
 |---|---:|
-| Bände | 820 |
-| Kapitel | 1221 |
-| Artikel-Abdeckung (Summe über Sprachen) | 391 / 570 |
+| Bände | 821 |
+| Kapitel | 1222 |
+| Artikel-Abdeckung (Summe über Sprachen) | 392 / 570 |
 | Sprachen | 19 |
-| Zeichen im Korpus | 3.841.925 |
+| Zeichen im Korpus | 3.845.154 |
 
 **Abdeckung je Sprache** (Kapitel / Artikel von 30)
 
@@ -189,7 +189,7 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 |---|---:|---:|---:|
 | AR | 39 | 23 | 20 / 30 |
 | DE | 56 | 507 | 30 / 30 |
-| EN | 56 | 140 | 19 / 30 |
+| EN | 57 | 141 | 20 / 30 |
 | ES | 46 | 28 | 19 / 30 |
 | FA | 26 | 25 | 20 / 30 |
 | FR | 41 | 23 | 20 / 30 |
@@ -216,7 +216,7 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | B | 25 | 3% |
 | C | 25 | 3% |
 | C2 | 3 | 0% |
-| C3 | 502 | 61% |
+| C3 | 503 | 61% |
 
 **Stil-Verteilung** (Stil ist je Band fest; innerhalb eines Bandes wechselt er nicht)
 
@@ -228,7 +228,7 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 | Sayansi_Dystopia | 20 |
 | 科幻反乌托邦 | 20 |
 | SciFi_Distopia | 18 |
-| Parable | 12 |
+| Parable | 13 |
 | Satire | 10 |
 | SciFi_Distopía | 10 |
 | Fable | 8 |
@@ -243,6 +243,6 @@ venv required) with the tools `daemon_status`, `daemon_start`, `daemon_stop`, `g
 **Diversität** (je niedriger der erste Wert, desto weniger Schablone)
 
 * Häufigste Stil-Phrase: `filtered reese bass` in 18% der Zuordnungen
-* Bände mit genau 5 Figuren: 762 von 810 (94%)
+* Bände mit genau 5 Figuren: 762 von 811 (94%)
 
 <!-- END_DYNAMIC_STATS -->
