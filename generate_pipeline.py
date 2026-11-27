@@ -806,9 +806,8 @@ BEISPIEL FUER DEN MODUS {modus.upper()} (Meter, Reim und Tag-Setzung uebernehmen
                          + ("\n\n" + {"1": SALT_PROSA, "2": SALT_MILD, "3": SALT_MITTEL_PROSA}[os.environ["SALT"]]
                             if os.environ.get("SALT") in ("1", "2", "3") else "")))
 
-    # Recency-Hinweis: die letzten Zeilen wiegen beim Modell schwerer als der Kopf.
-    # Belegt 2026-11-23/27: hebräische Kapitel kippten in zwei Läufen ins Deutsche,
-    # obwohl die Sprachregel oben stand — die Schranke fing es, kostete aber 3 Versuche.
+    # Recency: die letzten Prompt-Zeilen wiegen schwerer als der Kopf. Hebräische Kapitel
+    # kippten zweimal ins Deutsche (21./27.11.), die Schranke fing es — je drei Versuche.
     sprach_erinnerung = (
         f"\n\nLETZTE ERINNERUNG: Der gesamte Text dieses Kapitels — jede Zeile, jede Ueberschrift —\n"
         f"steht auf {lang_name}. Die Anweisungen oben sind deutsch, die Ausgabe ist {lang_name}.\n"
