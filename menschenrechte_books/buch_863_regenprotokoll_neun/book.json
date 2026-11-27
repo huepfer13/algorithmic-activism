@@ -1,0 +1,19 @@
+{
+  "book_id": "buch_863_regenprotokoll_neun",
+  "title": "Regenprotokoll Neun",
+  "pov": "third_person",
+  "language": "DE",
+  "style": "Cyberpunk_Noir",
+  "setting_summary": "In der überfluteten Unterstadt von Hafenbrück regeln Konzerne den Zugang zu Trinkwasser, Atemluft und Datenströmen über ein lückenloses Scoring-System. Die Schattenwirtschaft der Kanäle lebt von gefälschten Identitäten und gestohlenen Sensordaten, während eine neue Zensurbehörde jede öffentliche Äußerung als Betriebsstörung verfolgt. Als ein Kurier einen Datensatz findet, der die willkürliche Tötung eines Bürgers durch Konzernsicherheit beweist, geraten fünf Außenseiter zwischen die Fronten eines Kampfes um Würde, freie Meinung und das nackte Überleben.",
+  "characters": [
+    "Vera Kalt",
+    "Jonas Mielke",
+    "Sister Ohm",
+    "Tarek Voss",
+    "Lina Brandt"
+  ],
+  "covered_articles": [],
+  "current_chapter": 0,
+  "created_at": "2026-11-27T23:05:55.340937+00:00",
+  "_hinweis": "current_chapter ist nur ein Cache — massgeblich ist der Dateibestand im Ordner."
+}
