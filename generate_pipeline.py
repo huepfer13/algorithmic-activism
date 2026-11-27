@@ -806,6 +806,15 @@ BEISPIEL FUER DEN MODUS {modus.upper()} (Meter, Reim und Tag-Setzung uebernehmen
                          + ("\n\n" + {"1": SALT_PROSA, "2": SALT_MILD, "3": SALT_MITTEL_PROSA}[os.environ["SALT"]]
                             if os.environ.get("SALT") in ("1", "2", "3") else "")))
 
+    # Recency-Hinweis: die letzten Zeilen wiegen beim Modell schwerer als der Kopf.
+    # Belegt 2026-11-23/27: hebräische Kapitel kippten in zwei Läufen ins Deutsche,
+    # obwohl die Sprachregel oben stand — die Schranke fing es, kostete aber 3 Versuche.
+    sprach_erinnerung = (
+        f"\n\nLETZTE ERINNERUNG: Der gesamte Text dieses Kapitels — jede Zeile, jede Ueberschrift —\n"
+        f"steht auf {lang_name}. Die Anweisungen oben sind deutsch, die Ausgabe ist {lang_name}.\n"
+        f"Wenn dir eine deutsche Zeile herauskommt, schreibe sie neu."
+    ) if (lang_name or "").strip().lower() not in ("deutsch", "german") else ""
+
     return f"""{rahmenblock(meta, lang_name, style_name, style_desc,
                 f'Du bist ein weltklasse Autor und Ethiker. Du schreibst Kapitel {chapter_index} des fortlaufenden Romans')}
 
@@ -823,7 +832,7 @@ NEUE AUFGABE:
 - Ende mit einem Cliffhanger ODER einer technischen Folgeanweisung.
 
 FORMAT:
-{format_block}"""
+{format_block}{sprach_erinnerung}"""
 
 
 def pruefe_figuren(figuren) -> None:
